@@ -72,7 +72,7 @@
 
 #if defined(MBEDTLS_FS_IO)
 #include <stdio.h>
-#if !defined(_WIN32)
+#if !defined(_WIN32) && !defined(_RTE_)
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
