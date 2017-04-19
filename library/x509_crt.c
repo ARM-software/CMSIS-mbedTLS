@@ -68,7 +68,7 @@
 
 #if defined(MBEDTLS_FS_IO)
 #include <stdio.h>
-#if !defined(_WIN32) || defined(EFIX64) || defined(EFI32)
+#if (!defined(_WIN32) || defined(EFIX64) || defined(EFI32)) && !defined(_RTE_)
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
@@ -1158,6 +1158,8 @@ int mbedtls_x509_crt_parse_path( mbedtls_x509_crt *chain, const char *path )
         ret = MBEDTLS_ERR_X509_FILE_IO_ERROR;
 
     FindClose( hFind );
+#elif defined(_RTE_)
+
 #else /* _WIN32 */
     int t_ret;
     int snp_ret;

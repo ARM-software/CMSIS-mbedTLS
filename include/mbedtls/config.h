@@ -25,6 +25,10 @@
  *  This file is part of mbed TLS (https://tls.mbed.org)
  */
 
+#ifdef _RTE_
+#include "mbedTLS_config.h"
+#endif
+
 #ifndef MBEDTLS_CONFIG_H
 #define MBEDTLS_CONFIG_H
 
