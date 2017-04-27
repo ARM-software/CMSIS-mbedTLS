@@ -7,7 +7,7 @@
   <url>http://www.keil.com/pack/</url>
   <releases>
     <release version="1.2.0">
-      Updated to mbedTLS V2.4.2
+      Updated to mbedTLS V2.4.2; documentation states V2.4.1 (same as original mbedTLS documentation)
     </release>
     <release version="1.1.1" date="2016-11-28">
       Removed the requirement for the 'RTE' folder being an implicit project include path (build failure MDK-ARM 5.22 or greater)
