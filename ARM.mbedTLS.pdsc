@@ -46,7 +46,7 @@
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
       </RTE_Components_h>
       <files>
-   <!-- <file category="doc"     name="doxygen/html/index.html"/> -->
+        <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>
         <file category="header"  name="include/mbedtls/mbedTLS.h"/>
         <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.4.2"/>

@@ -1,2 +1,2 @@
-REM Generates Documentation Part for Compiler Pack
+REM Generates documentation for mbedTLS
 doxygen mbedtls.dxy

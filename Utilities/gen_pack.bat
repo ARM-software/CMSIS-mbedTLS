@@ -79,6 +79,33 @@ DEL /Q %RELEASE_PATH%\tests\.gitignore
 :: Copy MDK folder
 XCOPY /Q /S /Y ..\MDK\*.* %RELEASE_PATH%\MDK\*.*
 
+:: Copy doxygen folder
+XCOPY /Q /S /Y ..\doxygen\*.* %RELEASE_PATH%\doxygen\*.*
+
+::  Build documentation
+PUSHD %RELEASE_PATH%\doxygen
+CALL gen_doc.bat
+IF NOT "%ERRORLEVEL%"=="0" (
+	POPD
+	ECHO **************************************************
+	ECHO *
+	ECHO *  %RELEASE_PATH%\doxygen\gen_doc.bat
+	ECHO *  failed, aborting %~nx0 ...                       
+	ECHO *
+	ECHO **************************************************
+	@PAUSE
+	EXIT /B 1
+)
+POPD
+
+::  Remove doxygen folder after build
+DEL %RELEASE_PATH%\doxygen\gen_doc.bat
+DEL %RELEASE_PATH%\doxygen\mbedtls.dxy
+DEL %RELEASE_PATH%\doxygen\mbedtls.doxyfile
+RMDIR /Q /S %RELEASE_PATH%\doxygen\DoxyTemplates
+RMDIR /Q /S %RELEASE_PATH%\doxygen\images
+RMDIR /Q /S %RELEASE_PATH%\doxygen\input
+
 :: Checking 
 Win32\PackChk.exe %RELEASE_PATH%\ARM.mbedTLS.pdsc -n %RELEASE_PATH%\PackName.txt -x M324
 
@@ -106,7 +133,7 @@ EXIT /b
 :End
 ECHO Removing temporary files and folders
 PUSHD %RELEASE_PATH%
-FOR %%A IN (configs include library programs tests MDK) DO IF EXIST %%A (RMDIR /S /Q %%A)
+FOR %%A IN (configs include library programs tests MDK doxygen) DO IF EXIST %%A (RMDIR /S /Q %%A)
 DEL apache-2.0.txt
 DEL ChangeLog
 DEL LICENSE
