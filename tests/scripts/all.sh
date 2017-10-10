@@ -438,6 +438,33 @@ if uname -a | grep -F x86_64 >/dev/null; then
 msg "build: i386, make, gcc" # ~ 30s
 cleanup
 CC=gcc CFLAGS='-Werror -Wall -Wextra -m32' make
+
+msg "build: gcc, force 32-bit compilation"
+cleanup
+cp "$CONFIG_H" "$CONFIG_BAK"
+scripts/config.pl unset MBEDTLS_HAVE_ASM
+scripts/config.pl unset MBEDTLS_AESNI_C
+scripts/config.pl unset MBEDTLS_PADLOCK_C
+CC=gcc CFLAGS='-Werror -Wall -Wextra -DMBEDTLS_HAVE_INT32' make
+
+msg "build: gcc, force 64-bit compilation"
+cleanup
+cp "$CONFIG_H" "$CONFIG_BAK"
+scripts/config.pl unset MBEDTLS_HAVE_ASM
+scripts/config.pl unset MBEDTLS_AESNI_C
+scripts/config.pl unset MBEDTLS_PADLOCK_C
+CC=gcc CFLAGS='-Werror -Wall -Wextra -DMBEDTLS_HAVE_INT64' make
+
+msg "test: gcc, force 64-bit compilation"
+make test
+
+msg "build: gcc, force 64-bit compilation"
+cleanup
+cp "$CONFIG_H" "$CONFIG_BAK"
+scripts/config.pl unset MBEDTLS_HAVE_ASM
+scripts/config.pl unset MBEDTLS_AESNI_C
+scripts/config.pl unset MBEDTLS_PADLOCK_C
+CC=gcc CFLAGS='-Werror -Wall -Wextra -DMBEDTLS_HAVE_INT64' make
 fi # x86_64
 
 msg "build: arm-none-eabi-gcc, make" # ~ 10s
@@ -456,6 +483,26 @@ scripts/config.pl unset MBEDTLS_THREADING_C
 scripts/config.pl unset MBEDTLS_MEMORY_BACKTRACE # execinfo.h
 scripts/config.pl unset MBEDTLS_MEMORY_BUFFER_ALLOC_C # calls exit
 CC=arm-none-eabi-gcc AR=arm-none-eabi-ar LD=arm-none-eabi-ld CFLAGS='-Werror -Wall -Wextra' make lib
+
+msg "build: arm-none-eabi-gcc -DMBEDTLS_NO_UDBL_DIVISION, make" # ~ 10s
+cleanup
+cp "$CONFIG_H" "$CONFIG_BAK"
+scripts/config.pl full
+scripts/config.pl unset MBEDTLS_NET_C
+scripts/config.pl unset MBEDTLS_TIMING_C
+scripts/config.pl unset MBEDTLS_FS_IO
+scripts/config.pl unset MBEDTLS_ENTROPY_NV_SEED
+scripts/config.pl set MBEDTLS_NO_PLATFORM_ENTROPY
+# following things are not in the default config
+scripts/config.pl unset MBEDTLS_HAVEGE_C # depends on timing.c
+scripts/config.pl unset MBEDTLS_THREADING_PTHREAD
+scripts/config.pl unset MBEDTLS_THREADING_C
+scripts/config.pl unset MBEDTLS_MEMORY_BACKTRACE # execinfo.h
+scripts/config.pl unset MBEDTLS_MEMORY_BUFFER_ALLOC_C # calls exit
+scripts/config.pl set MBEDTLS_NO_UDBL_DIVISION
+CC=arm-none-eabi-gcc AR=arm-none-eabi-ar LD=arm-none-eabi-ld CFLAGS='-Werror -Wall -Wextra' make lib
+echo "Checking that software 64-bit division is not required"
+! grep __aeabi_uldiv library/*.o
 
 msg "build: ARM Compiler 5, make"
 cleanup
@@ -480,11 +527,29 @@ scripts/config.pl unset MBEDTLS_PLATFORM_TIME_ALT # depends on MBEDTLS_HAVE_TIME
 CC="$ARMC5_CC" AR="$ARMC5_AR" WARNING_CFLAGS='--strict --c99' make lib
 make clean
 
+# ARM Compiler 6 - Target ARMv7-A
 armc6_build_test "--target=arm-arm-none-eabi -march=armv7-a"
+
+# ARM Compiler 6 - Target ARMv7-M
 armc6_build_test "--target=arm-arm-none-eabi -march=armv7-m"
+
+# ARM Compiler 6 - Target ARMv8-A - AArch32
 armc6_build_test "--target=arm-arm-none-eabi -march=armv8.2-a"
+
+# ARM Compiler 6 - Target ARMv8-M
 armc6_build_test "--target=arm-arm-none-eabi -march=armv8-m.main"
-armc6_build_test "--target=aarch64-arm-none-eabi"
+
+# ARM Compiler 6 - Target ARMv8-A - AArch64
+armc6_build_test "--target=aarch64-arm-none-eabi -march=armv8.2-a"
+
+msg "build: allow SHA1 in certificates by default"
+cleanup
+cp "$CONFIG_H" "$CONFIG_BAK"
+scripts/config.pl set MBEDTLS_TLS_DEFAULT_ALLOW_SHA1_IN_CERTIFICATES
+CFLAGS='-Werror -Wall -Wextra' make
+msg "test: allow SHA1 in certificates by default"
+make test
+tests/ssl-opt.sh -f SHA-1
 
 msg "build: Windows cross build - mingw64, make (Link Library)" # ~ 30s
 cleanup
