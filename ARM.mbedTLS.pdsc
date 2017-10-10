@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.3.0">
+      Updated to mbedTLS V2.6.0
+    </release>
     <release version="1.2.0" date="2017-04-27">
       Updated to mbedTLS V2.4.2; documentation states V2.4.1 (same as original mbedTLS documentation)
     </release>
@@ -40,7 +43,7 @@
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.4.2" condition="Cortex-M Device">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.6.0" condition="Cortex-M Device">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -49,7 +52,7 @@
         <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>
         <file category="header"  name="include/mbedtls/mbedTLS.h"/>
-        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.4.2"/>
+        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.6.0"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
         <file category="source"  name="library/arc4.c"/>

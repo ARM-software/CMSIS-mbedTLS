@@ -26,7 +26,7 @@
   SchemaVersion=1.4
 
   25. January 2017: 1.4.9
-  - added Toptions attribute for usee in conditions
+  - added Toptions attribute for use in conditions
 
   21. November 2016: 1.4.8
   - added support for semantic versioning quality information in ConditionVersionType
@@ -203,7 +203,7 @@
     <xs:restriction base="xs:string">
       <xs:minLength value="0"/>
       <xs:maxLength value="32"/>
-      <xs:pattern value="\S(.*\S)?"></xs:pattern>
+      <!-- <xs:pattern value="\S(.*\S)?"></xs:pattern> not backward compatible -->
     </xs:restriction>
   </xs:simpleType>
 

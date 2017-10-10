@@ -65,13 +65,11 @@ static SOCKADDR  *dns_addr;
  * Prepare for using the sockets interface
  */
 static int net_prepare (void) {
-  static uint8_t init_done = 0;
-
-  if (init_done == 0) {
+  /* Verify that the Network Component is not already running */
+  if (netSYS_GetHostName () == NULL) {
     if (netInitialize () != netOK) {
       return (MBEDTLS_ERR_NET_SOCKET_FAILED);
     }
-    init_done = 1;
     /* Small delay for Network to setup */
     osDelay (500);
   }
