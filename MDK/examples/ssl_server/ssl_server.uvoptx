@@ -101,6 +101,8 @@
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <bEvRecOn>1</bEvRecOn>
+        <bSchkAxf>0</bSchkAxf>
+        <bTchkAxf>0</bTchkAxf>
         <nTsel>0</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
@@ -143,8 +145,8 @@
       </TargetDriverDllRegistry>
       <Breakpoint/>
       <ScvdPack>
-        <Filename>C:\Keil\ARM\PACK\Keil\MDK-Middleware\7.4.1-dev8\Network\Network.scvd</Filename>
-        <Type>Keil.MDK-Middleware.7.4.1-dev8</Type>
+        <Filename>C:\Keil\ARM\PACK\Keil\MDK-Middleware\7.4.2-dev19\Network\Network.scvd</Filename>
+        <Type>Keil.MDK-Middleware.7.4.2-dev19</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>
@@ -185,6 +187,10 @@
       <pszMrule></pszMrule>
       <pSingCmds></pSingCmds>
       <pMultCmds></pMultCmds>
+      <pMisraNamep></pMisraNamep>
+      <pszMrulep></pszMrulep>
+      <pSingCmdsp></pSingCmdsp>
+      <pMultCmdsp></pMultCmdsp>
       <DebugDescription>
         <Enable>1</Enable>
         <EnableLog>0</EnableLog>
@@ -196,7 +202,7 @@
 
   <Group>
     <GroupName>Source</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Interface
- * Copyright (c) 2004-2015 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2004-2017 ARM Germany GmbH. All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_ETH_0.h
  * Purpose: Network Configuration for ETH Interface
- * Rev.:    V7.0.0
+ * Rev.:    V7.1.0
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -19,7 +19,7 @@
 //   <s.17>MAC Address
 //   <i>Ethernet MAC Address in text representation
 //   <i>Value FF-FF-FF-FF-FF-FF is not allowed,
-//   <i>LSB must be 0 (an ethernet Multicast bit).
+//   <i>LSB of first byte must be 0 (an ethernet Multicast bit).
 //   <i>Default: "1E-30-6C-A2-45-5E"
 #define ETH0_MAC_ADDR           "1E-30-6C-A2-45-5C"
 
@@ -51,6 +51,18 @@
 //     <i>IP Address of Secondary DNS Server in text representation
 //     <i>Default: "8.8.4.4"
 #define ETH0_IP4_SECONDARY_DNS  "8.8.4.4"
+
+//     <e>IP Fragmentation
+//     <i>This option enables fragmentation of outgoing IP datagrams,
+//     <i>and reassembling the fragments of incoming IP datagrams.
+//     <i>Default: enabled
+#define ETH0_IP4_FRAG_ENABLE    1
+
+//       <o>MTU size <576-1500>
+//       <i>Maximum Transmission Unit in bytes
+//       <i>Default: 1500
+#define ETH0_IP4_MTU            1500
+//     </e>
 
 //     <h>ARP Address Resolution
 //     <i>ARP cache and node address resolver settings
@@ -221,3 +233,5 @@
 
 //   </h>
 // </h>
+
+//------------- <<< end of configuration section >>> ---------------------------
