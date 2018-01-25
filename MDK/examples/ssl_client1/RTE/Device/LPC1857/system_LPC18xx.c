@@ -1,5 +1,5 @@
 /* -----------------------------------------------------------------------------
- * Copyright (c) 2013 - 2015 ARM Ltd.
+ * Copyright (c) 2013 - 2017 ARM Ltd.
  *
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable for any damages arising from
@@ -17,8 +17,8 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  *
- * $Date:        26. August 2015
- * $Revision:    V5.0.1
+ * $Date:        11. October 2017
+ * $Revision:    V1.0.2
  *
  * Project:      NXP LPC18xx System initialization
  * -------------------------------------------------------------------------- */
@@ -292,7 +292,7 @@
 /*----------------------------------------------------------------------------
   System Core Clock variable
  *----------------------------------------------------------------------------*/
-uint32_t SystemCoreClock = CLK_IRC;    /* System Clock Frequency (Core Clock) */
+uint32_t SystemCoreClock = 180000000U; /* System Clock Frequency (Core Clock) */
 
 
 /******************************************************************************

@@ -145,8 +145,8 @@
       </TargetDriverDllRegistry>
       <Breakpoint/>
       <ScvdPack>
-        <Filename>C:\Keil\ARM\PACK\Keil\MDK-Middleware\7.4.2-dev19\Network\Network.scvd</Filename>
-        <Type>Keil.MDK-Middleware.7.4.2-dev19</Type>
+        <Filename>C:\Keil\ARM\PACK\Keil\MDK-Middleware\7.5.0\Network\Network.scvd</Filename>
+        <Type>Keil.MDK-Middleware.7.5.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
       <Tracepoint>

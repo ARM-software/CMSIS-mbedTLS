@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>LPC1857</Device>
           <Vendor>NXP</Vendor>
-          <PackID>Keil.LPC1800_DFP.2.7.0</PackID>
+          <PackID>Keil.LPC1800_DFP.2.8.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x1A000000,0x80000) IROM2(0x1B000000,0x80000) IRAM(0x10000000,0x8000) IRAM2(0x20000000,0x10000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -520,7 +520,7 @@
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC1800 CMSIS">
-        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.0"/>
+        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.8.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
@@ -530,7 +530,7 @@
       <file attr="config" category="source" name="CMSIS\RTOS\RTX\Templates\RTX_Conf_CM.c" version="4.70.1">
         <instance index="0">RTE\CMSIS\RTX_Conf_CM.c</instance>
         <component Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.81.1" condition="RTOS RTX" isDefaultVariant="1"/>
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.1.2-dev2"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.2.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
@@ -538,7 +538,7 @@
       <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="2.2.1">
         <instance index="0">RTE\Device\LPC1857\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC1800 CMSIS"/>
-        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.0"/>
+        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.8.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
@@ -546,63 +546,63 @@
       <file attr="config" category="source" condition="ARM Compiler" name="Device\Source\ARM\startup_LPC18xx.s" version="1.0.0">
         <instance index="0">RTE\Device\LPC1857\startup_LPC18xx.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC1800 CMSIS"/>
-        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.0"/>
+        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.8.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Device\Source\system_LPC18xx.c" version="1.0.1">
+      <file attr="config" category="source" name="Device\Source\system_LPC18xx.c" version="1.0.2">
         <instance index="0">RTE\Device\LPC1857\system_LPC18xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="LPC1800 CMSIS"/>
-        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.7.0"/>
+        <package name="LPC1800_DFP" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.8.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config.c" version="7.0.0">
         <instance index="0">RTE\Network\Net_Config.c</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cvariant="IPv4/IPv6 Release" Cvendor="Keil" Cversion="7.6.5" condition="CMSIS Core with RTOS"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cvariant="IPv4/IPv6 Release" Cvendor="Keil" Cversion="7.7.0" condition="CMSIS Core with RTOS"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config_BSD.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_BSD.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.6.5" condition="Network UDP/TCP"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="BSD" Cvendor="Keil" Cversion="7.7.0" condition="Network UDP/TCP"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config_DNS_Client.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_DNS_Client.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.6.5" condition="Network UDP"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Service" Csub="DNS Client" Cvendor="Keil" Cversion="7.7.0" condition="Network UDP"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config_ETH.h" version="7.1.0">
         <instance index="0">RTE\Network\Net_Config_ETH_0.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.6.5" condition="Network Driver ETH" maxInstances="1"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Interface" Csub="ETH" Cvendor="Keil" Cversion="7.7.0" condition="Network Driver ETH" maxInstances="1"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config_TCP.h" version="7.0.0">
         <instance index="0">RTE\Network\Net_Config_TCP.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.6.5" condition="Network Interface"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="TCP" Cvendor="Keil" Cversion="7.7.0" condition="Network Interface"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Network\Config\Net_Config_UDP.h" version="5.0.0">
         <instance index="0">RTE\Network\Net_Config_UDP.h</instance>
-        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.6.5" condition="Network Interface"/>
-        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.4.2-dev19"/>
+        <component Cbundle="MDK-Pro" Cclass="Network" Cgroup="Socket" Csub="UDP" Cvendor="Keil" Cversion="7.7.0" condition="Network Interface"/>
+        <package name="MDK-Middleware" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="7.5.0"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
@@ -615,8 +615,8 @@
       </file>
       <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.6.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.6.0" condition="Cortex-M Device"/>
-        <package name="mbedTLS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.3.0"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.6.1" condition="Cortex-M Device"/>
+        <package name="mbedTLS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="1.3.1"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
