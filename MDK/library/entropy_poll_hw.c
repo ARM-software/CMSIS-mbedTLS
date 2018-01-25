@@ -1,7 +1,7 @@
 /**
  * Entropy hardware poll function for MDK-Pro Network
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
+ *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -29,7 +29,14 @@
 
 #include <string.h>
 #include "entropy_poll.h"
-#include "cmsis_os.h"
+#include "RTE_Components.h"
+#if defined(RTE_CMSIS_RTOS)
+ #include "cmsis_os.h"
+#elif defined(RTE_CMSIS_RTOS2)
+ #include "cmsis_os2.h"
+#else
+ #error "::CMSIS:RTOS selection invalid"
+#endif
 
 /**
  * Entropy poll callback for a hardware source
@@ -43,7 +50,11 @@ int mbedtls_hardware_poll (void *data,
     return (0);
   }
   /* Note: This is weak entropy source */
+#if defined(RTE_CMSIS_RTOS)
   timer = osKernelSysTick ();
+#else
+  timer = osKernelGetTickCount ();
+#endif
   memcpy (output, &timer, sizeof(timer));
   *olen = sizeof (timer);
   return (0);

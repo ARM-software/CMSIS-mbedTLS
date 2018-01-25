@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
  *
- *  Copyright (C) 2006-2017, ARM Limited, All Rights Reserved
+ *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -36,7 +36,13 @@
 #include "RTE_Components.h"
 #include "mbedtls/net_sockets.h"
 #include "rl_net.h"
-#include "cmsis_os.h"
+#if defined(RTE_CMSIS_RTOS)
+ #include "cmsis_os.h"
+#elif defined(RTE_CMSIS_RTOS2)
+ #include "cmsis_os2.h"
+#else
+ #error "::CMSIS:RTOS selection invalid"
+#endif
 
 #if !defined(RTE_Network_IPv4) && !defined(RTE_Network_IPv6)
  #error "MDK-Pro Network component required"
@@ -53,8 +59,12 @@
 #undef MBEDTLS_NET_LISTEN_BACKLOG
 #define MBEDTLS_NET_LISTEN_BACKLOG      3
 
-static osThreadId dns_thread;
-static SOCKADDR  *dns_addr;
+#if defined(RTE_CMSIS_RTOS)
+ static osThreadId   dns_thread;
+#else
+ static osThreadId_t dns_thread;
+#endif
+static SOCKADDR     *dns_addr;
 
 #define SOCK_ADDR(addr)      ((SOCKADDR *)    addr)
 #define SOCK_ADDR4(addr)     ((SOCKADDR_IN *) addr)
@@ -100,7 +110,13 @@ static void dns_cbfunc (netDNSc_Event event, const NET_ADDR *addr) {
 #endif
     dns_addr = NULL;
   }
-  if (dns_thread) osSignalSet (dns_thread, 0x01);
+  if (dns_thread) {
+#if defined(RTE_CMSIS_RTOS)
+    osSignalSet (dns_thread, 0x01);
+#else
+    osThreadFlagsSet (dns_thread, 0x01);
+#endif
+  }
 }
 
 /*
@@ -133,7 +149,11 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
     }
     if (stat == netOK) {
       dns_thread = osThreadGetId ();
+#if defined(RTE_CMSIS_RTOS)
       osSignalWait (0x01, osWaitForever);
+#else
+      osThreadFlagsWait (0x01, osFlagsWaitAny, osWaitForever);
+#endif
       dns_thread = NULL;
       if (SOCK_ADDR(&host_addr)->sa_family != AF_UNSPEC) {
         break;
