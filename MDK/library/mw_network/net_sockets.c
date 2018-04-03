@@ -281,12 +281,12 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
 #else
   SOCKADDR_IN  client_addr;
 #endif
-  int ret, n;
+  int ret, n = sizeof(client_addr);
 
   /* Is this a TCP or UDP socket? */
   if (bind_ctx->fd & 1) {
     /* TCP: actual accept() */
-    ret = accept (SOCK(bind_ctx), NULL, NULL);
+    ret = accept (SOCK(bind_ctx), SOCK_ADDR(&client_addr), &n);
     /* Encode SOCK type into fd (bit 0) */
     client_ctx->fd = (ret < 0) ? -1 : (ret << 1) | 1;
   }
