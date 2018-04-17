@@ -69,7 +69,7 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
   af = IOT_SOCKET_AF_INET;
   ret = iotSocketGetHostByName (host, af, &ip_addr, &ip_len);
 #if defined(RTE_Network_IPv6)
-  if (ret == IOT_SOCKET_ERROR) {
+  if (ret < 0) {
     af = IOT_SOCKET_AF_INET6;
     ret = iotSocketGetHostByName (host, af, &ip_addr, &ip_len);
   }
@@ -87,10 +87,10 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
 
   ctx->fd = -1;
   if (proto == MBEDTLS_NET_PROTO_TCP) {
-    ctx->fd = iotSocketCreate (af, IOT_SOCKET_TYPE_STREAM, IOT_SOCKET_PROTOCOL_TCP);
+    ctx->fd = iotSocketCreate (af, IOT_SOCKET_SOCK_STREAM, IOT_SOCKET_IPPROTO_TCP);
   }
   else if (proto == MBEDTLS_NET_PROTO_UDP) {
-    ctx->fd = iotSocketCreate (af, IOT_SOCKET_TYPE_DGRAM, IOT_SOCKET_PROTOCOL_UDP);
+    ctx->fd = iotSocketCreate (af, IOT_SOCKET_SOCK_DGRAM,  IOT_SOCKET_IPPROTO_UDP);
   }
   if (ctx->fd < 0) {
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
@@ -138,10 +138,10 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
 
   ctx->fd = -1;
   if (proto == MBEDTLS_NET_PROTO_TCP) {
-    ctx->fd = iotSocketCreate (af, IOT_SOCKET_TYPE_STREAM, IOT_SOCKET_PROTOCOL_TCP);
+    ctx->fd = iotSocketCreate (af, IOT_SOCKET_SOCK_STREAM, IOT_SOCKET_IPPROTO_TCP);
   }
   else if (proto == MBEDTLS_NET_PROTO_UDP) {
-    ctx->fd = iotSocketCreate (af, IOT_SOCKET_TYPE_DGRAM, IOT_SOCKET_PROTOCOL_UDP);
+    ctx->fd = iotSocketCreate (af, IOT_SOCKET_SOCK_DGRAM,  IOT_SOCKET_IPPROTO_UDP);
   }
   if (ctx->fd < 0) {
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
@@ -173,9 +173,10 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
   uint32_t iplen = buf_size;
   int32_t  ret;
 
+  // Multiple TCP or single UDP connection is accepted
   ret = iotSocketAccept (bind_ctx->fd, client_ip, &iplen, NULL);
   if (ret < 0) {
-    if (ret == IOT_SOCKET_ERROR_WOULDBLOCK) {
+    if (ret == IOT_SOCKET_EAGAIN) {
       return (MBEDTLS_ERR_SSL_WANT_READ);
     }
     return (MBEDTLS_ERR_NET_ACCEPT_FAILED);
@@ -193,13 +194,13 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
 int mbedtls_net_set_block (mbedtls_net_context *ctx) {
   uint32_t nbio = 0;
 
-  return (iotSocketSetOpt (ctx->fd, IOT_SOCKET_OPT_NBIO, &nbio, sizeof(nbio)));
+  return (iotSocketSetOpt (ctx->fd, IOT_SOCKET_IO_FIONBIO, &nbio, sizeof(nbio)));
 }
 
 int mbedtls_net_set_nonblock (mbedtls_net_context *ctx) {
   uint32_t nbio = 1;
 
-  return (iotSocketSetOpt (ctx->fd, IOT_SOCKET_OPT_NBIO, &nbio, sizeof(nbio)));
+  return (iotSocketSetOpt (ctx->fd, IOT_SOCKET_IO_FIONBIO, &nbio, sizeof(nbio)));
 }
 
 /*
@@ -219,17 +220,14 @@ int mbedtls_net_recv (void *ctx, unsigned char *buf, size_t len) {
   ret = iotSocketRecv (ctxt->fd, buf, len);
   if (ret < 0) {
     /* Error: return mbedTLS error codes */
-    if (ret == IOT_SOCKET_ERROR_SOCKET) {
+    if (ret == IOT_SOCKET_ESOCK) {
       return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
     }
-    if (ret == IOT_SOCKET_ERROR_WOULDBLOCK) {
+    if (ret == IOT_SOCKET_EAGAIN) {
       return (MBEDTLS_ERR_SSL_WANT_READ);
     }
-    if (ret == IOT_SOCKET_ERROR_CLOSED) {
+    if (ret == IOT_SOCKET_ECONNRESET) {
       return (MBEDTLS_ERR_NET_CONN_RESET);
-    }
-    if (ret == IOT_SOCKET_ERROR_TIMEOUT) {
-      return (MBEDTLS_ERR_SSL_TIMEOUT);
     }
     return (MBEDTLS_ERR_NET_RECV_FAILED);
   }
@@ -244,11 +242,17 @@ int mbedtls_net_recv_timeout (void *ctx, unsigned char *buf, size_t len, uint32_
   uint32_t n = timeout;
   int32_t ret;
 
-  ret = iotSocketSetOpt (ctxt->fd, IOT_SOCKET_OPT_RECV_TIMEOUT, &n, sizeof(n));
+  ret = iotSocketSetOpt (ctxt->fd, IOT_SOCKET_SO_RCVTIMEO, &n, sizeof(n));
   if (ret < 0) {
     /* Error: return mbedTLS error codes */
-    if (ret == IOT_SOCKET_ERROR_SOCKET) {
+    if (ret == IOT_SOCKET_ESOCK) {
       return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
+    }
+    if (ret == IOT_SOCKET_EAGAIN) {
+      return (MBEDTLS_ERR_SSL_TIMEOUT);
+    }
+    if (ret == IOT_SOCKET_ECONNRESET) {
+      return (MBEDTLS_ERR_NET_CONN_RESET);
     }
     return (MBEDTLS_ERR_NET_RECV_FAILED);
   }
@@ -267,13 +271,13 @@ int mbedtls_net_send( void *ctx, const unsigned char *buf, size_t len ) {
   ret = iotSocketSend (ctxt->fd, buf, len);
   if (ret < 0) {
     /* Error: return mbedTLS error codes */
-    if (ret == IOT_SOCKET_ERROR_SOCKET) {
+    if (ret == IOT_SOCKET_ESOCK) {
       return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
     }
-    if (ret == IOT_SOCKET_ERROR_WOULDBLOCK) {
+    if (ret == IOT_SOCKET_EAGAIN) {
       return (MBEDTLS_ERR_SSL_WANT_WRITE);
     }
-    if (ret == IOT_SOCKET_ERROR_CLOSED) {
+    if (ret == IOT_SOCKET_ECONNRESET) {
       return (MBEDTLS_ERR_NET_CONN_RESET);
     }
     return (MBEDTLS_ERR_NET_SEND_FAILED);
