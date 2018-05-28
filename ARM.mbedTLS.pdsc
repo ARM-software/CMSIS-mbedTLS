@@ -6,6 +6,10 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.5.0">
+      Updated to mbedTLS V2.9.0
+      Updated support for MDK Network and IoT Socket
+    </release>
     <release version="1.4.0" date="2018-04-20">
       Updated to mbedTLS V2.8.0
       Added support for IoT Socket
@@ -48,21 +52,21 @@
     </condition>
     <condition id="MDK-Pro Network">
       <description>MDK-Pro Network CORE component</description>
-      <require Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
+      <require Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cversion="7.9.0"/>
     </condition>
     <condition id="IoT Socket">
       <description>IoT Socket component</description>
       <require Cclass="IoT Utility" Cgroup="Socket"/>
-      <deny    Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
+      <deny condition="MDK-Pro Network"/>
     </condition>
     <condition id="Generic Network">
       <description>Generic Network CORE component</description>
-      <deny    Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
-      <deny    Cclass="IoT Utility" Cgroup="Socket"/>
+      <deny condition="MDK-Pro Network"/>
+      <deny condition="IoT Socket"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.8.0" condition="Cortex-M Device">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.9.0" condition="Cortex-M Device">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
