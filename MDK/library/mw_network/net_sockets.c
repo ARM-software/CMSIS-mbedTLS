@@ -96,7 +96,7 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
 #endif
   NET_ADDR  addr;
   netStatus stat;
-  int32_t ret;
+  int32_t ret, addrlen;
 
   if ((ret = net_prepare ()) != 0) {
     return (ret);
@@ -125,12 +125,14 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
     SOCK_ADDR4(&host_addr)->sin_port   = htons (addr.port);
     memcpy (&SOCK_ADDR4(&host_addr)->sin_addr, addr.addr, NET_ADDR_IP4_LEN);
+    addrlen = sizeof(SOCKADDR_IN);
   }
 #if defined(RTE_Network_IPv6)
   else {
     SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
     SOCK_ADDR6(&host_addr)->sin6_port   = htons (addr.port);
     memcpy (&SOCK_ADDR6(&host_addr)->sin6_addr, addr.addr, NET_ADDR_IP6_LEN);
+    addrlen = sizeof(SOCKADDR_IN6);
   }
 #endif
   ctx->fd = socket (SOCK_ADDR(&host_addr)->sa_family,
@@ -139,7 +141,7 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
   }
 
-  if (connect (ctx->fd, SOCK_ADDR(&host_addr), sizeof(host_addr)) < 0) {
+  if (connect (ctx->fd, SOCK_ADDR(&host_addr), addrlen) < 0) {
     closesocket (ctx->fd);
     ctx->fd = -1;
     return (MBEDTLS_ERR_NET_CONNECT_FAILED);
@@ -157,7 +159,7 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
   SOCKADDR_IN  host_addr;
 #endif
   uint16_t port_nr;
-  int32_t ret;
+  int32_t ret, addrlen;
 
   if ((ret = net_prepare ()) != 0) {
     return (ret);
@@ -167,13 +169,16 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
   memset (&host_addr, 0, sizeof(host_addr));
   if (bind_ip == NULL) {
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
+    addrlen = sizeof(SOCKADDR_IN);
   }
   else if (inet_pton (AF_INET, bind_ip, &SOCK_ADDR4(&host_addr)->sin_addr)) {
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
+    addrlen = sizeof(SOCKADDR_IN);
   }
 #if defined(RTE_Network_IPv6)
   else if (inet_pton (AF_INET6, bind_ip, &SOCK_ADDR6(&host_addr)->sin6_addr)) {
     SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
+    addrlen = sizeof(SOCKADDR_IN6);
   }
 #endif
 
@@ -198,7 +203,7 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
   }
 
-  if (bind (ctx->fd, SOCK_ADDR(&host_addr), sizeof (host_addr)) < 0) {
+  if (bind (ctx->fd, SOCK_ADDR(&host_addr), addrlen) < 0) {
     closesocket (ctx->fd);
     return (MBEDTLS_ERR_NET_BIND_FAILED);
   }

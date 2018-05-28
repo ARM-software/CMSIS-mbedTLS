@@ -8,7 +8,7 @@
   <releases>
     <release version="1.5.0">
       Updated to mbedTLS V2.9.0
-      Updated support for MDK Network and IoT Socket
+      Updated support for MDK-Network
     </release>
     <release version="1.4.0" date="2018-04-20">
       Updated to mbedTLS V2.8.0
