@@ -59,17 +59,9 @@
 #undef MBEDTLS_NET_LISTEN_BACKLOG
 #define MBEDTLS_NET_LISTEN_BACKLOG      3
 
-#if defined(RTE_CMSIS_RTOS)
- static osThreadId   dns_thread;
-#else
- static osThreadId_t dns_thread;
-#endif
-static SOCKADDR     *dns_addr;
-
 #define SOCK_ADDR(addr)      ((SOCKADDR *)    addr)
 #define SOCK_ADDR4(addr)     ((SOCKADDR_IN *) addr)
 #define SOCK_ADDR6(addr)     ((SOCKADDR_IN6 *)addr)
-#define SOCK(ctx)            (((mbedtls_net_context *)ctx)->fd >> 1)
 
 /*
  * Prepare for using the sockets interface
@@ -94,32 +86,6 @@ void mbedtls_net_init (mbedtls_net_context *ctx) {
 }
 
 /*
- * DNS resolver callback
- */
-static void dns_cbfunc (netDNSc_Event event, const NET_ADDR *addr) {
-  if (dns_addr && event == netDNSc_EventSuccess) {
-    if (addr->addr_type == NET_ADDR_IP4) {
-      SOCK_ADDR4(dns_addr)->sin_family = AF_INET;
-      memcpy (&SOCK_ADDR4(dns_addr)->sin_addr, addr->addr, NET_ADDR_IP4_LEN);
-    }
-#if defined(RTE_Network_IPv6)
-    if (addr->addr_type == NET_ADDR_IP6) {
-      SOCK_ADDR6(dns_addr)->sin6_family = AF_INET6;
-      memcpy (&SOCK_ADDR6(dns_addr)->sin6_addr, addr->addr, NET_ADDR_IP6_LEN);
-    }
-#endif
-    dns_addr = NULL;
-  }
-  if (dns_thread) {
-#if defined(RTE_CMSIS_RTOS)
-    osSignalSet (dns_thread, 0x01);
-#else
-    osThreadFlagsSet (dns_thread, 0x01);
-#endif
-  }
-}
-
-/*
  * Initiate a TCP connection with host:port and the given protocol
  */
 int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char *port, int proto) {
@@ -128,58 +94,43 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
 #else
   SOCKADDR_IN  host_addr;
 #endif
+  NET_ADDR  addr;
   netStatus stat;
-  int16_t addr_type;
-  uint16_t port_nr;
-  int ret;
+  int32_t ret;
 
   if ((ret = net_prepare ()) != 0) {
     return (ret);
   }
 
   /* Do name resolution with both IPv4 and IPv6 */
-  SOCK_ADDR(&host_addr)->sa_family = AF_UNSPEC;
-  dns_addr  = SOCK_ADDR(&host_addr);
-  addr_type = NET_ADDR_IP4;
-  while (1) {
-    stat = netDNSc_GetHostByName (host, addr_type, dns_cbfunc);
-    if (stat == netBusy) {
-      osDelay (100);
-      continue;
-    }
-    if (stat == netOK) {
-      dns_thread = osThreadGetId ();
-#if defined(RTE_CMSIS_RTOS)
-      osSignalWait (0x01, osWaitForever);
-#else
-      osThreadFlagsWait (0x01, osFlagsWaitAny, osWaitForever);
-#endif
-      dns_thread = NULL;
-      if (SOCK_ADDR(&host_addr)->sa_family != AF_UNSPEC) {
-        break;
-      }
-    }
+  stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP4, &addr);
 #if defined(RTE_Network_IPv6)
-    if (addr_type == NET_ADDR_IP4) {
-      /* Failed with IPv4, retry with IPv6 */
-      addr_type = NET_ADDR_IP6;
-      continue;
-    }
+  if (stat == netDnsResolverError) {
+    /* Failed for IPv4, retry for IPv6 */
+    stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP6, &addr);
+  }
 #endif
+  if (stat != netOK) {
     return (MBEDTLS_ERR_NET_UNKNOWN_HOST);
   }
+
   /* Get port number */
-  port_nr = 0;
-  sscanf (port, "%hu", &port_nr);
-  if (port_nr == 0) {
+  addr.port = 0;
+  sscanf (port, "%hu", &addr.port);
+  if (addr.port == 0) {
     return (MBEDTLS_ERR_NET_UNKNOWN_HOST);
   }
-  if (SOCK_ADDR(&host_addr)->sa_family == AF_INET) {
-    SOCK_ADDR4(&host_addr)->sin_port = htons (port_nr);
+
+  if (addr.addr_type == NET_ADDR_IP4) {
+    SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
+    SOCK_ADDR4(&host_addr)->sin_port   = htons (addr.port);
+    memcpy (&SOCK_ADDR4(&host_addr)->sin_addr, addr.addr, NET_ADDR_IP4_LEN);
   }
 #if defined(RTE_Network_IPv6)
   else {
-    SOCK_ADDR6(&host_addr)->sin6_port = htons (port_nr);
+    SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
+    SOCK_ADDR6(&host_addr)->sin6_port   = htons (addr.port);
+    memcpy (&SOCK_ADDR6(&host_addr)->sin6_addr, addr.addr, NET_ADDR_IP6_LEN);
   }
 #endif
   ctx->fd = socket (SOCK_ADDR(&host_addr)->sa_family,
@@ -188,12 +139,8 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
   }
 
-  /* Encode SOCK type into fd (bit 0) */
-  ctx->fd <<= 1;
-  if (proto == MBEDTLS_NET_PROTO_TCP) ctx->fd |= 1;
-
-  if (connect (SOCK(ctx), SOCK_ADDR(&host_addr), sizeof(host_addr)) < 0) {
-    closesocket (SOCK(ctx));
+  if (connect (ctx->fd, SOCK_ADDR(&host_addr), sizeof(host_addr)) < 0) {
+    closesocket (ctx->fd);
     ctx->fd = -1;
     return (MBEDTLS_ERR_NET_CONNECT_FAILED);
   }
@@ -210,7 +157,7 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
   SOCKADDR_IN  host_addr;
 #endif
   uint16_t port_nr;
-  int ret;
+  int32_t ret;
 
   if ((ret = net_prepare ()) != 0) {
     return (ret);
@@ -221,11 +168,11 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
   if (bind_ip == NULL) {
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
   }
-  else if (netIP_aton (bind_ip, NET_ADDR_IP4, (uint8_t *)&SOCK_ADDR4(&host_addr)->sin_addr)) {
+  else if (inet_pton (AF_INET, bind_ip, &SOCK_ADDR4(&host_addr)->sin_addr)) {
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
   }
 #if defined(RTE_Network_IPv6)
-  else if (netIP_aton (bind_ip, NET_ADDR_IP6, (uint8_t *)&SOCK_ADDR6(&host_addr)->sin6_addr)) {
+  else if (inet_pton (AF_INET6, bind_ip, &SOCK_ADDR6(&host_addr)->sin6_addr)) {
     SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
   }
 #endif
@@ -251,19 +198,15 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
     return (MBEDTLS_ERR_NET_SOCKET_FAILED);
   }
 
-  /* Encode SOCK type into fd (bit 0) */
-  ctx->fd <<= 1;
-  if (proto == MBEDTLS_NET_PROTO_TCP) ctx->fd |= 1;
-
-  if (bind (SOCK(ctx), SOCK_ADDR(&host_addr), sizeof (host_addr)) != BSD_SUCCESS) {
-    closesocket (SOCK(ctx));
+  if (bind (ctx->fd, SOCK_ADDR(&host_addr), sizeof (host_addr)) < 0) {
+    closesocket (ctx->fd);
     return (MBEDTLS_ERR_NET_BIND_FAILED);
   }
 
   /* Listen only makes sense for TCP */
   if (proto == MBEDTLS_NET_PROTO_TCP) {
-    if (listen (SOCK(ctx), MBEDTLS_NET_LISTEN_BACKLOG) != BSD_SUCCESS) {
-      closesocket (SOCK(ctx));
+    if (listen (ctx->fd, MBEDTLS_NET_LISTEN_BACKLOG) < 0) {
+      closesocket (ctx->fd);
       return (MBEDTLS_ERR_NET_LISTEN_FAILED);
     }
   }
@@ -281,24 +224,27 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
 #else
   SOCKADDR_IN  client_addr;
 #endif
-  int ret, n = sizeof(client_addr);
+  int32_t type, type_len = sizeof (type);
+  int32_t ret, n = sizeof(client_addr);
 
   /* Is this a TCP or UDP socket? */
-  if (bind_ctx->fd & 1) {
+  if (getsockopt (bind_ctx->fd, SOL_SOCKET, SO_TYPE, (char *)&type, &type_len) < 0) {
+    return (MBEDTLS_ERR_NET_ACCEPT_FAILED);
+  }
+  if (type == SOCK_STREAM) {
     /* TCP: actual accept() */
-    ret = accept (SOCK(bind_ctx), SOCK_ADDR(&client_addr), &n);
-    /* Encode SOCK type into fd (bit 0) */
-    client_ctx->fd = (ret < 0) ? -1 : (ret << 1) | 1;
+    ret = accept (bind_ctx->fd, SOCK_ADDR(&client_addr), &n);
+    client_ctx->fd = (ret < 0) ? -1 : ret;
   }
   else {
     /* UDP: wait for a message, but keep it in the queue */
     char buf[1] = { 0 };
-    ret = recvfrom (SOCK(bind_ctx), buf, sizeof (buf), MSG_PEEK,
+    ret = recvfrom (bind_ctx->fd, buf, sizeof (buf), MSG_PEEK,
                     SOCK_ADDR(&client_addr), &n );
   }
 
   if (ret < 0) {
-    if (ret == BSD_ERROR_WOULDBLOCK) {
+    if (ret == BSD_EWOULDBLOCK) {
       return (MBEDTLS_ERR_SSL_WANT_READ);
     }
     return (MBEDTLS_ERR_NET_ACCEPT_FAILED);
@@ -306,9 +252,9 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
 
   /* UDP: currently only one connection is accepted */
   /*      (multiplexing is not supported)           */
-  if (!(bind_ctx->fd & 1)) {
+  if (type != SOCK_STREAM) {
     /* Enable address filtering */
-    if (connect (SOCK(bind_ctx), SOCK_ADDR(&client_addr), n) != BSD_SUCCESS) {
+    if (connect (bind_ctx->fd, SOCK_ADDR(&client_addr), n) < 0) {
       return (MBEDTLS_ERR_NET_ACCEPT_FAILED);
     }
     client_ctx->fd = bind_ctx->fd;
@@ -343,15 +289,62 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
 int mbedtls_net_set_block (mbedtls_net_context *ctx) {
   unsigned long n = 0;
 
-  return ((ioctlsocket (SOCK(ctx), FIONBIO, &n) == BSD_SUCCESS) ? 0 : -1);
+  return ((ioctlsocket (ctx->fd, FIONBIO, &n) < 0) ? -1 : 0);
 }
 
 int mbedtls_net_set_nonblock (mbedtls_net_context *ctx) {
   unsigned long n = 1;
 
-  return ((ioctlsocket (SOCK(ctx), FIONBIO, &n) == BSD_SUCCESS) ? 0 : -1);
+  return ((ioctlsocket (ctx->fd, FIONBIO, &n) < 0) ? -1 : 0);
 }
 
+/*
+ * Check if data is available on the socket
+ */
+
+int mbedtls_net_poll (mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout) {
+  struct timeval tv;
+  fd_set read_fds;
+  fd_set write_fds;
+  int32_t ret;
+
+  if (ctx->fd < 0) {
+    return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
+  }
+
+  FD_ZERO (&read_fds);
+  if (rw & MBEDTLS_NET_POLL_READ) {
+    rw &= ~MBEDTLS_NET_POLL_READ;
+    FD_SET (ctx->fd, &read_fds);
+  }
+
+  FD_ZERO (&write_fds);
+  if (rw & MBEDTLS_NET_POLL_WRITE) {
+    rw &= ~MBEDTLS_NET_POLL_WRITE;
+    FD_SET (ctx->fd, &write_fds);
+  }
+
+  if (rw != 0) {
+    return (MBEDTLS_ERR_NET_BAD_INPUT_DATA);
+  }
+  tv.tv_sec  = timeout / 1000;
+  tv.tv_usec = (timeout % 1000) * 1000;
+
+  ret = select (ctx->fd + 1, &read_fds, &write_fds, NULL,
+                (timeout == (uint32_t)-1) ? NULL : &tv);
+  if (ret < 0) {
+    return (MBEDTLS_ERR_NET_POLL_FAILED);
+  }
+
+  ret = 0;
+  if (FD_ISSET (ctx->fd, &read_fds)) {
+    ret |= MBEDTLS_NET_POLL_READ;
+  }
+  if (FD_ISSET (ctx->fd, &write_fds)) {
+    ret |= MBEDTLS_NET_POLL_WRITE;
+  }
+  return (ret);
+}
 /*
  * Portable usleep helper
  */
@@ -363,22 +356,20 @@ void mbedtls_net_usleep (unsigned long usec) {
  * Read at most 'len' characters
  */
 int mbedtls_net_recv (void *ctx, unsigned char *buf, size_t len) {
-  int ret;
+  mbedtls_net_context *ctx_io = ctx;
+  int32_t ret;
 
-  ret = recv (SOCK(ctx), (char *)buf, len, 0);
+  ret = recv (ctx_io->fd, (char *)buf, len, 0);
   if (ret < 0) {
     /* Error: return mbedTLS error codes */
-    if (ret == BSD_ERROR_SOCKET) {
+    if (ret == BSD_ESOCK) {
       return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
     }
-    if (ret == BSD_ERROR_WOULDBLOCK) {
+    if ((ret == BSD_EWOULDBLOCK) || (ret == BSD_ETIMEDOUT)) {
       return (MBEDTLS_ERR_SSL_WANT_READ);
     }
-    if (ret == BSD_ERROR_CLOSED) {
+    if (ret == BSD_ECONNRESET) {
       return (MBEDTLS_ERR_NET_CONN_RESET);
-    }
-    if (ret == BSD_ERROR_TIMEOUT) {
-      return (MBEDTLS_ERR_SSL_TIMEOUT);
     }
     return (MBEDTLS_ERR_NET_RECV_FAILED);
   }
@@ -389,15 +380,27 @@ int mbedtls_net_recv (void *ctx, unsigned char *buf, size_t len) {
  * Read at most 'len' characters, blocking for at most 'timeout' ms
  */
 int mbedtls_net_recv_timeout (void *ctx, unsigned char *buf, size_t len, uint32_t timeout) {
-  uint32_t n = timeout;
-  int ret;
+  mbedtls_net_context *ctx_io = ctx;
+  struct timeval tv;
+  fd_set read_fds;
+  int32_t ret;
 
-  ret = setsockopt (SOCK(ctx), SOL_SOCKET, SO_RCVTIMEO, (const char *)&n, sizeof(n));
+  if (ctx_io->fd < 0) {
+    return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
+  }
+  FD_ZERO (&read_fds);
+  FD_SET (ctx_io->fd, &read_fds);
+
+  tv.tv_sec  = timeout / 1000;
+  tv.tv_usec = (timeout % 1000) * 1000;
+
+  ret = select (ctx_io->fd + 1, &read_fds, NULL, NULL, timeout == 0 ? NULL : &tv);
+
+  /* Zero fds ready means we timed out */
+  if (ret == 0) {
+    return (MBEDTLS_ERR_SSL_TIMEOUT);
+  }
   if (ret < 0) {
-    /* Error: return mbedTLS error codes */
-    if (ret == BSD_ERROR_SOCKET) {
-      return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
-    }
     return (MBEDTLS_ERR_NET_RECV_FAILED);
   }
 
@@ -408,19 +411,20 @@ int mbedtls_net_recv_timeout (void *ctx, unsigned char *buf, size_t len, uint32_
 /*
  * Write at most 'len' characters
  */
-int mbedtls_net_send( void *ctx, const unsigned char *buf, size_t len ) {
-  int ret;
+int mbedtls_net_send (void *ctx, const unsigned char *buf, size_t len) {
+  mbedtls_net_context *ctx_io = ctx;
+  int32_t ret;
 
-  ret = send (SOCK(ctx), (const char *)buf, len, 0);
+  ret = send (ctx_io->fd, (const char *)buf, len, 0);
   if (ret < 0) {
     /* Error: return mbedTLS error codes */
-    if (ret == BSD_ERROR_SOCKET) {
+    if (ret == BSD_ESOCK) {
       return (MBEDTLS_ERR_NET_INVALID_CONTEXT);
     }
-    if (ret == BSD_ERROR_WOULDBLOCK) {
+    if ((ret == BSD_EWOULDBLOCK) || (ret == BSD_ETIMEDOUT)) {
       return (MBEDTLS_ERR_SSL_WANT_WRITE);
     }
-    if (ret == BSD_ERROR_CLOSED) {
+    if (ret == BSD_ECONNRESET) {
       return (MBEDTLS_ERR_NET_CONN_RESET);
     }
     return (MBEDTLS_ERR_NET_SEND_FAILED);
@@ -435,7 +439,7 @@ void mbedtls_net_free (mbedtls_net_context *ctx) {
   if (ctx->fd < 0) {
     return;
   }
-  closesocket (SOCK(ctx));
+  closesocket (ctx->fd);
   ctx->fd = -1;
 }
 
