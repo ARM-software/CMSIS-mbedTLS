@@ -6,7 +6,7 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
-    <release version="1.5.0">
+    <release version="1.5.0" date="2018-06-07">
       Updated to mbedTLS V2.9.0
       Updated support for MDK-Network
     </release>
