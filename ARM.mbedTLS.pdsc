@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.5.1">
+      Updated platform dependency
+    </release>
     <release version="1.5.0" date="2018-06-07">
       Updated to mbedTLS V2.9.0
       Updated support for MDK-Network
@@ -50,6 +53,12 @@
       <accept Dcore="SC000"/>
       <accept Dcore="SC300"/>
     </condition>
+    <condition id="CMSIS RTOS">
+      <description>CMSIS RTOS (API1 or API2)</description>
+      <require Cclass="CMSIS" Cgroup="CORE" Cversion="5.0.1"/>
+      <accept  Cclass="CMSIS" Cgroup="RTOS"/>
+      <accept  Cclass="CMSIS" Cgroup="RTOS2"/>
+    </condition>
     <condition id="MDK-Pro Network">
       <description>MDK-Pro Network CORE component</description>
       <require Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cversion="7.9.0"/>
@@ -57,12 +66,12 @@
     <condition id="IoT Socket">
       <description>IoT Socket component</description>
       <require Cclass="IoT Utility" Cgroup="Socket"/>
-      <deny condition="MDK-Pro Network"/>
+      <deny Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
     </condition>
     <condition id="Generic Network">
       <description>Generic Network CORE component</description>
-      <deny condition="MDK-Pro Network"/>
-      <deny condition="IoT Socket"/>
+      <deny Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
+      <deny Cclass="IoT Utility" Cgroup="Socket"/>
     </condition>
   </conditions>
   <components>
@@ -101,7 +110,7 @@
         <file category="source"  name="library/ecp_curves.c"/>
         <file category="source"  name="library/entropy.c"/>
         <file category="source"  name="library/entropy_poll.c"/>
-        <file category="source"  name="MDK/library/entropy_poll_hw.c" condition="MDK-Pro Network"/>
+        <file category="source"  name="MDK/library/entropy_poll_hw.c" condition="CMSIS RTOS"/>
         <file category="source"  name="library/error.c"/>
         <file category="source"  name="library/gcm.c"/>
         <file category="source"  name="library/havege.c"/>

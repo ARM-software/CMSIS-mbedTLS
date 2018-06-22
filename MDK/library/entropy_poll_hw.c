@@ -1,5 +1,5 @@
 /**
- * Entropy hardware poll function for MDK-Pro Network
+ * Entropy hardware poll function
  *
  *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
@@ -30,6 +30,7 @@
 #include <string.h>
 #include "entropy_poll.h"
 #include "RTE_Components.h"
+#include "cmsis_compiler.h"
 #if defined(RTE_CMSIS_RTOS)
  #include "cmsis_os.h"
 #elif defined(RTE_CMSIS_RTOS2)
@@ -41,8 +42,8 @@
 /**
  * Entropy poll callback for a hardware source
  */
-int mbedtls_hardware_poll (void *data,
-                           unsigned char *output, size_t len, size_t *olen) {
+__WEAK int mbedtls_hardware_poll (void *data, unsigned char *output,
+                                  size_t len, size_t *olen) {
   uint32_t timer;
 
   if (len < sizeof(uint32_t)) {
