@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.5.2">
+      Removed mbedTLS.h header (not part of mbedTLS)
+    </release>
     <release version="1.5.1">
       Updated platform dependency
     </release>
@@ -83,7 +86,6 @@
       <files>
         <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>
-        <file category="header"  name="include/mbedtls/mbedTLS.h"/>
         <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.6.0"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
