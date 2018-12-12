@@ -28,7 +28,7 @@
 #if defined(MBEDTLS_ENTROPY_HARDWARE_ALT)
 
 #include <string.h>
-#include "entropy_poll.h"
+#include "mbedtls/entropy_poll.h"
 #include "RTE_Components.h"
 #include "cmsis_compiler.h"
 #if defined(RTE_CMSIS_RTOS)
