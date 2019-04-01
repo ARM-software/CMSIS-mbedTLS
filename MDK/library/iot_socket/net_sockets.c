@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
  *
- *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2019, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -40,13 +40,17 @@
  #error "::CMSIS:RTOS selection invalid"
 #endif
 
-#undef MBEDTLS_NET_LISTEN_BACKLOG
+#undef  MBEDTLS_NET_LISTEN_BACKLOG
 #define MBEDTLS_NET_LISTEN_BACKLOG      3
 
-#if !defined(RTE_Network_IPv6)
- #define IP_LEN     4
+#ifndef MBEDTLS_NET_SOCKET_IP6
+#define MBEDTLS_NET_SOCKET_IP6          0
+#endif
+
+#if (MBEDTLS_NET_SOCKET_IP6 == 0)
+ #define IP_LEN  4
 #else
- #define IP_LEN     16
+ #define IP_LEN 16
 #endif
 
 /*
@@ -67,11 +71,11 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
 
   /* Do name resolution with both IPv4 and IPv6 */
   af = IOT_SOCKET_AF_INET;
-  ret = iotSocketGetHostByName (host, af, &ip_addr, &ip_len);
-#if defined(RTE_Network_IPv6)
-  if (ret < 0) {
+  ret = iotSocketGetHostByName (host, af, &ip_addr[0], &ip_len);
+#if (MBEDTLS_NET_SOCKET_IP6 != 0)
+  if (ret == IOT_SOCKET_EHOSTNOTFOUND) {
     af = IOT_SOCKET_AF_INET6;
-    ret = iotSocketGetHostByName (host, af, &ip_addr, &ip_len);
+    ret = iotSocketGetHostByName (host, af, &ip_addr[0], &ip_len);
   }
 #endif
   if (ret < 0) {
@@ -173,7 +177,7 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
   uint32_t iplen = buf_size;
   int32_t  ret;
 
-  // Multiple TCP or single UDP connection is accepted
+  // Only TCP (UDP connection is not accepted)
   ret = iotSocketAccept (bind_ctx->fd, client_ip, &iplen, NULL);
   if (ret < 0) {
     if (ret == IOT_SOCKET_EAGAIN) {
