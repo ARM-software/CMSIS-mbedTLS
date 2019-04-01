@@ -181,6 +181,9 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
     addrlen = sizeof(SOCKADDR_IN6);
   }
 #endif
+  else {
+    return (MBEDTLS_ERR_NET_UNKNOWN_HOST);
+  }
 
   /* Get port number */
   port_nr = 0;
