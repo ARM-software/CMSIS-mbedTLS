@@ -35,6 +35,9 @@
 #define mbedtls_printf     printf
 #define mbedtls_fprintf    fprintf
 #define mbedtls_snprintf   snprintf
+#define mbedtls_exit            exit
+#define MBEDTLS_EXIT_SUCCESS    EXIT_SUCCESS
+#define MBEDTLS_EXIT_FAILURE    EXIT_FAILURE
 #endif
 
 #if !defined(MBEDTLS_ENTROPY_C) || \
@@ -59,6 +62,11 @@ int main( void )
 #include "mbedtls/debug.h"
 #include "mbedtls/timing.h"
 
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+#include "psa/crypto.h"
+#include "mbedtls/psa_util.h"
+#endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -80,9 +88,12 @@ int main( void )
 #define DFL_CA_PATH             ""
 #define DFL_CRT_FILE            ""
 #define DFL_KEY_FILE            ""
+#define DFL_KEY_OPAQUE          0
 #define DFL_PSK                 ""
+#define DFL_PSK_OPAQUE          0
 #define DFL_PSK_IDENTITY        "Client_identity"
 #define DFL_ECJPAKE_PW          NULL
+#define DFL_EC_MAX_OPS          -1
 #define DFL_FORCE_CIPHER        0
 #define DFL_RENEGOTIATION       MBEDTLS_SSL_RENEGOTIATION_DISABLED
 #define DFL_ALLOW_LEGACY        -2
@@ -106,6 +117,8 @@ int main( void )
 #define DFL_TRANSPORT           MBEDTLS_SSL_TRANSPORT_STREAM
 #define DFL_HS_TO_MIN           0
 #define DFL_HS_TO_MAX           0
+#define DFL_DTLS_MTU            -1
+#define DFL_DGRAM_PACKING        1
 #define DFL_FALLBACK            -1
 #define DFL_EXTENDED_MS         -1
 #define DFL_ETM                 -1
@@ -127,14 +140,36 @@ int main( void )
 #define USAGE_IO \
     "    No file operations available (MBEDTLS_FS_IO not defined)\n"
 #endif /* MBEDTLS_FS_IO */
-#else
+#else /* MBEDTLS_X509_CRT_PARSE_C */
 #define USAGE_IO ""
 #endif /* MBEDTLS_X509_CRT_PARSE_C */
+#if defined(MBEDTLS_USE_PSA_CRYPTO) && defined(MBEDTLS_X509_CRT_PARSE_C)
+#define USAGE_KEY_OPAQUE \
+    "    key_opaque=%%d       Handle your private key as if it were opaque\n" \
+    "                        default: 0 (disabled)\n"
+#else
+#define USAGE_KEY_OPAQUE ""
+#endif
 
 #if defined(MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED)
-#define USAGE_PSK                                                   \
+#define USAGE_PSK_RAW                                               \
     "    psk=%%s              default: \"\" (in hex, without 0x)\n" \
     "    psk_identity=%%s     default: \"Client_identity\"\n"
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+#define USAGE_PSK_SLOT                          \
+    "    psk_opaque=%%d       default: 0 (don't use opaque static PSK)\n"     \
+    "                          Enable this to store the PSK configured through command line\n" \
+    "                          parameter `psk` in a PSA-based key slot.\n" \
+    "                          Note: Currently only supported in conjunction with\n"                  \
+    "                          the use of min_version to force TLS 1.2 and force_ciphersuite \n"      \
+    "                          to force a particular PSK-only ciphersuite.\n"                         \
+    "                          Note: This is to test integration of PSA-based opaque PSKs with\n"     \
+    "                          Mbed TLS only. Production systems are likely to configure Mbed TLS\n"  \
+    "                          with prepopulated key slots instead of importing raw key material.\n"
+#else
+#define USAGE_PSK_SLOT ""
+#endif /* MBEDTLS_USE_PSA_CRYPTO */
+#define USAGE_PSK USAGE_PSK_RAW USAGE_PSK_SLOT
 #else
 #define USAGE_PSK ""
 #endif /* MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED */
@@ -198,7 +233,11 @@ int main( void )
 #define USAGE_DTLS \
     "    dtls=%%d             default: 0 (TLS)\n"                           \
     "    hs_timeout=%%d-%%d    default: (library default: 1000-60000)\n"    \
-    "                        range of DTLS handshake timeouts in millisecs\n"
+    "                        range of DTLS handshake timeouts in millisecs\n" \
+    "    mtu=%%d              default: (library default: unlimited)\n"  \
+    "    dgram_packing=%%d    default: 1 (allowed)\n"                   \
+    "                        allow or forbid packing of multiple\n" \
+    "                        records within a single datgram.\n"
 #else
 #define USAGE_DTLS ""
 #endif
@@ -239,6 +278,13 @@ int main( void )
 #define USAGE_ECJPAKE ""
 #endif
 
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+#define USAGE_ECRESTART \
+    "    ec_max_ops=%%s       default: library default (restart disabled)\n"
+#else
+#define USAGE_ECRESTART ""
+#endif
+
 #define USAGE \
     "\n usage: ssl_client2 param=<>...\n"                   \
     "\n acceptable parameters:\n"                           \
@@ -246,8 +292,12 @@ int main( void )
     "    server_addr=%%s      default: given by name\n"     \
     "    server_port=%%d      default: 4433\n"              \
     "    request_page=%%s     default: \".\"\n"             \
-    "    request_size=%%d     default: about 34 (basic request)\n" \
-    "                        (minimum: 0, max: " MAX_REQUEST_SIZE_STR " )\n" \
+    "    request_size=%%d     default: about 34 (basic request)\n"           \
+    "                        (minimum: 0, max: " MAX_REQUEST_SIZE_STR ")\n"  \
+    "                        If 0, in the first exchange only an empty\n"    \
+    "                        application data message is sent followed by\n" \
+    "                        a second non-empty message before attempting\n" \
+    "                        to read a response from the server\n"           \
     "    debug_level=%%d      default: 0 (disabled)\n"             \
     "    nbio=%%d             default: 0 (blocking I/O)\n"         \
     "                        options: 1 (non-blocking), 2 (added delays)\n"   \
@@ -261,9 +311,11 @@ int main( void )
     "    auth_mode=%%s        default: (library default: none)\n" \
     "                        options: none, optional, required\n" \
     USAGE_IO                                                \
+    USAGE_KEY_OPAQUE                                        \
     "\n"                                                    \
     USAGE_PSK                                               \
     USAGE_ECJPAKE                                           \
+    USAGE_ECRESTART                                         \
     "\n"                                                    \
     "    allow_legacy=%%d     default: (library default: no)\n"   \
     USAGE_RENEGO                                            \
@@ -290,10 +342,26 @@ int main( void )
     "                        options: ssl3, tls1, tls1_1, tls1_2, dtls1, dtls1_2\n" \
     "\n"                                                    \
     "    force_ciphersuite=<name>    default: all enabled\n"\
+    "    query_config=<name>         return 0 if the specified\n"       \
+    "                                configuration macro is defined and 1\n"  \
+    "                                otherwise. The expansion of the macro\n" \
+    "                                is printed if it is defined\n"     \
     " acceptable ciphersuite names:\n"
 
 #define ALPN_LIST_SIZE  10
 #define CURVE_LIST_SIZE 20
+
+#if defined(MBEDTLS_CHECK_PARAMS)
+#include "mbedtls/platform_util.h"
+void mbedtls_param_failed( const char *failure_condition,
+                           const char *file,
+                           int line )
+{
+    mbedtls_printf( "%s:%i: Input param failed - %s\n",
+                    file, line, failure_condition );
+    mbedtls_exit( MBEDTLS_EXIT_FAILURE );
+}
+#endif
 
 /*
  * global options
@@ -314,9 +382,14 @@ struct options
     const char *ca_path;        /* the path with the CA certificate(s) reside */
     const char *crt_file;       /* the file with the client certificate     */
     const char *key_file;       /* the file with the client key             */
+    int key_opaque;             /* handle private key as if it were opaque  */
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    int psk_opaque;
+#endif
     const char *psk;            /* the pre-shared key                       */
     const char *psk_identity;   /* the pre-shared key identity              */
     const char *ecjpake_pw;     /* the EC J-PAKE password                   */
+    int ec_max_ops;             /* EC consecutive operations limit          */
     int force_ciphersuite[2];   /* protocol/ciphersuite to use, or all      */
     int renegotiation;          /* enable / disable renegotiation           */
     int allow_legacy;           /* allow legacy renegotiation               */
@@ -341,10 +414,14 @@ struct options
     int transport;              /* TLS or DTLS?                             */
     uint32_t hs_to_min;         /* Initial value of DTLS handshake timer    */
     uint32_t hs_to_max;         /* Max value of DTLS handshake timer        */
+    int dtls_mtu;               /* UDP Maximum tranport unit for DTLS       */
     int fallback;               /* is this a fallback connection?           */
+    int dgram_packing;          /* allow/forbid datagram packing            */
     int extended_ms;            /* negotiate extended master secret?        */
     int etm;                    /* negotiate encrypt then mac?              */
 } opt;
+
+int query_config( const char *config );
 
 static void my_debug( void *ctx, int level,
                       const char *file, int line,
@@ -401,6 +478,8 @@ static int my_send( void *ctx, const unsigned char *buf, size_t len )
 }
 
 #if defined(MBEDTLS_X509_CRT_PARSE_C)
+static unsigned char peer_crt_info[1024];
+
 /*
  * Enabled if debug_level > 1 in code below
  */
@@ -410,8 +489,14 @@ static int my_verify( void *data, mbedtls_x509_crt *crt,
     char buf[1024];
     ((void) data);
 
-    mbedtls_printf( "\nVerify requested for (Depth %d):\n", depth );
     mbedtls_x509_crt_info( buf, sizeof( buf ) - 1, "", crt );
+    if( depth == 0 )
+        memcpy( peer_crt_info, buf, sizeof( buf ) );
+
+    if( opt.debug_level == 0 )
+        return( 0 );
+
+    mbedtls_printf( "\nVerify requested for (Depth %d):\n", depth );
     mbedtls_printf( "%s", buf );
 
     if ( ( *flags ) == 0 )
@@ -514,6 +599,13 @@ int main( int argc, char *argv[] )
 
     const char *pers = "ssl_client2";
 
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    psa_key_handle_t slot = 0;
+    psa_algorithm_t alg = 0;
+    psa_key_policy_t policy;
+    psa_status_t status;
+#endif
+
 #if defined(MBEDTLS_X509_CRT_PARSE_C)
     mbedtls_x509_crt_profile crt_profile_for_test = mbedtls_x509_crt_profile_default;
 #endif
@@ -530,6 +622,9 @@ int main( int argc, char *argv[] )
     mbedtls_x509_crt cacert;
     mbedtls_x509_crt clicert;
     mbedtls_pk_context pkey;
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    psa_key_handle_t key_slot = 0; /* invalid key slot */
+#endif
 #endif
     char *p, *q;
     const int *list;
@@ -549,6 +644,17 @@ int main( int argc, char *argv[] )
 #endif
 #if defined(MBEDTLS_SSL_ALPN)
     memset( (void * ) alpn_list, 0, sizeof( alpn_list ) );
+#endif
+
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    status = psa_crypto_init();
+    if( status != PSA_SUCCESS )
+    {
+        mbedtls_fprintf( stderr, "Failed to initialize PSA Crypto implementation: %d\n",
+                         (int) status );
+        ret = MBEDTLS_ERR_SSL_HW_ACCEL_FAILED;
+        goto exit;
+    }
 #endif
 
     if( argc == 0 )
@@ -587,9 +693,14 @@ int main( int argc, char *argv[] )
     opt.ca_path             = DFL_CA_PATH;
     opt.crt_file            = DFL_CRT_FILE;
     opt.key_file            = DFL_KEY_FILE;
+    opt.key_opaque          = DFL_KEY_OPAQUE;
     opt.psk                 = DFL_PSK;
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    opt.psk_opaque          = DFL_PSK_OPAQUE;
+#endif
     opt.psk_identity        = DFL_PSK_IDENTITY;
     opt.ecjpake_pw          = DFL_ECJPAKE_PW;
+    opt.ec_max_ops          = DFL_EC_MAX_OPS;
     opt.force_ciphersuite[0]= DFL_FORCE_CIPHER;
     opt.renegotiation       = DFL_RENEGOTIATION;
     opt.allow_legacy        = DFL_ALLOW_LEGACY;
@@ -613,9 +724,11 @@ int main( int argc, char *argv[] )
     opt.transport           = DFL_TRANSPORT;
     opt.hs_to_min           = DFL_HS_TO_MIN;
     opt.hs_to_max           = DFL_HS_TO_MAX;
+    opt.dtls_mtu            = DFL_DTLS_MTU;
     opt.fallback            = DFL_FALLBACK;
     opt.extended_ms         = DFL_EXTENDED_MS;
     opt.etm                 = DFL_ETM;
+    opt.dgram_packing       = DFL_DGRAM_PACKING;
 
     for( i = 1; i < argc; i++ )
     {
@@ -683,12 +796,22 @@ int main( int argc, char *argv[] )
             opt.crt_file = q;
         else if( strcmp( p, "key_file" ) == 0 )
             opt.key_file = q;
+#if defined(MBEDTLS_USE_PSA_CRYPTO) && defined(MBEDTLS_X509_CRT_PARSE_C)
+        else if( strcmp( p, "key_opaque" ) == 0 )
+            opt.key_opaque = atoi( q );
+#endif
         else if( strcmp( p, "psk" ) == 0 )
             opt.psk = q;
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+        else if( strcmp( p, "psk_opaque" ) == 0 )
+            opt.psk_opaque = atoi( q );
+#endif
         else if( strcmp( p, "psk_identity" ) == 0 )
             opt.psk_identity = q;
         else if( strcmp( p, "ecjpake_pw" ) == 0 )
             opt.ecjpake_pw = q;
+        else if( strcmp( p, "ec_max_ops" ) == 0 )
+            opt.ec_max_ops = atoi( q );
         else if( strcmp( p, "force_ciphersuite" ) == 0 )
         {
             opt.force_ciphersuite[0] = mbedtls_ssl_get_ciphersuite_id( q );
@@ -923,6 +1046,21 @@ int main( int argc, char *argv[] )
             if( opt.hs_to_min == 0 || opt.hs_to_max < opt.hs_to_min )
                 goto usage;
         }
+        else if( strcmp( p, "mtu" ) == 0 )
+        {
+            opt.dtls_mtu = atoi( q );
+            if( opt.dtls_mtu < 0 )
+                goto usage;
+        }
+        else if( strcmp( p, "dgram_packing" ) == 0 )
+        {
+            opt.dgram_packing = atoi( q );
+            if( opt.dgram_packing != 0 &&
+                opt.dgram_packing != 1 )
+            {
+                goto usage;
+            }
+        }
         else if( strcmp( p, "recsplit" ) == 0 )
         {
             opt.recsplit = atoi( q );
@@ -934,6 +1072,10 @@ int main( int argc, char *argv[] )
             opt.dhmlen = atoi( q );
             if( opt.dhmlen < 0 )
                 goto usage;
+        }
+        else if( strcmp( p, "query_config" ) == 0 )
+        {
+            return query_config( q );
         }
         else
             goto usage;
@@ -951,57 +1093,6 @@ int main( int argc, char *argv[] )
 #if defined(MBEDTLS_DEBUG_C)
     mbedtls_debug_set_threshold( opt.debug_level );
 #endif
-
-    if( opt.force_ciphersuite[0] > 0 )
-    {
-        const mbedtls_ssl_ciphersuite_t *ciphersuite_info;
-        ciphersuite_info =
-            mbedtls_ssl_ciphersuite_from_id( opt.force_ciphersuite[0] );
-
-        if( opt.max_version != -1 &&
-            ciphersuite_info->min_minor_ver > opt.max_version )
-        {
-            mbedtls_printf( "forced ciphersuite not allowed with this protocol version\n" );
-            ret = 2;
-            goto usage;
-        }
-        if( opt.min_version != -1 &&
-            ciphersuite_info->max_minor_ver < opt.min_version )
-        {
-            mbedtls_printf( "forced ciphersuite not allowed with this protocol version\n" );
-            ret = 2;
-            goto usage;
-        }
-
-        /* If the server selects a version that's not supported by
-         * this suite, then there will be no common ciphersuite... */
-        if( opt.max_version == -1 ||
-            opt.max_version > ciphersuite_info->max_minor_ver )
-        {
-            opt.max_version = ciphersuite_info->max_minor_ver;
-        }
-        if( opt.min_version < ciphersuite_info->min_minor_ver )
-        {
-            opt.min_version = ciphersuite_info->min_minor_ver;
-            /* DTLS starts with TLS 1.1 */
-            if( opt.transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM &&
-                opt.min_version < MBEDTLS_SSL_MINOR_VERSION_2 )
-                opt.min_version = MBEDTLS_SSL_MINOR_VERSION_2;
-        }
-
-        /* Enable RC4 if needed and not explicitly disabled */
-        if( ciphersuite_info->cipher == MBEDTLS_CIPHER_ARC4_128 )
-        {
-            if( opt.arc4 == MBEDTLS_SSL_ARC4_DISABLED )
-            {
-                mbedtls_printf( "forced RC4 ciphersuite with RC4 disabled\n" );
-                ret = 2;
-                goto usage;
-            }
-
-            opt.arc4 = MBEDTLS_SSL_ARC4_ENABLED;
-        }
-    }
 
 #if defined(MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED)
     /*
@@ -1052,6 +1143,101 @@ int main( int argc, char *argv[] )
         }
     }
 #endif /* MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED */
+
+
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    if( opt.psk_opaque != 0 )
+    {
+        if( opt.psk == NULL )
+        {
+            mbedtls_printf( "psk_opaque set but no psk to be imported specified.\n" );
+            ret = 2;
+            goto usage;
+        }
+
+        if( opt.force_ciphersuite[0] <= 0 )
+        {
+            mbedtls_printf( "opaque PSKs are only supported in conjunction with forcing TLS 1.2 and a PSK-only ciphersuite through the 'force_ciphersuite' option.\n" );
+            ret = 2;
+            goto usage;
+        }
+    }
+#endif /* MBEDTLS_USE_PSA_CRYPTO */
+
+    if( opt.force_ciphersuite[0] > 0 )
+    {
+        const mbedtls_ssl_ciphersuite_t *ciphersuite_info;
+        ciphersuite_info =
+            mbedtls_ssl_ciphersuite_from_id( opt.force_ciphersuite[0] );
+
+        if( opt.max_version != -1 &&
+            ciphersuite_info->min_minor_ver > opt.max_version )
+        {
+            mbedtls_printf( "forced ciphersuite not allowed with this protocol version\n" );
+            ret = 2;
+            goto usage;
+        }
+        if( opt.min_version != -1 &&
+            ciphersuite_info->max_minor_ver < opt.min_version )
+        {
+            mbedtls_printf( "forced ciphersuite not allowed with this protocol version\n" );
+            ret = 2;
+            goto usage;
+        }
+
+        /* If the server selects a version that's not supported by
+         * this suite, then there will be no common ciphersuite... */
+        if( opt.max_version == -1 ||
+            opt.max_version > ciphersuite_info->max_minor_ver )
+        {
+            opt.max_version = ciphersuite_info->max_minor_ver;
+        }
+        if( opt.min_version < ciphersuite_info->min_minor_ver )
+        {
+            opt.min_version = ciphersuite_info->min_minor_ver;
+            /* DTLS starts with TLS 1.1 */
+            if( opt.transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM &&
+                opt.min_version < MBEDTLS_SSL_MINOR_VERSION_2 )
+                opt.min_version = MBEDTLS_SSL_MINOR_VERSION_2;
+        }
+
+        /* Enable RC4 if needed and not explicitly disabled */
+        if( ciphersuite_info->cipher == MBEDTLS_CIPHER_ARC4_128 )
+        {
+            if( opt.arc4 == MBEDTLS_SSL_ARC4_DISABLED )
+            {
+                mbedtls_printf( "forced RC4 ciphersuite with RC4 disabled\n" );
+                ret = 2;
+                goto usage;
+            }
+
+            opt.arc4 = MBEDTLS_SSL_ARC4_ENABLED;
+        }
+
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+        if( opt.psk_opaque != 0 )
+        {
+            /* Ensure that the chosen ciphersuite is PSK-only; we must know
+             * the ciphersuite in advance to set the correct policy for the
+             * PSK key slot. This limitation might go away in the future. */
+            if( ciphersuite_info->key_exchange != MBEDTLS_KEY_EXCHANGE_PSK ||
+                opt.min_version != MBEDTLS_SSL_MINOR_VERSION_3 )
+            {
+                mbedtls_printf( "opaque PSKs are only supported in conjunction with forcing TLS 1.2 and a PSK-only ciphersuite through the 'force_ciphersuite' option.\n" );
+                ret = 2;
+                goto usage;
+            }
+
+            /* Determine KDF algorithm the opaque PSK will be used in. */
+#if defined(MBEDTLS_SHA512_C)
+            if( ciphersuite_info->mac == MBEDTLS_MD_SHA384 )
+                alg = PSA_ALG_TLS12_PSK_TO_MS(PSA_ALG_SHA_384);
+            else
+#endif /* MBEDTLS_SHA512_C */
+                alg = PSA_ALG_TLS12_PSK_TO_MS(PSA_ALG_SHA_256);
+        }
+#endif /* MBEDTLS_USE_PSA_CRYPTO */
+    }
 
 #if defined(MBEDTLS_ECP_C)
     if( opt.curves != NULL )
@@ -1249,7 +1435,20 @@ int main( int argc, char *argv[] )
         goto exit;
     }
 
-    mbedtls_printf( " ok\n" );
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    if( opt.key_opaque != 0 )
+    {
+        if( ( ret = mbedtls_pk_wrap_as_opaque( &pkey, &key_slot,
+                                               PSA_ALG_SHA_256 ) ) != 0 )
+        {
+            mbedtls_printf( " failed\n  !  "
+                            "mbedtls_pk_wrap_as_opaque returned -0x%x\n\n", -ret );
+            goto exit;
+        }
+    }
+#endif /* MBEDTLS_USE_PSA_CRYPTO */
+
+    mbedtls_printf( " ok (key type: %s)\n", mbedtls_pk_get_name( &pkey ) );
 #endif /* MBEDTLS_X509_CRT_PARSE_C */
 
     /*
@@ -1312,8 +1511,8 @@ int main( int argc, char *argv[] )
         mbedtls_ssl_conf_sig_hashes( &conf, ssl_sig_hashes_for_test );
     }
 
-    if( opt.debug_level > 0 )
-        mbedtls_ssl_conf_verify( &conf, my_verify, NULL );
+    mbedtls_ssl_conf_verify( &conf, my_verify, NULL );
+    memset( peer_crt_info, 0, sizeof( peer_crt_info ) );
 #endif /* MBEDTLS_X509_CRT_PARSE_C */
 
     if( opt.auth_mode != DFL_AUTH_MODE )
@@ -1323,6 +1522,9 @@ int main( int argc, char *argv[] )
     if( opt.hs_to_min != DFL_HS_TO_MIN || opt.hs_to_max != DFL_HS_TO_MAX )
         mbedtls_ssl_conf_handshake_timeout( &conf, opt.hs_to_min,
                                             opt.hs_to_max );
+
+    if( opt.dgram_packing != DFL_DGRAM_PACKING )
+        mbedtls_ssl_set_datagram_packing( &ssl, opt.dgram_packing );
 #endif /* MBEDTLS_SSL_PROTO_DTLS */
 
 #if defined(MBEDTLS_SSL_MAX_FRAGMENT_LENGTH)
@@ -1421,6 +1623,45 @@ int main( int argc, char *argv[] )
 #endif
 
 #if defined(MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED)
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    if( opt.psk_opaque != 0 )
+    {
+        /* The algorithm has already been determined earlier. */
+        status = psa_allocate_key( &slot );
+        if( status != PSA_SUCCESS )
+        {
+            ret = MBEDTLS_ERR_SSL_HW_ACCEL_FAILED;
+            goto exit;
+        }
+
+        policy = psa_key_policy_init();
+        psa_key_policy_set_usage( &policy, PSA_KEY_USAGE_DERIVE, alg );
+
+        status = psa_set_key_policy( slot, &policy );
+        if( status != PSA_SUCCESS )
+        {
+            ret = MBEDTLS_ERR_SSL_HW_ACCEL_FAILED;
+            goto exit;
+        }
+
+        status = psa_import_key( slot, PSA_KEY_TYPE_DERIVE, psk, psk_len );
+        if( status != PSA_SUCCESS )
+        {
+            ret = MBEDTLS_ERR_SSL_HW_ACCEL_FAILED;
+            goto exit;
+        }
+
+        if( ( ret = mbedtls_ssl_conf_psk_opaque( &conf, slot,
+                                  (const unsigned char *) opt.psk_identity,
+                                  strlen( opt.psk_identity ) ) ) != 0 )
+        {
+            mbedtls_printf( " failed\n  ! mbedtls_ssl_conf_psk_opaque returned %d\n\n",
+                            ret );
+            goto exit;
+        }
+    }
+    else
+#endif /* MBEDTLS_USE_PSA_CRYPTO */
     if( ( ret = mbedtls_ssl_conf_psk( &conf, psk, psk_len,
                              (const unsigned char *) opt.psk_identity,
                              strlen( opt.psk_identity ) ) ) != 0 )
@@ -1429,7 +1670,7 @@ int main( int argc, char *argv[] )
                         ret );
         goto exit;
     }
-#endif
+#endif /* MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED */
 
     if( opt.min_version != DFL_MIN_VERSION )
         mbedtls_ssl_conf_min_version( &conf, MBEDTLS_SSL_MAJOR_VERSION_3,
@@ -1481,9 +1722,19 @@ int main( int argc, char *argv[] )
                              mbedtls_net_send, mbedtls_net_recv,
                              opt.nbio == 0 ? mbedtls_net_recv_timeout : NULL );
 
+#if defined(MBEDTLS_SSL_PROTO_DTLS)
+    if( opt.dtls_mtu != DFL_DTLS_MTU )
+        mbedtls_ssl_set_mtu( &ssl, opt.dtls_mtu );
+#endif
+
 #if defined(MBEDTLS_TIMING_C)
     mbedtls_ssl_set_timer_cb( &ssl, &timer, mbedtls_timing_set_delay,
                                             mbedtls_timing_get_delay );
+#endif
+
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+    if( opt.ec_max_ops != DFL_EC_MAX_OPS )
+        mbedtls_ecp_set_max_ops( opt.ec_max_ops );
 #endif
 
     mbedtls_printf( " ok\n" );
@@ -1497,7 +1748,8 @@ int main( int argc, char *argv[] )
     while( ( ret = mbedtls_ssl_handshake( &ssl ) ) != 0 )
     {
         if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
-            ret != MBEDTLS_ERR_SSL_WANT_WRITE )
+            ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
+            ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
         {
             mbedtls_printf( " failed\n  ! mbedtls_ssl_handshake returned -0x%x\n",
                             -ret );
@@ -1512,6 +1764,11 @@ int main( int argc, char *argv[] )
             mbedtls_printf( "\n" );
             goto exit;
         }
+
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+        if( ret == MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
+            continue;
+#endif
 
         /* For event-driven IO, wait for socket to become available */
         if( opt.event == 1 /* level triggered IO */ )
@@ -1584,13 +1841,8 @@ int main( int argc, char *argv[] )
     else
         mbedtls_printf( " ok\n" );
 
-    if( mbedtls_ssl_get_peer_cert( &ssl ) != NULL )
-    {
-        mbedtls_printf( "  . Peer certificate information    ...\n" );
-        mbedtls_x509_crt_info( (char *) buf, sizeof( buf ) - 1, "      ",
-                       mbedtls_ssl_get_peer_cert( &ssl ) );
-        mbedtls_printf( "%s\n", buf );
-    }
+    mbedtls_printf( "  . Peer certificate information    ...\n" );
+    mbedtls_printf( "%s\n", peer_crt_info );
 #endif /* MBEDTLS_X509_CRT_PARSE_C */
 
 #if defined(MBEDTLS_SSL_RENEGOTIATION)
@@ -1605,12 +1857,18 @@ int main( int argc, char *argv[] )
         while( ( ret = mbedtls_ssl_renegotiate( &ssl ) ) != 0 )
         {
             if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
-                ret != MBEDTLS_ERR_SSL_WANT_WRITE )
+                ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
+                ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
             {
                 mbedtls_printf( " failed\n  ! mbedtls_ssl_renegotiate returned %d\n\n",
                                 ret );
                 goto exit;
             }
+
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+            if( ret == MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
+                continue;
+#endif
 
             /* For event-driven IO, wait for socket to become available */
             if( opt.event == 1 /* level triggered IO */ )
@@ -1663,13 +1921,17 @@ send_request:
 
     if( opt.transport == MBEDTLS_SSL_TRANSPORT_STREAM )
     {
-        for( written = 0, frags = 0; written < len; written += ret, frags++ )
+        written = 0;
+        frags = 0;
+
+        do
         {
             while( ( ret = mbedtls_ssl_write( &ssl, buf + written,
-                                              len - written ) ) <= 0 )
+                                              len - written ) ) < 0 )
             {
                 if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
-                    ret != MBEDTLS_ERR_SSL_WANT_WRITE )
+                    ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
+                    ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
                 {
                     mbedtls_printf( " failed\n  ! mbedtls_ssl_write returned -0x%x\n\n",
                                     -ret );
@@ -1686,13 +1948,22 @@ send_request:
 #endif
                 }
             }
+
+            frags++;
+            written += ret;
         }
+        while( written < len );
     }
     else /* Not stream, so datagram */
     {
         while( 1 )
         {
             ret = mbedtls_ssl_write( &ssl, buf, len );
+
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+            if( ret == MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
+                continue;
+#endif
 
             if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
                 ret != MBEDTLS_ERR_SSL_WANT_WRITE )
@@ -1730,6 +2001,13 @@ send_request:
     mbedtls_printf( " %d bytes written in %d fragments\n\n%s\n",
                     written, frags, (char *) buf );
 
+    /* Send a non-empty request if request_size == 0 */
+    if ( len == 0 )
+    {
+        opt.request_size = DFL_REQUEST_SIZE;
+        goto send_request;
+    }
+
     /*
      * 7. Read the HTTP response
      */
@@ -1746,6 +2024,11 @@ send_request:
             len = sizeof( buf ) - 1;
             memset( buf, 0, sizeof( buf ) );
             ret = mbedtls_ssl_read( &ssl, buf, len );
+
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+            if( ret == MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
+                continue;
+#endif
 
             if( ret == MBEDTLS_ERR_SSL_WANT_READ ||
                 ret == MBEDTLS_ERR_SSL_WANT_WRITE )
@@ -1807,6 +2090,11 @@ send_request:
         {
             ret = mbedtls_ssl_read( &ssl, buf, len );
 
+#if defined(MBEDTLS_ECP_RESTARTABLE)
+            if( ret == MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
+                continue;
+#endif
+
             if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
                 ret != MBEDTLS_ERR_SSL_WANT_WRITE )
                 break;
@@ -1859,6 +2147,10 @@ send_request:
         mbedtls_printf( "  . Restarting connection from same port..." );
         fflush( stdout );
 
+#if defined(MBEDTLS_X509_CRT_PARSE_C)
+        memset( peer_crt_info, 0, sizeof( peer_crt_info ) );
+#endif /* MBEDTLS_X509_CRT_PARSE_C */
+
         if( ( ret = mbedtls_ssl_session_reset( &ssl ) ) != 0 )
         {
             mbedtls_printf( " failed\n  ! mbedtls_ssl_session_reset returned -0x%x\n\n",
@@ -1869,7 +2161,8 @@ send_request:
         while( ( ret = mbedtls_ssl_handshake( &ssl ) ) != 0 )
         {
             if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
-                ret != MBEDTLS_ERR_SSL_WANT_WRITE )
+                ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
+                ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
             {
                 mbedtls_printf( " failed\n  ! mbedtls_ssl_handshake returned -0x%x\n\n",
                                 -ret );
@@ -1929,6 +2222,10 @@ reconnect:
 
         mbedtls_printf( "  . Reconnecting with saved session..." );
 
+#if defined(MBEDTLS_X509_CRT_PARSE_C)
+        memset( peer_crt_info, 0, sizeof( peer_crt_info ) );
+#endif /* MBEDTLS_X509_CRT_PARSE_C */
+
         if( ( ret = mbedtls_ssl_session_reset( &ssl ) ) != 0 )
         {
             mbedtls_printf( " failed\n  ! mbedtls_ssl_session_reset returned -0x%x\n\n",
@@ -1967,7 +2264,8 @@ reconnect:
         while( ( ret = mbedtls_ssl_handshake( &ssl ) ) != 0 )
         {
             if( ret != MBEDTLS_ERR_SSL_WANT_READ &&
-                ret != MBEDTLS_ERR_SSL_WANT_WRITE )
+                ret != MBEDTLS_ERR_SSL_WANT_WRITE &&
+                ret != MBEDTLS_ERR_SSL_CRYPTO_IN_PROGRESS )
             {
                 mbedtls_printf( " failed\n  ! mbedtls_ssl_handshake returned -0x%x\n\n",
                                 -ret );
@@ -1999,12 +2297,35 @@ exit:
     mbedtls_x509_crt_free( &clicert );
     mbedtls_x509_crt_free( &cacert );
     mbedtls_pk_free( &pkey );
+#if defined(MBEDTLS_USE_PSA_CRYPTO)
+    psa_destroy_key( key_slot );
+#endif
 #endif
     mbedtls_ssl_session_free( &saved_session );
     mbedtls_ssl_free( &ssl );
     mbedtls_ssl_config_free( &conf );
     mbedtls_ctr_drbg_free( &ctr_drbg );
     mbedtls_entropy_free( &entropy );
+
+#if defined(MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED) && \
+    defined(MBEDTLS_USE_PSA_CRYPTO)
+    if( opt.psk_opaque != 0 )
+    {
+        /* This is ok even if the slot hasn't been
+         * initialized (we might have jumed here
+         * immediately because of bad cmd line params,
+         * for example). */
+        status = psa_destroy_key( slot );
+        if( status != PSA_SUCCESS )
+        {
+            mbedtls_printf( "Failed to destroy key slot %u - error was %d",
+                            (unsigned) slot, (int) status );
+            if( ret == 0 )
+                ret = MBEDTLS_ERR_SSL_HW_ACCEL_FAILED;
+        }
+    }
+#endif /* MBEDTLS_KEY_EXCHANGE__SOME__PSK_ENABLED &&
+          MBEDTLS_USE_PSA_CRYPTO */
 
 #if defined(_WIN32)
     mbedtls_printf( "  + Press Enter to exit this program.\n" );

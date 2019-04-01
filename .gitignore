@@ -21,6 +21,9 @@ massif-*
 *.ilk
 *.lib
 
+# Python build artifacts:
+*.pyc
+
 # CMake generates *.dir/ folders for in-tree builds (used by MSVC projects), ignore all of those:
 *.dir/
 
