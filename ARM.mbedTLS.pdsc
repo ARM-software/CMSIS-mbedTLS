@@ -6,13 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
-    <release version="1.6.0">
+    <release version="1.6.0" date="2019-04-02">
       Updated to mbedTLS V2.17.0
-    </release>
-    <release version="1.5.2">
       Removed mbedTLS.h header (not part of mbedTLS)
-    </release>
-    <release version="1.5.1">
       Updated platform dependency
     </release>
     <release version="1.5.0" date="2018-06-07">
