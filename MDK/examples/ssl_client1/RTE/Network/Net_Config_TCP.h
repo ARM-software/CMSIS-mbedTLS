@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Socket
- * Copyright (c) 2004-2015 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2004-2018 ARM Germany GmbH. All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_TCP.h
  * Purpose: Network Configuration for TCP Sockets
- * Rev.:    V7.0.0
+ * Rev.:    V7.1.0
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -30,7 +30,7 @@
 //   <i>Default: 4
 #define TCP_RETRY_TOUT          4
 
-//   <o>Default Connect Timeout in seconds <1-600>
+//   <o>Default Connect Timeout in seconds <1-65535>
 //   <i>Default TCP Socket Keep Alive timeout. When it expires
 //   <i>with no TCP data frame send, TCP Connection is closed.
 //   <i>Default: 120
@@ -58,3 +58,11 @@
 
 // Number of retries to establish a connection
 #define TCP_CONNECT_RETRY       7
+
+// Dynamic port start (default 49152)
+#define TCP_DYN_PORT_START      49152
+
+// Dynamic port end (default 65535)
+#define TCP_DYN_PORT_END        65535
+
+//------------- <<< end of configuration section >>> ---------------------------

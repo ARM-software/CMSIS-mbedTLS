@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Interface
- * Copyright (c) 2004-2017 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2004-2018 ARM Germany GmbH. All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_ETH_0.h
  * Purpose: Network Configuration for ETH Interface
- * Rev.:    V7.1.0
+ * Rev.:    V7.2.0
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -22,6 +22,16 @@
 //   <i>LSB of first byte must be 0 (an ethernet Multicast bit).
 //   <i>Default: "1E-30-6C-A2-45-5E"
 #define ETH0_MAC_ADDR           "1E-30-6C-A2-45-5C"
+
+//   <e>VLAN
+//   <i>Enable or disable Virtual LAN
+#define ETH0_VLAN_ENABLE        0
+
+//     <o>VLAN Identifier <1-4093>
+//     <i>A unique 12-bit numeric value
+//     <i>Default: 1
+#define ETH0_VLAN_ID            1
+//   </e>
 
 //   <e>IPv4
 //   <i>Enable IPv4 Protocol for Network Interface

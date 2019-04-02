@@ -29,8 +29,14 @@
 #include "mbedtls/platform.h"
 #else
 #include <stdio.h>
+#include <stdlib.h>
+#define mbedtls_time       time
+#define mbedtls_time_t     time_t
 #define mbedtls_fprintf    fprintf
 #define mbedtls_printf     printf
+#define mbedtls_exit            exit
+#define MBEDTLS_EXIT_SUCCESS    EXIT_SUCCESS
+#define MBEDTLS_EXIT_FAILURE    EXIT_FAILURE
 #endif
 
 #if !defined(MBEDTLS_BIGNUM_C) || !defined(MBEDTLS_CERTS_C) ||    \
@@ -39,7 +45,7 @@
     !defined(MBEDTLS_RSA_C) || !defined(MBEDTLS_CTR_DRBG_C) ||    \
     !defined(MBEDTLS_X509_CRT_PARSE_C) || !defined(MBEDTLS_FS_IO) || \
     !defined(MBEDTLS_PEM_PARSE_C)
-int main( void )
+int ssl_server( void )
 {
     mbedtls_printf("MBEDTLS_BIGNUM_C and/or MBEDTLS_CERTS_C and/or MBEDTLS_ENTROPY_C "
            "and/or MBEDTLS_SSL_TLS_C and/or MBEDTLS_SSL_SRV_C and/or "
@@ -77,6 +83,18 @@ int main( void )
 
 #define DEBUG_LEVEL 0
 
+#if defined(MBEDTLS_CHECK_PARAMS)
+#include "mbedtls/platform_util.h"
+void mbedtls_param_failed( const char *failure_condition,
+                           const char *file,
+                           int line )
+{
+    mbedtls_printf( "%s:%i: Input param failed - %s\n",
+                    file, line, failure_condition );
+    mbedtls_exit( MBEDTLS_EXIT_FAILURE );
+}
+#endif
+
 static void my_debug( void *ctx, int level,
                       const char *file, int line,
                       const char *str )
@@ -87,7 +105,7 @@ static void my_debug( void *ctx, int level,
     fflush(  (FILE *) ctx  );
 }
 
-int main( void )
+int ssl_server( void )
 {
     int ret, len;
     mbedtls_net_context listen_fd, client_fd;
