@@ -208,6 +208,49 @@ int mbedtls_net_set_nonblock (mbedtls_net_context *ctx) {
 }
 
 /*
+ * Check if data is available on the socket
+ */
+
+int mbedtls_net_poll (mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout) {
+  mbedtls_net_context *ctxt = ctx;
+  uint32_t n;
+  int32_t ret;
+
+  if (timeout == (uint32_t)-1) {
+    n = 0;
+  } else if (timeout == 0) {
+    n = 1;
+  } else {
+    n = timeout;
+  }
+  switch (rw) {
+    case MBEDTLS_NET_POLL_READ:
+      ret = iotSocketSetOpt (ctxt->fd, IOT_SOCKET_SO_RCVTIMEO, &n, sizeof(n));
+      if (ret < 0) {
+        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      }
+      ret = iotSocketRecv (ctxt->fd, NULL, 0);
+      if (ret != 0) {
+        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      }
+      break;
+    case MBEDTLS_NET_POLL_WRITE:
+      ret = iotSocketSetOpt (ctxt->fd, IOT_SOCKET_SO_SNDTIMEO, &n, sizeof(n));
+      if (ret < 0) {
+        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      }
+      ret = iotSocketSend (ctxt->fd, NULL, 0);
+      if (ret != 0) {
+        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      }
+      break;
+    default:
+      return (MBEDTLS_ERR_NET_BAD_INPUT_DATA);
+  }
+  return (rw);
+}
+
+/*
  * Portable usleep helper
  */
 void mbedtls_net_usleep (unsigned long usec) {

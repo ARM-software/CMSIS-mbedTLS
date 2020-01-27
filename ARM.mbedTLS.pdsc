@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.6.1-dev0">
+      Updated support for IoT Socket: added function mbedtls_net_poll
+    </release>
     <release version="1.6.0" date="2019-04-02">
       Updated to mbedTLS V2.17.0
       Removed mbedTLS.h header (not part of mbedTLS)
