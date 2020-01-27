@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.6.1-dev1">
+      Updated MDK examples (using latest components)
+    </release>
     <release version="1.6.1-dev0">
       Updated support for IoT Socket: added function mbedtls_net_poll
     </release>
@@ -85,6 +88,9 @@
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
       </RTE_Components_h>
+      <Pre_Include_Local_Component_h>
+        #define MBEDTLS_CONFIG_FILE "mbedTLS_config.h"
+      </Pre_Include_Local_Component_h>
       <files>
         <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>

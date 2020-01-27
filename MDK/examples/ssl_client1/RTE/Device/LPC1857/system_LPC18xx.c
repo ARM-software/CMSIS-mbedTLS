@@ -17,8 +17,8 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  *
- * $Date:        11. October 2017
- * $Revision:    V1.0.2
+ * $Date:        10. September 2018
+ * $Revision:    V1.0.3
  *
  * Project:      NXP LPC18xx System initialization
  * -------------------------------------------------------------------------- */
@@ -168,6 +168,23 @@
 #define PLL1_FBSEL  0           /* 0: FCCO is used as PLL feedback            */
                                 /* 1: FCLKOUT is used as PLL feedback         */
 
+/*----------------------------------------------------------------------------
+ * Configure Flash Accelerator
+ *----------------------------------------------------------------------------
+ * Flash acces time:
+ * |  CPU clock   | FLASHTIM |
+ * | up to  21MHz |    0     |
+ * | up to  43MHz |    1     |
+ * | up to  64MHz |    2     |
+ * | up to  86MHz |    3     |
+ * | up to 107MHz |    4     |
+ * | up to 129MHz |    5     |
+ * | up to 150MHz |    6     |
+ * | up to 172MHz |    7     |
+ * | up to 180MHz |    8     |
+ *----------------------------------------------------------------------------*/
+#define FLASHCFG_FLASHTIM   8
+
 
 /*----------------------------------------------------------------------------
  * Configure PLL0USB
@@ -302,6 +319,10 @@ void SetClock (void) {
   uint32_t x, i;
   uint32_t selp, seli;
 
+  /* Set flash accelerator configuration for bank A and B to reset value      */
+  LPC_CREG->FLASHCFGA |= (0xF << 12);
+  LPC_CREG->FLASHCFGB |= (0xF << 12);
+
   /* Set flash wait states to maximum                                         */
   LPC_EMC->STATICWAITRD0  = 0x1F;
 
@@ -374,6 +395,10 @@ void SetClock (void) {
   /* Set CPU base clock source                                                */
   LPC_CGU->BASE_M3_CLK = (0x01        << 11) |  /* Autoblock En               */
                          (CPU_CLK_SEL << 24) ;  /* Set clock source           */
+
+  /* Set flash accelerator configuration for internal flash bank A and B      */
+  LPC_CREG->FLASHCFGA = (LPC_CREG->FLASHCFGA & (~0x0000F000)) | (FLASHCFG_FLASHTIM << 12);
+  LPC_CREG->FLASHCFGB = (LPC_CREG->FLASHCFGB & (~0x0000F000)) | (FLASHCFG_FLASHTIM << 12);
 
 /*----------------------------------------------------------------------------
   PLL0USB Setup
@@ -838,11 +863,11 @@ uint32_t GetClockFreq (uint32_t clk_src) {
       case CLK_SRC_GP_CLKIN: main_freq = CLK_GP_CLKIN;  break;
       case CLK_SRC_XTAL:     main_freq = CLK_XTAL;      break;
 
-      case CLK_SRC_IDIVA: div *= ((LPC_CGU->IDIVA_CTRL >> 2) & 0x3) + 1; break;
-      case CLK_SRC_IDIVB: div *= ((LPC_CGU->IDIVB_CTRL >> 2) & 0x3) + 1; break;
-      case CLK_SRC_IDIVC: div *= ((LPC_CGU->IDIVC_CTRL >> 2) & 0x3) + 1; break;
-      case CLK_SRC_IDIVD: div *= ((LPC_CGU->IDIVD_CTRL >> 2) & 0x3) + 1; break;
-      case CLK_SRC_IDIVE: div *= ((LPC_CGU->IDIVE_CTRL >> 2) & 0x3) + 1; break;
+      case CLK_SRC_IDIVA: div *= ((LPC_CGU->IDIVA_CTRL >> 2) & 0x03) + 1; break;
+      case CLK_SRC_IDIVB: div *= ((LPC_CGU->IDIVB_CTRL >> 2) & 0x0F) + 1; break;
+      case CLK_SRC_IDIVC: div *= ((LPC_CGU->IDIVC_CTRL >> 2) & 0x0F) + 1; break;
+      case CLK_SRC_IDIVD: div *= ((LPC_CGU->IDIVD_CTRL >> 2) & 0x0F) + 1; break;
+      case CLK_SRC_IDIVE: div *= ((LPC_CGU->IDIVE_CTRL >> 2) & 0xFF) + 1; break;
 
       case CLK_SRC_PLL0U: /* Not implemented */  break;
       case CLK_SRC_PLL0A: /* Not implemented */  break;

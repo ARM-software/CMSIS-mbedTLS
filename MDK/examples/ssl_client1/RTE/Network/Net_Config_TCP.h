@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Socket
- * Copyright (c) 2004-2018 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2004-2019 Arm Limited (or its affiliates). All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_TCP.h
  * Purpose: Network Configuration for TCP Sockets
- * Rev.:    V7.1.0
+ * Rev.:    V7.1.1
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -31,8 +31,9 @@
 #define TCP_RETRY_TOUT          4
 
 //   <o>Default Connect Timeout in seconds <1-65535>
-//   <i>Default TCP Socket Keep Alive timeout. When it expires
-//   <i>with no TCP data frame send, TCP Connection is closed.
+//   <i>If no TCP data frame has been exchanged during this time,
+//   <i>the TCP connection is either closed or a keep-alive frame
+//   <i>is sent to verify that the connection still exists.
 //   <i>Default: 120
 #define TCP_DEFAULT_TOUT        120
 
