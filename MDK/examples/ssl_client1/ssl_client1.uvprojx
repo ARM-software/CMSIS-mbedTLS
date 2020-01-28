@@ -529,8 +529,8 @@
           <targetInfo name="MCB1800"/>
         </targetInfos>
       </component>
-      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0" Pre_Include_Local_Component_h="#define MBEDTLS_CONFIG_FILE &quot;mbedTLS_config.h&quot;" condition="Cortex-M Device">
-        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1-dev1"/>
+      <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0" condition="Cortex-M Device">
+        <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>
         </targetInfos>
@@ -741,7 +741,7 @@
       </file>
       <file attr="config" category="header" name="configs\mbedTLS_config.h" version="2.17.0">
         <instance index="0">RTE\Security\mbedTLS_config.h</instance>
-        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0" Pre_Include_Local_Component_h="#define MBEDTLS_CONFIG_FILE &quot;mbedTLS_config.h&quot;" condition="Cortex-M Device"/>
+        <component Cclass="Security" Cgroup="mbed TLS" Cvendor="ARM" Cversion="2.17.0" condition="Cortex-M Device"/>
         <package name="mbedTLS" schemaVersion="1.6" url="http://www.keil.com/pack/" vendor="ARM" version="1.6.1"/>
         <targetInfos>
           <targetInfo name="MCB1800"/>

@@ -88,9 +88,6 @@
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
       </RTE_Components_h>
-      <Pre_Include_Local_Component_h>
-        #define MBEDTLS_CONFIG_FILE "mbedTLS_config.h"
-      </Pre_Include_Local_Component_h>
       <files>
         <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>
