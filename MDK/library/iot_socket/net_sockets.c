@@ -230,8 +230,11 @@ int mbedtls_net_poll (mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout) {
         return (MBEDTLS_ERR_NET_POLL_FAILED);
       }
       ret = iotSocketRecv (ctxt->fd, NULL, 0);
-      if (ret != 0) {
-        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      if (ret == 0) {
+        return (MBEDTLS_NET_POLL_READ);
+      }
+      if (ret == IOT_SOCKET_EAGAIN) {
+        return (0);
       }
       break;
     case MBEDTLS_NET_POLL_WRITE:
@@ -240,14 +243,17 @@ int mbedtls_net_poll (mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout) {
         return (MBEDTLS_ERR_NET_POLL_FAILED);
       }
       ret = iotSocketSend (ctxt->fd, NULL, 0);
-      if (ret != 0) {
-        return (MBEDTLS_ERR_NET_POLL_FAILED);
+      if (ret == 0) {
+        return (MBEDTLS_NET_POLL_WRITE);
+      }
+      if (ret == IOT_SOCKET_EAGAIN) {
+        return (0);
       }
       break;
     default:
       return (MBEDTLS_ERR_NET_BAD_INPUT_DATA);
   }
-  return (rw);
+  return (MBEDTLS_ERR_NET_POLL_FAILED);
 }
 
 /*
