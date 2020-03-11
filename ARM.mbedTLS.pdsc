@@ -2,10 +2,13 @@
 <package schemaVersion="1.6" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
-  <description>ARM mbed Cryptographic and SSL/TLS library for Cortex-M devices</description>
+  <description>ARM mbed Cryptographic and SSL/TLS library</description>
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.6.1-dev2">
+      Updated support for IoT Socket: updated function mbedtls_net_poll
+    </release>
     <release version="1.6.1-dev1">
       Updated MDK examples (using latest components)
     </release>
@@ -47,20 +50,6 @@
     </release>
   </releases>
   <conditions>
-    <condition id="Cortex-M Device">
-      <description>Cortex-M processor based device: Cortex-M0, Cortex-M0+, Cortex-M3, Cortex-M4, Cortex-M7, Cortex-M23, Cortex-M33, SC000 or SC3000</description>
-      <accept Dcore="Cortex-M0"/>
-      <accept Dcore="Cortex-M0+"/>
-      <accept Dcore="Cortex-M3"/>
-      <accept Dcore="Cortex-M4"/>
-      <accept Dcore="Cortex-M7"/>
-      <accept Dcore="Cortex-M23"/>
-      <accept Dcore="Cortex-M33"/>
-      <accept Dcore="ARMV8MBL"/>
-      <accept Dcore="ARMV8MML"/>
-      <accept Dcore="SC000"/>
-      <accept Dcore="SC300"/>
-    </condition>
     <condition id="CMSIS RTOS">
       <description>CMSIS RTOS (API1 or API2)</description>
       <require Cclass="CMSIS" Cgroup="CORE" Cversion="5.0.1"/>
@@ -83,7 +72,7 @@
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.17.0" condition="Cortex-M Device">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.17.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */

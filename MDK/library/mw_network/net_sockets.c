@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
  *
- *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2020, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -327,7 +327,7 @@ int mbedtls_net_poll (mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout) {
   }
 
   FD_ZERO (&write_fds);
-  if (rw & MBEDTLS_NET_POLL_WRITE) {
+  if ((rw & MBEDTLS_NET_POLL_WRITE) && (timeout == 0)) {
     rw &= ~MBEDTLS_NET_POLL_WRITE;
     FD_SET (ctx->fd, &write_fds);
   }
