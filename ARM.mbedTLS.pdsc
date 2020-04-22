@@ -6,7 +6,7 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
-    <release version="1.6.1">
+    <release version="1.6.1" date="2020-04-22">
       Updated support for IoT Socket: added function mbedtls_net_poll
       Updated MDK examples (using latest components)
     </release>
