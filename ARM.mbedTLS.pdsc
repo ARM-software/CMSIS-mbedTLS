@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package schemaVersion="1.6" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+<package schemaVersion="1.6.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
   <description>ARM mbed Cryptographic and SSL/TLS library</description>
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.7.0" date="2021-02-15">
+      Updated to mbedTLS V2.24.0
+      Added PSA Crypto mbedTLS component
+    </release>
     <release version="1.6.1" date="2020-04-22">
       Updated support for IoT Socket: added function mbedtls_net_poll
       Updated MDK examples (using latest components)
@@ -44,6 +48,11 @@
       Initial release based on mbedTLS V2.1.2
     </release>
   </releases>
+  <requirements>
+    <packages>
+      <package vendor="ARM" name="PSA" version="1.0.0"/>
+    </packages>
+  </requirements>
   <conditions>
     <condition id="CMSIS RTOS">
       <description>CMSIS RTOS (API1 or API2)</description>
@@ -65,17 +74,21 @@
       <deny Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
       <deny Cclass="IoT Utility" Cgroup="Socket"/>
     </condition>
+    <condition id="mbed TLS">
+      <description>mbed TLS component</description>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="2.24.0"/>
+    </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.17.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.24.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
       </RTE_Components_h>
       <files>
-        <file category="doc"     name="doxygen/html/index.html"/>
+        <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
-        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.17.0"/>
+        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.24.0"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
         <file category="source"  name="library/arc4.c"/>
@@ -87,9 +100,9 @@
         <file category="source"  name="library/blowfish.c"/>
         <file category="source"  name="library/camellia.c"/>
         <file category="source"  name="library/ccm.c"/>
+        <file category="source"  name="library/certs.c"/>
         <file category="source"  name="library/chacha20.c"/>
         <file category="source"  name="library/chachapoly.c"/>
-        <file category="source"  name="library/certs.c"/>
         <file category="source"  name="library/cipher.c"/>
         <file category="source"  name="library/cipher_wrap.c"/>
         <file category="source"  name="library/cmac.c"/>
@@ -111,7 +124,6 @@
         <file category="source"  name="library/hkdf.c"/>
         <file category="source"  name="library/hmac_drbg.c"/>
         <file category="source"  name="library/md.c"/>
-        <file category="source"  name="library/md_wrap.c"/>
         <file category="source"  name="library/md2.c"/>
         <file category="source"  name="library/md4.c"/>
         <file category="source"  name="library/md5.c"/>
@@ -133,6 +145,11 @@
         <file category="source"  name="library/platform.c"/>
         <file category="source"  name="library/platform_util.c"/>
         <file category="source"  name="library/poly1305.c"/>
+        <file category="source"  name="library/psa_crypto.c"/>
+        <file category="source"  name="library/psa_crypto_se.c"/>
+        <file category="source"  name="library/psa_crypto_slot_management.c"/>
+        <file category="source"  name="library/psa_crypto_storage.c"/>
+        <file category="source"  name="library/psa_its_file.c"/>
         <file category="source"  name="library/ripemd160.c"/>
         <file category="source"  name="library/rsa.c"/>
         <file category="source"  name="library/rsa_internal.c"/>
@@ -143,6 +160,7 @@
         <file category="source"  name="library/ssl_ciphersuites.c"/>
         <file category="source"  name="library/ssl_cli.c"/>
         <file category="source"  name="library/ssl_cookie.c"/>
+        <file category="source"  name="library/ssl_msg.c"/>
         <file category="source"  name="library/ssl_srv.c"/>
         <file category="source"  name="library/ssl_ticket.c"/>
         <file category="source"  name="library/ssl_tls.c"/>
@@ -160,9 +178,18 @@
         <file category="source"  name="library/xtea.c"/>
       </files>
     </component>
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="2.24.0" condition="mbed TLS">
+      <description>mbed TLS PSA Crypto</description>
+      <RTE_Components_h>
+        #define RTE_PSA_API_CRYPTO
+      </RTE_Components_h>
+      <files>
+        <file category="include" name="include/mbedcrypto/"/>
+      </files>
+    </component>
   </components>
   <examples>
-    <example name="ssl_client1" doc="Abstract.txt" folder="MDK/examples/ssl_client1">
+    <example name="ssl_client1" doc="Abstract.txt" folder="MDK/examples/MCB1800/ssl_client1">
       <description>Simple SSL/TLS client</description>
       <board name="MCB1800" vendor="Keil"/>
       <project>
@@ -174,7 +201,7 @@
         <keyword>SSL</keyword>
       </attributes>
     </example>
-    <example name="ssl_client1" doc="Abstract.txt" folder="MDK/examples/ssl_client1">
+    <example name="ssl_client1" doc="Abstract.txt" folder="MDK/examples/MCB4300/ssl_client1">
       <description>Simple SSL/TLS client</description>
       <board name="MCB4300" vendor="Keil"/>
       <project>
@@ -186,7 +213,7 @@
         <keyword>SSL</keyword>
       </attributes>
     </example>
-    <example name="ssl_server" doc="Abstract.txt" folder="MDK/examples/ssl_server">
+    <example name="ssl_server" doc="Abstract.txt" folder="MDK/examples/MCB1800/ssl_server">
       <description>SSL/TLS server</description>
       <board name="MCB1800" vendor="Keil"/>
       <project>
@@ -198,7 +225,7 @@
         <keyword>SSL</keyword>
       </attributes>
     </example>
-    <example name="ssl_server" doc="Abstract.txt" folder="MDK/examples/ssl_server">
+    <example name="ssl_server" doc="Abstract.txt" folder="MDK/examples/MCB4300/ssl_server">
       <description>SSL/TLS server</description>
       <board name="MCB4300" vendor="Keil"/>
       <project>
