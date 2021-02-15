@@ -1,0 +1,20 @@
+This is an SSL client example running on Network Dual Stack.
+
+The code for "ssl_client1.c" is available on:
+https://github.com/ARMmbed/mbedtls/blob/development/programs/ssl/ssl_client1.c
+
+The only change to the original code is the server name and port number, the
+rest of the code is not modified.
+
+More information about SSL client example is available here:
+https://tls.mbed.org/kb/how-to/mbedtls-tutorial
+
+This example connects to "tls.mbed.org" secure Web server and reads a default
+page. Internet connection is required. It must run in uVision debugger, because 
+the status messages are printed on Debug (printf) Viewer using ITM.
+
+The ssl_client1 example is available for the following targets:
+
+MCB4300:
+    Standalone application for MCB4300 board.
+    Program code is loaded into on-chip flash.
