@@ -1,7 +1,7 @@
 /*
  *  Configuration template
  *
- *  Copyright (C) 2006-2018, ARM Limited, All Rights Reserved
+ *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,15 +15,13 @@
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
- *  This file is part of mbed TLS (https://tls.mbed.org)
  */
-
 /*
  * This set of compile-time options may be used to enable
  * or disable features selectively, and reduce the global
  * memory footprint.
  */
+
 #ifndef MBEDTLS_CONFIG_H
 #define MBEDTLS_CONFIG_H
 
@@ -49,6 +47,7 @@
 //#define MBEDTLS_CIPHER_PADDING_ZEROS_AND_LEN
 //#define MBEDTLS_CIPHER_PADDING_ZEROS
 //#define MBEDTLS_REMOVE_ARC4_CIPHERSUITES
+//#define MBEDTLS_REMOVE_3DES_CIPHERSUITES
 //#define MBEDTLS_ECP_DP_SECP192R1_ENABLED
 //#define MBEDTLS_ECP_DP_SECP224R1_ENABLED
 //#define MBEDTLS_ECP_DP_SECP256R1_ENABLED
@@ -89,11 +88,17 @@
 //#define MBEDTLS_PK_RSA_ALT_SUPPORT
 //#define MBEDTLS_PKCS1_V15
 //#define MBEDTLS_PKCS1_V21
+//#define MBEDTLS_PSA_CRYPTO_SPM
 //#define MBEDTLS_RSA_NO_CRT
 //#define MBEDTLS_SELF_TEST
 //#define MBEDTLS_SHA256_SMALLER
+//#define MBEDTLS_SHA512_SMALLER
+//#define MBEDTLS_SHA512_NO_SHA384
 //#define MBEDTLS_SSL_ALL_ALERT_MESSAGES
+//#define MBEDTLS_SSL_RECORD_CHECKING
+//#define MBEDTLS_SSL_DTLS_CONNECTION_ID
 //#define MBEDTLS_SSL_ASYNC_PRIVATE
+//#define MBEDTLS_SSL_CONTEXT_SERIALIZATION
 //#define MBEDTLS_SSL_DEBUG_ALL
 //#define MBEDTLS_SSL_ENCRYPT_THEN_MAC
 //#define MBEDTLS_SSL_EXTENDED_MASTER_SECRET
@@ -119,12 +124,16 @@
 //#define MBEDTLS_SSL_EXPORT_KEYS
 //#define MBEDTLS_SSL_SERVER_NAME_INDICATION
 //#define MBEDTLS_SSL_TRUNCATED_HMAC
+//#define MBEDTLS_SSL_VARIABLE_BUFFER_LENGTH
+//#define MBEDTLS_USE_PSA_CRYPTO
 //#define MBEDTLS_VERSION_FEATURES
 //#define MBEDTLS_X509_ALLOW_EXTENSIONS_NON_V3
 //#define MBEDTLS_X509_ALLOW_UNSUPPORTED_CRITICAL_EXTENSION
+//#define MBEDTLS_X509_TRUSTED_CERTIFICATE_CALLBACK
 //#define MBEDTLS_X509_CHECK_KEY_USAGE
 //#define MBEDTLS_X509_CHECK_EXTENDED_KEY_USAGE
 //#define MBEDTLS_X509_RSASSA_PSS_SUPPORT
+//#define MBEDTLS_ZLIB_SUPPORT
 
 /* mbed TLS modules */
 //#define MBEDTLS_AES_C
@@ -174,6 +183,10 @@
 //#define MBEDTLS_PKCS12_C
 //#define MBEDTLS_PLATFORM_C
 //#define MBEDTLS_POLY1305_C
+//#define MBEDTLS_PSA_CRYPTO_C
+//#define MBEDTLS_PSA_CRYPTO_SE_C
+//#define MBEDTLS_PSA_CRYPTO_STORAGE_C
+//#define MBEDTLS_PSA_ITS_FILE_C
 //#define MBEDTLS_RIPEMD160_C
 //#define MBEDTLS_RSA_C
 //#define MBEDTLS_SHA1_C
