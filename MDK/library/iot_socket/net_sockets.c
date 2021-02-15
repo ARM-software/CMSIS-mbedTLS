@@ -1,7 +1,7 @@
 /*
- *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
+ *  TCP/IP or UDP/IP networking functions for IoT Socket
  *
- *  Copyright (C) 2006-2019, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,8 +15,6 @@
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
- *  This file is part of mbed TLS (https://tls.mbed.org)
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
@@ -29,9 +27,9 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "RTE_Components.h"
 #include "mbedtls/net_sockets.h"
 #include "iot_socket.h"
+#include "RTE_Components.h"
 #if defined(RTE_CMSIS_RTOS)
  #include "cmsis_os.h"
 #elif defined(RTE_CMSIS_RTOS2)
@@ -317,7 +315,7 @@ int mbedtls_net_recv_timeout (void *ctx, unsigned char *buf, size_t len, uint32_
 /*
  * Write at most 'len' characters
  */
-int mbedtls_net_send( void *ctx, const unsigned char *buf, size_t len ) {
+int mbedtls_net_send (void *ctx, const unsigned char *buf, size_t len) {
   mbedtls_net_context *ctxt = ctx;
   int32_t ret;
 

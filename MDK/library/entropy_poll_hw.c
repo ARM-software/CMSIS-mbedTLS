@@ -1,7 +1,7 @@
-/**
+/*
  * Entropy hardware poll function
  *
- *  Copyright (C) 2006-2018, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,8 +15,6 @@
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
- *  This file is part of mbed TLS (https://tls.mbed.org)
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
@@ -29,8 +27,8 @@
 
 #include <string.h>
 #include "mbedtls/entropy_poll.h"
-#include "RTE_Components.h"
 #include "cmsis_compiler.h"
+#include "RTE_Components.h"
 #if defined(RTE_CMSIS_RTOS)
  #include "cmsis_os.h"
 #elif defined(RTE_CMSIS_RTOS2)
