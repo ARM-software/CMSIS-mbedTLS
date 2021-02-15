@@ -2,23 +2,29 @@
 
 ## Introduction
 
-This is a fork of the original [mbed TLS](https://github.com/ARMmbed/mbedtls). It uses the source files from the mbed TLS repository, and adds capabilities to build a [software pack](http://arm-software.github.io/CMSIS_5/Pack/html/cp_SWComponents.html) from it. It also contains the complete mbed TLS documentation that is built with Doxygen. This documentation is linked in the PDSC file so that it is easily accessible from development systems with pack support.
+This is a fork of the original [mbed TLS](https://github.com/ARMmbed/mbedtls).
+It uses the source files from the mbed TLS repository, and adds capabilities to build a [software pack](http://arm-software.github.io/CMSIS_5/Pack/html/cp_SWComponents.html) from it.
+It also contains the complete mbed TLS documentation that is built with Doxygen. This documentation is linked in the PDSC file so that it is easily accessible from development systems with pack support.
 
 ## Create the software pack
 
 ### Prerequisites
 
-The pack generation flow described below is currently only working on Windows PCs. To build the pack you will need the following software:
- - [Doxygen 1.8.6](https://sourceforge.net/projects/doxygen/files/snapshots/doxygen-1.8-svn/windows/) to build the documentation
- - [Mscgen](http://www.mcternan.me.uk/mscgen/) to create sequence charts in the documentation
+To build the pack you will need the following software:
+ - bash compatible shell (under Windows, use for example [git bash](https://gitforwindows.org/))
+ - [Python](https://www.python.org/downloads/) v3.6 or later
+ - [Doxygen 1.8.x](https://sourceforge.net/projects/doxygen/files/snapshots/doxygen-1.8-svn/windows/) to build the documentation
+ - [Graphviz](https://graphviz.org/download/) to create graphs in the documentation
  - [7-ZIP](http://www.7-zip.org/download.html) to create the pack file
- - PackChk.exe that is part of this repository, available in the Utilities\\Win32 directory (no install required)
+ - CMSIS Pack installed in CMSIS_PACK_ROOT (for PackChk utility)
+ - xmllint in path (XML schema validation; available only for Linux)
  
-**Note:** If you install the tools in non-standard directories, you need to edit the gen_pack.bat file in the Utilities-directory to reflect these custom installation locations.
-
 ### Build the software pack
 
-To build a software pack, clone the repository or download the ZIP file and save it on your local drive. Go to the directory "Utilities" and run the Windows batch file "gen_pack.bat". The resulting software pack will be available in the directory ..\Local_Release under the name **ARM.mbedTLS.X.X.X.pack**. To use it, simply double-click the pack file and it will be added to your development environment's installation.
+To build a software pack, clone the repository or download the ZIP file and save it on your local drive. 
+Open a bash shell and run `gen_doc.sh` to build the documentation and run `gen_pack.sh` to build the pack.
+The resulting software pack will be available in the directory `..\output` under the name **ARM.mbedTLS.X.X.X.pack**.
+To use it, simply double-click the pack file and it will be added to your development environment's installation.
 
 ## License
 
