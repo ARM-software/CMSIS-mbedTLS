@@ -49,7 +49,7 @@ if [ $INTERNAL ]
 then
     HEADERS=$( ls include/mbedtls/*_internal.h library/*.h | egrep -v 'compat-1\.3\.h|bn_mul' )
 else
-    HEADERS=$( ls include/mbedtls/*.h include/psa/*.h library/*.h | egrep -v 'compat-1\.3\.h|bn_mul' )
+    HEADERS=$( ls include/mbedtls/*.h include/mbedcrypto/psa/*.h library/*.h | egrep -v 'compat-1\.3\.h|bn_mul' )
     HEADERS="$HEADERS 3rdparty/everest/include/everest/everest.h 3rdparty/everest/include/everest/x25519.h"
 fi
 

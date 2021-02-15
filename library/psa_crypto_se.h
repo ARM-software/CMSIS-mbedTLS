@@ -27,8 +27,8 @@
 #include MBEDTLS_CONFIG_FILE
 #endif
 
-#include "psa/crypto.h"
-#include "psa/crypto_se_driver.h"
+#include "mbedcrypto/psa/crypto.h"
+#include "mbedcrypto/psa/crypto_se_driver.h"
 
 /** The maximum location value that this implementation supports
  * for a secure element.

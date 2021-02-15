@@ -8,7 +8,7 @@
 #if defined(MBEDTLS_PSA_ITS_FILE_C)
 #include <stdio.h>
 #else
-#include <psa/internal_trusted_storage.h>
+#include "psa/internal_trusted_storage.h"
 #endif
 
 /* Calculating the minimum allowed entropy size in bytes */

@@ -34,7 +34,7 @@
 #include "mbedtls/config.h"
 #endif
 
-#include "psa/crypto.h"
+#include "mbedcrypto/psa/crypto.h"
 
 #include "mbedtls/entropy.h"
 

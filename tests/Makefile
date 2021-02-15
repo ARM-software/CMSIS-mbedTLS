@@ -183,6 +183,6 @@ $(foreach app, $(APPS), $(foreach file, $(notdir $(wildcard include/test/*.h)), 
 
 ifdef RECORD_PSA_STATUS_COVERAGE_LOG
 $(BINARIES): include/test/instrument_record_status.h
-include/test/instrument_record_status.h: ../include/psa/crypto.h Makefile
-	sed <../include/psa/crypto.h >$@ -n 's/^psa_status_t \([A-Za-z0-9_]*\)(.*/#define \1(...) RECORD_STATUS("\1", \1(__VA_ARGS__))/p'
+include/test/instrument_record_status.h: ../include/mbedcrypto/psa/crypto.h Makefile
+	sed <../include/mbedcrypto/psa/crypto.h >$@ -n 's/^psa_status_t \([A-Za-z0-9_]*\)(.*/#define \1(...) RECORD_STATUS("\1", \1(__VA_ARGS__))/p'
 endif

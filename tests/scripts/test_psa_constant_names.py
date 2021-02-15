@@ -337,7 +337,7 @@ def run_c(type_word, expressions, include_path=None, keep_c=False):
                      .format(type_word))
         c_file.write('''
 #include <stdio.h>
-#include <psa/crypto.h>
+#include "psa/crypto.h"
 int main(void)
 {
 ''')
@@ -438,7 +438,7 @@ class Tests:
         else:
             out.write(' PASS\n')
 
-HEADERS = ['psa/crypto.h', 'psa/crypto_extra.h', 'psa/crypto_values.h']
+HEADERS = ['mbedcrypto/psa/crypto.h', 'mbedcrypto/psa/crypto_extra.h', 'mbedcrypto/psa/crypto_values.h']
 TEST_SUITES = ['tests/suites/test_suite_psa_crypto_metadata.data']
 
 def main():

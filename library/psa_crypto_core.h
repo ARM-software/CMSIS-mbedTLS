@@ -27,8 +27,8 @@
 #include MBEDTLS_CONFIG_FILE
 #endif
 
-#include "psa/crypto.h"
-#include "psa/crypto_se_driver.h"
+#include "mbedcrypto/psa/crypto.h"
+#include "mbedcrypto/psa/crypto_se_driver.h"
 
 /** The data structure representing a key slot, containing key material
  * and metadata for one key.

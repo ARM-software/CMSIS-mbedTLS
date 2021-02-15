@@ -6,7 +6,7 @@ The driver interfaces are standardized through PSA Cryptography functional speci
 
 ## Secure element driver interface
 
-The secure element driver interface (SE interface for short) is defined by [`psa/crypto_se_driver.h`](../../../include/psa/crypto_se_driver.h). This is an interface between Mbed Crypto and one or more third-party drivers.
+The secure element driver interface (SE interface for short) is defined by [`psa/crypto_se_driver.h`](../../../include/mbedcrypto/psa/crypto_se_driver.h). This is an interface between Mbed Crypto and one or more third-party drivers.
 
 The SE interface consists of one function provided by Mbed Crypto (`psa_register_se_driver`) and many functions that drivers must implement. To make a driver usable by Mbed Crypto, the initialization code must call `psa_register_se_driver` with a structure that describes the driver. The structure mostly contains function pointers, pointing to the driver's methods. All calls to a driver function are triggered by a call to a PSA crypto API function.
 
@@ -104,12 +104,12 @@ A PKCS#11 driver would be a good candidate. It would be useful as part of our pr
 
 ## Accelerator driver interface
 
-The accelerator driver interface is defined by [`psa/crypto_accel_driver.h`](../../../include/psa/crypto_accel_driver.h).
+The accelerator driver interface is defined by [`psa/crypto_accel_driver.h`](../../../include/mbedcrypto/psa/crypto_accel_driver.h).
 
 TODO
 
 ## Entropy driver interface
 
-The entropy driver interface is defined by [`psa/crypto_entropy_driver.h`](../../../include/psa/crypto_entropy_driver.h).
+The entropy driver interface is defined by [`psa/crypto_entropy_driver.h`](../../../include/mbedcrypto/psa/crypto_entropy_driver.h).
 
 TODO

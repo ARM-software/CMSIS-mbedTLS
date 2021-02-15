@@ -418,6 +418,6 @@ if __name__ == '__main__':
         os.chdir('..')
     # Allow to change the directory where psa_constant_names_generated.c is written to.
     OUTPUT_FILE_DIR = sys.argv[1] if len(sys.argv) == 2 else "programs/psa"
-    generate_psa_constants(['include/psa/crypto_values.h',
-                            'include/psa/crypto_extra.h'],
+    generate_psa_constants(['include/mbedcrypto/psa/crypto_values.h',
+                            'include/mbedcrypto/psa/crypto_extra.h'],
                            OUTPUT_FILE_DIR + '/psa_constant_names_generated.c')

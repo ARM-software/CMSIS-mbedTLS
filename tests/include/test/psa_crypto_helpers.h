@@ -23,7 +23,7 @@
 
 #include "test/psa_helpers.h"
 
-#include <psa/crypto.h>
+#include "psa/crypto.h"
 
 static int test_helper_is_psa_pristine( int line, const char *file )
 {
@@ -74,7 +74,7 @@ static void test_helper_psa_done( int line, const char *file )
 
 
 #if defined(RECORD_PSA_STATUS_COVERAGE_LOG)
-#include <psa/crypto.h>
+#include "psa/crypto.h"
 
 /** Name of the file where return statuses are logged by #RECORD_STATUS. */
 #define STATUS_LOG_FILE_NAME "statuses.log"

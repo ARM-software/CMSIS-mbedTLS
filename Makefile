@@ -26,8 +26,8 @@ ifndef WINDOWS
 install: no_test
 	mkdir -p $(DESTDIR)/include/mbedtls
 	cp -rp include/mbedtls $(DESTDIR)/include
-	mkdir -p $(DESTDIR)/include/psa
-	cp -rp include/psa $(DESTDIR)/include
+	mkdir -p $(DESTDIR)/include/mbedcrypto/psa
+	cp -rp include/mbedcrypto/psa $(DESTDIR)/include
 
 	mkdir -p $(DESTDIR)/lib
 	cp -RP library/libmbedtls.*    $(DESTDIR)/lib
@@ -45,6 +45,7 @@ install: no_test
 
 uninstall:
 	rm -rf $(DESTDIR)/include/mbedtls
+	rm -rf $(DESTDIR)/include/mbedcrypto/psa
 	rm -f $(DESTDIR)/lib/libmbedtls.*
 	rm -f $(DESTDIR)/lib/libmbedx509.*
 	rm -f $(DESTDIR)/lib/libmbedcrypto.*

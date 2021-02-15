@@ -10,8 +10,8 @@ LDFLAGS ?=
 MBEDTLS_TEST_PATH:=../tests/src
 MBEDTLS_TEST_OBJS:=$(patsubst %.c,%.o,$(wildcard ${MBEDTLS_TEST_PATH}/*.c))
 
-LOCAL_CFLAGS = $(WARNING_CFLAGS) -I../tests/include -I../include -D_FILE_OFFSET_BITS=64
-LOCAL_CXXFLAGS = $(WARNING_CXXFLAGS) -I../include -D_FILE_OFFSET_BITS=64
+LOCAL_CFLAGS = $(WARNING_CFLAGS) -I../tests/include -I../include -I../include/mbedcrypto -D_FILE_OFFSET_BITS=64
+LOCAL_CXXFLAGS = $(WARNING_CXXFLAGS) -I../include -I../include/mbedcrypto -D_FILE_OFFSET_BITS=64
 LOCAL_LDFLAGS = ${MBEDTLS_TEST_OBJS} 		\
 		-L../library 			\
 		-lmbedtls$(SHARED_SUFFIX)	\
@@ -148,7 +148,7 @@ EXTRA_GENERATED += psa/psa_constant_names_generated.c
 endif
 
 psa/psa_constant_names$(EXEXT): psa/psa_constant_names_generated.c
-psa/psa_constant_names_generated.c: ../scripts/generate_psa_constants.py ../include/psa/crypto_values.h ../include/psa/crypto_extra.h
+psa/psa_constant_names_generated.c: ../scripts/generate_psa_constants.py ../include/mbedcrypto/psa/crypto_values.h ../include/mbedcrypto/psa/crypto_extra.h
 	../scripts/generate_psa_constants.py
 
 aes/aescrypt2$(EXEXT): aes/aescrypt2.c $(DEP)

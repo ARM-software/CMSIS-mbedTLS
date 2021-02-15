@@ -62,7 +62,7 @@
 
 #include "mbedtls/platform_util.h" // for mbedtls_platform_zeroize
 
-#include <psa/crypto.h>
+#include "psa/crypto.h"
 
 /* If the build options we need are not enabled, compile a placeholder. */
 #if !defined(MBEDTLS_SHA256_C) || !defined(MBEDTLS_MD_C) ||     \

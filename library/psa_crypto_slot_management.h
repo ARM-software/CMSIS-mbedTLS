@@ -21,7 +21,7 @@
 #ifndef PSA_CRYPTO_SLOT_MANAGEMENT_H
 #define PSA_CRYPTO_SLOT_MANAGEMENT_H
 
-#include "psa/crypto.h"
+#include "mbedcrypto/psa/crypto.h"
 #include "psa_crypto_se.h"
 
 /* Number of key slots (plus one because 0 is not used).
