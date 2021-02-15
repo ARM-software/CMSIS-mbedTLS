@@ -19,9 +19,7 @@
 
 #include "common.h"
 
-#if defined(MBEDTLS_ERROR_STRERROR_DUMMY)
 #include <string.h>
-#endif
 
 #if defined(MBEDTLS_PLATFORM_C)
 #include "mbedtls/platform.h"
