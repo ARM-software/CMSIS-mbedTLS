@@ -15,6 +15,6 @@ the status messages are printed on Debug (printf) Viewer using ITM.
 
 The ssl_client1 example is available for the following targets:
 
-MCB1800 (MCB4300):
-    Standalone application for MCB1800 (MCB4300) board.
+MCB1800:
+    Standalone application for MCB1800 board.
     Program code is loaded into on-chip flash.

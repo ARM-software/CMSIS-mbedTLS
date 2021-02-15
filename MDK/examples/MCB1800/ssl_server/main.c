@@ -10,16 +10,17 @@
  * Application main thread
  *---------------------------------------------------------------------------*/
 #define APP_MAIN_STK_SZ (8192)
-uint64_t app_main_stk[APP_MAIN_STK_SZ/8];
+static uint64_t app_main_stk[APP_MAIN_STK_SZ/8];
 
-const osThreadAttr_t app_main_attr = {
+static const osThreadAttr_t app_main_attr = {
   .stack_mem  = &app_main_stk[0],
   .stack_size = sizeof(app_main_stk)
 };
 
 extern int ssl_server(void);
 
-void app_main (void *argument) {
+__NO_RETURN static void app_main (void *argument) {
+  (void)argument;
 
   ssl_server();
   for (;;) {}

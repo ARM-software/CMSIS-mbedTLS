@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Interface
- * Copyright (c) 2004-2018 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2004-2020 Arm Limited (or its affiliates). All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_ETH_0.h
  * Purpose: Network Configuration for ETH Interface
- * Rev.:    V7.2.0
+ * Rev.:    V7.3.0
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -144,6 +144,9 @@
 //       <i>Default: disabled
 #define ETH0_DHCP_NTP_SERVERS   0
 //     </e>
+
+//     Disable ICMP Echo response
+#define ETH0_ICMP_NO_ECHO       0 
 //   </e>
 
 //   <e>IPv6
@@ -230,6 +233,9 @@
 #define ETH0_DHCP6_VCLASS_DATA  ""
 //       </e>
 //     </e>
+
+//     Disable ICMP6 Echo response
+#define ETH0_ICMP6_NO_ECHO      0 
 //   </e>
 
 //   <h>OS Resource Settings
