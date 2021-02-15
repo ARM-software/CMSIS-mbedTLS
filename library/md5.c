@@ -1,7 +1,7 @@
 /*
  *  RFC 1321 compliant MD5 implementation
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
+ *  Copyright The Mbed TLS Contributors
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,8 +15,6 @@
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
- *  This file is part of mbed TLS (https://tls.mbed.org)
  */
 /*
  *  The MD5 algorithm was designed by Ron Rivest in 1991.
@@ -24,16 +22,13 @@
  *  http://www.ietf.org/rfc/rfc1321.txt
  */
 
-#if !defined(MBEDTLS_CONFIG_FILE)
-#include "mbedtls/config.h"
-#else
-#include MBEDTLS_CONFIG_FILE
-#endif
+#include "common.h"
 
 #if defined(MBEDTLS_MD5_C)
 
 #include "mbedtls/md5.h"
 #include "mbedtls/platform_util.h"
+#include "mbedtls/error.h"
 
 #include <string.h>
 
@@ -136,19 +131,22 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
     GET_UINT32_LE( X[14], data, 56 );
     GET_UINT32_LE( X[15], data, 60 );
 
-#define S(x,n) ((x << n) | ((x & 0xFFFFFFFF) >> (32 - n)))
+#define S(x,n)                                                          \
+    ( ( (x) << (n) ) | ( ( (x) & 0xFFFFFFFF) >> ( 32 - (n) ) ) )
 
-#define P(a,b,c,d,k,s,t)                                \
-{                                                       \
-    a += F(b,c,d) + X[k] + t; a = S(a,s) + b;           \
-}
+#define P(a,b,c,d,k,s,t)                                        \
+    do                                                          \
+    {                                                           \
+        (a) += F((b),(c),(d)) + X[(k)] + (t);                   \
+        (a) = S((a),(s)) + (b);                                 \
+    } while( 0 )
 
     A = ctx->state[0];
     B = ctx->state[1];
     C = ctx->state[2];
     D = ctx->state[3];
 
-#define F(x,y,z) (z ^ (x & (y ^ z)))
+#define F(x,y,z) ((z) ^ ((x) & ((y) ^ (z))))
 
     P( A, B, C, D,  0,  7, 0xD76AA478 );
     P( D, A, B, C,  1, 12, 0xE8C7B756 );
@@ -169,7 +167,7 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
 
 #undef F
 
-#define F(x,y,z) (y ^ (z & (x ^ y)))
+#define F(x,y,z) ((y) ^ ((z) & ((x) ^ (y))))
 
     P( A, B, C, D,  1,  5, 0xF61E2562 );
     P( D, A, B, C,  6,  9, 0xC040B340 );
@@ -190,7 +188,7 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
 
 #undef F
 
-#define F(x,y,z) (x ^ y ^ z)
+#define F(x,y,z) ((x) ^ (y) ^ (z))
 
     P( A, B, C, D,  5,  4, 0xFFFA3942 );
     P( D, A, B, C,  8, 11, 0x8771F681 );
@@ -211,7 +209,7 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
 
 #undef F
 
-#define F(x,y,z) (y ^ (x | ~z))
+#define F(x,y,z) ((y) ^ ((x) | ~(z)))
 
     P( A, B, C, D,  0,  6, 0xF4292244 );
     P( D, A, B, C,  7, 10, 0x432AFF97 );
@@ -256,7 +254,7 @@ int mbedtls_md5_update_ret( mbedtls_md5_context *ctx,
                             const unsigned char *input,
                             size_t ilen )
 {
-    int ret;
+    int ret = MBEDTLS_ERR_ERROR_CORRUPTION_DETECTED;
     size_t fill;
     uint32_t left;
 
@@ -315,7 +313,7 @@ void mbedtls_md5_update( mbedtls_md5_context *ctx,
 int mbedtls_md5_finish_ret( mbedtls_md5_context *ctx,
                             unsigned char output[16] )
 {
-    int ret;
+    int ret = MBEDTLS_ERR_ERROR_CORRUPTION_DETECTED;
     uint32_t used;
     uint32_t high, low;
 
@@ -383,7 +381,7 @@ int mbedtls_md5_ret( const unsigned char *input,
                      size_t ilen,
                      unsigned char output[16] )
 {
-    int ret;
+    int ret = MBEDTLS_ERR_ERROR_CORRUPTION_DETECTED;
     mbedtls_md5_context ctx;
 
     mbedtls_md5_init( &ctx );
