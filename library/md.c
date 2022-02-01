@@ -5,8 +5,14 @@
  *
  * \author Adriaan de Jong <dejong@fox-it.com>
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -20,7 +26,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
@@ -33,6 +58,7 @@
 
 #include "mbedtls/md.h"
 #include "mbedtls/md_internal.h"
+#include "mbedtls/platform_util.h"
 
 #if defined(MBEDTLS_PLATFORM_C)
 #include "mbedtls/platform.h"
@@ -47,11 +73,6 @@
 #if defined(MBEDTLS_FS_IO)
 #include <stdio.h>
 #endif
-
-/* Implementation that should never be optimized out by the compiler */
-static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = v; while( n-- ) *p++ = 0;
-}
 
 /*
  * Reminder: update profiles in x509_crt.c when adding a new hash!
@@ -193,11 +214,12 @@ void mbedtls_md_free( mbedtls_md_context_t *ctx )
 
     if( ctx->hmac_ctx != NULL )
     {
-        mbedtls_zeroize( ctx->hmac_ctx, 2 * ctx->md_info->block_size );
+        mbedtls_platform_zeroize( ctx->hmac_ctx,
+                                  2 * ctx->md_info->block_size );
         mbedtls_free( ctx->hmac_ctx );
     }
 
-    mbedtls_zeroize( ctx, sizeof( mbedtls_md_context_t ) );
+    mbedtls_platform_zeroize( ctx, sizeof( mbedtls_md_context_t ) );
 }
 
 int mbedtls_md_clone( mbedtls_md_context_t *dst,
@@ -311,7 +333,7 @@ int mbedtls_md_file( const mbedtls_md_info_t *md_info, const char *path, unsigne
         ret = md_info->finish_func( ctx.md_ctx, output );
 
 cleanup:
-    mbedtls_zeroize( buf, sizeof( buf ) );
+    mbedtls_platform_zeroize( buf, sizeof( buf ) );
     fclose( f );
     mbedtls_md_free( &ctx );
 
@@ -361,7 +383,7 @@ int mbedtls_md_hmac_starts( mbedtls_md_context_t *ctx, const unsigned char *key,
         goto cleanup;
 
 cleanup:
-    mbedtls_zeroize( sum, sizeof( sum ) );
+    mbedtls_platform_zeroize( sum, sizeof( sum ) );
 
     return( ret );
 }

@@ -1,8 +1,14 @@
 /*
  *  Privacy Enhanced Mail (PEM) decoding
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -16,7 +22,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 
 #if !defined(MBEDTLS_CONFIG_FILE)
@@ -33,6 +58,7 @@
 #include "mbedtls/aes.h"
 #include "mbedtls/md5.h"
 #include "mbedtls/cipher.h"
+#include "mbedtls/platform_util.h"
 
 #include <string.h>
 
@@ -45,11 +71,6 @@
 #endif
 
 #if defined(MBEDTLS_PEM_PARSE_C)
-/* Implementation that should never be optimized out by the compiler */
-static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = v; while( n-- ) *p++ = 0;
-}
-
 void mbedtls_pem_init( mbedtls_pem_context *ctx )
 {
     memset( ctx, 0, sizeof( mbedtls_pem_context ) );
@@ -135,7 +156,7 @@ static int pem_pbkdf1( unsigned char *key, size_t keylen,
 
 exit:
     mbedtls_md5_free( &md5_ctx );
-    mbedtls_zeroize( md5sum, 16 );
+    mbedtls_platform_zeroize( md5sum, 16 );
 
     return( ret );
 }
@@ -164,7 +185,7 @@ static int pem_des_decrypt( unsigned char des_iv[8],
 
 exit:
     mbedtls_des_free( &des_ctx );
-    mbedtls_zeroize( des_key, 8 );
+    mbedtls_platform_zeroize( des_key, 8 );
 
     return( ret );
 }
@@ -192,7 +213,7 @@ static int pem_des3_decrypt( unsigned char des3_iv[8],
 
 exit:
     mbedtls_des3_free( &des3_ctx );
-    mbedtls_zeroize( des3_key, 24 );
+    mbedtls_platform_zeroize( des3_key, 24 );
 
     return( ret );
 }
@@ -222,7 +243,7 @@ static int pem_aes_decrypt( unsigned char aes_iv[16], unsigned int keylen,
 
 exit:
     mbedtls_aes_free( &aes_ctx );
-    mbedtls_zeroize( aes_key, keylen );
+    mbedtls_platform_zeroize( aes_key, keylen );
 
     return( ret );
 }
@@ -359,7 +380,7 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
 
     if( ( ret = mbedtls_base64_decode( buf, len, &len, s1, s2 - s1 ) ) != 0 )
     {
-        mbedtls_zeroize( buf, len );
+        mbedtls_platform_zeroize( buf, len );
         mbedtls_free( buf );
         return( MBEDTLS_ERR_PEM_INVALID_DATA + ret );
     }
@@ -370,7 +391,7 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
     ( defined(MBEDTLS_DES_C) || defined(MBEDTLS_AES_C) )
         if( pwd == NULL )
         {
-            mbedtls_zeroize( buf, len );
+            mbedtls_platform_zeroize( buf, len );
             mbedtls_free( buf );
             return( MBEDTLS_ERR_PEM_PASSWORD_REQUIRED );
         }
@@ -407,12 +428,12 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
          */
         if( len <= 2 || buf[0] != 0x30 || buf[1] > 0x83 )
         {
-            mbedtls_zeroize( buf, len );
+            mbedtls_platform_zeroize( buf, len );
             mbedtls_free( buf );
             return( MBEDTLS_ERR_PEM_PASSWORD_MISMATCH );
         }
 #else
-        mbedtls_zeroize( buf, len );
+        mbedtls_platform_zeroize( buf, len );
         mbedtls_free( buf );
         return( MBEDTLS_ERR_PEM_FEATURE_UNAVAILABLE );
 #endif /* MBEDTLS_MD5_C && MBEDTLS_CIPHER_MODE_CBC &&
@@ -427,12 +448,14 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
 
 void mbedtls_pem_free( mbedtls_pem_context *ctx )
 {
-    if( ctx->buf != NULL )
-        mbedtls_zeroize( ctx->buf, ctx->buflen );
-    mbedtls_free( ctx->buf );
+    if ( ctx->buf != NULL )
+    {
+        mbedtls_platform_zeroize( ctx->buf, ctx->buflen );
+        mbedtls_free( ctx->buf );
+    }
     mbedtls_free( ctx->info );
 
-    mbedtls_zeroize( ctx, sizeof( mbedtls_pem_context ) );
+    mbedtls_platform_zeroize( ctx, sizeof( mbedtls_pem_context ) );
 }
 #endif /* MBEDTLS_PEM_PARSE_C */
 

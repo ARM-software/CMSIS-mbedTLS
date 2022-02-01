@@ -1,8 +1,14 @@
 /*
  *  X.509 Certidicate Revocation List (CRL) parsing
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -16,7 +22,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 /*
  *  The ITU-T X.509 standard defines a certificate format for PKI.
@@ -39,6 +64,7 @@
 
 #include "mbedtls/x509_crl.h"
 #include "mbedtls/oid.h"
+#include "mbedtls/platform_util.h"
 
 #include <string.h>
 
@@ -65,11 +91,6 @@
 #if defined(MBEDTLS_FS_IO) || defined(EFIX64) || defined(EFI32)
 #include <stdio.h>
 #endif
-
-/* Implementation that should never be optimized out by the compiler */
-static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = v; while( n-- ) *p++ = 0;
-}
 
 /*
  *  Version  ::=  INTEGER  {  v1(0), v2(1)  }
@@ -107,17 +128,17 @@ static int x509_get_crl_ext( unsigned char **p,
 {
     int ret;
 
+    if( *p == end )
+        return( 0 );
+
     /*
      * crlExtensions           [0]  EXPLICIT Extensions OPTIONAL
      *                              -- if present, version MUST be v2
      */
     if( ( ret = mbedtls_x509_get_ext( p, end, ext, 0 ) ) != 0 )
-    {
-        if( ret == MBEDTLS_ERR_ASN1_UNEXPECTED_TAG )
-            return( 0 );
-
         return( ret );
-    }
+
+    end = ext->p + ext->len;
 
     while( *p < end )
     {
@@ -262,13 +283,13 @@ static int x509_get_entries( unsigned char **p,
         size_t len2;
         const unsigned char *end2;
 
+        cur_entry->raw.tag = **p;
         if( ( ret = mbedtls_asn1_get_tag( p, end, &len2,
                 MBEDTLS_ASN1_SEQUENCE | MBEDTLS_ASN1_CONSTRUCTED ) ) != 0 )
         {
             return( ret );
         }
 
-        cur_entry->raw.tag = **p;
         cur_entry->raw.p = *p;
         cur_entry->raw.len = len2;
         end2 = *p + len2;
@@ -616,7 +637,7 @@ int mbedtls_x509_crl_parse_file( mbedtls_x509_crl *chain, const char *path )
 
     ret = mbedtls_x509_crl_parse( chain, buf, n );
 
-    mbedtls_zeroize( buf, n );
+    mbedtls_platform_zeroize( buf, n );
     mbedtls_free( buf );
 
     return( ret );
@@ -737,7 +758,7 @@ void mbedtls_x509_crl_free( mbedtls_x509_crl *crl )
         {
             name_prv = name_cur;
             name_cur = name_cur->next;
-            mbedtls_zeroize( name_prv, sizeof( mbedtls_x509_name ) );
+            mbedtls_platform_zeroize( name_prv, sizeof( mbedtls_x509_name ) );
             mbedtls_free( name_prv );
         }
 
@@ -746,13 +767,14 @@ void mbedtls_x509_crl_free( mbedtls_x509_crl *crl )
         {
             entry_prv = entry_cur;
             entry_cur = entry_cur->next;
-            mbedtls_zeroize( entry_prv, sizeof( mbedtls_x509_crl_entry ) );
+            mbedtls_platform_zeroize( entry_prv,
+                                      sizeof( mbedtls_x509_crl_entry ) );
             mbedtls_free( entry_prv );
         }
 
         if( crl_cur->raw.p != NULL )
         {
-            mbedtls_zeroize( crl_cur->raw.p, crl_cur->raw.len );
+            mbedtls_platform_zeroize( crl_cur->raw.p, crl_cur->raw.len );
             mbedtls_free( crl_cur->raw.p );
         }
 
@@ -766,7 +788,7 @@ void mbedtls_x509_crl_free( mbedtls_x509_crl *crl )
         crl_prv = crl_cur;
         crl_cur = crl_cur->next;
 
-        mbedtls_zeroize( crl_prv, sizeof( mbedtls_x509_crl ) );
+        mbedtls_platform_zeroize( crl_prv, sizeof( mbedtls_x509_crl ) );
         if( crl_prv != crl )
             mbedtls_free( crl_prv );
     }

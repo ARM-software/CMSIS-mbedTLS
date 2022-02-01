@@ -1,8 +1,14 @@
 /*
  *  DTLS cookie callbacks implementation
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -16,7 +22,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 /*
  * These session callbacks use a simple chained list
@@ -40,13 +65,9 @@
 
 #include "mbedtls/ssl_cookie.h"
 #include "mbedtls/ssl_internal.h"
+#include "mbedtls/platform_util.h"
 
 #include <string.h>
-
-/* Implementation that should never be optimized out by the compiler */
-static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = v; while( n-- ) *p++ = 0;
-}
 
 /*
  * If DTLS is in use, then at least one of SHA-1, SHA-256, SHA-512 is
@@ -101,7 +122,7 @@ void mbedtls_ssl_cookie_free( mbedtls_ssl_cookie_ctx *ctx )
     mbedtls_mutex_free( &ctx->mutex );
 #endif
 
-    mbedtls_zeroize( ctx, sizeof( mbedtls_ssl_cookie_ctx ) );
+    mbedtls_platform_zeroize( ctx, sizeof( mbedtls_ssl_cookie_ctx ) );
 }
 
 int mbedtls_ssl_cookie_setup( mbedtls_ssl_cookie_ctx *ctx,
@@ -122,7 +143,7 @@ int mbedtls_ssl_cookie_setup( mbedtls_ssl_cookie_ctx *ctx,
     if( ret != 0 )
         return( ret );
 
-    mbedtls_zeroize( key, sizeof( key ) );
+    mbedtls_platform_zeroize( key, sizeof( key ) );
 
     return( 0 );
 }
@@ -137,8 +158,7 @@ static int ssl_cookie_hmac( mbedtls_md_context_t *hmac_ctx,
 {
     unsigned char hmac_out[COOKIE_MD_OUTLEN];
 
-    if( (size_t)( end - *p ) < COOKIE_HMAC_LEN )
-        return( MBEDTLS_ERR_SSL_BUFFER_TOO_SMALL );
+    MBEDTLS_SSL_CHK_BUF_PTR( *p, end, COOKIE_HMAC_LEN );
 
     if( mbedtls_md_hmac_reset(  hmac_ctx ) != 0 ||
         mbedtls_md_hmac_update( hmac_ctx, time, 4 ) != 0 ||
@@ -168,8 +188,7 @@ int mbedtls_ssl_cookie_write( void *p_ctx,
     if( ctx == NULL || cli_id == NULL )
         return( MBEDTLS_ERR_SSL_BAD_INPUT_DATA );
 
-    if( (size_t)( end - *p ) < COOKIE_LEN )
-        return( MBEDTLS_ERR_SSL_BUFFER_TOO_SMALL );
+    MBEDTLS_SSL_CHK_BUF_PTR( *p, end, COOKIE_LEN );
 
 #if defined(MBEDTLS_HAVE_TIME)
     t = (unsigned long) mbedtls_time( NULL );

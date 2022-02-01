@@ -1,11 +1,33 @@
 /**
  * \file net_sockets.h
  *
- * \brief Network communication functions
+ * \brief   Network sockets abstraction layer to integrate Mbed TLS into a
+ *          BSD-style sockets API.
+ *
+ *          The network sockets module provides an example integration of the
+ *          Mbed TLS library into a BSD sockets implementation. The module is
+ *          intended to be an example of how Mbed TLS can be integrated into a
+ *          networking stack, as well as to be Mbed TLS's network integration
+ *          for its supported platforms.
+ *
+ *          The module is intended only to be used with the Mbed TLS library and
+ *          is not intended to be used by third party application software
+ *          directly.
+ *
+ *          The supported platforms are as follows:
+ *              * Microsoft Windows and Windows CE
+ *              * POSIX/Unix platforms including Linux, OS X
+ *
  */
 /*
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -19,7 +41,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 #ifndef MBEDTLS_NET_SOCKETS_H
 #define MBEDTLS_NET_SOCKETS_H
@@ -68,7 +109,7 @@ extern "C" {
  * (eg two file descriptors for combined IPv4 + IPv6 support, or additional
  * structures for hand-made UDP demultiplexing).
  */
-typedef struct
+typedef struct mbedtls_net_context
 {
     int fd;             /**< The underlying file descriptor                 */
 }

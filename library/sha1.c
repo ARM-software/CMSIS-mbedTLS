@@ -1,8 +1,14 @@
 /*
  *  FIPS-180-1 compliant SHA-1 implementation
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
+ *
+ *  This file is provided under the Apache License 2.0, or the
+ *  GNU General Public License v2.0 or later.
+ *
+ *  **********
+ *  Apache License 2.0:
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use this file except in compliance with the License.
@@ -16,7 +22,26 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *
- *  This file is part of mbed TLS (https://tls.mbed.org)
+ *  **********
+ *
+ *  **********
+ *  GNU General Public License v2.0 or later:
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  **********
  */
 /*
  *  The SHA-1 standard was published by NIST in 1993.
@@ -33,6 +58,7 @@
 #if defined(MBEDTLS_SHA1_C)
 
 #include "mbedtls/sha1.h"
+#include "mbedtls/platform_util.h"
 
 #include <string.h>
 
@@ -45,12 +71,12 @@
 #endif /* MBEDTLS_PLATFORM_C */
 #endif /* MBEDTLS_SELF_TEST */
 
-#if !defined(MBEDTLS_SHA1_ALT)
+#define SHA1_VALIDATE_RET(cond)                             \
+    MBEDTLS_INTERNAL_VALIDATE_RET( cond, MBEDTLS_ERR_SHA1_BAD_INPUT_DATA )
 
-/* Implementation that should never be optimized out by the compiler */
-static void mbedtls_zeroize( void *v, size_t n ) {
-    volatile unsigned char *p = (unsigned char*)v; while( n-- ) *p++ = 0;
-}
+#define SHA1_VALIDATE(cond)  MBEDTLS_INTERNAL_VALIDATE( cond )
+
+#if !defined(MBEDTLS_SHA1_ALT)
 
 /*
  * 32-bit integer manipulation macros (big endian)
@@ -77,6 +103,8 @@ static void mbedtls_zeroize( void *v, size_t n ) {
 
 void mbedtls_sha1_init( mbedtls_sha1_context *ctx )
 {
+    SHA1_VALIDATE( ctx != NULL );
+
     memset( ctx, 0, sizeof( mbedtls_sha1_context ) );
 }
 
@@ -85,12 +113,15 @@ void mbedtls_sha1_free( mbedtls_sha1_context *ctx )
     if( ctx == NULL )
         return;
 
-    mbedtls_zeroize( ctx, sizeof( mbedtls_sha1_context ) );
+    mbedtls_platform_zeroize( ctx, sizeof( mbedtls_sha1_context ) );
 }
 
 void mbedtls_sha1_clone( mbedtls_sha1_context *dst,
                          const mbedtls_sha1_context *src )
 {
+    SHA1_VALIDATE( dst != NULL );
+    SHA1_VALIDATE( src != NULL );
+
     *dst = *src;
 }
 
@@ -99,6 +130,8 @@ void mbedtls_sha1_clone( mbedtls_sha1_context *dst,
  */
 int mbedtls_sha1_starts_ret( mbedtls_sha1_context *ctx )
 {
+    SHA1_VALIDATE_RET( ctx != NULL );
+
     ctx->total[0] = 0;
     ctx->total[1] = 0;
 
@@ -124,6 +157,9 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
 {
     uint32_t temp, W[16], A, B, C, D, E;
 
+    SHA1_VALIDATE_RET( ctx != NULL );
+    SHA1_VALIDATE_RET( (const unsigned char *)data != NULL );
+
     GET_UINT32_BE( W[ 0], data,  0 );
     GET_UINT32_BE( W[ 1], data,  4 );
     GET_UINT32_BE( W[ 2], data,  8 );
@@ -141,19 +177,21 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
     GET_UINT32_BE( W[14], data, 56 );
     GET_UINT32_BE( W[15], data, 60 );
 
-#define S(x,n) ((x << n) | ((x & 0xFFFFFFFF) >> (32 - n)))
+#define S(x,n) (((x) << (n)) | (((x) & 0xFFFFFFFF) >> (32 - (n))))
 
-#define R(t)                                            \
-(                                                       \
-    temp = W[( t -  3 ) & 0x0F] ^ W[( t - 8 ) & 0x0F] ^ \
-           W[( t - 14 ) & 0x0F] ^ W[  t       & 0x0F],  \
-    ( W[t & 0x0F] = S(temp,1) )                         \
-)
+#define R(t)                                                    \
+    (                                                           \
+        temp = W[( (t) -  3 ) & 0x0F] ^ W[( (t) - 8 ) & 0x0F] ^ \
+               W[( (t) - 14 ) & 0x0F] ^ W[  (t)       & 0x0F],  \
+        ( W[(t) & 0x0F] = S(temp,1) )                           \
+    )
 
-#define P(a,b,c,d,e,x)                                  \
-{                                                       \
-    e += S(a,5) + F(b,c,d) + K + x; b = S(b,30);        \
-}
+#define P(a,b,c,d,e,x)                                          \
+    do                                                          \
+    {                                                           \
+        (e) += S((a),5) + F((b),(c),(d)) + K + (x);             \
+        (b) = S((b),30);                                        \
+    } while( 0 )
 
     A = ctx->state[0];
     B = ctx->state[1];
@@ -161,7 +199,7 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
     D = ctx->state[3];
     E = ctx->state[4];
 
-#define F(x,y,z) (z ^ (x & (y ^ z)))
+#define F(x,y,z) ((z) ^ ((x) & ((y) ^ (z))))
 #define K 0x5A827999
 
     P( A, B, C, D, E, W[0]  );
@@ -188,7 +226,7 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
 #undef K
 #undef F
 
-#define F(x,y,z) (x ^ y ^ z)
+#define F(x,y,z) ((x) ^ (y) ^ (z))
 #define K 0x6ED9EBA1
 
     P( A, B, C, D, E, R(20) );
@@ -215,7 +253,7 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
 #undef K
 #undef F
 
-#define F(x,y,z) ((x & y) | (z & (x | y)))
+#define F(x,y,z) (((x) & (y)) | ((z) & ((x) | (y))))
 #define K 0x8F1BBCDC
 
     P( A, B, C, D, E, R(40) );
@@ -242,7 +280,7 @@ int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
 #undef K
 #undef F
 
-#define F(x,y,z) (x ^ y ^ z)
+#define F(x,y,z) ((x) ^ (y) ^ (z))
 #define K 0xCA62C1D6
 
     P( A, B, C, D, E, R(60) );
@@ -298,6 +336,9 @@ int mbedtls_sha1_update_ret( mbedtls_sha1_context *ctx,
     size_t fill;
     uint32_t left;
 
+    SHA1_VALIDATE_RET( ctx != NULL );
+    SHA1_VALIDATE_RET( ilen == 0 || input != NULL );
+
     if( ilen == 0 )
         return( 0 );
 
@@ -346,14 +387,6 @@ void mbedtls_sha1_update( mbedtls_sha1_context *ctx,
 }
 #endif
 
-static const unsigned char sha1_padding[64] =
-{
- 0x80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-
 /*
  * SHA-1 final digest
  */
@@ -361,25 +394,51 @@ int mbedtls_sha1_finish_ret( mbedtls_sha1_context *ctx,
                              unsigned char output[20] )
 {
     int ret;
-    uint32_t last, padn;
+    uint32_t used;
     uint32_t high, low;
-    unsigned char msglen[8];
 
+    SHA1_VALIDATE_RET( ctx != NULL );
+    SHA1_VALIDATE_RET( (unsigned char *)output != NULL );
+
+    /*
+     * Add padding: 0x80 then 0x00 until 8 bytes remain for the length
+     */
+    used = ctx->total[0] & 0x3F;
+
+    ctx->buffer[used++] = 0x80;
+
+    if( used <= 56 )
+    {
+        /* Enough room for padding + length in current block */
+        memset( ctx->buffer + used, 0, 56 - used );
+    }
+    else
+    {
+        /* We'll need an extra block */
+        memset( ctx->buffer + used, 0, 64 - used );
+
+        if( ( ret = mbedtls_internal_sha1_process( ctx, ctx->buffer ) ) != 0 )
+            return( ret );
+
+        memset( ctx->buffer, 0, 56 );
+    }
+
+    /*
+     * Add message length
+     */
     high = ( ctx->total[0] >> 29 )
          | ( ctx->total[1] <<  3 );
     low  = ( ctx->total[0] <<  3 );
 
-    PUT_UINT32_BE( high, msglen, 0 );
-    PUT_UINT32_BE( low,  msglen, 4 );
+    PUT_UINT32_BE( high, ctx->buffer, 56 );
+    PUT_UINT32_BE( low,  ctx->buffer, 60 );
 
-    last = ctx->total[0] & 0x3F;
-    padn = ( last < 56 ) ? ( 56 - last ) : ( 120 - last );
-
-    if( ( ret = mbedtls_sha1_update_ret( ctx, sha1_padding, padn ) ) != 0 )
-        return( ret );
-    if( ( ret = mbedtls_sha1_update_ret( ctx, msglen, 8 ) ) != 0 )
+    if( ( ret = mbedtls_internal_sha1_process( ctx, ctx->buffer ) ) != 0 )
         return( ret );
 
+    /*
+     * Output final state
+     */
     PUT_UINT32_BE( ctx->state[0], output,  0 );
     PUT_UINT32_BE( ctx->state[1], output,  4 );
     PUT_UINT32_BE( ctx->state[2], output,  8 );
@@ -408,6 +467,9 @@ int mbedtls_sha1_ret( const unsigned char *input,
 {
     int ret;
     mbedtls_sha1_context ctx;
+
+    SHA1_VALIDATE_RET( ilen == 0 || input != NULL );
+    SHA1_VALIDATE_RET( (unsigned char *)output != NULL );
 
     mbedtls_sha1_init( &ctx );
 
