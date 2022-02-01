@@ -75,7 +75,10 @@ DEL /Q %RELEASE_PATH%\programs\x509\CMakeLists.txt
 :: Copy tests folder
 XCOPY /Q /S /Y ..\tests\*.* %RELEASE_PATH%\tests\*.*
 DEL /Q %RELEASE_PATH%\tests\.gitignore
+DEL /Q %RELEASE_PATH%\tests\CMakeLists.txt
+DEL /Q %RELEASE_PATH%\tests\Makefile
 DEL /Q %RELEASE_PATH%\tests\data_files\.gitignore
+DEL /Q %RELEASE_PATH%\tests\data_files\Makefile
 
 :: Copy MDK folder
 XCOPY /Q /S /Y ..\MDK\*.* %RELEASE_PATH%\MDK\*.*
