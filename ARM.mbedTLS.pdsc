@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package schemaVersion="1.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+<package schemaVersion="1.6" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
-  <description>ARM mbed Cryptographic and SSL/TLS library for Cortex-M devices</description>
+  <description>ARM mbed Cryptographic and SSL/TLS library</description>
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
-    <release version="1.5.2">
-      Removed mbedTLS.h header (not part of mbedTLS)
-    </release>
     <release version="1.5.1">
+      Updated to mbedTLS V2.16.8
+      Removed mbedTLS.h header (not part of mbedTLS)
       Updated platform dependency
     </release>
     <release version="1.5.0" date="2018-06-07">
@@ -42,20 +41,6 @@
     </release>
   </releases>
   <conditions>
-    <condition id="Cortex-M Device">
-      <description>Cortex-M processor based device: Cortex-M0, Cortex-M0+, Cortex-M3, Cortex-M4, Cortex-M7, Cortex-M23, Cortex-M33, SC000 or SC3000</description>
-      <accept Dcore="Cortex-M0"/>
-      <accept Dcore="Cortex-M0+"/>
-      <accept Dcore="Cortex-M3"/>
-      <accept Dcore="Cortex-M4"/>
-      <accept Dcore="Cortex-M7"/>
-      <accept Dcore="Cortex-M23"/>
-      <accept Dcore="Cortex-M33"/>
-      <accept Dcore="ARMV8MBL"/>
-      <accept Dcore="ARMV8MML"/>
-      <accept Dcore="SC000"/>
-      <accept Dcore="SC300"/>
-    </condition>
     <condition id="CMSIS RTOS">
       <description>CMSIS RTOS (API1 or API2)</description>
       <require Cclass="CMSIS" Cgroup="CORE" Cversion="5.0.1"/>
@@ -78,7 +63,7 @@
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.9.0" condition="Cortex-M Device">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.16.8">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -86,10 +71,11 @@
       <files>
         <file category="doc"     name="doxygen/html/index.html"/>
         <file category="include" name="include/"/>
-        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.6.0"/>
+        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.16.8"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
         <file category="source"  name="library/arc4.c"/>
+        <file category="source"  name="library/aria.c"/>
         <file category="source"  name="library/asn1parse.c"/>
         <file category="source"  name="library/asn1write.c"/>
         <file category="source"  name="library/base64.c"/>
@@ -98,6 +84,8 @@
         <file category="source"  name="library/camellia.c"/>
         <file category="source"  name="library/ccm.c"/>
         <file category="source"  name="library/certs.c"/>
+        <file category="source"  name="library/chacha20.c"/>
+        <file category="source"  name="library/chachapoly.c"/>
         <file category="source"  name="library/cipher.c"/>
         <file category="source"  name="library/cipher_wrap.c"/>
         <file category="source"  name="library/cmac.c"/>
@@ -116,6 +104,7 @@
         <file category="source"  name="library/error.c"/>
         <file category="source"  name="library/gcm.c"/>
         <file category="source"  name="library/havege.c"/>
+        <file category="source"  name="library/hkdf.c"/>
         <file category="source"  name="library/hmac_drbg.c"/>
         <file category="source"  name="library/md.c"/>
         <file category="source"  name="library/md_wrap.c"/>
@@ -126,6 +115,7 @@
         <file category="source"  name="library/net_sockets.c"                condition="Generic Network"/>
         <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK-Pro Network"/>
         <file category="source"  name="MDK/library/iot_socket/net_sockets.c" condition="IoT Socket"/>
+        <file category="source"  name="library/nist_kw.c"/>
         <file category="source"  name="library/oid.c"/>
    <!-- <file category="source"  name="library/padlock.c"/> -->
         <file category="source"  name="library/pem.c"/>
@@ -137,6 +127,8 @@
         <file category="source"  name="library/pkparse.c"/>
         <file category="source"  name="library/pkwrite.c"/>
         <file category="source"  name="library/platform.c"/>
+        <file category="source"  name="library/platform_util.c"/>
+        <file category="source"  name="library/poly1305.c"/>
         <file category="source"  name="library/ripemd160.c"/>
         <file category="source"  name="library/rsa.c"/>
         <file category="source"  name="library/rsa_internal.c"/>
