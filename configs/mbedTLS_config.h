@@ -1,7 +1,7 @@
 /*
  *  Configuration template
  *
- *  Copyright (C) 2006-2015, ARM Limited, All Rights Reserved
+ *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -15,8 +15,6 @@
  *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *
- *  This file is part of mbed TLS (https://tls.mbed.org)
  */
 
 /*
@@ -33,6 +31,7 @@
 //#define MBEDTLS_HAVE_TIME_DATE
 //#define MBEDTLS_PLATFORM_MEMORY
 //#define MBEDTLS_PLATFORM_NO_STD_FUNCTIONS
+//#define MBEDTLS_CHECK_PARAMS
 
 /* mbed TLS feature support */
 //#define MBEDTLS_AES_ROM_TABLES
@@ -41,11 +40,14 @@
 //#define MBEDTLS_CIPHER_MODE_CBC
 //#define MBEDTLS_CIPHER_MODE_CFB
 //#define MBEDTLS_CIPHER_MODE_CTR
+//#define MBEDTLS_CIPHER_MODE_OFB
+//#define MBEDTLS_CIPHER_MODE_XTS
 //#define MBEDTLS_CIPHER_PADDING_PKCS7
 //#define MBEDTLS_CIPHER_PADDING_ONE_AND_ZEROS
 //#define MBEDTLS_CIPHER_PADDING_ZEROS_AND_LEN
 //#define MBEDTLS_CIPHER_PADDING_ZEROS
 //#define MBEDTLS_REMOVE_ARC4_CIPHERSUITES
+//#define MBEDTLS_REMOVE_3DES_CIPHERSUITES
 //#define MBEDTLS_ECP_DP_SECP192R1_ENABLED
 //#define MBEDTLS_ECP_DP_SECP224R1_ENABLED
 //#define MBEDTLS_ECP_DP_SECP256R1_ENABLED
@@ -60,6 +62,7 @@
 //#define MBEDTLS_ECP_DP_CURVE25519_ENABLED
 //#define MBEDTLS_ECP_DP_CURVE448_ENABLED
 //#define MBEDTLS_ECP_NIST_OPTIM
+//#define MBEDTLS_ECP_RESTARTABLE
 //#define MBEDTLS_ECDSA_DETERMINISTIC
 //#define MBEDTLS_KEY_EXCHANGE_PSK_ENABLED
 //#define MBEDTLS_KEY_EXCHANGE_DHE_PSK_ENABLED
@@ -89,6 +92,7 @@
 //#define MBEDTLS_SELF_TEST
 //#define MBEDTLS_SHA256_SMALLER
 //#define MBEDTLS_SSL_ALL_ALERT_MESSAGES
+//#define MBEDTLS_SSL_ASYNC_PRIVATE
 //#define MBEDTLS_SSL_DEBUG_ALL
 //#define MBEDTLS_SSL_ENCRYPT_THEN_MAC
 //#define MBEDTLS_SSL_EXTENDED_MASTER_SECRET
@@ -129,8 +133,11 @@
 //#define MBEDTLS_BIGNUM_C
 //#define MBEDTLS_BLOWFISH_C
 //#define MBEDTLS_CAMELLIA_C
+//#define MBEDTLS_ARIA_C
 //#define MBEDTLS_CCM_C
 //#define MBEDTLS_CERTS_C
+//#define MBEDTLS_CHACHA20_C
+//#define MBEDTLS_CHACHAPOLY_C
 //#define MBEDTLS_CIPHER_C
 //#define MBEDTLS_CMAC_C
 //#define MBEDTLS_CTR_DRBG_C
@@ -145,7 +152,9 @@
 //#define MBEDTLS_ERROR_C
 //#define MBEDTLS_GCM_C
 //#define MBEDTLS_HAVEGE_C
+//#define MBEDTLS_HKDF_C
 //#define MBEDTLS_HMAC_DRBG_C
+//#define MBEDTLS_NIST_KW_C
 //#define MBEDTLS_MD_C
 //#define MBEDTLS_MD2_C
 //#define MBEDTLS_MD4_C
@@ -162,6 +171,7 @@
 //#define MBEDTLS_PKCS11_C
 //#define MBEDTLS_PKCS12_C
 //#define MBEDTLS_PLATFORM_C
+//#define MBEDTLS_POLY1305_C
 //#define MBEDTLS_RIPEMD160_C
 //#define MBEDTLS_RSA_C
 //#define MBEDTLS_SHA1_C
