@@ -1,0 +1,15 @@
+This is an SSL server example running on Network Dual Stack.
+
+The code for "ssl_server.c" is available on:
+https://github.com/ARMmbed/mbedtls/blob/development/programs/ssl/ssl_server.c
+
+Use "ssl_client1" application to connect to the server and to read a default page.
+
+Internet connection is not required. This example must run in uVision debugger,
+because the status messages are printed on Debug (printf) Viewer using ITM.
+
+The ssl_server example is available for the following targets:
+
+MCB4300:
+    Standalone application for MCB4300 board.
+    Program code is loaded into on-chip flash.
