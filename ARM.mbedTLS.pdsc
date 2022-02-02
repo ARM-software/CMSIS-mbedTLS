@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="1.8.0" date="2022-02-11">
+      Updated to mbedTLS V2.28.0
+    </release>
     <release version="1.7.0" date="2021-02-15">
       Updated to mbedTLS V2.24.0
       Added PSA Crypto mbedTLS component
@@ -16,6 +19,9 @@
     </release>
     <release version="1.6.0" date="2019-04-02">
       Updated to mbedTLS V2.17.0
+    </release>
+    <release version="1.5.1" date="2022-02-01">
+      Updated to mbedTLS V2.16.8
       Removed mbedTLS.h header (not part of mbedTLS)
       Updated platform dependency
     </release>
@@ -76,11 +82,11 @@
     </condition>
     <condition id="mbed TLS">
       <description>mbed TLS component</description>
-      <require Cclass="Security" Cgroup="mbed TLS" Cversion="2.24.0"/>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="2.28.0"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.24.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.28.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -88,7 +94,8 @@
       <files>
         <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
-        <file category="header"  name="configs/mbedTLS_config.h" attr="config" version="2.24.0"/>
+        <file category="header"  name="configs/mbedTLS_config.h"        attr="config" version="2.28.0"/>
+        <file category="header"  name="configs/mbedTLS_crypto_config.h" attr="config" version="2.28.0"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
         <file category="source"  name="library/arc4.c"/>
@@ -106,6 +113,7 @@
         <file category="source"  name="library/cipher.c"/>
         <file category="source"  name="library/cipher_wrap.c"/>
         <file category="source"  name="library/cmac.c"/>
+        <file category="source"  name="library/constant_time.c"/>
         <file category="source"  name="library/ctr_drbg.c"/>
         <file category="source"  name="library/debug.c"/>
         <file category="source"  name="library/des.c"/>
@@ -128,6 +136,8 @@
         <file category="source"  name="library/md4.c"/>
         <file category="source"  name="library/md5.c"/>
         <file category="source"  name="library/memory_buffer_alloc.c"/>
+        <file category="source"  name="library/mps_reader.c"/>
+        <file category="source"  name="library/mps_trace.c"/>
         <file category="source"  name="library/net_sockets.c"                condition="Generic Network"/>
         <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK-Pro Network"/>
         <file category="source"  name="MDK/library/iot_socket/net_sockets.c" condition="IoT Socket"/>
@@ -146,6 +156,14 @@
         <file category="source"  name="library/platform_util.c"/>
         <file category="source"  name="library/poly1305.c"/>
         <file category="source"  name="library/psa_crypto.c"/>
+        <file category="source"  name="library/psa_crypto_aead.c"/>
+        <file category="source"  name="library/psa_crypto_cipher.c"/>
+        <file category="source"  name="library/psa_crypto_client.c"/>
+        <file category="source"  name="library/psa_crypto_driver_wrappers.c"/>
+        <file category="source"  name="library/psa_crypto_ecp.c"/>
+        <file category="source"  name="library/psa_crypto_hash.c"/>
+        <file category="source"  name="library/psa_crypto_mac.c"/>
+        <file category="source"  name="library/psa_crypto_rsa.c"/>
         <file category="source"  name="library/psa_crypto_se.c"/>
         <file category="source"  name="library/psa_crypto_slot_management.c"/>
         <file category="source"  name="library/psa_crypto_storage.c"/>
@@ -164,6 +182,7 @@
         <file category="source"  name="library/ssl_srv.c"/>
         <file category="source"  name="library/ssl_ticket.c"/>
         <file category="source"  name="library/ssl_tls.c"/>
+        <file category="source"  name="library/ssl_tls13_keys.c"/>
         <file category="source"  name="library/threading.c"/>
         <file category="source"  name="library/timing.c"/>
         <file category="source"  name="library/version.c"/>
@@ -178,7 +197,7 @@
         <file category="source"  name="library/xtea.c"/>
       </files>
     </component>
-    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="2.24.0" condition="mbed TLS">
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="2.28.0" condition="mbed TLS">
       <description>mbed TLS PSA Crypto</description>
       <RTE_Components_h>
         #define RTE_PSA_API_CRYPTO
