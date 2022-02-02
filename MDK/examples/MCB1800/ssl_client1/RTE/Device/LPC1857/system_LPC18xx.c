@@ -1,5 +1,5 @@
 /* -----------------------------------------------------------------------------
- * Copyright (c) 2013 - 2017 ARM Ltd.
+ * Copyright (c) 2013 - 2019 ARM Ltd.
  *
  * This software is provided 'as-is', without any express or implied warranty.
  * In no event will the authors be held liable for any damages arising from
@@ -17,8 +17,8 @@
  *
  * 3. This notice may not be removed or altered from any source distribution.
  *
- * $Date:        10. September 2018
- * $Revision:    V1.0.3
+ * $Date:        20. December 2019
+ * $Revision:    V1.0.4
  *
  * Project:      NXP LPC18xx System initialization
  * -------------------------------------------------------------------------- */
@@ -305,6 +305,11 @@
  #endif
 #endif
 
+/*----------------------------------------------------------------------------
+  Function prototypes
+ *----------------------------------------------------------------------------*/
+uint32_t MeasureFreq (uint32_t clk_sel);
+uint32_t GetClockFreq (uint32_t clk_src);
 
 /*----------------------------------------------------------------------------
   System Core Clock variable
@@ -315,7 +320,7 @@ uint32_t SystemCoreClock = 180000000U; /* System Clock Frequency (Core Clock) */
 /******************************************************************************
  * SetClock
  ******************************************************************************/
-void SetClock (void) {
+static void SetClock (void) {
   uint32_t x, i;
   uint32_t selp, seli;
 
@@ -338,7 +343,7 @@ void SetClock (void) {
   /* Wait ~250us @ 12MHz */
   for (i = 1500; i; i--);
 
-#if (USE_SPIFI)
+#ifdef USE_SPIFI
 /* configure SPIFI clk to IRC via IDIVA (later IDIVA is configured to PLL1/3) */
   LPC_CGU->IDIVA_CTRL     = (0              <<  0) |  /* Disable Power-down   */
                             (0              <<  2) |  /* IDIV                 */
@@ -397,8 +402,8 @@ void SetClock (void) {
                          (CPU_CLK_SEL << 24) ;  /* Set clock source           */
 
   /* Set flash accelerator configuration for internal flash bank A and B      */
-  LPC_CREG->FLASHCFGA = (LPC_CREG->FLASHCFGA & (~0x0000F000)) | (FLASHCFG_FLASHTIM << 12);
-  LPC_CREG->FLASHCFGB = (LPC_CREG->FLASHCFGB & (~0x0000F000)) | (FLASHCFG_FLASHTIM << 12);
+  LPC_CREG->FLASHCFGA = (LPC_CREG->FLASHCFGA & (~0x0000F000U)) | (FLASHCFG_FLASHTIM << 12);
+  LPC_CREG->FLASHCFGB = (LPC_CREG->FLASHCFGB & (~0x0000F000U)) | (FLASHCFG_FLASHTIM << 12);
 
 /*----------------------------------------------------------------------------
   PLL0USB Setup
@@ -536,7 +541,8 @@ static void WaitUs (uint32_t us) {
 
 typedef void (*emcdivby2) (volatile uint32_t *creg6, volatile uint32_t *emcdiv, uint32_t cfg);
 
-const uint16_t emcdivby2_opc[] =  {
+__ALIGNED(4)
+static const uint16_t emcdivby2_opc[] =  {
   0x6803,        /*      LDR  R3,[R0,#0]      ; Load CREG6          */
   0xF443,0x3380, /*      ORR  R3,R3,#0x10000  ; Set Divided by 2    */
   0x6003,        /*      STR  R3,[R0,#0]      ; Store CREG6         */
@@ -555,7 +561,7 @@ const uint16_t emcdivby2_opc[] =  {
   Initialize external memory controller
  *----------------------------------------------------------------------------*/
 
-void SystemInit_ExtMemCtl (void) {
+static void SystemInit_ExtMemCtl (void) {
   uint32_t emcdivby2_buf[emcdivby2_szw];
   uint32_t div, n;
 
@@ -674,7 +680,7 @@ void SystemInit_ExtMemCtl (void) {
     /* This code configures EMC clock divider and is executed in RAM          */
     for (n = 0; n < emcdivby2_szw; n++) {
       emcdivby2_buf[n] =  *((uint32_t *)emcdivby2_ram + n);
-      *((uint32_t *)emcdivby2_ram + n) = *((uint32_t *)emcdivby2_opc + n);
+      *((uint32_t *)emcdivby2_ram + n) = *(( const uint32_t *)emcdivby2_opc + n);
     }
     __ISB();
     ((emcdivby2 )(emcdivby2_ram+1))(&LPC_CREG->CREG6, &LPC_CCU1->CLK_M3_EMCDIV_CFG, (1 << 5) | (1 << 2) | (1 << 1) | 1);
@@ -758,7 +764,7 @@ uint32_t MeasureFreq (uint32_t clk_sel) {
   uint32_t fcnt, rcnt, fout;
 
   /* Set register values */
-  LPC_CGU->FREQ_MON &= ~(1 << 23);                /* Stop frequency counters  */
+  LPC_CGU->FREQ_MON &= ~(1U << 23);               /* Stop frequency counters  */
   LPC_CGU->FREQ_MON  = (clk_sel << 24) | 511;     /* RCNT == 511              */
   LPC_CGU->FREQ_MON |= (1 << 23);                 /* Start RCNT and FCNT      */
   while (LPC_CGU->FREQ_MON & (1 << 23)) {
@@ -808,7 +814,7 @@ static __inline uint32_t GetPLL1Param (void) {
 /*----------------------------------------------------------------------------
   Get input clock source for specified clock generation block
  *----------------------------------------------------------------------------*/
-int32_t GetClkSel (uint32_t clk_src) {
+static int32_t GetClkSel (uint32_t clk_src) {
   uint32_t reg;
   int32_t clk_sel = -1;
 
@@ -817,7 +823,7 @@ int32_t GetClkSel (uint32_t clk_src) {
     case CLK_SRC_ENET_RX:
     case CLK_SRC_ENET_TX:
     case CLK_SRC_GP_CLKIN:
-      return (clk_src);
+      return ( (int32_t) clk_src);
 
     case CLK_SRC_32KHZ:
       return ((LPC_CREG->CREG0 & 0x0A) != 0x02) ? (-1) : (CLK_SRC_32KHZ);
@@ -852,7 +858,7 @@ uint32_t GetClockFreq (uint32_t clk_src) {
   uint32_t mul        =  1;
   uint32_t div        =  1;
   uint32_t main_freq  =  0;
-  int32_t  clk_sel    = clk_src;
+  int32_t  clk_sel    = (int32_t) clk_src;
 
   do {
     switch (clk_sel) {
@@ -882,7 +888,7 @@ uint32_t GetClockFreq (uint32_t clk_src) {
         return (0);                     /* Clock not running or not supported */
     }
     if (main_freq == 0) {
-      clk_sel = GetClkSel (clk_sel);
+      clk_sel = GetClkSel ( (uint32_t) clk_sel);
     }
   }
   while (main_freq == 0);

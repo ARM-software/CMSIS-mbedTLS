@@ -22,8 +22,8 @@
  * memory footprint.
  */
 
-#ifndef MBEDCRYPTO_CONFIG_H
-#define MBEDCRYPTO_CONFIG_H
+#ifndef MBEDTLS_CRYPTO_CONFIG_H
+#define MBEDTLS_CRYPTO_CONFIG_H
 
 /*
  * CBC-MAC is not yet supported via the PSA API in Mbed TLS.
@@ -101,4 +101,4 @@
 #define PSA_WANT_KEY_TYPE_RSA_KEY_PAIR          1
 #define PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY        1
 
-#endif /* MBEDCRYPTO_CONFIG_H */
+#endif /* MBEDTLS_CRYPTO_CONFIG_H */
