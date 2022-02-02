@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
  *
- *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2022, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -87,11 +87,7 @@ void mbedtls_net_init (mbedtls_net_context *ctx) {
  * Initiate a TCP connection with host:port and the given protocol
  */
 int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char *port, int proto) {
-#if defined(RTE_Network_IPv6)
-  SOCKADDR_IN6 host_addr;
-#else
-  SOCKADDR_IN  host_addr;
-#endif
+  SOCKADDR_STORAGE host_addr;
   NET_ADDR  addr;
   netStatus stat;
   int32_t ret, addrlen;
@@ -151,11 +147,7 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
  * Create a listening socket on bind_ip:port
  */
 int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char *port, int proto) {
-#if defined(RTE_Network_IPv6)
-  SOCKADDR_IN6 host_addr;
-#else
-  SOCKADDR_IN  host_addr;
-#endif
+  SOCKADDR_STORAGE host_addr;
   uint16_t port_nr;
   int32_t ret, addrlen;
 
@@ -225,11 +217,7 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
 int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
                         mbedtls_net_context *client_ctx,
                         void *client_ip, size_t buf_size, size_t *ip_len) {
-#if defined(RTE_Network_IPv6)
-  SOCKADDR_IN6 client_addr;
-#else
-  SOCKADDR_IN  client_addr;
-#endif
+  SOCKADDR_STORAGE client_addr;
   int32_t type, type_len = sizeof (type);
   int32_t ret, n = sizeof(client_addr);
 
