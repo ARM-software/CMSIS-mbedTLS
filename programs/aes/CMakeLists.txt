@@ -1,11 +1,10 @@
 set(executables
-    aescrypt2
     crypt_and_hash
 )
 
 foreach(exe IN LISTS executables)
     add_executable(${exe} ${exe}.c $<TARGET_OBJECTS:mbedtls_test>)
-    target_link_libraries(${exe} mbedcrypto)
+    target_link_libraries(${exe} ${mbedcrypto_target})
 endforeach()
 
 install(TARGETS ${executables}

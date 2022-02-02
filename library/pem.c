@@ -343,7 +343,7 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
     ret = mbedtls_base64_decode( NULL, 0, &len, s1, s2 - s1 );
 
     if( ret == MBEDTLS_ERR_BASE64_INVALID_CHARACTER )
-        return( MBEDTLS_ERR_PEM_INVALID_DATA + ret );
+        return( MBEDTLS_ERROR_ADD( MBEDTLS_ERR_PEM_INVALID_DATA, ret ) );
 
     if( ( buf = mbedtls_calloc( 1, len ) ) == NULL )
         return( MBEDTLS_ERR_PEM_ALLOC_FAILED );
@@ -352,7 +352,7 @@ int mbedtls_pem_read_buffer( mbedtls_pem_context *ctx, const char *header, const
     {
         mbedtls_platform_zeroize( buf, len );
         mbedtls_free( buf );
-        return( MBEDTLS_ERR_PEM_INVALID_DATA + ret );
+        return( MBEDTLS_ERROR_ADD( MBEDTLS_ERR_PEM_INVALID_DATA, ret ) );
     }
 
     if( enc != 0 )
@@ -478,8 +478,12 @@ int mbedtls_pem_write_buffer( const char *header, const char *footer,
     *p++ = '\0';
     *olen = p - buf;
 
+     /* Clean any remaining data previously written to the buffer */
+    memset( buf + *olen, 0, buf_len - *olen );
+
     mbedtls_free( encode_buf );
     return( 0 );
 }
 #endif /* MBEDTLS_PEM_WRITE_C */
 #endif /* MBEDTLS_PEM_PARSE_C || MBEDTLS_PEM_WRITE_C */
+

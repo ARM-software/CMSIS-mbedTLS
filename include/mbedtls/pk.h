@@ -52,23 +52,38 @@
 #define inline __inline
 #endif
 
-#define MBEDTLS_ERR_PK_ALLOC_FAILED        -0x3F80  /**< Memory allocation failed. */
-#define MBEDTLS_ERR_PK_TYPE_MISMATCH       -0x3F00  /**< Type mismatch, eg attempt to encrypt with an ECDSA key */
-#define MBEDTLS_ERR_PK_BAD_INPUT_DATA      -0x3E80  /**< Bad input parameters to function. */
-#define MBEDTLS_ERR_PK_FILE_IO_ERROR       -0x3E00  /**< Read/write of file failed. */
-#define MBEDTLS_ERR_PK_KEY_INVALID_VERSION -0x3D80  /**< Unsupported key version */
-#define MBEDTLS_ERR_PK_KEY_INVALID_FORMAT  -0x3D00  /**< Invalid key tag or value. */
-#define MBEDTLS_ERR_PK_UNKNOWN_PK_ALG      -0x3C80  /**< Key algorithm is unsupported (only RSA and EC are supported). */
-#define MBEDTLS_ERR_PK_PASSWORD_REQUIRED   -0x3C00  /**< Private key password can't be empty. */
-#define MBEDTLS_ERR_PK_PASSWORD_MISMATCH   -0x3B80  /**< Given private key password does not allow for correct decryption. */
-#define MBEDTLS_ERR_PK_INVALID_PUBKEY      -0x3B00  /**< The pubkey tag or value is invalid (only RSA and EC are supported). */
-#define MBEDTLS_ERR_PK_INVALID_ALG         -0x3A80  /**< The algorithm tag or value is invalid. */
-#define MBEDTLS_ERR_PK_UNKNOWN_NAMED_CURVE -0x3A00  /**< Elliptic curve is unsupported (only NIST curves are supported). */
-#define MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE -0x3980  /**< Unavailable feature, e.g. RSA disabled for RSA key. */
-#define MBEDTLS_ERR_PK_SIG_LEN_MISMATCH    -0x3900  /**< The buffer contains a valid signature followed by more data. */
+/** Memory allocation failed. */
+#define MBEDTLS_ERR_PK_ALLOC_FAILED        -0x3F80
+/** Type mismatch, eg attempt to encrypt with an ECDSA key */
+#define MBEDTLS_ERR_PK_TYPE_MISMATCH       -0x3F00
+/** Bad input parameters to function. */
+#define MBEDTLS_ERR_PK_BAD_INPUT_DATA      -0x3E80
+/** Read/write of file failed. */
+#define MBEDTLS_ERR_PK_FILE_IO_ERROR       -0x3E00
+/** Unsupported key version */
+#define MBEDTLS_ERR_PK_KEY_INVALID_VERSION -0x3D80
+/** Invalid key tag or value. */
+#define MBEDTLS_ERR_PK_KEY_INVALID_FORMAT  -0x3D00
+/** Key algorithm is unsupported (only RSA and EC are supported). */
+#define MBEDTLS_ERR_PK_UNKNOWN_PK_ALG      -0x3C80
+/** Private key password can't be empty. */
+#define MBEDTLS_ERR_PK_PASSWORD_REQUIRED   -0x3C00
+/** Given private key password does not allow for correct decryption. */
+#define MBEDTLS_ERR_PK_PASSWORD_MISMATCH   -0x3B80
+/** The pubkey tag or value is invalid (only RSA and EC are supported). */
+#define MBEDTLS_ERR_PK_INVALID_PUBKEY      -0x3B00
+/** The algorithm tag or value is invalid. */
+#define MBEDTLS_ERR_PK_INVALID_ALG         -0x3A80
+/** Elliptic curve is unsupported (only NIST curves are supported). */
+#define MBEDTLS_ERR_PK_UNKNOWN_NAMED_CURVE -0x3A00
+/** Unavailable feature, e.g. RSA disabled for RSA key. */
+#define MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE -0x3980
+/** The buffer contains a valid signature followed by more data. */
+#define MBEDTLS_ERR_PK_SIG_LEN_MISMATCH    -0x3900
 
 /* MBEDTLS_ERR_PK_HW_ACCEL_FAILED is deprecated and should not be used. */
-#define MBEDTLS_ERR_PK_HW_ACCEL_FAILED     -0x3880  /**< PK hardware accelerator failed. */
+/** PK hardware accelerator failed. */
+#define MBEDTLS_ERR_PK_HW_ACCEL_FAILED     -0x3880
 
 #ifdef __cplusplus
 extern "C" {
@@ -331,12 +346,13 @@ int mbedtls_pk_setup( mbedtls_pk_context *ctx, const mbedtls_pk_info_t *info );
  *
  * \return          \c 0 on success.
  * \return          #MBEDTLS_ERR_PK_BAD_INPUT_DATA on invalid input
- *                  (context already used, invalid key handle).
+ *                  (context already used, invalid key identifier).
  * \return          #MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE if the key is not an
  *                  ECC key pair.
  * \return          #MBEDTLS_ERR_PK_ALLOC_FAILED on allocation failure.
  */
-int mbedtls_pk_setup_opaque( mbedtls_pk_context *ctx, const psa_key_handle_t key );
+int mbedtls_pk_setup_opaque( mbedtls_pk_context *ctx,
+                             const psa_key_id_t key );
 #endif /* MBEDTLS_USE_PSA_CRYPTO */
 
 #if defined(MBEDTLS_PK_RSA_ALT_SUPPORT)
@@ -858,9 +874,9 @@ int mbedtls_pk_load_file( const char *path, unsigned char **buf, size_t *n );
  *
  * \param pk        Input: the EC key to import to a PSA key.
  *                  Output: a PK context wrapping that PSA key.
- * \param handle    Output: a PSA key handle.
+ * \param key       Output: a PSA key identifier.
  *                  It's the caller's responsibility to call
- *                  psa_destroy_key() on that handle after calling
+ *                  psa_destroy_key() on that key identifier after calling
  *                  mbedtls_pk_free() on the PK context.
  * \param hash_alg  The hash algorithm to allow for use with that key.
  *
@@ -868,7 +884,7 @@ int mbedtls_pk_load_file( const char *path, unsigned char **buf, size_t *n );
  * \return          An Mbed TLS error code otherwise.
  */
 int mbedtls_pk_wrap_as_opaque( mbedtls_pk_context *pk,
-                               psa_key_handle_t *handle,
+                               psa_key_id_t *key,
                                psa_algorithm_t hash_alg );
 #endif /* MBEDTLS_USE_PSA_CRYPTO */
 

@@ -67,7 +67,7 @@ else
 fi
 
 # default values for options
-MODES="tls1 tls1_1 tls1_2 dtls1 dtls1_2"
+MODES="tls1 tls1_1 tls12 dtls1 dtls12"
 VERIFIES="NO YES"
 TYPES="ECDSA RSA PSK"
 FILTER=""
@@ -90,12 +90,12 @@ PEERS="OpenSSL$PEER_GNUTLS mbedTLS"
 print_usage() {
     echo "Usage: $0"
     printf "  -h|--help\tPrint this help.\n"
-    printf "  -f|--filter\tOnly matching ciphersuites are tested (Default: '$FILTER')\n"
-    printf "  -e|--exclude\tMatching ciphersuites are excluded (Default: '$EXCLUDE')\n"
-    printf "  -m|--modes\tWhich modes to perform (Default: '$MODES')\n"
-    printf "  -t|--types\tWhich key exchange type to perform (Default: '$TYPES')\n"
-    printf "  -V|--verify\tWhich verification modes to perform (Default: '$VERIFIES')\n"
-    printf "  -p|--peers\tWhich peers to use (Default: '$PEERS')\n"
+    printf "  -f|--filter\tOnly matching ciphersuites are tested (Default: '%s')\n" "$FILTER"
+    printf "  -e|--exclude\tMatching ciphersuites are excluded (Default: '%s')\n" "$EXCLUDE"
+    printf "  -m|--modes\tWhich modes to perform (Default: '%s')\n" "$MODES"
+    printf "  -t|--types\tWhich key exchange type to perform (Default: '%s')\n" "$TYPES"
+    printf "  -V|--verify\tWhich verification modes to perform (Default: '%s')\n" "$VERIFIES"
+    printf "  -p|--peers\tWhich peers to use (Default: '%s')\n" "$PEERS"
     printf "            \tAlso available: GnuTLS (needs v3.2.15 or higher)\n"
     printf "  -M|--memcheck\tCheck memory leaks and errors.\n"
     printf "  -v|--verbose\tSet verbose output.\n"
@@ -156,7 +156,7 @@ log() {
 # is_dtls <mode>
 is_dtls()
 {
-    test "$1" = "dtls1" -o "$1" = "dtls1_2"
+    test "$1" = "dtls1" -o "$1" = "dtls12"
 }
 
 # minor_ver <mode>
@@ -172,7 +172,7 @@ minor_ver()
         tls1_1|dtls1)
             echo 2
             ;;
-        tls1_2|dtls1_2)
+        tls12|dtls12)
             echo 3
             ;;
         *)
@@ -881,14 +881,14 @@ setup_arguments()
         "tls1_1")
             G_PRIO_MODE="+VERS-TLS1.1"
             ;;
-        "tls1_2")
+        "tls12")
             G_PRIO_MODE="+VERS-TLS1.2"
             ;;
         "dtls1")
             G_PRIO_MODE="+VERS-DTLS1.0"
             G_MODE="-u"
             ;;
-        "dtls1_2")
+        "dtls12")
             G_PRIO_MODE="+VERS-DTLS1.2"
             G_MODE="-u"
             ;;
@@ -905,9 +905,22 @@ setup_arguments()
     fi
 
     M_SERVER_ARGS="server_port=$PORT server_addr=0.0.0.0 force_version=$MODE arc4=1"
-    O_SERVER_ARGS="-accept $PORT -cipher NULL,ALL -$MODE -dhparam data_files/dhparams.pem"
+    O_SERVER_ARGS="-accept $PORT -cipher NULL,ALL -$MODE"
     G_SERVER_ARGS="-p $PORT --http $G_MODE"
     G_SERVER_PRIO="NORMAL:${G_PRIO_CCM}+ARCFOUR-128:+NULL:+MD5:+PSK:+DHE-PSK:+ECDHE-PSK:+SHA256:+SHA384:+RSA-PSK:-VERS-TLS-ALL:$G_PRIO_MODE"
+
+    # The default prime for `openssl s_server` depends on the version:
+    # * OpenSSL <= 1.0.2a: 512-bit
+    # * OpenSSL 1.0.2b to 1.1.1b: 1024-bit
+    # * OpenSSL >= 1.1.1c: 2048-bit
+    # Mbed TLS wants >=1024, so force that for older versions. Don't force
+    # it for newer versions, which reject a 1024-bit prime. Indifferently
+    # force it or not for intermediate versions.
+    case $($OPENSSL_CMD version) in
+        "OpenSSL 1.0"*)
+            O_SERVER_ARGS="$O_SERVER_ARGS -dhparam data_files/dhparams.pem"
+            ;;
+    esac
 
     # with OpenSSL 1.0.1h, -www, -WWW and -HTTP break DTLS handshakes
     if is_dtls "$MODE"; then
@@ -1107,7 +1120,7 @@ run_client() {
     VERIF=$(echo $VERIFY | tr '[:upper:]' '[:lower:]')
     TITLE="`echo $1 | head -c1`->`echo $SERVER_NAME | head -c1`"
     TITLE="$TITLE $MODE,$VERIF $2"
-    printf "$TITLE "
+    printf "%s " "$TITLE"
     LEN=$(( 72 - `echo "$TITLE" | wc -c` ))
     for i in `seq 1 $LEN`; do printf '.'; done; printf ' '
 

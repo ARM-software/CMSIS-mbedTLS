@@ -19,18 +19,20 @@
 
 #include "common.h"
 
-#include <string.h>
+#include "mbedtls/error.h"
+
+#if defined(MBEDTLS_ERROR_C) || defined(MBEDTLS_ERROR_STRERROR_DUMMY)
+
+#if defined(MBEDTLS_ERROR_C)
 
 #if defined(MBEDTLS_PLATFORM_C)
 #include "mbedtls/platform.h"
 #else
 #define mbedtls_snprintf snprintf
-#define mbedtls_time_t   time_t
 #endif
 
-#if defined(MBEDTLS_ERROR_C)
-
 #include <stdio.h>
+#include <string.h>
 
 #if defined(MBEDTLS_AES_C)
 #include "mbedtls/aes.h"
@@ -958,8 +960,6 @@ void mbedtls_strerror( int ret, char *buf, size_t buflen )
 
 #else /* MBEDTLS_ERROR_C */
 
-#if defined(MBEDTLS_ERROR_STRERROR_DUMMY)
-
 /*
  * Provide an non-function in case MBEDTLS_ERROR_C is not defined
  */
@@ -971,6 +971,10 @@ void mbedtls_strerror( int ret, char *buf, size_t buflen )
         buf[0] = '\0';
 }
 
-#endif /* MBEDTLS_ERROR_STRERROR_DUMMY */
-
 #endif /* MBEDTLS_ERROR_C */
+
+#if defined(MBEDTLS_TEST_HOOKS)
+void (*mbedtls_test_hook_error_add)( int, int, const char *, int );
+#endif
+
+#endif /* MBEDTLS_ERROR_C || MBEDTLS_ERROR_STRERROR_DUMMY */

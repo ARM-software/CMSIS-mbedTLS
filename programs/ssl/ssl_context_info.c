@@ -22,14 +22,17 @@
 #else
 #include MBEDTLS_CONFIG_FILE
 #endif
+#include "mbedtls/debug.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#if !defined(MBEDTLS_X509_CRT_PARSE_C) || !defined(MBEDTLS_ERROR_C)
+#if !defined(MBEDTLS_X509_CRT_PARSE_C) || !defined(MBEDTLS_ERROR_C) || \
+    !defined(MBEDTLS_SSL_TLS_C)
 int main( void )
 {
-    printf("MBEDTLS_X509_CRT_PARSE_C and/or MBEDTLS_ERROR_C not defined.\n");
+    printf("MBEDTLS_X509_CRT_PARSE_C and/or MBEDTLS_ERROR_C and/or "
+           "MBEDTLS_SSL_TLS_C not defined.\n");
     return( 0 );
 }
 #else
@@ -162,6 +165,7 @@ void printf_dbg( const char *str, ... )
     }
 }
 
+MBEDTLS_PRINTF_ATTRIBUTE( 1, 2 )
 void printf_err( const char *str, ... )
 {
     va_list args;
@@ -220,7 +224,13 @@ void parse_arguments( int argc, char *argv[] )
                 error_exit();
             }
 
-            if( ( b64_file = fopen( argv[i], "r" ) ) == NULL )
+            if( NULL != b64_file )
+            {
+                printf_err( "Cannot specify more than one file with -f\n" );
+                error_exit( );
+            }
+
+            if( ( b64_file = fopen( argv[i], "r" )) == NULL )
             {
                 printf_err( "Cannot find file \"%s\"\n", argv[i] );
                 error_exit();
@@ -377,13 +387,13 @@ size_t read_next_b64_code( uint8_t **b64, size_t *max_len )
     int valid_balance = 0;  /* balance between valid and invalid characters */
     size_t len = 0;
     char pad = 0;
-    char c = 0;
+    int c = 0;
 
     while( EOF != c )
     {
         char c_valid = 0;
 
-        c = (char) fgetc( b64_file );
+        c = fgetc( b64_file );
 
         if( pad > 0 )
         {
@@ -462,7 +472,8 @@ size_t read_next_b64_code( uint8_t **b64, size_t *max_len )
             }
             else if( len > *max_len )
             {
-                printf_err( "The code found is too large by %u bytes.\n", len - *max_len );
+                printf_err( "The code found is too large by %" MBEDTLS_PRINTF_SIZET " bytes.\n",
+                            len - *max_len );
                 len = pad = 0;
             }
             else if( len % 4 != 0 )

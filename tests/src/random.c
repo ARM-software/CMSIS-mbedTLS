@@ -22,9 +22,20 @@
  *  limitations under the License.
  */
 
+/*
+ * for arc4random_buf() from <stdlib.h>
+ */
+#if defined(__NetBSD__)
+#define _NETBSD_SOURCE 1
+#elif defined(__OpenBSD__)
+#define _BSD_SOURCE 1
+#endif
+
 #include <test/macros.h>
 #include <test/random.h>
 #include <string.h>
+
+#include <mbedtls/entropy.h>
 
 int mbedtls_test_rnd_std_rand( void *rng_state,
                                unsigned char *output,
@@ -82,8 +93,16 @@ int mbedtls_test_rnd_buffer_rand( void *rng_state,
     }
 
     if( len - use_len > 0 )
-        return( mbedtls_test_rnd_std_rand( NULL, output + use_len,
-                                           len - use_len ) );
+    {
+        if( info->fallback_f_rng != NULL )
+        {
+            return( info->fallback_f_rng( info->fallback_p_rng,
+                                          output + use_len,
+                                          len - use_len ) );
+        }
+        else
+            return( MBEDTLS_ERR_ENTROPY_SOURCE_FAILED );
+    }
 
     return( 0 );
 }

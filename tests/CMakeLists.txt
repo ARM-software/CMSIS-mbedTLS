@@ -1,5 +1,5 @@
 set(libs
-    mbedtls
+    ${mbedtls_target}
 )
 
 # Set the project root directory if it's not already defined, as may happen if
@@ -43,7 +43,7 @@ function(add_test_suite suite_name)
     add_custom_command(
         OUTPUT test_suite_${data_name}.c
         COMMAND ${MBEDTLS_PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_test_code.py -f ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${suite_name}.function -d ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${data_name}.data -t ${CMAKE_CURRENT_SOURCE_DIR}/suites/main_test.function -p ${CMAKE_CURRENT_SOURCE_DIR}/suites/host_test.function -s ${CMAKE_CURRENT_SOURCE_DIR}/suites --helpers-file ${CMAKE_CURRENT_SOURCE_DIR}/suites/helpers.function -o .
-        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_test_code.py mbedtls ${CMAKE_CURRENT_SOURCE_DIR}/suites/helpers.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/main_test.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/host_test.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${suite_name}.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${data_name}.data
+        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_test_code.py ${mbedtls_target} ${CMAKE_CURRENT_SOURCE_DIR}/suites/helpers.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/main_test.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/host_test.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${suite_name}.function ${CMAKE_CURRENT_SOURCE_DIR}/suites/test_suite_${data_name}.data
     )
 
     add_executable(test_suite_${data_name} test_suite_${data_name}.c $<TARGET_OBJECTS:mbedtls_test>)
@@ -66,6 +66,10 @@ endfunction(add_test_suite)
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-function")
 endif(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_CLANG)
+
+if(CMAKE_COMPILER_IS_CLANG)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wdocumentation -Wno-documentation-deprecated-sync -Wunreachable-code")
+endif(CMAKE_COMPILER_IS_CLANG)
 
 if(MSVC)
     # If a warning level has been defined, suppress all warnings for test code
@@ -130,6 +134,8 @@ add_test_suite(md)
 add_test_suite(mdx)
 add_test_suite(memory_buffer_alloc)
 add_test_suite(mpi)
+add_test_suite(mps)
+add_test_suite(net)
 add_test_suite(nist_kw)
 add_test_suite(oid)
 add_test_suite(pem)
@@ -137,19 +143,27 @@ add_test_suite(pk)
 add_test_suite(pkcs1_v15)
 add_test_suite(pkcs1_v21)
 add_test_suite(pkcs5)
+add_test_suite(pkcs12)
 add_test_suite(pkparse)
 add_test_suite(pkwrite)
 add_test_suite(poly1305)
 add_test_suite(psa_crypto)
+add_test_suite(psa_crypto_attributes)
 add_test_suite(psa_crypto_entropy)
 add_test_suite(psa_crypto_hash)
 add_test_suite(psa_crypto_init)
 add_test_suite(psa_crypto_metadata)
+add_test_suite(psa_crypto_not_supported psa_crypto_not_supported.generated)
+add_test_suite(psa_crypto_not_supported psa_crypto_not_supported.misc)
 add_test_suite(psa_crypto_persistent_key)
 add_test_suite(psa_crypto_se_driver_hal)
 add_test_suite(psa_crypto_se_driver_hal_mocks)
 add_test_suite(psa_crypto_slot_management)
+add_test_suite(psa_crypto_storage_format psa_crypto_storage_format.misc)
+add_test_suite(psa_crypto_storage_format psa_crypto_storage_format.current)
+add_test_suite(psa_crypto_storage_format psa_crypto_storage_format.v0)
 add_test_suite(psa_its)
+add_test_suite(random)
 add_test_suite(rsa)
 add_test_suite(shax)
 add_test_suite(ssl)
@@ -166,6 +180,7 @@ if (NOT ${CMAKE_CURRENT_BINARY_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
         link_to_source(seedfile)
     endif()
     link_to_source(compat.sh)
+    link_to_source(context-info.sh)
     link_to_source(data_files)
     link_to_source(scripts)
     link_to_source(ssl-opt.sh)
