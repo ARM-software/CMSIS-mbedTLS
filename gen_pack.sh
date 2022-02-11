@@ -60,7 +60,6 @@ PACK_DIRS="
   library
   MDK
   programs
-  tests/data_files
 "
 
 # Specify file names to be added to pack base directory
@@ -68,8 +67,6 @@ PACK_BASE_FILES="
   ChangeLog
   dco.txt
   LICENSE
-  scripts/config.py
-  scripts/generate_psa_constants.py
 "
 
 # Specify file names to be deleted from pack build directory
