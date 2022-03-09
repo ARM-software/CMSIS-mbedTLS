@@ -22,11 +22,13 @@ generate only the specified files.
 
 import argparse
 import os
+import posixpath
 import re
 import sys
 from typing import Callable, Dict, FrozenSet, Iterable, Iterator, List, Optional, TypeVar
 
 import scripts_path # pylint: disable=unused-import
+from mbedtls_dev import build_tree
 from mbedtls_dev import crypto_knowledge
 from mbedtls_dev import macro_collector
 from mbedtls_dev import psa_storage
@@ -712,7 +714,7 @@ class TestGenerator:
 
     def filename_for(self, basename: str) -> str:
         """The location of the data file with the specified base name."""
-        return os.path.join(self.test_suite_directory, basename + '.data')
+        return posixpath.join(self.test_suite_directory, basename + '.data')
 
     def write_test_data_file(self, basename: str,
                              test_cases: Iterable[test_case.TestCase]) -> None:
@@ -743,13 +745,23 @@ def main(args):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--list', action='store_true',
                         help='List available targets and exit')
+    parser.add_argument('--list-for-cmake', action='store_true',
+                        help='Print \';\'-separated list of available targets and exit')
+    parser.add_argument('--directory', metavar='DIR',
+                        help='Output directory (default: tests/suites)')
     parser.add_argument('targets', nargs='*', metavar='TARGET',
                         help='Target file to generate (default: all; "-": none)')
     options = parser.parse_args(args)
+    build_tree.chdir_to_root()
     generator = TestGenerator(options)
     if options.list:
         for name in sorted(generator.TARGETS):
             print(generator.filename_for(name))
+        return
+    # List in a cmake list format (i.e. ';'-separated)
+    if options.list_for_cmake:
+        print(';'.join(generator.filename_for(name)
+                       for name in sorted(generator.TARGETS)), end='')
         return
     if options.targets:
         # Allow "-" as a special case so you can run

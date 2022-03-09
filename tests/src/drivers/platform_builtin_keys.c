@@ -20,6 +20,8 @@
  *  limitations under the License.
  */
 
+#include <test/helpers.h>
+
 #include "mbedcrypto/psa/crypto.h"
 #include "mbedcrypto/psa/crypto_extra.h"
 
