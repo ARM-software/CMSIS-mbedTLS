@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK Middleware - Component ::Network:Interface
- * Copyright (c) 2004-2020 Arm Limited (or its affiliates). All rights reserved.
+ * Copyright (c) 2004-2021 Arm Limited (or its affiliates). All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    Net_Config_ETH_0.h
  * Purpose: Network Configuration for ETH Interface
- * Rev.:    V7.3.0
+ * Rev.:    V7.4.0
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -146,7 +146,7 @@
 //     </e>
 
 //     Disable ICMP Echo response
-#define ETH0_ICMP_NO_ECHO       0 
+#define ETH0_ICMP_NO_ECHO       0
 //   </e>
 
 //   <e>IPv6
@@ -179,6 +179,18 @@
 //     <i>Secondary DNS Server IPv6 Address in text representation
 //     <i>Default: "2001:4860:4860::8844"
 #define ETH0_IP6_SECONDARY_DNS  "2001:4860:4860::8844"
+
+//     <e>IPv6 Fragmentation
+//     <i>This option enables fragmentation of outgoing IPv6 datagrams,
+//     <i>and reassembling the fragments of incoming IPv6 datagrams.
+//     <i>Default: enabled
+#define ETH0_IP6_FRAG_ENABLE    1
+
+//       <o>MTU size <1280-1500>
+//       <i>Maximum Transmission Unit in bytes
+//       <i>Default: 1500
+#define ETH0_IP6_MTU            1500
+//     </e>
 
 //     <h>Neighbor Discovery
 //     <i>Neighbor cache and node address resolver settings
@@ -235,7 +247,7 @@
 //     </e>
 
 //     Disable ICMP6 Echo response
-#define ETH0_ICMP6_NO_ECHO      0 
+#define ETH0_ICMP6_NO_ECHO      0
 //   </e>
 
 //   <h>OS Resource Settings

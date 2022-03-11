@@ -1,29 +1,22 @@
-/*
- *  Configuration template
- *
- *  Copyright (C) 2006-2022, Arm Limited, All Rights Reserved
- *  SPDX-License-Identifier: Apache-2.0
- *
- *  Licensed under the Apache License, Version 2.0 (the "License"); you may
- *  not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- *  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+/**
+ * PSA crypto configuration template
  */
 /*
- * This set of compile-time options may be used to enable
- * or disable features selectively, and reduce the global
- * memory footprint.
+ * Copyright (C) 2022, Arm Limited, All Rights Reserved
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
-#ifndef MBEDTLS_CRYPTO_CONFIG_H
-#define MBEDTLS_CRYPTO_CONFIG_H
 
 /*
  * CBC-MAC is not yet supported via the PSA API in Mbed TLS.
@@ -44,10 +37,11 @@
 #define PSA_WANT_ALG_GCM                        1
 #define PSA_WANT_ALG_HKDF                       1
 #define PSA_WANT_ALG_HMAC                       1
-#define PSA_WANT_ALG_MD2                        1
-#define PSA_WANT_ALG_MD4                        1
 #define PSA_WANT_ALG_MD5                        1
 #define PSA_WANT_ALG_OFB                        1
+/* PBKDF2-HMAC is not yet supported via the PSA API in Mbed TLS.
+ * Note: when adding support, also adjust include/mbedtls/config_psa.h */
+//#define PSA_WANT_ALG_PBKDF2_HMAC                1
 #define PSA_WANT_ALG_RIPEMD160                  1
 #define PSA_WANT_ALG_RSA_OAEP                   1
 #define PSA_WANT_ALG_RSA_PKCS1V15_CRYPT         1
@@ -67,12 +61,7 @@
 #define PSA_WANT_ECC_BRAINPOOL_P_R1_384         1
 #define PSA_WANT_ECC_BRAINPOOL_P_R1_512         1
 #define PSA_WANT_ECC_MONTGOMERY_255             1
-/*
- * Curve448 is not yet supported via the PSA API in Mbed TLS
- * (https://github.com/ARMmbed/mbedtls/issues/4249). Thus, do not enable it by
- * default.
- */
-//#define PSA_WANT_ECC_MONTGOMERY_448             1
+#define PSA_WANT_ECC_MONTGOMERY_448             1
 #define PSA_WANT_ECC_SECP_K1_192                1
 /*
  * SECP224K1 is buggy via the PSA API in Mbed TLS
@@ -90,7 +79,6 @@
 #define PSA_WANT_KEY_TYPE_DERIVE                1
 #define PSA_WANT_KEY_TYPE_HMAC                  1
 #define PSA_WANT_KEY_TYPE_AES                   1
-#define PSA_WANT_KEY_TYPE_ARC4                  1
 #define PSA_WANT_KEY_TYPE_ARIA                  1
 #define PSA_WANT_KEY_TYPE_CAMELLIA              1
 #define PSA_WANT_KEY_TYPE_CHACHA20              1
@@ -100,5 +88,3 @@
 #define PSA_WANT_KEY_TYPE_RAW_DATA              1
 #define PSA_WANT_KEY_TYPE_RSA_KEY_PAIR          1
 #define PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY        1
-
-#endif /* MBEDTLS_CRYPTO_CONFIG_H */
