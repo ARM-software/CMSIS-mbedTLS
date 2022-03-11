@@ -17,16 +17,11 @@
  *  limitations under the License.
  */
 
-#if !defined(MBEDTLS_CONFIG_FILE)
- #include "mbedtls/config.h"
-#else
- #include MBEDTLS_CONFIG_FILE
-#endif
+#include "mbedtls/build_info.h"
 
 #if defined(MBEDTLS_ENTROPY_HARDWARE_ALT)
 
 #include <string.h>
-#include "mbedtls/entropy_poll.h"
 #include "cmsis_compiler.h"
 #include "RTE_Components.h"
 #if defined(RTE_CMSIS_RTOS)
@@ -37,11 +32,15 @@
  #error "::CMSIS:RTOS selection invalid"
 #endif
 
+int mbedtls_hardware_poll(void *data,
+                          unsigned char *output, size_t len, size_t *olen);
+
 /**
  * Entropy poll callback for a hardware source
  */
 __WEAK int mbedtls_hardware_poll (void *data, unsigned char *output,
                                   size_t len, size_t *olen) {
+  (void)data;
   uint32_t timer;
 
   if (len < sizeof(uint32_t)) {
