@@ -2,7 +2,7 @@
 # Generate documentation
 
 # Configuration header
-CONFIG_H='include/mbedtls/config.h'
+CONFIG_H='include/mbedtls/mbedtls_config.h'
 
 # Backup configuration
 CONFIG_BAK=${CONFIG_H}.bak
