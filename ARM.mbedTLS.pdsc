@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>http://www.keil.com/pack/</url>
   <releases>
+    <release version="3.1.0">
+      Updated to mbedTLS V3.1.0
+    </release>
     <release version="1.8.0" date="2022-02-11">
       Updated to mbedTLS V2.28.0
     </release>
@@ -82,11 +85,11 @@
     </condition>
     <condition id="mbed TLS">
       <description>mbed TLS component</description>
-      <require Cclass="Security" Cgroup="mbed TLS" Cversion="2.28.0"/>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.1.0"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="2.28.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.1.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -94,20 +97,18 @@
       <files>
         <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
-        <file category="header"  name="configs/mbedTLS_config.h"        attr="config" version="2.28.0"/>
-        <file category="header"  name="configs/mbedTLS_crypto_config.h" attr="config" version="2.28.0"/>
+        <file category="include" name="RTE/include/"/>
+        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.1.0"/>
+        <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.1.0"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesni.c"/> -->
-        <file category="source"  name="library/arc4.c"/>
         <file category="source"  name="library/aria.c"/>
         <file category="source"  name="library/asn1parse.c"/>
         <file category="source"  name="library/asn1write.c"/>
         <file category="source"  name="library/base64.c"/>
         <file category="source"  name="library/bignum.c"/>
-        <file category="source"  name="library/blowfish.c"/>
         <file category="source"  name="library/camellia.c"/>
         <file category="source"  name="library/ccm.c"/>
-        <file category="source"  name="library/certs.c"/>
         <file category="source"  name="library/chacha20.c"/>
         <file category="source"  name="library/chachapoly.c"/>
         <file category="source"  name="library/cipher.c"/>
@@ -128,12 +129,9 @@
         <file category="source"  name="MDK/library/entropy_poll_hw.c" condition="CMSIS RTOS"/>
         <file category="source"  name="library/error.c"/>
         <file category="source"  name="library/gcm.c"/>
-        <file category="source"  name="library/havege.c"/>
         <file category="source"  name="library/hkdf.c"/>
         <file category="source"  name="library/hmac_drbg.c"/>
         <file category="source"  name="library/md.c"/>
-        <file category="source"  name="library/md2.c"/>
-        <file category="source"  name="library/md4.c"/>
         <file category="source"  name="library/md5.c"/>
         <file category="source"  name="library/memory_buffer_alloc.c"/>
         <file category="source"  name="library/mps_reader.c"/>
@@ -148,7 +146,6 @@
         <file category="source"  name="library/pk.c"/>
         <file category="source"  name="library/pk_wrap.c"/>
         <file category="source"  name="library/pkcs5.c"/>
-        <file category="source"  name="library/pkcs11.c"/>
         <file category="source"  name="library/pkcs12.c"/>
         <file category="source"  name="library/pkparse.c"/>
         <file category="source"  name="library/pkwrite.c"/>
@@ -170,7 +167,7 @@
         <file category="source"  name="library/psa_its_file.c"/>
         <file category="source"  name="library/ripemd160.c"/>
         <file category="source"  name="library/rsa.c"/>
-        <file category="source"  name="library/rsa_internal.c"/>
+        <file category="source"  name="library/rsa_alt_helpers.c"/>
         <file category="source"  name="library/sha1.c"/>
         <file category="source"  name="library/sha256.c"/>
         <file category="source"  name="library/sha512.c"/>
@@ -178,11 +175,15 @@
         <file category="source"  name="library/ssl_ciphersuites.c"/>
         <file category="source"  name="library/ssl_cli.c"/>
         <file category="source"  name="library/ssl_cookie.c"/>
+        <file category="source"  name="library/ssl_debug_helpers_generated.c"/>
         <file category="source"  name="library/ssl_msg.c"/>
         <file category="source"  name="library/ssl_srv.c"/>
         <file category="source"  name="library/ssl_ticket.c"/>
         <file category="source"  name="library/ssl_tls.c"/>
+        <file category="source"  name="library/ssl_tls13_client.c"/>
+        <file category="source"  name="library/ssl_tls13_generic.c"/>
         <file category="source"  name="library/ssl_tls13_keys.c"/>
+        <file category="source"  name="library/ssl_tls13_server.c"/>
         <file category="source"  name="library/threading.c"/>
         <file category="source"  name="library/timing.c"/>
         <file category="source"  name="library/version.c"/>
@@ -194,10 +195,9 @@
         <file category="source"  name="library/x509_csr.c"/>
         <file category="source"  name="library/x509write_crt.c"/>
         <file category="source"  name="library/x509write_csr.c"/>
-        <file category="source"  name="library/xtea.c"/>
       </files>
     </component>
-    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="2.28.0" condition="mbed TLS">
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.1.0" condition="mbed TLS">
       <description>mbed TLS PSA Crypto</description>
       <RTE_Components_h>
         #define RTE_PSA_API_CRYPTO
