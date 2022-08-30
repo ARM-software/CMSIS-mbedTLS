@@ -4,9 +4,9 @@
   <name>mbedTLS</name>
   <description>ARM mbed Cryptographic and SSL/TLS library</description>
   <!-- web download link -->
-  <url>http://www.keil.com/pack/</url>
+  <url>https://www.keil.com/pack/</url>
   <releases>
-    <release version="3.1.0">
+    <release version="3.1.0" date="2022-08-30">
       Updated to mbedTLS V3.1.0
     </release>
     <release version="1.8.0" date="2022-02-11">
