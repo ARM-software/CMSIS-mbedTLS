@@ -1,0 +1,13 @@
+<map id="psa_key_derivation_s" name="psa_key_derivation_s">
+<area shape="rect" id="node2" href="$structpsa__hkdf__key__derivation__t.html" title="psa_hkdf_key_derivation_t" alt="" coords="85,631,259,657"/>
+<area shape="rect" id="node3" href="$structpsa__mac__operation__s.html" title="psa_mac_operation_s" alt="" coords="97,541,247,568"/>
+<area shape="rect" id="node4" href="$unionpsa__driver__mac__context__t.html" title="psa_driver_mac_context_t" alt="" coords="85,452,259,479"/>
+<area shape="rect" id="node5" href="$structmbedtls__psa__mac__operation__t.html" title="mbedtls_psa_mac_operation_t" alt="" coords="73,363,271,389"/>
+<area shape="rect" id="node6" href="$structmbedtls__cipher__context__t.html" title="mbedtls_cipher_context_t" alt="" coords="5,273,176,300"/>
+<area shape="rect" id="node7" href="$structmbedtls__cipher__info__t.html" title="mbedtls_cipher_info_t" alt="" coords="17,184,165,211"/>
+<area shape="rect" id="node8" href="$structmbedtls__psa__hmac__operation__t.html" title="mbedtls_psa_hmac_operation_t" alt="" coords="201,273,407,300"/>
+<area shape="rect" id="node9" href="$structpsa__hash__operation__s.html" title="psa_hash_operation_s" alt="" coords="228,184,380,211"/>
+<area shape="rect" id="node10" href="$unionpsa__driver__hash__context__t.html" title="psa_driver_hash_context_t" alt="" coords="216,95,392,121"/>
+<area shape="rect" id="node11" href="$structmbedtls__psa__hash__operation__t.html" title="mbedtls_psa_hash_operation_t" alt="" coords="203,5,405,32"/>
+<area shape="rect" id="node12" href="$structpsa__tls12__prf__key__derivation__s.html" title="psa_tls12_prf_key_derivation_s" alt="" coords="284,631,487,657"/>
+</map>

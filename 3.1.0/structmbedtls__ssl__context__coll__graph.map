@@ -1,0 +1,16 @@
+<map id="mbedtls_ssl_context" name="mbedtls_ssl_context">
+<area shape="rect" id="node2" href="$structmbedtls__ssl__config.html" title="mbedtls_ssl_config" alt="" coords="1004,393,1137,420"/>
+<area shape="rect" id="node3" href="$structmbedtls__x509__crt__profile.html" title="mbedtls_x509_crt_profile" alt="" coords="640,244,807,271"/>
+<area shape="rect" id="node4" href="$structmbedtls__x509__crl.html" title="mbedtls_x509_crl" alt="" coords="661,333,785,360"/>
+<area shape="rect" id="node5" href="$structmbedtls__x509__crl__entry.html" title="mbedtls_x509_crl_entry" alt="" coords="293,116,453,143"/>
+<area shape="rect" id="node6" href="$structmbedtls__asn1__buf.html" title="mbedtls_asn1_buf" alt="" coords="9,433,136,460"/>
+<area shape="rect" id="node8" href="$structmbedtls__asn1__named__data.html" title="mbedtls_asn1_named_data" alt="" coords="283,433,464,460"/>
+<area shape="rect" id="node9" href="$structmbedtls__x509__crt.html" title="mbedtls_x509_crt" alt="" coords="661,496,786,523"/>
+<area shape="rect" id="node10" href="$structmbedtls__asn1__sequence.html" title="mbedtls_asn1_sequence" alt="" coords="290,732,457,759"/>
+<area shape="rect" id="node7" href="$structmbedtls__x509__time.html" title="mbedtls_x509_time" alt="" coords="5,116,140,143"/>
+<area shape="rect" id="node14" href="$structmbedtls__ssl__session.html" title="mbedtls_ssl_session" alt="" coords="999,499,1143,525"/>
+<area shape="rect" id="node11" href="$structmbedtls__pk__context.html" title="Public key container. " alt="" coords="304,783,443,809"/>
+<area shape="rect" id="node12" href="$structmbedtls__mpi.html" title="MPI structure. " alt="" coords="675,393,771,420"/>
+<area shape="rect" id="node13" href="$structmbedtls__dtls__srtp__info__t.html" title="mbedtls_dtls_srtp_info_t" alt="" coords="989,549,1152,576"/>
+<area shape="rect" id="node15" href="$structmbedtls__ssl__tls13__application__secrets.html" title="mbedtls_ssl_tls13_application\l_secrets" alt="" coords="625,547,821,589"/>
+</map>

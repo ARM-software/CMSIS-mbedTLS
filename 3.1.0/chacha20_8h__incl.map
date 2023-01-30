@@ -1,0 +1,8 @@
+<map id="chacha20.h" name="chacha20.h">
+<area shape="rect" id="node2" href="$private__access_8h.html" title="Macro wrapper for struct&#39;s memebrs. " alt="" coords="11,80,181,107"/>
+<area shape="rect" id="node3" href="$build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="205,80,342,107"/>
+<area shape="rect" id="node4" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="5,155,176,181"/>
+<area shape="rect" id="node5" href="$config__psa_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="201,155,346,181"/>
+<area shape="rect" id="node7" href="$check__config_8h.html" title="Consistency checks for configuration options. " alt="" coords="370,155,529,181"/>
+<area shape="rect" id="node6" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="196,229,351,271"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="platform_util.h" name="platform_util.h">
+<area shape="rect" id="node2" href="$build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="205,155,342,181"/>
+<area shape="rect" id="node9" href="$platform__time_8h.html" title="mbed TLS Platform time abstraction " alt="" coords="359,80,521,107"/>
+<area shape="rect" id="node3" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="5,229,176,256"/>
+<area shape="rect" id="node4" href="$config__psa_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="201,229,346,256"/>
+<area shape="rect" id="node6" href="$check__config_8h.html" title="Consistency checks for configuration options. " alt="" coords="370,229,529,256"/>
+<area shape="rect" id="node5" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="196,304,351,345"/>
+</map>

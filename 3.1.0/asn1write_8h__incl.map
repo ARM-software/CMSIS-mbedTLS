@@ -1,0 +1,10 @@
+<map id="asn1write.h" name="asn1write.h">
+<area shape="rect" id="node2" href="$build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="205,229,342,256"/>
+<area shape="rect" id="node8" href="$asn1_8h.html" title="Generic ASN.1 parsing. " alt="" coords="395,80,506,107"/>
+<area shape="rect" id="node3" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="5,304,176,331"/>
+<area shape="rect" id="node4" href="$config__psa_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="201,304,346,331"/>
+<area shape="rect" id="node6" href="$check__config_8h.html" title="Consistency checks for configuration options. " alt="" coords="370,304,529,331"/>
+<area shape="rect" id="node5" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="196,379,351,420"/>
+<area shape="rect" id="node9" href="$private__access_8h.html" title="Macro wrapper for struct&#39;s memebrs. " alt="" coords="366,229,535,256"/>
+<area shape="rect" id="node11" href="$bignum_8h.html" title="Multi&#45;precision integer library. " alt="" coords="508,155,633,181"/>
+</map>

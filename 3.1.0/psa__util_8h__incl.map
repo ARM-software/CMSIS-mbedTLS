@@ -1,0 +1,44 @@
+<map id="psa_util.h" name="psa_util.h">
+<area shape="rect" id="node2" href="$private__access_8h.html" title="Macro wrapper for struct&#39;s memebrs. " alt="" coords="1713,767,1883,793"/>
+<area shape="rect" id="node3" href="$build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="2149,841,2287,868"/>
+<area shape="rect" id="node9" href="$crypto_8h.html" title="Platform Security Architecture cryptography module. " alt="" coords="1907,229,2001,256"/>
+<area shape="rect" id="node49" href="$ecp_8h.html" title="This file provides an API for Elliptic Curves over GF(P) (ECP). " alt="" coords="1137,617,1241,644"/>
+<area shape="rect" id="node53" href="$md_8h.html" title="This file contains the generic message&#45;digest wrapper. " alt="" coords="713,617,814,644"/>
+<area shape="rect" id="node54" href="$pk_8h.html" title="Public Key abstraction layer. " alt="" coords="1140,155,1237,181"/>
+<area shape="rect" id="node62" href="$oid_8h.html" title="Object Identifier (OID) database. " alt="" coords="1532,80,1632,107"/>
+<area shape="rect" id="node64" href="$error_8h.html" title="Error to string translation. " alt="" coords="4111,692,4221,719"/>
+<area shape="rect" id="node4" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="2038,916,2209,943"/>
+<area shape="rect" id="node5" href="$config__psa_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="1368,916,1513,943"/>
+<area shape="rect" id="node7" href="$check__config_8h.html" title="Consistency checks for configuration options. " alt="" coords="2233,916,2392,943"/>
+<area shape="rect" id="node6" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="1363,991,1518,1032"/>
+<area shape="rect" id="node10" href="$crypto__platform_8h.html" title="PSA cryptography module: Mbed TLS platform definitions. " alt="" coords="1105,692,1227,719"/>
+<area shape="rect" id="node14" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="1900,617,2008,644"/>
+<area shape="rect" id="node15" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="2257,617,2369,644"/>
+<area shape="rect" id="node16" href="$crypto__sizes_8h.html" title="PSA cryptography module: Mbed TLS buffer size macros. " alt="" coords="3838,617,3945,644"/>
+<area shape="rect" id="node17" href="$crypto__struct_8h.html" title="PSA cryptography module: Mbed TLS structured type implementations. " alt="" coords="2773,304,2882,331"/>
+<area shape="rect" id="node47" href="$crypto__extra_8h.html" title="PSA cryptography module: Mbed TLS vendor extensions. " alt="" coords="1747,543,1852,569"/>
+<area shape="rect" id="node18" href="$cmac_8h.html" title="This file contains CMAC definitions and functions. " alt="" coords="3539,543,3654,569"/>
+<area shape="rect" id="node24" href="$gcm_8h.html" title="This file contains GCM definitions and functions. " alt="" coords="3121,543,3229,569"/>
+<area shape="rect" id="node26" href="$ccm_8h.html" title="This file provides an API for the CCM authenticated encryption mode for block ciphers. " alt="" coords="3407,543,3515,569"/>
+<area shape="rect" id="node28" href="$chachapoly_8h.html" title="This file contains the AEAD&#45;ChaCha20&#45;Poly1305 definitions and functions. " alt="" coords="2083,617,2233,644"/>
+<area shape="rect" id="node32" href="$crypto__driver__contexts__primitives_8h.html" title="crypto_driver_contexts\l_primitives.h" alt="" coords="2751,379,2903,420"/>
+<area shape="rect" id="node45" href="$crypto__driver__contexts__composites_8h.html" title="crypto_driver_contexts\l_composites.h" alt="" coords="2538,379,2690,420"/>
+<area shape="rect" id="node19" href="$cipher_8h.html" title="This file contains an abstraction interface for use with the cipher primitives provided by the librar..." alt="" coords="3276,617,3395,644"/>
+<area shape="rect" id="node20" href="$platform__util_8h.html" title="Common and shared functions used by multiple modules in the Mbed TLS library. " alt="" coords="313,692,467,719"/>
+<area shape="rect" id="node21" href="$platform__time_8h.html" title="mbed TLS Platform time abstraction " alt="" coords="25,767,187,793"/>
+<area shape="rect" id="node29" href="$poly1305_8h.html" title="This file contains Poly1305 definitions and functions. " alt="" coords="2457,692,2592,719"/>
+<area shape="rect" id="node33" href="$crypto__driver__common_8h.html" title="Definitions for all PSA crypto drivers. " alt="" coords="2443,543,2606,569"/>
+<area shape="rect" id="node34" href="$crypto__builtin__primitives_8h.html" title="crypto_builtin_primitives.h" alt="" coords="2781,468,2951,495"/>
+<area shape="rect" id="node35" href="$md5_8h.html" title="MD5 message digest algorithm (hash function) " alt="" coords="3068,692,3176,719"/>
+<area shape="rect" id="node37" href="$ripemd160_8h.html" title="RIPE MD&#45;160 message digest. " alt="" coords="3353,692,3496,719"/>
+<area shape="rect" id="node39" href="$sha1_8h.html" title="This file contains SHA&#45;1 definitions and functions. " alt="" coords="3520,692,3631,719"/>
+<area shape="rect" id="node41" href="$sha256_8h.html" title="This file contains SHA&#45;224 and SHA&#45;256 definitions and functions. " alt="" coords="2617,692,2742,719"/>
+<area shape="rect" id="node43" href="$sha512_8h.html" title="This file contains SHA&#45;384 and SHA&#45;512 definitions and functions. " alt="" coords="2918,692,3043,719"/>
+<area shape="rect" id="node46" href="$crypto__builtin__composites_8h.html" title="crypto_builtin_composites.h" alt="" coords="2522,468,2706,495"/>
+<area shape="rect" id="node48" href="$crypto__compat_8h.html" title="PSA cryptography module: Backward compatibility aliases. " alt="" coords="1705,617,1824,644"/>
+<area shape="rect" id="node50" href="$bignum_8h.html" title="Multi&#45;precision integer library. " alt="" coords="1302,692,1427,719"/>
+<area shape="rect" id="node55" href="$rsa_8h.html" title="This file provides an API for the RSA public&#45;key cryptosystem. " alt="" coords="1046,543,1147,569"/>
+<area shape="rect" id="node61" href="$ecdsa_8h.html" title="This file contains ECDSA definitions and functions. " alt="" coords="903,543,1021,569"/>
+<area shape="rect" id="node56" href="$threading_8h.html" title="Threading abstraction layer. " alt="" coords="542,692,678,719"/>
+<area shape="rect" id="node63" href="$asn1_8h.html" title="Generic ASN.1 parsing. " alt="" coords="1519,617,1629,644"/>
+</map>
