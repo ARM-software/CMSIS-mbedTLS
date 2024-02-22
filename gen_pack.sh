@@ -199,7 +199,6 @@ fi
   -i "${CMSIS_PACK_ROOT}/.Web/ARM.PSA.pdsc" \
   -i "${CMSIS_PACK_ROOT}/.Web/Keil.LPC1800_DFP.pdsc" \
   -i "${CMSIS_PACK_ROOT}/.Web/Keil.LPC4300_DFP.pdsc" \
-  -x M396 \
   -n PackName.txt
 errorlevel=$?
 if [ $errorlevel -ne 0 ]; then
