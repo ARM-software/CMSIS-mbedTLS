@@ -6,6 +6,9 @@
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
+    <release version="3.1.1" date="2024-02-22">
+      Removed dependency on CMSIS:CORE version
+    </release>
     <release version="3.1.0" date="2022-08-30">
       Updated to mbedTLS V3.1.0
     </release>
@@ -65,7 +68,7 @@
   <conditions>
     <condition id="CMSIS RTOS">
       <description>CMSIS RTOS (API1 or API2)</description>
-      <require Cclass="CMSIS" Cgroup="CORE" Cversion="5.0.1"/>
+      <require Cclass="CMSIS" Cgroup="CORE"/>
       <accept  Cclass="CMSIS" Cgroup="RTOS"/>
       <accept  Cclass="CMSIS" Cgroup="RTOS2"/>
     </condition>
