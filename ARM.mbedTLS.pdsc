@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package schemaVersion="1.6.3" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+<package schemaVersion="1.7.27" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.27/schema/PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
   <description>ARM mbed Cryptographic and SSL/TLS library</description>
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
+    <release version="3.6.0">
+      Updated to mbedTLS V3.6.0
+    </release>
     <release version="3.1.1" date="2024-02-22">
       Removed dependency on CMSIS:CORE version
     </release>
@@ -67,32 +70,33 @@
   </requirements>
   <conditions>
     <condition id="CMSIS RTOS">
-      <description>CMSIS RTOS (API1 or API2)</description>
+      <description>CMSIS RTOS (API2)</description>
       <require Cclass="CMSIS" Cgroup="CORE"/>
-      <accept  Cclass="CMSIS" Cgroup="RTOS"/>
-      <accept  Cclass="CMSIS" Cgroup="RTOS2"/>
+      <require Cclass="CMSIS" Cgroup="RTOS2"/>
     </condition>
-    <condition id="MDK-Pro Network">
-      <description>MDK-Pro Network CORE component</description>
-      <require Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE" Cversion="7.9.0"/>
+    <condition id="MDK Network">
+      <description>MDK Network (identified with CORE component)</description>
+      <accept Cbundle="MDK"        Cclass="Network" Cgroup="CORE"/>
+      <accept Cbundle="MDK-Pro"    Cclass="Network" Cgroup="CORE"/>
+      <accept Cbundle="MDK-Source" Cclass="Network" Cgroup="CORE"/>
     </condition>
     <condition id="IoT Socket">
-      <description>IoT Socket component</description>
+      <description>IoT Socket without MDK Network</description>
       <require Cclass="IoT Utility" Cgroup="Socket"/>
-      <deny Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
+      <deny condition="MDK Network"/>
     </condition>
-    <condition id="Generic Network">
-      <description>Generic Network CORE component</description>
-      <deny Cbundle="MDK-Pro" Cclass="Network" Cgroup="CORE"/>
-      <deny Cclass="IoT Utility" Cgroup="Socket"/>
+    <condition id="Default Network">
+      <description>Default Network when not using MDK Network or IoT Socket</description>
+      <deny condition="MDK Network"/>
+      <deny condition="IoT Socket"/>
     </condition>
     <condition id="mbed TLS">
       <description>mbed TLS component</description>
-      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.1.0"/>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.0"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.1.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -101,15 +105,20 @@
         <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
         <file category="include" name="RTE/include/"/>
-        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.1.0"/>
-        <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.1.0"/>
+        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.6.0"/>
+        <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.6.0"/>
         <file category="source"  name="library/aes.c"/>
+   <!-- <file category="source"  name="library/aesce.c"/> -->
    <!-- <file category="source"  name="library/aesni.c"/> -->
         <file category="source"  name="library/aria.c"/>
         <file category="source"  name="library/asn1parse.c"/>
         <file category="source"  name="library/asn1write.c"/>
         <file category="source"  name="library/base64.c"/>
         <file category="source"  name="library/bignum.c"/>
+        <file category="source"  name="library/bignum_core.c"/>
+        <file category="source"  name="library/bignum_mod.c"/>
+        <file category="source"  name="library/bignum_mod_raw.c"/>
+        <file category="source"  name="library/block_cipher.c"/>
         <file category="source"  name="library/camellia.c"/>
         <file category="source"  name="library/ccm.c"/>
         <file category="source"  name="library/chacha20.c"/>
@@ -127,6 +136,7 @@
         <file category="source"  name="library/ecjpake.c"/>
         <file category="source"  name="library/ecp.c"/>
         <file category="source"  name="library/ecp_curves.c"/>
+        <file category="source"  name="library/ecp_curves_new.c"/>
         <file category="source"  name="library/entropy.c"/>
         <file category="source"  name="library/entropy_poll.c"/>
         <file category="source"  name="MDK/library/entropy_poll_hw.c" condition="CMSIS RTOS"/>
@@ -134,21 +144,25 @@
         <file category="source"  name="library/gcm.c"/>
         <file category="source"  name="library/hkdf.c"/>
         <file category="source"  name="library/hmac_drbg.c"/>
+        <file category="source"  name="library/lmots.c"/>
+        <file category="source"  name="library/lms.c"/>
         <file category="source"  name="library/md.c"/>
         <file category="source"  name="library/md5.c"/>
         <file category="source"  name="library/memory_buffer_alloc.c"/>
         <file category="source"  name="library/mps_reader.c"/>
         <file category="source"  name="library/mps_trace.c"/>
-        <file category="source"  name="library/net_sockets.c"                condition="Generic Network"/>
-        <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK-Pro Network"/>
+        <file category="source"  name="library/net_sockets.c"                condition="Default Network"/>
+        <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK Network"/>
         <file category="source"  name="MDK/library/iot_socket/net_sockets.c" condition="IoT Socket"/>
         <file category="source"  name="library/nist_kw.c"/>
         <file category="source"  name="library/oid.c"/>
    <!-- <file category="source"  name="library/padlock.c"/> -->
         <file category="source"  name="library/pem.c"/>
         <file category="source"  name="library/pk.c"/>
+        <file category="source"  name="library/pk_ecc.c"/>
         <file category="source"  name="library/pk_wrap.c"/>
         <file category="source"  name="library/pkcs5.c"/>
+        <file category="source"  name="library/pkcs7.c"/>
         <file category="source"  name="library/pkcs12.c"/>
         <file category="source"  name="library/pkparse.c"/>
         <file category="source"  name="library/pkwrite.c"/>
@@ -159,30 +173,35 @@
         <file category="source"  name="library/psa_crypto_aead.c"/>
         <file category="source"  name="library/psa_crypto_cipher.c"/>
         <file category="source"  name="library/psa_crypto_client.c"/>
-        <file category="source"  name="library/psa_crypto_driver_wrappers.c"/>
+        <file category="source"  name="library/psa_crypto_driver_wrappers_no_static.c"/>
         <file category="source"  name="library/psa_crypto_ecp.c"/>
+        <file category="source"  name="library/psa_crypto_ffdh.c"/>
         <file category="source"  name="library/psa_crypto_hash.c"/>
         <file category="source"  name="library/psa_crypto_mac.c"/>
+        <file category="source"  name="library/psa_crypto_pake.c"/>
         <file category="source"  name="library/psa_crypto_rsa.c"/>
         <file category="source"  name="library/psa_crypto_se.c"/>
         <file category="source"  name="library/psa_crypto_slot_management.c"/>
         <file category="source"  name="library/psa_crypto_storage.c"/>
         <file category="source"  name="library/psa_its_file.c"/>
+        <file category="source"  name="library/psa_util.c"/>
         <file category="source"  name="library/ripemd160.c"/>
         <file category="source"  name="library/rsa.c"/>
         <file category="source"  name="library/rsa_alt_helpers.c"/>
         <file category="source"  name="library/sha1.c"/>
+        <file category="source"  name="library/sha3.c"/>
         <file category="source"  name="library/sha256.c"/>
         <file category="source"  name="library/sha512.c"/>
         <file category="source"  name="library/ssl_cache.c"/>
         <file category="source"  name="library/ssl_ciphersuites.c"/>
-        <file category="source"  name="library/ssl_cli.c"/>
+        <file category="source"  name="library/ssl_client.c"/>
         <file category="source"  name="library/ssl_cookie.c"/>
         <file category="source"  name="library/ssl_debug_helpers_generated.c"/>
         <file category="source"  name="library/ssl_msg.c"/>
-        <file category="source"  name="library/ssl_srv.c"/>
         <file category="source"  name="library/ssl_ticket.c"/>
         <file category="source"  name="library/ssl_tls.c"/>
+        <file category="source"  name="library/ssl_tls12_client.c"/>
+        <file category="source"  name="library/ssl_tls12_server.c"/>
         <file category="source"  name="library/ssl_tls13_client.c"/>
         <file category="source"  name="library/ssl_tls13_generic.c"/>
         <file category="source"  name="library/ssl_tls13_keys.c"/>
@@ -196,11 +215,12 @@
         <file category="source"  name="library/x509_crl.c"/>
         <file category="source"  name="library/x509_crt.c"/>
         <file category="source"  name="library/x509_csr.c"/>
+        <file category="source"  name="library/x509write.c"/>
         <file category="source"  name="library/x509write_crt.c"/>
         <file category="source"  name="library/x509write_csr.c"/>
       </files>
     </component>
-    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.1.0" condition="mbed TLS">
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.6.0" condition="mbed TLS">
       <description>mbed TLS PSA Crypto</description>
       <RTE_Components_h>
         #define RTE_PSA_API_CRYPTO
