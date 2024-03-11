@@ -2,23 +2,11 @@
  * Configuration template
  */
 /*
- * Copyright (C) 2006-2022, Arm Limited, All Rights Reserved
- * SPDX-License-Identifier: Apache-2.0
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ *  Copyright The Mbed TLS Contributors
+ *  SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
  */
 
-#define MBEDTLS_CONFIG_VERSION 0x03010000
+#define MBEDTLS_CONFIG_VERSION 0x03060000
 
 /* System support */
 //#define MBEDTLS_HAVE_ASM
@@ -30,6 +18,8 @@
 /* mbed TLS feature support */
 //#define MBEDTLS_AES_ROM_TABLES
 //#define MBEDTLS_AES_FEWER_TABLES
+//#define MBEDTLS_AES_ONLY_128_BIT_KEY_LENGTH
+//#define MBEDTLS_BLOCK_CIPHER_NO_DECRYPT
 //#define MBEDTLS_CAMELLIA_SMALL_MEMORY
 //#define MBEDTLS_CHECK_RETURN_WARNING
 //#define MBEDTLS_CIPHER_MODE_CBC
@@ -70,6 +60,7 @@
 //#define MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED
 //#define MBEDTLS_PK_PARSE_EC_EXTENDED
 //#define MBEDTLS_ERROR_STRERROR_DUMMY
+//#define MBEDTLS_GCM_LARGE_TABLE
 //#define MBEDTLS_GENPRIME
 //#define MBEDTLS_FS_IO
 //#define MBEDTLS_NO_DEFAULT_ENTROPY_SOURCES
@@ -84,9 +75,11 @@
 //#define MBEDTLS_PKCS1_V21
 //#define MBEDTLS_PSA_CRYPTO_BUILTIN_KEYS
 //#define MBEDTLS_PSA_CRYPTO_CLIENT
-//#define MBEDTLS_PSA_CRYPTO_DRIVERS
 //#define MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG
 //#define MBEDTLS_PSA_CRYPTO_SPM
+//#define MBEDTLS_PSA_P256M_DRIVER_ENABLED
+//#define MBEDTLS_PSA_INJECT_ENTROPY
+//#define MBEDTLS_PSA_ASSUME_EXCLUSIVE_BUFFERS
 //#define MBEDTLS_RSA_NO_CRT
 //#define MBEDTLS_SELF_TEST
 //#define MBEDTLS_SHA256_SMALLER
@@ -104,6 +97,10 @@
 //#define MBEDTLS_SSL_PROTO_TLS1_2
 //#define MBEDTLS_SSL_PROTO_TLS1_3
 //#define MBEDTLS_SSL_TLS1_3_COMPATIBILITY_MODE
+//#define MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED
+//#define MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED
+//#define MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED
+//#define MBEDTLS_SSL_EARLY_DATA
 //#define MBEDTLS_SSL_PROTO_DTLS
 //#define MBEDTLS_SSL_ALPN
 //#define MBEDTLS_SSL_DTLS_ANTI_REPLAY
@@ -120,6 +117,7 @@
 //#define MBEDTLS_X509_RSASSA_PSS_SUPPORT
 
 /* mbed TLS modules */
+//#define MBEDTLS_AESCE_C
 //#define MBEDTLS_AES_C
 //#define MBEDTLS_ASN1_PARSE_C
 //#define MBEDTLS_ASN1_WRITE_C
@@ -145,6 +143,7 @@
 //#define MBEDTLS_GCM_C
 //#define MBEDTLS_HKDF_C
 //#define MBEDTLS_HMAC_DRBG_C
+//#define MBEDTLS_LMS_C
 //#define MBEDTLS_NIST_KW_C
 //#define MBEDTLS_MD_C
 //#define MBEDTLS_MD5_C
@@ -157,6 +156,7 @@
 //#define MBEDTLS_PK_PARSE_C
 //#define MBEDTLS_PK_WRITE_C
 //#define MBEDTLS_PKCS5_C
+//#define MBEDTLS_PKCS7_C
 //#define MBEDTLS_PKCS12_C
 //#define MBEDTLS_PLATFORM_C
 //#define MBEDTLS_POLY1305_C
@@ -171,6 +171,7 @@
 //#define MBEDTLS_SHA256_C
 //#define MBEDTLS_SHA384_C
 //#define MBEDTLS_SHA512_C
+//#define MBEDTLS_SHA3_C
 //#define MBEDTLS_SSL_CACHE_C
 //#define MBEDTLS_SSL_COOKIE_C
 //#define MBEDTLS_SSL_TICKET_C
