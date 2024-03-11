@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for IoT Socket
  *
- *  Copyright (C) 2006-2021, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2024, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -26,9 +26,7 @@
 #include "mbedtls/net_sockets.h"
 #include "iot_socket.h"
 #include "RTE_Components.h"
-#if defined(RTE_CMSIS_RTOS)
- #include "cmsis_os.h"
-#elif defined(RTE_CMSIS_RTOS2)
+#if defined(RTE_CMSIS_RTOS2)
  #include "cmsis_os2.h"
 #else
  #error "::CMSIS:RTOS selection invalid"

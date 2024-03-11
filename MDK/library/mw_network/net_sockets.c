@@ -1,7 +1,7 @@
 /*
  *  TCP/IP or UDP/IP networking functions for MDK-Pro Network Dual Stack
  *
- *  Copyright (C) 2006-2022, Arm Limited, All Rights Reserved
+ *  Copyright (C) 2006-2024, Arm Limited, All Rights Reserved
  *  SPDX-License-Identifier: Apache-2.0
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
@@ -21,25 +21,15 @@
 
 #if defined(MBEDTLS_NET_C)
 
-#if (defined(_WIN32) || defined(_WIN32_WCE) || defined(EFIX64) || defined(EFI32))
- #error "Wrong environment, MDK-Pro required"
-#endif
-
 #include <stdio.h>
 #include <string.h>
 #include "mbedtls/net_sockets.h"
 #include "rl_net.h"
 #include "RTE_Components.h"
-#if defined(RTE_CMSIS_RTOS)
- #include "cmsis_os.h"
-#elif defined(RTE_CMSIS_RTOS2)
+#if defined(RTE_CMSIS_RTOS2)
  #include "cmsis_os2.h"
 #else
  #error "::CMSIS:RTOS selection invalid"
-#endif
-
-#if !defined(RTE_Network_IPv4) && !defined(RTE_Network_IPv6)
- #error "MDK-Pro Network component required"
 #endif
 
 #if !defined(RTE_Network_Socket_BSD)
@@ -93,13 +83,26 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
   }
 
   /* Do name resolution with both IPv4 and IPv6 */
-  stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP4, &addr);
-#if defined(RTE_Network_IPv6)
-  if (stat == netDnsResolverError) {
-    /* Failed for IPv4, retry for IPv6 */
-    stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP6, &addr);
+  if (strchr (host, '.')) {
+    /* Internet host name, use DNS resolver */
+    stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP4, &addr);
+    if (stat == netDnsResolverError) {
+      /* Failed for IPv4, retry for IPv6 */
+      stat = netDNSc_GetHostByNameX (host, NET_ADDR_IP6, &addr);
+    }
   }
-#endif
+  else {
+    /* NetBIOS name, resolve on ETH0 */
+    for (int32_t n = 2; n > 0; n--) {
+      stat = netNBNS_Resolve (NET_IF_CLASS_ETH | 0, host, (uint8_t *)&addr.addr);
+      if (stat != netTimeout) break;
+    }
+    if ((stat == netOK) && (addr.addr[0] == 127)) {
+      /* Local host name or literal term "localhost" */
+      stat = netError;
+    }
+    addr.addr_type = NET_ADDR_IP4;
+  }
   if (stat != netOK) {
     return (MBEDTLS_ERR_NET_UNKNOWN_HOST);
   }
@@ -117,14 +120,13 @@ int mbedtls_net_connect (mbedtls_net_context *ctx, const char *host, const char 
     memcpy (&SOCK_ADDR4(&host_addr)->sin_addr, addr.addr, NET_ADDR_IP4_LEN);
     addrlen = sizeof(SOCKADDR_IN);
   }
-#if defined(RTE_Network_IPv6)
   else {
     SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
     SOCK_ADDR6(&host_addr)->sin6_port   = htons (addr.port);
     memcpy (&SOCK_ADDR6(&host_addr)->sin6_addr, addr.addr, NET_ADDR_IP6_LEN);
     addrlen = sizeof(SOCKADDR_IN6);
   }
-#endif
+
   ctx->fd = socket (SOCK_ADDR(&host_addr)->sa_family,
                     (proto == MBEDTLS_NET_PROTO_UDP) ? SOCK_DGRAM : SOCK_STREAM, 0);
   if (ctx->fd < 0) {
@@ -161,12 +163,10 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
     SOCK_ADDR4(&host_addr)->sin_family = AF_INET;
     addrlen = sizeof(SOCKADDR_IN);
   }
-#if defined(RTE_Network_IPv6)
   else if (inet_pton (AF_INET6, bind_ip, &SOCK_ADDR6(&host_addr)->sin6_addr)) {
     SOCK_ADDR6(&host_addr)->sin6_family = AF_INET6;
     addrlen = sizeof(SOCKADDR_IN6);
   }
-#endif
   else {
     return (MBEDTLS_ERR_NET_UNKNOWN_HOST);
   }
@@ -180,11 +180,9 @@ int mbedtls_net_bind (mbedtls_net_context *ctx, const char *bind_ip, const char 
   if (SOCK_ADDR(&host_addr)->sa_family == AF_INET) {
     SOCK_ADDR4(&host_addr)->sin_port = htons (port_nr);
   }
-#if defined(RTE_Network_IPv6)
   else {
     SOCK_ADDR6(&host_addr)->sin6_port = htons (port_nr);
   }
-#endif
 
   ctx->fd = socket (SOCK_ADDR(&host_addr)->sa_family,
                     (proto == MBEDTLS_NET_PROTO_UDP) ? SOCK_DGRAM : SOCK_STREAM, 0);
@@ -260,7 +258,6 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
       }
       memcpy (client_ip, &SOCK_ADDR4(&client_addr)->sin_addr.s_addr, *ip_len);
     }
-#if defined(RTE_Network_IPv6)
     else {
       *ip_len = sizeof (SOCK_ADDR6(&client_addr)->sin6_addr.s6_addr);
       if (buf_size < *ip_len) {
@@ -268,7 +265,6 @@ int mbedtls_net_accept (mbedtls_net_context *bind_ctx,
       }
       memcpy (client_ip, &SOCK_ADDR6(&client_addr)->sin6_addr.s6_addr, *ip_len);
     }
-#endif
   }
   return (0);
 }
