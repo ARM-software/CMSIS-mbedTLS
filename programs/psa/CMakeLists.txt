@@ -1,7 +1,10 @@
 set(executables
+    aead_demo
     crypto_examples
+    hmac_demo
     key_ladder_demo
     psa_constant_names
+    psa_hash
 )
 
 if(GEN_FILES)
@@ -25,7 +28,7 @@ endif()
 
 foreach(exe IN LISTS executables)
     add_executable(${exe} ${exe}.c $<TARGET_OBJECTS:mbedtls_test>)
-    target_link_libraries(${exe} ${mbedcrypto_target})
+    target_link_libraries(${exe} ${mbedcrypto_target} ${CMAKE_THREAD_LIBS_INIT})
     target_include_directories(${exe} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../../tests/include)
 endforeach()
 

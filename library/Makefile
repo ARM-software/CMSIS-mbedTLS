@@ -1,3 +1,26 @@
+ifndef MBEDTLS_PATH
+MBEDTLS_PATH := ..
+endif
+
+GENERATED_FILES := \
+	error.c version_features.c \
+	ssl_debug_helpers_generated.c \
+	psa_crypto_driver_wrappers.h \
+	psa_crypto_driver_wrappers_no_static.c
+
+ifneq ($(GENERATED_FILES),$(wildcard $(GENERATED_FILES)))
+    ifeq (,$(wildcard $(MBEDTLS_PATH)/framework/exported.make))
+        # Use the define keyword to get a multi-line message.
+        # GNU make appends ".  Stop.", so tweak the ending of our message accordingly.
+        define error_message
+$(MBEDTLS_PATH)/framework/exported.make not found.
+Run `git submodule update --init` to fetch the submodule contents.
+This is a fatal error
+        endef
+        $(error $(error_message))
+    endif
+    include $(MBEDTLS_PATH)/framework/exported.make
+endif
 
 # Also see "include/mbedtls/mbedtls_config.h"
 
@@ -39,6 +62,10 @@ APPLE_BUILD ?= 1
 endif
 endif
 
+ifdef WINDOWS_BUILD
+LOCAL_LDFLAGS += -lbcrypt
+endif
+
 # To compile as a shared library:
 ifdef SHARED
 # all code is position-indep with mingw, avoid warning about useless flag
@@ -47,9 +74,9 @@ LOCAL_CFLAGS += -fPIC -fpic
 endif
 endif
 
-SOEXT_TLS=so.17
-SOEXT_X509=so.4
-SOEXT_CRYPTO=so.11
+SOEXT_TLS?=so.21
+SOEXT_X509?=so.7
+SOEXT_CRYPTO?=so.16
 
 # Set AR_DASH= (empty string) to use an ar implementation that does not accept
 # the - prefix for command line options (e.g. llvm-ar)
@@ -78,11 +105,16 @@ endif
 OBJS_CRYPTO= \
 	     aes.o \
 	     aesni.o \
+	     aesce.o \
 	     aria.o \
 	     asn1parse.o \
 	     asn1write.o \
 	     base64.o \
 	     bignum.o \
+	     bignum_core.o \
+	     bignum_mod.o \
+	     bignum_mod_raw.o \
+	     block_cipher.o \
 	     camellia.o \
 	     ccm.o \
 	     chacha20.o \
@@ -99,22 +131,24 @@ OBJS_CRYPTO= \
 	     ecjpake.o \
 	     ecp.o \
 	     ecp_curves.o \
+	     ecp_curves_new.o \
 	     entropy.o \
 	     entropy_poll.o \
 	     error.o \
 	     gcm.o \
 	     hkdf.o \
 	     hmac_drbg.o \
+	     lmots.o \
+	     lms.o \
 	     md.o \
 	     md5.o \
 	     memory_buffer_alloc.o \
-	     mps_reader.o \
-	     mps_trace.o \
 	     nist_kw.o \
 	     oid.o \
 	     padlock.o \
 	     pem.o \
 	     pk.o \
+	     pk_ecc.o \
 	     pk_wrap.o \
 	     pkcs12.o \
 	     pkcs5.o \
@@ -127,22 +161,25 @@ OBJS_CRYPTO= \
 	     psa_crypto_aead.o \
 	     psa_crypto_cipher.o \
 	     psa_crypto_client.o \
-	     psa_crypto_driver_wrappers.o \
+	     psa_crypto_driver_wrappers_no_static.o \
 	     psa_crypto_ecp.o \
+	     psa_crypto_ffdh.o \
 	     psa_crypto_hash.o \
 	     psa_crypto_mac.o \
+	     psa_crypto_pake.o \
 	     psa_crypto_rsa.o \
 	     psa_crypto_se.o \
 	     psa_crypto_slot_management.o \
 	     psa_crypto_storage.o \
 	     psa_its_file.o \
+	     psa_util.o \
 	     ripemd160.o \
 	     rsa.o \
 	     rsa_alt_helpers.o \
 	     sha1.o \
 	     sha256.o \
 	     sha512.o \
-	     ssl_debug_helpers_generated.o \
+	     sha3.o \
 	     threading.o \
 	     timing.o \
 	     version.o \
@@ -159,21 +196,27 @@ OBJS_X509= \
 	   x509_crl.o \
 	   x509_crt.o \
 	   x509_csr.o \
+	   x509write.o \
 	   x509write_crt.o \
 	   x509write_csr.o \
+	   pkcs7.o \
 	   # This line is intentionally left blank
 
 OBJS_TLS= \
 	  debug.o \
+	  mps_reader.o \
+	  mps_trace.o \
 	  net_sockets.o \
 	  ssl_cache.o \
 	  ssl_ciphersuites.o \
-	  ssl_cli.o \
+	  ssl_client.o \
 	  ssl_cookie.o \
+	  ssl_debug_helpers_generated.o \
 	  ssl_msg.o \
-	  ssl_srv.o \
 	  ssl_ticket.o \
 	  ssl_tls.o \
+	  ssl_tls12_client.o \
+	  ssl_tls12_server.o \
 	  ssl_tls13_keys.o \
 	  ssl_tls13_client.o \
 	  ssl_tls13_server.o \
@@ -191,6 +234,7 @@ all: shared static
 endif
 
 static: libmbedcrypto.a libmbedx509.a libmbedtls.a
+	cd ../tests && echo "This is a seedfile that contains 64 bytes (65 on Windows)......" > seedfile
 
 shared: libmbedcrypto.$(DLEXT) libmbedx509.$(DLEXT) libmbedtls.$(DLEXT)
 
@@ -217,9 +261,11 @@ libmbedtls.$(SOEXT_TLS): $(OBJS_TLS) libmbedx509.so
 	echo "  LD    $@"
 	$(CC) -shared -Wl,-soname,$@ -o $@ $(OBJS_TLS) -L. -lmbedx509 -lmbedcrypto $(LOCAL_LDFLAGS) $(LDFLAGS)
 
+ifneq ($(SOEXT_TLS),so)
 libmbedtls.so: libmbedtls.$(SOEXT_TLS)
 	echo "  LN    $@ -> $<"
 	ln -sf $< $@
+endif
 
 libmbedtls.dylib: $(OBJS_TLS) libmbedx509.dylib
 	echo "  LD    $@"
@@ -244,9 +290,11 @@ libmbedx509.$(SOEXT_X509): $(OBJS_X509) libmbedcrypto.so
 	echo "  LD    $@"
 	$(CC) -shared -Wl,-soname,$@ -o $@ $(OBJS_X509) -L. -lmbedcrypto $(LOCAL_LDFLAGS) $(LDFLAGS)
 
+ifneq ($(SOEXT_X509),so)
 libmbedx509.so: libmbedx509.$(SOEXT_X509)
 	echo "  LN    $@ -> $<"
 	ln -sf $< $@
+endif
 
 libmbedx509.dylib: $(OBJS_X509) libmbedcrypto.dylib
 	echo "  LD    $@"
@@ -271,9 +319,11 @@ libmbedcrypto.$(SOEXT_CRYPTO): $(OBJS_CRYPTO)
 	echo "  LD    $@"
 	$(CC) -shared -Wl,-soname,$@ -o $@ $(OBJS_CRYPTO) $(LOCAL_LDFLAGS) $(LDFLAGS)
 
+ifneq ($(SOEXT_CRYPTO),so)
 libmbedcrypto.so: libmbedcrypto.$(SOEXT_CRYPTO)
 	echo "  LN    $@ -> $<"
 	ln -sf $< $@
+endif
 
 libmbedcrypto.dylib: $(OBJS_CRYPTO)
 	echo "  LD    $@"
@@ -288,27 +338,31 @@ libmbedcrypto.dll: $(OBJS_CRYPTO)
 	$(CC) $(LOCAL_CFLAGS) $(CFLAGS) -o $@ -c $<
 
 .PHONY: generated_files
-GENERATED_FILES = \
-	error.c version_features.c \
-	ssl_debug_helpers_generated.c ssl_debug_helpers_generated.h
 generated_files: $(GENERATED_FILES)
 
-error.c: ../scripts/generate_errors.pl
-error.c: ../scripts/data_files/error.fmt
-error.c: $(filter-out %config%,$(wildcard ../include/mbedtls/*.h))
+# See root Makefile
+GEN_FILES ?=
+ifdef GEN_FILES
+gen_file_dep =
+else
+gen_file_dep = |
+endif
+
+error.c: $(gen_file_dep) ../scripts/generate_errors.pl
+error.c: $(gen_file_dep) ../scripts/data_files/error.fmt
+error.c: $(gen_file_dep) $(filter-out %config%,$(wildcard ../include/mbedtls/*.h))
 error.c:
 	echo "  Gen   $@"
 	$(PERL) ../scripts/generate_errors.pl
 
-ssl_debug_helpers_generated.c: | ssl_debug_helpers_generated.h
-ssl_debug_helpers_generated.h: ../scripts/generate_ssl_debug_helpers.py
-ssl_debug_helpers_generated.h: $(filter-out %config%,$(wildcard ../include/mbedtls/*.h))
-ssl_debug_helpers_generated.h:
+ssl_debug_helpers_generated.c: $(gen_file_dep) ../scripts/generate_ssl_debug_helpers.py
+ssl_debug_helpers_generated.c: $(gen_file_dep) $(filter-out %config%,$(wildcard ../include/mbedtls/*.h))
+ssl_debug_helpers_generated.c:
 	echo "  Gen   $@"
 	$(PYTHON) ../scripts/generate_ssl_debug_helpers.py --mbedtls-root .. .
 
-version_features.c: ../scripts/generate_features.pl
-version_features.c: ../scripts/data_files/version_features.fmt
+version_features.c: $(gen_file_dep) ../scripts/generate_features.pl
+version_features.c: $(gen_file_dep) ../scripts/data_files/version_features.fmt
 ## The generated file only depends on the options that are present in mbedtls_config.h,
 ## not on which options are set. To avoid regenerating this file all the time
 ## when switching between configurations, don't declare mbedtls_config.h as a
@@ -318,6 +372,18 @@ version_features.c: ../scripts/data_files/version_features.fmt
 version_features.c:
 	echo "  Gen   $@"
 	$(PERL) ../scripts/generate_features.pl
+
+GENERATED_WRAPPER_FILES = \
+                    psa_crypto_driver_wrappers.h \
+                    psa_crypto_driver_wrappers_no_static.c
+$(GENERATED_WRAPPER_FILES): ../scripts/generate_driver_wrappers.py
+$(GENERATED_WRAPPER_FILES): ../scripts/data_files/driver_templates/psa_crypto_driver_wrappers.h.jinja
+$(GENERATED_WRAPPER_FILES): ../scripts/data_files/driver_templates/psa_crypto_driver_wrappers_no_static.c.jinja
+$(GENERATED_WRAPPER_FILES):
+	echo "  Gen   $(GENERATED_WRAPPER_FILES)"
+	$(PYTHON) ../scripts/generate_driver_wrappers.py
+
+psa_crypto.o:psa_crypto_driver_wrappers.h
 
 clean:
 ifndef WINDOWS

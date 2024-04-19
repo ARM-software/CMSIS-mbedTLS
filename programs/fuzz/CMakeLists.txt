@@ -1,5 +1,6 @@
 set(libs
     ${mbedtls_target}
+    ${CMAKE_THREAD_LIBS_INIT}
 )
 
 find_library(FUZZINGENGINE_LIB FuzzingEngine)
@@ -12,6 +13,7 @@ set(executables_no_common_c
     fuzz_x509crl
     fuzz_x509crt
     fuzz_x509csr
+    fuzz_pkcs7
 )
 
 set(executables_with_common_c

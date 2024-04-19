@@ -1,19 +1,7 @@
 #! /usr/bin/env sh
 
 # Copyright The Mbed TLS Contributors
-# SPDX-License-Identifier: Apache-2.0
-#
-# Licensed under the Apache License, Version 2.0 (the "License"); you may
-# not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
 #
 # Purpose
 #
@@ -34,8 +22,20 @@ EOF
     exit
 fi
 
-if [ -d library -a -d include -a -d tests ]; then :; else
-    echo "Must be run from mbed TLS root" >&2
+in_mbedtls_repo () {
+    test -d include -a -d library -a -d programs -a -d tests
+}
+
+in_tf_psa_crypto_repo () {
+    test -d include -a -d core -a -d drivers -a -d programs -a -d tests
+}
+
+if in_mbedtls_repo; then
+    library_dir='library'
+elif in_tf_psa_crypto_repo; then
+    library_dir='core'
+else
+    echo "Must be run from Mbed TLS root or TF-PSA-Crypto root" >&2
     exit 1
 fi
 
@@ -76,7 +76,7 @@ check()
 
     for FILE in "$@"; do
         if [ -e "$FILE" ]; then
-            cp "$FILE" "$FILE.bak"
+            cp -p "$FILE" "$FILE.bak"
         else
             rm -f "$FILE.bak"
         fi
@@ -86,16 +86,17 @@ check()
 
     # Compare the script output to the old files and remove backups
     for FILE in "$@"; do
-        if ! diff "$FILE" "$FILE.bak" >/dev/null 2>&1; then
+        if diff "$FILE" "$FILE.bak" >/dev/null 2>&1; then
+            # Move the original file back so that $FILE's timestamp doesn't
+            # change (avoids spurious rebuilds with make).
+            mv "$FILE.bak" "$FILE"
+        else
             echo "'$FILE' was either modified or deleted by '$SCRIPT'"
             if [ -z "$UPDATE" ]; then
                 exit 1
+            else
+                rm -f "$FILE.bak"
             fi
-        fi
-        if [ -z "$UPDATE" ]; then
-            mv "$FILE.bak" "$FILE"
-        else
-            rm -f "$FILE.bak"
         fi
     done
 
@@ -115,13 +116,36 @@ check()
     fi
 }
 
-check scripts/generate_errors.pl library/error.c
-check scripts/generate_query_config.pl programs/test/query_config.c
-check scripts/generate_features.pl library/version_features.c
-check scripts/generate_ssl_debug_helpers.py library/ssl_debug_helpers_generated.h library/ssl_debug_helpers_generated.c
-# generate_visualc_files enumerates source files (library/*.c). It doesn't
-# care about their content, but the files must exist. So it must run after
-# the step that creates or updates these files.
-check scripts/generate_visualc_files.pl visualc/VS2010
+# Note: if the format of calls to the "check" function changes, update
+# scripts/code_style.py accordingly. For generated C source files (*.h or *.c),
+# the format must be "check SCRIPT FILENAME...". For other source files,
+# any shell syntax is permitted (including e.g. command substitution).
+
+# Note: Instructions to generate those files are replicated in:
+#   - **/Makefile (to (re)build them with make)
+#   - **/CMakeLists.txt (to (re)build them with cmake)
+#   - scripts/make_generated_files.bat (to generate them under Windows)
+
+# These checks are common to Mbed TLS and TF-PSA-Crypto
 check scripts/generate_psa_constants.py programs/psa/psa_constant_names_generated.c
+check tests/scripts/generate_bignum_tests.py $(tests/scripts/generate_bignum_tests.py --list)
+check tests/scripts/generate_ecp_tests.py $(tests/scripts/generate_ecp_tests.py --list)
 check tests/scripts/generate_psa_tests.py $(tests/scripts/generate_psa_tests.py --list)
+check scripts/generate_driver_wrappers.py $library_dir/psa_crypto_driver_wrappers.h $library_dir/psa_crypto_driver_wrappers_no_static.c
+
+# Additional checks for Mbed TLS only
+if in_mbedtls_repo; then
+    check scripts/generate_errors.pl library/error.c
+    check scripts/generate_query_config.pl programs/test/query_config.c
+    check scripts/generate_features.pl library/version_features.c
+    check scripts/generate_ssl_debug_helpers.py library/ssl_debug_helpers_generated.c
+    # generate_visualc_files enumerates source files (library/*.c). It doesn't
+    # care about their content, but the files must exist. So it must run after
+    # the step that creates or updates these files.
+    check scripts/generate_visualc_files.pl visualc/VS2017
+fi
+
+# Generated files that are present in the repository even in the development
+# branch. (This is intended to be temporary, until the generator scripts are
+# fully reviewed and the build scripts support a generated header file.)
+check tests/scripts/generate_psa_wrappers.py tests/include/test/psa_test_wrappers.h tests/src/psa_test_wrappers.c

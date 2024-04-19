@@ -1,21 +1,9 @@
 #!/bin/sh
 
-# basic-build-tests.sh
+# basic-build-test.sh
 #
 # Copyright The Mbed TLS Contributors
-# SPDX-License-Identifier: Apache-2.0
-#
-# Licensed under the Apache License, Version 2.0 (the "License"); you may
-# not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-License-Identifier: Apache-2.0 OR GPL-2.0-or-later
 #
 # Purpose
 #
@@ -36,23 +24,20 @@
 #
 # This script has been written to be generic and should work on any shell.
 #
-# Usage: basic-build-tests.sh
+# Usage: basic-build-test.sh
 #
 
 # Abort on errors (and uninitiliased variables)
 set -eu
 
 if [ -d library -a -d include -a -d tests ]; then :; else
-    echo "Must be run from mbed TLS root" >&2
+    echo "Must be run from Mbed TLS root" >&2
     exit 1
 fi
 
 : ${OPENSSL:="openssl"}
-: ${OPENSSL_LEGACY:="$OPENSSL"}
 : ${GNUTLS_CLI:="gnutls-cli"}
 : ${GNUTLS_SERV:="gnutls-serv"}
-: ${GNUTLS_LEGACY_CLI:="$GNUTLS_CLI"}
-: ${GNUTLS_LEGACY_SERV:="$GNUTLS_SERV"}
 
 # Used to make ssl-opt.sh deterministic.
 #
@@ -69,7 +54,7 @@ fi
 
 # To avoid setting OpenSSL and GnuTLS for each call to compat.sh and ssl-opt.sh
 # we just export the variables they require
-export OPENSSL_CMD="$OPENSSL"
+export OPENSSL="$OPENSSL"
 export GNUTLS_CLI="$GNUTLS_CLI"
 export GNUTLS_SERV="$GNUTLS_SERV"
 
@@ -78,11 +63,8 @@ CONFIG_BAK="$CONFIG_H.bak"
 
 # Step 0 - print build environment info
 OPENSSL="$OPENSSL"                           \
-    OPENSSL_LEGACY="$OPENSSL_LEGACY"         \
     GNUTLS_CLI="$GNUTLS_CLI"                 \
     GNUTLS_SERV="$GNUTLS_SERV"               \
-    GNUTLS_LEGACY_CLI="$GNUTLS_LEGACY_CLI"   \
-    GNUTLS_LEGACY_SERV="$GNUTLS_LEGACY_SERV" \
     scripts/output_env.sh
 echo
 
@@ -121,17 +103,15 @@ echo
 echo '################ compat.sh ################'
 {
     echo '#### compat.sh: Default versions'
-    sh compat.sh -m 'tls1_2 dtls1_2'
+    sh compat.sh
     echo
 
-    echo '#### compat.sh: legacy (null, DES)'
-    OPENSSL_CMD="$OPENSSL_LEGACY" \
-    GNUTLS_CLI="$GNUTLS_LEGACY_CLI" GNUTLS_SERV="$GNUTLS_LEGACY_SERV" \
-    sh compat.sh -e '^$' -f 'NULL\|DES'
+    echo '#### compat.sh: null cipher'
+    sh compat.sh -e '^$' -f 'NULL'
     echo
 
     echo '#### compat.sh: next (ARIA, ChaCha)'
-    OPENSSL_CMD="$OPENSSL_NEXT" sh compat.sh -e '^$' -f 'ARIA\|CHACHA'
+    OPENSSL="$OPENSSL_NEXT" sh compat.sh -e '^$' -f 'ARIA\|CHACHA'
     echo
 } | tee compat-test-$TEST_OUTPUT
 echo '^^^^^^^^^^^^^^^^ compat.sh ^^^^^^^^^^^^^^^^'
@@ -243,34 +223,15 @@ rm -f "tests/basic-build-test-$$.ok"
     echo
 
 
-    # Step 4e - Coverage
-    echo "Coverage"
-
-    LINES_TESTED=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  lines......: [0-9]*.[0-9]% (\([0-9]*\) of [0-9]* lines)/\1/p')
-    LINES_TOTAL=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  lines......: [0-9]*.[0-9]% ([0-9]* of \([0-9]*\) lines)/\1/p')
-    FUNCS_TESTED=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  functions..: [0-9]*.[0-9]% (\([0-9]*\) of [0-9]* functions)$/\1/p')
-    FUNCS_TOTAL=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  functions..: [0-9]*.[0-9]% ([0-9]* of \([0-9]*\) functions)$/\1/p')
-    BRANCHES_TESTED=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  branches...: [0-9]*.[0-9]% (\([0-9]*\) of [0-9]* branches)$/\1/p')
-    BRANCHES_TOTAL=$(tail -n4 cov-$TEST_OUTPUT|sed -n -e 's/  branches...: [0-9]*.[0-9]% ([0-9]* of \([0-9]*\) branches)$/\1/p')
-
-    LINES_PERCENT=$((1000*$LINES_TESTED/$LINES_TOTAL))
-    LINES_PERCENT="$(($LINES_PERCENT/10)).$(($LINES_PERCENT-($LINES_PERCENT/10)*10))"
-
-    FUNCS_PERCENT=$((1000*$FUNCS_TESTED/$FUNCS_TOTAL))
-    FUNCS_PERCENT="$(($FUNCS_PERCENT/10)).$(($FUNCS_PERCENT-($FUNCS_PERCENT/10)*10))"
-
-    BRANCHES_PERCENT=$((1000*$BRANCHES_TESTED/$BRANCHES_TOTAL))
-    BRANCHES_PERCENT="$(($BRANCHES_PERCENT/10)).$(($BRANCHES_PERCENT-($BRANCHES_PERCENT/10)*10))"
+    # Step 4e - Coverage report
+    echo "Coverage statistics:"
+    sed -n '1,/^Overall coverage/d; /%/p' cov-$TEST_OUTPUT
+    echo
 
     rm unit-test-$TEST_OUTPUT
     rm sys-test-$TEST_OUTPUT
     rm compat-test-$TEST_OUTPUT
     rm cov-$TEST_OUTPUT
-
-    echo "Lines Tested       : $LINES_TESTED of $LINES_TOTAL $LINES_PERCENT%"
-    echo "Functions Tested   : $FUNCS_TESTED of $FUNCS_TOTAL $FUNCS_PERCENT%"
-    echo "Branches Tested    : $BRANCHES_TESTED of $BRANCHES_TOTAL $BRANCHES_PERCENT%"
-    echo
 
     # Mark the report generation as having succeeded. This must be the
     # last thing in the report generation.
