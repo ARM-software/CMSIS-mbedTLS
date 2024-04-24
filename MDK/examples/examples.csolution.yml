@@ -1,0 +1,33 @@
+# A solution is a collection of related projects that share same base configuration.
+solution:
+  created-for: CMSIS-Toolbox@2.0.0
+  cdefault:
+  compiler: AC6
+
+  # List the packs that define the device and/or board.
+  packs:
+    - pack: ARM::CMSIS-RTX
+    - pack: ARM::mbedTLS
+    - pack: Keil::MDK-Middleware
+
+  # List different hardware targets that are used to deploy the solution.
+  target-types:
+    - type: IMXRT1050-EVKB
+      board: NXP::EVKB-IMXRT1050_MDK
+      variables:
+        - Board-Layer: ../target/IMXRT1050-EVKB/Board.clayer.yml
+
+  # List of different build configurations.
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: none
+
+    - type: Release
+      debug: off
+      optimize: balanced
+
+  # List related projects.
+  projects:
+    - project: ssl_client1/ssl_client1.cproject.yml
+    - project: ssl_server/ssl_server.cproject.yml

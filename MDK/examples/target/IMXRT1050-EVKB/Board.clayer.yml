@@ -1,0 +1,141 @@
+layer:
+  type: Board
+  # name: IMXRT1050-EVKB
+  # variant: IoT-WiFi-Ethernet
+  description: Board setup for IoT with WiFi and Ethernet interface
+  for-board: NXP::EVKB-IMXRT1050_MDK
+
+  connections:
+    - connect: IMXRT1050-EVKB Board
+      consumes:
+        - CMSIS-RTOS2
+      provides:
+        - CMSIS_ETH: 0
+        - CMSIS_MCI: 0
+        - CMSIS_VIO
+        - ARDUINO_UNO_UART: 3
+        - ARDUINO_UNO_D2
+        - ARDUINO_UNO_D3
+        - ARDUINO_UNO_D4
+        - ARDUINO_UNO_D5
+        - ARDUINO_UNO_D6
+        - ARDUINO_UNO_D7
+        - ARDUINO_UNO_D8
+        - ARDUINO_UNO_D9
+        - ARDUINO_UNO_D14
+        - ARDUINO_UNO_D15
+        - ARDUINO_UNO_D16
+        - ARDUINO_UNO_D17
+        - ARDUINO_UNO_D18
+        - ARDUINO_UNO_D19
+        - STDIN
+        - STDOUT
+        - STDERR
+        - Heap: 65536
+
+  packs:
+    - pack: NXP::MIMXRT1052_DFP@17.0.0
+    - pack: NXP::EVKB-IMXRT1050_BSP@17.0.0
+    - pack: Keil::IMXRT1050-EVKB_BSP@1.2.0
+    - pack: Keil::iMXRT105x_MWP@1.6.0
+    - pack: ARM::CMSIS@>=6.0.0
+    - pack: ARM::CMSIS-Driver@>=2.8.0
+    - pack: ARM::CMSIS-Compiler@>=2.0.0
+
+  define:
+    - CMSIS_board_header: "\"IMXRT1050_EVKB.h\""
+    - CODEC_WM8960_ENABLE
+    - FSL_SDK_ENABLE_DRIVER_CACHE_CONTROL: 1
+    - SKIP_SYSCLK_INIT
+    - XIP_BOOT_HEADER_DCD_ENABLE: 1
+    - XIP_BOOT_HEADER_ENABLE: 1
+    - XIP_EXTERNAL_FLASH: 1
+    - SDK_I2C_BASED_COMPONENT_USED: 1
+
+  misc:
+    - for-compiler: AC6
+      Link:
+      - '--predefine="-DXIP_BOOT_HEADER_ENABLE=1"'
+      - '--diag_suppress 6314,6329'
+
+  components:
+    - component: Device:Startup
+
+    - component: NXP::Device:CMSIS:MIMXRT1052_header
+    - component: NXP::Device:CMSIS:MIMXRT1052_system
+
+    - component: NXP::Device:SDK Drivers:cache
+    - component: NXP::Device:SDK Drivers:clock
+    - component: NXP::Device:SDK Drivers:codec
+    - component: NXP::Device:SDK Drivers:codec_i2c
+    - component: NXP::Device:SDK Drivers:common
+      misc:
+        - C:
+          - -include cmsis_core5.h
+    - component: NXP::Device:SDK Drivers:dmamux
+    - component: NXP::Device:SDK Drivers:edma
+    - component: NXP::Device:SDK Drivers:enet
+    - component: NXP::Device:SDK Drivers:fxos8700cq
+    - component: NXP::Device:SDK Drivers:gpio
+    - component: NXP::Device:SDK Drivers:i2c
+    - component: NXP::Device:SDK Drivers:iomuxc
+    - component: NXP::Device:SDK Drivers:lists
+    - component: NXP::Device:SDK Drivers:lpi2c_adapter
+    - component: NXP::Device:SDK Drivers:lpuart
+    - component: NXP::Device:SDK Drivers:lpuart_adapter
+    - component: NXP::Device:SDK Drivers:lpuart_edma
+    - component: NXP::Device:SDK Drivers:nic301
+    - component: NXP::Device:SDK Drivers:sai
+    - component: NXP::Device:SDK Drivers:sai_edma
+    - component: NXP::Device:SDK Drivers:sdhc
+    - component: NXP::Device:SDK Drivers:wm8960
+    - component: NXP::Device:SDK Drivers:wm8960_adapter
+    - component: NXP::Device:SDK Drivers:xip_device
+
+    - component: NXP::Device:SDK Project Template:RTE_Device
+
+    - component: NXP::Device:SDK Utilities:MIMXRT1052_linker
+
+    - component: NXP::Device:SDK Utilities:assert
+    - component: NXP::Device:SDK Utilities:debug_console
+    - component: NXP::Device:SDK Utilities:serial_manager
+    - component: NXP::Device:SDK Utilities:serial_manager_uart
+
+    - component: NXP::Board Support:SDK Drivers:evkbimxrt1050 xip
+    - component: NXP::Board Support:SDK Project Template:project_template&evkbimxrt1050
+
+    - component: ARM::CMSIS:CORE
+
+    - component: Keil::CMSIS Driver:Ethernet MAC
+    - component: Keil::CMSIS Driver:Ethernet PHY:KSZ8081RNA
+      define:
+        - ETH_PHY_REF_CLK_50M: 1
+    - component: Keil::CMSIS Driver:MCI
+    - component: ARM::CMSIS Driver:USART:Custom
+    - component: NXP::CMSIS Driver:USART:lpuart_cmsis
+    - component: Keil::CMSIS Driver:VIO:Board&IMXRT1050-EVKB
+
+    - component: ARM::CMSIS-Compiler:CORE
+    - component: ARM::CMSIS-Compiler:STDERR:Custom
+    - component: ARM::CMSIS-Compiler:STDOUT:Custom
+    - component: ARM::CMSIS-Compiler:STDIN:Custom
+
+  groups:
+    - group: Board
+      files:
+        - file: ./IMXRT1050_EVKB.h
+        - file: ./main.h
+        - file: ./main.c
+        - file: ./retarget_stdio.c
+        - file: ./RTE/CMSIS/cmsis_core5.h
+    - group: MCUXpresso
+      files:
+        - file: ./IMXRT1050-EVKB.mex
+
+  linker:
+    - for-compiler: AC6
+      script: ./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.scf
+    - for-compiler: GCC
+      script: ./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.ld
+    - for-compiler: IAR
+      script: ./RTE/Device/MIMXRT1052DVL6B/MIMXRT1052xxxxx_flexspi_nor_sdram.icf

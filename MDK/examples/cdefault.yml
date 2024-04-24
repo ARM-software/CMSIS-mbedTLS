@@ -1,0 +1,23 @@
+default:
+
+  compiler: AC6
+
+  misc:
+    - for-compiler: AC6
+      C-CPP:
+        - -Wno-macro-redefined
+        - -Wno-pragma-pack
+        - -Wno-parentheses-equality
+        - -Wno-license-management
+        - -fshort-enums 
+        - -fshort-wchar
+      C:
+        - -std=gnu11
+      ASM:
+        - -masm=auto
+      Link:
+        - --entry=Reset_Handler
+        - --map
+        - --info summarysizes
+        - --summary_stderr
+        - --diag_suppress=L6314W

@@ -8,6 +8,7 @@
   <releases>
     <release version="3.6.0">
       Updated to mbedTLS V3.6.0
+      Added csolution based examples for NXP EVKB-IMXRT1050 Board
       Removed obsolete examples for MCB1800/4300 Board
     </release>
     <release version="3.1.1" date="2024-02-22">
@@ -231,4 +232,30 @@
       </files>
     </component>
   </components>
+  <examples>
+    <example name="ssl_client1" doc="ssl_client1/README.md" folder="MDK/examples">
+      <description>Simple SSL/TLS client</description>
+      <board name="EVKB-IMXRT1050_MDK" vendor="NXP"/>
+      <project>
+        <environment name="csolution" load="examples.csolution.yml"/>
+      </project>
+      <attributes>
+        <component Cclass="Security" Cgroup="mbed TLS"/>
+        <category>mbed TLS</category>
+        <keyword>SSL</keyword>
+      </attributes>
+    </example>
+    <example name="ssl_server" doc="ssl_server/README.md" folder="MDK/examples">
+      <description>SSL/TLS server</description>
+      <board name="EVKB-IMXRT1050_MDK" vendor="NXP"/>
+      <project>
+        <environment name="csolution" load="examples.csolution.yml"/>
+      </project>
+      <attributes>
+        <component Cclass="Security" Cgroup="mbed TLS"/>
+        <category>mbed TLS</category>
+        <keyword>SSL</keyword>
+      </attributes>
+    </example>
+  </examples>
 </package>
