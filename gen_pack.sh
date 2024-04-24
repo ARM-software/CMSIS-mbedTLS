@@ -1,57 +1,33 @@
-#!/bin/bash
-# Version: 1.2
-# Date: 2020-12-21
+#!/usr/bin/env bash
+# Version: 3.0
+# Date: 2023-11-06
 # This bash script generates a CMSIS Software Pack:
 #
-# Pre-requisites:
-# - bash shell (for Windows: install git for Windows)
-# - 7z in path (zip archiving utility)
-#   e.g. Ubuntu: sudo apt-get install p7zip-full p7zip-rar)
-# - PackChk is taken from latest install CMSIS Pack installed in $CMSIS_PACK_ROOT
-# - xmllint in path (XML schema validation; available only for Linux)
 
-############### EDIT BELOW ###############
-# Extend Path environment variable locally
+set -o pipefail
+
+# Set version of gen pack library
+# For available versions see https://github.com/Open-CMSIS-Pack/gen-pack/tags.
+# Use the tag name without the prefix "v", e.g., 0.7.0
+REQUIRED_GEN_PACK_LIB="0.9.1"
+
+# Set default command line arguments
+DEFAULT_ARGS=(-c "cmsis_mbedtls_")
+
+# Pack warehouse directory - destination
+# Default: ./output
 #
+# PACK_OUTPUT=./output
 
-OS=$(uname -s)
-case $OS in
-  'Linux')
-    if [ -z ${CMSIS_PACK_ROOT+x} ] ; then
-      CMSIS_PACK_ROOT="/home/$USER/.arm/Packs"
-    fi
-    CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Linux64"
-    ;;
-  'WindowsNT'|MINGW*|CYGWIN*)
-    if [ -z ${CMSIS_PACK_ROOT+x} ] ; then
-      CMSIS_PACK_ROOT="$LOCALAPPDATA/Arm/Packs"
-    fi
-    CMSIS_PACK_ROOT="/$(echo ${CMSIS_PACK_ROOT} | sed -e 's/\\/\//g' -e 's/://g' -e 's/\"//g')"
-    CMSIS_TOOLSDIR="$(ls -drv ${CMSIS_PACK_ROOT}/ARM/CMSIS/* | head -1)/CMSIS/Utilities/Win32"
-    ;;
-  'Darwin') 
-    echo "Error: CMSIS Tools not available for Mac at present."
-    exit 1
-    ;;
-  *)
-    echo "Error: unrecognized OS $OS"
-    exit 1
-    ;;
-esac
-
-PATH_TO_ADD="$CMSIS_TOOLSDIR"
-
-[[ ":$PATH:" != *":$PATH_TO_ADD}:"* ]] && PATH="${PATH}:${PATH_TO_ADD}"
-echo $PATH_TO_ADD appended to PATH
-echo " "
-
-# Pack warehouse directory - destination 
-PACK_WAREHOUSE=./output
-
-# Temporary pack build directory
-PACK_BUILD=./build
+# Temporary pack build directory,
+# Default: ./build
+#
+# PACK_BUILD=./build
 
 # Specify directory names to be added to pack base directory
+# An empty list defaults to all folders next to this script.
+# Default: empty (all folders)
+#
 PACK_DIRS="
   apidoc
   configs
@@ -64,6 +40,8 @@ PACK_DIRS="
 "
 
 # Specify file names to be added to pack base directory
+# Default: empty
+#
 PACK_BASE_FILES="
   ChangeLog
   dco.txt
@@ -71,6 +49,8 @@ PACK_BASE_FILES="
 "
 
 # Specify file names to be deleted from pack build directory
+# Default: empty
+#
 PACK_DELETE_FILES="
   *.gitignore
   Makefile
@@ -78,163 +58,70 @@ PACK_DELETE_FILES="
   programs/wince_main.c
 "
 
+# Specify patches to be applied
+# Default: empty
+#
+# PACK_PATCH_FILES=""
+
+# Specify addition argument to packchk
+# Default: empty
+#
+#PACKCHK_ARGS=()
+
+# Specify additional dependencies for packchk
+# Default: empty
+#
+PACKCHK_DEPS="
+  ARM.PSA.pdsc
+  Keil.IMXRT1050-EVKB_BSP.pdsc
+"
+
+# Optional: restrict fallback modes for changelog generation
+# Default: full
+# Values:
+# - full      Tag annotations, release descriptions, or commit messages (in order)
+# - release   Tag annotations, or release descriptions (in order)
+# - tag       Tag annotations only
+#
+PACK_CHANGELOG_MODE="tag"
+
+#
+# custom pre-processing steps
+#
+# usage: preprocess <build>
+#   <build>  The build folder
+#
+function preprocess() {
+  # add custom steps here to be executed
+  # before populating the pack build folder
+  ./gen_doc.sh
+  return 0
+}
+
+#
+# custom post-processing steps
+#
+# usage: postprocess <build>
+#   <build>  The build folder
+#
+function postprocess() {
+  # add custom steps here to be executed
+  # after populating the pack build folder
+  # but before archiving the pack into output folder
+  rm -rf ./apidoc
+  return 0
+}
+
 ############ DO NOT EDIT BELOW ###########
-echo Starting CMSIS-Pack Generation: `date`
-# Zip utility check 
-ZIP=7z
-type -a "${ZIP}"
-errorlevel=$?
-if [ $errorlevel -gt 0 ]
-  then
-  echo "Error: No 7zip Utility found"
-  echo "Action: Add 7zip to your path"
-  echo " "
-  exit
-fi
 
-# Pack checking utility check
-PACKCHK=PackChk
-type -a ${PACKCHK}
-errorlevel=$?
-if [ $errorlevel != 0 ]
-  then
-  echo "Error: No PackChk Utility found"
-  echo "Action: Add PackChk to your path"
-  echo "Hint: Included in CMSIS Pack:"
-  echo "$CMSIS_PACK_ROOT/ARM/CMSIS/<version>/CMSIS/Utilities/<os>/"
-  echo " "
-  exit
-fi
-echo " "
-
-# Locate Package Description file
-# check whether there is more than one pdsc file
-NUM_PDSCS=`ls -1 *.pdsc | wc -l`
-PACK_DESCRIPTION_FILE=`ls *.pdsc`
-if [ ${NUM_PDSCS} -lt 1 ]
-  then
-  echo "Error: No *.pdsc file found in current directory"
-  echo " "
-  exit
-elif [ ${NUM_PDSCS} -gt 1 ]
-  then
-  echo "Error: Only one PDSC file allowed in directory structure:"
-  echo "Found:"
-  echo "$PACK_DESCRIPTION_FILE"
-  echo "Action: Delete unused pdsc files"
-  echo " "
-  exit
-fi
-
-SAVEIFS=$IFS
-IFS=.
-set ${PACK_DESCRIPTION_FILE}
-# Pack Vendor
-PACK_VENDOR=$1
-# Pack Name
-PACK_NAME=$2
-echo "Generating Pack Version: for $PACK_VENDOR.$PACK_NAME"
-echo " "
-IFS=$SAVEIFS
-
-#if $PACK_BUILD directory does not exist, create it.
-if [ ! -d "$PACK_BUILD" ]; then
-  mkdir -p "$PACK_BUILD"
-fi
-
-# Copy files into build base directory: $PACK_BUILD
-# pdsc file is mandatory in base directory:
-cp -f "./${PACK_VENDOR}.${PACK_NAME}.pdsc" "${PACK_BUILD}"
-
-# Add directories
-echo Adding directories to pack:
-echo "${PACK_DIRS}"
-echo " "
-for d in ${PACK_DIRS}
-do
-  cp -r --parents "$d" "${PACK_BUILD}"
-done
-
-# Add files
-echo Adding files to pack:
-echo "${PACK_BASE_FILES}"
-echo " "
-if [ ! -x ${PACK_BASE_FILES+x} ]; then
-  for f in ${PACK_BASE_FILES}
-    do
-      cp -f --parents "$f" $PACK_BUILD/
-  done
-fi
-
-# Delete files
-echo Deleting files from pack:
-echo "${PACK_DELETE_FILES}"
-echo " "
-if [ ! -x ${PACK_DELETE_FILES+x} ]; then
-  for f in ${PACK_DELETE_FILES}
-    do
-      find $PACK_BUILD/$(dirname "$f") -name $(basename "$f") -delete
-  done
-fi
-
-# Run Schema Check (for Linux only):
-# sudo apt-get install libxml2-utils
-
-if [ $(uname -s) = "Linux" ]
-  then
-  echo "Running schema check for ${PACK_VENDOR}.${PACK_NAME}.pdsc"
-  xmllint --noout --schema "${CMSIS_TOOLSDIR}/../PACK.xsd" "${PACK_BUILD}/${PACK_VENDOR}.${PACK_NAME}.pdsc"
-  errorlevel=$?
-  if [ $errorlevel -ne 0 ]; then
-    echo "build aborted: Schema check of $PACK_VENDOR.$PACK_NAME.pdsc against PACK.xsd failed"
-    echo " "
-    exit
-  fi
+# Set GEN_PACK_LIB_PATH to use a specific gen-pack library root
+# ... instead of bootstrap based on REQUIRED_GEN_PACK_LIB
+if [[ -f "${GEN_PACK_LIB_PATH}/gen-pack" ]]; then
+  . "${GEN_PACK_LIB}/gen-pack"
 else
-  echo "Use MDK PackInstaller to run schema validation for $PACK_VENDOR.$PACK_NAME.pdsc"
+  . <(curl -sL "https://raw.githubusercontent.com/Open-CMSIS-Pack/gen-pack/main/bootstrap")
 fi
 
-# Run Pack Check and generate PackName file with version
-"${PACKCHK}" "${PACK_BUILD}/${PACK_VENDOR}.${PACK_NAME}.pdsc" \
-  -i "${CMSIS_PACK_ROOT}/.Web/ARM.PSA.pdsc" \
-  -i "${CMSIS_PACK_ROOT}/.Web/Keil.LPC1800_DFP.pdsc" \
-  -i "${CMSIS_PACK_ROOT}/.Web/Keil.LPC4300_DFP.pdsc" \
-  -n PackName.txt
-errorlevel=$?
-if [ $errorlevel -ne 0 ]; then
-  echo "build aborted: pack check failed"
-  echo " "
-  exit
-fi
+gen_pack "${DEFAULT_ARGS[@]}" "$@"
 
-PACKNAME=$(cat PackName.txt)
-rm -rf PackName.txt
-
-# Archiving
-# $ZIP a $PACKNAME
-echo "creating pack file $PACKNAME"
-#if $PACK_WAREHOUSE directory does not exist create it
-if [ ! -d "$PACK_WAREHOUSE" ]; then
-  mkdir -p "$PACK_WAREHOUSE"
-fi
-pushd "$PACK_WAREHOUSE" > /dev/null
-PACK_WAREHOUSE=$(pwd)
-popd  > /dev/null
-pushd "$PACK_BUILD" > /dev/null
-PACK_BUILD=$(pwd)
-"$ZIP" a "$PACK_WAREHOUSE/$PACKNAME" -tzip
-popd  > /dev/null
-errorlevel=$?
-if [ $errorlevel -ne 0 ]; then
-  echo "build aborted: archiving failed"
-  exit
-fi
-
-echo "build of pack succeeded"
-# Clean up
-echo "cleaning up ..."
-
-rm -rf "$PACK_BUILD"
-echo " "
-
-echo Completed CMSIS-Pack Generation: $(date)
+exit 0
