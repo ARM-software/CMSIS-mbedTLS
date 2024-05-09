@@ -13,7 +13,7 @@
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
-    <release version="3.6.0">
+    <release version="3.6.0" date="2024-05-09">
       Updated to mbedTLS V3.6.0
       Added csolution based examples for NXP EVKB-IMXRT1050 Board
       Removed obsolete examples for MCB1800/4300 Board
