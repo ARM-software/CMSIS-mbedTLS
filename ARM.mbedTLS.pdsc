@@ -3,6 +3,13 @@
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
   <description>ARM mbed Cryptographic and SSL/TLS library</description>
+  <license>LICENSE</license>
+  <licenseSets>
+    <licenseSet id="all" default="true" gating="true">
+      <license title="Apache 2.0 license"                       name="LICENSE" spdx="Apache-2.0"/>
+      <license title="GNU General Public License v2.0 or later" name="LICENSE" spdx="GPL-2.0-or-later"/>
+    </licenseSet>
+  </licenseSets>
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
