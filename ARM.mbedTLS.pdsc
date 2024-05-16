@@ -6,8 +6,7 @@
   <license>LICENSE</license>
   <licenseSets>
     <licenseSet id="all" default="true" gating="true">
-      <license title="Apache 2.0 license"                       name="LICENSE" spdx="Apache-2.0"/>
-      <license title="GNU General Public License v2.0 or later" name="LICENSE" spdx="GPL-2.0-or-later"/>
+      <license name="LICENSE" title="Apache 2.0 open-source license" spdx="Apache-2.0"/>
     </licenseSet>
   </licenseSets>
   <!-- web download link -->
