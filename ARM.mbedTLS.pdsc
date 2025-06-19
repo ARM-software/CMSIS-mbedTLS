@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package schemaVersion="1.7.27" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.27/schema/PACK.xsd">
+<package schemaVersion="1.7.45" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.45/schema/PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
   <description>ARM mbed Cryptographic and SSL/TLS library</description>
@@ -12,6 +12,9 @@
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
+    <release version="3.6.3">
+      Updated to mbedTLS V3.6.3
+    </release>
     <release version="3.6.0" date="2024-05-09">
       Updated to mbedTLS V3.6.0
       Added csolution based examples for NXP EVKB-IMXRT1050 Board
@@ -100,11 +103,11 @@
     </condition>
     <condition id="mbed TLS">
       <description>mbed TLS component</description>
-      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.0"/>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.3"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.3">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -113,8 +116,8 @@
         <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
         <file category="include" name="RTE/include/"/>
-        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.6.0"/>
-        <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.6.0"/>
+        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.6.3"/>
+        <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.6.3"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesce.c"/> -->
    <!-- <file category="source"  name="library/aesni.c"/> -->
@@ -228,7 +231,7 @@
         <file category="source"  name="library/x509write_csr.c"/>
       </files>
     </component>
-    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.6.0" condition="mbed TLS">
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.6.3" condition="mbed TLS">
       <description>mbed TLS PSA Crypto</description>
       <RTE_Components_h>
         #define RTE_PSA_API_CRYPTO
