@@ -334,7 +334,7 @@ int mbedtls_net_send (void *ctx, const unsigned char *buf, size_t len) {
  * Gracefully close the connection
  */
 void mbedtls_net_free (mbedtls_net_context *ctx) {
-  if (ctx->fd < 0) {
+  if ((ctx == NULL) || (ctx->fd < 0)) {
     return;
   }
   iotSocketClose (ctx->fd);
