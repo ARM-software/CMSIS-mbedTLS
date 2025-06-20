@@ -1,7 +1,7 @@
 This is an SSL client example running on the MDK-Middleware Network stack.
 
 The code for "ssl_client1.c" is available on:
-https://github.com/ARMmbed/mbedtls/blob/development/programs/ssl/ssl_client1.c
+https://github.com/Mbed-TLS/mbedtls/blob/development/programs/ssl/ssl_client1.c
 
 The only change to the original code is the server name used to establish a connection,
 the rest of the code has not been changed.
