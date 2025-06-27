@@ -73,6 +73,10 @@ PACK_DELETE_FILES="
 #
 PACKCHK_DEPS="
   ARM.PSA.pdsc
+  ARM.CMSIS.pdsc
+  ARM.CMSIS-RTX.pdsc
+  Keil.MDK-Middleware.pdsc
+  MDK-Packs.IoT_Socket.pdsc
   Keil.IMXRT1050-EVKB_BSP.pdsc
 "
 
