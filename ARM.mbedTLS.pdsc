@@ -12,6 +12,9 @@
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
+    <release version="3.6.4">
+      Updated to mbedTLS V3.6.4
+    </release>
     <release version="3.6.3" date="2025-07-03">
       Updated to mbedTLS V3.6.3
     </release>
@@ -103,11 +106,11 @@
     </condition>
     <condition id="mbed TLS">
       <description>mbed TLS component</description>
-      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.3"/>
+      <require Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.4"/>
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.3">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="3.6.4">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -116,7 +119,7 @@
         <file category="doc"     name="apidoc/index.html"/>
         <file category="include" name="include/"/>
         <file category="include" name="RTE/include/"/>
-        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.6.3"/>
+        <file category="header"  name="RTE/configs/mbedTLS_config.h"        attr="config" version="3.6.4"/>
         <file category="header"  name="RTE/configs/mbedTLS_crypto_config.h" attr="config" version="3.6.3"/>
         <file category="source"  name="library/aes.c"/>
    <!-- <file category="source"  name="library/aesce.c"/> -->
@@ -231,7 +234,7 @@
         <file category="source"  name="library/x509write_csr.c"/>
       </files>
     </component>
-    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.6.3" condition="mbed TLS">
+    <component Cclass="PSA" Cgroup="Crypto" Csub="mbed TLS" Capiversion="1.0.0" Cversion="3.6.4" condition="mbed TLS">
       <description>mbed TLS PSA Crypto</description>
       <RTE_Components_h>
         #define RTE_PSA_API_CRYPTO
