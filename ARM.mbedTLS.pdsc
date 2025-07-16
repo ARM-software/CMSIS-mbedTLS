@@ -12,7 +12,7 @@
   <!-- web download link -->
   <url>https://www.keil.com/pack/</url>
   <releases>
-    <release version="3.6.4">
+    <release version="3.6.4" date="2025-07-16">
       Updated to mbedTLS V3.6.4
     </release>
     <release version="3.6.3" date="2025-07-03">
