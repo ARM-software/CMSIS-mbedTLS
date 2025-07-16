@@ -11,7 +11,7 @@
 
 #include "mbedtls/pk.h"
 
-#include "test_certs.h"
+#include "test/test_certs.h"
 
 /*
  *

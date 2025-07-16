@@ -28,26 +28,15 @@
 #define RTE_CMSIS_RTOS2                 /* CMSIS-RTOS2 */
 #define RTE_CMSIS_RTOS2_RTX5            /* CMSIS-RTOS2 Keil RTX5 */
 #define RTE_CMSIS_RTOS2_RTX5_SOURCE     /* CMSIS-RTOS2 Keil RTX5 Source */
-/* ARM::Security:mbed TLS@3.6.3 */
+/* ARM::Security:mbed TLS@3.6.4 */
 #define RTE_Security_mbedTLS            /* Security mbed TLS */
 /* Keil::CMSIS Driver:Ethernet MAC@1.6.0 */
-#define RTE_Drivers_ETH_MAC0            /* Driver ETH_MAC0 */
+#define RTE_Drivers_ETH_MAC0    (1U)    /* Driver ETH_MAC0 */
 /* Keil::CMSIS Driver:Ethernet PHY:KSZ8081RNA@6.3.0 */
 #define RTE_Drivers_PHY_KSZ8081RNA      /* Driver PHY KSZ8081RNA/RND */
-/* Keil::CMSIS Driver:GPIO@1.0.0 */
-#define RTE_Drivers_GPIO0                /* Driver GPIO0 */
 /* Keil::CMSIS Driver:MCI@1.5.0 */
-#define RTE_Drivers_MCI0                /* Driver MCI0 */
-#define RTE_Drivers_MCI1                /* Driver MCI1 */
-/* Keil::CMSIS Driver:USB Device:USB@2.0.0 */
-#define RTE_Drivers_USBD1               /* Driver USBD1 */
-#define RTE_Drivers_USBD2               /* Driver USBD2 */
-/* Keil::CMSIS Driver:USB Host:EHCI&TT@1.0.0 */
-#define RTE_Drivers_USBH_EHCI           /* Driver USBH EHCI */
-#define RTE_Drivers_USBH_EHCI_TT        /* Driver USBH EHCI (TT) */
-/* Keil::CMSIS Driver:USB Host:USB@2.0.0 */
-#define RTE_Drivers_USBH1_EHCI_HW       /* Driver USBH1 EHCI HW */
-#define RTE_Drivers_USBH2_EHCI_HW       /* Driver USBH2 EHCI HW */
+#define RTE_Drivers_MCI0        (1U)    /* Driver MCI0 */
+#define RTE_Drivers_MCI1        (1U)    /* Driver MCI1 */
 /* Keil::CMSIS Driver:VIO:Board&IMXRT1050-EVKB@2.0.0 */
 #define RTE_VIO_BOARD
 #define RTE_VIO_IMXRT1050_EVKB
@@ -70,6 +59,24 @@
 #endif
 #ifndef XIP_BOOT_HEADER_ENABLE
 #define XIP_BOOT_HEADER_ENABLE 1
+#endif
+/* NXP::Device:SDK Drivers:codec@2.3.1 */
+#ifndef SDK_I2C_BASED_COMPONENT_USED
+#define SDK_I2C_BASED_COMPONENT_USED 1
+#endif
+/* NXP::Device:SDK Drivers:codec_i2c@2.1.0 */
+#ifndef SDK_I2C_BASED_COMPONENT_USED
+#define SDK_I2C_BASED_COMPONENT_USED 1
+#endif
+/* NXP::Device:SDK Drivers:wm8960@2.2.2 */
+#ifndef SDK_I2C_BASED_COMPONENT_USED
+#define SDK_I2C_BASED_COMPONENT_USED 1
+#endif
+#ifndef BOARD_USE_CODEC
+#define BOARD_USE_CODEC 1
+#endif
+#ifndef CODEC_WM8960_ENABLE
+#define CODEC_WM8960_ENABLE 
 #endif
 /* NXP::Device:SDK Utilities:serial_manager_uart@1.0.0 */
 #ifndef SERIAL_PORT_TYPE_UART
