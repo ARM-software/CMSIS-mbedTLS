@@ -2,7 +2,7 @@
 <package schemaVersion="1.7.45" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.45/schema/PACK.xsd">
   <vendor>ARM</vendor>
   <name>mbedTLS</name>
-  <description>ARM mbed Cryptographic and SSL/TLS library</description>
+  <description overview="./MDK/docs/Overview.md">Arm Mbed Cryptographic and SSL/TLS Library</description>
   <license>LICENSE</license>
   <licenseSets>
     <licenseSet id="all" default="true" gating="true">
