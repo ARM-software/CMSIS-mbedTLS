@@ -13,9 +13,11 @@
   <url>https://www.keil.com/pack/</url>
   <repository type="git">https://github.com/ARM-software/CMSIS-mbedTLS.git</repository>
   <releases>
-    <release version="4.0.0-dev">
-      Active development ...
+    <release version="4.0.0" date="2026-02-05">
       Updated to mbedTLS V4.0.0
+      Removed RTE configuration files (rely on mbedtls configuration)
+      Removed PSA Crypto mbedTLS component
+      Updated MDK examples (hardware agnostic reference applications)
     </release>
     <release version="3.6.5" date="2025-11-28">
       Updated to mbedTLS V3.6.5
