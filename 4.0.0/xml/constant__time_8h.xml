@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="constant__time_8h" kind="file">
+    <compoundname>constant_time.h</compoundname>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="2238">
+        <label>constant_time.h</label>
+        <link refid="constant_time.h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2239">
+        <label>stddef.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="constant__time_8h_1a2d638a8f166754cfc5eaaaf46550d7ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ct_memcmp</definition>
+        <argsstring>(const void *a, const void *b, size_t n)</argsstring>
+        <name>mbedtls_ct_memcmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constant-time functions Constant-time buffer comparison without branches.</para><para>This is equivalent to the standard memcmp function, but is likely to be compiled to code using bitwise operations rather than a branch, such that the time taken is constant w.r.t. the data pointed to by <computeroutput>a</computeroutput> and <computeroutput>b</computeroutput>, and w.r.t. whether <computeroutput>a</computeroutput> and <computeroutput>b</computeroutput> are equal or not. It is not constant-time w.r.t. <computeroutput>n</computeroutput> .</para><para>This function can be used to write constant-time code by replacing branches with bit operations using masks.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the first buffer, containing at least <computeroutput>n</computeroutput> bytes. May not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the second buffer, containing at least <computeroutput>n</computeroutput> bytes. May not be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to compare.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero if the contents of the two buffers are the same, otherwise non-zero. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/constant_time.h" line="32" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="4"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CONSTANT_TIME_H</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CONSTANT_TIME_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="constant__time_8h_1a2d638a8f166754cfc5eaaaf46550d7ec" kindref="member">mbedtls_ct_memcmp</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*a,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*b,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CONSTANT_TIME_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/constant_time.h"/>
+  </compounddef>
+</doxygen>

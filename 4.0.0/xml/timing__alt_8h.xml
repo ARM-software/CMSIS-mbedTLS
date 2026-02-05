@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="timing__alt_8h" kind="file">
+    <compoundname>timing_alt.h</compoundname>
+    <includedby refid="timing_8h" local="yes">timing.h</includedby>
+    <invincdepgraph>
+      <node id="3810">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="3809">
+        <label>timing_alt.h</label>
+        <link refid="timing_alt.h"/>
+        <childnode refid="3810" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__timing__hr__time" prot="public">mbedtls_timing_hr_time</innerclass>
+    <innerclass refid="structmbedtls__timing__delay__context" prot="public">mbedtls_timing_delay_context</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="timing__alt_8h_1a688ac47be57a010dca9ac30cf2108fd7" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__timing__delay__context" kindref="compound">mbedtls_timing_delay_context</ref></type>
+        <definition>typedef struct mbedtls_timing_delay_context  mbedtls_timing_delay_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_timing_delay_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>timing_alt.h<sp/>with<sp/>dummy<sp/>types<sp/>for<sp/>MBEDTLS_TIMING_ALT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TIMING_ALT_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TIMING_ALT_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structmbedtls__timing__hr__time" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__timing__hr__time" kindref="compound">mbedtls_timing_hr_time</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structmbedtls__timing__hr__time_1a4a5b9a41bd03bc65d87136094690692f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__timing__hr__time_1a4a5b9a41bd03bc65d87136094690692f" kindref="member">dummy</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="structmbedtls__timing__delay__context" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__timing__delay__context" kindref="compound">mbedtls_timing_delay_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structmbedtls__timing__delay__context_1ad525145fd15293144a05cb56690c9126" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__timing__delay__context_1ad525145fd15293144a05cb56690c9126" kindref="member">dummy</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}<sp/><ref refid="timing__alt_8h_1a688ac47be57a010dca9ac30cf2108fd7" kindref="member">mbedtls_timing_delay_context</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>timing_alt.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h"/>
+  </compounddef>
+</doxygen>

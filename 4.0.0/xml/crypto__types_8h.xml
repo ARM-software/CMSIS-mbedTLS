@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__types_8h" kind="file">
+    <compoundname>crypto_types.h</compoundname>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes local="yes">psa/crypto_platform_alt.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="crypto__values_8h" local="no">crypto_values.h</includedby>
+    <includedby refid="crypto_8h" local="yes">crypto.h</includedby>
+    <includedby refid="crypto__extra_8h" local="yes">crypto_extra.h</includedby>
+    <includedby refid="nist__kw_8h" local="yes">nist_kw.h</includedby>
+    <includedby refid="crypto__driver__common_8h" local="yes">crypto_driver_common.h</includedby>
+    <incdepgraph>
+      <node id="3021">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3028">
+        <label>stdint.h</label>
+      </node>
+      <node id="3027">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3024">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3020">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3021" relation="include">
+        </childnode>
+        <childnode refid="3022" relation="include">
+        </childnode>
+        <childnode refid="3023" relation="include">
+        </childnode>
+        <childnode refid="3024" relation="include">
+        </childnode>
+        <childnode refid="3025" relation="include">
+        </childnode>
+      </node>
+      <node id="3025">
+        <label>limits.h</label>
+      </node>
+      <node id="3019">
+        <label>crypto_types.h</label>
+        <link refid="crypto_types.h"/>
+        <childnode refid="3020" relation="include">
+        </childnode>
+        <childnode refid="3026" relation="include">
+        </childnode>
+        <childnode refid="3027" relation="include">
+        </childnode>
+        <childnode refid="3028" relation="include">
+        </childnode>
+      </node>
+      <node id="3026">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3022">
+        <label>/dev/null</label>
+      </node>
+      <node id="3023">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3050">
+        <label>threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3037" relation="include">
+        </childnode>
+      </node>
+      <node id="3030">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3031" relation="include">
+        </childnode>
+        <childnode refid="3038" relation="include">
+        </childnode>
+        <childnode refid="3054" relation="include">
+        </childnode>
+        <childnode refid="3055" relation="include">
+        </childnode>
+        <childnode refid="3056" relation="include">
+        </childnode>
+        <childnode refid="3057" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3060" relation="include">
+        </childnode>
+      </node>
+      <node id="3055">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3054" relation="include">
+        </childnode>
+      </node>
+      <node id="3032">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3033" relation="include">
+        </childnode>
+        <childnode refid="3034" relation="include">
+        </childnode>
+        <childnode refid="3035" relation="include">
+        </childnode>
+        <childnode refid="3036" relation="include">
+        </childnode>
+        <childnode refid="3037" relation="include">
+        </childnode>
+      </node>
+      <node id="3031">
+        <label>bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="3032" relation="include">
+        </childnode>
+      </node>
+      <node id="3047">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="3041">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3044" relation="include">
+        </childnode>
+        <childnode refid="3045" relation="include">
+        </childnode>
+      </node>
+      <node id="3043">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="3051">
+        <label>base64.h</label>
+        <link refid="base64_8h"/>
+      </node>
+      <node id="3067">
+        <label>crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="3065" relation="include">
+        </childnode>
+      </node>
+      <node id="3068">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3048">
+        <label>asn1write.h</label>
+        <link refid="asn1write_8h"/>
+        <childnode refid="3049" relation="include">
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3054">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3037" relation="include">
+        </childnode>
+        <childnode refid="3049" relation="include">
+        </childnode>
+      </node>
+      <node id="3040">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3032" relation="include">
+        </childnode>
+      </node>
+      <node id="3053">
+        <label>pem.h</label>
+        <link refid="pem_8h"/>
+      </node>
+      <node id="3036">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3058">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="3057">
+        <label>error_common.h</label>
+        <link refid="error__common_8h"/>
+        <childnode refid="3058" relation="include">
+        </childnode>
+      </node>
+      <node id="3063">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="3064" relation="include">
+        </childnode>
+      </node>
+      <node id="3069">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="3065" relation="include">
+        </childnode>
+      </node>
+      <node id="3039">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3040" relation="include">
+        </childnode>
+        <childnode refid="3041" relation="include">
+        </childnode>
+      </node>
+      <node id="3029">
+        <label>crypto_types.h</label>
+        <link refid="crypto_types.h"/>
+        <childnode refid="3030" relation="include">
+        </childnode>
+        <childnode refid="3054" relation="include">
+        </childnode>
+        <childnode refid="3055" relation="include">
+        </childnode>
+        <childnode refid="3059" relation="include">
+        </childnode>
+        <childnode refid="3060" relation="include">
+        </childnode>
+      </node>
+      <node id="3056">
+        <label>cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="3040" relation="include">
+        </childnode>
+      </node>
+      <node id="3033">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="3035">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="3049">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="3059">
+        <label>nist_kw.h</label>
+        <link refid="nist__kw_8h"/>
+      </node>
+      <node id="3038">
+        <label>compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3039" relation="include">
+        </childnode>
+        <childnode refid="3046" relation="include">
+        </childnode>
+        <childnode refid="3050" relation="include">
+        </childnode>
+        <childnode refid="3051" relation="include">
+        </childnode>
+        <childnode refid="3052" relation="include">
+        </childnode>
+        <childnode refid="3053" relation="include">
+        </childnode>
+      </node>
+      <node id="3045">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="3062">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="3064">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="3065" relation="include">
+        </childnode>
+      </node>
+      <node id="3061">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto__driver__random_8h"/>
+        <childnode refid="3062" relation="include">
+        </childnode>
+      </node>
+      <node id="3046">
+        <label>asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3041" relation="include">
+        </childnode>
+        <childnode refid="3047" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+        <childnode refid="3048" relation="include">
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+      </node>
+      <node id="3060">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="3061" relation="include">
+        </childnode>
+        <childnode refid="3063" relation="include">
+        </childnode>
+        <childnode refid="3066" relation="include">
+        </childnode>
+        <childnode refid="3068" relation="include">
+        </childnode>
+        <childnode refid="3064" relation="include">
+        </childnode>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3069" relation="include">
+        </childnode>
+      </node>
+      <node id="3052">
+        <label>lms.h</label>
+        <link refid="lms_8h"/>
+      </node>
+      <node id="3042">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3032" relation="include">
+        </childnode>
+        <childnode refid="3043" relation="include">
+        </childnode>
+      </node>
+      <node id="3066">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="3067" relation="include">
+        </childnode>
+      </node>
+      <node id="3034">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3044">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3042" relation="include">
+        </childnode>
+        <childnode refid="3032" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__svc__key__id__t" prot="public">mbedtls_svc_key_id_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t psa_status_t</definition>
+        <argsstring></argsstring>
+        <name>psa_status_t</name>
+        <briefdescription>
+<para>Function return status. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is either <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> (which is zero), indicating success, or a small negative value indicating that an error occurred. Errors are encoded as one of the <computeroutput>PSA_ERROR_xxx</computeroutput> values defined here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t psa_key_type_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_type_t</name>
+        <briefdescription>
+<para>Encoding of a key type. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed by macros called <computeroutput>PSA_KEY_TYPE_xxx</computeroutput>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="71" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_ecc_family_t</definition>
+        <argsstring></argsstring>
+        <name>psa_ecc_family_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of PSA elliptic curve family identifiers.</para><para>Values of this type are generally constructed by macros called <computeroutput>PSA_ECC_FAMILY_xxx</computeroutput>.</para><para>The curve identifier is required to create an ECC key using the <ref refid="group__crypto__types_1ga0b6f5d4d5037c54ffa850d8059c32df0" kindref="member">PSA_KEY_TYPE_ECC_KEY_PAIR()</ref> or <ref refid="group__crypto__types_1gad54c03d3b47020e571a72cd01d978cf2" kindref="member">PSA_KEY_TYPE_ECC_PUBLIC_KEY()</ref> macros.</para><para>Values defined by this standard will never be in the range 0x80-0xff. Vendors who define additional families must use an encoding in this range.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="90" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__crypto__types_1gaf632c5b13aa19c98f8591d4beda8dd1a" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_dh_family_t</definition>
+        <argsstring></argsstring>
+        <name>psa_dh_family_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of PSA Diffie-Hellman group family identifiers.</para><para>Values of this type are generally constructed by macros called <computeroutput>PSA_DH_FAMILY_xxx</computeroutput>.</para><para>The group identifier is required to create a Diffie-Hellman key using the <ref refid="group__crypto__types_1gab4f857c4cd56f5fe65ded421e61bcc8c" kindref="member">PSA_KEY_TYPE_DH_KEY_PAIR()</ref> or <ref refid="group__crypto__types_1gaa22f0f2ea89b929f2fadc19890cc5d5c" kindref="member">PSA_KEY_TYPE_DH_PUBLIC_KEY()</ref> macros.</para><para>Values defined by this standard will never be in the range 0x80-0xff. Vendors who define additional families must use an encoding in this range.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="109" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_algorithm_t</definition>
+        <argsstring></argsstring>
+        <name>psa_algorithm_t</name>
+        <briefdescription>
+<para>Encoding of a cryptographic algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed by macros called <computeroutput>PSA_ALG_xxx</computeroutput>.</para><para>For algorithms that can be applied to multiple key types, this type does not encode the key type. For example, for symmetric ciphers based on a block cipher, <ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref> encodes the block cipher mode and the padding mode while the block cipher itself is encoded via <ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="127" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_lifetime_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_lifetime_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key lifetimes.</para><para>The lifetime of a key indicates where it is stored and what system actions may create and destroy it.</para><para>Lifetime values have the following structure:<itemizedlist>
+<listitem><para>Bits 0-7 (<ref refid="group__key__lifetimes_1ga1679b7e418ba86b312291d689153dd2a" kindref="member">PSA_KEY_LIFETIME_GET_PERSISTENCE</ref>(<computeroutput>lifetime</computeroutput>)): persistence level. This value indicates what device management actions can cause it to be destroyed. In particular, it indicates whether the key is <emphasis>volatile</emphasis> or <emphasis>persistent</emphasis>. See <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref> for more information.</para></listitem><listitem><para>Bits 8-31 (<ref refid="group__key__lifetimes_1ga4bd83feb0ca4853eee26d5394e69a5de" kindref="member">PSA_KEY_LIFETIME_GET_LOCATION</ref>(<computeroutput>lifetime</computeroutput>)): location indicator. This value indicates which part of the system has access to the key material and can perform operations using the key. See <ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref> for more information.</para></listitem></itemizedlist>
+</para><para>Volatile keys are automatically destroyed when the application instance terminates or on a power reset of the device. Persistent keys are preserved until the application explicitly destroys them or until an integration-specific device management event occurs (for example, a factory reset).</para><para>Persistent keys have a key identifier of type <ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref>. This identifier remains valid throughout the lifetime of the key, even if the application instance that created the key terminates. The application can call psa_open_key() to open a persistent key that it created previously.</para><para>The default lifetime of a key is <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>. The lifetime <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref> is supported if persistent storage is available. Other lifetime values may be supported depending on the library configuration.</para><para>Values of this type are generally constructed by macros called <computeroutput>PSA_KEY_LIFETIME_xxx</computeroutput>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="176" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_key_persistence_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_persistence_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key persistence levels.</para><para>What distinguishes different persistence levels is what device management events may cause keys to be destroyed. <emphasis>Volatile</emphasis> keys are destroyed by a power reset. Persistent keys may be destroyed by events such as a transfer of ownership or a factory reset. What management events actually affect persistent keys at different levels is outside the scope of the PSA Cryptography specification.</para><para>The PSA Cryptography specification defines the following values of persistence levels:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput> = <ref refid="group__key__lifetimes_1gaf3d1317436d19a15e7f2be1b9827edfc" kindref="member">PSA_KEY_PERSISTENCE_VOLATILE</ref>: volatile key. A volatile key is automatically destroyed by the implementation when the application instance terminates. In particular, a volatile key is automatically destroyed on a power reset of the device.</para></listitem><listitem><para><computeroutput>1</computeroutput> = <ref refid="group__key__lifetimes_1gafc5d5c94f98e885ae5a2bb789deb4d91" kindref="member">PSA_KEY_PERSISTENCE_DEFAULT</ref>: persistent key with a default lifetime.</para></listitem><listitem><para><computeroutput>2-254</computeroutput>: currently not supported by Mbed TLS.</para></listitem><listitem><para><computeroutput>255</computeroutput> = <ref refid="group__key__lifetimes_1ga6be0f97ba7fb86f626b3fd2b03a1ac79" kindref="member">PSA_KEY_PERSISTENCE_READ_ONLY</ref>: read-only or write-once key. A key with this persistence level cannot be destroyed. Mbed TLS does not currently offer a way to create such keys, but integrations of Mbed TLS can use it for built-in keys that the application cannot modify (for example, a hardware unique key (HUK)).</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Key persistence levels are 8-bit values. Key management interfaces operate on lifetimes (type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) which encode the persistence as the lower 8 bits of a 32-bit value.</para><simplesectsep/><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="212" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_location_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_location_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key location indicators.</para><para>If an integration of Mbed TLS can make calls to external cryptoprocessors such as secure elements, the location of a key indicates which secure element performs the operations on the key. Depending on the design of the secure element, the key material may be stored either in the secure element, or in wrapped (encrypted) form alongside the key metadata in the primary local storage.</para><para>The PSA Cryptography API specification defines the following values of location indicators:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput>: primary local storage. This location is always available. The primary local storage is typically the same storage area that contains the key metadata.</para></listitem><listitem><para><computeroutput>1</computeroutput>: primary secure element. Integrations of Mbed TLS should support this value if there is a secure element attached to the operating environment. As a guideline, secure elements may provide higher resistance against side channel and physical attacks than the primary local storage, but may have restrictions on supported key types, sizes, policies and operations and may have different performance characteristics.</para></listitem><listitem><para><computeroutput>2-0x7fffff</computeroutput>: other locations defined by a PSA specification. The PSA Cryptography API does not currently assign any meaning to these locations, but future versions of that specification or other PSA specifications may do so.</para></listitem><listitem><para><computeroutput>0x800000-0xffffff</computeroutput>: vendor-defined locations. No PSA specification will assign a meaning to locations in this range.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Key location indicators are 24-bit values. Key management interfaces operate on lifetimes (type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) which encode the location as the upper 24 bits of a 32-bit value.</para><simplesectsep/><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="253" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_id_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_id_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of identifiers of persistent keys.</para><para><itemizedlist>
+<listitem><para>Applications may freely choose key identifiers in the range <ref refid="group__key__lifetimes_1ga2b062011d930839695577138858ec136" kindref="member">PSA_KEY_ID_USER_MIN</ref> to <ref refid="group__key__lifetimes_1ga9cb2bf7c6f7abfacccff4fd31dcfd564" kindref="member">PSA_KEY_ID_USER_MAX</ref>.</para></listitem><listitem><para>The implementation may define additional key identifiers in the range <ref refid="group__key__lifetimes_1ga1f7e6d90f523bef964d207c1d3236e0b" kindref="member">PSA_KEY_ID_VENDOR_MIN</ref> to <ref refid="group__key__lifetimes_1ga3afb6bb4644c995cf95309a71e7baeb1" kindref="member">PSA_KEY_ID_VENDOR_MAX</ref>.</para></listitem><listitem><para>0 is reserved as an invalid key identifier.</para></listitem><listitem><para>Key identifiers outside these ranges are reserved for future use.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to how values are allocated must require careful consideration to allow backward compatibility. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="268" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_usage_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_usage_t</name>
+        <briefdescription>
+<para>Encoding of permitted usage on a key. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed as bitwise-ors of macros called <computeroutput>PSA_KEY_USAGE_xxx</computeroutput>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="316" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" prot="public" static="no">
+        <type>struct <ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref></type>
+        <definition>typedef struct psa_key_attributes_s psa_key_attributes_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_attributes_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of a structure containing key attributes.</para><para>This is an opaque structure that can represent the metadata of a key object. Metadata that can be stored in attributes includes:<itemizedlist>
+<listitem><para>The location of the key in storage, indicated by its key identifier and its lifetime.</para></listitem><listitem><para>The key&apos;s policy, comprising usage flags and a specification of the permitted algorithm(s).</para></listitem><listitem><para>Information about the key itself: the key type and its size.</para></listitem><listitem><para>Additional implementation-defined attributes.</para></listitem></itemizedlist>
+</para><para>The actual key material is not considered an attribute of a key. Key attributes do not contain information that is generally considered highly confidential.</para><para>An attribute structure works like a simple data structure where each function <computeroutput>psa_set_key_xxx</computeroutput> sets a field and the corresponding function <computeroutput>psa_get_key_xxx</computeroutput> retrieves the value of the corresponding field. However, a future version of the library may report values that are equivalent to the original one, but have a different encoding. Invalid values may be mapped to different, also invalid values.</para><para>An attribute structure may contain references to auxiliary resources, for example pointers to allocated memory or indirect references to pre-calculated values. In order to free such resources, the application must call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>. As an exception, calling <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref> on an attribute structure is optional if the structure has only been modified by the following functions since it was initialized or last reset with <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>:<itemizedlist>
+<listitem><para><ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref></para></listitem><listitem><para><ref refid="group__attributes_1ga6857ef0ecb3fa844d4536939d9c64025" kindref="member">psa_set_key_type()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gaf61683ac87f87687a40262b5afbfa018" kindref="member">psa_set_key_bits()</ref></para></listitem><listitem><para><ref refid="group__attributes_1ga42a65b3c4522ce9b67ea5ea7720e17de" kindref="member">psa_set_key_usage_flags()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref></para></listitem></itemizedlist>
+</para><para>Before calling any function on a key attribute structure, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;attributes,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(attributes));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes<sp/>=<sp/><ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="group__attributes_1ga06966a8812aacd323ccdf06dbb43667d" kindref="member">psa_key_attributes_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes;</highlight></codeline>
+<codeline><highlight class="normal">attributes<sp/>=<sp/><ref refid="group__attributes_1ga06966a8812aacd323ccdf06dbb43667d" kindref="member">psa_key_attributes_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>A freshly initialized attribute structure contains the following values:</para><para><itemizedlist>
+<listitem><para>lifetime: <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>.</para></listitem><listitem><para>key identifier: 0 (which is not a valid key identifier).</para></listitem><listitem><para>type: <computeroutput>0</computeroutput> (meaning that the type is unspecified).</para></listitem><listitem><para>key size: <computeroutput>0</computeroutput> (meaning that the size is unspecified).</para></listitem><listitem><para>usage flags: <computeroutput>0</computeroutput> (which allows no usage except exporting a public key).</para></listitem><listitem><para>algorithm: <computeroutput>0</computeroutput> (which allows no cryptographic usage, but allows exporting).</para></listitem></itemizedlist>
+</para><para>A typical sequence to create a key is as follows:<orderedlist>
+<listitem><para>Create and initialize an attribute structure.</para></listitem><listitem><para>If the key is persistent, call <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref>. Also call <ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref> to place the key in a non-default location.</para></listitem><listitem><para>Set the key policy with <ref refid="group__attributes_1ga42a65b3c4522ce9b67ea5ea7720e17de" kindref="member">psa_set_key_usage_flags()</ref> and <ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref>.</para></listitem><listitem><para>Set the key type with <ref refid="group__attributes_1ga6857ef0ecb3fa844d4536939d9c64025" kindref="member">psa_set_key_type()</ref>. Skip this step if copying an existing key with <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>.</para></listitem><listitem><para>When generating a random key with <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> or deriving a key with <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>, set the desired key size with <ref refid="group__attributes_1gaf61683ac87f87687a40262b5afbfa018" kindref="member">psa_set_key_bits()</ref>.</para></listitem><listitem><para>Call a key creation function: <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref>, <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>, <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> or <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>. This function reads the attribute structure, creates a key with these attributes, and outputs a key identifier to the newly created key.</para></listitem><listitem><para>The attribute structure is now no longer necessary. You may call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>, although this is optional with the workflow presented here because the attributes currently defined in this specification do not require any additional resources beyond the structure itself.</para></listitem></orderedlist>
+</para><para>A typical sequence to query a key&apos;s attributes is as follows:<orderedlist>
+<listitem><para>Call <ref refid="group__attributes_1gacbbf5c11eac6cd70c87ffb936e1b9be2" kindref="member">psa_get_key_attributes()</ref>.</para></listitem><listitem><para>Call <computeroutput>psa_get_key_xxx</computeroutput> functions to retrieve the attribute(s) that you are interested in.</para></listitem><listitem><para>Call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref> to free any resources that may be used by the attribute structure.</para></listitem></orderedlist>
+</para><para>Once a key has been created, it is impossible to change its attributes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="316" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t psa_key_derivation_step_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_derivation_step_t</name>
+        <briefdescription>
+<para>Encoding of the step of a key derivation. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed by macros called <computeroutput>PSA_KEY_DERIVATION_INPUT_xxx</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="438" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__derivation_1ga34f78d879ae3f1a3ccd8d51bfa9868d8" prot="public" static="no">
+        <type>struct <ref refid="structpsa__custom__key__parameters__s" kindref="compound">psa_custom_key_parameters_s</ref></type>
+        <definition>typedef struct psa_custom_key_parameters_s psa_custom_key_parameters_t</definition>
+        <argsstring></argsstring>
+        <name>psa_custom_key_parameters_t</name>
+        <briefdescription>
+<para>Custom parameters for key generation or key derivation. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a structure type with at least the following field:</para><para><itemizedlist>
+<listitem><para><computeroutput>flags:</computeroutput> an unsigned integer type. 0 for the default production parameters.</para></listitem></itemizedlist>
+</para><para>Functions that take such a structure as input also take an associated input buffer <computeroutput>custom_data</computeroutput> of length <computeroutput>custom_data_length</computeroutput>.</para><para>The interpretation of this structure and the associated <computeroutput>custom_data</computeroutput> parameter depend on the type of the created key.</para><para><itemizedlist>
+<listitem><para><ref refid="group__crypto__types_1ga11745b110166e927e2abeabc7d532051" kindref="member">PSA_KEY_TYPE_RSA_KEY_PAIR</ref>:<itemizedlist>
+<listitem><para><computeroutput>flags:</computeroutput> must be 0.</para></listitem><listitem><para><computeroutput>custom_data:</computeroutput> the public exponent, in little-endian order. This must be an odd integer and must not be 1. Implementations must support 65537, should support 3 and may support other values. When not using a driver, Mbed TLS supports values up to <computeroutput>INT_MAX</computeroutput>. If this is empty, the default value 65537 is used.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Other key types: reserved for future use. <computeroutput>flags</computeroutput> must be 0. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="438" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSA cryptography module: type aliases. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>. Drivers must include the appropriate driver header file.</para></simplesect>
+This file contains portable definitions of integral types for properties of cryptographic keys, designations of cryptographic algorithms, and error codes returned by the library.</para><para>This header file does not declare any function. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="16"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_TYPES_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_TYPES_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>the<sp/>MBEDTLS_PRIVATE<sp/>macro.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_PLATFORM_FILE)</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>MBEDTLS_PSA_CRYPTO_PLATFORM_FILE</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__platform_8h" kindref="compound">crypto_platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">/*<sp/>If<sp/>#PSA_SUCCESS<sp/>is<sp/>already<sp/>defined,<sp/>it<sp/>means<sp/>that<sp/>#psa_status_t</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>is<sp/>also<sp/>defined<sp/>in<sp/>an<sp/>external<sp/>header,<sp/>so<sp/>prevent<sp/>its<sp/>multiple</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>definition.</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_SUCCESS</highlight></codeline>
+<codeline lineno="52" refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="71" refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" kindref="member">psa_ecc_family_t</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="group__crypto__types_1gaf632c5b13aa19c98f8591d4beda8dd1a" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__crypto__types_1gaf632c5b13aa19c98f8591d4beda8dd1a" kindref="member">psa_dh_family_t</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref>;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER)</highlight></codeline>
+<codeline lineno="285"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref>;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="288"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Implementation-specific:<sp/>The<sp/>Mbed<sp/>TLS<sp/>library<sp/>can<sp/>be<sp/>built<sp/>as</highlight></codeline>
+<codeline lineno="289"><highlight class="comment"><sp/>*<sp/>part<sp/>of<sp/>a<sp/>multi-client<sp/>service<sp/>that<sp/>exposes<sp/>the<sp/>PSA<sp/>Cryptography<sp/>API<sp/>in<sp/>each</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/>*<sp/>client<sp/>and<sp/>encodes<sp/>the<sp/>client<sp/>identity<sp/>in<sp/>the<sp/>key<sp/>identifier<sp/>argument<sp/>of</highlight></codeline>
+<codeline lineno="291"><highlight class="comment"><sp/>*<sp/>functions<sp/>such<sp/>as<sp/>psa_open_key().</highlight></codeline>
+<codeline lineno="292"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="structmbedtls__svc__key__id__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="294" refid="structmbedtls__svc__key__id__t_1acb8d5ee503aff9f0203f0470b68effcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref><sp/>MBEDTLS_PRIVATE(key_id);</highlight></codeline>
+<codeline lineno="295" refid="structmbedtls__svc__key__id__t_1ab4d9b3f863dd8b11fa1e635a77ab1d16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref><sp/>MBEDTLS_PRIVATE(owner);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}<sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref>;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="299"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="316" refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425" refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref>;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438" refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>;</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462" refid="group__derivation_1ga34f78d879ae3f1a3ccd8d51bfa9868d8" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__custom__key__parameters__s" kindref="compound">psa_custom_key_parameters_s</ref><sp/><ref refid="structpsa__custom__key__parameters__s" kindref="compound">psa_custom_key_parameters_t</ref>;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="466"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_TYPES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h"/>
+  </compounddef>
+</doxygen>

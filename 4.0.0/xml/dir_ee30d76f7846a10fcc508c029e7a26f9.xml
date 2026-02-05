@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_ee30d76f7846a10fcc508c029e7a26f9" kind="dir">
+    <compoundname>include</compoundname>
+    <innerdir refid="dir_5be53cab6acc006abdffc75cc9efd8f6">mbedtls</innerdir>
+    <innerdir refid="dir_c9218f60c7194638d63f7f6207f7e543">psa</innerdir>
+    <innerdir refid="dir_86b67091aa8b187b450e601b7df0948b">tf-psa-crypto</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/"/>
+  </compounddef>
+</doxygen>

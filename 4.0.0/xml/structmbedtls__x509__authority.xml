@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__authority" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_authority</compoundname>
+    <includes refid="x509_8h" local="no">x509.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__authority_1ae0cd55adecfc25559d43c7ece29172cb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_authority::keyIdentifier</definition>
+        <argsstring></argsstring>
+        <name>keyIdentifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="231" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__authority_1a89ff628b46a710444e310d47273880b4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1gabd52d60a09315854d9ef849d02154f35" kindref="member">mbedtls_x509_sequence</ref></type>
+        <definition>mbedtls_x509_sequence mbedtls_x509_authority::authorityCertIssuer</definition>
+        <argsstring></argsstring>
+        <name>authorityCertIssuer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="232" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__authority_1a4ca7b3909960998f557a277a6ebbee74" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_authority::authorityCertSerialNumber</definition>
+        <argsstring></argsstring>
+        <name>authorityCertSerialNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="233" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__authority_1a25d86d282de1bcb468128e4b9134efc4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_authority::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="234" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="614">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="614" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="615" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="615">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="613">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="614" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="615" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="230" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="230" bodyend="235"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__authority_1a89ff628b46a710444e310d47273880b4" prot="public" virt="non-virtual"><scope>mbedtls_x509_authority</scope><name>authorityCertIssuer</name></member>
+      <member refid="structmbedtls__x509__authority_1a4ca7b3909960998f557a277a6ebbee74" prot="public" virt="non-virtual"><scope>mbedtls_x509_authority</scope><name>authorityCertSerialNumber</name></member>
+      <member refid="structmbedtls__x509__authority_1ae0cd55adecfc25559d43c7ece29172cb" prot="public" virt="non-virtual"><scope>mbedtls_x509_authority</scope><name>keyIdentifier</name></member>
+      <member refid="structmbedtls__x509__authority_1a25d86d282de1bcb468128e4b9134efc4" prot="public" virt="non-virtual"><scope>mbedtls_x509_authority</scope><name>raw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

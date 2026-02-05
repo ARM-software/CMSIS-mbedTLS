@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__lms__parameters__t" kind="struct" prot="public">
+    <compoundname>mbedtls_lms_parameters_t</compoundname>
+    <includes refid="lms_8h" local="no">lms.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__lms__parameters__t_1aa2e8b48ddea1f4578b36d2ef5527f4cf" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lms_parameters_t::private_I_key_identifier[(16u)]</definition>
+        <argsstring>[(16u)]</argsstring>
+        <name>private_I_key_identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="160" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lms__parameters__t_1a52601282ba604e1cbfd903878ece8eb9" prot="public" static="no" mutable="no">
+        <type><ref refid="lms_8h_1a45cdaf82c1d105b436e624d7bf2a6671" kindref="member">mbedtls_lmots_algorithm_type_t</ref></type>
+        <definition>mbedtls_lmots_algorithm_type_t mbedtls_lms_parameters_t::private_otstype</definition>
+        <argsstring></argsstring>
+        <name>private_otstype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LM-OTS key type identifier as per IANA. Only SHA256_N32_W8 is currently supported. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="162" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lms__parameters__t_1afc735e054a716fc28481fb110428cdff" prot="public" static="no" mutable="no">
+        <type><ref refid="lms_8h_1a94374525b9a22d24a240b31ae1f2ba77" kindref="member">mbedtls_lms_algorithm_type_t</ref></type>
+        <definition>mbedtls_lms_algorithm_type_t mbedtls_lms_parameters_t::private_type</definition>
+        <argsstring></argsstring>
+        <name>private_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LMS key type identifier as per IANA. Only SHA256_M32_H10 is currently supported. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="165" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>LMS parameters structure.</para><para>This contains the metadata associated with an LMS key, detailing the algorithm type, the type of the underlying OTS algorithm, and the key ID. </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="159" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="159" bodyend="168"/>
+    <listofallmembers>
+      <member refid="structmbedtls__lms__parameters__t_1aa2e8b48ddea1f4578b36d2ef5527f4cf" prot="public" virt="non-virtual"><scope>mbedtls_lms_parameters_t</scope><name>private_I_key_identifier</name></member>
+      <member refid="structmbedtls__lms__parameters__t_1a52601282ba604e1cbfd903878ece8eb9" prot="public" virt="non-virtual"><scope>mbedtls_lms_parameters_t</scope><name>private_otstype</name></member>
+      <member refid="structmbedtls__lms__parameters__t_1afc735e054a716fc28481fb110428cdff" prot="public" virt="non-virtual"><scope>mbedtls_lms_parameters_t</scope><name>private_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

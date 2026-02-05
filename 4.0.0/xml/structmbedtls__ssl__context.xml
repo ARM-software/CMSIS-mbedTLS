@@ -1,0 +1,1357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__context" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_context</compoundname>
+    <includes refid="ssl_8h" local="no">ssl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1afc02d1df8a57e1f838ad86b2c14033f8" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structmbedtls__ssl__config" kindref="compound">mbedtls_ssl_config</ref> *</type>
+        <definition>const mbedtls_ssl_config* mbedtls_ssl_context::private_conf</definition>
+        <argsstring></argsstring>
+        <name>private_conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>configuration information </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1584" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4b175cb38e9e91d6797d0bebe9bed000" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_state</definition>
+        <argsstring></argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SSL handshake: current state </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1589" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a259aab91b61beec45b2aae7ca5485aed" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_ssl_context::private_flags</definition>
+        <argsstring></argsstring>
+        <name>private_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mask of <computeroutput>MBEDTLS_SSL_CONTEXT_FLAG_XXX</computeroutput>. See <computeroutput>mbedtls_ssl_context_flags_t</computeroutput> in ssl_misc.h.</para><para>This field is not saved by <ref refid="ssl_8h_1a1fa5a82a8c4a33b69578d563e8922dcf" kindref="member">mbedtls_ssl_session_save()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1596" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a85048dfb727179d70edaabf02a29fa6c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_renego_status</definition>
+        <argsstring></argsstring>
+        <name>private_renego_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initial, in progress, pending? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1599" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1640699327bede9a6ef20391c5fbea16" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_renego_records_seen</definition>
+        <argsstring></argsstring>
+        <name>private_renego_records_seen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Records since renego request, or with DTLS, number of retransmissions of request if renego_max_records is &lt; 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1600" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4bfedf4d230f543cfcedf2d5c29004d0" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a40e713ddf44767b6592269e808204c02" kindref="member">mbedtls_ssl_protocol_version</ref></type>
+        <definition>mbedtls_ssl_protocol_version mbedtls_ssl_context::private_tls_version</definition>
+        <argsstring></argsstring>
+        <name>private_tls_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum TLS version to be negotiated, then negotiated TLS version.</para><para>It is initialized as the configured maximum TLS version to be negotiated by <ref refid="ssl_8h_1af79cb539a0ee6ac20cf9c574f4c3b343" kindref="member">mbedtls_ssl_setup()</ref>.</para><para>When renegotiating or resuming a session, it is overwritten in the ClientHello writing preparation stage with the previously negotiated TLS version.</para><para>On client side, it is updated to the TLS version selected by the server for the handshake when the ServerHello is received.</para><para>On server side, it is updated to the TLS version the server selects for the handshake when the ClientHello is received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1621" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a64204cdc018a600f2580748045f61b21" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_early_data_state</definition>
+        <argsstring></argsstring>
+        <name>private_early_data_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>State of the negotiation and transfer of early data. Reset to MBEDTLS_SSL_EARLY_DATA_STATE_IDLE when the context is reset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1628" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1f5626d8a803dd79bdc47c5fac7eb98d" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_ssl_context::private_badmac_seen</definition>
+        <argsstring></argsstring>
+        <name>private_badmac_seen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>records with a bad MAC received </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1631" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a77feadc609e4a3e69702fbaaed669b78" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_ssl_context::private_f_vrfy)(void *, mbedtls_x509_crt *, int, uint32_t *)</definition>
+        <argsstring>)(void *, mbedtls_x509_crt *, int, uint32_t *)</argsstring>
+        <name>private_f_vrfy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to customize X.509 certificate chain verification </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1635" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1aa80dbe7c58ace04e6d9009902b13dde3" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ssl_context::private_p_vrfy</definition>
+        <argsstring></argsstring>
+        <name>private_p_vrfy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>context for X.509 verify callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1636" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1636" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a3a38c3fc33a2a1b35360ab3522dc2e99" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a38e2b400d361f42f85833cdc30b3916e" kindref="member">mbedtls_ssl_send_t</ref> *</type>
+        <definition>mbedtls_ssl_send_t* mbedtls_ssl_context::private_f_send</definition>
+        <argsstring></argsstring>
+        <name>private_f_send</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for network send </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1639" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a062ad3e75391ca9e534fcc8f24885155" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1ac06b19b96b643090c55f19b6c28b10c4" kindref="member">mbedtls_ssl_recv_t</ref> *</type>
+        <definition>mbedtls_ssl_recv_t* mbedtls_ssl_context::private_f_recv</definition>
+        <argsstring></argsstring>
+        <name>private_f_recv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for network receive </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1640" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1acb3df5e0a0e3291fd2850f067bc37c15" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a6d615ca95c8a67d7c5f9d7d256dc09e6" kindref="member">mbedtls_ssl_recv_timeout_t</ref> *</type>
+        <definition>mbedtls_ssl_recv_timeout_t* mbedtls_ssl_context::private_f_recv_timeout</definition>
+        <argsstring></argsstring>
+        <name>private_f_recv_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for network receive with timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1641" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a01b909a3cb88e7abc7faa772a1d77fec" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ssl_context::private_p_bio</definition>
+        <argsstring></argsstring>
+        <name>private_p_bio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>context for I/O operations </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1644" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a49137e211d6e17743ebabe7a7b2cb6fb" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+        <definition>mbedtls_ssl_session* mbedtls_ssl_context::private_session_in</definition>
+        <argsstring></argsstring>
+        <name>private_session_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current session data (in) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1649" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ac93535e6fa6ec67128fdee25823c7347" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+        <definition>mbedtls_ssl_session* mbedtls_ssl_context::private_session_out</definition>
+        <argsstring></argsstring>
+        <name>private_session_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current session data (out) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1650" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a370d3c56da1db90f387814b6077f7271" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+        <definition>mbedtls_ssl_session* mbedtls_ssl_context::private_session</definition>
+        <argsstring></argsstring>
+        <name>private_session</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>negotiated session data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1651" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a09bd5addd514eb1e3944041a15c7456e" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+        <definition>mbedtls_ssl_session* mbedtls_ssl_context::private_session_negotiate</definition>
+        <argsstring></argsstring>
+        <name>private_session_negotiate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>session data in negotiation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1652" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a8c17b93814b7e5c42133cbf4d26807e7" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a5c13e913e3b1de510e5d12c1b0ae9358" kindref="member">mbedtls_ssl_handshake_params</ref> *</type>
+        <definition>mbedtls_ssl_handshake_params* mbedtls_ssl_context::private_handshake</definition>
+        <argsstring></argsstring>
+        <name>private_handshake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>params required only during the handshake process </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1654" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a489e7d56b5447ae1a560f058bb65f8e6" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a265603a8d5d7e22cbe95c9a7588395f6" kindref="member">mbedtls_ssl_transform</ref> *</type>
+        <definition>mbedtls_ssl_transform* mbedtls_ssl_context::private_transform_in</definition>
+        <argsstring></argsstring>
+        <name>private_transform_in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current transform params (in) This is always a reference, never an owning pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1660" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a17c54f9bb7a5fe79526c028997809d11" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a265603a8d5d7e22cbe95c9a7588395f6" kindref="member">mbedtls_ssl_transform</ref> *</type>
+        <definition>mbedtls_ssl_transform* mbedtls_ssl_context::private_transform_out</definition>
+        <argsstring></argsstring>
+        <name>private_transform_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current transform params (out) This is always a reference, never an owning pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1663" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a224defda6e4f2ae3d7c8d97230f28667" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a265603a8d5d7e22cbe95c9a7588395f6" kindref="member">mbedtls_ssl_transform</ref> *</type>
+        <definition>mbedtls_ssl_transform* mbedtls_ssl_context::private_transform</definition>
+        <argsstring></argsstring>
+        <name>private_transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>negotiated transform params This pointer owns the transform it references. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1666" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1fc464c6e2041ff6b090f3feb414c04b" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a265603a8d5d7e22cbe95c9a7588395f6" kindref="member">mbedtls_ssl_transform</ref> *</type>
+        <definition>mbedtls_ssl_transform* mbedtls_ssl_context::private_transform_negotiate</definition>
+        <argsstring></argsstring>
+        <name>private_transform_negotiate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>transform params in negotiation This pointer owns the transform it references. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1670" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ae3b7cb27a0a3edc8f699d17a1fdf2603" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a265603a8d5d7e22cbe95c9a7588395f6" kindref="member">mbedtls_ssl_transform</ref> *</type>
+        <definition>mbedtls_ssl_transform* mbedtls_ssl_context::private_transform_application</definition>
+        <argsstring></argsstring>
+        <name>private_transform_application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The application data transform in TLS 1.3. This pointer owns the transform it references. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1678" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a609fee4f51aad712999ac1c64069d9ac" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ssl_context::private_p_timer</definition>
+        <argsstring></argsstring>
+        <name>private_p_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>context for the timer callbacks </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1684" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4b71ea2d0271757e6ea8b52731e40ea5" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a61c5d9ed63c50ee809eec98820d3f36c" kindref="member">mbedtls_ssl_set_timer_t</ref> *</type>
+        <definition>mbedtls_ssl_set_timer_t* mbedtls_ssl_context::private_f_set_timer</definition>
+        <argsstring></argsstring>
+        <name>private_f_set_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set timer callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1686" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a6ef83e8c55dca83426c679842f1f69cf" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1adea005600b532d788c05e9d01b42895b" kindref="member">mbedtls_ssl_get_timer_t</ref> *</type>
+        <definition>mbedtls_ssl_get_timer_t* mbedtls_ssl_context::private_f_get_timer</definition>
+        <argsstring></argsstring>
+        <name>private_f_get_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get timer callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1687" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a27b10a9bc0a87383c5ded4d72a033789" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_buf</definition>
+        <argsstring></argsstring>
+        <name>private_in_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>input buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1692" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1692" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a6858023a300a8b7c287522622f1bface" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_ctr</definition>
+        <argsstring></argsstring>
+        <name>private_in_ctr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>64-bit incoming message counter TLS: maintained by us DTLS: read from peer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1693" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a6a733ebb4931dea09732fda04ab11a6c" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_hdr</definition>
+        <argsstring></argsstring>
+        <name>private_in_hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start of record header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1696" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ad414dfb7b194055f968d8b5c25b99c59" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_cid</definition>
+        <argsstring></argsstring>
+        <name>private_in_cid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The start of the CID; (the end is marked by in_len). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1698" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1af12b62b213697d52999d72f8bddb6fc3" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_len</definition>
+        <argsstring></argsstring>
+        <name>private_in_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>two-bytes message length field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1701" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1701" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1af4d04ccc710be9becfa8f8b56e6a4f4a" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_iv</definition>
+        <argsstring></argsstring>
+        <name>private_in_iv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ivlen-byte IV </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1702" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1702" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1aba305987419b20d6896128e81dbc48ed" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_msg</definition>
+        <argsstring></argsstring>
+        <name>private_in_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>message contents (in_iv+ivlen) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1703" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a3fd2b7bdcb3172f3ef6c40ce97507bfe" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_in_offt</definition>
+        <argsstring></argsstring>
+        <name>private_in_offt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read offset in application data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1704" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1704" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a2c7d4a67be5d8064b171d15795ebe444" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_in_msgtype</definition>
+        <argsstring></argsstring>
+        <name>private_in_msgtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>record header: message type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1706" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1e19e24168e2f0fb6aed76b264b40462" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_in_msglen</definition>
+        <argsstring></argsstring>
+        <name>private_in_msglen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>record header: message length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1707" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab9db1e0c5340b5242048731f3c2c7635" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_in_left</definition>
+        <argsstring></argsstring>
+        <name>private_in_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>amount of data read so far </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1708" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a3542a77435801d177581f299546b3761" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_in_buf_len</definition>
+        <argsstring></argsstring>
+        <name>private_in_buf_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of input buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1710" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a93f77196aa231ace2fa778c45fc16617" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ssl_context::private_in_epoch</definition>
+        <argsstring></argsstring>
+        <name>private_in_epoch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DTLS epoch for incoming records </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1713" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1af692203ed492a1f36a1bb97b704c8ac0" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_next_record_offset</definition>
+        <argsstring></argsstring>
+        <name>private_next_record_offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>offset of the next record in datagram (equal to in_left if none) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1714" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1714" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1abcda50ea2d8111b062a18393c6bafa3f" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_ssl_context::private_in_window_top</definition>
+        <argsstring></argsstring>
+        <name>private_in_window_top</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>last validated record seq_num </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1718" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1718" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4218e8c42b37739c60965fdbae388d22" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t mbedtls_ssl_context::private_in_window</definition>
+        <argsstring></argsstring>
+        <name>private_in_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>bitmask for replay detection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1719" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1719" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab9b56145260e819da100ed25d884f77d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_in_hslen</definition>
+        <argsstring></argsstring>
+        <name>private_in_hslen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current handshake message length, including the handshake header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1722" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1722" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a935d947a4903b7e868ca91d5f31206f2" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_in_hsfraglen</definition>
+        <argsstring></argsstring>
+        <name>private_in_hsfraglen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>accumulated length of hs fragments (up to in_hslen) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1724" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1724" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a92246b743f43a3f63a06e0cb16d7fb9b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_nb_zero</definition>
+        <argsstring></argsstring>
+        <name>private_nb_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><heading level="1">of 0-length encrypted messages</heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1726" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1726" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4a477b561180a952679a33bd95b1aa6d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_keep_current_message</definition>
+        <argsstring></argsstring>
+        <name>private_keep_current_message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>drop or reuse current message on next call to record layer? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1728" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a372ef18c3d925f8ffbddd848b086d6e8" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_context::private_send_alert</definition>
+        <argsstring></argsstring>
+        <name>private_send_alert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if a fatal alert should be sent. Values:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput> , no alert is to be sent.</para></listitem><listitem><para><computeroutput>1</computeroutput> , alert is to be sent. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1734" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ae5c8b20a9549a589c10f1997e6d43afc" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_context::private_alert_type</definition>
+        <argsstring></argsstring>
+        <name>private_alert_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of alert if send_alert != 0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1738" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1abf00b1b2ad40ca0bd0b7e9a820dec616" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_alert_reason</definition>
+        <argsstring></argsstring>
+        <name>private_alert_reason</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The error code to be returned to the user once the fatal alert has been sent. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1740" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4dcfe6b3de1e746115aac4d10dc426dd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_context::private_disable_datagram_packing</definition>
+        <argsstring></argsstring>
+        <name>private_disable_datagram_packing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable packing multiple records within a single datagram. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1745" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1745" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a912260aa5f6a533dd3b583d0be689f3c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_context::private_discard_early_data_record</definition>
+        <argsstring></argsstring>
+        <name>private_discard_early_data_record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1757" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1757" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ad1d3a02ef9174f6a5136fc8723d8b468" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_ssl_context::private_total_early_data_size</definition>
+        <argsstring></argsstring>
+        <name>private_total_early_data_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of received/written early data bytes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1759" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1759" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ae22ae21abd27fe9dec01347e2a812e57" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_buf</definition>
+        <argsstring></argsstring>
+        <name>private_out_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>output buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1765" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1765" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a5a688b68e10ae665c1096aa90fd35ef2" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_ctr</definition>
+        <argsstring></argsstring>
+        <name>private_out_ctr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>64-bit outgoing message counter </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1766" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1766" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a292909ba4c19a0cc30a96f0c373cd9cc" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_hdr</definition>
+        <argsstring></argsstring>
+        <name>private_out_hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start of record header </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1767" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a485dd8e2c55abdd1929ca30990f5d0a0" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_cid</definition>
+        <argsstring></argsstring>
+        <name>private_out_cid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The start of the CID; (the end is marked by in_len). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1769" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1769" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1ef053951ebe8d07e2222a7308840652" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_len</definition>
+        <argsstring></argsstring>
+        <name>private_out_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>two-bytes message length field </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1772" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1772" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a4c8966b5558e9250f7a9ffd044bc7053" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_iv</definition>
+        <argsstring></argsstring>
+        <name>private_out_iv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ivlen-byte IV </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1773" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1aecbedef1898bf0b628c2c5e29a70f115" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_out_msg</definition>
+        <argsstring></argsstring>
+        <name>private_out_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>message contents (out_iv+ivlen) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1774" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1af2a902a1589a46ec453f4bbce8a6a912" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_out_msgtype</definition>
+        <argsstring></argsstring>
+        <name>private_out_msgtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>record header: message type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1776" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1af7e6865f1c945f0b5af87fdd58427fff" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_out_msglen</definition>
+        <argsstring></argsstring>
+        <name>private_out_msglen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>record header: message length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1777" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a3263e4927c19ab7291999f557f25cf42" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_out_left</definition>
+        <argsstring></argsstring>
+        <name>private_out_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>amount of data not yet written </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1778" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a6550d4cdeeda0a23e97f0f761c6a89f7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_out_buf_len</definition>
+        <argsstring></argsstring>
+        <name>private_out_buf_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of output buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1780" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1780" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a19c6653806e54258af348be79a3b88b1" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_context::private_cur_out_ctr[MBEDTLS_SSL_SEQUENCE_NUMBER_LEN]</definition>
+        <argsstring>[MBEDTLS_SSL_SEQUENCE_NUMBER_LEN]</argsstring>
+        <name>private_cur_out_ctr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Outgoing record sequence number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1783" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1783" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a8414210d9175bfa217a572a827f7c2a6" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ssl_context::private_mtu</definition>
+        <argsstring></argsstring>
+        <name>private_mtu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>path mtu, used to fragment outgoing messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1786" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1786" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab93f9e2e3fcb053aed680558e55fd284" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* mbedtls_ssl_context::private_hostname</definition>
+        <argsstring></argsstring>
+        <name>private_hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>expected peer CN for verification (and SNI if available) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1793" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a81eafe1e1e9c65834b5d783291526fac" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_ssl_context::private_alpn_chosen</definition>
+        <argsstring></argsstring>
+        <name>private_alpn_chosen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>negotiated protocol </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1798" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a83d37d1687e9a96cff602a061aa0b9f5" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a0272d0bb4b40e13ff2641e29da65c754" kindref="member">mbedtls_dtls_srtp_info</ref></type>
+        <definition>mbedtls_dtls_srtp_info mbedtls_ssl_context::private_dtls_srtp_info</definition>
+        <argsstring></argsstring>
+        <name>private_dtls_srtp_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1805" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1805" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1aa4cc855fe575ad0ad21992eec4933de6" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_context::private_cli_id</definition>
+        <argsstring></argsstring>
+        <name>private_cli_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>transport-level ID of the client </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1812" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1812" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a1a72d0f99639b506f59d85054232d8ff" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_cli_id_len</definition>
+        <argsstring></argsstring>
+        <name>private_cli_id_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of cli_id </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1813" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1813" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a96821d061ff5445630a4b881c6d90705" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_context::private_secure_renegotiation</definition>
+        <argsstring></argsstring>
+        <name>private_secure_renegotiation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>does peer support legacy or secure renegotiation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1820" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1820" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a8f09b28f74ca96da07b47c997be05e49" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_context::private_verify_data_len</definition>
+        <argsstring></argsstring>
+        <name>private_verify_data_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of verify data stored </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1823" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1823" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a902b3249f34ee64e079b64a039adbc2b" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_ssl_context::private_own_verify_data[MBEDTLS_SSL_VERIFY_DATA_MAX_LEN]</definition>
+        <argsstring>[MBEDTLS_SSL_VERIFY_DATA_MAX_LEN]</argsstring>
+        <name>private_own_verify_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>previous handshake verify data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1824" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab468d6feb512327f4f47bcffcc1b84df" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_ssl_context::private_peer_verify_data[MBEDTLS_SSL_VERIFY_DATA_MAX_LEN]</definition>
+        <argsstring>[MBEDTLS_SSL_VERIFY_DATA_MAX_LEN]</argsstring>
+        <name>private_peer_verify_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>previous handshake verify data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1825" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab6a1d969374a3c51fd875542b99a3b7b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_context::private_own_cid[MBEDTLS_SSL_CID_IN_LEN_MAX]</definition>
+        <argsstring>[MBEDTLS_SSL_CID_IN_LEN_MAX]</argsstring>
+        <name>private_own_cid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The next incoming CID, chosen by the user and applying to all subsequent handshakes. This may be different from the CID currently used in case the user has re-configured the CID after an initial handshake. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1835" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1835" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ab33dad386d18661ac76f2f1f77e64271" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_context::private_own_cid_len</definition>
+        <argsstring></argsstring>
+        <name>private_own_cid_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of <computeroutput>own_cid</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1836" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a35378e0855bfcc3c9c106b077d2e1657" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_context::private_negotiate_cid</definition>
+        <argsstring></argsstring>
+        <name>private_negotiate_cid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This indicates whether the CID extension should be negotiated in the next handshake or not. Possible values are <ref refid="ssl_8h_1af6ddd5b383634049a49d0b5b56d15446" kindref="member">MBEDTLS_SSL_CID_ENABLED</ref> and <ref refid="ssl_8h_1a288bb09060f3fe4e62907a3e0668fc41" kindref="member">MBEDTLS_SSL_CID_DISABLED</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1837" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1837" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1ad8fc975f15a6fbd5eba836134181f3a3" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a1bd58d7f5591861371f9e481b91bb36a" kindref="member">mbedtls_ssl_export_keys_t</ref> *</type>
+        <definition>mbedtls_ssl_export_keys_t* mbedtls_ssl_context::private_f_export_keys</definition>
+        <argsstring></argsstring>
+        <name>private_f_export_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to export key block and master secret </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1844" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a70f7218dd4fc533b112602bfd10f7aff" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ssl_context::private_p_export_keys</definition>
+        <argsstring></argsstring>
+        <name>private_p_export_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>context for key export callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1845" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__context_1a5826132fedf502cbf2ba8c5628dc26d0" prot="public" static="no" mutable="no">
+        <type><ref refid="unionmbedtls__ssl__user__data__t" kindref="compound">mbedtls_ssl_user_data_t</ref></type>
+        <definition>mbedtls_ssl_user_data_t mbedtls_ssl_context::private_user_data</definition>
+        <argsstring></argsstring>
+        <name>private_user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>User data pointer or handle.</para><para>The library sets this to <computeroutput>0</computeroutput> when creating a context and does not access it afterwards.</para><para><simplesect kind="warning"><para>Serializing and restoring an SSL context with <ref refid="ssl_8h_1abd110552b6306e31617e85d4dffe9e13" kindref="member">mbedtls_ssl_context_save()</ref> and <ref refid="ssl_8h_1a8351242a219e04475cf0f0f871954f12" kindref="member">mbedtls_ssl_context_load()</ref> does not currently restore the user data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1856" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1856" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="573">
+        <label>mbedtls_ssl_tls13_application_secrets</label>
+        <link refid="structmbedtls__ssl__tls13__application__secrets"/>
+      </node>
+      <node id="561">
+        <label>mbedtls_x509_crl_entry</label>
+        <link refid="structmbedtls__x509__crl__entry"/>
+        <childnode refid="561" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>entry_ext</edgelabel>
+        </childnode>
+        <childnode refid="563" relation="usage">
+          <edgelabel>revocation_date</edgelabel>
+        </childnode>
+      </node>
+      <node id="570">
+        <label>mbedtls_ssl_user_data_t</label>
+        <link refid="unionmbedtls__ssl__user__data__t"/>
+      </node>
+      <node id="566">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="566" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="557">
+        <label>mbedtls_ssl_context</label>
+        <link refid="structmbedtls__ssl__context"/>
+        <childnode refid="558" relation="usage">
+          <edgelabel>private_conf</edgelabel>
+        </childnode>
+        <childnode refid="571" relation="usage">
+          <edgelabel>private_dtls_srtp_info</edgelabel>
+        </childnode>
+        <childnode refid="570" relation="usage">
+          <edgelabel>private_user_data</edgelabel>
+        </childnode>
+        <childnode refid="572" relation="usage">
+          <edgelabel>private_session_negotiate</edgelabel>
+          <edgelabel>private_session_in</edgelabel>
+          <edgelabel>private_session</edgelabel>
+          <edgelabel>private_session_out</edgelabel>
+        </childnode>
+      </node>
+      <node id="562">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="569">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="558">
+        <label>mbedtls_ssl_config</label>
+        <link refid="structmbedtls__ssl__config"/>
+        <childnode refid="557" relation="usage">
+          <edgelabel>private_f_cert_cb</edgelabel>
+        </childnode>
+        <childnode refid="559" relation="usage">
+          <edgelabel>private_cert_profile</edgelabel>
+        </childnode>
+        <childnode refid="560" relation="usage">
+          <edgelabel>private_ca_crl</edgelabel>
+        </childnode>
+        <childnode refid="565" relation="usage">
+          <edgelabel>private_f_ca_cb</edgelabel>
+          <edgelabel>private_ca_chain</edgelabel>
+          <edgelabel>private_dn_hints</edgelabel>
+        </childnode>
+        <childnode refid="570" relation="usage">
+          <edgelabel>private_user_data</edgelabel>
+        </childnode>
+        <childnode refid="569" relation="usage">
+          <edgelabel>private_psk_opaque</edgelabel>
+        </childnode>
+      </node>
+      <node id="560">
+        <label>mbedtls_x509_crl</label>
+        <link refid="structmbedtls__x509__crl"/>
+        <childnode refid="561" relation="usage">
+          <edgelabel>entry</edgelabel>
+        </childnode>
+        <childnode refid="560" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="564" relation="usage">
+          <edgelabel>issuer</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>private_sig_oid2</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>crl_ext</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>tbs</edgelabel>
+        </childnode>
+        <childnode refid="563" relation="usage">
+          <edgelabel>next_update</edgelabel>
+          <edgelabel>this_update</edgelabel>
+        </childnode>
+      </node>
+      <node id="565">
+        <label>mbedtls_x509_crt</label>
+        <link refid="structmbedtls__x509__crt"/>
+        <childnode refid="566" relation="usage">
+          <edgelabel>subject_alt_names</edgelabel>
+          <edgelabel>ext_key_usage</edgelabel>
+          <edgelabel>certificate_policies</edgelabel>
+        </childnode>
+        <childnode refid="567" relation="usage">
+          <edgelabel>authority_key_id</edgelabel>
+        </childnode>
+        <childnode refid="564" relation="usage">
+          <edgelabel>issuer</edgelabel>
+          <edgelabel>subject</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>pk_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>v3_ext</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>subject_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>subject_id</edgelabel>
+          <edgelabel>subject_key_id</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="563" relation="usage">
+          <edgelabel>valid_to</edgelabel>
+          <edgelabel>valid_from</edgelabel>
+        </childnode>
+        <childnode refid="565" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="568" relation="usage">
+          <edgelabel>pk</edgelabel>
+        </childnode>
+      </node>
+      <node id="572">
+        <label>mbedtls_ssl_session</label>
+        <link refid="structmbedtls__ssl__session"/>
+        <childnode refid="573" relation="usage">
+          <edgelabel>private_app_secrets</edgelabel>
+        </childnode>
+        <childnode refid="565" relation="usage">
+          <edgelabel>private_peer_cert</edgelabel>
+        </childnode>
+      </node>
+      <node id="571">
+        <label>mbedtls_dtls_srtp_info_t</label>
+        <link refid="structmbedtls__dtls__srtp__info__t"/>
+      </node>
+      <node id="567">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="566" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+      <node id="563">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+      <node id="568">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+        <childnode refid="569" relation="usage">
+          <edgelabel>private_priv_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="564">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="564" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="562" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="559">
+        <label>mbedtls_x509_crt_profile</label>
+        <link refid="structmbedtls__x509__crt__profile"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1583" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1583" bodyend="1857"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__context_1abf00b1b2ad40ca0bd0b7e9a820dec616" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_alert_reason</name></member>
+      <member refid="structmbedtls__ssl__context_1ae5c8b20a9549a589c10f1997e6d43afc" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_alert_type</name></member>
+      <member refid="structmbedtls__ssl__context_1a81eafe1e1e9c65834b5d783291526fac" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_alpn_chosen</name></member>
+      <member refid="structmbedtls__ssl__context_1a1f5626d8a803dd79bdc47c5fac7eb98d" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_badmac_seen</name></member>
+      <member refid="structmbedtls__ssl__context_1aa4cc855fe575ad0ad21992eec4933de6" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_cli_id</name></member>
+      <member refid="structmbedtls__ssl__context_1a1a72d0f99639b506f59d85054232d8ff" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_cli_id_len</name></member>
+      <member refid="structmbedtls__ssl__context_1afc02d1df8a57e1f838ad86b2c14033f8" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_conf</name></member>
+      <member refid="structmbedtls__ssl__context_1a19c6653806e54258af348be79a3b88b1" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_cur_out_ctr</name></member>
+      <member refid="structmbedtls__ssl__context_1a4dcfe6b3de1e746115aac4d10dc426dd" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_disable_datagram_packing</name></member>
+      <member refid="structmbedtls__ssl__context_1a912260aa5f6a533dd3b583d0be689f3c" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_discard_early_data_record</name></member>
+      <member refid="structmbedtls__ssl__context_1a83d37d1687e9a96cff602a061aa0b9f5" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_dtls_srtp_info</name></member>
+      <member refid="structmbedtls__ssl__context_1a64204cdc018a600f2580748045f61b21" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_early_data_state</name></member>
+      <member refid="structmbedtls__ssl__context_1ad8fc975f15a6fbd5eba836134181f3a3" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_export_keys</name></member>
+      <member refid="structmbedtls__ssl__context_1a6ef83e8c55dca83426c679842f1f69cf" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_get_timer</name></member>
+      <member refid="structmbedtls__ssl__context_1a062ad3e75391ca9e534fcc8f24885155" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_recv</name></member>
+      <member refid="structmbedtls__ssl__context_1acb3df5e0a0e3291fd2850f067bc37c15" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_recv_timeout</name></member>
+      <member refid="structmbedtls__ssl__context_1a3a38c3fc33a2a1b35360ab3522dc2e99" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_send</name></member>
+      <member refid="structmbedtls__ssl__context_1a4b71ea2d0271757e6ea8b52731e40ea5" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_set_timer</name></member>
+      <member refid="structmbedtls__ssl__context_1a77feadc609e4a3e69702fbaaed669b78" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_f_vrfy</name></member>
+      <member refid="structmbedtls__ssl__context_1a259aab91b61beec45b2aae7ca5485aed" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_flags</name></member>
+      <member refid="structmbedtls__ssl__context_1a8c17b93814b7e5c42133cbf4d26807e7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_handshake</name></member>
+      <member refid="structmbedtls__ssl__context_1ab93f9e2e3fcb053aed680558e55fd284" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_hostname</name></member>
+      <member refid="structmbedtls__ssl__context_1a27b10a9bc0a87383c5ded4d72a033789" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_buf</name></member>
+      <member refid="structmbedtls__ssl__context_1a3542a77435801d177581f299546b3761" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_buf_len</name></member>
+      <member refid="structmbedtls__ssl__context_1ad414dfb7b194055f968d8b5c25b99c59" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_cid</name></member>
+      <member refid="structmbedtls__ssl__context_1a6858023a300a8b7c287522622f1bface" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_ctr</name></member>
+      <member refid="structmbedtls__ssl__context_1a93f77196aa231ace2fa778c45fc16617" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_epoch</name></member>
+      <member refid="structmbedtls__ssl__context_1a6a733ebb4931dea09732fda04ab11a6c" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_hdr</name></member>
+      <member refid="structmbedtls__ssl__context_1a935d947a4903b7e868ca91d5f31206f2" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_hsfraglen</name></member>
+      <member refid="structmbedtls__ssl__context_1ab9b56145260e819da100ed25d884f77d" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_hslen</name></member>
+      <member refid="structmbedtls__ssl__context_1af4d04ccc710be9becfa8f8b56e6a4f4a" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_iv</name></member>
+      <member refid="structmbedtls__ssl__context_1ab9db1e0c5340b5242048731f3c2c7635" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_left</name></member>
+      <member refid="structmbedtls__ssl__context_1af12b62b213697d52999d72f8bddb6fc3" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_len</name></member>
+      <member refid="structmbedtls__ssl__context_1aba305987419b20d6896128e81dbc48ed" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_msg</name></member>
+      <member refid="structmbedtls__ssl__context_1a1e19e24168e2f0fb6aed76b264b40462" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_msglen</name></member>
+      <member refid="structmbedtls__ssl__context_1a2c7d4a67be5d8064b171d15795ebe444" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_msgtype</name></member>
+      <member refid="structmbedtls__ssl__context_1a3fd2b7bdcb3172f3ef6c40ce97507bfe" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_offt</name></member>
+      <member refid="structmbedtls__ssl__context_1a4218e8c42b37739c60965fdbae388d22" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_window</name></member>
+      <member refid="structmbedtls__ssl__context_1abcda50ea2d8111b062a18393c6bafa3f" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_in_window_top</name></member>
+      <member refid="structmbedtls__ssl__context_1a4a477b561180a952679a33bd95b1aa6d" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_keep_current_message</name></member>
+      <member refid="structmbedtls__ssl__context_1a8414210d9175bfa217a572a827f7c2a6" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_mtu</name></member>
+      <member refid="structmbedtls__ssl__context_1a92246b743f43a3f63a06e0cb16d7fb9b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_nb_zero</name></member>
+      <member refid="structmbedtls__ssl__context_1a35378e0855bfcc3c9c106b077d2e1657" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_negotiate_cid</name></member>
+      <member refid="structmbedtls__ssl__context_1af692203ed492a1f36a1bb97b704c8ac0" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_next_record_offset</name></member>
+      <member refid="structmbedtls__ssl__context_1ae22ae21abd27fe9dec01347e2a812e57" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_buf</name></member>
+      <member refid="structmbedtls__ssl__context_1a6550d4cdeeda0a23e97f0f761c6a89f7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_buf_len</name></member>
+      <member refid="structmbedtls__ssl__context_1a485dd8e2c55abdd1929ca30990f5d0a0" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_cid</name></member>
+      <member refid="structmbedtls__ssl__context_1a5a688b68e10ae665c1096aa90fd35ef2" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_ctr</name></member>
+      <member refid="structmbedtls__ssl__context_1a292909ba4c19a0cc30a96f0c373cd9cc" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_hdr</name></member>
+      <member refid="structmbedtls__ssl__context_1a4c8966b5558e9250f7a9ffd044bc7053" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_iv</name></member>
+      <member refid="structmbedtls__ssl__context_1a3263e4927c19ab7291999f557f25cf42" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_left</name></member>
+      <member refid="structmbedtls__ssl__context_1a1ef053951ebe8d07e2222a7308840652" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_len</name></member>
+      <member refid="structmbedtls__ssl__context_1aecbedef1898bf0b628c2c5e29a70f115" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_msg</name></member>
+      <member refid="structmbedtls__ssl__context_1af7e6865f1c945f0b5af87fdd58427fff" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_msglen</name></member>
+      <member refid="structmbedtls__ssl__context_1af2a902a1589a46ec453f4bbce8a6a912" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_out_msgtype</name></member>
+      <member refid="structmbedtls__ssl__context_1ab6a1d969374a3c51fd875542b99a3b7b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_own_cid</name></member>
+      <member refid="structmbedtls__ssl__context_1ab33dad386d18661ac76f2f1f77e64271" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_own_cid_len</name></member>
+      <member refid="structmbedtls__ssl__context_1a902b3249f34ee64e079b64a039adbc2b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_own_verify_data</name></member>
+      <member refid="structmbedtls__ssl__context_1a01b909a3cb88e7abc7faa772a1d77fec" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_p_bio</name></member>
+      <member refid="structmbedtls__ssl__context_1a70f7218dd4fc533b112602bfd10f7aff" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_p_export_keys</name></member>
+      <member refid="structmbedtls__ssl__context_1a609fee4f51aad712999ac1c64069d9ac" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_p_timer</name></member>
+      <member refid="structmbedtls__ssl__context_1aa80dbe7c58ace04e6d9009902b13dde3" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_p_vrfy</name></member>
+      <member refid="structmbedtls__ssl__context_1ab468d6feb512327f4f47bcffcc1b84df" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_peer_verify_data</name></member>
+      <member refid="structmbedtls__ssl__context_1a1640699327bede9a6ef20391c5fbea16" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_renego_records_seen</name></member>
+      <member refid="structmbedtls__ssl__context_1a85048dfb727179d70edaabf02a29fa6c" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_renego_status</name></member>
+      <member refid="structmbedtls__ssl__context_1a96821d061ff5445630a4b881c6d90705" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_secure_renegotiation</name></member>
+      <member refid="structmbedtls__ssl__context_1a372ef18c3d925f8ffbddd848b086d6e8" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_send_alert</name></member>
+      <member refid="structmbedtls__ssl__context_1a370d3c56da1db90f387814b6077f7271" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_session</name></member>
+      <member refid="structmbedtls__ssl__context_1a49137e211d6e17743ebabe7a7b2cb6fb" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_session_in</name></member>
+      <member refid="structmbedtls__ssl__context_1a09bd5addd514eb1e3944041a15c7456e" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_session_negotiate</name></member>
+      <member refid="structmbedtls__ssl__context_1ac93535e6fa6ec67128fdee25823c7347" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_session_out</name></member>
+      <member refid="structmbedtls__ssl__context_1a4b175cb38e9e91d6797d0bebe9bed000" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_state</name></member>
+      <member refid="structmbedtls__ssl__context_1a4bfedf4d230f543cfcedf2d5c29004d0" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_tls_version</name></member>
+      <member refid="structmbedtls__ssl__context_1ad1d3a02ef9174f6a5136fc8723d8b468" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_total_early_data_size</name></member>
+      <member refid="structmbedtls__ssl__context_1a224defda6e4f2ae3d7c8d97230f28667" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_transform</name></member>
+      <member refid="structmbedtls__ssl__context_1ae3b7cb27a0a3edc8f699d17a1fdf2603" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_transform_application</name></member>
+      <member refid="structmbedtls__ssl__context_1a489e7d56b5447ae1a560f058bb65f8e6" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_transform_in</name></member>
+      <member refid="structmbedtls__ssl__context_1a1fc464c6e2041ff6b090f3feb414c04b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_transform_negotiate</name></member>
+      <member refid="structmbedtls__ssl__context_1a17c54f9bb7a5fe79526c028997809d11" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_transform_out</name></member>
+      <member refid="structmbedtls__ssl__context_1a5826132fedf502cbf2ba8c5628dc26d0" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_user_data</name></member>
+      <member refid="structmbedtls__ssl__context_1a8f09b28f74ca96da07b47c997be05e49" prot="public" virt="non-virtual"><scope>mbedtls_ssl_context</scope><name>private_verify_data_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

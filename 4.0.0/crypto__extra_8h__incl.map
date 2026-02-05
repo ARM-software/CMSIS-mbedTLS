@@ -1,0 +1,7 @@
+<map id="crypto_extra.h" name="crypto_extra.h">
+<area shape="rect" id="node3" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="289,155,397,181"/>
+<area shape="rect" id="node12" href="$crypto__compat_8h.html" title="PSA cryptography module: Backward compatibility aliases. " alt="" coords="327,80,445,107"/>
+<area shape="rect" id="node13" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="190,80,302,107"/>
+<area shape="rect" id="node4" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="269,229,394,271"/>
+<area shape="rect" id="node5" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="5,326,140,353"/>
+</map>

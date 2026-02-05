@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="psa__util_8h" kind="file">
+    <compoundname>psa_util.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="crypto_8h" local="yes">psa/crypto.h</includes>
+    <includes refid="asn1write_8h" local="no">mbedtls/asn1write.h</includes>
+    <incdepgraph>
+      <node id="3542">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3540">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3538" relation="include">
+        </childnode>
+      </node>
+      <node id="3530">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3543">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3538" relation="include">
+        </childnode>
+        <childnode refid="3544" relation="include">
+        </childnode>
+        <childnode refid="3540" relation="include">
+        </childnode>
+      </node>
+      <node id="3550">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3529" relation="include">
+        </childnode>
+      </node>
+      <node id="3547">
+        <label>mbedtls/asn1write.h</label>
+        <link refid="asn1write_8h"/>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3548" relation="include">
+        </childnode>
+      </node>
+      <node id="3535">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3536" relation="include">
+        </childnode>
+        <childnode refid="3537" relation="include">
+        </childnode>
+        <childnode refid="3538" relation="include">
+        </childnode>
+        <childnode refid="3540" relation="include">
+        </childnode>
+        <childnode refid="3541" relation="include">
+        </childnode>
+        <childnode refid="3542" relation="include">
+        </childnode>
+        <childnode refid="3543" relation="include">
+        </childnode>
+        <childnode refid="3545" relation="include">
+        </childnode>
+      </node>
+      <node id="3539">
+        <label>stdint.h</label>
+      </node>
+      <node id="3536">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3533">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3546">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3529">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3530" relation="include">
+        </childnode>
+        <childnode refid="3531" relation="include">
+        </childnode>
+        <childnode refid="3532" relation="include">
+        </childnode>
+        <childnode refid="3533" relation="include">
+        </childnode>
+        <childnode refid="3534" relation="include">
+        </childnode>
+      </node>
+      <node id="3537">
+        <label>stddef.h</label>
+      </node>
+      <node id="3534">
+        <label>limits.h</label>
+      </node>
+      <node id="3538">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3536" relation="include">
+        </childnode>
+        <childnode refid="3539" relation="include">
+        </childnode>
+      </node>
+      <node id="3527">
+        <label>psa_util.h</label>
+        <link refid="psa_util.h"/>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3535" relation="include">
+        </childnode>
+        <childnode refid="3547" relation="include">
+        </childnode>
+      </node>
+      <node id="3541">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3529" relation="include">
+        </childnode>
+      </node>
+      <node id="3552">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3540" relation="include">
+        </childnode>
+      </node>
+      <node id="3545">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3539" relation="include">
+        </childnode>
+        <childnode refid="3546" relation="include">
+        </childnode>
+      </node>
+      <node id="3544">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3549">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3537" relation="include">
+        </childnode>
+        <childnode refid="3550" relation="include">
+        </childnode>
+        <childnode refid="3551" relation="include">
+        </childnode>
+      </node>
+      <node id="3528">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3551">
+        <label>time.h</label>
+      </node>
+      <node id="3548">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3528" relation="include">
+        </childnode>
+        <childnode refid="3529" relation="include">
+        </childnode>
+        <childnode refid="3549" relation="include">
+        </childnode>
+        <childnode refid="3552" relation="include">
+        </childnode>
+        <childnode refid="3537" relation="include">
+        </childnode>
+        <childnode refid="3553" relation="include">
+        </childnode>
+      </node>
+      <node id="3531">
+        <label>/dev/null</label>
+      </node>
+      <node id="3532">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3553">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="psa__util_8h_1a52a3283a6e785a50a6a88b0e6749e01c" prot="public" static="no">
+        <name>MBEDTLS_PSA_RANDOM_STATE</name>
+        <initializer>NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The random generator state for the PSA subsystem.</para><para>This macro always expands to NULL because the <computeroutput>p_rng</computeroutput> parameter is unused in <ref refid="psa__util_8h_1a6245b5c12af4f716bc8a6475158facd1" kindref="member">mbedtls_psa_get_random()</ref>, but it&apos;s kept for interface&apos;s backward compatibility. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="67" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_DER_MAX_SIG_LEN</name>
+        <param><defname>bits</defname></param>
+        <initializer>(/*T,L of SEQUENCE*/ ((bits) &gt;= 61 * 8 ? 3 : 2) +              \
+     /*T,L of r,s*/ 2 * (((bits) &gt;= 127 * 8 ? 3 : 2) +     \
+                         /*V of r,s*/ ((bits) + 8) / 8))</initializer>
+        <briefdescription>
+<para>Maximum size of a DER-encoded ECDSA signature for a given curve bit size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Curve size in bits. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Maximum signature size in bytes.</para></simplesect>
+<simplesect kind="note"><para>This macro returns a compile-time constant if its argument is one. It may evaluate its argument multiple times. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="130" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__psa__tls__helpers_1ga583b1c71be4f47f850e55b2331cf2fbb" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_DER_MAX_LEN</name>
+        <initializer><ref refid="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" kindref="member">MBEDTLS_ECDSA_DER_MAX_SIG_LEN</ref>(<ref refid="crypto__sizes_8h_1a81080a6cbbab87f35b114cb991e3f550" kindref="member">PSA_VENDOR_ECC_MAX_CURVE_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximal size of a DER-encoded ECDSA signature in Bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="136" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="psa__util_8h_1a6245b5c12af4f716bc8a6475158facd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_psa_get_random</definition>
+        <argsstring>(void *p_rng, unsigned char *output, size_t output_size)</argsstring>
+        <name>mbedtls_psa_get_random</name>
+        <param>
+          <type>void *</type>
+          <declname>p_rng</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The random generator function for the PSA subsystem.</para><para>This function is suitable as the <computeroutput>f_rng</computeroutput> random generator function parameter of many <computeroutput>mbedtls_xxx</computeroutput> functions.</para><para>The implementation of this function depends on the configuration of the library.</para><para><simplesect kind="note"><para>This function may only be used if the PSA crypto subsystem is active. This means that you must call <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before any call to this function, and you must not call this function after calling <ref refid="crypto__extra_8h_1a00f4837e0253580c83b4d93ea91aa48b" kindref="member">mbedtls_psa_crypto_free()</ref>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_rng</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is only kept for backward compatibility reasons with legacy <computeroutput>f_rng</computeroutput> functions and it&apos;s ignored. Set to <ref refid="psa__util_8h_1a52a3283a6e785a50a6a88b0e6749e01c" kindref="member">MBEDTLS_PSA_RANDOM_STATE</ref> or NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to fill. It must have room for <computeroutput>output_size</computeroutput> bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to write to <computeroutput>output</computeroutput>. This function may fail if <computeroutput>output_size</computeroutput> is too large. It is guaranteed to accept any output size requested by Mbed TLS library functions. The maximum request size depends on the library configuration.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para>An <computeroutput>MBEDTLS_ERR_ENTROPY_xxx</computeroutput>, <computeroutput>MBEDTLS_ERR_PLATFORM_xxx, </computeroutput>MBEDTLS_ERR_CTR_DRBG_xxx<computeroutput>or </computeroutput>MBEDTLS_ERR_HMAC_DRBG_xxx` on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1gab10d4760c8311a2601e87d26c3ea5405" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t mbedtls_md_psa_alg_from_type</definition>
+        <argsstring>(mbedtls_md_type_t md_type)</argsstring>
+        <name>mbedtls_md_psa_alg_from_type</name>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the PSA algorithm identifier associated with the given digest type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of digest to search for. Must not be NONE.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>If <computeroutput>md_type</computeroutput> is <computeroutput>MBEDTLS_MD_NONE</computeroutput>, this function will not return <computeroutput>PSA_ALG_NONE</computeroutput>, but an invalid algorithm.</para><simplesectsep/><para>This function does not check if the algorithm is supported, it always returns the corresponding identifier.</para></simplesect>
+<simplesect kind="return"><para>The PSA algorithm identifier associated with <computeroutput>md_type</computeroutput>, regardless of whether it is supported or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="87" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="87" bodyend="90"/>
+        <references refid="group__crypto__types_1gafd048e1835b80e6daaff7fddce699757" compoundref="crypto__values_8h" startline="773">PSA_ALG_CATEGORY_HASH</references>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga0fb398139f41ab2978760cbfd20fe11e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>static mbedtls_md_type_t mbedtls_md_type_from_psa_alg</definition>
+        <argsstring>(psa_algorithm_t psa_alg)</argsstring>
+        <name>mbedtls_md_type_from_psa_alg</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>psa_alg</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the given digest type associated with the PSA algorithm identifier. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psa_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PSA algorithm identifier to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>This function does not check if the algorithm is supported, it always returns the corresponding identifier.</para></simplesect>
+<simplesect kind="return"><para>The MD type associated with <computeroutput>psa_alg</computeroutput>, regardless of whether it is supported or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="104" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="104" bodyend="107"/>
+        <references refid="group__crypto__types_1gac41a7077aef55bb20c629c8949d43c57" compoundref="crypto__values_8h" startline="903">PSA_ALG_HASH_MASK</references>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga9295799b5437bdff8ce8abd524c5ef2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_raw_to_der</definition>
+        <argsstring>(size_t bits, const unsigned char *raw, size_t raw_len, unsigned char *der, size_t der_size, size_t *der_len)</argsstring>
+        <name>mbedtls_ecdsa_raw_to_der</name>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>raw_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>der</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>der_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>der_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECDSA signature from raw format to DER ASN.1 format.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of each coordinate in bits. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that contains the signature in raw format. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>raw</computeroutput> in bytes. This must be <ref refid="crypto__sizes_8h_1af2edfe992db358f8eefd4bc82d069592" kindref="member">PSA_BITS_TO_BYTES(bits)</ref> bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">der</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that will be filled with the converted DER output. It can overlap with raw buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>der</computeroutput> in bytes. It is enough if <computeroutput>der_size</computeroutput> is at least the size of the actual output. (The size of the output can vary depending on the presence of leading zeros in the data.) You can use <ref refid="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" kindref="member">MBEDTLS_ECDSA_DER_MAX_SIG_LEN</ref>(<computeroutput>bits</computeroutput>) to determine a size that is large enough for all signatures for a given value of <computeroutput>bits</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">der_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success it contains the amount of valid data (in bytes) written to <computeroutput>der</computeroutput>. It&apos;s undefined in case of failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The behavior is undefined if <computeroutput>der</computeroutput> is null, even if <computeroutput>der_size</computeroutput> is 0.</para></simplesect>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if <computeroutput>der_size</computeroutput> is too small or if <computeroutput>bits</computeroutput> is larger than the largest supported curve. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if one of the numbers in the signature is 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga33b3cf65d5992ccc724b7ee00186ae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_der_to_raw</definition>
+        <argsstring>(size_t bits, const unsigned char *der, size_t der_len, unsigned char *raw, size_t raw_size, size_t *raw_len)</argsstring>
+        <name>mbedtls_ecdsa_der_to_raw</name>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>der</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>der_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>raw_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>raw_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECDSA signature from DER ASN.1 format to raw format.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of each coordinate in bits. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that contains the signature in DER format. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>der</computeroutput> in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that will be filled with the converted raw signature. It can overlap with der buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>raw</computeroutput> in bytes. Must be at least 2 * <ref refid="crypto__sizes_8h_1af2edfe992db358f8eefd4bc82d069592" kindref="member">PSA_BITS_TO_BYTES(bits)</ref> bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">raw_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success it is updated with the amount of valid data (in bytes) written to <computeroutput>raw</computeroutput>. It&apos;s undefined in case of failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if <computeroutput>raw_size</computeroutput> is too small or if <computeroutput>bits</computeroutput> is larger than the largest supported curve. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if the data in <computeroutput>der</computeroutput> is inconsistent with <computeroutput>bits</computeroutput>. </para><simplesectsep/><para>An <computeroutput>MBEDTLS_ERR_ASN1_xxx</computeroutput> error code if <computeroutput>der</computeroutput> is malformed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="192" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility functions for the use of the PSA Crypto library. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PSA_UTIL_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_UTIL_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ASN1<sp/>defines<sp/>used<sp/>in<sp/>the<sp/>ECDSA<sp/>conversion<sp/>functions.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/>Note:<sp/>intentionally<sp/>not<sp/>adding<sp/>MBEDTLS_ASN1_[PARSE|WRITE]_C<sp/>guards<sp/>here</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>otherwise<sp/>error<sp/>codes<sp/>would<sp/>be<sp/>unknown<sp/>in<sp/>test_suite_psa_crypto_util.data.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="asn1write_8h" kindref="compound">mbedtls/asn1write.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="psa__util_8h_1a6245b5c12af4f716bc8a6475158facd1" kindref="member">mbedtls_psa_get_random</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_rng,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="psa__util_8h_1a52a3283a6e785a50a6a88b0e6749e01c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_RANDOM_STATE<sp/><sp/><sp/><sp/>NULL</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="87" refid="group__psa__tls__helpers_1gab10d4760c8311a2601e87d26c3ea5405" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/><ref refid="group__psa__tls__helpers_1gab10d4760c8311a2601e87d26c3ea5405" kindref="member">mbedtls_md_psa_alg_from_type</ref>(<ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_type)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group__crypto__types_1gafd048e1835b80e6daaff7fddce699757" kindref="member">PSA_ALG_CATEGORY_HASH</ref><sp/>|<sp/>(<ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref>)<sp/>md_type;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="group__psa__tls__helpers_1ga0fb398139f41ab2978760cbfd20fe11e" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/><ref refid="group__psa__tls__helpers_1ga0fb398139f41ab2978760cbfd20fe11e" kindref="member">mbedtls_md_type_from_psa_alg</ref>(<ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>psa_alg)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref>)<sp/>(psa_alg<sp/>&amp;<sp/><ref refid="group__crypto__types_1gac41a7077aef55bb20c629c8949d43c57" kindref="member">PSA_ALG_HASH_MASK</ref>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_CLIENT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_HAVE_ALG_SOME_ECDSA)</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="122"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>Ecdsa-Sig-Value<sp/>::=<sp/>SEQUENCE<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r<sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER,</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/><sp/><sp/><sp/><sp/><sp/><sp/>INTEGER</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/>*<sp/>For<sp/>each<sp/>of<sp/>r<sp/>and<sp/>s,<sp/>the<sp/>value<sp/>(V)<sp/>may<sp/>include<sp/>an<sp/>extra<sp/>initial<sp/>&quot;0&quot;<sp/>bit.</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_DER_MAX_SIG_LEN(bits)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(</highlight><highlight class="comment">/*T,L<sp/>of<sp/>SEQUENCE*/</highlight><highlight class="preprocessor"><sp/>((bits)<sp/>&gt;=<sp/>61<sp/>*<sp/>8<sp/>?<sp/>3<sp/>:<sp/>2)<sp/>+<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*T,L<sp/>of<sp/>r,s*/</highlight><highlight class="preprocessor"><sp/>2<sp/>*<sp/>(((bits)<sp/>&gt;=<sp/>127<sp/>*<sp/>8<sp/>?<sp/>3<sp/>:<sp/>2)<sp/>+<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*V<sp/>of<sp/>r,s*/</highlight><highlight class="preprocessor"><sp/>((bits)<sp/>+<sp/>8)<sp/>/<sp/>8))</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="136" refid="group__psa__tls__helpers_1ga583b1c71be4f47f850e55b2331cf2fbb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ECDSA_DER_MAX_LEN<sp/><sp/>MBEDTLS_ECDSA_DER_MAX_SIG_LEN(PSA_VENDOR_ECC_MAX_CURVE_BITS)</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="167"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__psa__tls__helpers_1ga9295799b5437bdff8ce8abd524c5ef2e" kindref="member">mbedtls_ecdsa_raw_to_der</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*raw,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>raw_len,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*der,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>der_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*der_len);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__psa__tls__helpers_1ga33b3cf65d5992ccc724b7ee00186ae61" kindref="member">mbedtls_ecdsa_der_to_raw</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*der,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>der_len,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*raw,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>raw_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*raw_len);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_HAVE_ALG_SOME_ECDSA<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_UTIL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h"/>
+  </compounddef>
+</doxygen>

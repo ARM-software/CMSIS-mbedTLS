@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__compat_8h" kind="file">
+    <compoundname>crypto_compat.h</compoundname>
+    <includedby refid="crypto__extra_8h" local="yes">crypto_extra.h</includedby>
+    <invincdepgraph>
+      <node id="2700">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="2701" relation="include">
+        </childnode>
+      </node>
+      <node id="2704">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2705" relation="include">
+        </childnode>
+        <childnode refid="2706" relation="include">
+        </childnode>
+        <childnode refid="2707" relation="include">
+        </childnode>
+        <childnode refid="2708" relation="include">
+        </childnode>
+        <childnode refid="2709" relation="include">
+        </childnode>
+      </node>
+      <node id="2710">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2711" relation="include">
+        </childnode>
+        <childnode refid="2713" relation="include">
+        </childnode>
+        <childnode refid="2714" relation="include">
+        </childnode>
+      </node>
+      <node id="2712">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2709">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2701">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2702" relation="include">
+        </childnode>
+        <childnode refid="2704" relation="include">
+        </childnode>
+        <childnode refid="2709" relation="include">
+        </childnode>
+        <childnode refid="2715" relation="include">
+        </childnode>
+      </node>
+      <node id="2703">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2704" relation="include">
+        </childnode>
+      </node>
+      <node id="2708">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2702">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="2703" relation="include">
+        </childnode>
+        <childnode refid="2710" relation="include">
+        </childnode>
+      </node>
+      <node id="2705">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2707">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2715">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="2699">
+        <label>crypto_compat.h</label>
+        <link refid="crypto_compat.h"/>
+        <childnode refid="2700" relation="include">
+        </childnode>
+      </node>
+      <node id="2714">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2711">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2704" relation="include">
+        </childnode>
+        <childnode refid="2712" relation="include">
+        </childnode>
+      </node>
+      <node id="2706">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2713">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2711" relation="include">
+        </childnode>
+        <childnode refid="2704" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crypto__compat_8h_1a577562bfbbc691c820d55ec308333138" prot="public" static="no">
+        <name>PSA_KEY_TYPE_DES</name>
+        <initializer>((<ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref>) 0x2301)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h" line="43" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto__compat_8h_1a9bba23a4819caf020f49e2b42889b02d" prot="public" static="no">
+        <name>PSA_ALG_JPAKE_BETA</name>
+        <initializer><ref refid="group__crypto__types_1gabf4bd8a862c2a7ab1e4ed47ca626af2f" kindref="member">PSA_ALG_JPAKE_BASE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The beta encoding of JPAKE algorithms, with no hash.</para><para>This came from the beta version of the PSA Crypto PAKE 1.2 extension, which is what Mbed TLS 3.x implemented. Since TF-PSA-Crypto 1.0.0, we no longer support the beta version of specification, so this algorithm encoding is no longer supported in JPAKE cipher suites. Use <ref refid="group__crypto__types_1gacfe297e290daee2e9b9f74a7baf47cd0" kindref="member">PSA_ALG_JPAKE</ref> instead.</para><para><simplesect kind="note"><para>It is unspecified whether a key with <ref refid="crypto__compat_8h_1a9bba23a4819caf020f49e2b42889b02d" kindref="member">PSA_ALG_JPAKE_BETA</ref> in its policy may be used to perform a JPAKE operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crypto__compat_8h_1adc9d6eb91aa816edd93e167d8b00f208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int psa_can_do_hash</definition>
+        <argsstring>(psa_algorithm_t hash_alg)</argsstring>
+        <name>psa_can_do_hash</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>hash_alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSA cryptography module: Backward compatibility aliases. </para>    </briefdescription>
+    <detaileddescription>
+<para>This header declares alternative names for macro and functions. New application code should not use these names. These names may be removed in a future version of Mbed TLS.</para><para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_COMPAT_H</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_COMPAT_H</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>is<sp/>not<sp/>a<sp/>TF-PSA-Crypto<sp/>API<sp/>and<sp/>may<sp/>be<sp/>removed<sp/>without<sp/>notice.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Dummy<sp/>version<sp/>of<sp/>a<sp/>function<sp/>removed<sp/>in</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>https://github.com/Mbed-TLS/TF-PSA-Crypto/pull/466</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>needs<sp/>to<sp/>remain<sp/>available<sp/>during<sp/>a<sp/>transition<sp/>period</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>sake<sp/>of<sp/>the<sp/>PSA<sp/>simulator,<sp/>which<sp/>lives<sp/>in<sp/>Mbed<sp/>TLS.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>Once<sp/>TF-PSA-Crypto<sp/>no<sp/>longer<sp/>needs<sp/>the<sp/>function,</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>`tests/psa-client-server/psasim/src/psa_sim_crypto_server.c`<sp/>will</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>need<sp/>to<sp/>be<sp/>updated<sp/>to<sp/>no<sp/>longer<sp/>need<sp/>the<sp/>function,<sp/>and<sp/>it<sp/>will<sp/>be</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>possible<sp/>to<sp/>remove<sp/>the<sp/>corresponding<sp/>RPC<sp/>call<sp/>altogether.</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="crypto__compat_8h_1adc9d6eb91aa816edd93e167d8b00f208" kindref="member">psa_can_do_hash</ref>(<ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>hash_alg);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>defition<sp/>is<sp/>required<sp/>to<sp/>provide<sp/>compatibility<sp/>with<sp/>the<sp/>PSA<sp/>arch</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>tests.<sp/>Without<sp/>it<sp/>building<sp/>the<sp/>tests<sp/>will<sp/>fail.<sp/>To<sp/>remove<sp/>it<sp/>we<sp/>would</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/>need<sp/>to<sp/>change<sp/>the<sp/>tests<sp/>to<sp/>remove<sp/>all<sp/>references<sp/>to<sp/>this<sp/>symbol.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="crypto__compat_8h_1a577562bfbbc691c820d55ec308333138" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_TYPE_DES<sp/>((psa_key_type_t)<sp/>0x2301)</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">/*<sp/>TF-PSA-Crypto<sp/>1.x<sp/>still<sp/>supports<sp/>using<sp/>persistent<sp/>keys<sp/>whose<sp/>policy<sp/>uses</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/>this<sp/>legacy<sp/>encoding.<sp/>As<sp/>of<sp/>TF-PSA-Crypto<sp/>1.0.0,<sp/>we<sp/>also<sp/>allow<sp/>this</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>algorithm<sp/>encoding<sp/>in<sp/>the<sp/>policy<sp/>of<sp/>newly<sp/>created<sp/>keys,<sp/>because<sp/>it<sp/>makes</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/>our<sp/>implementation<sp/>simpler.<sp/>This<sp/>may<sp/>change<sp/>without<sp/>notice.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="crypto__compat_8h_1a9bba23a4819caf020f49e2b42889b02d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_ALG_JPAKE_BETA<sp/>PSA_ALG_JPAKE_BASE</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_COMPAT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_compat.h"/>
+  </compounddef>
+</doxygen>

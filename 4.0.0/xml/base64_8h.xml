@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="base64_8h" kind="file">
+    <compoundname>base64.h</compoundname>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="compat-3-crypto_8h" local="yes">mbedtls/compat-3-crypto.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="2058">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2060" relation="include">
+        </childnode>
+      </node>
+      <node id="2052">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2050">
+        <label>base64.h</label>
+        <link refid="base64.h"/>
+        <childnode refid="2051" relation="include">
+        </childnode>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+      </node>
+      <node id="2062">
+        <label>stdint.h</label>
+      </node>
+      <node id="2061">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2055">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2051">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2052" relation="include">
+        </childnode>
+        <childnode refid="2053" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>stddef.h</label>
+      </node>
+      <node id="2056">
+        <label>limits.h</label>
+      </node>
+      <node id="2060">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2051" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2062" relation="include">
+        </childnode>
+      </node>
+      <node id="2057">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="2058" relation="include">
+        </childnode>
+      </node>
+      <node id="2059">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2053">
+        <label>/dev/null</label>
+      </node>
+      <node id="2054">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="base64_8h_1a954f9cf059a6c6be1a3b93480f9a561d" prot="public" static="no">
+        <name>MBEDTLS_ERR_BASE64_INVALID_CHARACTER</name>
+        <initializer>-0x002C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invalid character in input. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h" line="19" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="base64_8h_1a87c42fcb843b964e68015a46aad5bffd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_base64_encode</definition>
+        <argsstring>(unsigned char *dst, size_t dlen, size_t *olen, const unsigned char *src, size_t slen)</argsstring>
+        <name>mbedtls_base64_encode</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dlen</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>slen</declname>
+        </param>
+        <briefdescription>
+<para>Encode a buffer into base64 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the destination buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes written </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of data to be encoded</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or <ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref>. *olen is always updated to reflect the amount of data that has (or would have) been written. If that length cannot be represented, then no data is written to the buffer and *olen is set to the maximum length representable as a size_t.</para></simplesect>
+<simplesect kind="note"><para>Call this function with dlen = 0 to obtain the required buffer size in *olen </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="base64_8h_1a1e8abeb72a244acb346fc4ac3083886c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_base64_decode</definition>
+        <argsstring>(unsigned char *dst, size_t dlen, size_t *olen, const unsigned char *src, size_t slen)</argsstring>
+        <name>mbedtls_base64_decode</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dlen</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>slen</declname>
+        </param>
+        <briefdescription>
+<para>Decode a base64-formatted buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination buffer (can be NULL for checking size) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the destination buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes written </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of data to be decoded</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, <ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref>, or MBEDTLS_ERR_BASE64_INVALID_CHARACTER if the input data is not correct. *olen is always updated to reflect the amount of data that has (or would have) been written.</para></simplesect>
+<simplesect kind="note"><para>Call this function with *dst = NULL or dlen = 0 to obtain the required buffer size in *olen </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="base64_8h_1ab24d0f315da798d7ea412f0e74411cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_base64_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_base64_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if the test failed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>RFC 1521 base64 encoding/decoding. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_BASE64_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_BASE64_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compat-3-crypto_8h" kindref="compound">mbedtls/compat-3-crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="base64_8h_1a954f9cf059a6c6be1a3b93480f9a561d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_BASE64_INVALID_CHARACTER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x002C</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="44"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8h_1a87c42fcb843b964e68015a46aad5bffd" kindref="member">mbedtls_base64_encode</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dlen,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slen);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8h_1a1e8abeb72a244acb346fc4ac3083886c" kindref="member">mbedtls_base64_decode</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dst,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dlen,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>slen);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="base64_8h_1ab24d0f315da798d7ea412f0e74411cd7" kindref="member">mbedtls_base64_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_SELF_TEST<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>base64.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/base64.h"/>
+  </compounddef>
+</doxygen>

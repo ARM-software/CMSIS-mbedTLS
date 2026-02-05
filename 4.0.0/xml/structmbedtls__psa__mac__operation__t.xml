@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__mac__operation__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_mac_operation_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__mac__operation__t_1ab80790ae2a9cce8fd1a38e6ac6ee082a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_psa_mac_operation_t::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="64" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__mac__operation__t_1a9358359f952823813352836fb1b22ddd" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_psa_mac_operation_t::private_dummy</definition>
+        <argsstring></argsstring>
+        <name>private_dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="66" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__mac__operation__t_1a3fc0d74d564b96bbf9d41e52640008a6" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__hmac__operation__t" kindref="compound">mbedtls_psa_hmac_operation_t</ref></type>
+        <definition>mbedtls_psa_hmac_operation_t mbedtls_psa_mac_operation_t::private_hmac</definition>
+        <argsstring></argsstring>
+        <name>private_hmac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="68" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__mac__operation__t_1aedbc4cd106ba86ed99b9ba6dd880ee1d" prot="public" static="no" mutable="no">
+        <type>mbedtls_cipher_context_t</type>
+        <definition>mbedtls_cipher_context_t mbedtls_psa_mac_operation_t::private_cmac</definition>
+        <argsstring></argsstring>
+        <name>private_cmac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="71" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__mac__operation__t_1a581bbff6da65acc1356f2cf89f1c3352" prot="public" static="no" mutable="no">
+        <type>union mbedtls_psa_mac_operation_t::@4</type>
+        <definition>union mbedtls_psa_mac_operation_t::@4  mbedtls_psa_mac_operation_t::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="521">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+      </node>
+      <node id="520">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="521" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="518">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="519" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="519">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="520" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="517">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="518" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="63" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="63" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__mac__operation__t_1ab80790ae2a9cce8fd1a38e6ac6ee082a" prot="public" virt="non-virtual"><scope>mbedtls_psa_mac_operation_t</scope><name>private_alg</name></member>
+      <member refid="structmbedtls__psa__mac__operation__t_1aedbc4cd106ba86ed99b9ba6dd880ee1d" prot="public" virt="non-virtual"><scope>mbedtls_psa_mac_operation_t</scope><name>private_cmac</name></member>
+      <member refid="structmbedtls__psa__mac__operation__t_1a581bbff6da65acc1356f2cf89f1c3352" prot="public" virt="non-virtual"><scope>mbedtls_psa_mac_operation_t</scope><name>private_ctx</name></member>
+      <member refid="structmbedtls__psa__mac__operation__t_1a9358359f952823813352836fb1b22ddd" prot="public" virt="non-virtual"><scope>mbedtls_psa_mac_operation_t</scope><name>private_dummy</name></member>
+      <member refid="structmbedtls__psa__mac__operation__t_1a3fc0d74d564b96bbf9d41e52640008a6" prot="public" virt="non-virtual"><scope>mbedtls_psa_mac_operation_t</scope><name>private_hmac</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

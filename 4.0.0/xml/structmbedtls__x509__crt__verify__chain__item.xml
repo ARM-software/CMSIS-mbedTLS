@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__crt__verify__chain__item" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_crt_verify_chain_item</compoundname>
+    <includes refid="x509__crt_8h" local="no">x509_crt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crt__verify__chain__item_1a3b229878b4329fd0ae80f501fb582757" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+        <definition>mbedtls_x509_crt* mbedtls_x509_crt_verify_chain_item::private_crt</definition>
+        <argsstring></argsstring>
+        <name>private_crt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="250" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__verify__chain__item_1a157c46ba902eb0f390e2f5b172f985ff" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_x509_crt_verify_chain_item::private_flags</definition>
+        <argsstring></argsstring>
+        <name>private_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="251" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Item in a verification chain: cert and flags for it </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="664">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="664" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="665" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="665">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="670">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="663">
+        <label>mbedtls_x509_crt</label>
+        <link refid="structmbedtls__x509__crt"/>
+        <childnode refid="664" relation="usage">
+          <edgelabel>subject_alt_names</edgelabel>
+          <edgelabel>ext_key_usage</edgelabel>
+          <edgelabel>certificate_policies</edgelabel>
+        </childnode>
+        <childnode refid="666" relation="usage">
+          <edgelabel>authority_key_id</edgelabel>
+        </childnode>
+        <childnode refid="667" relation="usage">
+          <edgelabel>issuer</edgelabel>
+          <edgelabel>subject</edgelabel>
+        </childnode>
+        <childnode refid="665" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>pk_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>v3_ext</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>subject_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>subject_id</edgelabel>
+          <edgelabel>subject_key_id</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="668" relation="usage">
+          <edgelabel>valid_to</edgelabel>
+          <edgelabel>valid_from</edgelabel>
+        </childnode>
+        <childnode refid="663" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="669" relation="usage">
+          <edgelabel>pk</edgelabel>
+        </childnode>
+      </node>
+      <node id="666">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="664" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="665" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+      <node id="668">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+      <node id="662">
+        <label>mbedtls_x509_crt_verify_chain_item</label>
+        <link refid="structmbedtls__x509__crt__verify__chain__item"/>
+        <childnode refid="663" relation="usage">
+          <edgelabel>private_crt</edgelabel>
+        </childnode>
+      </node>
+      <node id="669">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+        <childnode refid="670" relation="usage">
+          <edgelabel>private_priv_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="667">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="667" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="665" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="249" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="249" bodyend="252"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crt__verify__chain__item_1a3b229878b4329fd0ae80f501fb582757" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_verify_chain_item</scope><name>private_crt</name></member>
+      <member refid="structmbedtls__x509__crt__verify__chain__item_1a157c46ba902eb0f390e2f5b172f985ff" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_verify_chain_item</scope><name>private_flags</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

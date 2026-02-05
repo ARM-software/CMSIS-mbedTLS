@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__ciphersuite__t" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_ciphersuite_t</compoundname>
+    <includes refid="ssl__ciphersuites_8h" local="no">ssl_ciphersuites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1ad796c86ca44f48aa1c76d07f7c2faf49" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_ciphersuite_t::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="272" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1a07316338ba96d461dd2b59d77ba0c3a7" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* mbedtls_ssl_ciphersuite_t::private_name</definition>
+        <argsstring></argsstring>
+        <name>private_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="273" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1a56c957bba33700423cbec756fb68f3b0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_ciphersuite_t::private_cipher</definition>
+        <argsstring></argsstring>
+        <name>private_cipher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="275" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1af15298a39f6129b0577aa9f10bbd1c3e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_ciphersuite_t::private_mac</definition>
+        <argsstring></argsstring>
+        <name>private_mac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="276" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1ac88c1d8c5ff5a410840a469271c819a8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_ciphersuite_t::private_key_exchange</definition>
+        <argsstring></argsstring>
+        <name>private_key_exchange</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="277" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1ae265285bf2b3ce7f4cc62de96844b402" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbedtls_ssl_ciphersuite_t::private_flags</definition>
+        <argsstring></argsstring>
+        <name>private_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="278" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1a3a613311a5ab33930844c476a59e9199" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ssl_ciphersuite_t::private_min_tls_version</definition>
+        <argsstring></argsstring>
+        <name>private_min_tls_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="280" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ciphersuite__t_1a0977520058a5288eb25f950c5a758643" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_ssl_ciphersuite_t::private_max_tls_version</definition>
+        <argsstring></argsstring>
+        <name>private_max_tls_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="281" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure is used for storing ciphersuite information. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>members are defined using integral types instead of enums in order to pack structure and reduce memory usage by internal <computeroutput>ciphersuite_definitions</computeroutput>[] </para></simplesect>
+</para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="271" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="271" bodyend="282"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1a56c957bba33700423cbec756fb68f3b0" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_cipher</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1ae265285bf2b3ce7f4cc62de96844b402" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_flags</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1ad796c86ca44f48aa1c76d07f7c2faf49" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_id</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1ac88c1d8c5ff5a410840a469271c819a8" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_key_exchange</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1af15298a39f6129b0577aa9f10bbd1c3e" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_mac</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1a0977520058a5288eb25f950c5a758643" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_max_tls_version</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1a3a613311a5ab33930844c476a59e9199" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_min_tls_version</name></member>
+      <member refid="structmbedtls__ssl__ciphersuite__t_1a07316338ba96d461dd2b59d77ba0c3a7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ciphersuite_t</scope><name>private_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

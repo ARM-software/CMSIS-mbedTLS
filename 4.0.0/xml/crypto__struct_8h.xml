@@ -1,0 +1,1427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__struct_8h" kind="file">
+    <compoundname>crypto_struct.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="crypto__driver__contexts__primitives_8h" local="yes">psa/crypto_driver_contexts_primitives.h</includes>
+    <includes refid="crypto__driver__contexts__composites_8h" local="yes">psa/crypto_driver_contexts_composites.h</includes>
+    <includes refid="crypto__driver__contexts__key__derivation_8h" local="yes">psa/crypto_driver_contexts_key_derivation.h</includes>
+    <incdepgraph>
+      <node id="2997">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+      </node>
+      <node id="2986">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3001">
+        <label>mbedtls/private/ripemd160.h</label>
+      </node>
+      <node id="3000">
+        <label>mbedtls/private/md5.h</label>
+      </node>
+      <node id="3010">
+        <label>mbedtls/private/gcm.h</label>
+      </node>
+      <node id="3002">
+        <label>mbedtls/private/sha1.h</label>
+      </node>
+      <node id="3016">
+        <label>psa/crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3017" relation="include">
+        </childnode>
+      </node>
+      <node id="2999">
+        <label>psa/crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3000" relation="include">
+        </childnode>
+        <childnode refid="3001" relation="include">
+        </childnode>
+        <childnode refid="3002" relation="include">
+        </childnode>
+        <childnode refid="3003" relation="include">
+        </childnode>
+        <childnode refid="3004" relation="include">
+        </childnode>
+        <childnode refid="3005" relation="include">
+        </childnode>
+        <childnode refid="3006" relation="include">
+        </childnode>
+      </node>
+      <node id="2994">
+        <label>stdint.h</label>
+      </node>
+      <node id="2996">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2989">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3011">
+        <label>mbedtls/private/ccm.h</label>
+      </node>
+      <node id="2985">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2986" relation="include">
+        </childnode>
+        <childnode refid="2987" relation="include">
+        </childnode>
+        <childnode refid="2988" relation="include">
+        </childnode>
+        <childnode refid="2989" relation="include">
+        </childnode>
+        <childnode refid="2990" relation="include">
+        </childnode>
+      </node>
+      <node id="2993">
+        <label>stddef.h</label>
+      </node>
+      <node id="3008">
+        <label>psa/crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3009" relation="include">
+        </childnode>
+        <childnode refid="3010" relation="include">
+        </childnode>
+        <childnode refid="3011" relation="include">
+        </childnode>
+        <childnode refid="3012" relation="include">
+        </childnode>
+        <childnode refid="3013" relation="include">
+        </childnode>
+        <childnode refid="3014" relation="include">
+        </childnode>
+        <childnode refid="3015" relation="include">
+        </childnode>
+      </node>
+      <node id="2991">
+        <label>psa/crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="2999" relation="include">
+        </childnode>
+      </node>
+      <node id="2990">
+        <label>limits.h</label>
+      </node>
+      <node id="2995">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2996" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+      </node>
+      <node id="2998">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2985" relation="include">
+        </childnode>
+      </node>
+      <node id="3012">
+        <label>mbedtls/private/chachapoly.h</label>
+      </node>
+      <node id="3005">
+        <label>mbedtls/private/sha3.h</label>
+      </node>
+      <node id="3004">
+        <label>mbedtls/private/sha512.h</label>
+      </node>
+      <node id="2984">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3006">
+        <label>mbedtls/private/cipher.h</label>
+      </node>
+      <node id="3007">
+        <label>psa/crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="2992" relation="include">
+        </childnode>
+        <childnode refid="3008" relation="include">
+        </childnode>
+      </node>
+      <node id="3013">
+        <label>mbedtls/private/ecdh.h</label>
+      </node>
+      <node id="2983">
+        <label>crypto_struct.h</label>
+        <link refid="crypto_struct.h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2985" relation="include">
+        </childnode>
+        <childnode refid="2991" relation="include">
+        </childnode>
+        <childnode refid="3007" relation="include">
+        </childnode>
+        <childnode refid="3016" relation="include">
+        </childnode>
+      </node>
+      <node id="3009">
+        <label>mbedtls/private/cmac.h</label>
+      </node>
+      <node id="2987">
+        <label>/dev/null</label>
+      </node>
+      <node id="2992">
+        <label>psa/crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="2993" relation="include">
+        </childnode>
+        <childnode refid="2994" relation="include">
+        </childnode>
+        <childnode refid="2995" relation="include">
+        </childnode>
+        <childnode refid="2997" relation="include">
+        </childnode>
+        <childnode refid="2998" relation="include">
+        </childnode>
+      </node>
+      <node id="2988">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3017">
+        <label>psa/crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2992" relation="include">
+        </childnode>
+      </node>
+      <node id="3003">
+        <label>mbedtls/private/sha256.h</label>
+      </node>
+      <node id="3015">
+        <label>mbedtls/private/ecjpake.h</label>
+      </node>
+      <node id="3014">
+        <label>mbedtls/private/ecdsa.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structpsa__hash__operation__s" prot="public">psa_hash_operation_s</innerclass>
+    <innerclass refid="structpsa__cipher__operation__s" prot="public">psa_cipher_operation_s</innerclass>
+    <innerclass refid="structpsa__mac__operation__s" prot="public">psa_mac_operation_s</innerclass>
+    <innerclass refid="structpsa__aead__operation__s" prot="public">psa_aead_operation_s</innerclass>
+    <innerclass refid="structpsa__key__derivation__s" prot="public">psa_key_derivation_s</innerclass>
+    <innerclass refid="structpsa__custom__key__parameters__s" prot="public">psa_custom_key_parameters_s</innerclass>
+    <innerclass refid="structpsa__key__policy__s" prot="public">psa_key_policy_s</innerclass>
+    <innerclass refid="structpsa__key__attributes__s" prot="public">psa_key_attributes_s</innerclass>
+    <innerclass refid="structpsa__sign__hash__interruptible__operation__s" prot="public">psa_sign_hash_interruptible_operation_s</innerclass>
+    <innerclass refid="structpsa__verify__hash__interruptible__operation__s" prot="public">psa_verify_hash_interruptible_operation_s</innerclass>
+    <innerclass refid="structpsa__key__agreement__iop__s" prot="public">psa_key_agreement_iop_s</innerclass>
+    <innerclass refid="structpsa__generate__key__iop__s" prot="public">psa_generate_key_iop_s</innerclass>
+    <innerclass refid="structpsa__export__public__key__iop__s" prot="public">psa_export_public_key_iop_s</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" prot="public" static="no">
+        <name>PSA_HASH_OPERATION_INIT</name>
+        <initializer>{ 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a hash operation object of type <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ac74804b4466452143112398ec3c7ee6a" compoundref="crypto__struct_8h" startline="82" endline="86">psa_hash_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" prot="public" static="no">
+        <name>PSA_CIPHER_OPERATION_INIT</name>
+        <initializer>{ 0, 0, 0, 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a cipher operation object of type <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="112" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a75d990a3e181f887a018b74e0bc60e7b" compoundref="crypto__struct_8h" startline="114" endline="118">psa_cipher_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group___m_a_c_1ga441b6efc161a4573d06465bd22d9dc2d" prot="public" static="no">
+        <name>PSA_MAC_OPERATION_INIT</name>
+        <initializer>{ 0, 0, 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a MAC operation object of type <ref refid="group___m_a_c_1ga78f0838b0c4e3db28b26355624d4bd37" kindref="member">psa_mac_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="144" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1abfcded7bb17c25237ecd02235f8767cd" compoundref="crypto__struct_8h" startline="146" endline="150">psa_mac_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__aead_1gaf52e036794c0dc6fbadd93a2b990f366" prot="public" static="no">
+        <name>PSA_AEAD_OPERATION_INIT</name>
+        <initializer>{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for an AEAD operation object of type <ref refid="group__aead_1ga14f6a01afbaa8c5b3d8c5d345cbaa3ed" kindref="member">psa_aead_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="183" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a54f6cb8381bd41e9039a261ed85ae074" compoundref="crypto__struct_8h" startline="185" endline="189">psa_aead_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__key__derivation_1ga5bdec40d201551558579a635520ae85d" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_OPERATION_INIT</name>
+        <initializer>{ 0, 0, 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a key derivation operation object of type <ref refid="group__key__derivation_1ga5f099b63799a0959c3d46718c86c2609" kindref="member">psa_key_derivation_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="210" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="210" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a7f9b4b80cc1509da5f4e366d1b023870" compoundref="crypto__struct_8h" startline="212" endline="217">psa_key_derivation_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1a9fb6aa6be3a8aa8d4ad1dfb20cf937f8" prot="public" static="no">
+        <name>PSA_CUSTOM_KEY_PARAMETERS_INIT</name>
+        <initializer>{ 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default production parameters for key generation or key derivation.</para><para>Calling <ref refid="group__random_1ga800e50bf74396f7026bbccf4c92181f8" kindref="member">psa_generate_key_custom()</ref> or <ref refid="group__key__derivation_1ga0fc5273188cdeb7d5235ae01261df913" kindref="member">psa_key_derivation_output_key_custom()</ref> with <computeroutput>custom=PSA_CUSTOM_KEY_PARAMETERS_INIT</computeroutput> and <computeroutput>custom_data_length=0</computeroutput> is equivalent to calling <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> or <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> respectively. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="231" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" prot="public" static="no">
+        <name>PSA_KEY_POLICY_INIT</name>
+        <initializer>{ 0, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="240" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="240" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1afe572489f4e3c6adf0e84af5ae5200e7" compoundref="crypto__struct_8h" startline="241" endline="245">psa_key_policy_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1a04b358641be4a6ce59f2df88014147c2" prot="public" static="no">
+        <name>PSA_KEY_BITS_TOO_LARGE</name>
+        <initializer>((<ref refid="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" kindref="member">psa_key_bits_t</ref>) -1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="252" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="252" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1af61683ac87f87687a40262b5afbfa018" compoundref="crypto__struct_8h" startline="386" endline="394">psa_set_key_bits</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1a97e0e760dc2c9bd201fcc595ce06da1b" prot="public" static="no">
+        <name>PSA_MAX_KEY_BITS</name>
+        <initializer>0xfff8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="258" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="258" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1af61683ac87f87687a40262b5afbfa018" compoundref="crypto__struct_8h" startline="386" endline="394">psa_set_key_bits</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" prot="public" static="no">
+        <name>PSA_KEY_ATTRIBUTES_INIT</name>
+        <initializer>{ <ref refid="group__crypto__types_1gafce7ab2b54ce97ea5bff73f13a9f3e5b" kindref="member">PSA_KEY_TYPE_NONE</ref>, 0,            \
+                                  <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>,       \
+                                  <ref refid="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" kindref="member">PSA_KEY_POLICY_INIT</ref>,             \
+                                  <ref refid="group__key__lifetimes_1ga838f2dc64e670aa69fc4c0b82932f021" kindref="member">MBEDTLS_SVC_KEY_ID_INIT</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a key attribute structure of type <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="279" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="279" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a68f3f03c6a5d98812ddd2d6d9212ee5a" compoundref="crypto__struct_8h" startline="284" endline="288">psa_key_attributes_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" prot="public" static="no">
+        <name>PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT</name>
+        <initializer>{ 0, { 0 }, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="428" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="428" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" compoundref="crypto__struct_8h" startline="432" endline="438">psa_sign_hash_interruptible_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" prot="public" static="no">
+        <name>PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT</name>
+        <initializer>{ 0, { 0 }, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="466" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="466" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" compoundref="crypto__struct_8h" startline="470" endline="476">psa_verify_hash_interruptible_operation_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1a8dafb7579be5c644fb641f0f263016c8" prot="public" static="no">
+        <name>PSA_KEY_AGREEMENT_IOP_INIT</name>
+        <initializer>{ 0, <ref refid="crypto__builtin__composites_8h_1ac24e8dcd9a29a4839a39ab3784635a4f" kindref="member">MBEDTLS_PSA_KEY_AGREEMENT_IOP_INIT</ref>, 0, \
+                                     <ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="504" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="504" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a7812bddc9f8e8b88cb04670df7b03794" compoundref="crypto__struct_8h" startline="509" endline="514">psa_key_agreement_iop_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" prot="public" static="no">
+        <name>PSA_GENERATE_KEY_IOP_INIT</name>
+        <initializer>{ 0, <ref refid="crypto__builtin__composites_8h_1addd4e167cb182e4b479c268f82f89172" kindref="member">MBEDTLS_PSA_GENERATE_KEY_IOP_INIT</ref>, <ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>, \
+                                    0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="542" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="542" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" compoundref="crypto__struct_8h" startline="547" endline="552">psa_generate_key_iop_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="crypto__struct_8h_1acc48e367ecd3ff13ad2e2fe5a8f81069" prot="public" static="no">
+        <name>PSA_EXPORT_PUBLIC_KEY_IOP_INIT</name>
+        <initializer>{ 0, <ref refid="crypto__builtin__composites_8h_1a00d3b07ed21fb9402fbda09424056c91" kindref="member">MBEDTLS_PSA_EXPORT_PUBLIC_KEY_IOP_INIT</ref>, 0, 0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="579" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="579" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ad648ec7688a906bc792b658adebd4890" compoundref="crypto__struct_8h" startline="583" endline="588">psa_export_public_key_iop_init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="crypto__struct_8h_1af553efd409845b6d09ff25ce2ba36607" prot="public" static="no">
+        <type>struct <ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref></type>
+        <definition>typedef struct psa_key_policy_s psa_key_policy_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_policy_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t psa_key_bits_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_bits_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="249" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crypto__struct_8h_1ac74804b4466452143112398ec3c7ee6a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_s</ref></type>
+        <definition>static struct psa_hash_operation_s psa_hash_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_hash_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="82" bodyend="86"/>
+        <references refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" compoundref="crypto__struct_8h" startline="80">PSA_HASH_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a75d990a3e181f887a018b74e0bc60e7b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_s</ref></type>
+        <definition>static struct psa_cipher_operation_s psa_cipher_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_cipher_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="114" bodyend="118"/>
+        <references refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" compoundref="crypto__struct_8h" startline="112">PSA_CIPHER_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1abfcded7bb17c25237ecd02235f8767cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__mac__operation__s" kindref="compound">psa_mac_operation_s</ref></type>
+        <definition>static struct psa_mac_operation_s psa_mac_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_mac_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="146" bodyend="150"/>
+        <references refid="group___m_a_c_1ga441b6efc161a4573d06465bd22d9dc2d" compoundref="crypto__struct_8h" startline="144">PSA_MAC_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a54f6cb8381bd41e9039a261ed85ae074" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__aead__operation__s" kindref="compound">psa_aead_operation_s</ref></type>
+        <definition>static struct psa_aead_operation_s psa_aead_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_aead_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="185" bodyend="189"/>
+        <references refid="group__aead_1gaf52e036794c0dc6fbadd93a2b990f366" compoundref="crypto__struct_8h" startline="183">PSA_AEAD_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a7f9b4b80cc1509da5f4e366d1b023870" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__key__derivation__s" kindref="compound">psa_key_derivation_s</ref></type>
+        <definition>static struct psa_key_derivation_s psa_key_derivation_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_key_derivation_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="212" bodyend="217"/>
+        <references refid="group__key__derivation_1ga5bdec40d201551558579a635520ae85d" compoundref="crypto__struct_8h" startline="210">PSA_KEY_DERIVATION_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1afe572489f4e3c6adf0e84af5ae5200e7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref></type>
+        <definition>static struct psa_key_policy_s psa_key_policy_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_key_policy_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="241" bodyend="245"/>
+        <references refid="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" compoundref="crypto__struct_8h" startline="240">PSA_KEY_POLICY_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a68f3f03c6a5d98812ddd2d6d9212ee5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref></type>
+        <definition>static struct psa_key_attributes_s psa_key_attributes_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_key_attributes_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="249" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="284" bodyend="288"/>
+        <references refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" compoundref="crypto__struct_8h" startline="279">PSA_KEY_ATTRIBUTES_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_id</definition>
+        <argsstring>(psa_key_attributes_t *attributes, mbedtls_svc_key_id_t key)</argsstring>
+        <name>psa_set_key_id</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="290" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="290" bodyend="303"/>
+        <references refid="group__key__lifetimes_1gaef4d244b4d33ae7876ed87226b8112aa" compoundref="crypto__values_8h" startline="2380">PSA_KEY_LIFETIME_FROM_PERSISTENCE_AND_LOCATION</references>
+        <references refid="group__key__lifetimes_1ga4bd83feb0ca4853eee26d5394e69a5de" compoundref="crypto__values_8h" startline="2327">PSA_KEY_LIFETIME_GET_LOCATION</references>
+        <references refid="group__key__lifetimes_1ga63d63adbfc947cab4dee4f4b39e840a1" compoundref="crypto__values_8h" startline="2346">PSA_KEY_LIFETIME_IS_VOLATILE</references>
+        <references refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" compoundref="crypto__values_8h" startline="2304">PSA_KEY_LIFETIME_PERSISTENT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1afd8a339ef75f9ec0f72c97edfc99a2a4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+        <definition>static mbedtls_svc_key_id_t psa_get_key_id</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_id</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="305" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="305" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a72dc358ef6ceadc0d1ed1df807f0fce8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbedtls_set_key_owner_id</definition>
+        <argsstring>(psa_key_attributes_t *attributes, mbedtls_key_owner_id_t owner)</argsstring>
+        <name>mbedtls_set_key_owner_id</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="312" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="312" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ac03ccf09ca6d36cc3d5b43f8303db6f7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_lifetime</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_lifetime_t lifetime)</argsstring>
+        <name>psa_set_key_lifetime</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref></type>
+          <declname>lifetime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="319" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="319" bodyend="330"/>
+        <references refid="group__key__lifetimes_1ga63d63adbfc947cab4dee4f4b39e840a1" compoundref="crypto__values_8h" startline="2346">PSA_KEY_LIFETIME_IS_VOLATILE</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a9ea8eae1b81e480cc56dec858859aff9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref></type>
+        <definition>static psa_key_lifetime_t psa_get_key_lifetime</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_lifetime</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="332" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="332" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_extend_key_usage_flags</definition>
+        <argsstring>(psa_key_usage_t *usage_flags)</argsstring>
+        <name>psa_extend_key_usage_flags</name>
+        <param>
+          <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref> *</type>
+          <declname>usage_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="338" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="338" bodyend="347"/>
+        <references refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" compoundref="crypto__values_8h" startline="2615">PSA_KEY_USAGE_SIGN_HASH</references>
+        <references refid="group__policy_1ga552117ac92b79500cae87d4e65a85c54" compoundref="crypto__values_8h" startline="2595">PSA_KEY_USAGE_SIGN_MESSAGE</references>
+        <references refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" compoundref="crypto__values_8h" startline="2625">PSA_KEY_USAGE_VERIFY_HASH</references>
+        <references refid="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" compoundref="crypto__values_8h" startline="2605">PSA_KEY_USAGE_VERIFY_MESSAGE</references>
+        <referencedby refid="crypto__struct_8h_1a42a65b3c4522ce9b67ea5ea7720e17de" compoundref="crypto__struct_8h" startline="349" endline="354">psa_set_key_usage_flags</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a42a65b3c4522ce9b67ea5ea7720e17de" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_usage_flags</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_usage_t usage_flags)</argsstring>
+        <name>psa_set_key_usage_flags</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+          <declname>usage_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="349" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="349" bodyend="354"/>
+        <references refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" compoundref="crypto__struct_8h" startline="338" endline="347">psa_extend_key_usage_flags</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1aa1af20f142ca722222c6d98678a0c448" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+        <definition>static psa_key_usage_t psa_get_key_usage_flags</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_usage_flags</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="356" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="356" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1aeb8341ca52baa0279475ea3fd3bcdc98" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_algorithm</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_algorithm_t alg)</argsstring>
+        <name>psa_set_key_algorithm</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="362" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="362" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ac255da850a00bbed925390044f016b34" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t psa_get_key_algorithm</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_algorithm</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="368" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="368" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a6857ef0ecb3fa844d4536939d9c64025" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_type</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_type_t type)</argsstring>
+        <name>psa_set_key_type</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="374" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="374" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ae4fb812af4f57aa1ad85e335a865b918" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+        <definition>static psa_key_type_t psa_get_key_type</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_type</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="380" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="380" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1af61683ac87f87687a40262b5afbfa018" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_bits</definition>
+        <argsstring>(psa_key_attributes_t *attributes, size_t bits)</argsstring>
+        <name>psa_set_key_bits</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="386" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="386" bodyend="394"/>
+        <references refid="crypto__struct_8h_1a04b358641be4a6ce59f2df88014147c2" compoundref="crypto__struct_8h" startline="252">PSA_KEY_BITS_TOO_LARGE</references>
+        <references refid="crypto__struct_8h_1a97e0e760dc2c9bd201fcc595ce06da1b" compoundref="crypto__struct_8h" startline="258">PSA_MAX_KEY_BITS</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a5bee85c2164ad3d4c0d42501241eeb06" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t psa_get_key_bits</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_bits</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="396" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_s</ref></type>
+        <definition>static struct psa_sign_hash_interruptible_operation_s psa_sign_hash_interruptible_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_sign_hash_interruptible_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="432" bodyend="438"/>
+        <references refid="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" compoundref="crypto__struct_8h" startline="428">PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_s</ref></type>
+        <definition>static struct psa_verify_hash_interruptible_operation_s psa_verify_hash_interruptible_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_verify_hash_interruptible_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="470" bodyend="476"/>
+        <references refid="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" compoundref="crypto__struct_8h" startline="466">PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1a7812bddc9f8e8b88cb04670df7b03794" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__key__agreement__iop__s" kindref="compound">psa_key_agreement_iop_s</ref></type>
+        <definition>static struct psa_key_agreement_iop_s psa_key_agreement_iop_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_key_agreement_iop_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="509" bodyend="514"/>
+        <references refid="crypto__struct_8h_1a8dafb7579be5c644fb641f0f263016c8" compoundref="crypto__struct_8h" startline="504">PSA_KEY_AGREEMENT_IOP_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_s</ref></type>
+        <definition>static struct psa_generate_key_iop_s psa_generate_key_iop_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_generate_key_iop_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="547" bodyend="552"/>
+        <references refid="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" compoundref="crypto__struct_8h" startline="542">PSA_GENERATE_KEY_IOP_INIT</references>
+      </memberdef>
+      <memberdef kind="function" id="crypto__struct_8h_1ad648ec7688a906bc792b658adebd4890" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpsa__export__public__key__iop__s" kindref="compound">psa_export_public_key_iop_s</ref></type>
+        <definition>static struct psa_export_public_key_iop_s psa_export_public_key_iop_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_export_public_key_iop_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="396" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="583" bodyend="588"/>
+        <references refid="crypto__struct_8h_1acc48e367ecd3ff13ad2e2fe5a8f81069" compoundref="crypto__struct_8h" startline="579">PSA_EXPORT_PUBLIC_KEY_IOP_INIT</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSA cryptography module: Mbed TLS structured type implementations. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>.</para></simplesect>
+This file contains the definitions of some data structures with implementation-specific definitions.</para><para>In implementations with isolation between the application and the cryptography module, it is expected that the front-end and the back-end would have different versions of this file.</para><para><heading level="3">Design notes about multipart operation structures</heading>
+</para><para>For multipart operations without driver delegation support, each multipart operation structure contains a <computeroutput>psa_algorithm_t alg</computeroutput> field which indicates which specific algorithm the structure is for. When the structure is not in use, <computeroutput>alg</computeroutput> is 0. Most of the structure consists of a union which is discriminated by <computeroutput>alg</computeroutput>.</para><para>For multipart operations with driver delegation support, each multipart operation structure contains an <computeroutput>unsigned int id</computeroutput> field indicating which driver got assigned to do the operation. When the structure is not in use, &apos;id&apos; is 0. The structure contains also a driver context which is the union of the contexts of all drivers able to handle the type of multipart operation.</para><para>Note that when <computeroutput>alg</computeroutput> or <computeroutput>id</computeroutput> is 0, the content of other fields is undefined. In particular, it is not guaranteed that a freshly-initialized structure is all-zero: we initialize structures to something like <computeroutput>{0, 0}</computeroutput>, which is only guaranteed to initializes the first member of the union; GCC and Clang initialize the whole structure to 0 (at the time of writing), but MSVC and CompCert don&apos;t.</para><para>In Mbed TLS, multipart operation structures live independently from the key. This allows Mbed TLS to free the key objects when destroying a key slot. If a multipart operation needs to remember the key after the setup function returns, the operation structure needs to contain a copy of the key. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="44"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_STRUCT_H</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_STRUCT_H</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>the<sp/>context<sp/>definition<sp/>for<sp/>the<sp/>compiled-in<sp/>drivers<sp/>for<sp/>the<sp/>primitive</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>algorithms.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__driver__contexts__primitives_8h" kindref="compound">psa/crypto_driver_contexts_primitives.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="structpsa__hash__operation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="73" refid="structpsa__hash__operation__s_1a11be52db82590102fe798bdb71374abe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74" refid="structpsa__hash__operation__s_1a0e3da9e698709296cefa5068537cc1d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__hash__context__t" kindref="compound">psa_driver_hash_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_HASH_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="80" refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_HASH_OPERATION_INIT<sp/>{<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="82" refid="crypto__struct_8h_1ac74804b4466452143112398ec3c7ee6a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_s</ref><sp/><ref refid="crypto__struct_8h_1ac74804b4466452143112398ec3c7ee6a" kindref="member">psa_hash_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_s</ref><sp/>v<sp/>=<sp/><ref refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" kindref="member">PSA_HASH_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structpsa__cipher__operation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="98" refid="structpsa__cipher__operation__s_1a69a2c8025c424664c2988ab686eadf4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structpsa__cipher__operation__s_1a21e32b597833afd9641b30dbc7f82f28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(iv_required)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="101" refid="structpsa__cipher__operation__s_1a0a52aa75b5416279f75dad35d8e375ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(iv_set)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="structpsa__cipher__operation__s_1aa266f52944cec0feba2131507e6fae9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(default_iv_length);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structpsa__cipher__operation__s_1a8f2ab066db9cc77a0a607e7507ee1f11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__cipher__context__t" kindref="compound">psa_driver_cipher_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CIPHER_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="112" refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CIPHER_OPERATION_INIT<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="114" refid="crypto__struct_8h_1a75d990a3e181f887a018b74e0bc60e7b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_s</ref><sp/><ref refid="crypto__struct_8h_1a75d990a3e181f887a018b74e0bc60e7b" kindref="member">psa_cipher_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_s</ref><sp/>v<sp/>=<sp/><ref refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" kindref="member">PSA_CIPHER_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>the<sp/>context<sp/>definition<sp/>for<sp/>the<sp/>compiled-in<sp/>drivers<sp/>for<sp/>the<sp/>composite</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/>*<sp/>algorithms.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__driver__contexts__composites_8h" kindref="compound">psa/crypto_driver_contexts_composites.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structpsa__mac__operation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__mac__operation__s" kindref="compound">psa_mac_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="134" refid="structpsa__mac__operation__s_1a4a62a90a9064bf16663c8fcaa8134bcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135" refid="structpsa__mac__operation__s_1ae89babec2d2750b819de7784d22dd8d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(mac_size);</highlight></codeline>
+<codeline lineno="136" refid="structpsa__mac__operation__s_1a6274a0a32a1bc6db9c4ca5978e48dfae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(is_sign)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="137" refid="structpsa__mac__operation__s_1a1c2a236099f8578ddd1df3f875e32739" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__mac__context__t" kindref="compound">psa_driver_mac_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_MAC_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="144" refid="group___m_a_c_1ga441b6efc161a4573d06465bd22d9dc2d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_MAC_OPERATION_INIT<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="146" refid="crypto__struct_8h_1abfcded7bb17c25237ecd02235f8767cd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__mac__operation__s" kindref="compound">psa_mac_operation_s</ref><sp/><ref refid="crypto__struct_8h_1abfcded7bb17c25237ecd02235f8767cd" kindref="member">psa_mac_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__mac__operation__s" kindref="compound">psa_mac_operation_s</ref><sp/>v<sp/>=<sp/><ref refid="group___m_a_c_1ga441b6efc161a4573d06465bd22d9dc2d" kindref="member">PSA_MAC_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="structpsa__aead__operation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__aead__operation__s" kindref="compound">psa_aead_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="162" refid="structpsa__aead__operation__s_1aa8da3959b889cc50c7f4872d46ae6a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="structpsa__aead__operation__s_1ae956c9e5b8fac543f855277e514717b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>MBEDTLS_PRIVATE(alg);</highlight></codeline>
+<codeline lineno="165" refid="structpsa__aead__operation__s_1a1cf17d56ccb8208ae260e465d2b84809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref><sp/>MBEDTLS_PRIVATE(key_type);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="structpsa__aead__operation__s_1a96ad4b6083637192f2021524ca8f04c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(ad_remaining);</highlight></codeline>
+<codeline lineno="168" refid="structpsa__aead__operation__s_1a206ff8d7c5445cf3e3e8a2b284a7aead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(body_remaining);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="structpsa__aead__operation__s_1af0058834ac39b45c332bd29b788b7e76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(nonce_set)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="171" refid="structpsa__aead__operation__s_1a0c3b7d40685f7c24416678bf343b361f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(lengths_set)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="172" refid="structpsa__aead__operation__s_1abb0a23a711386a7e3eaf9a0b240e9233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(ad_started)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="173" refid="structpsa__aead__operation__s_1a7f31b42ad9697696721e661389deb478" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(body_started)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="174" refid="structpsa__aead__operation__s_1a1aadf0a08a0be4511ba857711e459832" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(is_encrypt)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="structpsa__aead__operation__s_1a7486c941fd760ecf453bf28e9d4919d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__aead__context__t" kindref="compound">psa_driver_aead_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="178"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_AEAD_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="183" refid="group__aead_1gaf52e036794c0dc6fbadd93a2b990f366" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_AEAD_OPERATION_INIT<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="185" refid="crypto__struct_8h_1a54f6cb8381bd41e9039a261ed85ae074" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__aead__operation__s" kindref="compound">psa_aead_operation_s</ref><sp/><ref refid="crypto__struct_8h_1a54f6cb8381bd41e9039a261ed85ae074" kindref="member">psa_aead_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__aead__operation__s" kindref="compound">psa_aead_operation_s</ref><sp/>v<sp/>=<sp/><ref refid="group__aead_1gaf52e036794c0dc6fbadd93a2b990f366" kindref="member">PSA_AEAD_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>the<sp/>context<sp/>definition<sp/>for<sp/>the<sp/>compiled-in<sp/>drivers<sp/>for<sp/>the<sp/>key</highlight></codeline>
+<codeline lineno="192"><highlight class="comment"><sp/>*<sp/>derivation<sp/>algorithms.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__driver__contexts__key__derivation_8h" kindref="compound">psa/crypto_driver_contexts_key_derivation.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195" refid="structpsa__key__derivation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__derivation__s" kindref="compound">psa_key_derivation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="199" refid="structpsa__key__derivation__s_1ad4e5495469b5d5ce0c1d8c550726adfd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>MBEDTLS_PRIVATE(alg);</highlight></codeline>
+<codeline lineno="200" refid="structpsa__key__derivation__s_1afaf7039b22a5c605908cb7d1a6f5ba00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(can_output_key)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="201" refid="structpsa__key__derivation__s_1a07d76b2f9f634400516aac3d7f79b1f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(capacity);</highlight></codeline>
+<codeline lineno="202" refid="structpsa__key__derivation__s_1a02fcc977730fe8f8b08a8242e48ce77b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__key__derivation__context__t" kindref="compound">psa_driver_key_derivation_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_DERIVATION_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>This<sp/>only<sp/>zeroes<sp/>out<sp/>the<sp/>first<sp/>byte<sp/>in<sp/>the<sp/>union,<sp/>the<sp/>rest<sp/>is<sp/>unspecified.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="group__key__derivation_1ga5bdec40d201551558579a635520ae85d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_DERIVATION_OPERATION_INIT<sp/>{<sp/>0,<sp/>0,<sp/>0,<sp/>{<sp/>0<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="212" refid="crypto__struct_8h_1a7f9b4b80cc1509da5f4e366d1b023870" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__derivation__s" kindref="compound">psa_key_derivation_s</ref><sp/><ref refid="crypto__struct_8h_1a7f9b4b80cc1509da5f4e366d1b023870" kindref="member">psa_key_derivation_operation_init</ref>(</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>void)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__derivation__s" kindref="compound">psa_key_derivation_s</ref><sp/>v<sp/>=<sp/><ref refid="group__key__derivation_1ga5bdec40d201551558579a635520ae85d" kindref="member">PSA_KEY_DERIVATION_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="structpsa__custom__key__parameters__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__custom__key__parameters__s" kindref="compound">psa_custom_key_parameters_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Future<sp/>versions<sp/>may<sp/>add<sp/>other<sp/>fields<sp/>in<sp/>this<sp/>structure.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="structpsa__custom__key__parameters__s_1ad38bd078935c7cc68a5df1761623bc92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structpsa__custom__key__parameters__s_1ad38bd078935c7cc68a5df1761623bc92" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="crypto__struct_8h_1a9fb6aa6be3a8aa8d4ad1dfb20cf937f8" refkind="member"><highlight class="preprocessor">#define<sp/>PSA_CUSTOM_KEY_PARAMETERS_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="structpsa__key__policy__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="234" refid="structpsa__key__policy__s_1a34289b62bdbfe8cda71ee9808d52a696" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/>MBEDTLS_PRIVATE(usage);</highlight></codeline>
+<codeline lineno="235" refid="structpsa__key__policy__s_1a59ae7fcc32fb141c58a0b162f9029ba5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>MBEDTLS_PRIVATE(alg);</highlight></codeline>
+<codeline lineno="236" refid="structpsa__key__policy__s_1a29f3980b2c64c08647701a132baad5fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>MBEDTLS_PRIVATE(alg2);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="238" refid="crypto__struct_8h_1af553efd409845b6d09ff25ce2ba36607" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref><sp/><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_t</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240" refid="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_POLICY_INIT<sp/>{<sp/>0,<sp/>0,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="241" refid="crypto__struct_8h_1afe572489f4e3c6adf0e84af5ae5200e7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref><sp/><ref refid="crypto__struct_8h_1afe572489f4e3c6adf0e84af5ae5200e7" kindref="member">psa_key_policy_init</ref>(void)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_s</ref><sp/>v<sp/>=<sp/><ref refid="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" kindref="member">PSA_KEY_POLICY_INIT</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>type<sp/>used<sp/>internally<sp/>for<sp/>key<sp/>sizes.</highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/>*<sp/>Public<sp/>interfaces<sp/>use<sp/>size_t,<sp/>but<sp/>internally<sp/>we<sp/>use<sp/>a<sp/>smaller<sp/>type.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" kindref="member">psa_key_bits_t</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>maximum<sp/>value<sp/>of<sp/>the<sp/>type<sp/>used<sp/>to<sp/>represent<sp/>bit-sizes.</highlight></codeline>
+<codeline lineno="251"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>used<sp/>to<sp/>mark<sp/>an<sp/>invalid<sp/>key<sp/>size.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="crypto__struct_8h_1a04b358641be4a6ce59f2df88014147c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_BITS_TOO_LARGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((psa_key_bits_t)<sp/>-1)</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>The<sp/>maximum<sp/>size<sp/>of<sp/>a<sp/>key<sp/>in<sp/>bits.</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*<sp/>Currently<sp/>defined<sp/>as<sp/>the<sp/>maximum<sp/>that<sp/>can<sp/>be<sp/>represented,<sp/>rounded<sp/>down</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/>to<sp/>a<sp/>whole<sp/>number<sp/>of<sp/>bytes.</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>an<sp/>uncast<sp/>value<sp/>so<sp/>that<sp/>it<sp/>can<sp/>be<sp/>used<sp/>in<sp/>preprocessor</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/>*<sp/>conditionals.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="crypto__struct_8h_1a97e0e760dc2c9bd201fcc595ce06da1b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_MAX_KEY_BITS<sp/>0xfff8</highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="structpsa__key__attributes__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="261" refid="structpsa__key__attributes__s_1a74a853c41c08e614b1209c2fac86fdc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref><sp/>MBEDTLS_PRIVATE(type);</highlight></codeline>
+<codeline lineno="262" refid="structpsa__key__attributes__s_1a15091d7ea70abf02fe920800e93aacdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>psa_key_bits_t<sp/>MBEDTLS_PRIVATE(bits);</highlight></codeline>
+<codeline lineno="263" refid="structpsa__key__attributes__s_1ae2502d04ade36d5583df49bf8efcd14c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref><sp/>MBEDTLS_PRIVATE(lifetime);</highlight></codeline>
+<codeline lineno="264" refid="structpsa__key__attributes__s_1abf7ad8d57bad72c2038804dcd4109ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpsa__key__policy__s" kindref="compound">psa_key_policy_t</ref><sp/>MBEDTLS_PRIVATE(policy);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>type<sp/>has<sp/>a<sp/>different<sp/>layout<sp/>in<sp/>the<sp/>client<sp/>view<sp/>wrt<sp/>the</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>service<sp/>view<sp/>of<sp/>the<sp/>key<sp/>id,<sp/>i.e.<sp/>in<sp/>service<sp/>view<sp/>usually<sp/>is</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>expected<sp/>to<sp/>have<sp/>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER<sp/>defined</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>thus<sp/>adding<sp/>an<sp/>owner<sp/>field<sp/>to<sp/>the<sp/>standard<sp/>psa_key_id_t.<sp/>For</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>implementations<sp/>with<sp/>client/service<sp/>separation,<sp/>this<sp/>means<sp/>the</highlight></codeline>
+<codeline lineno="270"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>object<sp/>will<sp/>be<sp/>marshalled<sp/>through<sp/>a<sp/>transport<sp/>channel<sp/>and</highlight></codeline>
+<codeline lineno="271"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>interpreted<sp/>differently<sp/>at<sp/>each<sp/>side<sp/>of<sp/>the<sp/>transport.<sp/>Placing</highlight></codeline>
+<codeline lineno="272"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>it<sp/>at<sp/>the<sp/>end<sp/>of<sp/>structures<sp/>allows<sp/>to<sp/>interpret<sp/>the<sp/>structure</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>at<sp/>the<sp/>client<sp/>without<sp/>reorganizing<sp/>the<sp/>memory<sp/>layout<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>struct</highlight></codeline>
+<codeline lineno="275"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="structpsa__key__attributes__s_1abff5d70779d286543e702534c80daaaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279" refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_ATTRIBUTES_INIT<sp/>{<sp/>PSA_KEY_TYPE_NONE,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="280"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_KEY_LIFETIME_VOLATILE,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="281"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_KEY_POLICY_INIT,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="282"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_SVC_KEY_ID_INIT<sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="crypto__struct_8h_1a68f3f03c6a5d98812ddd2d6d9212ee5a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref><sp/><ref refid="crypto__struct_8h_1a68f3f03c6a5d98812ddd2d6d9212ee5a" kindref="member">psa_key_attributes_init</ref>(void)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref><sp/>v<sp/>=<sp/><ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290" refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref><sp/>lifetime<sp/>=<sp/>attributes-&gt;MBEDTLS_PRIVATE(lifetime);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__key__lifetimes_1ga63d63adbfc947cab4dee4f4b39e840a1" kindref="member">PSA_KEY_LIFETIME_IS_VOLATILE</ref>(lifetime))<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(lifetime)<sp/>=</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1gaef4d244b4d33ae7876ed87226b8112aa" kindref="member">PSA_KEY_LIFETIME_FROM_PERSISTENCE_AND_LOCATION</ref>(</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref>,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga4bd83feb0ca4853eee26d5394e69a5de" kindref="member">PSA_KEY_LIFETIME_GET_LOCATION</ref>(lifetime));</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="crypto__struct_8h_1afd8a339ef75f9ec0f72c97edfc99a2a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/><ref refid="crypto__struct_8h_1afd8a339ef75f9ec0f72c97edfc99a2a4" kindref="member">psa_get_key_id</ref>(</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER</highlight></codeline>
+<codeline lineno="312" refid="crypto__struct_8h_1a72dc358ef6ceadc0d1ed1df807f0fce8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1a72dc358ef6ceadc0d1ed1df807f0fce8" kindref="member">mbedtls_set_key_owner_id</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref><sp/>owner)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).MBEDTLS_PRIVATE(owner)<sp/>=<sp/>owner;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="318"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="crypto__struct_8h_1ac03ccf09ca6d36cc3d5b43f8303db6f7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1ac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref><sp/>lifetime)</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(lifetime)<sp/>=<sp/>lifetime;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__key__lifetimes_1ga63d63adbfc947cab4dee4f4b39e840a1" kindref="member">PSA_KEY_LIFETIME_IS_VOLATILE</ref>(lifetime))<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER</highlight></codeline>
+<codeline lineno="325"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).MBEDTLS_PRIVATE(key_id)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="327"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="329"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="crypto__struct_8h_1a9ea8eae1b81e480cc56dec858859aff9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref><sp/><ref refid="crypto__struct_8h_1a9ea8eae1b81e480cc56dec858859aff9" kindref="member">psa_get_key_lifetime</ref>(</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(lifetime);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338" refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" kindref="member">psa_extend_key_usage_flags</ref>(<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/>*usage_flags)</highlight></codeline>
+<codeline lineno="339"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*usage_flags<sp/>&amp;<sp/><ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*usage_flags<sp/>|=<sp/><ref refid="group__policy_1ga552117ac92b79500cae87d4e65a85c54" kindref="member">PSA_KEY_USAGE_SIGN_MESSAGE</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*usage_flags<sp/>&amp;<sp/><ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*usage_flags<sp/>|=<sp/><ref refid="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" kindref="member">PSA_KEY_USAGE_VERIFY_MESSAGE</ref>;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="crypto__struct_8h_1a42a65b3c4522ce9b67ea5ea7720e17de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1a42a65b3c4522ce9b67ea5ea7720e17de" kindref="member">psa_set_key_usage_flags</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/>usage_flags)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" kindref="member">psa_extend_key_usage_flags</ref>(&amp;usage_flags);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(usage)<sp/>=<sp/>usage_flags;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356" refid="crypto__struct_8h_1aa1af20f142ca722222c6d98678a0c448" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/><ref refid="crypto__struct_8h_1aa1af20f142ca722222c6d98678a0c448" kindref="member">psa_get_key_usage_flags</ref>(</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(usage);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362" refid="crypto__struct_8h_1aeb8341ca52baa0279475ea3fd3bcdc98" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1aeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>alg)</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(alg)<sp/>=<sp/>alg;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="crypto__struct_8h_1ac255da850a00bbed925390044f016b34" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/><ref refid="crypto__struct_8h_1ac255da850a00bbed925390044f016b34" kindref="member">psa_get_key_algorithm</ref>(</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(policy).MBEDTLS_PRIVATE(alg);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374" refid="crypto__struct_8h_1a6857ef0ecb3fa844d4536939d9c64025" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1a6857ef0ecb3fa844d4536939d9c64025" kindref="member">psa_set_key_type</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref><sp/>type)</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(type)<sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="380" refid="crypto__struct_8h_1ae4fb812af4f57aa1ad85e335a865b918" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref><sp/><ref refid="crypto__struct_8h_1ae4fb812af4f57aa1ad85e335a865b918" kindref="member">psa_get_key_type</ref>(</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(type);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386" refid="crypto__struct_8h_1af61683ac87f87687a40262b5afbfa018" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1af61683ac87f87687a40262b5afbfa018" kindref="member">psa_set_key_bits</ref>(<ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits)</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bits<sp/>&gt;<sp/><ref refid="crypto__struct_8h_1a97e0e760dc2c9bd201fcc595ce06da1b" kindref="member">PSA_MAX_KEY_BITS</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(bits)<sp/>=<sp/><ref refid="crypto__struct_8h_1a04b358641be4a6ce59f2df88014147c2" kindref="member">PSA_KEY_BITS_TOO_LARGE</ref>;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attributes-&gt;MBEDTLS_PRIVATE(bits)<sp/>=<sp/>(<ref refid="crypto__struct_8h_1a57270c808928ab5d7c9cfc7cb1e5735d" kindref="member">psa_key_bits_t</ref>)<sp/>bits;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396" refid="crypto__struct_8h_1a5bee85c2164ad3d4c0d42501241eeb06" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="crypto__struct_8h_1a5bee85c2164ad3d4c0d42501241eeb06" kindref="member">psa_get_key_bits</ref>(</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes)</highlight></codeline>
+<codeline lineno="398"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>attributes-&gt;MBEDTLS_PRIVATE(bits);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="structpsa__sign__hash__interruptible__operation__s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="407"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="409"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="415" refid="structpsa__sign__hash__interruptible__operation__s_1a90e44258881276d57b8972a075f90c21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417" refid="structpsa__sign__hash__interruptible__operation__s_1aaf5c3aba42bc2e11f5a1f83cd2545f35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__sign__hash__interruptible__context__t" kindref="compound">psa_driver_sign_hash_interruptible_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight></codeline>
+<codeline lineno="419" refid="structpsa__sign__hash__interruptible__operation__s_1a7b53aa271c7448a0b8ed6c3cbc13ccc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(error_occurred)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421" refid="structpsa__sign__hash__interruptible__operation__s_1adc0e634dde82eedf8ee376cf1d9b3675" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(num_ops);</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="423"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="426"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="427"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="428" refid="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT<sp/>{<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="429"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="430"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_s</ref></highlight></codeline>
+<codeline lineno="432" refid="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" refkind="member"><highlight class="normal"><ref refid="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" kindref="member">psa_sign_hash_interruptible_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="433"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_s</ref><sp/>v<sp/>=</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" kindref="member">PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443" refid="structpsa__verify__hash__interruptible__operation__s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="445"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="447"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="453" refid="structpsa__verify__hash__interruptible__operation__s_1aeb4849c82c72b385761c7849c3fa0228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455" refid="structpsa__verify__hash__interruptible__operation__s_1a6dc34cd9e1ba2e01d899f29c4ca288fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionpsa__driver__verify__hash__interruptible__context__t" kindref="compound">psa_driver_verify_hash_interruptible_context_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight></codeline>
+<codeline lineno="457" refid="structpsa__verify__hash__interruptible__operation__s_1a1d3720f4b36df06edf67103341d5a6b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(error_occurred)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459" refid="structpsa__verify__hash__interruptible__operation__s_1a05ab9c279f6c3f3cba77c777fb4d3933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(num_ops);</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="461"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="464"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="465"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="466" refid="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT<sp/>{<sp/>0,<sp/>{<sp/>0<sp/>},<sp/>0,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="467"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="468"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_s</ref></highlight></codeline>
+<codeline lineno="470" refid="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" refkind="member"><highlight class="normal"><ref refid="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" kindref="member">psa_verify_hash_interruptible_operation_init</ref>(void)</highlight></codeline>
+<codeline lineno="471"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_s</ref><sp/>v<sp/>=</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" kindref="member">PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>;</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="476"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="481" refid="structpsa__key__agreement__iop__s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__agreement__iop__s" kindref="compound">psa_key_agreement_iop_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="483"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="485"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="493" refid="structpsa__key__agreement__iop__s_1a8126df4c284079df33c0d416bdd3d15f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="494" refid="structpsa__key__agreement__iop__s_1ac6098df900ca8bba7e5d0fc9bcecece5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__psa__key__agreement__interruptible__operation__t" kindref="compound">mbedtls_psa_key_agreement_interruptible_operation_t</ref><sp/>MBEDTLS_PRIVATE(mbedtls_ctx);</highlight></codeline>
+<codeline lineno="495" refid="structpsa__key__agreement__iop__s_1a70c55c01f96fdf88776937dacd0e1451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(num_ops);</highlight></codeline>
+<codeline lineno="496" refid="structpsa__key__agreement__iop__s_1ad011090211ca8b7637978327b2c6873d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>MBEDTLS_PRIVATE(attributes);</highlight></codeline>
+<codeline lineno="497" refid="structpsa__key__agreement__iop__s_1a28023b5a01bdfd662c98c187406694a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(error_occurred)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="499"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="502"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_AGREEMENT_IOP_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="503"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="504" refid="crypto__struct_8h_1a8dafb7579be5c644fb641f0f263016c8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_KEY_AGREEMENT_IOP_INIT<sp/>{<sp/>0,<sp/>MBEDTLS_PSA_KEY_AGREEMENT_IOP_INIT,<sp/>0,<sp/>\</highlight></codeline>
+<codeline lineno="505"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_KEY_ATTRIBUTES_INIT,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="506"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="507"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__agreement__iop__s" kindref="compound">psa_key_agreement_iop_s</ref></highlight></codeline>
+<codeline lineno="509" refid="crypto__struct_8h_1a7812bddc9f8e8b88cb04670df7b03794" refkind="member"><highlight class="normal"><ref refid="crypto__struct_8h_1a7812bddc9f8e8b88cb04670df7b03794" kindref="member">psa_key_agreement_iop_init</ref>(void)</highlight></codeline>
+<codeline lineno="510"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__key__agreement__iop__s" kindref="compound">psa_key_agreement_iop_s</ref><sp/>v<sp/>=<sp/><ref refid="crypto__struct_8h_1a8dafb7579be5c644fb641f0f263016c8" kindref="member">PSA_KEY_AGREEMENT_IOP_INIT</ref>;</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="514"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="515"><highlight class="normal"></highlight></codeline>
+<codeline lineno="519" refid="structpsa__generate__key__iop__s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="521"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="523"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="531" refid="structpsa__generate__key__iop__s_1a1a2b4871fd5aedebdb140ead7a473290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="532" refid="structpsa__generate__key__iop__s_1a1e1a56eafdc91c59d4589c7aac83a249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__psa__generate__key__iop__t" kindref="compound">mbedtls_psa_generate_key_iop_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="533" refid="structpsa__generate__key__iop__s_1a03c16e12c52167392a0b9f852ea1885b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>MBEDTLS_PRIVATE(attributes);</highlight></codeline>
+<codeline lineno="534" refid="structpsa__generate__key__iop__s_1a061a3da1da342f1881cccf219b9606b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(error_occurred)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="535" refid="structpsa__generate__key__iop__s_1a8b35f32eb6712841dee1ded606805821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(num_ops);</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="537"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="540"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_GENERATE_KEY_IOP_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="541"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="542" refid="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_GENERATE_KEY_IOP_INIT<sp/>{<sp/>0,<sp/>MBEDTLS_PSA_GENERATE_KEY_IOP_INIT,<sp/>PSA_KEY_ATTRIBUTES_INIT,<sp/>\</highlight></codeline>
+<codeline lineno="543"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="544"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="545"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_s</ref></highlight></codeline>
+<codeline lineno="547" refid="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" refkind="member"><highlight class="normal"><ref refid="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" kindref="member">psa_generate_key_iop_init</ref>(void)</highlight></codeline>
+<codeline lineno="548"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_s</ref><sp/>v<sp/>=<sp/><ref refid="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" kindref="member">PSA_GENERATE_KEY_IOP_INIT</ref>;</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"></highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight></codeline>
+<codeline lineno="557" refid="structpsa__export__public__key__iop__s" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__export__public__key__iop__s" kindref="compound">psa_export_public_key_iop_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="559"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_psa_client_handle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="561"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="569" refid="structpsa__export__public__key__iop__s_1a324abc660ea4d3bb3f720bf5372ae189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="570" refid="structpsa__export__public__key__iop__s_1a0d489b23f08975f05ff40ac152306afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__psa__export__public__key__iop__t" kindref="compound">mbedtls_psa_export_public_key_iop_t</ref><sp/>MBEDTLS_PRIVATE(ctx);</highlight></codeline>
+<codeline lineno="571" refid="structpsa__export__public__key__iop__s_1a8b7cfad0bb8468ee4c239419b04037ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(error_occurred)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="572" refid="structpsa__export__public__key__iop__s_1a2c430b34b8ecda6004aa426a3ddd3668" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(num_ops);</highlight></codeline>
+<codeline lineno="573"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="574"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="575"><highlight class="normal"></highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="577"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_EXPORT_PUBLIC_KEY_IOP_INIT<sp/>{<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="578"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="579" refid="crypto__struct_8h_1acc48e367ecd3ff13ad2e2fe5a8f81069" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_EXPORT_PUBLIC_KEY_IOP_INIT<sp/>{<sp/>0,<sp/>MBEDTLS_PSA_EXPORT_PUBLIC_KEY_IOP_INIT,<sp/>0,<sp/>0<sp/>}</highlight></codeline>
+<codeline lineno="580"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="581"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__export__public__key__iop__s" kindref="compound">psa_export_public_key_iop_s</ref></highlight></codeline>
+<codeline lineno="583" refid="crypto__struct_8h_1ad648ec7688a906bc792b658adebd4890" refkind="member"><highlight class="normal"><ref refid="crypto__struct_8h_1ad648ec7688a906bc792b658adebd4890" kindref="member">psa_export_public_key_iop_init</ref>(void)</highlight></codeline>
+<codeline lineno="584"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__export__public__key__iop__s" kindref="compound">psa_export_public_key_iop_s</ref><sp/>v<sp/>=<sp/><ref refid="crypto__struct_8h_1acc48e367ecd3ff13ad2e2fe5a8f81069" kindref="member">PSA_EXPORT_PUBLIC_KEY_IOP_INIT</ref>;</highlight></codeline>
+<codeline lineno="586"><highlight class="normal"></highlight></codeline>
+<codeline lineno="587"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="588"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="589"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="591"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="593"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_STRUCT_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h"/>
+  </compounddef>
+</doxygen>

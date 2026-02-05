@@ -1,0 +1,5 @@
+<map id="mbedtls_psa_hmac_operation_t" name="mbedtls_psa_hmac_operation_t">
+<area shape="rect" id="node2" href="$structpsa__hash__operation__s.html" title="psa_hash_operation_s" alt="" coords="33,184,185,211"/>
+<area shape="rect" id="node3" href="$unionpsa__driver__hash__context__t.html" title="psa_driver_hash_context_t" alt="" coords="21,95,197,121"/>
+<area shape="rect" id="node4" href="$structmbedtls__psa__hash__operation__t.html" title="mbedtls_psa_hash_operation_t" alt="" coords="7,5,210,32"/>
+</map>

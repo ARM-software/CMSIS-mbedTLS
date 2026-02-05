@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__psa__external__rng" kind="group">
+    <compoundname>psa_external_rng</compoundname>
+    <title>External random generator</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__psa__external__rng_1ga54bf8b06d11637bf8ee07629760efb9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t mbedtls_psa_external_get_random</definition>
+        <argsstring>(mbedtls_psa_external_random_context_t *context, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>mbedtls_psa_external_get_random</name>
+        <param>
+          <type><ref refid="structmbedtls__psa__external__random__context__t" kindref="compound">mbedtls_psa_external_random_context_t</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>External random generator function, implemented by the platform.</para><para>When the compile-time option <ref refid="crypto__config_8h_1a08efaac6e89a49b62bcb44c526811d03" kindref="member">MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG</ref> is enabled, this function replaces Mbed TLS&apos;s entropy and DRBG modules for all random generation triggered via PSA crypto interfaces.</para><para><simplesect kind="note"><para>This random generator must deliver random numbers with cryptographic quality and high performance. It must supply unpredictable numbers with a uniform distribution. The implementation of this function is responsible for ensuring that the random generator is seeded with sufficient entropy. If you have a hardware TRNG which is slow or delivers non-uniform output, declare it as an entropy source with mbedtls_entropy_add_source() instead of enabling this option.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the random generator context. This is all-bits-zero on the first call and preserved between successive calls. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer. On success, this buffer contains random data with a uniform distribution. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>output</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, set this value to <computeroutput>output_size</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. The output buffer contains <computeroutput>output_size</computeroutput> bytes of cryptographic-quality random data, and <computeroutput>*output_length</computeroutput> is set to <computeroutput>output_size</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The random generator requires extra entropy and there is no way to obtain entropy under current environment conditions. This error should not happen under normal circumstances since this function is responsible for obtaining as much entropy as it needs. However implementations of this function may return <ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref> if there is no way to obtain entropy without blocking indefinitely. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A failure of the random generator hardware that isn&apos;t covered by <ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="286" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="pk_8h" kind="file">
+    <compoundname>pk.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="compat-3-crypto_8h" local="yes">mbedtls/compat-3-crypto.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includes refid="crypto_8h" local="yes">psa/crypto.h</includes>
+    <includedby refid="ssl__ciphersuites_8h" local="yes">ssl_ciphersuites.h</includedby>
+    <includedby refid="x509_8h" local="yes">x509.h</includedby>
+    <incdepgraph>
+      <node id="3377">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3366">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3367" relation="include">
+        </childnode>
+      </node>
+      <node id="3360">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3378">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3367" relation="include">
+        </childnode>
+        <childnode refid="3379" relation="include">
+        </childnode>
+        <childnode refid="3366" relation="include">
+        </childnode>
+      </node>
+      <node id="3373">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3359" relation="include">
+        </childnode>
+      </node>
+      <node id="3375">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3368" relation="include">
+        </childnode>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3367" relation="include">
+        </childnode>
+        <childnode refid="3366" relation="include">
+        </childnode>
+        <childnode refid="3376" relation="include">
+        </childnode>
+        <childnode refid="3377" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+        <childnode refid="3380" relation="include">
+        </childnode>
+      </node>
+      <node id="3369">
+        <label>stdint.h</label>
+      </node>
+      <node id="3368">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3363">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3381">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3359">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3360" relation="include">
+        </childnode>
+        <childnode refid="3361" relation="include">
+        </childnode>
+        <childnode refid="3362" relation="include">
+        </childnode>
+        <childnode refid="3363" relation="include">
+        </childnode>
+        <childnode refid="3364" relation="include">
+        </childnode>
+      </node>
+      <node id="3371">
+        <label>stddef.h</label>
+      </node>
+      <node id="3364">
+        <label>limits.h</label>
+      </node>
+      <node id="3357">
+        <label>pk.h</label>
+        <link refid="pk.h"/>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3359" relation="include">
+        </childnode>
+        <childnode refid="3365" relation="include">
+        </childnode>
+        <childnode refid="3370" relation="include">
+        </childnode>
+        <childnode refid="3375" relation="include">
+        </childnode>
+      </node>
+      <node id="3367">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3359" relation="include">
+        </childnode>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3368" relation="include">
+        </childnode>
+        <childnode refid="3369" relation="include">
+        </childnode>
+      </node>
+      <node id="3370">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3359" relation="include">
+        </childnode>
+        <childnode refid="3372" relation="include">
+        </childnode>
+      </node>
+      <node id="3376">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3359" relation="include">
+        </childnode>
+      </node>
+      <node id="3365">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3366" relation="include">
+        </childnode>
+      </node>
+      <node id="3380">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3359" relation="include">
+        </childnode>
+        <childnode refid="3369" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+      </node>
+      <node id="3379">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3372">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3359" relation="include">
+        </childnode>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3373" relation="include">
+        </childnode>
+        <childnode refid="3374" relation="include">
+        </childnode>
+      </node>
+      <node id="3358">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3374">
+        <label>time.h</label>
+      </node>
+      <node id="3361">
+        <label>/dev/null</label>
+      </node>
+      <node id="3362">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3384">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3385" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3390">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3391" relation="include">
+        </childnode>
+        <childnode refid="3393" relation="include">
+        </childnode>
+        <childnode refid="3394" relation="include">
+        </childnode>
+      </node>
+      <node id="3392">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="3389">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3383">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3384" relation="include">
+        </childnode>
+      </node>
+      <node id="3388">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3382">
+        <label>pk.h</label>
+        <link refid="pk.h"/>
+        <childnode refid="3383" relation="include">
+        </childnode>
+        <childnode refid="3390" relation="include">
+        </childnode>
+      </node>
+      <node id="3385">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="3387">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="3394">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="3391">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+      </node>
+      <node id="3386">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3393">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3391" relation="include">
+        </childnode>
+        <childnode refid="3384" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__pk__context" prot="public">mbedtls_pk_context</innerclass>
+    <innerclass refid="structmbedtls__pk__restart__ctx" prot="public">mbedtls_pk_restart_ctx</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="pk_8h_1ab30c338fb65fd3417594582359b3b141" prot="public" static="no">
+        <name>MBEDTLS_PK_HAVE_PRIVATE_HEADER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="13" column="17" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a7a7fb7cb156476722c09de42368156dc" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_TYPE_MISMATCH</name>
+        <initializer>-0x3F00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type mismatch, eg attempt to do ECDSA with an RSA key </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="27" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a334a28580efaab3c749fdf1dde28feb8" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_FILE_IO_ERROR</name>
+        <initializer>-0x3E00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read/write of file failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="29" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a9b589f81143439f8580b3004dc8ecaf1" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_KEY_INVALID_VERSION</name>
+        <initializer>-0x3D80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unsupported key version </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="31" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a291c7d21aa2cd94b2100703e8e3a1d06" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_KEY_INVALID_FORMAT</name>
+        <initializer>-0x3D00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invalid key tag or value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="33" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a877b66447bfa2cd49c1b99f1dc887568" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_UNKNOWN_PK_ALG</name>
+        <initializer>-0x3C80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Key algorithm is unsupported (only RSA and EC are supported). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="35" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a9c1de7ccb4e18a3ea74b35c4e2cb7527" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_PASSWORD_REQUIRED</name>
+        <initializer>-0x3C00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private key password can&apos;t be empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="37" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a24723299c688b1ca6cfa613c19cef6f5" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_PASSWORD_MISMATCH</name>
+        <initializer>-0x3B80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given private key password does not allow for correct decryption. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="39" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a0fdf1044cce5beb387d76d19bf4ef0a2" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_INVALID_PUBKEY</name>
+        <initializer>-0x3B00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The pubkey tag or value is invalid (only RSA and EC are supported). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="41" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a5d71f30a40d67d5d205a20b69303a341" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_INVALID_ALG</name>
+        <initializer>-0x3A80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The algorithm tag or value is invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="43" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a802d8b95e9b6a517d597dc92cb591e99" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_UNKNOWN_NAMED_CURVE</name>
+        <initializer>-0x3A00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Elliptic curve is unsupported (only NIST curves are supported). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="45" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1af4a79b15d48bd86c96767db4b9ce2caf" prot="public" static="no">
+        <name>MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE</name>
+        <initializer>-0x3980</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unavailable feature, e.g. RSA disabled for RSA key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="47" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" prot="public" static="no">
+        <name>MBEDTLS_PK_SIGNATURE_MAX_SIZE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>Maximum size of a signature made by <ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref> and other signature functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="73" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" prot="public" static="no">
+        <name>MBEDTLS_PK_SIGNATURE_MAX_SIZE</name>
+        <initializer><ref refid="crypto__config_8h_1a02bfffc46b7b2e10c0080d29bb56e6b0" kindref="member">MBEDTLS_MPI_MAX_SIZE</ref></initializer>
+        <briefdescription>
+<para>Maximum size of a signature made by <ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref> and other signature functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="79" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1aab67f96ca89cce6052dc81a1c2d4760f" prot="public" static="no">
+        <name>MBEDTLS_PK_USE_PSA_EC_DATA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="111" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a0e4e144bc6da59035b3c5396c8b55c8e" prot="public" static="no">
+        <name>MBEDTLS_PK_USE_PSA_RSA_DATA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="119" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1abb8f1e65f079e1e5af4e0e24639bad8b" prot="public" static="no">
+        <name>MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN</name>
+        <initializer><ref refid="crypto__sizes_8h_1a221b29f08b4e5e0509a1c7cc11b623d0" kindref="member">PSA_KEY_EXPORT_ECC_PUBLIC_KEY_MAX_SIZE</ref>(<ref refid="crypto__sizes_8h_1a81080a6cbbab87f35b114cb991e3f550" kindref="member">PSA_VENDOR_ECC_MAX_CURVE_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="124" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1abf68e12b062c15af1aa67c1cac90ddbd" prot="public" static="no">
+        <name>MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN</name>
+        <initializer><ref refid="crypto__sizes_8h_1a0fffdb6216268eb6455cc83a854c8acf" kindref="member">PSA_KEY_EXPORT_RSA_PUBLIC_KEY_MAX_SIZE</ref>(<ref refid="crypto__sizes_8h_1a2ab9324235c63e9e8cdee5bb1793eabe" kindref="member">PSA_VENDOR_RSA_MAX_KEY_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="127" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a7475e1707679baf28ca7ec2b6b2d2642" prot="public" static="no">
+        <name>MBEDTLS_PK_MAX_PUBKEY_RAW_LEN</name>
+        <initializer>(<ref refid="pk_8h_1abb8f1e65f079e1e5af4e0e24639bad8b" kindref="member">MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN</ref> &gt; <ref refid="pk_8h_1abf68e12b062c15af1aa67c1cac90ddbd" kindref="member">MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN</ref>) ? \
+    <ref refid="pk_8h_1abb8f1e65f079e1e5af4e0e24639bad8b" kindref="member">MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN</ref> : <ref refid="pk_8h_1abf68e12b062c15af1aa67c1cac90ddbd" kindref="member">MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="130" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pk_8h_1a3cc8d538431b85a302e1f366dd813ed1" prot="public" static="no">
+        <name>MBEDTLS_PK_ALG_ECDSA</name>
+        <param><defname>hash_alg</defname></param>
+        <initializer><ref refid="group__crypto__types_1ga11da566bcd341661c8de921e2ca5ed03" kindref="member">PSA_ALG_DETERMINISTIC_ECDSA</ref>(hash_alg)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This helper exposes which ECDSA variant the PK module uses by default: this is deterministic ECDSA if available, or randomized otherwise.</para><para><simplesect kind="warning"><para>This default algorithm selection might change in the future. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="208" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" prot="public" static="no">
+        <name>mbedtls_pk_sigalg_t</name>
+        <enumvalue id="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a956d76a63c07bb12db91f818f29edbe0" prot="public">
+          <name>MBEDTLS_PK_SIGALG_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pk_8h_1afa76daa88e7f480ea923f1bc8754a436ad17a18f5867360e89d9bc9525b52ba2a" prot="public">
+          <name>MBEDTLS_PK_SIGALG_RSA_PKCS1V15</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a16fbbf329b806f018bd149c899fb55be" prot="public">
+          <name>MBEDTLS_PK_SIGALG_RSA_PSS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a8ea847e3aef64002f19bcd07bb3c1526" prot="public">
+          <name>MBEDTLS_PK_SIGALG_ECDSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="53" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="enum" id="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359" prot="public" static="no">
+        <name>mbedtls_pk_rsa_padding_t</name>
+        <enumvalue id="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359af459229de2fa86ba5f6b3eb7342dcdeb" prot="public">
+          <name>MBEDTLS_PK_RSA_PKCS_V15</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359a50138409756e973f8694ceafeb318357" prot="public">
+          <name>MBEDTLS_PK_RSA_PKCS_V21</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="134" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="134" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" prot="public" static="no">
+        <type>struct <ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref></type>
+        <definition>typedef struct mbedtls_pk_info_t mbedtls_pk_info_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pk_info_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pk_8h_1a32c81ef1df77e5c7e0626540a9aa4da5" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref></type>
+        <definition>typedef struct mbedtls_pk_context  mbedtls_pk_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pk_context</name>
+        <briefdescription>
+<para>Public key container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="185" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pk_8h_1a999d1160bb30c03d0c4382c3a9b0aa89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pk_init</definition>
+        <argsstring>(mbedtls_pk_context *ctx)</argsstring>
+        <name>mbedtls_pk_init</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> (as empty). </para>        </briefdescription>
+        <detaileddescription>
+<para>After this, you want to populate the context using one of the following functions:<itemizedlist>
+<listitem><para><computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1ab8e88836fd9ee344ffe630c40447bd08" kindref="member">mbedtls_pk_copy_from_psa()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1a2a50247a528889c12ea0ddddb8b15a4e" kindref="member">mbedtls_pk_copy_public_from_psa()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1a072d27dc4143bfd600786232f9417e08" kindref="member">mbedtls_pk_parse_key()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1ade680bf8e87df7ccc3bb36b52e43972b" kindref="member">mbedtls_pk_parse_public_key()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1a935d710e542409462d0209f2381da83e" kindref="member">mbedtls_pk_parse_keyfile()</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="pk_8h_1af5a0ae67100c005638bb74f575ee4ad6" kindref="member">mbedtls_pk_parse_public_keyfile()</ref></computeroutput> </para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="229" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1ac6a9786d96abfd73c4dff6814238feb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pk_free</definition>
+        <argsstring>(mbedtls_pk_context *ctx)</argsstring>
+        <name>mbedtls_pk_free</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Empty a <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref>. After this, the context can be re-used as if it had been freshly initialized. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to clear. It must have been initialized. If this is <computeroutput>NULL</computeroutput>, this function does nothing.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>For contexts that have been populated with <ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref>, this does not free the underlying PSA key and you still need to call <ref refid="group__key__management_1ga5f52644312291335682fbc0292c43cd2" kindref="member">psa_destroy_key()</ref> independently if you want to destroy that key. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="244" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a68035977bd3664838529bcc0ad95e059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pk_restart_init</definition>
+        <argsstring>(mbedtls_pk_restart_ctx *ctx)</argsstring>
+        <name>mbedtls_pk_restart_init</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a restart context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to initialize. This must not be <computeroutput>NULL</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="253" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1ab82d0dc78b3262f16087fa4814eeca9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pk_restart_free</definition>
+        <argsstring>(mbedtls_pk_restart_ctx *ctx)</argsstring>
+        <name>mbedtls_pk_restart_free</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free the components of a restart context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to clear. It must have been initialized. If this is <computeroutput>NULL</computeroutput>, this function does nothing. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="261" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a842d0a5842b99152d68b4405bde82788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_wrap_psa</definition>
+        <argsstring>(mbedtls_pk_context *ctx, const mbedtls_svc_key_id_t key)</argsstring>
+        <name>mbedtls_pk_wrap_psa</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Populate a PK context by wrapping a PSA key pair. </para>        </briefdescription>
+        <detaileddescription>
+<para>The PSA key must be an EC or RSA key pair (FFDH is not suported in PK).</para><para>The resulting context can only perform operations that are allowed by the key&apos;s policy. Additionally, it currently has the following limitations:<itemizedlist>
+<listitem><para>restartable operations can&apos;t be used;</para></listitem><listitem><para>for RSA keys, signature verification is not supported, and neither is use of <computeroutput><ref refid="pk_8h_1a87f9989d6859e2dceb5e1d4c4491fdca" kindref="member">mbedtls_pk_check_pair()</ref></computeroutput>.</para></listitem></itemizedlist>
+</para><para><simplesect kind="warning"><para>The PSA wrapped key must remain valid as long as the wrapping PK context is in use, that is at least between the point this function is called and the point <ref refid="pk_8h_1ac6a9786d96abfd73c4dff6814238feb9" kindref="member">mbedtls_pk_free()</ref> is called on this context.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to populate. It must be empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PSA key to wrap, which must hold an ECC or RSA key pair.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> on invalid input (context already used, invalid key identifier). </para><simplesectsep/><para><ref refid="pk_8h_1af4a79b15d48bd86c96767db4b9ce2caf" kindref="member">MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE</ref> if the key is not an ECC or RSA key pair. </para><simplesectsep/><para><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref> on allocation failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="289" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a4a31083a590b155dd54d22cf618eefcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t mbedtls_pk_get_bitlen</definition>
+        <argsstring>(const mbedtls_pk_context *ctx)</argsstring>
+        <name>mbedtls_pk_get_bitlen</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Get the size in bits of the underlying key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to query. It must have been populated.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Key size in bits, or 0 on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="299" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a5a491616ae2eff4652399313265844f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_can_do_psa</definition>
+        <argsstring>(const mbedtls_pk_context *pk, psa_algorithm_t alg, psa_key_usage_t usage)</argsstring>
+        <name>mbedtls_pk_can_do_psa</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+          <declname>usage</declname>
+        </param>
+        <briefdescription>
+<para>Tell if the key wrapped in the PK context is able to perform the <computeroutput>usage</computeroutput> operation using the <computeroutput>alg</computeroutput> algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para>The operation may be a PK function, a PSA operation on the underlying PSA key if the PK object wraps a PSA key, or a PSA operation on a key obtained with <ref refid="pk_8h_1ad59835d14832daf0f4b4bd0a4555abb9" kindref="member">mbedtls_pk_import_into_psa()</ref>.</para><para><simplesect kind="note"><para>As of TF-PSA-Crypto 1.0.0, this function returns <computeroutput>0</computeroutput> if the key type and policy are suitable for the requested algorithm and usage, even if the key would not work for some other reason, for example an RSA key that is too small for OAEP with the specified hash. This behavior may change without notice in future versions of the library.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to query. It must have been populated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PSA algorithm to check against. Allowed values are:<itemizedlist>
+<listitem><para><ref refid="group__crypto__types_1ga702ff75385a6ae7d4247033f479439af" kindref="member">PSA_ALG_RSA_PKCS1V15_SIGN(hash)</ref>,</para></listitem><listitem><para><ref refid="group__crypto__types_1ga62152bf4cb4bf6aace5e1be8f143564d" kindref="member">PSA_ALG_RSA_PSS(hash)</ref>,</para></listitem><listitem><para><ref refid="group__crypto__types_1ga9b7355a2cd6bde88177634d539127f2b" kindref="member">PSA_ALG_RSA_PSS_ANY_SALT(hash)</ref>,</para></listitem><listitem><para><ref refid="group__crypto__types_1ga4c540d3abe43fb9abcb94f2bc51acef9" kindref="member">PSA_ALG_RSA_PKCS1V15_CRYPT</ref>,</para></listitem><listitem><para><ref refid="group__crypto__types_1gaa1235dc3fdd9839c6c1b1a9857344c76" kindref="member">PSA_ALG_RSA_OAEP(hash)</ref>,</para></listitem><listitem><para><ref refid="group__crypto__types_1ga7e3ce9f514a227d5ba5d8318870452e3" kindref="member">PSA_ALG_ECDSA(hash)</ref>,</para></listitem><listitem><para><ref refid="pk_8h_1a3cc8d538431b85a302e1f366dd813ed1" kindref="member">MBEDTLS_PK_ALG_ECDSA(hash)</ref>, where hash is a specified algorithm. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PSA usage flag that the key must be verified against. A single flag from the following list must be specified:<itemizedlist>
+<listitem><para><ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref>,</para></listitem><listitem><para><ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref>,</para></listitem><listitem><para><ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref>,</para></listitem><listitem><para><ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref>,</para></listitem><listitem><para><ref refid="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" kindref="member">PSA_KEY_USAGE_DERIVE</ref>,</para></listitem><listitem><para><ref refid="group__policy_1ga2e521fe2343c2238469a2210e84e0992" kindref="member">PSA_KEY_USAGE_DERIVE_PUBLIC</ref>.</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if the key can do operation on the given type. </para><simplesectsep/><para>0 if the key cannot do the operations, or the context has not been populated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="342" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_get_psa_attributes</definition>
+        <argsstring>(const mbedtls_pk_context *pk, psa_key_usage_t usage, psa_key_attributes_t *attributes)</argsstring>
+        <name>mbedtls_pk_get_psa_attributes</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+          <declname>usage</declname>
+        </param>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+<para>Determine valid PSA attributes that can be used to import a key into PSA. </para>        </briefdescription>
+        <detaileddescription>
+<para>The attributes determined by this function are suitable for calling <ref refid="pk_8h_1ad59835d14832daf0f4b4bd0a4555abb9" kindref="member">mbedtls_pk_import_into_psa()</ref> to create a PSA key with the same key material.</para><para>The typical flow of operations involving this function is ``` psa_key_attributes_t attributes = PSA_KEY_ATTRIBUTES_INIT; int ret = mbedtls_pk_get_psa_attributes(pk, &amp;attributes); if (ret != 0) ...; // error handling omitted // Tweak attributes if desired psa_key_id_t key_id = 0; ret = mbedtls_pk_import_into_psa(pk, &amp;attributes, &amp;key_id); if (ret != 0) ...; // error handling omitted ```</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated. It can either contain a key pair or just a public key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A single <computeroutput>PSA_KEY_USAGE_xxx</computeroutput> flag among the following:<itemizedlist>
+<listitem><para><ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref>: <computeroutput>pk</computeroutput> must contain a key pair. The output <computeroutput>attributes</computeroutput> will contain a key pair type, and the usage policy will allow <ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref> as well as <ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref>.</para></listitem><listitem><para><ref refid="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" kindref="member">PSA_KEY_USAGE_DERIVE</ref>: <computeroutput>pk</computeroutput> must contain a key pair. The output <computeroutput>attributes</computeroutput> will contain a key pair type.</para></listitem><listitem><para><ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref>: The output <computeroutput>attributes</computeroutput> will contain a public key type.</para></listitem><listitem><para><ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref>: <computeroutput>pk</computeroutput> must contain a key pair. The output <computeroutput>attributes</computeroutput> will contain a key pair type, and the usage policy will allow <ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref> as well as <ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref>.</para></listitem><listitem><para><ref refid="group__policy_1ga552117ac92b79500cae87d4e65a85c54" kindref="member">PSA_KEY_USAGE_SIGN_MESSAGE</ref>: <computeroutput>pk</computeroutput> must contain a key pair. The output <computeroutput>attributes</computeroutput> will contain a key pair type, and the usage policy will allow <ref refid="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" kindref="member">PSA_KEY_USAGE_VERIFY_MESSAGE</ref> as well as <ref refid="group__policy_1ga552117ac92b79500cae87d4e65a85c54" kindref="member">PSA_KEY_USAGE_SIGN_MESSAGE</ref>.</para></listitem><listitem><para><ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref>: The output <computeroutput>attributes</computeroutput> will contain a public key type.</para></listitem><listitem><para><ref refid="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" kindref="member">PSA_KEY_USAGE_VERIFY_MESSAGE</ref>: The output <computeroutput>attributes</computeroutput> will contain a public key type. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, valid attributes to import the key into PSA.<itemizedlist>
+<listitem><para>The lifetime and key identifier are unchanged. If the attribute structure was initialized or reset before calling this function, this will result in a volatile key. Call psa_set_key_identifier() before or after this function if you wish to create a persistent key. Call <ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref> before or after this function if you wish to import the key in a secure element.</para></listitem><listitem><para>The key type and bit-size are determined by the contents of the PK context. If the PK context contains a key pair, the key type can be either a key pair type or the corresponding public key type, depending on <computeroutput>usage</computeroutput>. If the PK context contains a public key, the key type is a public key type.</para></listitem><listitem><para>The key&apos;s policy is determined by the key type and the <computeroutput>usage</computeroutput> parameter. The usage always allows <computeroutput>usage</computeroutput>, exporting and copying the key, and possibly other permissions as documented for the <computeroutput>usage</computeroutput> parameter. The enrolment algorithm (if available in this build) is left unchanged. For keys created with <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput>, the primary algorithm is the same as the original PSA key. Otherwise, it is determined as follows:<itemizedlist>
+<listitem><para>For RSA keys: <ref refid="group__crypto__types_1ga702ff75385a6ae7d4247033f479439af" kindref="member">PSA_ALG_RSA_PKCS1V15_SIGN</ref>(<ref refid="group__crypto__types_1gaa1288ea8bd397a8a3f5e19e94110f2e4" kindref="member">PSA_ALG_ANY_HASH</ref>) if <computeroutput>usage</computeroutput> is SIGN/VERIFY, and <ref refid="group__crypto__types_1ga4c540d3abe43fb9abcb94f2bc51acef9" kindref="member">PSA_ALG_RSA_PKCS1V15_CRYPT</ref> if <computeroutput>usage</computeroutput> is ENCRYPT/DECRYPT.</para></listitem><listitem><para>For ECC keys: <ref refid="pk_8h_1a3cc8d538431b85a302e1f366dd813ed1" kindref="member">MBEDTLS_PK_ALG_ECDSA</ref>(<ref refid="group__crypto__types_1gaa1288ea8bd397a8a3f5e19e94110f2e4" kindref="member">PSA_ALG_ANY_HASH</ref>) if <computeroutput>usage</computeroutput> is SIGN/VERIFY, and <ref refid="group__crypto__types_1gab2dbcf71b63785e7dd7b54a100edee43" kindref="member">PSA_ALG_ECDH</ref> if <computeroutput>usage</computeroutput> is DERIVE.</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. <ref refid="pk_8h_1a7a7fb7cb156476722c09de42368156dc" kindref="member">MBEDTLS_ERR_PK_TYPE_MISMATCH</ref> if <computeroutput>pk</computeroutput> does not contain a key compatible with the desired <computeroutput>usage</computeroutput>. Another error code on other failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="432" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1ad59835d14832daf0f4b4bd0a4555abb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_import_into_psa</definition>
+        <argsstring>(const mbedtls_pk_context *pk, const psa_key_attributes_t *attributes, mbedtls_svc_key_id_t *key_id)</argsstring>
+        <name>mbedtls_pk_import_into_psa</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pk</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref> *</type>
+          <declname>key_id</declname>
+        </param>
+        <briefdescription>
+<para>Import a key into the PSA key store. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is equivalent to calling <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref> with the key material from <computeroutput>pk</computeroutput>.</para><para>The typical way to use this function is:<orderedlist>
+<listitem><para>Call <ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes()</ref> to obtain attributes for the given key.</para></listitem><listitem><para>If desired, modify the attributes, for example:<itemizedlist>
+<listitem><para>To create a persistent key, call psa_set_key_identifier() and optionally <ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref>.</para></listitem><listitem><para>To import only the public part of a key pair: <verbatim>psa_set_key_type(&amp;attributes,
+                 PSA_KEY_TYPE_PUBLIC_KEY_OF_KEY_PAIR(
+                     psa_get_key_type(&amp;attributes)));
+</verbatim></para></listitem><listitem><para>Restrict the key usage if desired.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Call <ref refid="pk_8h_1ad59835d14832daf0f4b4bd0a4555abb9" kindref="member">mbedtls_pk_import_into_psa()</ref>.</para></listitem></orderedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated. It can either contain a key pair or just a public key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attributes to use for the new key. They must be compatible with <computeroutput>pk</computeroutput>. In particular, the key type must match the content of <computeroutput>pk</computeroutput>. If <computeroutput>pk</computeroutput> contains a key pair, the key type in attributes can be either the key pair type or the corresponding public key type (to import only the public part). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the identifier of the newly created key. On error, this is <ref refid="group__key__lifetimes_1ga838f2dc64e670aa69fc4c0b82932f021" kindref="member">MBEDTLS_SVC_KEY_ID_INIT</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. <ref refid="pk_8h_1a7a7fb7cb156476722c09de42368156dc" kindref="member">MBEDTLS_ERR_PK_TYPE_MISMATCH</ref> if <computeroutput>pk</computeroutput> does not contain a key of the type identified in <computeroutput>attributes</computeroutput>. Another error code on other failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="476" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1ab8e88836fd9ee344ffe630c40447bd08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_copy_from_psa</definition>
+        <argsstring>(mbedtls_svc_key_id_t key_id, mbedtls_pk_context *pk)</argsstring>
+        <name>mbedtls_pk_copy_from_psa</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key_id</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pk</declname>
+        </param>
+        <briefdescription>
+<para>Populate a PK context with the key material from a PSA key. </para>        </briefdescription>
+        <detaileddescription>
+<para>This key:<itemizedlist>
+<listitem><para>must be exportable and</para></listitem><listitem><para>must be an RSA or EC key pair or public key (FFDH is not supported in PK).</para></listitem></itemizedlist>
+</para><para>Once this function returns the PK object will be completely independent from the original PSA key that it was generated from.</para><para><simplesect kind="note"><para>This function only copies the key material but discards policy information entirely. See <computeroutput><ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes()</ref></computeroutput> for details on which algorithm is going to be used by PK for contexts populated with this function.</para></simplesect>
+If you want to retain the PSA policy, see <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput> - but then the PSA key needs to live at least as long as the PK context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key identifier of the key stored in PSA. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> in case the provided input parameters are not correct. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="509" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a2a50247a528889c12ea0ddddb8b15a4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_copy_public_from_psa</definition>
+        <argsstring>(mbedtls_svc_key_id_t key_id, mbedtls_pk_context *pk)</argsstring>
+        <name>mbedtls_pk_copy_public_from_psa</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key_id</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pk</declname>
+        </param>
+        <briefdescription>
+<para>Populate a PK context with the public key material of a PSA key. </para>        </briefdescription>
+        <detaileddescription>
+<para>The key must be an RSA or ECC key. It can be either a public key or a key pair, and only the public key is copied.</para><para>Once this function returns the PK object will be completely independent from the original PSA key that it was generated from.</para><para><simplesect kind="note"><para>This function only copies the key material but discards policy information entirely. See <computeroutput><ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes()</ref></computeroutput> for details on which algorithm is going to be used by PK for contexts populated with this function.</para></simplesect>
+If you want to retain the PSA policy, see <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput> - but then the PSA key needs to live at least as long as the PK context.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key identifier of the key stored in PSA. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> in case the provided input parameters are not correct. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="539" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_verify</definition>
+        <argsstring>(mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, const unsigned char *sig, size_t sig_len)</argsstring>
+        <name>mbedtls_pk_verify</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_len</declname>
+        </param>
+        <briefdescription>
+<para>Verify signature. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The signature algorithm used will be the one that would be selected by <computeroutput><ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes()</ref></computeroutput> called with a usage of <ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref> - see that function&apos;s documentation for details. If you want to select a specific signature algorithm, see <computeroutput><ref refid="pk_8h_1a38c7f56d0b29e4b948cfc825725fdbf3" kindref="member">mbedtls_pk_verify_ext()</ref></computeroutput>.</para><simplesectsep/><para>This function currently does not work on RSA keys created with <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature to verify </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature length</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success (signature is valid), <ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref> if the signature is invalid, or another specific error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="566" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1aa3a4baeaab34a94ba0985d4daf41b9ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_verify_restartable</definition>
+        <argsstring>(mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, const unsigned char *sig, size_t sig_len, mbedtls_pk_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_pk_verify_restartable</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_len</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Restartable version of <computeroutput><ref refid="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" kindref="member">mbedtls_pk_verify()</ref></computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Performs the same job as <computeroutput><ref refid="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" kindref="member">mbedtls_pk_verify()</ref></computeroutput>, but can return early and restart according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce blocking for ECC operations. For RSA, same as <computeroutput><ref refid="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" kindref="member">mbedtls_pk_verify()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature to verify </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Restart context (NULL to disable restart)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>See <computeroutput><ref refid="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" kindref="member">mbedtls_pk_verify()</ref></computeroutput>, or </para><simplesectsep/><para><ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if maximum number of operations was reached: see <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="590" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a38c7f56d0b29e4b948cfc825725fdbf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_verify_ext</definition>
+        <argsstring>(mbedtls_pk_sigalg_t type, mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, const unsigned char *sig, size_t sig_len)</argsstring>
+        <name>mbedtls_pk_verify_ext</name>
+        <param>
+          <type><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_len</declname>
+        </param>
+        <briefdescription>
+<para>Verify signature, selecting a specific algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature type to verify </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature to verify </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature length</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If <computeroutput>type</computeroutput> is <ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a16fbbf329b806f018bd149c899fb55be" kindref="member">MBEDTLS_PK_SIGALG_RSA_PSS</ref>, then any salt length is accepted: <ref refid="group__crypto__types_1ga9b7355a2cd6bde88177634d539127f2b" kindref="member">PSA_ALG_RSA_PSS_ANY_SALT</ref> is used.</para></simplesect>
+<simplesect kind="return"><para>0 on success (signature is valid), <ref refid="pk_8h_1a7a7fb7cb156476722c09de42368156dc" kindref="member">MBEDTLS_ERR_PK_TYPE_MISMATCH</ref> if the PK context can&apos;t be used for this type of signature, <ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref> if the signature is invalid, or a specific error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="617" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_sign</definition>
+        <argsstring>(mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, unsigned char *sig, size_t sig_size, size_t *sig_len)</argsstring>
+        <name>mbedtls_pk_sign</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>sig_len</declname>
+        </param>
+        <briefdescription>
+<para>Make signature. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The signature algorithm used will be the one that would be selected by <computeroutput><ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes()</ref></computeroutput> called with a usage of <ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref> - see that function&apos;s documentation for details. If you want to select a specific signature algorithm, see <computeroutput><ref refid="pk_8h_1a68af9544d4779716a76c87e7bf947753" kindref="member">mbedtls_pk_sign_ext()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated with a private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Place to write the signature. It must have enough room for the signature. <ref refid="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" kindref="member">MBEDTLS_PK_SIGNATURE_MAX_SIZE</ref> is always enough. You may use a smaller buffer if it is large enough given the key type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>sig</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On successful return, the number of bytes written to <computeroutput>sig</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, or a specific error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="649" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a9718b165ce53523262b41caf60213af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_sign_restartable</definition>
+        <argsstring>(mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, unsigned char *sig, size_t sig_size, size_t *sig_len, mbedtls_pk_restart_ctx *rs_ctx)</argsstring>
+        <name>mbedtls_pk_sign_restartable</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>sig_len</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref> *</type>
+          <declname>rs_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Restartable version of <computeroutput><ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref></computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Performs the same job as <computeroutput><ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref></computeroutput>, but can return early and restart according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce blocking for ECC operations. For RSA, same as <computeroutput><ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref></computeroutput>.</para><simplesectsep/><para>For ECC keys, always uses <ref refid="pk_8h_1a3cc8d538431b85a302e1f366dd813ed1" kindref="member">MBEDTLS_PK_ALG_ECDSA(hash)</ref>, where hash is the PSA alg identifier corresponding to <computeroutput>hash</computeroutput>.</para><simplesectsep/><para>This function currently does not work on ECC keys created with <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated with a private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Place to write the signature. It must have enough room for the signature. <ref refid="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" kindref="member">MBEDTLS_PK_SIGNATURE_MAX_SIZE</ref> is always enough. You may use a smaller buffer if it is large enough given the key type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>sig</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On successful return, the number of bytes written to <computeroutput>sig</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rs_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Restart context (NULL to disable restart)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>See <computeroutput><ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign()</ref></computeroutput>. </para><simplesectsep/><para><ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if the maximum number of operations was reached: see <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="687" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a68af9544d4779716a76c87e7bf947753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_sign_ext</definition>
+        <argsstring>(mbedtls_pk_sigalg_t sig_type, mbedtls_pk_context *ctx, mbedtls_md_type_t md_alg, const unsigned char *hash, size_t hash_len, unsigned char *sig, size_t sig_size, size_t *sig_len)</argsstring>
+        <name>mbedtls_pk_sign_ext</name>
+        <param>
+          <type><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref></type>
+          <declname>sig_type</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>sig_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>sig_len</declname>
+        </param>
+        <briefdescription>
+<para>Generate a signature, selecting a specific algorithm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sig_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Signature type to generate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to use. It must have been populated with a private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash algorithm used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the message to sign </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash length </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Place to write the signature. It must have enough room for the signature. <ref refid="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" kindref="member">MBEDTLS_PK_SIGNATURE_MAX_SIZE</ref> is always enough. You may use a smaller buffer if it is large enough given the key type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>sig</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sig_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On successful return, the number of bytes written to <computeroutput>sig</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, <ref refid="pk_8h_1a7a7fb7cb156476722c09de42368156dc" kindref="member">MBEDTLS_ERR_PK_TYPE_MISMATCH</ref> if the PK context can&apos;t be used for this type of signature, or a specific error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="716" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a87f9989d6859e2dceb5e1d4c4491fdca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_check_pair</definition>
+        <argsstring>(const mbedtls_pk_context *pub, const mbedtls_pk_context *prv)</argsstring>
+        <name>mbedtls_pk_check_pair</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>prv</declname>
+        </param>
+        <briefdescription>
+<para>Check if a public-private pair of keys matches. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function currently does not work on keys created with <computeroutput><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pub</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context holding a public key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context holding a private (and public) key.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success (keys were checked and match each other). </para><simplesectsep/><para><ref refid="pk_8h_1af4a79b15d48bd86c96767db4b9ce2caf" kindref="member">MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE</ref> if the keys could not be checked - in that case they may or may not match. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> if a context is invalid. </para><simplesectsep/><para>Another non-zero value if the keys do not match. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="737" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a072d27dc4143bfd600786232f9417e08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_parse_key</definition>
+        <argsstring>(mbedtls_pk_context *ctx, const unsigned char *key, size_t keylen, const unsigned char *pwd, size_t pwdlen)</argsstring>
+        <name>mbedtls_pk_parse_key</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pwd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pwdlen</declname>
+        </param>
+        <briefdescription>
+<para>Parse a private key in PEM or DER format. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input buffer to parse. The buffer must contain the input exactly, with no extra trailing material. For PEM, the buffer must contain a null-terminated string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <bold>key</bold> in bytes. For PEM data, this includes the terminating null byte, so <computeroutput>keylen</computeroutput> must be equal to <computeroutput>strlen(key) + 1</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional password for decryption. Pass <computeroutput>NULL</computeroutput> if expecting a non-encrypted key. Pass a string of <computeroutput>pwdlen</computeroutput> bytes if expecting an encrypted key; a non-encrypted key will also be accepted. The empty password is not supported. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwdlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the password in bytes. Ignored if <computeroutput>pwd</computeroutput> is <computeroutput>NULL</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If you need a specific key type, check the result with <computeroutput><ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa()</ref></computeroutput>.</para><simplesectsep/><para>The key is also checked for correctness.</para></simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific PK or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="768" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1ade680bf8e87df7ccc3bb36b52e43972b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_parse_public_key</definition>
+        <argsstring>(mbedtls_pk_context *ctx, const unsigned char *key, size_t keylen)</argsstring>
+        <name>mbedtls_pk_parse_public_key</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>keylen</declname>
+        </param>
+        <briefdescription>
+<para>Parse a public key in PEM or DER format. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input buffer to parse. The buffer must contain the input exactly, with no extra trailing material. For PEM, the buffer must contain a null-terminated string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keylen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <bold>key</bold> in bytes. For PEM data, this includes the terminating null byte, so <computeroutput>keylen</computeroutput> must be equal to <computeroutput>strlen(key) + 1</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If you need a specific key type, check the result with <computeroutput><ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa()</ref></computeroutput>.</para><simplesectsep/><para>The key is also checked for correctness.</para></simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific PK or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="792" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a935d710e542409462d0209f2381da83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_parse_keyfile</definition>
+        <argsstring>(mbedtls_pk_context *ctx, const char *path, const char *password)</argsstring>
+        <name>mbedtls_pk_parse_keyfile</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+<para>Load and parse a private key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to read the private key from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional password to decrypt the file. Pass <computeroutput>NULL</computeroutput> if expecting a non-encrypted key. Pass a null-terminated string if expecting an encrypted key; a non-encrypted key will also be accepted. The empty password is not supported.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If you need a specific key type, check the result with <computeroutput><ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa()</ref></computeroutput>.</para><simplesectsep/><para>The key is also checked for correctness.</para></simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific PK or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="815" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1af5a0ae67100c005638bb74f575ee4ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_parse_public_keyfile</definition>
+        <argsstring>(mbedtls_pk_context *ctx, const char *path)</argsstring>
+        <name>mbedtls_pk_parse_public_keyfile</name>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Load and parse a public key. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PK context to populate. It must be empty. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to read the public key from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>If you need a specific key type, check the result with <computeroutput><ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa()</ref></computeroutput>.</para><simplesectsep/><para>The key is also checked for correctness.</para></simplesect>
+<simplesect kind="return"><para>0 if successful, or a specific PK or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="832" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a2cf4ebaa430cc90954c9556ace2d4dc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_write_key_der</definition>
+        <argsstring>(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_pk_write_key_der</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a private key to a PKCS#1 or SEC1 DER structure Note: data is written at the end of the buffer! Use the return value to determine where you should start using the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PK context which must contain a valid private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>length of data written if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="850" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a7316929f00feaecc18c1384d3fa05751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_write_pubkey_der</definition>
+        <argsstring>(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_pk_write_pubkey_der</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a public key to a SubjectPublicKeyInfo DER structure Note: data is written at the end of the buffer! Use the return value to determine where you should start using the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PK context which must contain a valid public or private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>length of data written if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="865" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1a0c8dbff82fd97c02e2f534548d6db8af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_write_pubkey_pem</definition>
+        <argsstring>(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_pk_write_pubkey_pem</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a public key to a PEM string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PK context which must contain a valid public or private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to write to. The output includes a terminating null byte. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="878" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pk_8h_1afccb22770b6089de9c7ecbb90dc8847e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pk_write_key_pem</definition>
+        <argsstring>(const mbedtls_pk_context *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_pk_write_key_pem</name>
+        <param>
+          <type>const <ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a private key to a PKCS#1 or SEC1 PEM string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PK context which must contain a valid private key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to write to. The output includes a terminating null byte. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="890" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Public Key abstraction layer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PK_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_H</highlight></codeline>
+<codeline lineno="13" refid="pk_8h_1ab30c338fb65fd3417594582359b3b141" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_HAVE_PRIVATE_HEADER</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compat-3-crypto_8h" kindref="compound">mbedtls/compat-3-crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="27" refid="pk_8h_1a7a7fb7cb156476722c09de42368156dc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_TYPE_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x3F00</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="29" refid="pk_8h_1a334a28580efaab3c749fdf1dde28feb8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_FILE_IO_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x3E00</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="31" refid="pk_8h_1a9b589f81143439f8580b3004dc8ecaf1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_KEY_INVALID_VERSION<sp/>-0x3D80</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="33" refid="pk_8h_1a291c7d21aa2cd94b2100703e8e3a1d06" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_KEY_INVALID_FORMAT<sp/><sp/>-0x3D00</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="35" refid="pk_8h_1a877b66447bfa2cd49c1b99f1dc887568" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_UNKNOWN_PK_ALG<sp/><sp/><sp/><sp/><sp/><sp/>-0x3C80</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="37" refid="pk_8h_1a9c1de7ccb4e18a3ea74b35c4e2cb7527" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_PASSWORD_REQUIRED<sp/><sp/><sp/>-0x3C00</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="39" refid="pk_8h_1a24723299c688b1ca6cfa613c19cef6f5" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_PASSWORD_MISMATCH<sp/><sp/><sp/>-0x3B80</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="41" refid="pk_8h_1a0fdf1044cce5beb387d76d19bf4ef0a2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_INVALID_PUBKEY<sp/><sp/><sp/><sp/><sp/><sp/>-0x3B00</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="43" refid="pk_8h_1a5d71f30a40d67d5d205a20b69303a341" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_INVALID_ALG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x3A80</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="45" refid="pk_8h_1a802d8b95e9b6a517d597dc92cb591e99" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_UNKNOWN_NAMED_CURVE<sp/>-0x3A00</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="47" refid="pk_8h_1af4a79b15d48bd86c96767db4b9ce2caf" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE<sp/>-0x3980</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54" refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a956d76a63c07bb12db91f818f29edbe0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a956d76a63c07bb12db91f818f29edbe0" kindref="member">MBEDTLS_PK_SIGALG_NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="55" refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436ad17a18f5867360e89d9bc9525b52ba2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436ad17a18f5867360e89d9bc9525b52ba2a" kindref="member">MBEDTLS_PK_SIGALG_RSA_PKCS1V15</ref>,<sp/></highlight><highlight class="comment">//<sp/>PSA_ALG_RSA_PKCS1V15_SIGN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a16fbbf329b806f018bd149c899fb55be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a16fbbf329b806f018bd149c899fb55be" kindref="member">MBEDTLS_PK_SIGALG_RSA_PSS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PSA_ALG_RSA_PSS_ANY_SALT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a8ea847e3aef64002f19bcd07bb3c1526" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436a8ea847e3aef64002f19bcd07bb3c1526" kindref="member">MBEDTLS_PK_SIGALG_ECDSA</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>MBEDTLS_PK_ALG_ECDSA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}<sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="comment">/*<sp/>We<sp/>need<sp/>to<sp/>set<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>to<sp/>the<sp/>maximum<sp/>signature</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*<sp/>size<sp/>among<sp/>the<sp/>supported<sp/>signature<sp/>types.<sp/>Do<sp/>it<sp/>by<sp/>starting<sp/>at<sp/>0,</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>*<sp/>then<sp/>incrementally<sp/>increasing<sp/>to<sp/>be<sp/>large<sp/>enough<sp/>for<sp/>each<sp/>supported</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*<sp/>signature<sp/>mechanism.</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>The<sp/>resulting<sp/>value<sp/>can<sp/>be<sp/>0,<sp/>for<sp/>example<sp/>if<sp/>MBEDTLS_ECDH_C<sp/>is<sp/>enabled</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*<sp/>(which<sp/>allows<sp/>the<sp/>pk<sp/>module<sp/>to<sp/>be<sp/>included)<sp/>but<sp/>neither<sp/>MBEDTLS_ECDSA_C</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>nor<sp/>MBEDTLS_RSA_C<sp/>nor<sp/>any<sp/>PSA<sp/>signature<sp/>mechanism<sp/>(PSA).</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>0</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_RSA_C)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MBEDTLS_MPI_MAX_SIZE<sp/>&gt;<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>For<sp/>RSA,<sp/>the<sp/>signature<sp/>can<sp/>be<sp/>as<sp/>large<sp/>as<sp/>the<sp/>bignum<sp/>module<sp/>allows.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="79" refid="pk_8h_1af0c8fb77b9ca1c22927cd4b449bad0df" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>MBEDTLS_MPI_MAX_SIZE</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECDSA_C)<sp/>&amp;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MBEDTLS_ECDSA_MAX_LEN<sp/>&gt;<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>For<sp/>ECDSA,<sp/>the<sp/>ecdsa<sp/>module<sp/>exports<sp/>a<sp/>constant<sp/>for<sp/>the<sp/>maximum</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/>*<sp/>signature<sp/>size.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>MBEDTLS_ECDSA_MAX_LEN</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PSA_SIGNATURE_MAX_SIZE<sp/>&gt;<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>PSA_SIGNATURE_MAX_SIZE<sp/>is<sp/>the<sp/>maximum<sp/>size<sp/>of<sp/>a<sp/>signature<sp/>made</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/>through<sp/>the<sp/>PSA<sp/>API<sp/>in<sp/>the<sp/>PSA<sp/>representation.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>PSA_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PSA_VENDOR_ECDSA_SIGNATURE_MAX_SIZE<sp/>+<sp/>11<sp/>&gt;<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>The<sp/>Mbed<sp/>TLS<sp/>representation<sp/>is<sp/>different<sp/>for<sp/>ECDSA<sp/>signatures:</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>PSA<sp/>uses<sp/>the<sp/>raw<sp/>concatenation<sp/>of<sp/>r<sp/>and<sp/>s,</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/>whereas<sp/>Mbed<sp/>TLS<sp/>uses<sp/>the<sp/>ASN.1<sp/>representation<sp/>(SEQUENCE<sp/>of<sp/>two<sp/>INTEGERs).</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/>Add<sp/>the<sp/>overhead<sp/>of<sp/>ASN.1:<sp/>up<sp/>to<sp/>(1+2)<sp/>+<sp/>2<sp/>*<sp/>(1+2+1)<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*<sp/>types,<sp/>lengths<sp/>(represented<sp/>by<sp/>up<sp/>to<sp/>2<sp/>bytes),<sp/>and<sp/>potential<sp/>leading</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>*<sp/>zeros<sp/>of<sp/>the<sp/>INTEGERs<sp/>and<sp/>the<sp/>SEQUENCE.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_SIGNATURE_MAX_SIZE<sp/>(PSA_VENDOR_ECDSA_SIGNATURE_MAX_SIZE<sp/>+<sp/>11)</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Keep<sp/>this<sp/>symbol<sp/>for<sp/>backward<sp/>compatibility.<sp/>There<sp/>is<sp/>code<sp/>in<sp/>the<sp/>framework</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/>*<sp/>which<sp/>depends<sp/>on<sp/>this.<sp/>Once<sp/>3.6<sp/>LTS<sp/>branch<sp/>will<sp/>reach<sp/>end-of-life<sp/>framework&apos;s</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>code<sp/>can<sp/>be<sp/>adjusted<sp/>and<sp/>this<sp/>define<sp/>removed.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="pk_8h_1aab67f96ca89cce6052dc81a1c2d4760f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_USE_PSA_EC_DATA</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>is<sp/>identical<sp/>to<sp/>MBEDTLS_PK_USE_PSA_EC_DATA<sp/>above,<sp/>but<sp/>for<sp/>RSA<sp/>keys.</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/>*<sp/>The<sp/>main<sp/>reason<sp/>for<sp/>having<sp/>it<sp/>is<sp/>that<sp/>framework<sp/>code<sp/>is<sp/>shared<sp/>between</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/>*<sp/>the<sp/>develoment<sp/>branch<sp/>and<sp/>the<sp/>3.6<sp/>LTS<sp/>one<sp/>and<sp/>we<sp/>need<sp/>a<sp/>way<sp/>to<sp/>tell<sp/>from<sp/>which</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/>*<sp/>of<sp/>the<sp/>two<sp/>we&apos;re<sp/>building.</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/>*<sp/>This<sp/>symbol<sp/>is<sp/>not<sp/>used<sp/>in<sp/>builtin<sp/>driver<sp/>and<sp/>tests<sp/>and<sp/>it<sp/>can<sp/>be<sp/>removed</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/>*<sp/>at<sp/>the<sp/>same<sp/>time<sp/>as<sp/>MBEDTLS_PK_USE_PSA_EC_DATA.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="pk_8h_1a0e4e144bc6da59035b3c5396c8b55c8e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_USE_PSA_RSA_DATA</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Opaque<sp/>internal<sp/>type<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref><sp/><ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="pk_8h_1abb8f1e65f079e1e5af4e0e24639bad8b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN<sp/>\</highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>PSA_KEY_EXPORT_ECC_PUBLIC_KEY_MAX_SIZE(PSA_VENDOR_ECC_MAX_CURVE_BITS)</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="pk_8h_1abf68e12b062c15af1aa67c1cac90ddbd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN<sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>PSA_KEY_EXPORT_RSA_PUBLIC_KEY_MAX_SIZE(PSA_VENDOR_RSA_MAX_KEY_BITS)</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="pk_8h_1a7475e1707679baf28ca7ec2b6b2d2642" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_MAX_PUBKEY_RAW_LEN<sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN<sp/>&gt;<sp/>MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN)<sp/>?<sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>MBEDTLS_PK_MAX_EC_PUBKEY_RAW_LEN<sp/>:<sp/>MBEDTLS_PK_MAX_RSA_PUBKEY_RAW_LEN</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="135" refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359af459229de2fa86ba5f6b3eb7342dcdeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359af459229de2fa86ba5f6b3eb7342dcdeb" kindref="member">MBEDTLS_PK_RSA_PKCS_V15</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="136" refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359a50138409756e973f8694ceafeb318357" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359a50138409756e973f8694ceafeb318357" kindref="member">MBEDTLS_PK_RSA_PKCS_V21</ref>,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}<sp/><ref refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359" kindref="member">mbedtls_pk_rsa_padding_t</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="structmbedtls__pk__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Public<sp/>key<sp/>information.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="structmbedtls__pk__context_1ac98791e4426f0fa1e97e8de8375a9a65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref><sp/>*MBEDTLS_PRIVATE(pk_info);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Previously:<sp/>underlying<sp/>public<sp/>key<sp/>context.</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Now<sp/>unused<sp/>(by<sp/>public<sp/>functions<sp/>at<sp/>least).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structmbedtls__pk__context_1a583694625dbdb8a313975705872b78d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(pk_ctx);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>following<sp/>field<sp/>is<sp/>used<sp/>to<sp/>store<sp/>the<sp/>ID<sp/>of<sp/>a<sp/>private<sp/>key<sp/>for:</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>EC<sp/>keys<sp/>(MBEDTLS_PK_ECKEY,<sp/>MBEDTLS_PK_ECKEY_DH,<sp/>MBEDTLS_PK_ECDSA)</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>-<sp/>Wrapped<sp/>keys<sp/>(EC<sp/>or<sp/>RSA).</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>priv_id<sp/>=<sp/>MBEDTLS_SVC_KEY_ID_INIT<sp/>when<sp/>PK<sp/>context<sp/>wraps<sp/>only<sp/>the<sp/>public</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>key.</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Other<sp/>keys<sp/>still<sp/>use<sp/>the<sp/>pk_ctx<sp/>to<sp/>store<sp/>their<sp/>own<sp/>context.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structmbedtls__pk__context_1ae8c1a362ef3e9b69b1da56f16eb9c6d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>MBEDTLS_PRIVATE(priv_id);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY)<sp/>||<sp/>defined(PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY)</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Public<sp/>EC<sp/>or<sp/>RSA<sp/>key<sp/>in<sp/>raw<sp/>format,<sp/>where<sp/>raw<sp/>here<sp/>means<sp/>the<sp/>format<sp/>returned</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>by<sp/>psa_export_public_key().<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="structmbedtls__pk__context_1a64d4b9a1bbf91eeb2616eb5e88b51ec6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(pub_raw)[<ref refid="pk_8h_1a7475e1707679baf28ca7ec2b6b2d2642" kindref="member">MBEDTLS_PK_MAX_PUBKEY_RAW_LEN</ref>];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Lenght<sp/>of<sp/>the<sp/>raw<sp/>key<sp/>above<sp/>in<sp/>bytes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="structmbedtls__pk__context_1a59609db130b141990c743c88f56189b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(pub_raw_len);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bits<sp/>of<sp/>the<sp/>private/public<sp/>key.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="structmbedtls__pk__context_1ab897558dd1c901d4aef4e713cb11f888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(bits);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY<sp/>||<sp/>PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY)</highlight></codeline>
+<codeline lineno="172"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>EC<sp/>family.<sp/>Only<sp/>applies<sp/>to<sp/>EC<sp/>keys.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="structmbedtls__pk__context_1af2e96d96c5e882af6105aa5a9f37b6af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gae7ad3569cb9c91b1ebe59a056edb2fc6" kindref="member">psa_ecc_family_t</ref><sp/>MBEDTLS_PRIVATE(ec_family);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY)</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Padding<sp/>associated<sp/>to<sp/>the<sp/>RSA<sp/>key.<sp/>It<sp/>only<sp/>affects<sp/>RSA<sp/>public<sp/>key<sp/>since</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>private<sp/>one<sp/>is<sp/>imported<sp/>into<sp/>PSA<sp/>with<sp/>v1.5<sp/>as<sp/>main<sp/>algorithm<sp/>and</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>v2.1<sp/>as<sp/>enrollment<sp/>algorithm.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="structmbedtls__pk__context_1ad1dc18ce420a19310608e0c7a0a083d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1a0bfbb3fe7efa92b6edaa27998d03f359" kindref="member">mbedtls_pk_rsa_padding_t</ref><sp/>MBEDTLS_PRIVATE(rsa_padding);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Hash<sp/>algorithm<sp/>to<sp/>be<sp/>used<sp/>with<sp/>RSA<sp/>public<sp/>key.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structmbedtls__pk__context_1a4a35ba4678154b34b7bd5c728f164f38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>MBEDTLS_PRIVATE(rsa_hash_alg);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_WANT_KEY_TYPE_RSA_PUBLIC_KEY<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"></highlight><highlight class="normal">}<sp/><ref refid="pk_8h_1a32c81ef1df77e5c7e0626540a9aa4da5" kindref="member">mbedtls_pk_context</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight></codeline>
+<codeline lineno="188"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="191" refid="structmbedtls__pk__restart__ctx" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192" refid="structmbedtls__pk__restart__ctx_1ab65d7dd4398e7ca5da60e10d45146fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref><sp/>*MBEDTLS_PRIVATE(pk_info);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Public<sp/>key<sp/>information<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="structmbedtls__pk__restart__ctx_1a2a747fdb8e6f65cf650675145f13a6c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(rs_ctx);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Underlying<sp/>restart<sp/>context<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}<sp/><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Now<sp/>we<sp/>can<sp/>declare<sp/>functions<sp/>that<sp/>take<sp/>a<sp/>pointer<sp/>to<sp/>that<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_ALG_DETERMINISTIC_ECDSA)</highlight></codeline>
+<codeline lineno="208" refid="pk_8h_1a3cc8d538431b85a302e1f366dd813ed1" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_ALG_ECDSA(hash_alg)<sp/>PSA_ALG_DETERMINISTIC_ECDSA(hash_alg)</highlight></codeline>
+<codeline lineno="209"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="210"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PK_ALG_ECDSA(hash_alg)<sp/>PSA_ALG_ECDSA(hash_alg)</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="229"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a999d1160bb30c03d0c4382c3a9b0aa89" kindref="member">mbedtls_pk_init</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1ac6a9786d96abfd73c4dff6814238feb9" kindref="member">mbedtls_pk_free</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ECP_RESTARTABLE)</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="253"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a68035977bd3664838529bcc0ad95e059" kindref="member">mbedtls_pk_restart_init</ref>(mbedtls_pk_restart_ctx<sp/>*ctx);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1ab82d0dc78b3262f16087fa4814eeca9c" kindref="member">mbedtls_pk_restart_free</ref>(mbedtls_pk_restart_ctx<sp/>*ctx);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ECP_RESTARTABLE<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="263"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="289"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a842d0a5842b99152d68b4405bde82788" kindref="member">mbedtls_pk_wrap_psa</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a4a31083a590b155dd54d22cf618eefcc" kindref="member">mbedtls_pk_get_bitlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pk,<sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/>alg,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/>usage);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)</highlight></codeline>
+<codeline lineno="346"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="432"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a7aa7b33cffb6981d95d1632631de9244" kindref="member">mbedtls_pk_get_psa_attributes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pk,</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref><sp/>usage,</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1ad59835d14832daf0f4b4bd0a4555abb9" kindref="member">mbedtls_pk_import_into_psa</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pk,</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>*attributes,</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>*key_id);</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1ab8e88836fd9ee344ffe630c40447bd08" kindref="member">mbedtls_pk_copy_from_psa</ref>(<ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key_id,<sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pk);</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a2a50247a528889c12ea0ddddb8b15a4e" kindref="member">mbedtls_pk_copy_public_from_psa</ref>(<ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key_id,<sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pk);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_CLIENT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="541"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="566"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1abf1939cc1d89f6b9fd341b67d5241914" kindref="member">mbedtls_pk_verify</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_len);</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1aa3a4baeaab34a94ba0985d4daf41b9ca" kindref="member">mbedtls_pk_verify_restartable</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_len,</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_pk_restart_ctx<sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="595"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a38c7f56d0b29e4b948cfc825725fdbf3" kindref="member">mbedtls_pk_verify_ext</ref>(<ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref><sp/>type,</highlight></codeline>
+<codeline lineno="618"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="619"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_len);</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight></codeline>
+<codeline lineno="649"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a0a2b3c2691e9e6c5677a3c68fe2fc647" kindref="member">mbedtls_pk_sign</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="650"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="651"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*sig_len);</highlight></codeline>
+<codeline lineno="652"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a9718b165ce53523262b41caf60213af9" kindref="member">mbedtls_pk_sign_restartable</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*sig_len,</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_pk_restart_ctx<sp/>*rs_ctx);</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a68af9544d4779716a76c87e7bf947753" kindref="member">mbedtls_pk_sign_ext</ref>(<ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref><sp/>sig_type,</highlight></codeline>
+<codeline lineno="717"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg,</highlight></codeline>
+<codeline lineno="719"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hash_len,</highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sig,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>sig_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*sig_len);</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a87f9989d6859e2dceb5e1d4c4491fdca" kindref="member">mbedtls_pk_check_pair</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*pub,</highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*prv);</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PK_PARSE_C)</highlight></codeline>
+<codeline lineno="741"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="768"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a072d27dc4143bfd600786232f9417e08" kindref="member">mbedtls_pk_parse_key</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen,</highlight></codeline>
+<codeline lineno="770"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pwd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pwdlen);</highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight></codeline>
+<codeline lineno="792"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1ade680bf8e87df7ccc3bb36b52e43972b" kindref="member">mbedtls_pk_parse_public_key</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>keylen);</highlight></codeline>
+<codeline lineno="794"><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="796"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="815"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a935d710e542409462d0209f2381da83e" kindref="member">mbedtls_pk_parse_keyfile</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*password);</highlight></codeline>
+<codeline lineno="817"><highlight class="normal"></highlight></codeline>
+<codeline lineno="832"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1af5a0ae67100c005638bb74f575ee4ad6" kindref="member">mbedtls_pk_parse_public_keyfile</ref>(<ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="834"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PK_PARSE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="835"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="836"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PK_WRITE_C)</highlight></codeline>
+<codeline lineno="837"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="850"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a2cf4ebaa430cc90954c9556ace2d4dc0" kindref="member">mbedtls_pk_write_key_der</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight></codeline>
+<codeline lineno="865"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a7316929f00feaecc18c1384d3fa05751" kindref="member">mbedtls_pk_write_pubkey_der</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="866"><highlight class="normal"></highlight></codeline>
+<codeline lineno="867"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PEM_WRITE_C)</highlight></codeline>
+<codeline lineno="868"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="878"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1a0c8dbff82fd97c02e2f534548d6db8af" kindref="member">mbedtls_pk_write_pubkey_pem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pk_8h_1afccb22770b6089de9c7ecbb90dc8847e" kindref="member">mbedtls_pk_write_key_pem</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="891"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PEM_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="892"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PK_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="893"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="895"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="897"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="898"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PK_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h"/>
+  </compounddef>
+</doxygen>

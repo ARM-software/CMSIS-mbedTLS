@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__crypto__driver__pake__inputs__s" kind="struct" prot="public">
+    <compoundname>psa_crypto_driver_pake_inputs_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ae5e803385377017bbfca7358bf8a4dff" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_password</definition>
+        <argsstring></argsstring>
+        <name>private_password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="990" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="990" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ac8f57d94288ac9c6439871d65c19a676" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_password_len</definition>
+        <argsstring></argsstring>
+        <name>private_password_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="991" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="991" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a6af967cc0117dbb94945ab5da2edc0f3" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_user</definition>
+        <argsstring></argsstring>
+        <name>private_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="992" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="992" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a815d8cdb6eaebf9cee49a00ccb8d26fc" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_user_len</definition>
+        <argsstring></argsstring>
+        <name>private_user_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="993" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="993" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1ac9bb1bd6eea28bd9380a65fe00a0b51d" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_crypto_driver_pake_inputs_s::private_peer</definition>
+        <argsstring></argsstring>
+        <name>private_peer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="994" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="994" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a7e27e6112392120663a6b52f86626935" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_crypto_driver_pake_inputs_s::private_peer_len</definition>
+        <argsstring></argsstring>
+        <name>private_peer_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="995" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="995" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a5d5229023862b3c5dafcd8f131b852dc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref></type>
+        <definition>psa_key_attributes_t psa_crypto_driver_pake_inputs_s::private_attributes</definition>
+        <argsstring></argsstring>
+        <name>private_attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="996" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__crypto__driver__pake__inputs__s_1a4147b2614489eb992b40d17530a12fbb" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpsa__pake__cipher__suite__s" kindref="compound">psa_pake_cipher_suite_s</ref></type>
+        <definition>struct psa_pake_cipher_suite_s psa_crypto_driver_pake_inputs_s::private_cipher_suite</definition>
+        <argsstring></argsstring>
+        <name>private_cipher_suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="996" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="715">
+        <label>psa_crypto_driver_pake_inputs_s</label>
+        <link refid="structpsa__crypto__driver__pake__inputs__s"/>
+        <childnode refid="716" relation="usage">
+          <edgelabel>private_cipher_suite</edgelabel>
+        </childnode>
+        <childnode refid="717" relation="usage">
+          <edgelabel>private_attributes</edgelabel>
+        </childnode>
+      </node>
+      <node id="718">
+        <label>psa_key_policy_s</label>
+        <link refid="structpsa__key__policy__s"/>
+      </node>
+      <node id="719">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="716">
+        <label>psa_pake_cipher_suite_s</label>
+        <link refid="structpsa__pake__cipher__suite__s"/>
+      </node>
+      <node id="717">
+        <label>psa_key_attributes_s</label>
+        <link refid="structpsa__key__attributes__s"/>
+        <childnode refid="718" relation="usage">
+          <edgelabel>private_policy</edgelabel>
+        </childnode>
+        <childnode refid="719" relation="usage">
+          <edgelabel>private_id</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="989" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="989" bodyend="998"/>
+    <listofallmembers>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a5d5229023862b3c5dafcd8f131b852dc" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_attributes</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a4147b2614489eb992b40d17530a12fbb" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_cipher_suite</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ae5e803385377017bbfca7358bf8a4dff" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_password</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ac8f57d94288ac9c6439871d65c19a676" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_password_len</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1ac9bb1bd6eea28bd9380a65fe00a0b51d" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_peer</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a7e27e6112392120663a6b52f86626935" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_peer_len</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a6af967cc0117dbb94945ab5da2edc0f3" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_user</name></member>
+      <member refid="structpsa__crypto__driver__pake__inputs__s_1a815d8cdb6eaebf9cee49a00ccb8d26fc" prot="public" virt="non-virtual"><scope>psa_crypto_driver_pake_inputs_s</scope><name>private_user_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

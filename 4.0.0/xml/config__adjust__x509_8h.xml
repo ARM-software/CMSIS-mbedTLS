@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="config__adjust__x509_8h" kind="file">
+    <compoundname>config_adjust_x509.h</compoundname>
+    <includedby refid="include_2mbedtls_2build__info_8h" local="yes">build_info.h</includedby>
+    <invincdepgraph>
+      <node id="2220">
+        <label>config_adjust_x509.h</label>
+        <link refid="config_adjust_x509.h"/>
+        <childnode refid="2221" relation="include">
+        </childnode>
+      </node>
+      <node id="2223">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2224" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+      </node>
+      <node id="2235">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="2231">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+        <childnode refid="2233" relation="include">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2236">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="2227">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2228">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2223" relation="include">
+        </childnode>
+      </node>
+      <node id="2226">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2237">
+        <label>version.h</label>
+        <link refid="include_2mbedtls_2version_8h"/>
+      </node>
+      <node id="2234">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="2222">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2225">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2233">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2221">
+        <label>build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2231" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+        <childnode refid="2234" relation="include">
+        </childnode>
+        <childnode refid="2224" relation="include">
+        </childnode>
+        <childnode refid="2235" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+        <childnode refid="2236" relation="include">
+        </childnode>
+        <childnode refid="2237" relation="include">
+        </childnode>
+        <childnode refid="2233" relation="include">
+        </childnode>
+      </node>
+      <node id="2229">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+      </node>
+      <node id="2224">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2232">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>Adjust X.509 configuration. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an internal header. Do not include it directly.</para><para>Automatically enable certain dependencies. Generally, MBEDTLS_xxx configurations need to be explicitly enabled by the user: enabling MBEDTLS_xxx_A but not MBEDTLS_xxx_B when A requires B results in a compilation error. However, we do automatically enable certain options in some circumstances. One case is if MBEDTLS_xxx_B is an internal option used to identify parts of a module that are used by other module, and we don&apos;t want to make the symbol MBEDTLS_xxx_B part of the public API. Another case is if A didn&apos;t depend on B in earlier versions, and we want to use B in A but we need to preserve backward compatibility with configurations that explicitly activate MBEDTLS_xxx_A but not MBEDTLS_xxx_B. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="19"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CONFIG_ADJUST_X509_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CONFIG_ADJUST_X509_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CONFIG_FILES_READ)</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Do<sp/>not<sp/>include<sp/>mbedtls/config_adjust_*.h<sp/>manually!<sp/>This<sp/>can<sp/>lead<sp/>to<sp/>problems,<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;up<sp/>to<sp/>and<sp/>including<sp/>runtime<sp/>errors<sp/>such<sp/>as<sp/>buffer<sp/>overflows.<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;If<sp/>you&apos;re<sp/>trying<sp/>to<sp/>fix<sp/>a<sp/>complaint<sp/>from<sp/>check_config.h,<sp/>just<sp/>remove<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;it<sp/>from<sp/>your<sp/>configuration<sp/>file:<sp/>since<sp/>Mbed<sp/>TLS<sp/>3.0,<sp/>it<sp/>is<sp/>included<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;automatically<sp/>at<sp/>the<sp/>right<sp/>point.&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CONFIG_ADJUST_X509_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/private/config_adjust_x509.h"/>
+  </compounddef>
+</doxygen>

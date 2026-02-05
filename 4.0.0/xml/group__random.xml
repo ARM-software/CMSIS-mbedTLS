@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__random" kind="group">
+    <compoundname>random</compoundname>
+    <title>Random generation</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__random_1ga1985eae417dfbccedf50d5fff54ea8c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_random</definition>
+        <argsstring>(uint8_t *output, size_t output_size)</argsstring>
+        <name>psa_generate_random</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <briefdescription>
+<para>Generate random bytes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This function <bold>can</bold> fail! Callers MUST check the return status and MUST NOT use the content of the output buffer if the return status is not <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref>.</para></simplesect>
+<simplesect kind="note"><para>To generate a key, use <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> instead.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer for the generated data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to generate and output.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__random_1ga1f154687b24e5508d97681cdd17946a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_key</definition>
+        <argsstring>(const psa_key_attributes_t *attributes, mbedtls_svc_key_id_t *key)</argsstring>
+        <name>psa_generate_key</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Generate a key or key pair. </para>        </briefdescription>
+        <detaileddescription>
+<para>The key is generated randomly. Its location, usage policy, type and size are taken from <computeroutput>attributes</computeroutput>.</para><para>Implementations must reject an attempt to generate a key of size 0.</para><para>The following type-specific considerations apply:<itemizedlist>
+<listitem><para>For RSA keys (<ref refid="group__crypto__types_1ga11745b110166e927e2abeabc7d532051" kindref="member">PSA_KEY_TYPE_RSA_KEY_PAIR</ref>), the public exponent is 65537. The modulus is a product of two probabilistic primes between 2^{n-1} and 2^n where n is the bit size specified in the attributes.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>This function is equivalent to calling <ref refid="group__random_1ga800e50bf74396f7026bbccf4c92181f8" kindref="member">psa_generate_key_custom()</ref> with the custom production parameters <ref refid="crypto__struct_8h_1a9fb6aa6be3a8aa8d4ad1dfb20cf937f8" kindref="member">PSA_CUSTOM_KEY_PARAMETERS_INIT</ref> and <computeroutput>custom_data_length == 0</computeroutput> (i.e. <computeroutput>custom_data</computeroutput> is empty).</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attributes for the new key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, an identifier for the newly created key. For persistent keys, this is the key identifier defined in <computeroutput>attributes</computeroutput>. <computeroutput>0</computeroutput> on failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. If the key is persistent, the key material and the key&apos;s metadata have been saved to persistent storage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" kindref="member">PSA_ERROR_ALREADY_EXISTS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an attempt to create a persistent key, and there is already a persistent key with the given identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__random_1ga800e50bf74396f7026bbccf4c92181f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_key_custom</definition>
+        <argsstring>(const psa_key_attributes_t *attributes, const psa_custom_key_parameters_t *custom, const uint8_t *custom_data, size_t custom_data_length, mbedtls_svc_key_id_t *key)</argsstring>
+        <name>psa_generate_key_custom</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__derivation_1ga34f78d879ae3f1a3ccd8d51bfa9868d8" kindref="member">psa_custom_key_parameters_t</ref> *</type>
+          <declname>custom</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>custom_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>custom_data_length</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Generate a key or key pair using custom production parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para>See the description of <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> for the operation of this function with the default production parameters. In addition, this function supports the following production customizations, described in more detail in the documentation of <ref refid="group__derivation_1ga34f78d879ae3f1a3ccd8d51bfa9868d8" kindref="member">psa_custom_key_parameters_t</ref>:</para><para><itemizedlist>
+<listitem><para>RSA keys: generation with a custom public exponent.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>This function is experimental and may change in future minor versions of Mbed TLS.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attributes for the new key. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">custom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Customization parameters for the key generation. When this is <ref refid="crypto__struct_8h_1a9fb6aa6be3a8aa8d4ad1dfb20cf937f8" kindref="member">PSA_CUSTOM_KEY_PARAMETERS_INIT</ref> with <computeroutput>custom_data_length</computeroutput> = 0, this function is equivalent to <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">custom_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Variable-length data associated with <computeroutput>custom</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>custom_data_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>custom_data</computeroutput> in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, an identifier for the newly created key. For persistent keys, this is the key identifier defined in <computeroutput>attributes</computeroutput>. <computeroutput>0</computeroutput> on failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. If the key is persistent, the key material and the key&apos;s metadata have been saved to persistent storage. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" kindref="member">PSA_ERROR_ALREADY_EXISTS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an attempt to create a persistent key, and there is already a persistent key with the given identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4268" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

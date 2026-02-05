@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__lms__public__t" kind="struct" prot="public">
+    <compoundname>mbedtls_lms_public_t</compoundname>
+    <includes refid="lms_8h" local="no">lms.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__lms__public__t_1afb990a825181732d6c4e403effeb3a05" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__lms__parameters__t" kindref="compound">mbedtls_lms_parameters_t</ref></type>
+        <definition>mbedtls_lms_parameters_t mbedtls_lms_public_t::private_params</definition>
+        <argsstring></argsstring>
+        <name>private_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="189" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lms__public__t_1a7dece7a47c08a3376db1aa9cec70c9df" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lms_public_t::private_T_1_pub_key[MBEDTLS_LMS_M_NODE_BYTES_MAX]</definition>
+        <argsstring>[MBEDTLS_LMS_M_NODE_BYTES_MAX]</argsstring>
+        <name>private_T_1_pub_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The public key, in the form of the Merkle tree root node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="190" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lms__public__t_1ae6892b8f3c6a04b3ea04c92a602668cd" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lms_public_t::private_have_public_key</definition>
+        <argsstring></argsstring>
+        <name>private_have_public_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the context contains a public key. Boolean values only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="192" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>LMS public context structure.</para><para>A LMS public key is the hash output that is the root of the Merkle tree, and the applicable parameter set</para><para>The context must be initialized before it is used. A public key must either be imported or generated from a private context.</para><para><dot> 
+digraph lms_public_t {
+  UNINITIALIZED -&gt; INIT [label=&quot;init&quot;];
+  HAVE_PUBLIC_KEY -&gt; INIT [label=&quot;free&quot;];
+  INIT -&gt; HAVE_PUBLIC_KEY [label=&quot;import_public_key&quot;];
+  INIT -&gt; HAVE_PUBLIC_KEY [label=&quot;calculate_public_key from private key&quot;];
+  HAVE_PUBLIC_KEY -&gt; HAVE_PUBLIC_KEY [label=&quot;export_public_key&quot;];
+}
+</dot> </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="451">
+        <label>mbedtls_lms_public_t</label>
+        <link refid="structmbedtls__lms__public__t"/>
+        <childnode refid="452" relation="usage">
+          <edgelabel>private_params</edgelabel>
+        </childnode>
+      </node>
+      <node id="452">
+        <label>mbedtls_lms_parameters_t</label>
+        <link refid="structmbedtls__lms__parameters__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="188" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="188" bodyend="194"/>
+    <listofallmembers>
+      <member refid="structmbedtls__lms__public__t_1ae6892b8f3c6a04b3ea04c92a602668cd" prot="public" virt="non-virtual"><scope>mbedtls_lms_public_t</scope><name>private_have_public_key</name></member>
+      <member refid="structmbedtls__lms__public__t_1afb990a825181732d6c4e403effeb3a05" prot="public" virt="non-virtual"><scope>mbedtls_lms_public_t</scope><name>private_params</name></member>
+      <member refid="structmbedtls__lms__public__t_1a7dece7a47c08a3376db1aa9cec70c9df" prot="public" virt="non-virtual"><scope>mbedtls_lms_public_t</scope><name>private_T_1_pub_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

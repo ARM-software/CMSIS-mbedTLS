@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h" kind="file">
+    <compoundname>tf-psa-crypto/include/tf-psa-crypto/version.h</compoundname>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <incdepgraph>
+      <node id="3825">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3823">
+        <label>version.h</label>
+        <link refid="tf-psa-crypto/include/tf-psa-crypto/version.h"/>
+        <childnode refid="3824" relation="include">
+        </childnode>
+      </node>
+      <node id="3828">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3824">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3825" relation="include">
+        </childnode>
+        <childnode refid="3826" relation="include">
+        </childnode>
+        <childnode refid="3827" relation="include">
+        </childnode>
+        <childnode refid="3828" relation="include">
+        </childnode>
+        <childnode refid="3829" relation="include">
+        </childnode>
+      </node>
+      <node id="3829">
+        <label>limits.h</label>
+      </node>
+      <node id="3826">
+        <label>/dev/null</label>
+      </node>
+      <node id="3827">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1af476add2d0d6bcd66723a2e330fcda0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int tf_psa_crypto_version_get_number</definition>
+        <argsstring>(void)</argsstring>
+        <name>tf_psa_crypto_version_get_number</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the version number.</para><para><simplesect kind="return"><para>The constructed version number in the format MMNNPP00 (Major, Minor, Patch). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/tf-psa-crypto/version.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1a50aa42a487b658429a9fb2269b7cfd9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* tf_psa_crypto_version_get_string</definition>
+        <argsstring>(void)</argsstring>
+        <name>tf_psa_crypto_version_get_string</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a pointer to the version string (&quot;x.y.z&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/tf-psa-crypto/version.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1a324465e170a137ce5b2f74a93fee6404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* tf_psa_crypto_version_get_string_full</definition>
+        <argsstring>(void)</argsstring>
+        <name>tf_psa_crypto_version_get_string_full</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a pointer to the full version string (&quot;TF-PSA-Crypto x.y.z&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/tf-psa-crypto/version.h" line="40" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Run-time version information. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>set<sp/>of<sp/>run-time<sp/>variables<sp/>can<sp/>be<sp/>used<sp/>to<sp/>determine<sp/>the<sp/>version<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Mbed<sp/>TLS<sp/>library<sp/>used.<sp/>Compile-time<sp/>version<sp/>defines<sp/>for<sp/>the<sp/>same<sp/>can<sp/>be</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>found<sp/>in<sp/>build_info.h</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TF_PSA_CRYPTO_VERSION_H</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TF_PSA_CRYPTO_VERSION_H</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(TF_PSA_CRYPTO_VERSION)</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="28"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1af476add2d0d6bcd66723a2e330fcda0e" kindref="member">tf_psa_crypto_version_get_number</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1a50aa42a487b658429a9fb2269b7cfd9f" kindref="member">tf_psa_crypto_version_get_string</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h_1a324465e170a137ce5b2f74a93fee6404" kindref="member">tf_psa_crypto_version_get_string_full</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TF_PSA_CRYPTO_VERSION<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TF_PSA_CRYPTO_VERSION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/tf-psa-crypto/version.h"/>
+  </compounddef>
+</doxygen>

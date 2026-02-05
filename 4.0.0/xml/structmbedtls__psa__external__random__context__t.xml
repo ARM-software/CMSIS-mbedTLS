@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__external__random__context__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_external_random_context_t</compoundname>
+    <includes refid="crypto__platform_8h" local="no">crypto_platform.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__external__random__context__t_1a9a79f4e686dc65b337b414a03865867b" prot="public" static="no" mutable="no">
+        <type>uintptr_t</type>
+        <definition>uintptr_t mbedtls_psa_external_random_context_t::private_opaque[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>private_opaque</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The type of the context passed to <ref refid="group__psa__external__rng_1ga54bf8b06d11637bf8ee07629760efb9a" kindref="member">mbedtls_psa_external_get_random()</ref>.</para><para>Mbed TLS initializes the context to all-bits-zero before calling <ref refid="group__psa__external__rng_1ga54bf8b06d11637bf8ee07629760efb9a" kindref="member">mbedtls_psa_external_get_random()</ref> for the first time.</para><para>The definition of this type in the Mbed TLS source code is for demonstration purposes. Implementers of <ref refid="group__psa__external__rng_1ga54bf8b06d11637bf8ee07629760efb9a" kindref="member">mbedtls_psa_external_get_random()</ref> are expected to replace it with a custom definition. </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" line="79" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" bodystart="79" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__external__random__context__t_1a9a79f4e686dc65b337b414a03865867b" prot="public" virt="non-virtual"><scope>mbedtls_psa_external_random_context_t</scope><name>private_opaque</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

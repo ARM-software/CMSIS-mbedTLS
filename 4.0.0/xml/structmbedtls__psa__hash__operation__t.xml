@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__hash__operation__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_hash_operation_t</compoundname>
+    <includes refid="crypto__builtin__primitives_8h" local="no">crypto_builtin_primitives.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a7f3e6131f4a5300323713404fa00090c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_psa_hash_operation_t::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="55" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a60ea54df88d0a2cd939f27ea0779d0b9" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned mbedtls_psa_hash_operation_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="57" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a174eee15e9987952b0aa6db48ee6b4d7" prot="public" static="no" mutable="no">
+        <type>mbedtls_md5_context</type>
+        <definition>mbedtls_md5_context mbedtls_psa_hash_operation_t::md5</definition>
+        <argsstring></argsstring>
+        <name>md5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="59" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a687808aaec283daeb4e026abd2201671" prot="public" static="no" mutable="no">
+        <type>mbedtls_ripemd160_context</type>
+        <definition>mbedtls_ripemd160_context mbedtls_psa_hash_operation_t::ripemd160</definition>
+        <argsstring></argsstring>
+        <name>ripemd160</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="62" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a93caa4eb0b0bf1b163254e5a1e1f751b" prot="public" static="no" mutable="no">
+        <type>mbedtls_sha1_context</type>
+        <definition>mbedtls_sha1_context mbedtls_psa_hash_operation_t::sha1</definition>
+        <argsstring></argsstring>
+        <name>sha1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="65" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a746f82a0bfdff63b5329d1d9bf0a032b" prot="public" static="no" mutable="no">
+        <type>mbedtls_sha256_context</type>
+        <definition>mbedtls_sha256_context mbedtls_psa_hash_operation_t::sha256</definition>
+        <argsstring></argsstring>
+        <name>sha256</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="69" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1aa3e462ab9871944e2e49cc0ef3377607" prot="public" static="no" mutable="no">
+        <type>mbedtls_sha512_context</type>
+        <definition>mbedtls_sha512_context mbedtls_psa_hash_operation_t::sha512</definition>
+        <argsstring></argsstring>
+        <name>sha512</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="73" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a1cffd611f82b2df6064132b76e18e297" prot="public" static="no" mutable="no">
+        <type>mbedtls_sha3_context</type>
+        <definition>mbedtls_sha3_context mbedtls_psa_hash_operation_t::sha3</definition>
+        <argsstring></argsstring>
+        <name>sha3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="79" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__hash__operation__t_1a18a3af517055e1cd21f0334924ea2a60" prot="public" static="no" mutable="no">
+        <type>union mbedtls_psa_hash_operation_t::@7</type>
+        <definition>union mbedtls_psa_hash_operation_t::@7  mbedtls_psa_hash_operation_t::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="81" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" line="54" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_primitives.h" bodystart="54" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__hash__operation__t_1a60ea54df88d0a2cd939f27ea0779d0b9" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>dummy</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a174eee15e9987952b0aa6db48ee6b4d7" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>md5</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a7f3e6131f4a5300323713404fa00090c" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>private_alg</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a18a3af517055e1cd21f0334924ea2a60" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>private_ctx</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a687808aaec283daeb4e026abd2201671" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>ripemd160</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a93caa4eb0b0bf1b163254e5a1e1f751b" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>sha1</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a746f82a0bfdff63b5329d1d9bf0a032b" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>sha256</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1a1cffd611f82b2df6064132b76e18e297" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>sha3</name></member>
+      <member refid="structmbedtls__psa__hash__operation__t_1aa3e462ab9871944e2e49cc0ef3377607" prot="public" virt="non-virtual"><scope>mbedtls_psa_hash_operation_t</scope><name>sha512</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

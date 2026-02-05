@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__stats__s" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_stats_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1abc02e028f09ee3379af349b6e6e129c7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_volatile_slots</definition>
+        <argsstring></argsstring>
+        <name>private_volatile_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots containing key material for a volatile key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="110" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1a2a89b6fd1b8ac1ddd137d75fd405c429" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_persistent_slots</definition>
+        <argsstring></argsstring>
+        <name>private_persistent_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots containing key material for a key which is in internal persistent storage. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="113" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1ae867b00b3d833eda6d836e685e1130ad" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_external_slots</definition>
+        <argsstring></argsstring>
+        <name>private_external_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots containing a reference to a key in a secure element. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="116" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1adca04354ac180cf5259d77a3715d985f" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_half_filled_slots</definition>
+        <argsstring></argsstring>
+        <name>private_half_filled_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots which are occupied, but do not contain key material yet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="119" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1ae92e504575acfa9c66f8a3a5d4c3092a" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_cache_slots</definition>
+        <argsstring></argsstring>
+        <name>private_cache_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots that contain cache data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="121" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1a063df77fccd29f808a34739884d18152" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_empty_slots</definition>
+        <argsstring></argsstring>
+        <name>private_empty_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots that are not used for anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="123" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1a193f9136c49429585a5eb20a98bbc464" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_psa_stats_s::private_locked_slots</definition>
+        <argsstring></argsstring>
+        <name>private_locked_slots</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of slots that are locked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="125" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1ab6d0f52edbb267921880176d65fd9b28" prot="public" static="no" mutable="no">
+        <type><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref></type>
+        <definition>psa_key_id_t mbedtls_psa_stats_s::private_max_open_internal_key_id</definition>
+        <argsstring></argsstring>
+        <name>private_max_open_internal_key_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Largest key id value among open keys in internal persistent storage. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="127" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__stats__s_1af8980761432da21bffde9de3b9ecbf8a" prot="public" static="no" mutable="no">
+        <type><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref></type>
+        <definition>psa_key_id_t mbedtls_psa_stats_s::private_max_open_external_key_id</definition>
+        <argsstring></argsstring>
+        <name>private_max_open_external_key_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Largest key id value among open keys in secure elements. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="129" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Statistics about resource consumption related to the PSA keystore. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>The content of this structure is not part of the stable API and ABI of Mbed TLS and may change arbitrarily from version to version. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="108" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="108" bodyend="130"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__stats__s_1ae92e504575acfa9c66f8a3a5d4c3092a" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_cache_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1a063df77fccd29f808a34739884d18152" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_empty_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1ae867b00b3d833eda6d836e685e1130ad" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_external_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1adca04354ac180cf5259d77a3715d985f" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_half_filled_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1a193f9136c49429585a5eb20a98bbc464" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_locked_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1af8980761432da21bffde9de3b9ecbf8a" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_max_open_external_key_id</name></member>
+      <member refid="structmbedtls__psa__stats__s_1ab6d0f52edbb267921880176d65fd9b28" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_max_open_internal_key_id</name></member>
+      <member refid="structmbedtls__psa__stats__s_1a2a89b6fd1b8ac1ddd137d75fd405c429" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_persistent_slots</name></member>
+      <member refid="structmbedtls__psa__stats__s_1abc02e028f09ee3379af349b6e6e129c7" prot="public" virt="non-virtual"><scope>mbedtls_psa_stats_s</scope><name>private_volatile_slots</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

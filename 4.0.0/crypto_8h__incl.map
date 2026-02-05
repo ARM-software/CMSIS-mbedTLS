@@ -1,0 +1,10 @@
+<map id="crypto.h" name="crypto.h">
+<area shape="rect" id="node4" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="334,229,442,256"/>
+<area shape="rect" id="node13" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="99,155,211,181"/>
+<area shape="rect" id="node14" href="$crypto__sizes_8h.html" title="PSA cryptography module: Mbed TLS buffer size macros. " alt="" coords="581,155,688,181"/>
+<area shape="rect" id="node16" href="$crypto__extra_8h.html" title="PSA cryptography module: Mbed TLS vendor extensions. " alt="" coords="293,80,398,107"/>
+<area shape="rect" id="node18" href="$crypto__platform_8h.html" title="PSA cryptography module: Mbed TLS platform definitions. " alt="" coords="467,229,589,256"/>
+<area shape="rect" id="node5" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="463,304,588,345"/>
+<area shape="rect" id="node6" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="199,401,334,427"/>
+<area shape="rect" id="node17" href="$crypto__compat_8h.html" title="PSA cryptography module: Backward compatibility aliases. " alt="" coords="286,155,405,181"/>
+</map>

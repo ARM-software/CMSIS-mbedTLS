@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="x509__crl_8h" kind="file">
+    <compoundname>x509_crl.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="x509_8h" local="yes">mbedtls/x509.h</includes>
+    <includedby refid="x509__crt_8h" local="yes">x509_crt.h</includedby>
+    <includedby refid="ssl_8h" local="yes">ssl.h</includedby>
+    <incdepgraph>
+      <node id="3884">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3902">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3893">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+      </node>
+      <node id="3878">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3903">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+        <childnode refid="3904" relation="include">
+        </childnode>
+        <childnode refid="3893" relation="include">
+        </childnode>
+      </node>
+      <node id="3890">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3877" relation="include">
+        </childnode>
+      </node>
+      <node id="3886">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3887" relation="include">
+        </childnode>
+        <childnode refid="3898" relation="include">
+        </childnode>
+      </node>
+      <node id="3900">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3895" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3901" relation="include">
+        </childnode>
+        <childnode refid="3902" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+        <childnode refid="3905" relation="include">
+        </childnode>
+      </node>
+      <node id="3896">
+        <label>stdint.h</label>
+      </node>
+      <node id="3883">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3895">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3881">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3906">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3877">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3878" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3880" relation="include">
+        </childnode>
+        <childnode refid="3881" relation="include">
+        </childnode>
+        <childnode refid="3882" relation="include">
+        </childnode>
+      </node>
+      <node id="3889">
+        <label>stddef.h</label>
+      </node>
+      <node id="3882">
+        <label>limits.h</label>
+      </node>
+      <node id="3898">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3892" relation="include">
+        </childnode>
+        <childnode refid="3899" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+      </node>
+      <node id="3894">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3895" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+      </node>
+      <node id="3899">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3888" relation="include">
+        </childnode>
+      </node>
+      <node id="3901">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3877" relation="include">
+        </childnode>
+      </node>
+      <node id="3892">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3893" relation="include">
+        </childnode>
+      </node>
+      <node id="3905">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+      </node>
+      <node id="3904">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3888">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+        <childnode refid="3890" relation="include">
+        </childnode>
+        <childnode refid="3891" relation="include">
+        </childnode>
+      </node>
+      <node id="3875">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3891">
+        <label>time.h</label>
+      </node>
+      <node id="3876">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3883" relation="include">
+        </childnode>
+        <childnode refid="3879" relation="include">
+        </childnode>
+        <childnode refid="3884" relation="include">
+        </childnode>
+        <childnode refid="3885" relation="include">
+        </childnode>
+      </node>
+      <node id="3887">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3877" relation="include">
+        </childnode>
+        <childnode refid="3888" relation="include">
+        </childnode>
+        <childnode refid="3892" relation="include">
+        </childnode>
+        <childnode refid="3889" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+      </node>
+      <node id="3879">
+        <label>/dev/null</label>
+      </node>
+      <node id="3880">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3897">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3885">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="3874">
+        <label>x509_crl.h</label>
+        <link refid="x509_crl.h"/>
+        <childnode refid="3875" relation="include">
+        </childnode>
+        <childnode refid="3876" relation="include">
+        </childnode>
+        <childnode refid="3886" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3909">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3910" relation="include">
+        </childnode>
+        <childnode refid="3911" relation="include">
+        </childnode>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+        <childnode refid="3914" relation="include">
+        </childnode>
+      </node>
+      <node id="3915">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="3914">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3913">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3910">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="3912">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="3908">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3909" relation="include">
+        </childnode>
+        <childnode refid="3915" relation="include">
+        </childnode>
+      </node>
+      <node id="3911">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3907">
+        <label>x509_crl.h</label>
+        <link refid="x509_crl.h"/>
+        <childnode refid="3908" relation="include">
+        </childnode>
+        <childnode refid="3909" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__x509__crl__entry" prot="public">mbedtls_x509_crl_entry</innerclass>
+    <innerclass refid="structmbedtls__x509__crl" prot="public">mbedtls_x509_crl</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Structures and functions for parsing CRLs</header>
+      <memberdef kind="typedef" id="group__x509__module_1ga1e0c6230061fd501f9d00bd1b09ade33" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__x509__crl__entry" kindref="compound">mbedtls_x509_crl_entry</ref></type>
+        <definition>typedef struct mbedtls_x509_crl_entry
+ mbedtls_x509_crl_entry</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_x509_crl_entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Certificate revocation list entry. Contains the CA-specific serial numbers and revocation dates.</para><para>Some fields of this structure are publicly readable. Do not modify them except via Mbed TLS library functions: the effect of modifying those fields or the data that those fields points to is unspecified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__x509__module_1ga7957605a0ced963e12880ec9e19874fc" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref></type>
+        <definition>typedef struct mbedtls_x509_crl
+ mbedtls_x509_crl</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_x509_crl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Certificate revocation list structure. Every CRL may have multiple entries. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga29ab5f1216a727b334ee26cce9f5d4b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_crl_parse_der</definition>
+        <argsstring>(mbedtls_x509_crl *chain, const unsigned char *buf, size_t buflen)</argsstring>
+        <name>mbedtls_x509_crl_parse_der</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref> *</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Parse a DER-encoded CRL and append it to the chained list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the start of the chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the CRL data in DER format </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer (including the terminating null byte for PEM data)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gadfce4fc5f5af62e371695e74c5b67d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_crl_parse</definition>
+        <argsstring>(mbedtls_x509_crl *chain, const unsigned char *buf, size_t buflen)</argsstring>
+        <name>mbedtls_x509_crl_parse</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref> *</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Parse one or more CRLs and append them to the chained list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Multiple CRLs are accepted only if using PEM format</para><simplesectsep/><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the start of the chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the CRL data in PEM or DER format </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer (including the terminating null byte for PEM data)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga8e096827f1240b8f8bc15d6a83593f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_crl_parse_file</definition>
+        <argsstring>(mbedtls_x509_crl *chain, const char *path)</argsstring>
+        <name>mbedtls_x509_crl_parse_file</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref> *</type>
+          <declname>chain</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Load one or more CRLs and append them to the chained list. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Multiple CRLs are accepted only if using PEM format</para><simplesectsep/><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>points to the start of the chain </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to read the CRLs from (in PEM or DER encoding)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga8513a192e281217802837571da98e218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509_crl_init</definition>
+        <argsstring>(mbedtls_x509_crl *crl)</argsstring>
+        <name>mbedtls_x509_crl_init</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref> *</type>
+          <declname>crl</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a CRL (chain) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRL chain to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gaeb19c3326889f9e493fbd605c1113b96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509_crl_free</definition>
+        <argsstring>(mbedtls_x509_crl *crl)</argsstring>
+        <name>mbedtls_x509_crl_free</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref> *</type>
+          <declname>crl</declname>
+        </param>
+        <briefdescription>
+<para>Unallocate all CRL data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>crl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CRL chain to free </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="171" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>X.509 certificate revocation list parsing. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_X509_CRL_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRL_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="x509_8h" kindref="compound">mbedtls/x509.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="39" refid="structmbedtls__x509__crl__entry" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509__crl__entry" kindref="compound">mbedtls_x509_crl_entry</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="structmbedtls__x509__crl__entry_1aa629ec226c2e624eb1bf72f4d5c2cc8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl__entry_1aa629ec226c2e624eb1bf72f4d5c2cc8d" kindref="member">raw</ref>;</highlight></codeline>
+<codeline lineno="43" refid="structmbedtls__x509__crl__entry_1a2cbc8acba11f2040948532389218741d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl__entry_1a2cbc8acba11f2040948532389218741d" kindref="member">serial</ref>;</highlight></codeline>
+<codeline lineno="45" refid="structmbedtls__x509__crl__entry_1abb22e83d676a60bfd93bb6e3960daa3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref><sp/><ref refid="structmbedtls__x509__crl__entry_1abb22e83d676a60bfd93bb6e3960daa3e" kindref="member">revocation_date</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__x509__crl__entry_1a5803a38521d5dbfd7240b364bde540a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl__entry_1a5803a38521d5dbfd7240b364bde540a5" kindref="member">entry_ext</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structmbedtls__x509__crl__entry_1abb908815d7bcf91ff87992682efe33b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509__crl__entry" kindref="compound">mbedtls_x509_crl_entry</ref><sp/>*<ref refid="structmbedtls__x509__crl__entry_1abb908815d7bcf91ff87992682efe33b0" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="group__x509__module_1ga1e0c6230061fd501f9d00bd1b09ade33" kindref="member">mbedtls_x509_crl_entry</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="structmbedtls__x509__crl" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>{</highlight></codeline>
+<codeline lineno="65" refid="structmbedtls__x509__crl_1a6fb756d2b65237ccaff6061f4217b2eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl_1a6fb756d2b65237ccaff6061f4217b2eb" kindref="member">raw</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="structmbedtls__x509__crl_1ab8086dd1a2a3d82363cc91e1cdfb5850" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl_1ab8086dd1a2a3d82363cc91e1cdfb5850" kindref="member">tbs</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__x509__crl_1aaf0d47225a63a5d9bf0e2e99d641e72d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__crl_1aaf0d47225a63a5d9bf0e2e99d641e72d" kindref="member">version</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__x509__crl_1ad21b69052f214be907ceb84a9274b9f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl_1ad21b69052f214be907ceb84a9274b9f2" kindref="member">sig_oid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="structmbedtls__x509__crl_1a009d0e1b844df85a2389ec10b770a6f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl_1a009d0e1b844df85a2389ec10b770a6f6" kindref="member">issuer_raw</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="structmbedtls__x509__crl_1aae988566d13fadf805d8ad31d13b44d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_x509_name</ref><sp/><ref refid="structmbedtls__x509__crl_1aae988566d13fadf805d8ad31d13b44d8" kindref="member">issuer</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="structmbedtls__x509__crl_1a61c51dd535f4f954e04f5de02fe1065e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref><sp/><ref refid="structmbedtls__x509__crl_1a61c51dd535f4f954e04f5de02fe1065e" kindref="member">this_update</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structmbedtls__x509__crl_1a87b72e6cb62919b6172d3f100b9d09ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref><sp/><ref refid="structmbedtls__x509__crl_1a87b72e6cb62919b6172d3f100b9d09ea" kindref="member">next_update</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structmbedtls__x509__crl_1a880036b1b4a2b449542f8f1fa389694f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__crl__entry" kindref="compound">mbedtls_x509_crl_entry</ref><sp/><ref refid="structmbedtls__x509__crl_1a880036b1b4a2b449542f8f1fa389694f" kindref="member">entry</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="structmbedtls__x509__crl_1a6bed76483128f2128c0b92cba28ac118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__crl_1a6bed76483128f2128c0b92cba28ac118" kindref="member">crl_ext</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structmbedtls__x509__crl_1ab9056ed55aaa3b15b9f514685ca0888a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(sig_oid2);</highlight></codeline>
+<codeline lineno="83" refid="structmbedtls__x509__crl_1aaeba3c7b1715ea4f648395ca686d25ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(sig);</highlight></codeline>
+<codeline lineno="84" refid="structmbedtls__x509__crl_1a450b413b88d92e768ae065a3b7faf232" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>MBEDTLS_PRIVATE(sig_md);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="structmbedtls__x509__crl_1a3294f6e51c7af5800f6eb47d3e4a4fb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref><sp/>MBEDTLS_PRIVATE(sig_pk);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="structmbedtls__x509__crl_1a6dbfb57fe2c749c3bff9f7f45aacec05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*<ref refid="structmbedtls__x509__crl_1a6dbfb57fe2c749c3bff9f7f45aacec05" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="group__x509__module_1ga7957605a0ced963e12880ec9e19874fc" kindref="member">mbedtls_x509_crl</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga29ab5f1216a727b334ee26cce9f5d4b5" kindref="member">mbedtls_x509_crl_parse_der</ref>(<ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*chain,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gadfce4fc5f5af62e371695e74c5b67d70" kindref="member">mbedtls_x509_crl_parse</ref>(<ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*chain,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="140"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga8e096827f1240b8f8bc15d6a83593f22" kindref="member">mbedtls_x509_crl_parse_file</ref>(<ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*chain,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_X509_REMOVE_INFO)</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_x509_crl_info(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*prefix,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*crl);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_X509_REMOVE_INFO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="164"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga8513a192e281217802837571da98e218" kindref="member">mbedtls_x509_crl_init</ref>(<ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*crl);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gaeb19c3326889f9e493fbd605c1113b96" kindref="member">mbedtls_x509_crl_free</ref>(<ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>*crl);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_x509_crl.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__cipher__operation__s" kind="struct" prot="public">
+    <compoundname>psa_cipher_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a69a2c8025c424664c2988ab686eadf4b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="98" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a21e32b597833afd9641b30dbc7f82f28" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_iv_required</definition>
+        <argsstring></argsstring>
+        <name>private_iv_required</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="100" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a0a52aa75b5416279f75dad35d8e375ec" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_cipher_operation_s::private_iv_set</definition>
+        <argsstring></argsstring>
+        <name>private_iv_set</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="101" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1aa266f52944cec0feba2131507e6fae9f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_cipher_operation_s::private_default_iv_length</definition>
+        <argsstring></argsstring>
+        <name>private_default_iv_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="103" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__cipher__operation__s_1a8f2ab066db9cc77a0a607e7507ee1f11" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__cipher__context__t" kindref="compound">psa_driver_cipher_context_t</ref></type>
+        <definition>psa_driver_cipher_context_t psa_cipher_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="105" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="713">
+        <label>mbedtls_psa_cipher_operation_t</label>
+        <link refid="structmbedtls__psa__cipher__operation__t"/>
+      </node>
+      <node id="712">
+        <label>psa_driver_cipher_context_t</label>
+        <link refid="unionpsa__driver__cipher__context__t"/>
+        <childnode refid="713" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="711">
+        <label>psa_cipher_operation_s</label>
+        <link refid="structpsa__cipher__operation__s"/>
+        <childnode refid="712" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="88" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="88" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structpsa__cipher__operation__s_1a8f2ab066db9cc77a0a607e7507ee1f11" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__cipher__operation__s_1aa266f52944cec0feba2131507e6fae9f" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_default_iv_length</name></member>
+      <member refid="structpsa__cipher__operation__s_1a69a2c8025c424664c2988ab686eadf4b" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__cipher__operation__s_1a21e32b597833afd9641b30dbc7f82f28" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_iv_required</name></member>
+      <member refid="structpsa__cipher__operation__s_1a0a52aa75b5416279f75dad35d8e375ec" prot="public" virt="non-virtual"><scope>psa_cipher_operation_s</scope><name>private_iv_set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="pem_8h" kind="file">
+    <compoundname>pem.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="compat-3-crypto_8h" local="yes">mbedtls/compat-3-crypto.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="3351">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+      </node>
+      <node id="3345">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3354">
+        <label>stdint.h</label>
+      </node>
+      <node id="3353">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3342">
+        <label>pem.h</label>
+        <link refid="pem.h"/>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3344" relation="include">
+        </childnode>
+        <childnode refid="3350" relation="include">
+        </childnode>
+        <childnode refid="3355" relation="include">
+        </childnode>
+      </node>
+      <node id="3348">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3344">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3345" relation="include">
+        </childnode>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3348" relation="include">
+        </childnode>
+        <childnode refid="3349" relation="include">
+        </childnode>
+      </node>
+      <node id="3355">
+        <label>stddef.h</label>
+      </node>
+      <node id="3349">
+        <label>limits.h</label>
+      </node>
+      <node id="3352">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3354" relation="include">
+        </childnode>
+      </node>
+      <node id="3350">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3351" relation="include">
+        </childnode>
+      </node>
+      <node id="3343">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3346">
+        <label>/dev/null</label>
+      </node>
+      <node id="3347">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__pem__context" prot="public">mbedtls_pem_context</innerclass>
+      <sectiondef kind="user-defined">
+      <header>PEM Error codes</header>
+      <description><para>These error codes are returned in case of errors reading the PEM data. </para></description>
+      <memberdef kind="define" id="pem_8h_1a9fca39bb5d4a6845239221a53685a2dc" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_NO_HEADER_FOOTER_PRESENT</name>
+        <initializer>-0x1080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No PEM header or footer found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="26" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1a820cf2ffc66f354f3d8f621cac7b4eda" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_INVALID_DATA</name>
+        <initializer>-0x1100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PEM string is not as expected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="28" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1a7709c4b0616a4d6ec0184204ace4d4b3" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_INVALID_ENC_IV</name>
+        <initializer>-0x1200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RSA IV is not in hex-format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="30" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1a28b7a955389ec2e9a8b7a7d3f13ad746" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_UNKNOWN_ENC_ALG</name>
+        <initializer>-0x1280</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unsupported key encryption algorithm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="32" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1ab883990c7b4a373519ab3b25ec945cd8" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_PASSWORD_REQUIRED</name>
+        <initializer>-0x1300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private key password can&apos;t be empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="34" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1aea98f44a528310c53398a49c90469861" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_PASSWORD_MISMATCH</name>
+        <initializer>-0x1380</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given private key password does not allow for correct decryption. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="36" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pem_8h_1a58b1dec72e6a2586a1bda819ea768ad1" prot="public" static="no">
+        <name>MBEDTLS_ERR_PEM_FEATURE_UNAVAILABLE</name>
+        <initializer>-0x1400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unavailable feature, e.g. hashing/encryption combination. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="38" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pem_8h_1a357e385921f917c4f5319c73170c1c67" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref></type>
+        <definition>typedef struct mbedtls_pem_context
+ mbedtls_pem_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pem_context</name>
+        <briefdescription>
+<para>PEM context structure. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pem_8h_1a0421a5ec66a7efca0b6868ae72551d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pem_init</definition>
+        <argsstring>(mbedtls_pem_context *ctx)</argsstring>
+        <name>mbedtls_pem_init</name>
+        <param>
+          <type><ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>PEM context setup. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>context to be initialized </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pem_8h_1a4ba4a0490a5edf5ca2055b8385863c39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pem_read_buffer</definition>
+        <argsstring>(mbedtls_pem_context *ctx, const char *header, const char *footer, const unsigned char *data, const unsigned char *pwd, size_t pwdlen, size_t *use_len)</argsstring>
+        <name>mbedtls_pem_read_buffer</name>
+        <param>
+          <type><ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>footer</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>pwd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>pwdlen</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>use_len</declname>
+        </param>
+        <briefdescription>
+<para>Read a buffer for PEM information and store the resulting data into the specified context buffers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>header string to seek and expect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>footer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>footer string to seek and expect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>source data to look in (must be nul-terminated) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>password for decryption (can be NULL) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pwdlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of password </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>use_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>destination for total length used from data buffer. It is set after header is correctly read, so unless you get <ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> or <ref refid="pem_8h_1a9fca39bb5d4a6845239221a53685a2dc" kindref="member">MBEDTLS_ERR_PEM_NO_HEADER_FOOTER_PRESENT</ref>, use_len is the length to skip.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Attempts to check password correctness by verifying if the decrypted text starts with an ASN.1 sequence of appropriate length</para><simplesectsep/><para><computeroutput>mbedtls_pem_free</computeroutput> must be called on PEM context before the PEM context can be reused in another call to <computeroutput>mbedtls_pem_read_buffer</computeroutput> </para></simplesect>
+<simplesect kind="return"><para>0 on success, or a specific PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pem_8h_1a22fc5e4099c47815063f98a28eead3df" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char* mbedtls_pem_get_buffer</definition>
+        <argsstring>(mbedtls_pem_context *ctx, size_t *buflen)</argsstring>
+        <name>mbedtls_pem_get_buffer</name>
+        <param>
+          <type><ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Get the pointer to the decoded binary data in a PEM context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PEM context to access. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, this will contain the length of the binary data. This must be a valid (non-null) pointer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the decoded binary data.</para></simplesect>
+<simplesect kind="note"><para>The returned pointer remains valid only until <computeroutput>ctx</computeroutput> is modified or freed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="106" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="pem_8h_1a84ba36e8321d38064d78f29a97d7014c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pem_free</definition>
+        <argsstring>(mbedtls_pem_context *ctx)</argsstring>
+        <name>mbedtls_pem_free</name>
+        <param>
+          <type><ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>PEM context memory freeing. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>context to be freed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pem_8h_1a0fe6df77c4783c3f639ab5e47e5632aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pem_write_buffer</definition>
+        <argsstring>(const char *header, const char *footer, const unsigned char *der_data, size_t der_len, unsigned char *buf, size_t buf_len, size_t *olen)</argsstring>
+        <name>mbedtls_pem_write_buffer</name>
+        <param>
+          <type>const char *</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>footer</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>der_data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>der_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buf_len</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>olen</declname>
+        </param>
+        <briefdescription>
+<para>Write a buffer of PEM information from a DER encoded buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The header string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>footer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The footer string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The DER data to encode. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the DER data <computeroutput>der_data</computeroutput> in Bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the output buffer <computeroutput>buf</computeroutput> in Bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the total length written or required (if <computeroutput>buf_len</computeroutput> is not enough).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>You may pass <computeroutput>NULL</computeroutput> for <computeroutput>buf</computeroutput> and <computeroutput>0</computeroutput> for <computeroutput>buf_len</computeroutput> to request the length of the resulting PEM buffer in <computeroutput>*olen</computeroutput>.</para><simplesectsep/><para>This function may be called with overlapping <computeroutput>der_data</computeroutput> and <computeroutput>buf</computeroutput> buffers.</para></simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if <computeroutput>buf</computeroutput> isn&apos;t large enough to hold the PEM buffer. In this case, <computeroutput>*olen</computeroutput> holds the required minimum size of <computeroutput>buf</computeroutput>. </para><simplesectsep/><para>Another PEM or BASE64 error code on other kinds of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="148" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Privacy Enhanced Mail (PEM) decoding. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PEM_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PEM_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compat-3-crypto_8h" kindref="compound">mbedtls/compat-3-crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="pem_8h_1a9fca39bb5d4a6845239221a53685a2dc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_NO_HEADER_FOOTER_PRESENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1080</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="28" refid="pem_8h_1a820cf2ffc66f354f3d8f621cac7b4eda" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_INVALID_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1100</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="30" refid="pem_8h_1a7709c4b0616a4d6ec0184204ace4d4b3" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_INVALID_ENC_IV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1200</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32" refid="pem_8h_1a28b7a955389ec2e9a8b7a7d3f13ad746" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_UNKNOWN_ENC_ALG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1280</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="34" refid="pem_8h_1ab883990c7b4a373519ab3b25ec945cd8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_PASSWORD_REQUIRED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1300</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="36" refid="pem_8h_1aea98f44a528310c53398a49c90469861" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_PASSWORD_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1380</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38" refid="pem_8h_1a58b1dec72e6a2586a1bda819ea768ad1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PEM_FEATURE_UNAVAILABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x1400</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PEM_PARSE_C)</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="49" refid="structmbedtls__pem__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="50" refid="structmbedtls__pem__context_1a167b74fc8a1d43dde2c22cdf0bac3b93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(buf);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__pem__context_1a4dfe0671f5a770156917da110f63975e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(buflen);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="structmbedtls__pem__context_1ac96f69af92790741a6430c3860aa3657" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(info);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="pem_8h_1a357e385921f917c4f5319c73170c1c67" kindref="member">mbedtls_pem_context</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pem_8h_1a0421a5ec66a7efca0b6868ae72551d47" kindref="member">mbedtls_pem_init</ref>(<ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pem_8h_1a4ba4a0490a5edf5ca2055b8385863c39" kindref="member">mbedtls_pem_read_buffer</ref>(<ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*footer,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pwd,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pwdlen,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*use_len);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="pem_8h_1a22fc5e4099c47815063f98a28eead3df" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="pem_8h_1a22fc5e4099c47815063f98a28eead3df" kindref="member">mbedtls_pem_get_buffer</ref>(<ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*buflen)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>*buflen<sp/>=<sp/>ctx-&gt;MBEDTLS_PRIVATE(buflen);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx-&gt;MBEDTLS_PRIVATE(buf);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pem_8h_1a84ba36e8321d38064d78f29a97d7014c" kindref="member">mbedtls_pem_free</ref>(<ref refid="structmbedtls__pem__context" kindref="compound">mbedtls_pem_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PEM_PARSE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PEM_WRITE_C)</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="148"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pem_8h_1a0fe6df77c4783c3f639ab5e47e5632aa" kindref="member">mbedtls_pem_write_buffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*footer,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*der_data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>der_len,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*olen);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PEM_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>pem.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h"/>
+  </compounddef>
+</doxygen>

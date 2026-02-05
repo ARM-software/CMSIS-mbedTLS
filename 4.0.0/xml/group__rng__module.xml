@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__rng__module" kind="group">
+    <compoundname>rng_module</compoundname>
+    <title>Random number generator (RNG) module</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Random number generator (RNG) module provides random number generation, see <computeroutput>mbedtls_ctr_drbg_random()</computeroutput>.</para><para>The block-cipher counter-mode based deterministic random bit generator (CTR_DBRG) as specified in NIST SP800-90. It needs an external source of entropy. For these purposes <computeroutput>mbedtls_entropy_func()</computeroutput> can be used. This is an implementation based on a simple entropy accumulator design.</para><para>Meaning that there seems to be no practical algorithm that can guess the next bit with a probability larger than 1/2 in an output sequence.</para><para>This module can be used to generate random numbers. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

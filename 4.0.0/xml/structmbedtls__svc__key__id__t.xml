@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__svc__key__id__t" kind="struct" prot="public">
+    <compoundname>mbedtls_svc_key_id_t</compoundname>
+    <includes refid="crypto__types_8h" local="no">crypto_types.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__svc__key__id__t_1acb8d5ee503aff9f0203f0470b68effcf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref></type>
+        <definition>psa_key_id_t mbedtls_svc_key_id_t::private_key_id</definition>
+        <argsstring></argsstring>
+        <name>private_key_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="294" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__svc__key__id__t_1ab4d9b3f863dd8b11fa1e635a77ab1d16" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+        <definition>mbedtls_key_owner_id_t mbedtls_svc_key_id_t::private_owner</definition>
+        <argsstring></argsstring>
+        <name>private_owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="295" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Encoding of key identifiers as seen inside the PSA Crypto implementation.</para><para>When PSA Crypto is built as a library inside an application, this type is identical to <ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>. When PSA Crypto is built as a service that can store keys on behalf of multiple clients, this type encodes the <ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref> value seen by each client application as well as extra information that identifies the client that owns the key.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="293" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="293" bodyend="296"/>
+    <listofallmembers>
+      <member refid="structmbedtls__svc__key__id__t_1acb8d5ee503aff9f0203f0470b68effcf" prot="public" virt="non-virtual"><scope>mbedtls_svc_key_id_t</scope><name>private_key_id</name></member>
+      <member refid="structmbedtls__svc__key__id__t_1ab4d9b3f863dd8b11fa1e635a77ab1d16" prot="public" virt="non-virtual"><scope>mbedtls_svc_key_id_t</scope><name>private_owner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

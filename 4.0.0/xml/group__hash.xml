@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__hash" kind="group">
+    <compoundname>hash</compoundname>
+    <title>Message digests</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" prot="public" static="no">
+        <type>struct <ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_s</ref></type>
+        <definition>typedef struct psa_hash_operation_s psa_hash_operation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_hash_operation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for multipart hash operations.</para><para>Before calling any function on a hash operation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(operation));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_t</ref><sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" kindref="member">PSA_HASH_OPERATION_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_t</ref><sp/>operation<sp/>=<sp/><ref refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" kindref="member">PSA_HASH_OPERATION_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="group__hash_1ga616458d010d961df3f41049ed38e51b9" kindref="member">psa_hash_operation_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__hash__operation__s" kindref="compound">psa_hash_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/><ref refid="group__hash_1ga616458d010d961df3f41049ed38e51b9" kindref="member">psa_hash_operation_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="906" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" bodystart="940" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__hash_1gac69f7f19d96a56c28cf3799d11b12156" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_compute</definition>
+        <argsstring>(psa_algorithm_t alg, const uint8_t *input, size_t input_length, uint8_t *hash, size_t hash_size, size_t *hash_length)</argsstring>
+        <name>psa_hash_compute</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>hash_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate the hash (digest) of a message.</para><para><simplesect kind="note"><para>To verify the hash of a message against an expected value, use <ref refid="group__hash_1ga0c08f4797bec96b886c8c8d7acc2a553" kindref="member">psa_hash_compare()</ref> instead.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1gac9280662bb482590b4b33d1dcd32930f" kindref="member">PSA_ALG_IS_HASH</ref>(<computeroutput>alg</computeroutput>) is true). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the hash is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the hash value. This is always <ref refid="crypto__sizes_8h_1ae0c23128dc05e9680d2c4c1b292bcc77" kindref="member">PSA_HASH_LENGTH</ref>(<computeroutput>alg</computeroutput>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a hash algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>hash_size</computeroutput> is too small </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="871" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga0c08f4797bec96b886c8c8d7acc2a553" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_compare</definition>
+        <argsstring>(psa_algorithm_t alg, const uint8_t *input, size_t input_length, const uint8_t *hash, size_t hash_length)</argsstring>
+        <name>psa_hash_compare</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate the hash (digest) of a message and compare it with a reference value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1gac9280662bb482590b4b33d1dcd32930f" kindref="member">PSA_ALG_IS_HASH</ref>(<computeroutput>alg</computeroutput>) is true). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the expected hash value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected hash is identical to the actual hash of the input. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash of the message was calculated successfully, but it differs from the expected hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a hash algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>input_length</computeroutput> or <computeroutput>hash_length</computeroutput> do not match the hash size for <computeroutput>alg</computeroutput> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="906" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga616458d010d961df3f41049ed38e51b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref></type>
+        <definition>static psa_hash_operation_t psa_hash_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_hash_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an initial value for a hash operation object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="950" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_setup</definition>
+        <argsstring>(psa_hash_operation_t *operation, psa_algorithm_t alg)</argsstring>
+        <name>psa_hash_setup</name>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set up a multipart hash operation.</para><para>The sequence of operations to calculate a hash (message digest) is as follows:<orderedlist>
+<listitem><para>Allocate an operation object which will be passed to all the functions listed here.</para></listitem><listitem><para>Initialize the operation object with one of the methods described in the documentation for <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref>, e.g. <ref refid="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" kindref="member">PSA_HASH_OPERATION_INIT</ref>.</para></listitem><listitem><para>Call <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> to specify the algorithm.</para></listitem><listitem><para>Call <ref refid="group__hash_1ga65b16ef97d7f650899b7db4b7d1112ff" kindref="member">psa_hash_update()</ref> zero, one or more times, passing a fragment of the message each time. The hash that is calculated is the hash of the concatenation of these messages in order.</para></listitem><listitem><para>To calculate the hash, call <ref refid="group__hash_1ga4795fd06a0067b0adcd92e9627b8c97e" kindref="member">psa_hash_finish()</ref>. To compare the hash with an expected value, call <ref refid="group__hash_1ga7be923c5700c9c70ef77ee9b76d1a5c0" kindref="member">psa_hash_verify()</ref>.</para></listitem></orderedlist>
+</para><para>If an error occurs at any step after a call to <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref>, the operation will need to be reset by a call to <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>. The application may call <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref> at any time after the operation has been initialized.</para><para>After a successful call to <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref>, the application must eventually terminate the operation. The following events terminate an operation:<itemizedlist>
+<listitem><para>A successful call to <ref refid="group__hash_1ga4795fd06a0067b0adcd92e9627b8c97e" kindref="member">psa_hash_finish()</ref> or <ref refid="group__hash_1ga7be923c5700c9c70ef77ee9b76d1a5c0" kindref="member">psa_hash_verify()</ref>.</para></listitem><listitem><para>A call to <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set up. It must have been initialized as per the documentation for <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> and not yet in use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1gac9280662bb482590b4b33d1dcd32930f" kindref="member">PSA_ALG_IS_HASH</ref>(<computeroutput>alg</computeroutput>) is true).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not a supported hash algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not a hash algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be inactive), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1000" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga65b16ef97d7f650899b7db4b7d1112ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_update</definition>
+        <argsstring>(psa_hash_operation_t *operation, const uint8_t *input, size_t input_length)</argsstring>
+        <name>psa_hash_update</name>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a message fragment to a multipart hash operation.</para><para>The application must call <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> before calling this function.</para><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active hash operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message fragment to hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1026" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga4795fd06a0067b0adcd92e9627b8c97e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_finish</definition>
+        <argsstring>(psa_hash_operation_t *operation, uint8_t *hash, size_t hash_size, size_t *hash_length)</argsstring>
+        <name>psa_hash_finish</name>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>hash_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finish the calculation of the hash of a message.</para><para>The application must call <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> before calling this function. This function calculates the hash of the message formed by concatenating the inputs passed to preceding calls to <ref refid="group__hash_1ga65b16ef97d7f650899b7db4b7d1112ff" kindref="member">psa_hash_update()</ref>.</para><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>.</para><para><simplesect kind="warning"><para>Applications should not call this function if they expect a specific value for the hash. Call <ref refid="group__hash_1ga7be923c5700c9c70ef77ee9b76d1a5c0" kindref="member">psa_hash_verify()</ref> instead. Beware that comparing integrity or authenticity data such as hash values with a function such as <computeroutput>memcmp</computeroutput> is risky because the time taken by the comparison may leak information about the hashed data which could allow an attacker to guess a valid hash and thereby bypass security controls.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active hash operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the hash is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the hash value. This is always <ref refid="crypto__sizes_8h_1ae0c23128dc05e9680d2c4c1b292bcc77" kindref="member">PSA_HASH_LENGTH</ref>(<computeroutput>alg</computeroutput>) where <computeroutput>alg</computeroutput> is the hash algorithm that is calculated.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>hash</computeroutput> buffer is too small. You can determine a sufficient buffer size by calling <ref refid="crypto__sizes_8h_1ae0c23128dc05e9680d2c4c1b292bcc77" kindref="member">PSA_HASH_LENGTH</ref>(<computeroutput>alg</computeroutput>) where <computeroutput>alg</computeroutput> is the hash algorithm that is calculated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1072" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga7be923c5700c9c70ef77ee9b76d1a5c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_verify</definition>
+        <argsstring>(psa_hash_operation_t *operation, const uint8_t *hash, size_t hash_length)</argsstring>
+        <name>psa_hash_verify</name>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finish the calculation of the hash of a message and compare it with an expected value.</para><para>The application must call <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> before calling this function. This function calculates the hash of the message formed by concatenating the inputs passed to preceding calls to <ref refid="group__hash_1ga65b16ef97d7f650899b7db4b7d1112ff" kindref="member">psa_hash_update()</ref>. It then compares the calculated hash with the expected hash passed as a parameter to this function.</para><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>.</para><para><simplesect kind="note"><para>Implementations shall make the best effort to ensure that the comparison between the actual hash and the expected hash is performed in constant time.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active hash operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the expected hash value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected hash is identical to the actual hash of the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash of the message was calculated successfully, but it differs from the expected hash. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1gab0b4d5f9912a615559497a467b532928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_abort</definition>
+        <argsstring>(psa_hash_operation_t *operation)</argsstring>
+        <name>psa_hash_abort</name>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Abort a hash operation.</para><para>Aborting an operation frees all associated resources except for the <computeroutput>operation</computeroutput> structure itself. Once aborted, the operation object can be reused for another operation by calling <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> again.</para><para>You may call this function any time after the operation object has been initialized by one of the methods described in <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref>.</para><para>In particular, calling <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref> after the operation has been terminated by a call to <ref refid="group__hash_1gab0b4d5f9912a615559497a467b532928" kindref="member">psa_hash_abort()</ref>, <ref refid="group__hash_1ga4795fd06a0067b0adcd92e9627b8c97e" kindref="member">psa_hash_finish()</ref> or <ref refid="group__hash_1ga7be923c5700c9c70ef77ee9b76d1a5c0" kindref="member">psa_hash_verify()</ref> is safe and has no effect.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialized hash operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__hash_1ga39673348f3302b4646bd780034a5aeda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_hash_clone</definition>
+        <argsstring>(const psa_hash_operation_t *source_operation, psa_hash_operation_t *target_operation)</argsstring>
+        <name>psa_hash_clone</name>
+        <param>
+          <type>const <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>source_operation</declname>
+        </param>
+        <param>
+          <type><ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref> *</type>
+          <declname>target_operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clone a hash operation.</para><para>This function copies the state of an ongoing hash operation to a new operation object. In other words, this function is equivalent to calling <ref refid="group__hash_1ga8d72896cf70fc4d514c5c6b978912515" kindref="member">psa_hash_setup()</ref> on <computeroutput>target_operation</computeroutput> with the same algorithm that <computeroutput>source_operation</computeroutput> was set up for, then <ref refid="group__hash_1ga65b16ef97d7f650899b7db4b7d1112ff" kindref="member">psa_hash_update()</ref> on <computeroutput>target_operation</computeroutput> with the same input that that was passed to <computeroutput>source_operation</computeroutput>. After this function returns, the two objects are independent, i.e. subsequent calls involving one of the objects do not affect the other object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">source_operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The active hash operation to clone. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">target_operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set up. It must be initialized but not active.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>source_operation</computeroutput> state is not valid (it must be active), or the <computeroutput>target_operation</computeroutput> state is not valid (it must be inactive), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1171" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__hash_1ga6ab7fe8d3500bc2f21be840b4f4f8d1d" prot="public" static="no">
+        <name>PSA_HASH_OPERATION_INIT</name>
+        <initializer>{ 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a hash operation object of type <ref refid="group__hash_1ga3c4205d2ce66c4095fc5c78c25273fab" kindref="member">psa_hash_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="80" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ac74804b4466452143112398ec3c7ee6a" compoundref="crypto__struct_8h" startline="82" endline="86">psa_hash_operation_init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

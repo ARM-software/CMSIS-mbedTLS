@@ -1,0 +1,1417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="asn1write_8h" kind="file">
+    <compoundname>asn1write.h</compoundname>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="asn1_8h" local="yes">mbedtls/asn1.h</includes>
+    <includedby refid="psa__util_8h" local="no">psa_util.h</includedby>
+    <incdepgraph>
+      <node id="2043">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2037" relation="include">
+        </childnode>
+        <childnode refid="2044" relation="include">
+        </childnode>
+      </node>
+      <node id="2031">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2040">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="2030" relation="include">
+        </childnode>
+      </node>
+      <node id="2029">
+        <label>asn1write.h</label>
+        <link refid="asn1write.h"/>
+        <childnode refid="2030" relation="include">
+        </childnode>
+        <childnode refid="2036" relation="include">
+        </childnode>
+      </node>
+      <node id="2046">
+        <label>stdint.h</label>
+      </node>
+      <node id="2045">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2034">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2030">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2031" relation="include">
+        </childnode>
+        <childnode refid="2032" relation="include">
+        </childnode>
+        <childnode refid="2033" relation="include">
+        </childnode>
+        <childnode refid="2034" relation="include">
+        </childnode>
+        <childnode refid="2035" relation="include">
+        </childnode>
+      </node>
+      <node id="2039">
+        <label>stddef.h</label>
+      </node>
+      <node id="2035">
+        <label>limits.h</label>
+      </node>
+      <node id="2044">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2030" relation="include">
+        </childnode>
+        <childnode refid="2037" relation="include">
+        </childnode>
+        <childnode refid="2045" relation="include">
+        </childnode>
+        <childnode refid="2046" relation="include">
+        </childnode>
+      </node>
+      <node id="2042">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="2043" relation="include">
+        </childnode>
+      </node>
+      <node id="2038">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2030" relation="include">
+        </childnode>
+        <childnode refid="2039" relation="include">
+        </childnode>
+        <childnode refid="2040" relation="include">
+        </childnode>
+        <childnode refid="2041" relation="include">
+        </childnode>
+      </node>
+      <node id="2037">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2041">
+        <label>time.h</label>
+      </node>
+      <node id="2036">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="2037" relation="include">
+        </childnode>
+        <childnode refid="2030" relation="include">
+        </childnode>
+        <childnode refid="2038" relation="include">
+        </childnode>
+        <childnode refid="2042" relation="include">
+        </childnode>
+        <childnode refid="2039" relation="include">
+        </childnode>
+        <childnode refid="2047" relation="include">
+        </childnode>
+      </node>
+      <node id="2032">
+        <label>/dev/null</label>
+      </node>
+      <node id="2033">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="2047">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2048">
+        <label>asn1write.h</label>
+        <link refid="asn1write.h"/>
+        <childnode refid="2049" relation="include">
+        </childnode>
+      </node>
+      <node id="2049">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="asn1write_8h_1a4dab14bef6cf1fed0404be2d77a6ebb9" prot="public" static="no">
+        <name>MBEDTLS_ASN1_CHK_ADD</name>
+        <param><defname>g</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>do                                                  \
+    {                                                   \
+        if ((ret = (f)) &lt; 0)                         \
+        return ret;                              \
+        else                                            \
+        (g) += ret;                                 \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="17" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="asn1write_8h_1a43004f58c6f67e4fa2b0594b51ebe057" prot="public" static="no">
+        <name>MBEDTLS_ASN1_CHK_CLEANUP_ADD</name>
+        <param><defname>g</defname></param>
+        <param><defname>f</defname></param>
+        <initializer>do                                                  \
+    {                                                   \
+        if ((ret = (f)) &lt; 0)                         \
+        goto cleanup;                              \
+        else                                            \
+        (g) += ret;                                 \
+    } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="26" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="asn1write_8h_1adcd7eb33f55c35bb8c9240f7f3474548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_len</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, size_t len)</argsstring>
+        <name>mbedtls_asn1_write_len</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write a length field in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length value to write.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a3a8db9d62862cba73a4af273325a1b96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_tag</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, unsigned char tag)</argsstring>
+        <name>mbedtls_asn1_write_tag</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Write an ASN.1 tag in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tag to write.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a37b1338a9384aae90f841883528526e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_raw_buffer</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_asn1_write_raw_buffer</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write raw buffer data. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data buffer to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a769338e84c41b3a30bf1e1b9f5700df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_null</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start)</argsstring>
+        <name>mbedtls_asn1_write_null</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+<para>Write a NULL tag (<ref refid="group__asn1__module_1gae26e36d787617e0b2dd067ccc342db0d" kindref="member">MBEDTLS_ASN1_NULL</ref>) with zero data in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a5f2b8bb7fce54340acafed3392081254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_oid</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *oid, size_t oid_len)</argsstring>
+        <name>mbedtls_asn1_write_oid</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>oid_len</declname>
+        </param>
+        <briefdescription>
+<para>Write an OID tag (<ref refid="group__asn1__module_1gad87ad0570a31add4ecac6cc3694ca79a" kindref="member">MBEDTLS_ASN1_OID</ref>) and data in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the OID.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a26662c7ea6dc90c945555f5c7d27021b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_algorithm_identifier</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *oid, size_t oid_len, size_t par_len)</argsstring>
+        <name>mbedtls_asn1_write_algorithm_identifier</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>oid_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>par_len</declname>
+        </param>
+        <briefdescription>
+<para>Write an AlgorithmIdentifier sequence in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID of the algorithm to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the algorithm&apos;s OID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>par_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the parameters, which must be already written. If 0, NULL parameters are added</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a5e099ea218ca4b638ad4d51b24494b65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_algorithm_identifier_ext</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *oid, size_t oid_len, size_t par_len, int has_par)</argsstring>
+        <name>mbedtls_asn1_write_algorithm_identifier_ext</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>oid_len</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>par_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>has_par</declname>
+        </param>
+        <briefdescription>
+<para>Write an AlgorithmIdentifier sequence in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID of the algorithm to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the algorithm&apos;s OID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>par_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the parameters, which must be already written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>has_par</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If there are any parameters. If 0, par_len must be 0. If 1 and <computeroutput>par_len</computeroutput> is 0, NULL parameters are added.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a758e1237011392af916ed23ffaaad468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_bool</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, int boolean)</argsstring>
+        <name>mbedtls_asn1_write_bool</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>boolean</declname>
+        </param>
+        <briefdescription>
+<para>Write a boolean tag (<ref refid="group__asn1__module_1ga1382980a474a765365d8f5c7bd63795a" kindref="member">MBEDTLS_ASN1_BOOLEAN</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>boolean</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The boolean value to write, either <computeroutput>0</computeroutput> or <computeroutput>1</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1aa31542bf72dd340b6de1b32c75679d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_int</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, int val)</argsstring>
+        <name>mbedtls_asn1_write_int</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Write an int tag (<ref refid="group__asn1__module_1ga6e8614f8937956c294fe791bc5ac6a7c" kindref="member">MBEDTLS_ASN1_INTEGER</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to write. It must be non-negative.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1abdf7f0f828c96ff9b313cfdd36ef3b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_enum</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, int val)</argsstring>
+        <name>mbedtls_asn1_write_enum</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Write an enum tag (<ref refid="group__asn1__module_1gacbaecf2f809a9c73b6b42307527a288c" kindref="member">MBEDTLS_ASN1_ENUMERATED</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The integer value to write.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative <computeroutput>MBEDTLS_ERR_ASN1_XXX</computeroutput> error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1af05623bc9c38fa7733eb9d9c4f3810a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_tagged_string</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, int tag, const char *text, size_t text_len)</argsstring>
+        <name>mbedtls_asn1_write_tagged_string</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tag</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>text_len</declname>
+        </param>
+        <briefdescription>
+<para>Write a string in ASN.1 format using a specific string encoding tag. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string encoding tag to write, e.g. <ref refid="group__asn1__module_1gafc28060cb0e9b2be4f0960ad345a2e42" kindref="member">MBEDTLS_ASN1_UTF8_STRING</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>text</computeroutput> in bytes (which might be strictly larger than the number of characters).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a9ff1060f3cf59a370a3ebce4ab753354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_printable_string</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *text, size_t text_len)</argsstring>
+        <name>mbedtls_asn1_write_printable_string</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>text_len</declname>
+        </param>
+        <briefdescription>
+<para>Write a string in ASN.1 format using the PrintableString string encoding tag (<ref refid="group__asn1__module_1ga57f497984e573597e1ed100afcc3f965" kindref="member">MBEDTLS_ASN1_PRINTABLE_STRING</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>text</computeroutput> in bytes (which might be strictly larger than the number of characters).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a8d9a6f9e6cfc9f483027ba555e8a3ee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_utf8_string</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *text, size_t text_len)</argsstring>
+        <name>mbedtls_asn1_write_utf8_string</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>text_len</declname>
+        </param>
+        <briefdescription>
+<para>Write a UTF8 string in ASN.1 format using the UTF8String string encoding tag (<ref refid="group__asn1__module_1gafc28060cb0e9b2be4f0960ad345a2e42" kindref="member">MBEDTLS_ASN1_UTF8_STRING</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>text</computeroutput> in bytes (which might be strictly larger than the number of characters).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1aab785cb3afdc88a46355a56bb16d7921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_ia5_string</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const char *text, size_t text_len)</argsstring>
+        <name>mbedtls_asn1_write_ia5_string</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>text_len</declname>
+        </param>
+        <briefdescription>
+<para>Write a string in ASN.1 format using the IA5String string encoding tag (<ref refid="group__asn1__module_1ga30d5d0f805af50deb5820e741a53e481" kindref="member">MBEDTLS_ASN1_IA5_STRING</ref>). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>text</computeroutput> in bytes (which might be strictly larger than the number of characters).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="280" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a1005eb6d40cbd337bd12c8bdf8e70ee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_bitstring</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const unsigned char *buf, size_t bits)</argsstring>
+        <name>mbedtls_asn1_write_bitstring</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+<para>Write a bitstring tag (<ref refid="group__asn1__module_1gafd5c5ecc822b7e2f4d2e64bf388fc559" kindref="member">MBEDTLS_ASN1_BIT_STRING</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitstring to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of bits in the bitstring.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="297" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1ac102965d77b961b6fa3cba4ac1f92a11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_named_bitstring</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const unsigned char *buf, size_t bits)</argsstring>
+        <name>mbedtls_asn1_write_named_bitstring</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+<para>This function writes a named bitstring tag (<ref refid="group__asn1__module_1gafd5c5ecc822b7e2f4d2e64bf388fc559" kindref="member">MBEDTLS_ASN1_BIT_STRING</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para>As stated in RFC 5280 Appendix B, trailing zeroes are omitted when encoding named bitstrings in DER.</para><para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer which is used for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitstring to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of bits in the bitstring.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="317" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a6dd7682ca5db54ed33531e5b6e7d69ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_octet_string</definition>
+        <argsstring>(unsigned char **p, const unsigned char *start, const unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_asn1_write_octet_string</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write an octet string tag (<ref refid="group__asn1__module_1ga080d1f82b0996a63c561541eb22a7d0f" kindref="member">MBEDTLS_ASN1_OCTET_STRING</ref>) and value in ASN.1 format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the data to write. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the data buffer <computeroutput>buf</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes written to <computeroutput>p</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="336" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a0ad16ddefc9aa0948e84dcdd1e29ebf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+        <definition>mbedtls_asn1_named_data* mbedtls_asn1_store_named_data</definition>
+        <argsstring>(mbedtls_asn1_named_data **list, const char *oid, size_t oid_len, const unsigned char *val, size_t val_len)</argsstring>
+        <name>mbedtls_asn1_store_named_data</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> **</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>oid_len</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>val_len</declname>
+        </param>
+        <briefdescription>
+<para>Create or find a specific named_data entry for writing in a sequence or list based on the OID. If not already in there, a new entry is added to the head of the list. Warning: Destructive behaviour for the val data! </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the location of the head of the list to seek through (will be updated in case of a new entry). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID to look for. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the OID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated data to store. If this is <computeroutput>NULL</computeroutput>, no data is copied to the new or existing buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The minimum length of the data buffer needed. If this is 0, do not allocate a buffer for the associated data. If the OID was already present, enlarge, shrink or free the existing buffer to fit <computeroutput>val_len</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the new / existing entry on success. </para><simplesectsep/><para><computeroutput>NULL</computeroutput> if there was a memory allocation error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="360" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="asn1write_8h_1a04f9d8af882c5072fb8d5c1787505911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_write_integer</definition>
+        <argsstring>(unsigned char **p, unsigned char *start, const unsigned char *integer, size_t integer_length)</argsstring>
+        <name>mbedtls_asn1_write_integer</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>integer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>integer_length</declname>
+        </param>
+        <briefdescription>
+<para>Encode an integer into ASN.1 and write it to a buffer. Write the integer given in <computeroutput>integer</computeroutput> into the buffer given by <computeroutput>*p</computeroutput> and <computeroutput>start</computeroutput> in DER-encoded ASN.1 representation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function works backwards within the data buffer.</para><simplesectsep/><para>This function is not guaranteed to work when the input and output buffers overlap.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference to the current position pointer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start of the buffer, for bounds-checking. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to a big-endian representation of an integer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>integer_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes in the integer buffer.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An integer number of bytes written on success. </para><simplesectsep/><para>An appropriate error code on failure. </para><simplesectsep/><para>On success p will be set to point to the start of the encoded integer. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h" line="386" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>ASN.1 buffer writing functionality. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ASN1_WRITE_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_WRITE_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asn1_8h" kindref="compound">mbedtls/asn1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="asn1write_8h_1a4dab14bef6cf1fed0404be2d77a6ebb9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_CHK_ADD(g,<sp/>f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>((ret<sp/>=<sp/>(f))<sp/>&lt;<sp/>0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>ret;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(g)<sp/>+=<sp/>ret;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="asn1write_8h_1a43004f58c6f67e4fa2b0594b51ebe057" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_CHK_CLEANUP_ADD(g,<sp/>f)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>((ret<sp/>=<sp/>(f))<sp/>&lt;<sp/>0)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goto<sp/>cleanup;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(g)<sp/>+=<sp/>ret;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ASN1_WRITE_C)<sp/>||<sp/>defined(MBEDTLS_ASN1_PARSE_C)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(PSA_HAVE_ALG_SOME_ECDSA)</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="53"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1adcd7eb33f55c35bb8c9240f7f3474548" kindref="member">mbedtls_asn1_write_len</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="67"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a3a8db9d62862cba73a4af273325a1b96" kindref="member">mbedtls_asn1_write_tag</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tag);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_WRITE_C<sp/>||<sp/>MBEDTLS_ASN1_PARSE_C<sp/>||<sp/>PSA_HAVE_ALG_SOME_ECDSA*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ASN1_WRITE_C)</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a37b1338a9384aae90f841883528526e1" kindref="member">mbedtls_asn1_write_raw_buffer</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a769338e84c41b3a30bf1e1b9f5700df6" kindref="member">mbedtls_asn1_write_null</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a5f2b8bb7fce54340acafed3392081254" kindref="member">mbedtls_asn1_write_oid</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" kindref="member">oid</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oid_len);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a26662c7ea6dc90c945555f5c7d27021b" kindref="member">mbedtls_asn1_write_algorithm_identifier</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*oid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oid_len,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>par_len);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a5e099ea218ca4b638ad4d51b24494b65" kindref="member">mbedtls_asn1_write_algorithm_identifier_ext</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*oid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oid_len,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>par_len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>has_par);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a758e1237011392af916ed23ffaaad468" kindref="member">mbedtls_asn1_write_bool</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1aa31542bf72dd340b6de1b32c75679d93" kindref="member">mbedtls_asn1_write_int</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" kindref="member">val</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1abdf7f0f828c96ff9b313cfdd36ef3b8c" kindref="member">mbedtls_asn1_write_enum</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1af05623bc9c38fa7733eb9d9c4f3810a0" kindref="member">mbedtls_asn1_write_tagged_string</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>text_len);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a9ff1060f3cf59a370a3ebce4ab753354" kindref="member">mbedtls_asn1_write_printable_string</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>text_len);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a8d9a6f9e6cfc9f483027ba555e8a3ee0" kindref="member">mbedtls_asn1_write_utf8_string</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>text_len);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1aab785cb3afdc88a46355a56bb16d7921" kindref="member">mbedtls_asn1_write_ia5_string</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>text_len);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a1005eb6d40cbd337bd12c8bdf8e70ee2" kindref="member">mbedtls_asn1_write_bitstring</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1ac102965d77b961b6fa3cba4ac1f92a11" kindref="member">mbedtls_asn1_write_named_bitstring</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bits);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a6dd7682ca5db54ed33531e5b6e7d69ad" kindref="member">mbedtls_asn1_write_octet_string</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*<ref refid="asn1write_8h_1a0ad16ddefc9aa0948e84dcdd1e29ebf6" kindref="member">mbedtls_asn1_store_named_data</ref>(<ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>**list,</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*oid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oid_len,</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val,</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>val_len);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="asn1write_8h_1a04f9d8af882c5072fb8d5c1787505911" kindref="member">mbedtls_asn1_write_integer</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*integer,</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>integer_length);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="392"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="394"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="396"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_WRITE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1write.h"/>
+  </compounddef>
+</doxygen>

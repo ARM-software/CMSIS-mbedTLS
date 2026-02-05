@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__lmots__private__t" kind="struct" prot="public">
+    <compoundname>mbedtls_lmots_private_t</compoundname>
+    <includes refid="lms_8h" local="no">lms.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__lmots__private__t_1ae69cc80e71eaf81cbee2418af888d9f0" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__lmots__parameters__t" kindref="compound">mbedtls_lmots_parameters_t</ref></type>
+        <definition>mbedtls_lmots_parameters_t mbedtls_lmots_private_t::private_params</definition>
+        <argsstring></argsstring>
+        <name>private_params</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="145" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lmots__private__t_1abcfe0cd1b2688e781688b669963ff801" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lmots_private_t::private_private_key[MBEDTLS_LMOTS_P_SIG_DIGIT_COUNT_MAX][MBEDTLS_LMOTS_N_HASH_LEN_MAX]</definition>
+        <argsstring>[MBEDTLS_LMOTS_P_SIG_DIGIT_COUNT_MAX][MBEDTLS_LMOTS_N_HASH_LEN_MAX]</argsstring>
+        <name>private_private_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="146" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__lmots__private__t_1ac3dab7da222a47fe8757197c352f89e9" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_lmots_private_t::private_have_private_key</definition>
+        <argsstring></argsstring>
+        <name>private_have_private_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the context contains a private key. Boolean values only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="148" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>LMOTS private context structure.</para><para>A LMOTS private key is one hash output for each of digit of the digest + checksum, and the applicable parameter set.</para><para>The context must be initialized before it is used. A public key must either be imported or generated from a private context.</para><para><dot> 
+digraph lmots_public_t {
+  UNINITIALIZED -&gt; INIT [label=&quot;init&quot;];
+  HAVE_PRIVATE_KEY -&gt; INIT [label=&quot;free&quot;];
+  INIT -&gt; HAVE_PRIVATE_KEY [label=&quot;generate_private_key&quot;];
+  HAVE_PRIVATE_KEY -&gt; INIT [label=&quot;sign&quot;];
+}
+</dot> </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="438">
+        <label>mbedtls_lmots_parameters_t</label>
+        <link refid="structmbedtls__lmots__parameters__t"/>
+      </node>
+      <node id="437">
+        <label>mbedtls_lmots_private_t</label>
+        <link refid="structmbedtls__lmots__private__t"/>
+        <childnode refid="438" relation="usage">
+          <edgelabel>private_params</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" line="144" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/lms.h" bodystart="144" bodyend="150"/>
+    <listofallmembers>
+      <member refid="structmbedtls__lmots__private__t_1ac3dab7da222a47fe8757197c352f89e9" prot="public" virt="non-virtual"><scope>mbedtls_lmots_private_t</scope><name>private_have_private_key</name></member>
+      <member refid="structmbedtls__lmots__private__t_1ae69cc80e71eaf81cbee2418af888d9f0" prot="public" virt="non-virtual"><scope>mbedtls_lmots_private_t</scope><name>private_params</name></member>
+      <member refid="structmbedtls__lmots__private__t_1abcfe0cd1b2688e781688b669963ff801" prot="public" virt="non-virtual"><scope>mbedtls_lmots_private_t</scope><name>private_private_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_b218eacb531d3ccb87c59876bff9320f" kind="dir">
+    <compoundname>alt-dummy</compoundname>
+    <innerfile refid="platform__alt_8h">platform_alt.h</innerfile>
+    <innerfile refid="threading__alt_8h">threading_alt.h</innerfile>
+    <innerfile refid="timing__alt_8h">timing_alt.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/"/>
+  </compounddef>
+</doxygen>

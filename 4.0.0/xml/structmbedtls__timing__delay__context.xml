@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__timing__delay__context" kind="struct" prot="public">
+    <compoundname>mbedtls_timing_delay_context</compoundname>
+    <includes refid="timing__alt_8h" local="no">timing_alt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__timing__delay__context_1ad525145fd15293144a05cb56690c9126" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_timing_delay_context::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" line="15" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" line="14" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" bodystart="14" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structmbedtls__timing__delay__context_1ad525145fd15293144a05cb56690c9126" prot="public" virt="non-virtual"><scope>mbedtls_timing_delay_context</scope><name>dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

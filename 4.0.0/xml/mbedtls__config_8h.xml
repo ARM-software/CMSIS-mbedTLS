@@ -1,0 +1,1154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="mbedtls__config_8h" kind="file">
+    <compoundname>mbedtls_config.h</compoundname>
+    <includedby refid="include_2mbedtls_2build__info_8h" local="yes">build_info.h</includedby>
+    <invincdepgraph>
+      <node id="3209">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3213" relation="include">
+        </childnode>
+      </node>
+      <node id="3221">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="3217">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+      </node>
+      <node id="3216">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="3222">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="3213">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3206">
+        <label>mbedtls_config.h</label>
+        <link refid="mbedtls_config.h"/>
+        <childnode refid="3207" relation="include">
+        </childnode>
+      </node>
+      <node id="3214">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3209" relation="include">
+        </childnode>
+      </node>
+      <node id="3212">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3223">
+        <label>version.h</label>
+        <link refid="include_2mbedtls_2version_8h"/>
+      </node>
+      <node id="3220">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="3208">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="3211">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="3219">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="3207">
+        <label>build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3208" relation="include">
+        </childnode>
+        <childnode refid="3209" relation="include">
+        </childnode>
+        <childnode refid="3214" relation="include">
+        </childnode>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3217" relation="include">
+        </childnode>
+        <childnode refid="3218" relation="include">
+        </childnode>
+        <childnode refid="3220" relation="include">
+        </childnode>
+        <childnode refid="3210" relation="include">
+        </childnode>
+        <childnode refid="3221" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+        <childnode refid="3211" relation="include">
+        </childnode>
+        <childnode refid="3212" relation="include">
+        </childnode>
+        <childnode refid="3213" relation="include">
+        </childnode>
+        <childnode refid="3222" relation="include">
+        </childnode>
+        <childnode refid="3223" relation="include">
+        </childnode>
+        <childnode refid="3219" relation="include">
+        </childnode>
+      </node>
+      <node id="3215">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3209" relation="include">
+        </childnode>
+        <childnode refid="3216" relation="include">
+        </childnode>
+      </node>
+      <node id="3210">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="3218">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3215" relation="include">
+        </childnode>
+        <childnode refid="3209" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="user-defined">
+      <header>SECTION: Platform abstraction layer</header>
+      <description><para>This section sets platform specific settings. </para></description>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae73dbeb395510070a756ed6689459b30" prot="public" static="no">
+        <name>MBEDTLS_NET_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the TCP and UDP over IPv6/IPv4 networking routines.</para><para><simplesect kind="note"><para>This module only works on POSIX/Unix (including Linux, BSD and OS X) and Windows. For other platforms, you&apos;ll want to disable it, and write your own networking callbacks to be passed to <computeroutput><ref refid="ssl_8h_1a8b7442420aef7f1a76fa8c5336362f9e" kindref="member">mbedtls_ssl_set_bio()</ref></computeroutput>.</para><simplesectsep/><para>See also our Knowledge Base article about porting to a new environment: <ulink url="https://mbed-tls.readthedocs.io/en/latest/kb/how-to/how-do-i-port-mbed-tls-to-a-new-environment-OS">https://mbed-tls.readthedocs.io/en/latest/kb/how-to/how-do-i-port-mbed-tls-to-a-new-environment-OS</ulink></para></simplesect>
+Module: library/net_sockets.c</para><para>This module provides networking routines. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="48" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a455d88c0fd36cd530b0cad47892eb91f" prot="public" static="no">
+        <name>MBEDTLS_TIMING_ALT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Uncomment to provide your own alternate implementation for <ref refid="timing_8h_1a427660928e1e0339d497390c167f895c" kindref="member">mbedtls_timing_get_timer()</ref>, mbedtls_set_alarm(), mbedtls_set/get_delay()</para><para>Only works if you have MBEDTLS_TIMING_C enabled.</para><para>You will need to provide a header &quot;timing_alt.h&quot; and an implementation at compile time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="61" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a207ef8366f5c438b28881e473b3ca87f" prot="public" static="no">
+        <name>MBEDTLS_TIMING_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the semi-portable timing interface.</para><para><simplesect kind="note"><para>The provided implementation only works on POSIX/Unix (including Linux, BSD and OS X) and Windows. On other platforms, you can either disable that module and provide your own implementations of the callbacks needed by <computeroutput><ref refid="ssl_8h_1a335ee78886daf7f8fb369fa925b3cca8" kindref="member">mbedtls_ssl_set_timer_cb()</ref></computeroutput> for DTLS, or leave it enabled and provide your own implementation of the whole module by setting <computeroutput>MBEDTLS_TIMING_ALT</computeroutput> in the current file.</para><simplesectsep/><para>The timing module will include time.h on suitable platforms regardless of the setting of MBEDTLS_HAVE_TIME, unless MBEDTLS_TIMING_ALT is used. See timing.c for more information.</para><simplesectsep/><para>See also our Knowledge Base article about porting to a new environment: <ulink url="https://mbed-tls.readthedocs.io/en/latest/kb/how-to/how-do-i-port-mbed-tls-to-a-new-environment-OS">https://mbed-tls.readthedocs.io/en/latest/kb/how-to/how-do-i-port-mbed-tls-to-a-new-environment-OS</ulink></para></simplesect>
+Module: library/timing.c </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="85" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>SECTION: General configuration options</header>
+      <description><para>This section contains Mbed TLS build settings that are not associated with a particular module. </para></description>
+      <memberdef kind="define" id="mbedtls__config_8h_1a8d615f5d4143f300c13c9f6fec1fb17a" prot="public" static="no">
+        <name>MBEDTLS_ERROR_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable error code to error string conversion.</para><para>Module: library/error.c Caller:</para><para>This module enables <ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="107" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6382cfe1b528f3382248b1d746418865" prot="public" static="no">
+        <name>MBEDTLS_ERROR_STRERROR_DUMMY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable a dummy error function to make use of <ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror()</ref> in third party libraries easier when MBEDTLS_ERROR_C is disabled (no effect when MBEDTLS_ERROR_C is enabled).</para><para>You can safely disable this if MBEDTLS_ERROR_C is enabled, or if you&apos;re not using <ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror()</ref> or error_strerror() in your application.</para><para>Disable if you run into name conflicts and want to really remove the <ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="122" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a1d96e634d319f743786c921fb3962497" prot="public" static="no">
+        <name>MBEDTLS_VERSION_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable run-time version information.</para><para>Module: library/version.c</para><para>This module provides run-time version information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="133" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a9695236b5192ac4a15afe1681adbb990" prot="public" static="no">
+        <name>MBEDTLS_VERSION_FEATURES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allow run-time checking of compile-time enabled features. Thus allowing users to check at run-time if the library is for instance compiled with threading support via <ref refid="include_2mbedtls_2version_8h_1afe471be7bb2bd441b0c693256ab298ea" kindref="member">mbedtls_version_check_feature()</ref>.</para><para>Requires: MBEDTLS_VERSION_C</para><para>Comment this to disable run-time checking and save ROM space </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="146" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a92f48bae5eec24daf7a930d34d77b78d" prot="public" static="no">
+        <name>MBEDTLS_CONFIG_FILE</name>
+        <initializer>&quot;mbedtls/mbedtls_config.h&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If defined, this is a header which will be included instead of <computeroutput>&quot;mbedtls/mbedtls_config.h&quot;</computeroutput>. This header file specifies the compile-time configuration of Mbed TLS. Unlike other configuration options, this one must be defined on the compiler command line: a definition in <computeroutput><ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref></computeroutput> would have no effect.</para><para>This macro is expanded after an <computeroutput>#include</computeroutput> directive. This is a popular but non-standard feature of the C language, so this feature is only available with compilers that perform macro expansion on an <computeroutput>#include</computeroutput> line.</para><para>The value of this symbol is typically a path in double quotes, either absolute or relative to a directory on the include search path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="165" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a46d51403d55f630bdccace1da57a0f31" prot="public" static="no">
+        <name>MBEDTLS_USER_CONFIG_FILE</name>
+        <initializer>&quot;/dev/null&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If defined, this is a header which will be included after <computeroutput>&quot;mbedtls/mbedtls_config.h&quot;</computeroutput> or <ref refid="mbedtls__config_8h_1a92f48bae5eec24daf7a930d34d77b78d" kindref="member">MBEDTLS_CONFIG_FILE</ref>. This allows you to modify the default configuration, including the ability to undefine options that are enabled by default.</para><para>This macro is expanded after an <computeroutput>#include</computeroutput> directive. This is a popular but non-standard feature of the C language, so this feature is only available with compilers that perform macro expansion on an <computeroutput>#include</computeroutput> line.</para><para>The value of this symbol is typically a path in double quotes, either absolute or relative to a directory on the include search path. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="182" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>SECTION: TLS feature selection</header>
+      <description><para>This section sets support for features that are or are not needed within the modules that are enabled. </para></description>
+      <memberdef kind="define" id="mbedtls__config_8h_1a56b885bda569ed6515c6fffca6f5bd27" prot="public" static="no">
+        <name>MBEDTLS_SSL_NULL_CIPHERSUITES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable ciphersuites without encryption.</para><para>Warning: Only do so when you know what you are doing. This allows for channels without any encryption. All data are transmitted in clear.</para><para>Uncomment this macro to enable the NULL ciphersuites </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="204" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ac64f663ce793cda3cc14e5a300e30a65" prot="public" static="no">
+        <name>MBEDTLS_DEBUG_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the debug functions.</para><para>Module: library/debug.c Caller: library/ssl_msg.c library/ssl_tls.c library/ssl_tls12_*.c library/ssl_tls13_*.c</para><para>This module provides debugging functions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="219" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a17ad52b9c597d50d6bab1557e96dd2e2" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the ECDHE-ECDSA based ciphersuite modes in SSL / TLS.</para><para>Requires: PSA_WANT_ALG_ECDH PSA_WANT_ALG_ECDSA MBEDTLS_X509_CRT_PARSE_C</para><para>This enables the following ciphersuites (if other requisites are enabled as well): MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="243" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1af3f5e018957fb1375a4d305efe8fd67a" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the ECDHE-PSK based ciphersuite modes in SSL / TLS.</para><para>Requires: PSA_WANT_ALG_ECDH</para><para>This enables the following ciphersuites (if other requisites are enabled as well): MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256 MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="261" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a323959c9c447de38e9db7cd7ed733e75" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the ECDHE-RSA based ciphersuite modes in SSL / TLS.</para><para>Requires: PSA_WANT_ALG_ECDH PSA_WANT_ALG_RSA_PKCS1V15_SIGN MBEDTLS_X509_CRT_PARSE_C</para><para>This enables the following ciphersuites (if other requisites are enabled as well): MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="285" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ac9580ac865324c142232c3e0bc654e14" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the ECJPAKE based ciphersuite modes in SSL / TLS.</para><para><simplesect kind="warning"><para>This is currently experimental. EC J-PAKE support is based on the Thread v1.0.0 specification; incompatible changes to the specification might still happen. For this reason, this is disabled by default.</para></simplesect>
+Requires: PSA_WANT_ALG_JPAKE PSA_WANT_ALG_SHA_256 PSA_WANT_ECC_SECP_R1_256</para><para>This enables the following ciphersuites (if other requisites are enabled as well): MBEDTLS_TLS_ECJPAKE_WITH_AES_128_CCM_8 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="304" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ad40b43f5e34794970572576ef3984bae" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the PSK based ciphersuite modes in SSL / TLS.</para><para>This enables the following ciphersuites (if other requisites are enabled as well): MBEDTLS_TLS_PSK_WITH_AES_256_GCM_SHA384 MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA384 MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384 MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384 MBEDTLS_TLS_PSK_WITH_AES_128_GCM_SHA256 MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA256 MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256 MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="324" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a0c0ea1b637ed407466a3788ff622423b" prot="public" static="no">
+        <name>MBEDTLS_SSL_ALL_ALERT_MESSAGES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable sending of alert messages in case of encountered errors as per RFC. If you choose not to send the alert messages, Mbed TLS can still communicate with other servers, only debugging of failures is harder.</para><para>The advantage of not sending alert messages, is that no information is given about reasons for failures thus preventing adversaries of gaining intel.</para><para>Enable sending of all alert messages </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="338" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a8d8dcefd8e95b10d757d1fd92623b283" prot="public" static="no">
+        <name>MBEDTLS_SSL_ALPN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 7301 Application Layer Protocol Negotiation.</para><para>Comment this macro to disable support for ALPN. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="347" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a57548c9328e88a99a521f8b756ac64ed" prot="public" static="no">
+        <name>MBEDTLS_SSL_ASYNC_PRIVATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable asynchronous external private key operations in SSL. This allows you to configure an SSL connection to call an external cryptographic module to perform private key operations instead of performing the operation inside the library.</para><para>Requires: MBEDTLS_X509_CRT_PARSE_C </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="359" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6189ba7bc3cd246e23419284de3a1f75" prot="public" static="no">
+        <name>MBEDTLS_SSL_CACHE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable simple SSL cache implementation.</para><para>Module: library/ssl_cache.c Caller:</para><para>Requires: MBEDTLS_SSL_CACHE_C </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="371" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a38112435a93c8cf0e9c9e9c15cb3f516" prot="public" static="no">
+        <name>MBEDTLS_SSL_CLI_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the SSL/TLS client code.</para><para>Module: library/ssl*_client.c Caller:</para><para>Requires: MBEDTLS_SSL_TLS_C</para><para><simplesect kind="warning"><para>You must call <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before doing any TLS operations.</para></simplesect>
+This module is required for SSL/TLS client support. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="387" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a224be1876a20bb15c554a06c174101df" prot="public" static="no">
+        <name>MBEDTLS_SSL_CONTEXT_SERIALIZATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable serialization of the TLS context structures, through use of the functions <ref refid="ssl_8h_1abd110552b6306e31617e85d4dffe9e13" kindref="member">mbedtls_ssl_context_save()</ref> and <ref refid="ssl_8h_1a8351242a219e04475cf0f0f871954f12" kindref="member">mbedtls_ssl_context_load()</ref>.</para><para>This pair of functions allows one side of a connection to serialize the context associated with the connection, then free or re-use that context while the serialized state is persisted elsewhere, and finally deserialize that state to a live context for resuming read/write operations on the connection. From a protocol perspective, the state of the connection is unaffected, in particular this is entirely transparent to the peer.</para><para>Note: this is distinct from TLS session resumption, which is part of the protocol and fully visible by the peer. TLS session resumption enables establishing new connections associated to a saved session with shorter, lighter handshakes, while context serialization is a local optimization in handling a single, potentially long-lived connection.</para><para>Enabling these APIs makes some SSL structures larger, as 64 extra bytes are saved after the handshake to allow for more efficient serialization, so if you don&apos;t need this feature you&apos;ll save RAM by disabling it.</para><para>Requires: PSA_WANT_ALG_GCM or PSA_WANT_ALG_CCM or PSA_WANT_ALG_CHACHA20_POLY1305</para><para>Comment to disable the context serialization APIs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="416" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a5c1e2c54608878fd46c1d72880eed9d9" prot="public" static="no">
+        <name>MBEDTLS_SSL_COOKIE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable basic implementation of DTLS cookies for hello verification.</para><para>Module: library/ssl_cookie.c Caller: </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="426" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a7f7e00e92f146c9248dfcb2f4c9debfc" prot="public" static="no">
+        <name>MBEDTLS_SSL_DEBUG_ALL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the debug messages in SSL module for all issues. Debug messages have been disabled in some places to prevent timing attacks due to (unbalanced) debugging function calls.</para><para>If you need all error reporting you should enable this during debugging, but remove this for production servers that should log as well.</para><para>Uncomment this macro to report all debug messages on errors introducing a timing side-channel. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="442" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a3a74b34386b00896b50e2809d2b5bbfc" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_ANTI_REPLAY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for the anti-replay mechanism in DTLS.</para><para>Requires: MBEDTLS_SSL_TLS_C MBEDTLS_SSL_PROTO_DTLS</para><para><simplesect kind="warning"><para>Disabling this is often a security risk! See <ref refid="ssl_8h_1a46d919254eafef2ae642fb692c5e560a" kindref="member">mbedtls_ssl_conf_dtls_anti_replay()</ref> for details.</para></simplesect>
+Comment this to disable anti-replay in DTLS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="457" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae7ea521806ace1971c7050a332693c5a" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_CLIENT_PORT_REUSE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable server-side support for clients that reconnect from the same port.</para><para>Some clients unexpectedly close the connection and try to reconnect using the same source port. This needs special support from the server to handle the new connection securely, as described in section 4.2.8 of RFC 6347. This flag enables that support.</para><para>Requires: MBEDTLS_SSL_DTLS_HELLO_VERIFY</para><para>Comment this to disable support for clients reusing the source port. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="473" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1af5ed31b295ab56e45ceab4f17329c6ec" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_CONNECTION_ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for the DTLS Connection ID (CID) extension, which allows to identify DTLS connections across changes in the underlying transport. The CID functionality is described in RFC 9146.</para><para>Setting this option enables the SSL APIs <computeroutput><ref refid="ssl_8h_1afe94a33d384006339080fbd901cd806b" kindref="member">mbedtls_ssl_set_cid()</ref></computeroutput>, <ref refid="ssl_8h_1a7926365ef0fc9c9c0b173ae633502390" kindref="member">mbedtls_ssl_get_own_cid()</ref><computeroutput>,</computeroutput><ref refid="ssl_8h_1a7f19198119e077b70d014eac5252bf91" kindref="member">mbedtls_ssl_get_peer_cid()</ref><computeroutput>and </computeroutput><ref refid="ssl_8h_1a8b3cdd39e60718056f4db139ac85c365" kindref="member">mbedtls_ssl_conf_cid()</ref>`. See the corresponding documentation for more information.</para><para>The maximum lengths of outgoing and incoming CIDs can be configured through the options<itemizedlist>
+<listitem><para>MBEDTLS_SSL_CID_OUT_LEN_MAX</para></listitem><listitem><para>MBEDTLS_SSL_CID_IN_LEN_MAX.</para></listitem></itemizedlist>
+</para><para>Requires: MBEDTLS_SSL_PROTO_DTLS</para><para>Uncomment to enable the Connection ID extension. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="497" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ad60d011e349df1b96ef40ee48619699d" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_HELLO_VERIFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for HelloVerifyRequest on DTLS servers.</para><para>This feature is highly recommended to prevent DTLS servers being used as amplifiers in DoS attacks against other hosts. It should always be enabled unless you know for sure amplification cannot be a problem in the environment in which your server operates.</para><para><simplesect kind="warning"><para>Disabling this can be a security risk! (see above)</para></simplesect>
+Requires: MBEDTLS_SSL_PROTO_DTLS</para><para>Comment this to disable support for HelloVerifyRequest. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="515" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a0689743c1010e1cf9ca49053352b9cd1" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_SRTP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for negotiation of DTLS-SRTP (RFC 5764) through the use_srtp extension.</para><para><simplesect kind="note"><para>This feature provides the minimum functionality required to negotiate the use of DTLS-SRTP and to allow the derivation of the associated SRTP packet protection key material. In particular, the SRTP packet protection itself, as well as the demultiplexing of RTP and DTLS packets at the datagram layer (see Section 5 of RFC 5764), are not handled by this feature. Instead, after successful completion of a handshake negotiating the use of DTLS-SRTP, the extended key exporter API mbedtls_ssl_conf_export_keys_cb() should be used to implement the key exporter described in Section 4.2 of RFC 5764 and RFC 5705 (this is implemented in the SSL example programs). The resulting key should then be passed to an SRTP stack.</para></simplesect>
+Setting this option enables the runtime API <ref refid="ssl_8h_1a60708396eb994ce23136821a9943ed45" kindref="member">mbedtls_ssl_conf_dtls_srtp_protection_profiles()</ref> through which the supported DTLS-SRTP protection profiles can be configured. You must call this API at runtime if you wish to negotiate the use of DTLS-SRTP.</para><para>Requires: MBEDTLS_SSL_PROTO_DTLS</para><para>Uncomment this to enable support for use_srtp extension. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="546" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1acf992e5b82b4bc8fe7e666a58472c389" prot="public" static="no">
+        <name>MBEDTLS_SSL_EARLY_DATA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 8446 TLS 1.3 early data.</para><para>Requires: MBEDTLS_SSL_SESSION_TICKETS and either MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED or MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED</para><para>Comment this to disable support for early data. If MBEDTLS_SSL_PROTO_TLS1_3 is not enabled, this option does not have any effect on the build.</para><para><simplesect kind="note"><para>The maximum amount of early data can be set with MBEDTLS_SSL_MAX_EARLY_DATA_SIZE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="564" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a80e8e0fb5fea758fa451d1268201aded" prot="public" static="no">
+        <name>MBEDTLS_SSL_ENCRYPT_THEN_MAC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for Encrypt-then-MAC, RFC 7366.</para><para>This allows peers that both support it to use a more robust protection for ciphersuites using CBC, providing deep resistance against timing attacks on the padding or underlying cipher.</para><para>This only affects CBC ciphersuites, and is useless if none is defined.</para><para>Requires: MBEDTLS_SSL_PROTO_TLS1_2</para><para>Comment this macro to disable support for Encrypt-then-MAC </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="580" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a1fbd7ec4862c3563163614e0900e7f31" prot="public" static="no">
+        <name>MBEDTLS_SSL_EXTENDED_MASTER_SECRET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 7627: Session Hash and Extended Master Secret Extension.</para><para>This was introduced as &quot;the proper fix&quot; to the Triple Handshake family of attacks, but it is recommended to always use it (even if you disable renegotiation), since it actually fixes a more fundamental issue in the original SSL/TLS design, and has implications beyond Triple Handshake.</para><para>Requires: MBEDTLS_SSL_PROTO_TLS1_2</para><para>Comment this macro to disable support for Extended Master Secret. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="596" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae46bbbec93735b6d601991c5ff22b767" prot="public" static="no">
+        <name>MBEDTLS_SSL_KEEP_PEER_CERTIFICATE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This option controls the availability of the API <ref refid="ssl_8h_1aa7ab0ac8d8341063a0f815ee99337831" kindref="member">mbedtls_ssl_get_peer_cert()</ref> giving access to the peer&apos;s certificate after completion of the handshake.</para><para>Unless you need mbedtls_ssl_peer_cert() in your application, it is recommended to disable this option for reduced RAM usage.</para><para><simplesect kind="note"><para>If this option is disabled, <ref refid="ssl_8h_1aa7ab0ac8d8341063a0f815ee99337831" kindref="member">mbedtls_ssl_get_peer_cert()</ref> is still defined, but always returns <computeroutput>NULL</computeroutput>.</para><simplesectsep/><para>This option has no influence on the protection against the triple handshake attack. Even if it is disabled, Mbed TLS will still ensure that certificates do not change during renegotiation, for example by keeping a hash of the peer&apos;s certificate.</para><simplesectsep/><para>This option is required if MBEDTLS_SSL_PROTO_TLS1_3 is set.</para></simplesect>
+Comment this macro to disable storing the peer&apos;s certificate after the handshake. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="620" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a82777395be62d667a657dc1372d6b975" prot="public" static="no">
+        <name>MBEDTLS_SSL_MAX_FRAGMENT_LENGTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 6066 max_fragment_length extension in SSL.</para><para>Comment this macro to disable support for the max_fragment_length extension </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="629" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ad7a9f2592e4e3475274a18b561e086ce" prot="public" static="no">
+        <name>MBEDTLS_SSL_PROTO_DTLS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for DTLS (all available versions).</para><para>Enable this and MBEDTLS_SSL_PROTO_TLS1_2 to enable DTLS 1.2.</para><para>Requires: MBEDTLS_SSL_PROTO_TLS1_2</para><para>Comment this macro to disable support for DTLS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="642" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a8a7aca10569198cf8e8dbff1c40677c6" prot="public" static="no">
+        <name>MBEDTLS_SSL_PROTO_TLS1_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for TLS 1.2 (and DTLS 1.2 if DTLS is enabled).</para><para>Requires: PSA_WANT_ALG_SHA_256 or PSA_WANT_ALG_SHA_384</para><para>Comment this macro to disable support for TLS 1.2 / DTLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="653" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a506f9100cba4cfd5d8caa306fbd6d78b" prot="public" static="no">
+        <name>MBEDTLS_SSL_PROTO_TLS1_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for TLS 1.3.</para><para><simplesect kind="note"><para>See docs/architecture/tls13-support.md for a description of the TLS 1.3 support that this option enables.</para></simplesect>
+Requires: MBEDTLS_SSL_KEEP_PEER_CERTIFICATE Requires: MBEDTLS_PSA_CRYPTO_C</para><para>Uncomment this macro to enable the support for TLS 1.3. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="668" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a3bf7a84ce0721199c17a5d2b8877c83a" prot="public" static="no">
+        <name>MBEDTLS_SSL_RECORD_SIZE_LIMIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 8449 record_size_limit extension in SSL (TLS 1.3 only).</para><para>Requires: MBEDTLS_SSL_PROTO_TLS1_3</para><para>Uncomment this macro to enable support for the record_size_limit extension </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="679" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a51e0899f032e62ec8d157fcd228064cb" prot="public" static="no">
+        <name>MBEDTLS_SSL_KEYING_MATERIAL_EXPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is enabled, the client and server can extract additional shared symmetric keys after an SSL handshake using the function <ref refid="ssl_8h_1a34830580a0f0f92f025750cb9709df47" kindref="member">mbedtls_ssl_export_keying_material()</ref>.</para><para>The process for deriving the keys is specified in RFC 5705 for TLS 1.2 and in RFC 8446, Section 7.5, for TLS 1.3.</para><para>Comment this macro to disable <ref refid="ssl_8h_1a34830580a0f0f92f025750cb9709df47" kindref="member">mbedtls_ssl_export_keying_material()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="693" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a313f12fd8fd65b5c831a912808133140" prot="public" static="no">
+        <name>MBEDTLS_SSL_RENEGOTIATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for TLS renegotiation.</para><para>The two main uses of renegotiation are (1) refresh keys on long-lived connections and (2) client authentication after the initial handshake. If you don&apos;t need renegotiation, it&apos;s probably better to disable it, since it has been associated with security issues in the past and is easy to misuse/misunderstand.</para><para>Requires: MBEDTLS_SSL_PROTO_TLS1_2</para><para>Comment this to disable support for renegotiation.</para><para><simplesect kind="note"><para>Even if this option is disabled, both client and server are aware of the Renegotiation Indication Extension (RFC 5746) used to prevent the SSL renegotiation attack (see RFC 5746 Sect. 1). (See <computeroutput>mbedtls_ssl_conf_legacy_renegotiation</computeroutput> for the configuration of this extension). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="717" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="717" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ab69f58bd04df63c09ffaa435baa47bf7" prot="public" static="no">
+        <name>MBEDTLS_SSL_SERVER_NAME_INDICATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 6066 server name indication (SNI) in SSL.</para><para>Requires: MBEDTLS_X509_CRT_PARSE_C</para><para>Comment this macro to disable support for server name indication in SSL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="728" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="728" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6751e31291b388713f5b611a9694d4e7" prot="public" static="no">
+        <name>MBEDTLS_SSL_SESSION_TICKETS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable support for RFC 5077 session tickets in SSL. Client-side, provides full support for session tickets (maintenance of a session store remains the responsibility of the application, though). Server-side, you also need to provide callbacks for writing and parsing tickets, including authenticated encryption and key management. Example callbacks are provided by MBEDTLS_SSL_TICKET_C.</para><para>Comment this macro to disable support for SSL session tickets </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="742" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="742" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a311e2a994e4e5f25b550e170ca9605e0" prot="public" static="no">
+        <name>MBEDTLS_SSL_SRV_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the SSL/TLS server code.</para><para>Module: library/ssl*_server.c Caller:</para><para>Requires: MBEDTLS_SSL_TLS_C</para><para><simplesect kind="warning"><para>You must call <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before doing any TLS operations.</para></simplesect>
+This module is required for SSL/TLS server support. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="758" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="758" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a0ce8705f94c4fa4b35e818ee72d3cc76" prot="public" static="no">
+        <name>MBEDTLS_SSL_TICKET_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable an implementation of TLS server-side callbacks for session tickets.</para><para>Module: library/ssl_ticket.c Caller:</para><para>Requires: PSA_WANT_ALG_GCM or PSA_WANT_ALG_CCM or PSA_WANT_ALG_CHACHA20_POLY1305 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="770" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a4eaec932ebcc774c4c1ab0009883ac17" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_COMPATIBILITY_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable TLS 1.3 middlebox compatibility mode.</para><para>As specified in Section D.4 of RFC 8446, TLS 1.3 offers a compatibility mode to make a TLS 1.3 connection more likely to pass through middle boxes expecting TLS 1.2 traffic.</para><para>Turning on the compatibility mode comes at the cost of a few added bytes on the wire, but it doesn&apos;t affect compatibility with TLS 1.3 implementations that don&apos;t use it. Therefore, unless transmission bandwidth is critical and you know that middlebox compatibility issues won&apos;t occur, it is therefore recommended to set this option.</para><para>Comment to disable compatibility mode for TLS 1.3. If MBEDTLS_SSL_PROTO_TLS1_3 is not enabled, this option does not have any effect on the build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="792" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="792" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae617d4fcb6b7591d37f4d669e4b633dc" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable TLS 1.3 ephemeral key exchange mode.</para><para>Requires: PSA_WANT_ALG_ECDH or PSA_WANT_ALG_FFDH MBEDTLS_X509_CRT_PARSE_C and at least one of: PSA_WANT_ALG_ECDSA PSA_WANT_ALG_RSA_PSS</para><para>Comment to disable support for the ephemeral key exchange mode in TLS 1.3. If MBEDTLS_SSL_PROTO_TLS1_3 is not enabled, this option does not have any effect on the build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="810" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="810" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a5190a81e733ec8d92933ddd5860403bf" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable TLS 1.3 PSK key exchange mode.</para><para>Comment to disable support for the PSK key exchange mode in TLS 1.3. If MBEDTLS_SSL_PROTO_TLS1_3 is not enabled, this option does not have any effect on the build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="822" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="822" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a48e6f0ce6a0f8e2b2a63868bfcd3a4bd" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable TLS 1.3 PSK ephemeral key exchange mode.</para><para>Requires: PSA_WANT_ALG_ECDH or PSA_WANT_ALG_FFDH</para><para>Comment to disable support for the PSK ephemeral key exchange mode in TLS 1.3. If MBEDTLS_SSL_PROTO_TLS1_3 is not enabled, this option does not have any effect on the build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="836" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a85f2821433dbf22916e865a49f2652df" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the generic SSL/TLS code.</para><para>Module: library/ssl_tls.c Caller: library/ssl*_client.c library/ssl*_server.c</para><para>Requires: PSA_WANT_ALG_SHA_256 or PSA_WANT_ALG_SHA_384 and at least one of the MBEDTLS_SSL_PROTO_XXX defines</para><para>This module is required for SSL/TLS. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="852" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="852" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a9c096cdfc72f710061b5f4d8f5edd88b" prot="public" static="no">
+        <name>MBEDTLS_SSL_VARIABLE_BUFFER_LENGTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When this option is enabled, the SSL buffer will be resized automatically based on the negotiated maximum fragment length in each direction.</para><para>Requires: MBEDTLS_SSL_MAX_FRAGMENT_LENGTH </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="862" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="862" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a084cb30b175a3d44b33e625cd56aab6e" prot="public" static="no">
+        <name>MBEDTLS_PSK_MAX_LEN</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Max size of TLS pre-shared keys, in bytes (default 256 or 384 bits) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="864" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="864" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a03256bf3d0f0c370d6984b441b86567e" prot="public" static="no">
+        <name>MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum entries in cache </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="865" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="865" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a02b027cfb82a0436a19bfeada16cb8db" prot="public" static="no">
+        <name>MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT</name>
+        <initializer>86400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 day </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="866" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a326a31352ca97afdc7a94bac39577d2e" prot="public" static="no">
+        <name>MBEDTLS_SSL_CID_IN_LEN_MAX</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum length of CIDs used for incoming DTLS messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="873" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="873" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a17df67385a32a5648a5c3d85777cdc8e" prot="public" static="no">
+        <name>MBEDTLS_SSL_CID_OUT_LEN_MAX</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum length of CIDs used for outgoing DTLS messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="880" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6c3638ed1c6c9a77ca62b35b8fa82597" prot="public" static="no">
+        <name>MBEDTLS_SSL_CID_TLS1_3_PADDING_GRANULARITY</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This option controls the use of record plaintext padding in TLS 1.3 and when using the Connection ID extension in DTLS 1.2.</para><para>The padding will always be chosen so that the length of the padded plaintext is a multiple of the value of this option.</para><para>Note: A value of <computeroutput>1</computeroutput> means that no padding will be used for outgoing records.</para><para>Note: On systems lacking division instructions, a power of two should be preferred. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="896" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="896" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a3ab9b922c4f1ba4511d7c4f5ef2b2e69" prot="public" static="no">
+        <name>MBEDTLS_SSL_CIPHERSUITES</name>
+        <initializer><ref refid="ssl__ciphersuites_8h_1a623797e4c376e49eee56ea5529b11c02" kindref="member">MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</ref>,<ref refid="ssl__ciphersuites_8h_1a2cedef0e0bfae1a154084add0280e975" kindref="member">MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Complete list of ciphersuites to use, in order of preference.</para><para><simplesect kind="warning"><para>No dependency checking is done on that field! This option can only be used to restrict the set of available ciphersuites. It is your responsibility to make sure the needed modules are active.</para></simplesect>
+Use this to save a few hundred bytes of ROM (default ordering of all available ciphersuites) and a few to a few hundred bytes of RAM.</para><para>The value below is only an example, not the default. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="910" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae8066a424d7e37be9243c96dac2fc18a" prot="public" static="no">
+        <name>MBEDTLS_SSL_COOKIE_TIMEOUT</name>
+        <initializer>60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default expiration delay of DTLS cookies, in seconds if HAVE_TIME, or in number of cookies issued </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="912" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="912" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a2eee1c4027ef23dfcd764101c9e95edf" prot="public" static="no">
+        <name>MBEDTLS_SSL_DTLS_MAX_BUFFERING</name>
+        <initializer>32768</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of heap-allocated bytes for the purpose of DTLS handshake message reassembly and future message buffering.</para><para>This should be at least 9/8 * MBEDTLS_SSL_IN_CONTENT_LEN to account for a reassembled handshake message of maximum size, together with its reassembly bitmap.</para><para>A value of 2 * MBEDTLS_SSL_IN_CONTENT_LEN (32768 by default) should be sufficient for all practical situations as it allows to reassembly a large handshake message (such as a certificate) while buffering multiple smaller handshake messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="929" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="929" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1aabb3c84cb377d3d0291225ad6aab6ade" prot="public" static="no">
+        <name>MBEDTLS_SSL_IN_CONTENT_LEN</name>
+        <initializer>16384</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length (in bytes) of incoming plaintext fragments.</para><para>This determines the size of the incoming TLS I/O buffer in such a way that it is capable of holding the specified amount of plaintext data, regardless of the protection mechanism used.</para><para><simplesect kind="note"><para>When using a value less than the default of 16KB on the client, it is recommended to use the Maximum Fragment Length (MFL) extension to inform the server about this limitation. On the server, there is no supported, standardized way of informing the client about restriction on the maximum size of incoming messages, and unless the limitation has been communicated by other means, it is recommended to only change the outgoing buffer size <ref refid="mbedtls__config_8h_1ae6d6fb50d2997e49b202fa9fb4356158" kindref="member">MBEDTLS_SSL_OUT_CONTENT_LEN</ref> while keeping the default value of 16KB for the incoming buffer.</para></simplesect>
+Uncomment to set the maximum plaintext size of the incoming I/O buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="950" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="950" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a61da138676b0f01dac6e045949ab4387" prot="public" static="no">
+        <name>MBEDTLS_SSL_MAX_EARLY_DATA_SIZE</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default maximum amount of 0-RTT data. See the documentation of <computeroutput><ref refid="ssl_8h_1ab89e473094c4ee0437a70884d8bbee2d" kindref="member">mbedtls_ssl_conf_max_early_data_size()</ref></computeroutput> for more information.</para><para>It must be positive and smaller than UINT32_MAX.</para><para>If MBEDTLS_SSL_EARLY_DATA is not defined, this default value does not have any impact on the build. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="963" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="963" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ae6d6fb50d2997e49b202fa9fb4356158" prot="public" static="no">
+        <name>MBEDTLS_SSL_OUT_CONTENT_LEN</name>
+        <initializer>16384</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length (in bytes) of outgoing plaintext fragments.</para><para>This determines the size of the outgoing TLS I/O buffer in such a way that it is capable of holding the specified amount of plaintext data, regardless of the protection mechanism used.</para><para>It is possible to save RAM by setting a smaller outward buffer, while keeping the default inward 16384 byte buffer to conform to the TLS specification.</para><para>The minimum required outward buffer size is determined by the handshake protocol&apos;s usage. Handshaking will fail if the outward buffer is too small. The specific size requirement depends on the configured ciphers and any certificate data which is sent during the handshake.</para><para>Uncomment to set the maximum plaintext size of the outgoing I/O buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="983" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="983" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a9e73436ef33056d4f74db72d484dea6e" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_DEFAULT_NEW_SESSION_TICKETS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default number of NewSessionTicket messages to be sent by a TLS 1.3 server after handshake completion. This is not used in TLS 1.2 and relevant only if the MBEDTLS_SSL_SESSION_TICKETS option is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="993" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="993" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a809f2bc417bb651aec1218f4448ee174" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_TICKET_AGE_TOLERANCE</name>
+        <initializer>6000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum allowed ticket age difference in milliseconds tolerated between server and client. Default value is 6000. This is not used in TLS 1.2.</para><para><itemizedlist>
+<listitem><para>The client ticket age is the time difference between the time when the client proposes to the server to use the ticket and the time the client received the ticket from the server.</para></listitem><listitem><para>The server ticket age is the time difference between the time when the server receives a proposition from the client to use the ticket and the time when the ticket was created by the server.</para></listitem></itemizedlist>
+</para><para>The ages might be different due to the client and server clocks not running at the same pace. The typical accuracy of an RTC crystal is ±100 to ±20 parts per million (360 to 72 milliseconds per hour). Default tolerance window is 6s, thus in the worst case clients and servers must sync up their system time every 6000/360/2~=8 hours.</para><para>See section 8.3 of the TLS 1.3 specification(RFC 8446) for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1016" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a7fa88207224d12b4b8819468dc573a68" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_TICKET_NONCE_LENGTH</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size in bytes of a ticket nonce. This is not used in TLS 1.2.</para><para>This must be less than 256. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1025" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1025" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>SECTION: X.509 feature selection</header>
+      <description><para>This section sets Certificate related options. </para></description>
+      <memberdef kind="define" id="mbedtls__config_8h_1a13e9242b1f331966929aa4a6f689de3c" prot="public" static="no">
+        <name>MBEDTLS_PKCS7_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable PKCS #7 core for using PKCS #7-formatted signatures. RFC Link - <ulink url="https://tools.ietf.org/html/rfc2315">https://tools.ietf.org/html/rfc2315</ulink></para><para>Module: library/pkcs7.c</para><para>Requires: MBEDTLS_ASN1_PARSE_C, MBEDTLS_PK_PARSE_C, MBEDTLS_X509_CRT_PARSE_C MBEDTLS_X509_CRL_PARSE_C, MBEDTLS_MD_C</para><para>This module is required for the PKCS #7 parsing modules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1050" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1050" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ada343519ead4d60568eeda89b8b2e38d" prot="public" static="no">
+        <name>MBEDTLS_X509_CREATE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable X.509 core for creating certificates.</para><para>Module: library/x509_create.c</para><para>Requires: MBEDTLS_ASN1_WRITE_C, MBEDTLS_PK_PARSE_C</para><para><simplesect kind="warning"><para>You must call <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before doing any X.509 operation.</para></simplesect>
+This module is the basis for creating X.509 certificates and CSRs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1065" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ad5a3f68b02887cc6df09d6eb1730b697" prot="public" static="no">
+        <name>MBEDTLS_X509_CRL_PARSE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable X.509 CRL parsing.</para><para>Module: library/x509_crl.c Caller: library/x509_crt.c</para><para>Requires: MBEDTLS_X509_USE_C</para><para>This module is required for X.509 CRL parsing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1079" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1079" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a813d4cf0b3fc03db0f9dbec52ba04b40" prot="public" static="no">
+        <name>MBEDTLS_X509_CRT_PARSE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable X.509 certificate parsing.</para><para>Module: library/x509_crt.c Caller: library/ssl_tls.c library/ssl*_client.c library/ssl*_server.c</para><para>Requires: MBEDTLS_X509_USE_C</para><para>This module is required for X.509 certificate parsing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1095" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1095" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6a0558894f9b352d84cdcbf284bc395b" prot="public" static="no">
+        <name>MBEDTLS_X509_CRT_WRITE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable creating X.509 certificates.</para><para>Module: library/x509_crt_write.c</para><para>Requires: MBEDTLS_X509_CREATE_C</para><para>This module is required for X.509 certificate creation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1108" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a9c71c72a85d3974200c96795c991d14e" prot="public" static="no">
+        <name>MBEDTLS_X509_CSR_PARSE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable X.509 Certificate Signing Request (CSR) parsing.</para><para>Module: library/x509_csr.c Caller: library/x509_crt_write.c</para><para>Requires: MBEDTLS_X509_USE_C</para><para>This module is used for reading X.509 certificate request. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1122" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a2aabd723030209c1eba787c33143f05a" prot="public" static="no">
+        <name>MBEDTLS_X509_CSR_WRITE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable creating X.509 Certificate Signing Requests (CSR).</para><para>Module: library/x509_csr_write.c</para><para>Requires: MBEDTLS_X509_CREATE_C</para><para>This module is required for X.509 certificate request writing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1135" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a2945e54b8f03fa13cd72dc0a362a2880" prot="public" static="no">
+        <name>MBEDTLS_X509_REMOVE_INFO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable mbedtls_x509_*_info() and related APIs.</para><para>Uncomment to omit mbedtls_x509_*_info(), as well as mbedtls_debug_print_crt() and other functions/constants only used by these functions, thus reducing the code footprint by several KB. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1146" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a0510bbca604b868f3150a38f65623e8b" prot="public" static="no">
+        <name>MBEDTLS_X509_RSASSA_PSS_SUPPORT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable parsing and verification of X.509 certificates, CRLs and CSRS signed with RSASSA-PSS (aka PKCS#1 v2.1).</para><para>Requires: PSA_WANT_ALG_RSA_PSS</para><para>Comment this macro to disallow using RSASSA-PSS in certificates. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1158" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a6d767be4cc0658c87771cc22418138bd" prot="public" static="no">
+        <name>MBEDTLS_X509_TRUSTED_CERTIFICATE_CALLBACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If set, this enables the X.509 API <computeroutput><ref refid="group__x509__module_1ga169e418a7c1ecf4d2dcc896cf24049a7" kindref="member">mbedtls_x509_crt_verify_with_ca_cb()</ref></computeroutput> and the SSL API <computeroutput><ref refid="ssl_8h_1aaff29509e19ba559c9228e4ee8a49e32" kindref="member">mbedtls_ssl_conf_ca_cb()</ref></computeroutput> which allow users to configure the set of trusted certificates through a callback instead of a linked list.</para><para>This is useful for example in environments where a large number of trusted certificates is present and storing them in a linked list isn&apos;t efficient enough, or when the set of trusted certificates changes frequently.</para><para>See the documentation of <computeroutput><ref refid="group__x509__module_1ga169e418a7c1ecf4d2dcc896cf24049a7" kindref="member">mbedtls_x509_crt_verify_with_ca_cb()</ref></computeroutput> and <computeroutput><ref refid="ssl_8h_1aaff29509e19ba559c9228e4ee8a49e32" kindref="member">mbedtls_ssl_conf_ca_cb()</ref></computeroutput> for more information.</para><para>Requires: MBEDTLS_X509_CRT_PARSE_C</para><para>Uncomment to enable trusted certificate callbacks. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1179" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ad377c385a02385defbd866a5b190bba8" prot="public" static="no">
+        <name>MBEDTLS_X509_USE_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable X.509 core for using certificates.</para><para>Module: library/x509.c Caller: library/x509_crl.c library/x509_crt.c library/x509_csr.c</para><para>Requires: MBEDTLS_ASN1_PARSE_C, MBEDTLS_PK_PARSE_C</para><para><simplesect kind="warning"><para>You must call <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before doing any X.509 operation.</para></simplesect>
+This module is required for the X.509 parsing modules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1197" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1a4ebc833300be4f784ac13ff0a38085ce" prot="public" static="no">
+        <name>MBEDTLS_X509_MAX_FILE_PATH_LEN</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum length of a path/filename string in bytes including the null terminator character (&apos;\0&apos;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1199" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mbedtls__config_8h_1ab98caf7dfede54b5c576b5a27a5c6a6a" prot="public" static="no">
+        <name>MBEDTLS_X509_MAX_INTERMEDIATE_CA</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum number of intermediate CAs in a verification chain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="1200" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="1200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mbedtls__config_8h_1ac258b3e0cfe302843a02a52f911cb410" prot="public" static="no">
+        <name>MBEDTLS_CONFIG_VERSION</name>
+        <initializer>0x04000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an optional version symbol that enables compatibility handling of config files.</para><para>It is equal to the <ref refid="include_2mbedtls_2build__info_8h_1adb4f54ebb33fd1a25e2c4d4480cf4936" kindref="member">MBEDTLS_VERSION_NUMBER</ref> of the Mbed TLS version that introduced the config format we want to be compatible with. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" line="22" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Configuration options (set of defines) </para>    </briefdescription>
+    <detaileddescription>
+<para>This set of compile-time options may be used to enable or disable features selectively, and reduce the global memory footprint. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="mbedtls__config_8h_1ac258b3e0cfe302843a02a52f911cb410" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CONFIG_VERSION<sp/>0x04000000</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="48" refid="mbedtls__config_8h_1ae73dbeb395510070a756ed6689459b30" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_C</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="61" refid="mbedtls__config_8h_1a455d88c0fd36cd530b0cad47892eb91f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TIMING_ALT</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="85" refid="mbedtls__config_8h_1a207ef8366f5c438b28881e473b3ca87f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TIMING_C</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="107" refid="mbedtls__config_8h_1a8d615f5d4143f300c13c9f6fec1fb17a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_C</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="122" refid="mbedtls__config_8h_1a6382cfe1b528f3382248b1d746418865" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_STRERROR_DUMMY</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="133" refid="mbedtls__config_8h_1a1d96e634d319f743786c921fb3962497" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_VERSION_C</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="146" refid="mbedtls__config_8h_1a9695236b5192ac4a15afe1681adbb990" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_VERSION_FEATURES</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="165" refid="mbedtls__config_8h_1a92f48bae5eec24daf7a930d34d77b78d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CONFIG_FILE<sp/>&quot;mbedtls/mbedtls_config.h&quot;</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="182" refid="mbedtls__config_8h_1a46d51403d55f630bdccace1da57a0f31" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_USER_CONFIG_FILE<sp/>&quot;/dev/null&quot;</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="204" refid="mbedtls__config_8h_1a56b885bda569ed6515c6fffca6f5bd27" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_NULL_CIPHERSUITES</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="219" refid="mbedtls__config_8h_1ac64f663ce793cda3cc14e5a300e30a65" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_DEBUG_C</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="243" refid="mbedtls__config_8h_1a17ad52b9c597d50d6bab1557e96dd2e2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED</highlight></codeline>
+<codeline lineno="244"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="261" refid="mbedtls__config_8h_1af3f5e018957fb1375a4d305efe8fd67a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="285" refid="mbedtls__config_8h_1a323959c9c447de38e9db7cd7ed733e75" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED</highlight></codeline>
+<codeline lineno="286"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="304" refid="mbedtls__config_8h_1ac9580ac865324c142232c3e0bc654e14" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="324" refid="mbedtls__config_8h_1ad40b43f5e34794970572576ef3984bae" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="325"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="338" refid="mbedtls__config_8h_1a0c0ea1b637ed407466a3788ff622423b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ALL_ALERT_MESSAGES</highlight></codeline>
+<codeline lineno="339"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="347" refid="mbedtls__config_8h_1a8d8dcefd8e95b10d757d1fd92623b283" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ALPN</highlight></codeline>
+<codeline lineno="348"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="359" refid="mbedtls__config_8h_1a57548c9328e88a99a521f8b756ac64ed" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ASYNC_PRIVATE</highlight></codeline>
+<codeline lineno="360"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="371" refid="mbedtls__config_8h_1a6189ba7bc3cd246e23419284de3a1f75" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_C</highlight></codeline>
+<codeline lineno="372"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="387" refid="mbedtls__config_8h_1a38112435a93c8cf0e9c9e9c15cb3f516" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CLI_C</highlight></codeline>
+<codeline lineno="388"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="416" refid="mbedtls__config_8h_1a224be1876a20bb15c554a06c174101df" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CONTEXT_SERIALIZATION</highlight></codeline>
+<codeline lineno="417"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="426" refid="mbedtls__config_8h_1a5c1e2c54608878fd46c1d72880eed9d9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_COOKIE_C</highlight></codeline>
+<codeline lineno="427"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="442" refid="mbedtls__config_8h_1a7f7e00e92f146c9248dfcb2f4c9debfc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DEBUG_ALL</highlight></codeline>
+<codeline lineno="443"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="457" refid="mbedtls__config_8h_1a3a74b34386b00896b50e2809d2b5bbfc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_ANTI_REPLAY</highlight></codeline>
+<codeline lineno="458"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="473" refid="mbedtls__config_8h_1ae7ea521806ace1971c7050a332693c5a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_CLIENT_PORT_REUSE</highlight></codeline>
+<codeline lineno="474"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="497" refid="mbedtls__config_8h_1af5ed31b295ab56e45ceab4f17329c6ec" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_CONNECTION_ID</highlight></codeline>
+<codeline lineno="498"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="515" refid="mbedtls__config_8h_1ad60d011e349df1b96ef40ee48619699d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_HELLO_VERIFY</highlight></codeline>
+<codeline lineno="516"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="546" refid="mbedtls__config_8h_1a0689743c1010e1cf9ca49053352b9cd1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_SRTP</highlight></codeline>
+<codeline lineno="547"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="564" refid="mbedtls__config_8h_1acf992e5b82b4bc8fe7e666a58472c389" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_EARLY_DATA</highlight></codeline>
+<codeline lineno="565"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="580" refid="mbedtls__config_8h_1a80e8e0fb5fea758fa451d1268201aded" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_ENCRYPT_THEN_MAC</highlight></codeline>
+<codeline lineno="581"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="596" refid="mbedtls__config_8h_1a1fbd7ec4862c3563163614e0900e7f31" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_EXTENDED_MASTER_SECRET</highlight></codeline>
+<codeline lineno="597"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="620" refid="mbedtls__config_8h_1ae46bbbec93735b6d601991c5ff22b767" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_KEEP_PEER_CERTIFICATE</highlight></codeline>
+<codeline lineno="621"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="629" refid="mbedtls__config_8h_1a82777395be62d667a657dc1372d6b975" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_MAX_FRAGMENT_LENGTH</highlight></codeline>
+<codeline lineno="630"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="642" refid="mbedtls__config_8h_1ad7a9f2592e4e3475274a18b561e086ce" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_DTLS</highlight></codeline>
+<codeline lineno="643"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="653" refid="mbedtls__config_8h_1a8a7aca10569198cf8e8dbff1c40677c6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_TLS1_2</highlight></codeline>
+<codeline lineno="654"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="668" refid="mbedtls__config_8h_1a506f9100cba4cfd5d8caa306fbd6d78b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_PROTO_TLS1_3</highlight></codeline>
+<codeline lineno="669"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="679" refid="mbedtls__config_8h_1a3bf7a84ce0721199c17a5d2b8877c83a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_RECORD_SIZE_LIMIT</highlight></codeline>
+<codeline lineno="680"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="693" refid="mbedtls__config_8h_1a51e0899f032e62ec8d157fcd228064cb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_KEYING_MATERIAL_EXPORT</highlight></codeline>
+<codeline lineno="694"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="717" refid="mbedtls__config_8h_1a313f12fd8fd65b5c831a912808133140" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_RENEGOTIATION</highlight></codeline>
+<codeline lineno="718"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="728" refid="mbedtls__config_8h_1ab69f58bd04df63c09ffaa435baa47bf7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SERVER_NAME_INDICATION</highlight></codeline>
+<codeline lineno="729"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="742" refid="mbedtls__config_8h_1a6751e31291b388713f5b611a9694d4e7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SESSION_TICKETS</highlight></codeline>
+<codeline lineno="743"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="758" refid="mbedtls__config_8h_1a311e2a994e4e5f25b550e170ca9605e0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_SRV_C</highlight></codeline>
+<codeline lineno="759"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="770" refid="mbedtls__config_8h_1a0ce8705f94c4fa4b35e818ee72d3cc76" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TICKET_C</highlight></codeline>
+<codeline lineno="771"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="792" refid="mbedtls__config_8h_1a4eaec932ebcc774c4c1ab0009883ac17" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_COMPATIBILITY_MODE</highlight></codeline>
+<codeline lineno="793"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="810" refid="mbedtls__config_8h_1ae617d4fcb6b7591d37f4d669e4b633dc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED</highlight></codeline>
+<codeline lineno="811"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="822" refid="mbedtls__config_8h_1a5190a81e733ec8d92933ddd5860403bf" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="823"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="836" refid="mbedtls__config_8h_1a48e6f0ce6a0f8e2b2a63868bfcd3a4bd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED</highlight></codeline>
+<codeline lineno="837"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="852" refid="mbedtls__config_8h_1a85f2821433dbf22916e865a49f2652df" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS_C</highlight></codeline>
+<codeline lineno="853"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="862" refid="mbedtls__config_8h_1a9c096cdfc72f710061b5f4d8f5edd88b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_VARIABLE_BUFFER_LENGTH</highlight></codeline>
+<codeline lineno="863"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="864" refid="mbedtls__config_8h_1a084cb30b175a3d44b33e625cd56aab6e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSK_MAX_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32<sp/></highlight></codeline>
+<codeline lineno="865" refid="mbedtls__config_8h_1a03256bf3d0f0c370d6984b441b86567e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/>50<sp/></highlight></codeline>
+<codeline lineno="866" refid="mbedtls__config_8h_1a02b027cfb82a0436a19bfeada16cb8db" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>86400<sp/></highlight></codeline>
+<codeline lineno="873" refid="mbedtls__config_8h_1a326a31352ca97afdc7a94bac39577d2e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CID_IN_LEN_MAX<sp/>32</highlight></codeline>
+<codeline lineno="874"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="880" refid="mbedtls__config_8h_1a17df67385a32a5648a5c3d85777cdc8e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CID_OUT_LEN_MAX<sp/>32</highlight></codeline>
+<codeline lineno="881"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="896" refid="mbedtls__config_8h_1a6c3638ed1c6c9a77ca62b35b8fa82597" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CID_TLS1_3_PADDING_GRANULARITY<sp/>16</highlight></codeline>
+<codeline lineno="897"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="910" refid="mbedtls__config_8h_1a3ab9b922c4f1ba4511d7c4f5ef2b2e69" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CIPHERSUITES<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</highlight></codeline>
+<codeline lineno="911"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="912" refid="mbedtls__config_8h_1ae8066a424d7e37be9243c96dac2fc18a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_COOKIE_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>60<sp/></highlight></codeline>
+<codeline lineno="929" refid="mbedtls__config_8h_1a2eee1c4027ef23dfcd764101c9e95edf" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_DTLS_MAX_BUFFERING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>32768</highlight></codeline>
+<codeline lineno="930"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="950" refid="mbedtls__config_8h_1aabb3c84cb377d3d0291225ad6aab6ade" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_IN_CONTENT_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16384</highlight></codeline>
+<codeline lineno="951"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="963" refid="mbedtls__config_8h_1a61da138676b0f01dac6e045949ab4387" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_MAX_EARLY_DATA_SIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1024</highlight></codeline>
+<codeline lineno="964"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="983" refid="mbedtls__config_8h_1ae6d6fb50d2997e49b202fa9fb4356158" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_OUT_CONTENT_LEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16384</highlight></codeline>
+<codeline lineno="984"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="993" refid="mbedtls__config_8h_1a9e73436ef33056d4f74db72d484dea6e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_DEFAULT_NEW_SESSION_TICKETS<sp/>1</highlight></codeline>
+<codeline lineno="994"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1016" refid="mbedtls__config_8h_1a809f2bc417bb651aec1218f4448ee174" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_TICKET_AGE_TOLERANCE<sp/>6000</highlight></codeline>
+<codeline lineno="1017"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1025" refid="mbedtls__config_8h_1a7fa88207224d12b4b8819468dc573a68" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_TICKET_NONCE_LENGTH<sp/>32</highlight></codeline>
+<codeline lineno="1026"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1050" refid="mbedtls__config_8h_1a13e9242b1f331966929aa4a6f689de3c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS7_C</highlight></codeline>
+<codeline lineno="1051"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1065" refid="mbedtls__config_8h_1ada343519ead4d60568eeda89b8b2e38d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CREATE_C</highlight></codeline>
+<codeline lineno="1066"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1079" refid="mbedtls__config_8h_1ad5a3f68b02887cc6df09d6eb1730b697" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRL_PARSE_C</highlight></codeline>
+<codeline lineno="1080"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1095" refid="mbedtls__config_8h_1a813d4cf0b3fc03db0f9dbec52ba04b40" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRT_PARSE_C</highlight></codeline>
+<codeline lineno="1096"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1108" refid="mbedtls__config_8h_1a6a0558894f9b352d84cdcbf284bc395b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CRT_WRITE_C</highlight></codeline>
+<codeline lineno="1109"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1122" refid="mbedtls__config_8h_1a9c71c72a85d3974200c96795c991d14e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CSR_PARSE_C</highlight></codeline>
+<codeline lineno="1123"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1135" refid="mbedtls__config_8h_1a2aabd723030209c1eba787c33143f05a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CSR_WRITE_C</highlight></codeline>
+<codeline lineno="1136"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1146" refid="mbedtls__config_8h_1a2945e54b8f03fa13cd72dc0a362a2880" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_REMOVE_INFO</highlight></codeline>
+<codeline lineno="1147"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1158" refid="mbedtls__config_8h_1a0510bbca604b868f3150a38f65623e8b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_RSASSA_PSS_SUPPORT</highlight></codeline>
+<codeline lineno="1159"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1179" refid="mbedtls__config_8h_1a6d767be4cc0658c87771cc22418138bd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_TRUSTED_CERTIFICATE_CALLBACK</highlight></codeline>
+<codeline lineno="1180"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="1197" refid="mbedtls__config_8h_1ad377c385a02385defbd866a5b190bba8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_USE_C</highlight></codeline>
+<codeline lineno="1198"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1199" refid="mbedtls__config_8h_1a4ebc833300be4f784ac13ff0a38085ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_MAX_FILE_PATH_LEN<sp/><sp/><sp/><sp/><sp/>512<sp/></highlight></codeline>
+<codeline lineno="1200" refid="mbedtls__config_8h_1ab98caf7dfede54b5c576b5a27a5c6a6a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_MAX_INTERMEDIATE_CA<sp/><sp/><sp/>8<sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/mbedtls_config.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__pkcs7__signer__info" kind="struct" prot="public">
+    <compoundname>mbedtls_pkcs7_signer_info</compoundname>
+    <includes refid="pkcs7_8h" local="no">pkcs7.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1a35cf176ebb267c2f8b2ef4b16843e231" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_pkcs7_signer_info::private_version</definition>
+        <argsstring></argsstring>
+        <name>private_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="109" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1abed81772025a00beb5ddff354578704c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_pkcs7_signer_info::private_serial</definition>
+        <argsstring></argsstring>
+        <name>private_serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="110" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1a9798bc49ab75cdba9dafafc797f20888" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga2272228c7776102328df31623af3168c" kindref="member">mbedtls_x509_name</ref></type>
+        <definition>mbedtls_x509_name mbedtls_pkcs7_signer_info::private_issuer</definition>
+        <argsstring></argsstring>
+        <name>private_issuer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="111" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1ada1993dd0ecef1fd4dc9dbb42bfa4c11" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_pkcs7_signer_info::private_issuer_raw</definition>
+        <argsstring></argsstring>
+        <name>private_issuer_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="112" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1a99897d5b4e81085e720c98ca8357f322" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_pkcs7_signer_info::private_alg_identifier</definition>
+        <argsstring></argsstring>
+        <name>private_alg_identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="113" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1ae2e52219b1ad5bea0e26124b5c9cb5c0" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_pkcs7_signer_info::private_sig_alg_identifier</definition>
+        <argsstring></argsstring>
+        <name>private_sig_alg_identifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="114" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1ad371a1d47beff6af4eee5068fc1f5b5d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_pkcs7_signer_info::private_sig</definition>
+        <argsstring></argsstring>
+        <name>private_sig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="115" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pkcs7__signer__info_1a5412c89f1132ddea73003f74ac899228" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__pkcs7__signer__info" kindref="compound">mbedtls_pkcs7_signer_info</ref> *</type>
+        <definition>struct mbedtls_pkcs7_signer_info* mbedtls_pkcs7_signer_info::private_next</definition>
+        <argsstring></argsstring>
+        <name>private_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="116" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure holding PKCS #7 signer info </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="494">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="493">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="493" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="494" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="492">
+        <label>mbedtls_pkcs7_signer_info</label>
+        <link refid="structmbedtls__pkcs7__signer__info"/>
+        <childnode refid="492" relation="usage">
+          <edgelabel>private_next</edgelabel>
+        </childnode>
+        <childnode refid="493" relation="usage">
+          <edgelabel>private_issuer</edgelabel>
+        </childnode>
+        <childnode refid="494" relation="usage">
+          <edgelabel>private_sig_alg_identifier</edgelabel>
+          <edgelabel>private_issuer_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>private_alg_identifier</edgelabel>
+          <edgelabel>private_serial</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="108" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="108" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structmbedtls__pkcs7__signer__info_1a99897d5b4e81085e720c98ca8357f322" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_alg_identifier</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1a9798bc49ab75cdba9dafafc797f20888" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_issuer</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1ada1993dd0ecef1fd4dc9dbb42bfa4c11" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_issuer_raw</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1a5412c89f1132ddea73003f74ac899228" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_next</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1abed81772025a00beb5ddff354578704c" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_serial</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1ad371a1d47beff6af4eee5068fc1f5b5d" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_sig</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1ae2e52219b1ad5bea0e26124b5c9cb5c0" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_sig_alg_identifier</name></member>
+      <member refid="structmbedtls__pkcs7__signer__info_1a35cf176ebb267c2f8b2ef4b16843e231" prot="public" virt="non-virtual"><scope>mbedtls_pkcs7_signer_info</scope><name>private_version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="unionpsa__driver__mac__context__t" kind="union" prot="public">
+    <compoundname>psa_driver_mac_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__composites_8h" local="no">crypto_driver_contexts_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__mac__context__t_1a447030300278f81f5c8f184ea7990f2e" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_mac_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="117" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__mac__context__t_1a64f62c55e23d4a0ca56e810f10f38977" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__mac__operation__t" kindref="compound">mbedtls_psa_mac_operation_t</ref></type>
+        <definition>mbedtls_psa_mac_operation_t psa_driver_mac_context_t::mbedtls_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="118" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="745">
+        <label>psa_driver_mac_context_t</label>
+        <link refid="unionpsa__driver__mac__context__t"/>
+        <childnode refid="746" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="750">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+      </node>
+      <node id="749">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="750" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="747">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="748" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="748">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="749" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="746">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="747" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="116" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="116" bodyend="123"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__mac__context__t_1a447030300278f81f5c8f184ea7990f2e" prot="public" virt="non-virtual"><scope>psa_driver_mac_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__mac__context__t_1a64f62c55e23d4a0ca56e810f10f38977" prot="public" virt="non-virtual"><scope>psa_driver_mac_context_t</scope><name>mbedtls_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

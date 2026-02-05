@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__subject__alternative__name" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_subject_alternative_name</compoundname>
+    <includes refid="x509_8h" local="no">x509.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__subject__alternative__name_1afcabe4a00319cd5850de23c37cdc46c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_subject_alternative_name::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SAN type, value of MBEDTLS_X509_SAN_XXX. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="286" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__subject__alternative__name_1a6b6a6a59c5501a3c0bb08dee285872f3" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__san__other__name" kindref="compound">mbedtls_x509_san_other_name</ref></type>
+        <definition>mbedtls_x509_san_other_name mbedtls_x509_subject_alternative_name::other_name</definition>
+        <argsstring></argsstring>
+        <name>other_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="288" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__subject__alternative__name_1af0b4adaf42efffbb957698e2affb88bf" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga2272228c7776102328df31623af3168c" kindref="member">mbedtls_x509_name</ref></type>
+        <definition>mbedtls_x509_name mbedtls_x509_subject_alternative_name::directory_name</definition>
+        <argsstring></argsstring>
+        <name>directory_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="289" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__subject__alternative__name_1a77fa77aa008cafc4e6f6712b6929da7b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_subject_alternative_name::unstructured_name</definition>
+        <argsstring></argsstring>
+        <name>unstructured_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The buffer for the unstructured types. rfc822Name, dnsName and uniformResourceIdentifier are currently supported. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="290" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__subject__alternative__name_1a59ee08e03cde8563773f8285f2e20bfa" prot="public" static="no" mutable="no">
+        <type>union mbedtls_x509_subject_alternative_name::@2</type>
+        <definition>union mbedtls_x509_subject_alternative_name::@2
+     mbedtls_x509_subject_alternative_name::san</definition>
+        <argsstring></argsstring>
+        <name>san</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A union of the supported SAN types </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="292" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A structure for holding the parsed Subject Alternative Name, according to type.</para><para>Future versions of the library may add new fields to this structure or to its embedded union and structure. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="688">
+        <label>mbedtls_x509_subject_alternative_name</label>
+        <link refid="structmbedtls__x509__subject__alternative__name"/>
+        <childnode refid="689" relation="usage">
+          <edgelabel>other_name</edgelabel>
+        </childnode>
+        <childnode refid="690" relation="usage">
+          <edgelabel>unstructured_name</edgelabel>
+        </childnode>
+        <childnode refid="691" relation="usage">
+          <edgelabel>directory_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="690">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="691">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="691" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="690" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="689">
+        <label>mbedtls_x509_san_other_name</label>
+        <link refid="structmbedtls__x509__san__other__name"/>
+        <childnode refid="690" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>type_id</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="285" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="285" bodyend="293"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__subject__alternative__name_1af0b4adaf42efffbb957698e2affb88bf" prot="public" virt="non-virtual"><scope>mbedtls_x509_subject_alternative_name</scope><name>directory_name</name></member>
+      <member refid="structmbedtls__x509__subject__alternative__name_1a6b6a6a59c5501a3c0bb08dee285872f3" prot="public" virt="non-virtual"><scope>mbedtls_x509_subject_alternative_name</scope><name>other_name</name></member>
+      <member refid="structmbedtls__x509__subject__alternative__name_1a59ee08e03cde8563773f8285f2e20bfa" prot="public" virt="non-virtual"><scope>mbedtls_x509_subject_alternative_name</scope><name>san</name></member>
+      <member refid="structmbedtls__x509__subject__alternative__name_1afcabe4a00319cd5850de23c37cdc46c3" prot="public" virt="non-virtual"><scope>mbedtls_x509_subject_alternative_name</scope><name>type</name></member>
+      <member refid="structmbedtls__x509__subject__alternative__name_1a77fa77aa008cafc4e6f6712b6929da7b" prot="public" virt="non-virtual"><scope>mbedtls_x509_subject_alternative_name</scope><name>unstructured_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="config__adjust__ssl_8h" kind="file">
+    <compoundname>config_adjust_ssl.h</compoundname>
+    <includedby refid="include_2mbedtls_2build__info_8h" local="yes">build_info.h</includedby>
+    <invincdepgraph>
+      <node id="2204">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2203" relation="include">
+        </childnode>
+        <childnode refid="2205" relation="include">
+        </childnode>
+        <childnode refid="2206" relation="include">
+        </childnode>
+        <childnode refid="2207" relation="include">
+        </childnode>
+        <childnode refid="2208" relation="include">
+        </childnode>
+      </node>
+      <node id="2216">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="2212">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2214" relation="include">
+        </childnode>
+      </node>
+      <node id="2211">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2217">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="2208">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2209">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2204" relation="include">
+        </childnode>
+      </node>
+      <node id="2207">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2218">
+        <label>version.h</label>
+        <link refid="include_2mbedtls_2version_8h"/>
+      </node>
+      <node id="2215">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="2203">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2206">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2214">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2202">
+        <label>build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="2203" relation="include">
+        </childnode>
+        <childnode refid="2204" relation="include">
+        </childnode>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2212" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2215" relation="include">
+        </childnode>
+        <childnode refid="2205" relation="include">
+        </childnode>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2211" relation="include">
+        </childnode>
+        <childnode refid="2206" relation="include">
+        </childnode>
+        <childnode refid="2207" relation="include">
+        </childnode>
+        <childnode refid="2208" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2218" relation="include">
+        </childnode>
+        <childnode refid="2214" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2204" relation="include">
+        </childnode>
+        <childnode refid="2211" relation="include">
+        </childnode>
+      </node>
+      <node id="2205">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2201">
+        <label>config_adjust_ssl.h</label>
+        <link refid="config_adjust_ssl.h"/>
+        <childnode refid="2202" relation="include">
+        </childnode>
+      </node>
+      <node id="2213">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2204" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>Adjust TLS configuration. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an internal header. Do not include it directly.</para><para>Automatically enable certain dependencies. Generally, MBEDTLS_xxx configurations need to be explicitly enabled by the user: enabling MBEDTLS_xxx_A but not MBEDTLS_xxx_B when A requires B results in a compilation error. However, we do automatically enable certain options in some circumstances. One case is if MBEDTLS_xxx_B is an internal option used to identify parts of a module that are used by other module, and we don&apos;t want to make the symbol MBEDTLS_xxx_B part of the public API. Another case is if A didn&apos;t depend on B in earlier versions, and we want to use B in A but we need to preserve backward compatibility with configurations that explicitly activate MBEDTLS_xxx_A but not MBEDTLS_xxx_B. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="19"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_CONFIG_ADJUST_SSL_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CONFIG_ADJUST_SSL_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_CONFIG_FILES_READ)</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Do<sp/>not<sp/>include<sp/>mbedtls/config_adjust_*.h<sp/>manually!<sp/>This<sp/>can<sp/>lead<sp/>to<sp/>problems,<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;up<sp/>to<sp/>and<sp/>including<sp/>runtime<sp/>errors<sp/>such<sp/>as<sp/>buffer<sp/>overflows.<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;If<sp/>you&apos;re<sp/>trying<sp/>to<sp/>fix<sp/>a<sp/>complaint<sp/>from<sp/>check_config.h,<sp/>just<sp/>remove<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;it<sp/>from<sp/>your<sp/>configuration<sp/>file:<sp/>since<sp/>Mbed<sp/>TLS<sp/>3.0,<sp/>it<sp/>is<sp/>included<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;automatically<sp/>at<sp/>the<sp/>right<sp/>point.&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>following<sp/>blocks<sp/>make<sp/>it<sp/>easier<sp/>to<sp/>disable<sp/>all<sp/>of<sp/>TLS,</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>or<sp/>of<sp/>TLS<sp/>1.2<sp/>or<sp/>1.3<sp/>or<sp/>DTLS,<sp/>without<sp/>having<sp/>to<sp/>manually<sp/>disable<sp/>all</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>key<sp/>exchanges,<sp/>options<sp/>and<sp/>extensions<sp/>related<sp/>to<sp/>them.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_TLS_C)</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_CLI_C</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_SRV_C</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_PROTO_TLS1_3</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_PROTO_TLS1_2</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_PROTO_DTLS</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!(defined(MBEDTLS_SSL_SRV_C)<sp/>&amp;&amp;<sp/>defined(MBEDTLS_SSL_SESSION_TICKETS))</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_TICKET_C</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_PROTO_DTLS)</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_DTLS_ANTI_REPLAY</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_DTLS_CONNECTION_ID</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_DTLS_HELLO_VERIFY</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_DTLS_SRTP</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_DTLS_CLIENT_PORT_REUSE</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_PROTO_TLS1_2)</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_ENCRYPT_THEN_MAC</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_EXTENDED_MASTER_SECRET</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_RENEGOTIATION</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_KEY_EXCHANGE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_PROTO_TLS1_3)</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_EARLY_DATA</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_SSL_RECORD_SIZE_LIMIT</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SSL_PROTO_TLS1_2)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_ECDH)<sp/>||<sp/>defined(PSA_WANT_ALG_ECDSA)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED))</highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_2_SOME_ECC</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_CONFIG_ADJUST_SSL_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/private/config_adjust_ssl.h"/>
+  </compounddef>
+</doxygen>

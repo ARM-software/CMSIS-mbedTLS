@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__policy" kind="group">
+    <compoundname>policy</compoundname>
+    <title>Key policies</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_usage_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_usage_t</name>
+        <briefdescription>
+<para>Encoding of permitted usage on a key. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed as bitwise-ors of macros called <computeroutput>PSA_KEY_USAGE_xxx</computeroutput>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="316" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__policy_1ga7dddccdd1303176e87a4d20c87b589ed" prot="public" static="no">
+        <name>PSA_KEY_USAGE_EXPORT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000001)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be exported.</para><para>A public key or the public part of a key pair may always be exported regardless of the value of this permission flag.</para><para>If a key does not have export permission, implementations shall not allow the key to be exported in plain form from the cryptoprocessor, whether through <ref refid="group__import__export_1ga668e35be8d2852ad3feeef74ac6f75bf" kindref="member">psa_export_key()</ref> or through a proprietary interface. The key may however be exportable in a wrapped form, i.e. in a form where it is encrypted by another key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2528" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" prot="public" static="no">
+        <name>PSA_KEY_USAGE_COPY</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000002)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be copied.</para><para>This flag allows the use of <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref> to make a copy of the key with the same policy or a more restrictive policy.</para><para>For lifetimes for which the key is located in a secure element which enforce the non-exportability of keys, copying a key outside the secure element also requires the usage flag <ref refid="group__policy_1ga7dddccdd1303176e87a4d20c87b589ed" kindref="member">PSA_KEY_USAGE_EXPORT</ref>. Copying the key inside the secure element is permitted with just <ref refid="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" kindref="member">PSA_KEY_USAGE_COPY</ref> if the secure element supports it. For keys with the lifetime <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref> or <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref>, the usage flag <ref refid="group__policy_1ga4605d686020a6cb433c5d78bf7e91689" kindref="member">PSA_KEY_USAGE_COPY</ref> is sufficient to permit the copy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2544" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2544" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga2e521fe2343c2238469a2210e84e0992" prot="public" static="no">
+        <name>PSA_KEY_USAGE_DERIVE_PUBLIC</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000080)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used the public side of a key agreement or PAKE.</para><para>This macro can be used when checking a key&apos;s capabilities, for example with <ref refid="pk_8h_1a5a491616ae2eff4652399313265844f4" kindref="member">mbedtls_pk_can_do_psa()</ref>.</para><para><simplesect kind="note"><para>Currently, no API function requires this flag. Key agreement functions (<ref refid="group__key__derivation_1ga165dda1ad80a10730cb538069d4cc7aa" kindref="member">psa_raw_key_agreement()</ref>, <ref refid="group__key__derivation_1gaf691f0d51763e32ed87cbe73722692ac" kindref="member">psa_key_agreement()</ref>, <ref refid="group__key__derivation_1ga2cd5a8ac906747d3204ec442db78745f" kindref="member">psa_key_derivation_key_agreement()</ref>) and <ref refid="group__pake_1ga35af752a83762fe23daa47e3ddef3a68" kindref="member">psa_pake_input()</ref> take the public key in exported form, not as a key object, so no usage flag is involved. For PAKE algorithms with a verifier role such as SPAKE2+, <ref refid="group__pake_1ga8558472b4ffd92f5aaf9a736daf6810b" kindref="member">psa_pake_setup()</ref> requires <ref refid="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" kindref="member">PSA_KEY_USAGE_DERIVE</ref> even when passing a public key in the verifier role.</para><simplesectsep/><para>The value of this macro is determined by a draft version of the PSA Cryptography API, and may change before this draft is finalized. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2563" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga75153b296d045d529d97203a6a995dad" prot="public" static="no">
+        <name>PSA_KEY_USAGE_ENCRYPT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to encrypt a message.</para><para>This flag allows the key to be used for a symmetric encryption operation, for an AEAD encryption-and-authentication operation, or for an asymmetric encryption operation, if otherwise permitted by the key&apos;s type and policy.</para><para>For a key pair, this concerns the public key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2574" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2574" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" prot="public" static="no">
+        <name>PSA_KEY_USAGE_DECRYPT</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000200)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to decrypt a message.</para><para>This flag allows the key to be used for a symmetric decryption operation, for an AEAD decryption-and-verification operation, or for an asymmetric decryption operation, if otherwise permitted by the key&apos;s type and policy.</para><para>For a key pair, this concerns the private key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2585" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga552117ac92b79500cae87d4e65a85c54" prot="public" static="no">
+        <name>PSA_KEY_USAGE_SIGN_MESSAGE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000400)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to sign a message.</para><para>This flag allows the key to be used for a MAC calculation operation or for an asymmetric message signature operation, if otherwise permitted by the key’s type and policy.</para><para>For a key pair, this concerns the private key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2595" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2595" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" compoundref="crypto__struct_8h" startline="338" endline="347">psa_extend_key_usage_flags</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gabea7ec4173f4f943110329ac2953b2b1" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_MESSAGE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00000800)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify a message.</para><para>This flag allows the key to be used for a MAC verification operation or for an asymmetric message signature verification operation, if otherwise permitted by the key’s type and policy.</para><para>For a key pair, this concerns the public key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2605" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2605" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" compoundref="crypto__struct_8h" startline="338" endline="347">psa_extend_key_usage_flags</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" prot="public" static="no">
+        <name>PSA_KEY_USAGE_SIGN_HASH</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00001000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to sign a message.</para><para>This flag allows the key to be used for a MAC calculation operation or for an asymmetric signature operation, if otherwise permitted by the key&apos;s type and policy.</para><para>For a key pair, this concerns the private key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2615" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2615" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" compoundref="crypto__struct_8h" startline="338" endline="347">psa_extend_key_usage_flags</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_HASH</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00002000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify a message signature.</para><para>This flag allows the key to be used for a MAC verification operation or for an asymmetric signature verification operation, if otherwise permitted by the key&apos;s type and policy.</para><para>For a key pair, this concerns the public key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2625" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2625" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ab1d132120773a313a54141473a7ccaec" compoundref="crypto__struct_8h" startline="338" endline="347">psa_extend_key_usage_flags</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1gaf19022acc5ef23cf12477f632b48a0b2" prot="public" static="no">
+        <name>PSA_KEY_USAGE_DERIVE</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00004000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to derive other keys or produce a password hash.</para><para>This flag allows the key to be used for a key derivation operation or for a key agreement operation, if otherwise permitted by the key&apos;s type and policy.</para><para>If this flag is present on all keys used in calls to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref> for a key derivation operation, then it permits calling <ref refid="group__key__derivation_1ga06b7eb34a2fa88965f68e3d023fa12b9" kindref="member">psa_key_derivation_output_bytes()</ref> or <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> at the end of the operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2639" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__policy_1ga25aece70be2b79afbdb4180f7c4e68ed" prot="public" static="no">
+        <name>PSA_KEY_USAGE_VERIFY_DERIVATION</name>
+        <initializer>((<ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>) 0x00008000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether the key may be used to verify the result of a key derivation, including password hashing.</para><para>This flag allows the key to be used:</para><para>This flag allows the key to be used in a key derivation operation, if otherwise permitted by the key&apos;s type and policy.</para><para>If this flag is present on all keys used in calls to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref> for a key derivation operation, then it permits calling <ref refid="group__key__derivation_1gae446f3352c87e3f7ceb8f659c2e17642" kindref="member">psa_key_derivation_verify_bytes()</ref> or <ref refid="group__key__derivation_1gac041714e34a94742e8ee006ac7dfea5a" kindref="member">psa_key_derivation_verify_key()</ref> at the end of the operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2654" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2654" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

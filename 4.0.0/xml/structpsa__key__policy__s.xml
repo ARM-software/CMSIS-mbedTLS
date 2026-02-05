@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__key__policy__s" kind="struct" prot="public">
+    <compoundname>psa_key_policy_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__key__policy__s_1a34289b62bdbfe8cda71ee9808d52a696" prot="public" static="no" mutable="no">
+        <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+        <definition>psa_key_usage_t psa_key_policy_s::private_usage</definition>
+        <argsstring></argsstring>
+        <name>private_usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="234" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__key__policy__s_1a59ae7fcc32fb141c58a0b162f9029ba5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_key_policy_s::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="235" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__key__policy__s_1a29f3980b2c64c08647701a132baad5fd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_key_policy_s::private_alg2</definition>
+        <argsstring></argsstring>
+        <name>private_alg2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="236" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="233" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="233" bodyend="237"/>
+    <listofallmembers>
+      <member refid="structpsa__key__policy__s_1a59ae7fcc32fb141c58a0b162f9029ba5" prot="public" virt="non-virtual"><scope>psa_key_policy_s</scope><name>private_alg</name></member>
+      <member refid="structpsa__key__policy__s_1a29f3980b2c64c08647701a132baad5fd" prot="public" virt="non-virtual"><scope>psa_key_policy_s</scope><name>private_alg2</name></member>
+      <member refid="structpsa__key__policy__s_1a34289b62bdbfe8cda71ee9808d52a696" prot="public" virt="non-virtual"><scope>psa_key_policy_s</scope><name>private_usage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

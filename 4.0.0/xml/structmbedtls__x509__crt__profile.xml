@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__crt__profile" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_crt_profile</compoundname>
+    <includes refid="x509__crt_8h" local="no">x509_crt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crt__profile_1a1251640211d47c8e4b80b99d5b178685" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_x509_crt_profile::allowed_mds</definition>
+        <argsstring></argsstring>
+        <name>allowed_mds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MDs for signatures </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="125" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__profile_1a13cba76eca3f0bce8a93b8f59fe69370" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_x509_crt_profile::allowed_pks</definition>
+        <argsstring></argsstring>
+        <name>allowed_pks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PK algs for public keys; this applies to all certificates in the provided chain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="126" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__profile_1a8149f4d17f3f465e2255f5af997e4c8e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_x509_crt_profile::allowed_curves</definition>
+        <argsstring></argsstring>
+        <name>allowed_curves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Elliptic curves for ECDSA </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="129" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__profile_1a094e9eb35ed5e9a16b67d2e8bd97e83c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_x509_crt_profile::rsa_min_bitlen</definition>
+        <argsstring></argsstring>
+        <name>rsa_min_bitlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum size for RSA keys </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="130" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Security profile for certificate verification.</para><para>All lists are bitfields, built by ORing flags from <ref refid="group__x509__module_1gaedcb73f1c615c266a348a0c62763c5de" kindref="member">MBEDTLS_X509_ID_FLAG()</ref>.</para><para>The fields of this structure are part of the public API and can be manipulated directly by applications. Future versions of the library may add extra fields or reorder existing fields.</para><para>You can create custom profiles by starting from a copy of an existing profile, such as mbedtls_x509_crt_profile_default or mbedtls_x509_ctr_profile_none and then tune it to your needs.</para><para>For example to allow SHA-224 in addition to the default:</para><para><ref refid="structmbedtls__x509__crt__profile" kindref="compound">mbedtls_x509_crt_profile</ref> my_profile = mbedtls_x509_crt_profile_default; my_profile.allowed_mds |= <ref refid="group__x509__module_1gaedcb73f1c615c266a348a0c62763c5de" kindref="member">MBEDTLS_X509_ID_FLAG( MBEDTLS_MD_SHA224 )</ref>;</para><para>Or to allow only RSA-3072+ with SHA-256:</para><para><ref refid="structmbedtls__x509__crt__profile" kindref="compound">mbedtls_x509_crt_profile</ref> my_profile = mbedtls_x509_crt_profile_none; my_profile.allowed_mds = <ref refid="group__x509__module_1gaedcb73f1c615c266a348a0c62763c5de" kindref="member">MBEDTLS_X509_ID_FLAG( MBEDTLS_MD_SHA256 )</ref>; my_profile.allowed_pks = <ref refid="group__x509__module_1gaedcb73f1c615c266a348a0c62763c5de" kindref="member">MBEDTLS_X509_ID_FLAG( MBEDTLS_PK_RSA )</ref>; my_profile.rsa_min_bitlen = 3072; </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="124" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="124" bodyend="131"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crt__profile_1a8149f4d17f3f465e2255f5af997e4c8e" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_profile</scope><name>allowed_curves</name></member>
+      <member refid="structmbedtls__x509__crt__profile_1a1251640211d47c8e4b80b99d5b178685" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_profile</scope><name>allowed_mds</name></member>
+      <member refid="structmbedtls__x509__crt__profile_1a13cba76eca3f0bce8a93b8f59fe69370" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_profile</scope><name>allowed_pks</name></member>
+      <member refid="structmbedtls__x509__crt__profile_1a094e9eb35ed5e9a16b67d2e8bd97e83c" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_profile</scope><name>rsa_min_bitlen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

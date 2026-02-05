@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__interruptible" kind="group">
+    <compoundname>interruptible</compoundname>
+    <title>Interruptible operations</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__interruptible_1gad19c1da7f6b7d59d5873d5b68eb943d4" prot="public" static="no">
+        <name>PSA_INTERRUPTIBLE_MAX_OPS_UNLIMITED</name>
+        <initializer>UINT32_MAX</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum value for use with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to determine the maximum number of ops allowed to be executed by an interruptible function in a single call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2780" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2780" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

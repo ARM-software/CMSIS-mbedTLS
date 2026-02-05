@@ -1,0 +1,9 @@
+<map id="timing.h" name="timing.h">
+<area shape="rect" id="node3" href="$include_2mbedtls_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="353,80,490,107"/>
+<area shape="rect" id="node14" href="$timing__alt_8h.html" title="timing_alt.h" alt="" coords="603,80,693,107"/>
+<area shape="rect" id="node4" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="187,155,312,196"/>
+<area shape="rect" id="node10" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="336,162,507,189"/>
+<area shape="rect" id="node11" href="$config__adjust__x509_8h.html" title="Adjust X.509 configuration. " alt="" coords="531,155,677,196"/>
+<area shape="rect" id="node12" href="$config__adjust__ssl_8h.html" title="Adjust TLS configuration. " alt="" coords="701,155,848,196"/>
+<area shape="rect" id="node5" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="99,251,234,278"/>
+</map>

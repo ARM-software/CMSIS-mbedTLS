@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ssl__cookie_8h" kind="file">
+    <compoundname>ssl_cookie.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ssl_8h" local="yes">mbedtls/ssl.h</includes>
+    <incdepgraph>
+      <node id="3693">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3712">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3705">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+      </node>
+      <node id="3687">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3713">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3714" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+      </node>
+      <node id="3698">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+      </node>
+      <node id="3695">
+        <label>mbedtls/ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+        <childnode refid="3701" relation="include">
+        </childnode>
+        <childnode refid="3702" relation="include">
+        </childnode>
+        <childnode refid="3718" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3722" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3719">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3720" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+      </node>
+      <node id="3710">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3706" relation="include">
+        </childnode>
+        <childnode refid="3705" relation="include">
+        </childnode>
+        <childnode refid="3711" relation="include">
+        </childnode>
+        <childnode refid="3712" relation="include">
+        </childnode>
+        <childnode refid="3713" relation="include">
+        </childnode>
+        <childnode refid="3715" relation="include">
+        </childnode>
+      </node>
+      <node id="3708">
+        <label>stdint.h</label>
+      </node>
+      <node id="3692">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3707">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3702">
+        <label>mbedtls/ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3703" relation="include">
+        </childnode>
+        <childnode refid="3717" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+      </node>
+      <node id="3683">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl_cookie.h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3695" relation="include">
+        </childnode>
+      </node>
+      <node id="3690">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3716">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3686">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3687" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3689" relation="include">
+        </childnode>
+        <childnode refid="3690" relation="include">
+        </childnode>
+        <childnode refid="3691" relation="include">
+        </childnode>
+      </node>
+      <node id="3697">
+        <label>stddef.h</label>
+      </node>
+      <node id="3691">
+        <label>limits.h</label>
+      </node>
+      <node id="3703">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3709" relation="include">
+        </childnode>
+        <childnode refid="3710" relation="include">
+        </childnode>
+      </node>
+      <node id="3706">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3707" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+      </node>
+      <node id="3709">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+      </node>
+      <node id="3711">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+      </node>
+      <node id="3704">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3705" relation="include">
+        </childnode>
+      </node>
+      <node id="3715">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3708" relation="include">
+        </childnode>
+        <childnode refid="3716" relation="include">
+        </childnode>
+      </node>
+      <node id="3714">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3696">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3698" relation="include">
+        </childnode>
+        <childnode refid="3699" relation="include">
+        </childnode>
+      </node>
+      <node id="3684">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3717">
+        <label>mbedtls/private/cipher.h</label>
+      </node>
+      <node id="3699">
+        <label>time.h</label>
+      </node>
+      <node id="3701">
+        <label>mbedtls/private/ecp.h</label>
+      </node>
+      <node id="3685">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3692" relation="include">
+        </childnode>
+        <childnode refid="3688" relation="include">
+        </childnode>
+        <childnode refid="3693" relation="include">
+        </childnode>
+        <childnode refid="3694" relation="include">
+        </childnode>
+      </node>
+      <node id="3722">
+        <label>mbedtls/private/ecdh.h</label>
+      </node>
+      <node id="3720">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3686" relation="include">
+        </childnode>
+        <childnode refid="3696" relation="include">
+        </childnode>
+        <childnode refid="3704" relation="include">
+        </childnode>
+        <childnode refid="3697" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+      </node>
+      <node id="3688">
+        <label>/dev/null</label>
+      </node>
+      <node id="3718">
+        <label>mbedtls/x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+        <childnode refid="3721" relation="include">
+        </childnode>
+        <childnode refid="3700" relation="include">
+        </childnode>
+      </node>
+      <node id="3689">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3700">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3694">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="3721">
+        <label>mbedtls/x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3684" relation="include">
+        </childnode>
+        <childnode refid="3685" relation="include">
+        </childnode>
+        <childnode refid="3719" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__ssl__cookie__ctx" prot="public">mbedtls_ssl_cookie_ctx</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ssl__cookie_8h_1a3d4a8b3e0c9292550d14b6b142826e39" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref></type>
+        <definition>typedef struct mbedtls_ssl_cookie_ctx  mbedtls_ssl_cookie_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_cookie_ctx</name>
+        <briefdescription>
+<para>Context for the default cookie functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ssl__cookie_8h_1a132e60f12cd3465264d283042cabe6d2" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a536f8b89936f26732150b00639a47ff0" kindref="member">mbedtls_ssl_cookie_write_t</ref></type>
+        <definition>mbedtls_ssl_cookie_write_t mbedtls_ssl_cookie_write</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_cookie_write</name>
+        <briefdescription>
+<para>Generate cookie, see <computeroutput>mbedtls_ssl_cookie_write_t</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="79" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ssl__cookie_8h_1ac83489027c04984e12f89b1b29eac27b" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1a9cfda5aee70d6c2c19a8dfb5af900d80" kindref="member">mbedtls_ssl_cookie_check_t</ref></type>
+        <definition>mbedtls_ssl_cookie_check_t mbedtls_ssl_cookie_check</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_cookie_check</name>
+        <briefdescription>
+<para>Verify cookie, see <computeroutput>mbedtls_ssl_cookie_write_t</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="84" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssl__cookie_8h_1affed42a7313e08576aad621f25d5c4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cookie_init</definition>
+        <argsstring>(mbedtls_ssl_cookie_ctx *ctx)</argsstring>
+        <name>mbedtls_ssl_cookie_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize cookie context. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cookie_8h_1ae9b78f00b03f21cfdf2e0137d922eab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cookie_setup</definition>
+        <argsstring>(mbedtls_ssl_cookie_ctx *ctx)</argsstring>
+        <name>mbedtls_ssl_cookie_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Setup cookie context (generate keys) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cookie_8h_1a5ae5d375a80fbe6f6f1b219c1b1dc8bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cookie_set_timeout</definition>
+        <argsstring>(mbedtls_ssl_cookie_ctx *ctx, unsigned long delay)</argsstring>
+        <name>mbedtls_ssl_cookie_set_timeout</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+<para>Set expiration delay for cookies (Default MBEDTLS_SSL_COOKIE_TIMEOUT) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cookie context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay, in seconds if HAVE_TIME, or in number of cookies issued in the meantime. 0 to disable expiration (NOT recommended) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cookie_8h_1a77d57052186940783e056f5ca95bda03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cookie_free</definition>
+        <argsstring>(mbedtls_ssl_cookie_ctx *ctx)</argsstring>
+        <name>mbedtls_ssl_cookie_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free cookie context. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DTLS cookie callbacks implementation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SSL_COOKIE_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_COOKIE_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ssl_8h" kindref="compound">mbedtls/ssl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SSL_COOKIE_TIMEOUT</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_COOKIE_TIMEOUT<sp/><sp/><sp/><sp/><sp/>60<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="39" refid="structmbedtls__ssl__cookie__ctx" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="structmbedtls__ssl__cookie__ctx_1aedc96e1317aee7d942eef6995c0258b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/><sp/><sp/><sp/>MBEDTLS_PRIVATE(psa_hmac_key);<sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="structmbedtls__ssl__cookie__ctx_1a7642919792a1cf19445305af9b78d3c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PRIVATE(psa_hmac_alg);<sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_HAVE_TIME)</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/>MBEDTLS_PRIVATE(serial);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="45" refid="structmbedtls__ssl__cookie__ctx_1ad38cf167c3cae39cf8b39098e607721f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/><sp/>MBEDTLS_PRIVATE(timeout);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><ref refid="ssl__cookie_8h_1a3d4a8b3e0c9292550d14b6b142826e39" kindref="member">mbedtls_ssl_cookie_ctx</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cookie_8h_1affed42a7313e08576aad621f25d5c4f3" kindref="member">mbedtls_ssl_cookie_init</ref>(<ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__cookie_8h_1ae9b78f00b03f21cfdf2e0137d922eab3" kindref="member">mbedtls_ssl_cookie_setup</ref>(<ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cookie_8h_1a5ae5d375a80fbe6f6f1b219c1b1dc8bb" kindref="member">mbedtls_ssl_cookie_set_timeout</ref>(<ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>delay);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cookie_8h_1a77d57052186940783e056f5ca95bda03" kindref="member">mbedtls_ssl_cookie_free</ref>(<ref refid="structmbedtls__ssl__cookie__ctx" kindref="compound">mbedtls_ssl_cookie_ctx</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="ssl__cookie_8h_1a132e60f12cd3465264d283042cabe6d2" refkind="member"><highlight class="normal"><ref refid="ssl_8h_1a536f8b89936f26732150b00639a47ff0" kindref="member">mbedtls_ssl_cookie_write_t</ref><sp/><ref refid="ssl__cookie_8h_1a132e60f12cd3465264d283042cabe6d2" kindref="member">mbedtls_ssl_cookie_write</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="ssl__cookie_8h_1ac83489027c04984e12f89b1b29eac27b" refkind="member"><highlight class="normal"><ref refid="ssl_8h_1a9cfda5aee70d6c2c19a8dfb5af900d80" kindref="member">mbedtls_ssl_cookie_check_t</ref><sp/><ref refid="ssl__cookie_8h_1ac83489027c04984e12f89b1b29eac27b" kindref="member">mbedtls_ssl_cookie_check</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ssl_cookie.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h"/>
+  </compounddef>
+</doxygen>

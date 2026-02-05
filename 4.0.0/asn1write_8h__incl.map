@@ -1,0 +1,10 @@
+<map id="asn1write.h" name="asn1write.h">
+<area shape="rect" id="node2" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="269,379,394,420"/>
+<area shape="rect" id="node8" href="$asn1_8h.html" title="Generic ASN.1 parsing. " alt="" coords="424,80,535,107"/>
+<area shape="rect" id="node3" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="5,475,140,502"/>
+<area shape="rect" id="node10" href="$platform__util_8h.html" title="Common and shared functions used by multiple modules in the Mbed TLS library. " alt="" coords="237,155,391,181"/>
+<area shape="rect" id="node14" href="$compat-3-crypto_8h.html" title="Compatibility definitions for MbedTLS 3.x code built with MbedTLS 4.x or TF&#45;PSA&#45;Crypto 1..." alt="" coords="517,155,695,181"/>
+<area shape="rect" id="node12" href="$platform__time_8h.html" title="Mbed TLS Platform time abstraction. " alt="" coords="136,304,297,331"/>
+<area shape="rect" id="node15" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="540,229,677,256"/>
+<area shape="rect" id="node16" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="542,304,675,331"/>
+</map>

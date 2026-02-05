@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__cache__entry" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_cache_entry</compoundname>
+    <includes refid="ssl__cache_8h" local="no">ssl_cache.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1a793218c7cb0704dba08dcca94389e094" prot="public" static="no" mutable="no">
+        <type><ref refid="platform__time_8h_1ab250f6b51bf1a0a612094c3eadd4c6f6" kindref="member">mbedtls_time_t</ref></type>
+        <definition>mbedtls_time_t mbedtls_ssl_cache_entry::private_timestamp</definition>
+        <argsstring></argsstring>
+        <name>private_timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>entry timestamp </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1a68ac33ad4cb6d7254cb2141d0aec14de" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_cache_entry::private_session_id[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>private_session_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>session ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="55" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1a189b894d73a9d0bf2ebf36f0a8e2cb4b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_cache_entry::private_session_id_len</definition>
+        <argsstring></argsstring>
+        <name>private_session_id_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="56" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1a99c61b183fd5c587e64c697df2141482" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_ssl_cache_entry::private_session</definition>
+        <argsstring></argsstring>
+        <name>private_session</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>serialized session </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="58" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1af2ed3b1f1cc353f43f043b830a7c9e1e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_cache_entry::private_session_len</definition>
+        <argsstring></argsstring>
+        <name>private_session_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="59" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__entry_1a66f6e76696381c2a5659be9a11064772" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref> *</type>
+        <definition>mbedtls_ssl_cache_entry* mbedtls_ssl_cache_entry::private_next</definition>
+        <argsstring></argsstring>
+        <name>private_next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>chain pointer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="61" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This structure is used for storing cache entries. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="535">
+        <label>mbedtls_ssl_cache_entry</label>
+        <link refid="structmbedtls__ssl__cache__entry"/>
+        <childnode refid="535" relation="usage">
+          <edgelabel>private_next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="50" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="50" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__cache__entry_1a66f6e76696381c2a5659be9a11064772" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_next</name></member>
+      <member refid="structmbedtls__ssl__cache__entry_1a99c61b183fd5c587e64c697df2141482" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_session</name></member>
+      <member refid="structmbedtls__ssl__cache__entry_1a68ac33ad4cb6d7254cb2141d0aec14de" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_session_id</name></member>
+      <member refid="structmbedtls__ssl__cache__entry_1a189b894d73a9d0bf2ebf36f0a8e2cb4b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_session_id_len</name></member>
+      <member refid="structmbedtls__ssl__cache__entry_1af2ed3b1f1cc353f43f043b830a7c9e1e" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_session_len</name></member>
+      <member refid="structmbedtls__ssl__cache__entry_1a793218c7cb0704dba08dcca94389e094" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_entry</scope><name>private_timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

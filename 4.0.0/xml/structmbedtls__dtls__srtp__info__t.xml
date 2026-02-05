@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__dtls__srtp__info__t" kind="struct" prot="public">
+    <compoundname>mbedtls_dtls_srtp_info_t</compoundname>
+    <includes refid="ssl_8h" local="no">ssl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__dtls__srtp__info__t_1a4a120af924107fe053700c23147c73ea" prot="public" static="no" mutable="no">
+        <type><ref refid="ssl_8h_1ad521c5938b7f7548fc7d854ca0d118ab" kindref="member">mbedtls_ssl_srtp_profile</ref></type>
+        <definition>mbedtls_ssl_srtp_profile mbedtls_dtls_srtp_info_t::private_chosen_dtls_srtp_profile</definition>
+        <argsstring></argsstring>
+        <name>private_chosen_dtls_srtp_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SRTP profile that was negotiated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1129" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dtls__srtp__info__t_1ac189b74cb39e219b11b140251edda223" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t mbedtls_dtls_srtp_info_t::private_mki_len</definition>
+        <argsstring></argsstring>
+        <name>private_mki_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of mki_value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1131" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__dtls__srtp__info__t_1a4b9648ab59ae8147ed5eb5abbcc8fd9e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_dtls_srtp_info_t::private_mki_value[MBEDTLS_TLS_SRTP_MAX_MKI_LENGTH]</definition>
+        <argsstring>[MBEDTLS_TLS_SRTP_MAX_MKI_LENGTH]</argsstring>
+        <name>private_mki_value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mki_value used, with max size of 256 bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1133" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1127" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1127" bodyend="1134"/>
+    <listofallmembers>
+      <member refid="structmbedtls__dtls__srtp__info__t_1a4a120af924107fe053700c23147c73ea" prot="public" virt="non-virtual"><scope>mbedtls_dtls_srtp_info_t</scope><name>private_chosen_dtls_srtp_profile</name></member>
+      <member refid="structmbedtls__dtls__srtp__info__t_1ac189b74cb39e219b11b140251edda223" prot="public" virt="non-virtual"><scope>mbedtls_dtls_srtp_info_t</scope><name>private_mki_len</name></member>
+      <member refid="structmbedtls__dtls__srtp__info__t_1a4b9648ab59ae8147ed5eb5abbcc8fd9e" prot="public" virt="non-virtual"><scope>mbedtls_dtls_srtp_info_t</scope><name>private_mki_value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<map id="config_adjust_x509.h" name="config_adjust_x509.h">
+<area shape="rect" id="node2" href="$include_2mbedtls_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="480,80,567,107"/>
+<area shape="rect" id="node3" href="$debug_8h.html" title="Functions for controlling and providing debug output from the library. " alt="" coords="5,453,73,480"/>
+<area shape="rect" id="node4" href="$ssl_8h.html" title="SSL/TLS functions. " alt="" coords="333,379,383,405"/>
+<area shape="rect" id="node5" href="$net__sockets_8h.html" title="Network sockets abstraction layer to integrate Mbed TLS into a BSD&#45;style sockets API. " alt="" coords="122,453,226,480"/>
+<area shape="rect" id="node6" href="$ssl__cache_8h.html" title="SSL session cache implementation. " alt="" coords="263,453,355,480"/>
+<area shape="rect" id="node7" href="$ssl__cookie_8h.html" title="DTLS cookie callbacks implementation. " alt="" coords="457,453,552,480"/>
+<area shape="rect" id="node8" href="$ssl__ticket_8h.html" title="TLS server ticket callbacks implementation. " alt="" coords="616,453,705,480"/>
+<area shape="rect" id="node9" href="$ssl__ciphersuites_8h.html" title="SSL Ciphersuites for Mbed TLS. " alt="" coords="485,304,612,331"/>
+<area shape="rect" id="node10" href="$x509__crt_8h.html" title="X.509 certificate parsing and writing. " alt="" coords="238,304,321,331"/>
+<area shape="rect" id="node11" href="$pkcs7_8h.html" title="PKCS #7 generic defines and structures https://tools.ietf.org/html/rfc2315. " alt="" coords="203,379,271,405"/>
+<area shape="rect" id="node12" href="$x509_8h.html" title="X.509 generic defines and structures. " alt="" coords="330,155,391,181"/>
+<area shape="rect" id="node13" href="$x509__crl_8h.html" title="X.509 certificate revocation list parsing. " alt="" coords="317,229,399,256"/>
+<area shape="rect" id="node14" href="$x509__csr_8h.html" title="X.509 certificate signing request parsing and writing. " alt="" coords="424,229,511,256"/>
+<area shape="rect" id="node15" href="$error_8h.html" title="Error to string translation. " alt="" coords="738,155,797,181"/>
+<area shape="rect" id="node16" href="$oid_8h.html" title="Object Identifier (OID) values. " alt="" coords="821,155,871,181"/>
+<area shape="rect" id="node17" href="$timing_8h.html" title="Portable interface to timeouts and to the CPU cycle counter. " alt="" coords="896,155,964,181"/>
+<area shape="rect" id="node18" href="$include_2mbedtls_2version_8h.html" title="Run&#45;time version information. " alt="" coords="988,155,1061,181"/>
+</map>

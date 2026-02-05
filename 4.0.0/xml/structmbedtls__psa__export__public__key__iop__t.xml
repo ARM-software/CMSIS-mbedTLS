@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__export__public__key__iop__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_export_public_key_iop_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__export__public__key__iop__t_1a6c7f049820d65a6ffef113ebdc3edd77" prot="public" static="no" mutable="no">
+        <type>mbedtls_ecp_keypair *</type>
+        <definition>mbedtls_ecp_keypair* mbedtls_psa_export_public_key_iop_t::private_key</definition>
+        <argsstring></argsstring>
+        <name>private_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="256" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__export__public__key__iop__t_1a5a7c0d2972797ba542ec1c811ab05d63" prot="public" static="no" mutable="no">
+        <type>mbedtls_ecp_restart_ctx</type>
+        <definition>mbedtls_ecp_restart_ctx mbedtls_psa_export_public_key_iop_t::private_restart_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_restart_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="257" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__export__public__key__iop__t_1a1f87514ac7bd23410986d092a804f904" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_psa_export_public_key_iop_t::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="258" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="254" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="254" bodyend="263"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__export__public__key__iop__t_1a6c7f049820d65a6ffef113ebdc3edd77" prot="public" virt="non-virtual"><scope>mbedtls_psa_export_public_key_iop_t</scope><name>private_key</name></member>
+      <member refid="structmbedtls__psa__export__public__key__iop__t_1a1f87514ac7bd23410986d092a804f904" prot="public" virt="non-virtual"><scope>mbedtls_psa_export_public_key_iop_t</scope><name>private_num_ops</name></member>
+      <member refid="structmbedtls__psa__export__public__key__iop__t_1a5a7c0d2972797ba542ec1c811ab05d63" prot="public" virt="non-virtual"><scope>mbedtls_psa_export_public_key_iop_t</scope><name>private_restart_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

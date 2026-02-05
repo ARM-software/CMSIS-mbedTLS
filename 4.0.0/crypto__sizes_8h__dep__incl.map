@@ -1,0 +1,27 @@
+<map id="crypto_sizes.h" name="crypto_sizes.h">
+<area shape="rect" id="node2" href="$crypto_8h.html" title="Platform Security Architecture cryptography module. " alt="" coords="224,80,293,107"/>
+<area shape="rect" id="node17" href="$crypto__driver__common_8h.html" title="Definitions for all PSA crypto drivers. " alt="" coords="795,80,957,107"/>
+<area shape="rect" id="node3" href="$pk_8h.html" title="Public Key abstraction layer. " alt="" coords="235,162,282,189"/>
+<area shape="rect" id="node5" href="$ssl_8h.html" title="SSL/TLS functions. " alt="" coords="272,483,323,509"/>
+<area shape="rect" id="node10" href="$ssl__ticket_8h.html" title="TLS server ticket callbacks implementation. " alt="" coords="461,557,550,584"/>
+<area shape="rect" id="node16" href="$psa__util_8h.html" title="Utility functions for the use of the PSA Crypto library. " alt="" coords="18,162,97,189"/>
+<area shape="rect" id="node4" href="$ssl__ciphersuites_8h.html" title="SSL Ciphersuites for Mbed TLS. " alt="" coords="173,408,299,435"/>
+<area shape="rect" id="node11" href="$x509_8h.html" title="X.509 generic defines and structures. " alt="" coords="291,251,352,278"/>
+<area shape="rect" id="node6" href="$debug_8h.html" title="Functions for controlling and providing debug output from the library. " alt="" coords="369,557,437,584"/>
+<area shape="rect" id="node7" href="$net__sockets_8h.html" title="Network sockets abstraction layer to integrate Mbed TLS into a BSD&#45;style sockets API. " alt="" coords="5,557,109,584"/>
+<area shape="rect" id="node8" href="$ssl__cache_8h.html" title="SSL session cache implementation. " alt="" coords="134,557,226,584"/>
+<area shape="rect" id="node9" href="$ssl__cookie_8h.html" title="DTLS cookie callbacks implementation. " alt="" coords="250,557,345,584"/>
+<area shape="rect" id="node12" href="$x509__crt_8h.html" title="X.509 certificate parsing and writing. " alt="" coords="375,408,457,435"/>
+<area shape="rect" id="node14" href="$x509__crl_8h.html" title="X.509 certificate revocation list parsing. " alt="" coords="335,333,417,360"/>
+<area shape="rect" id="node15" href="$x509__csr_8h.html" title="X.509 certificate signing request parsing and writing. " alt="" coords="223,333,310,360"/>
+<area shape="rect" id="node13" href="$pkcs7_8h.html" title="PKCS #7 generic defines and structures https://tools.ietf.org/html/rfc2315. " alt="" coords="382,483,450,509"/>
+<area shape="rect" id="node18" href="$crypto__driver__random_8h.html" title="Definitions for PSA random and entropy drivers. " alt="" coords="1047,162,1203,189"/>
+<area shape="rect" id="node20" href="$crypto__builtin__composites_8h.html" title="Context structure declaration of the Mbed TLS software&#45;based PSA drivers called through the PSA Crypt..." alt="" coords="543,162,727,189"/>
+<area shape="rect" id="node21" href="$crypto__driver__contexts__composites_8h.html" title="Declaration of context structures for use with the PSA driver wrapper interface. This file contains t..." alt="" coords="685,244,837,285"/>
+<area shape="rect" id="node23" href="$crypto__builtin__key__derivation_8h.html" title="Context structure declaration of the Mbed TLS software&#45;based PSA drivers called through the PSA Crypt..." alt="" coords="1227,155,1354,196"/>
+<area shape="rect" id="node24" href="$crypto__driver__contexts__key__derivation_8h.html" title="Declaration of context structures for use with the PSA driver wrapper interface. This file contains t..." alt="" coords="1215,244,1367,285"/>
+<area shape="rect" id="node25" href="$crypto__builtin__primitives_8h.html" title="Context structure declaration of the Mbed TLS software&#45;based PSA drivers called through the PSA Crypt..." alt="" coords="852,162,1023,189"/>
+<area shape="rect" id="node26" href="$crypto__driver__contexts__primitives_8h.html" title="Declaration of context structures for use with the PSA driver wrapper interface. This file contains t..." alt="" coords="861,244,1013,285"/>
+<area shape="rect" id="node19" href="$platform_8h.html" title="This file contains the definitions and functions of the Mbed TLS platform abstraction layer..." alt="" coords="1086,251,1165,278"/>
+<area shape="rect" id="node22" href="$crypto__struct_8h.html" title="PSA cryptography module: Mbed TLS structured type implementations. " alt="" coords="883,333,992,360"/>
+</map>

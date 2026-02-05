@@ -1,0 +1,1176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="x509__csr_8h" kind="file">
+    <compoundname>x509_csr.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="x509_8h" local="yes">mbedtls/x509.h</includes>
+    <incdepgraph>
+      <node id="3968">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3986">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3977">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3978" relation="include">
+        </childnode>
+      </node>
+      <node id="3962">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3987">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3978" relation="include">
+        </childnode>
+        <childnode refid="3988" relation="include">
+        </childnode>
+        <childnode refid="3977" relation="include">
+        </childnode>
+      </node>
+      <node id="3974">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3961" relation="include">
+        </childnode>
+      </node>
+      <node id="3970">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3960" relation="include">
+        </childnode>
+        <childnode refid="3971" relation="include">
+        </childnode>
+        <childnode refid="3982" relation="include">
+        </childnode>
+      </node>
+      <node id="3984">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3979" relation="include">
+        </childnode>
+        <childnode refid="3973" relation="include">
+        </childnode>
+        <childnode refid="3978" relation="include">
+        </childnode>
+        <childnode refid="3977" relation="include">
+        </childnode>
+        <childnode refid="3985" relation="include">
+        </childnode>
+        <childnode refid="3986" relation="include">
+        </childnode>
+        <childnode refid="3987" relation="include">
+        </childnode>
+        <childnode refid="3989" relation="include">
+        </childnode>
+      </node>
+      <node id="3980">
+        <label>stdint.h</label>
+      </node>
+      <node id="3967">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3979">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3965">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3990">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3961">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3962" relation="include">
+        </childnode>
+        <childnode refid="3963" relation="include">
+        </childnode>
+        <childnode refid="3964" relation="include">
+        </childnode>
+        <childnode refid="3965" relation="include">
+        </childnode>
+        <childnode refid="3966" relation="include">
+        </childnode>
+      </node>
+      <node id="3973">
+        <label>stddef.h</label>
+      </node>
+      <node id="3966">
+        <label>limits.h</label>
+      </node>
+      <node id="3982">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3976" relation="include">
+        </childnode>
+        <childnode refid="3983" relation="include">
+        </childnode>
+        <childnode refid="3984" relation="include">
+        </childnode>
+      </node>
+      <node id="3978">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3979" relation="include">
+        </childnode>
+        <childnode refid="3980" relation="include">
+        </childnode>
+      </node>
+      <node id="3983">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3973" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3972" relation="include">
+        </childnode>
+      </node>
+      <node id="3985">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3961" relation="include">
+        </childnode>
+      </node>
+      <node id="3976">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3977" relation="include">
+        </childnode>
+      </node>
+      <node id="3989">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3980" relation="include">
+        </childnode>
+        <childnode refid="3990" relation="include">
+        </childnode>
+      </node>
+      <node id="3988">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3958">
+        <label>x509_csr.h</label>
+        <link refid="x509_csr.h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3960" relation="include">
+        </childnode>
+        <childnode refid="3970" relation="include">
+        </childnode>
+      </node>
+      <node id="3972">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3973" relation="include">
+        </childnode>
+        <childnode refid="3974" relation="include">
+        </childnode>
+        <childnode refid="3975" relation="include">
+        </childnode>
+      </node>
+      <node id="3959">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3975">
+        <label>time.h</label>
+      </node>
+      <node id="3960">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3967" relation="include">
+        </childnode>
+        <childnode refid="3963" relation="include">
+        </childnode>
+        <childnode refid="3968" relation="include">
+        </childnode>
+        <childnode refid="3969" relation="include">
+        </childnode>
+      </node>
+      <node id="3971">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3959" relation="include">
+        </childnode>
+        <childnode refid="3961" relation="include">
+        </childnode>
+        <childnode refid="3972" relation="include">
+        </childnode>
+        <childnode refid="3976" relation="include">
+        </childnode>
+        <childnode refid="3973" relation="include">
+        </childnode>
+        <childnode refid="3981" relation="include">
+        </childnode>
+      </node>
+      <node id="3963">
+        <label>/dev/null</label>
+      </node>
+      <node id="3964">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3981">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3969">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__x509__csr" prot="public">mbedtls_x509_csr</innerclass>
+    <innerclass refid="structmbedtls__x509write__csr" prot="public">mbedtls_x509write_csr</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Structures and functions for X.509 Certificate Signing Requests (CSR)</header>
+      <memberdef kind="typedef" id="group__x509__module_1gae481b23df67001bdac96ef9c2ab3ef7c" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref></type>
+        <definition>typedef struct mbedtls_x509_csr
+ mbedtls_x509_csr</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_x509_csr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Certificate Signing Request (CSR) structure.</para><para>Some fields of this structure are publicly readable. Do not modify them except via Mbed TLS library functions: the effect of modifying those fields or the data that those fields point to is unspecified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__x509__module_1ga7b0b4f8c5cfd541ee20c53907edb636d" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref></type>
+        <definition>typedef struct mbedtls_x509write_csr
+ mbedtls_x509write_csr</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_x509write_csr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for writing a CSR </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__x509__module_1gac68e718a18e421ab2cc4696062cb77a6" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* mbedtls_x509_csr_ext_cb_t)(void *p_ctx, mbedtls_x509_csr const *csr, mbedtls_x509_buf const *oid, int critical, const unsigned char *p, const unsigned char *end)</definition>
+        <argsstring>)(void *p_ctx, mbedtls_x509_csr const *csr, mbedtls_x509_buf const *oid, int critical, const unsigned char *p, const unsigned char *end)</argsstring>
+        <name>mbedtls_x509_csr_ext_cb_t</name>
+        <briefdescription>
+<para>The type of certificate extension callbacks. </para>        </briefdescription>
+        <detaileddescription>
+<para>Callbacks of this type are passed to and used by the <ref refid="group__x509__module_1ga7fb532d8efed6610e9e4ec57da35448c" kindref="member">mbedtls_x509_csr_parse_der_with_ext_cb()</ref> routine when it encounters either an unsupported extension. Future versions of the library may invoke the callback in other cases, if and when the need arises.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An opaque context passed to the callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CSR being parsed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID of the extension. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>critical</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the extension is critical. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the start of the extension value (the content of the OCTET STRING). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of extension value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The callback must fail and return a negative error code if it can not parse or does not support the extension. When the callback fails to parse a critical extension <ref refid="group__x509__module_1ga7fb532d8efed6610e9e4ec57da35448c" kindref="member">mbedtls_x509_csr_parse_der_with_ext_cb()</ref> also fails. When the callback fails to parse a non critical extension <ref refid="group__x509__module_1ga7fb532d8efed6610e9e4ec57da35448c" kindref="member">mbedtls_x509_csr_parse_der_with_ext_cb()</ref> simply skips the extension and continues parsing.</para></simplesect>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="121" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga4c58fa3804ea9feb1acf745221f17208" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_csr_parse_der</definition>
+        <argsstring>(mbedtls_x509_csr *csr, const unsigned char *buf, size_t buflen)</argsstring>
+        <name>mbedtls_x509_csr_parse_der</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Load a Certificate Signing Request (CSR) in DER format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Any unsupported requested extensions are silently ignored, unless the critical flag is set, in which case the CSR is rejected.</para><simplesectsep/><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the CRL data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga7fb532d8efed6610e9e4ec57da35448c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_csr_parse_der_with_ext_cb</definition>
+        <argsstring>(mbedtls_x509_csr *csr, const unsigned char *buf, size_t buflen, mbedtls_x509_csr_ext_cb_t cb, void *p_ctx)</argsstring>
+        <name>mbedtls_x509_csr_parse_der_with_ext_cb</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <param>
+          <type><ref refid="group__x509__module_1gac68e718a18e421ab2cc4696062cb77a6" kindref="member">mbedtls_x509_csr_ext_cb_t</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>p_ctx</declname>
+        </param>
+        <briefdescription>
+<para>Load a Certificate Signing Request (CSR) in DER format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Any unsupported requested extensions are silently ignored, unless the critical flag is set, in which case the result of the callback function decides whether CSR is rejected.</para><simplesectsep/><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the CRL data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callback invoked for every unsupported certificate extension. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An opaque context passed to the callback.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga53012fb8859f4835ccfb0a5e359b3176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_csr_parse</definition>
+        <argsstring>(mbedtls_x509_csr *csr, const unsigned char *buf, size_t buflen)</argsstring>
+        <name>mbedtls_x509_csr_parse</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Load a Certificate Signing Request (CSR), DER or PEM format. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>See notes for <computeroutput><ref refid="group__x509__module_1ga4c58fa3804ea9feb1acf745221f17208" kindref="member">mbedtls_x509_csr_parse_der()</ref></computeroutput> </para><simplesectsep/><para>The PSA crypto subsystem must have been initialized by calling <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> before calling this function.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer holding the CRL data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer (including the terminating null byte for PEM data)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="168" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gaf49db7323eee45d9649600de18d715f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509_csr_parse_file</definition>
+        <argsstring>(mbedtls_x509_csr *csr, const char *path)</argsstring>
+        <name>mbedtls_x509_csr_parse_file</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Load a Certificate Signing Request (CSR) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>See notes for <computeroutput><ref refid="group__x509__module_1ga53012fb8859f4835ccfb0a5e359b3176" kindref="member">mbedtls_x509_csr_parse()</ref></computeroutput> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to fill </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filename to read the CSR from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific X509 or PEM error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga984db025f6953ea61be7dfca2d928f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509_csr_init</definition>
+        <argsstring>(mbedtls_x509_csr *csr)</argsstring>
+        <name>mbedtls_x509_csr_init</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a CSR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="206" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gac2139becff64aa7294ecad4f40767a84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509_csr_free</definition>
+        <argsstring>(mbedtls_x509_csr *csr)</argsstring>
+        <name>mbedtls_x509_csr_free</name>
+        <param>
+          <type><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref> *</type>
+          <declname>csr</declname>
+        </param>
+        <briefdescription>
+<para>Unallocate all CSR data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>csr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR to free </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="213" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__x509__module_1ga7892bce1ba95bfe909929f9b9c1362e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509write_csr_init</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx)</argsstring>
+        <name>mbedtls_x509write_csr_init</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a CSR context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga954eae166b125cea2115b7db8c896e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_set_subject_name</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, const char *subject_name)</argsstring>
+        <name>mbedtls_x509write_csr_set_subject_name</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>subject_name</declname>
+        </param>
+        <briefdescription>
+<para>Set the subject name for a CSR Subject names should contain a comma-separated list of OID types and values: e.g. &quot;C=UK,O=ARM,CN=Mbed TLS Server 1&quot;. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subject_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>subject name to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if subject name was parsed successfully, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="238" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gac4f0b724b1c7006d178e2d71c964f54c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509write_csr_set_key</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, mbedtls_pk_context *key)</argsstring>
+        <name>mbedtls_x509write_csr_set_key</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Set the key for a CSR (public key will be included, private key used to sign the CSR when writing it) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Asymmetric key to include </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="248" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga2be90e1d59d29b2309670700a8c0420f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509write_csr_set_md_alg</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, mbedtls_md_type_t md_alg)</argsstring>
+        <name>mbedtls_x509write_csr_set_md_alg</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_alg</declname>
+        </param>
+        <briefdescription>
+<para>Set the MD algorithm to use for the signature (e.g. MBEDTLS_MD_SHA1) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>md_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MD algorithm to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="257" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1gac5ed085a0dee293f6c152ecd597473be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_set_key_usage</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, unsigned char key_usage)</argsstring>
+        <name>mbedtls_x509write_csr_set_key_usage</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>key_usage</declname>
+        </param>
+        <briefdescription>
+<para>Set the Key Usage Extension flags (e.g. MBEDTLS_X509_KU_DIGITAL_SIGNATURE | MBEDTLS_X509_KU_KEY_CERT_SIGN) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_usage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>key usage flags to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or <ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></para></simplesect>
+<simplesect kind="note"><para>The <computeroutput>decipherOnly</computeroutput> flag from the Key Usage extension is represented by bit 8 (i.e. <computeroutput>0x8000</computeroutput>), which cannot typically be represented in an unsigned char. Therefore, the flag <computeroutput>decipherOnly</computeroutput> (i.e. <ref refid="x509_8h_1a31fc57928d31156729c4a18726044bfd" kindref="member">MBEDTLS_X509_KU_DECIPHER_ONLY</ref>) cannot be set using this function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="276" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga1e858c3446a4d3701c19c6fae89004e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_set_subject_alternative_name</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, const mbedtls_x509_san_list *san_list)</argsstring>
+        <name>mbedtls_x509write_csr_set_subject_alternative_name</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__x509__san__list" kindref="compound">mbedtls_x509_san_list</ref> *</type>
+          <declname>san_list</declname>
+        </param>
+        <briefdescription>
+<para>Set Subject Alternative Name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>san_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of SAN values</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or <ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></para></simplesect>
+<simplesect kind="note"><para>Only &quot;dnsName&quot;, &quot;uniformResourceIdentifier&quot; and &quot;otherName&quot;, as defined in RFC 5280, are supported. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="289" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga22571c0a8439dcacaa9762eca4d73a6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_set_ns_cert_type</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, unsigned char ns_cert_type)</argsstring>
+        <name>mbedtls_x509write_csr_set_ns_cert_type</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>ns_cert_type</declname>
+        </param>
+        <briefdescription>
+<para>Set the Netscape Cert Type flags (e.g. MBEDTLS_X509_NS_CERT_TYPE_SSL_CLIENT | MBEDTLS_X509_NS_CERT_TYPE_EMAIL) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ns_cert_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Netscape Cert Type flags to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or <ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga9b4c8222df57c58315f8fbe5b8f5f860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_set_extension</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, const char *oid, size_t oid_len, int critical, const unsigned char *val, size_t val_len)</argsstring>
+        <name>mbedtls_x509write_csr_set_extension</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>oid_len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>critical</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>val_len</declname>
+        </param>
+        <briefdescription>
+<para>Generic function to add to or replace an extension in the CSR. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OID of the extension </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the OID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>critical</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to 1 to mark the extension as critical, 0 otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value of the extension OCTET STRING </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the value data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a <ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="317" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga223d765f33318e804739f9cf81eddef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_x509write_csr_free</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx)</argsstring>
+        <name>mbedtls_x509write_csr_free</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Free the contents of a CSR context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR context to free </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="327" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga73e30958c8dedfa74b95e675500f7827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_der</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_x509write_csr_der</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a CSR (Certificate Signing Request) to a DER structure Note: data is written at the end of the buffer! Use the return value to determine where you should start using the buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR to write away </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>length of data written if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="344" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__x509__module_1ga11320c399a5fef1c9a235d0e998d5462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_x509write_csr_pem</definition>
+        <argsstring>(mbedtls_x509write_csr *ctx, unsigned char *buf, size_t size)</argsstring>
+        <name>mbedtls_x509write_csr_pem</name>
+        <param>
+          <type><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a CSR (Certificate Signing Request) to a PEM string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>CSR to write away </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a specific error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="358" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>X.509 certificate signing request parsing and writing. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_X509_CSR_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_X509_CSR_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="x509_8h" kindref="compound">mbedtls/x509.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38" refid="structmbedtls__x509__csr" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="structmbedtls__x509__csr_1ad3c60458143eb1ddedfa573466931a70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__csr_1ad3c60458143eb1ddedfa573466931a70" kindref="member">raw</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="structmbedtls__x509__csr_1a6adcb10c37a6bc946310d54567468f8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__csr_1a6adcb10c37a6bc946310d54567468f8a" kindref="member">cri</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="structmbedtls__x509__csr_1a455e44fb96cdcd346788e0a41d7ab2b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__csr_1a455e44fb96cdcd346788e0a41d7ab2b5" kindref="member">version</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="structmbedtls__x509__csr_1ad85a7b3987a80254911b8d48a1beb78f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><sp/><ref refid="structmbedtls__x509__csr_1ad85a7b3987a80254911b8d48a1beb78f" kindref="member">subject_raw</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="structmbedtls__x509__csr_1a0c403df635495f8cba9b3e1001fc4491" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_x509_name</ref><sp/><ref refid="structmbedtls__x509__csr_1a0c403df635495f8cba9b3e1001fc4491" kindref="member">subject</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="structmbedtls__x509__csr_1abacfec387e945f59a35a106eebba0a1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/><ref refid="structmbedtls__x509__csr_1abacfec387e945f59a35a106eebba0a1c" kindref="member">pk</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="structmbedtls__x509__csr_1ac0cbccef0ee915076f2a64fddc560032" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__csr_1ac0cbccef0ee915076f2a64fddc560032" kindref="member">key_usage</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="structmbedtls__x509__csr_1a2d6c4fdb73db81e0f57bcb0b41cc52d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__csr_1a2d6c4fdb73db81e0f57bcb0b41cc52d5" kindref="member">ns_cert_type</ref>;<sp/></highlight></codeline>
+<codeline lineno="51" refid="structmbedtls__x509__csr_1a20b12c83d1f2696d94a1185b0eba7bf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_x509_sequence</ref><sp/><ref refid="structmbedtls__x509__csr_1a20b12c83d1f2696d94a1185b0eba7bf1" kindref="member">subject_alt_names</ref>;<sp/></highlight></codeline>
+<codeline lineno="53" refid="structmbedtls__x509__csr_1afc9898d70ae2aac9d6639db4ff31326a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(ext_types);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="structmbedtls__x509__csr_1a2d9ee56aee03832cb531eb78a53224f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/><ref refid="structmbedtls__x509__csr_1a2d9ee56aee03832cb531eb78a53224f4" kindref="member">sig_oid</ref>;</highlight></codeline>
+<codeline lineno="56" refid="structmbedtls__x509__csr_1abacc20d7a08bf8d12c8b10c6d51329a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(sig);</highlight></codeline>
+<codeline lineno="57" refid="structmbedtls__x509__csr_1ad7f21a9646a90662f8bf83f6bf5e87bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>MBEDTLS_PRIVATE(sig_md);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="structmbedtls__x509__csr_1a9d75179b898c15b522310fd8cae52984" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref><sp/>MBEDTLS_PRIVATE(sig_pk);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="group__x509__module_1gae481b23df67001bdac96ef9c2ab3ef7c" kindref="member">mbedtls_x509_csr</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structmbedtls__x509write__csr" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>{</highlight></codeline>
+<codeline lineno="66" refid="structmbedtls__x509write__csr_1afbdc878d2ab9439923be193d3622bafd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*MBEDTLS_PRIVATE(key);</highlight></codeline>
+<codeline lineno="67" refid="structmbedtls__x509write__csr_1ae63ba1d7ce40e5b2f29e0f9b2ecbfa19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*MBEDTLS_PRIVATE(subject);</highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__x509write__csr_1a843d4f6e394a55a808b995b0db62e1cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>MBEDTLS_PRIVATE(md_alg);</highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__x509write__csr_1a53d080dc6b0fea35ff5df5d49fc86ed5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*MBEDTLS_PRIVATE(extensions);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="group__x509__module_1ga7b0b4f8c5cfd541ee20c53907edb636d" kindref="member">mbedtls_x509write_csr</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_X509_CSR_PARSE_C)</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="90"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga4c58fa3804ea9feb1acf745221f17208" kindref="member">mbedtls_x509_csr_parse_der</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="group__x509__module_1gac68e718a18e421ab2cc4696062cb77a6" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="group__x509__module_1gac68e718a18e421ab2cc4696062cb77a6" kindref="member">mbedtls_x509_csr_ext_cb_t</ref>)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_ctx,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*csr,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*oid,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>critical,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*p,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga7fb532d8efed6610e9e4ec57da35448c" kindref="member">mbedtls_x509_csr_parse_der_with_ext_cb</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__x509__module_1gac68e718a18e421ab2cc4696062cb77a6" kindref="member">mbedtls_x509_csr_ext_cb_t</ref><sp/>cb,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p_ctx);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga53012fb8859f4835ccfb0a5e359b3176" kindref="member">mbedtls_x509_csr_parse</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="181"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gaf49db7323eee45d9649600de18d715f8" kindref="member">mbedtls_x509_csr_parse_file</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_X509_REMOVE_INFO)</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="197"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_x509_csr_info(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*prefix,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_X509_REMOVE_INFO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="206"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga984db025f6953ea61be7dfca2d928f37" kindref="member">mbedtls_x509_csr_init</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gac2139becff64aa7294ecad4f40767a84" kindref="member">mbedtls_x509_csr_free</ref>(<ref refid="structmbedtls__x509__csr" kindref="compound">mbedtls_x509_csr</ref><sp/>*csr);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_X509_CSR_PARSE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="215"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_X509_CSR_WRITE_C)</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="224"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga7892bce1ba95bfe909929f9b9c1362e8" kindref="member">mbedtls_x509write_csr_init</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga954eae166b125cea2115b7db8c896e90" kindref="member">mbedtls_x509write_csr_set_subject_name</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*subject_name);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gac4f0b724b1c7006d178e2d71c964f54c" kindref="member">mbedtls_x509write_csr_set_key</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,<sp/><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref><sp/>*key);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga2be90e1d59d29b2309670700a8c0420f" kindref="member">mbedtls_x509write_csr_set_md_alg</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,<sp/><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref><sp/>md_alg);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1gac5ed085a0dee293f6c152ecd597473be" kindref="member">mbedtls_x509write_csr_set_key_usage</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key_usage);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga1e858c3446a4d3701c19c6fae89004e7" kindref="member">mbedtls_x509write_csr_set_subject_alternative_name</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__san__list" kindref="compound">mbedtls_x509_san_list</ref><sp/>*san_list);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga22571c0a8439dcacaa9762eca4d73a6e" kindref="member">mbedtls_x509write_csr_set_ns_cert_type</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ns_cert_type);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga9b4c8222df57c58315f8fbe5b8f5f860" kindref="member">mbedtls_x509write_csr_set_extension</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*oid,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oid_len,</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>critical,</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>val_len);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga223d765f33318e804739f9cf81eddef6" kindref="member">mbedtls_x509write_csr_free</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga73e30958c8dedfa74b95e675500f7827" kindref="member">mbedtls_x509write_csr_der</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PEM_WRITE_C)</highlight></codeline>
+<codeline lineno="347"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="358"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__x509__module_1ga11320c399a5fef1c9a235d0e998d5462" kindref="member">mbedtls_x509write_csr_pem</ref>(<ref refid="structmbedtls__x509write__csr" kindref="compound">mbedtls_x509write_csr</ref><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PEM_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="360"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_X509_CSR_WRITE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="361"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="364"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="365"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="367"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_x509_csr.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h"/>
+  </compounddef>
+</doxygen>

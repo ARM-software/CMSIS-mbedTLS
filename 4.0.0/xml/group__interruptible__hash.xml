@@ -1,0 +1,933 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__interruptible__hash" kind="group">
+    <compoundname>interruptible_hash</compoundname>
+    <title>Interruptible sign/verify hash</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__interruptible__hash_1ga6948d4653175b1b530a265540066a7e7" prot="public" static="no">
+        <type>struct <ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_s</ref></type>
+        <definition>typedef struct psa_sign_hash_interruptible_operation_s psa_sign_hash_interruptible_operation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_sign_hash_interruptible_operation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for interruptible hash signing operations.</para><para>Before calling any function on a sign hash operation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(operation));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_t</ref><sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" kindref="member">PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_t</ref><sp/>operation<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="crypto__struct_8h_1ae8d7c502f24f810c3abad377daa8b051" kindref="member">PSA_SIGN_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" kindref="member">psa_sign_hash_interruptible_operation_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__sign__hash__interruptible__operation__s" kindref="compound">psa_sign_hash_interruptible_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/><ref refid="crypto__struct_8h_1a12166ea6ade6825a053b698ed510ef33" kindref="member">psa_sign_hash_interruptible_operation_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4268" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" bodystart="4311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__interruptible__hash_1ga537054cf4909ad1426331ae4ce7148bb" prot="public" static="no">
+        <type>struct <ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_s</ref></type>
+        <definition>typedef struct psa_verify_hash_interruptible_operation_s psa_verify_hash_interruptible_operation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_verify_hash_interruptible_operation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for interruptible hash verification operations.</para><para>Before calling any function on a sign hash operation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(operation));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_t</ref><sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" kindref="member">PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_t</ref><sp/>operation<sp/>=</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="crypto__struct_8h_1aed5b04a316ca690bd97f5ea0d2b905b9" kindref="member">PSA_VERIFY_HASH_INTERRUPTIBLE_OPERATION_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" kindref="member">psa_verify_hash_interruptible_operation_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__verify__hash__interruptible__operation__s" kindref="compound">psa_verify_hash_interruptible_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/><ref refid="crypto__struct_8h_1a570efe3897a9133ffa0373b9984d076c" kindref="member">psa_verify_hash_interruptible_operation_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4268" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" bodystart="4344" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void psa_interruptible_set_max_ops</definition>
+        <argsstring>(uint32_t max_ops)</argsstring>
+        <name>psa_interruptible_set_max_ops</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>max_ops</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum number of ops allowed to be executed by an interruptible function in a single call. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>The time taken to execute a single op is implementation specific and depends on software, hardware, the algorithm, key type and curve chosen. Even within a single operation, successive ops can take differing amounts of time. The only guarantee is that lower values for <computeroutput>max_ops</computeroutput> means functions will block for a lesser maximum amount of time. The functions <computeroutput>psa_sign_interruptible_get_num_ops()</computeroutput>, <computeroutput>psa_verify_interruptible_get_num_ops()</computeroutput> and <computeroutput><ref refid="group__interruptible__generate__key_1gad2e3a4cf8496963d572a45e35666bed3" kindref="member">psa_generate_key_iop_get_num_ops()</ref></computeroutput> are provided to help with tuning this value.</para><simplesectsep/><para>This value defaults to <ref refid="group__interruptible_1gad19c1da7f6b7d59d5873d5b68eb943d4" kindref="member">PSA_INTERRUPTIBLE_MAX_OPS_UNLIMITED</ref>, which means the whole operation will be done in one go, regardless of the number of ops required.</para><simplesectsep/><para>If more ops are needed to complete a computation, <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> will be returned by the function performing the computation. It is then the caller&apos;s responsibility to either call again with the same operation context until it returns 0 or an error code; or to call the relevant abort function if the answer is no longer required.</para><simplesectsep/><para>The interpretation of <computeroutput>max_ops</computeroutput> is also implementation defined. On a hard real time system, this can indicate a hard deadline, as a real-time system needs a guarantee of not spending more than X time, however care must be taken in such an implementation to avoid the situation whereby calls just return, not being able to do any actual work within the allotted time. On a non-real-time system, the implementation can be more relaxed, but again whether this number should be interpreted as as hard or soft limit or even whether a less than or equals as regards to ops executed in a single call is implementation defined.</para><simplesectsep/><para>For keys in local storage when no accelerator driver applies, please see also the documentation for <computeroutput>mbedtls_ecp_set_max_ops()</computeroutput>, which is the internal implementation in these cases.</para></simplesect>
+<simplesect kind="warning"><para>With implementations that interpret this number as a hard limit, setting this number too small may result in an infinite loop, whereby each call results in immediate return with no ops done (as there is not enough time to execute any), and thus no result will ever be achieved.</para></simplesect>
+<simplesect kind="note"><para>This only applies to functions whose documentation mentions they may return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_ops</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The maximum number of ops to be executed in a single call. This can be a number from 0 to <ref refid="group__interruptible_1gad19c1da7f6b7d59d5873d5b68eb943d4" kindref="member">PSA_INTERRUPTIBLE_MAX_OPS_UNLIMITED</ref>, where 0 is the least amount of work done per call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4419" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga73e66a6d93f2690b626fcea20ada62b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_interruptible_get_max_ops</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_interruptible_get_max_ops</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the maximum number of ops allowed to be executed by an interruptible function in a single call. This will return the last value set by <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> or <ref refid="group__interruptible_1gad19c1da7f6b7d59d5873d5b68eb943d4" kindref="member">PSA_INTERRUPTIBLE_MAX_OPS_UNLIMITED</ref> if that function has never been called. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="return"><para>Maximum number of ops allowed to be executed by an interruptible function in a single call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4438" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga2740b39986a7bd6b8dd61b9e36770ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_sign_hash_get_num_ops</definition>
+        <argsstring>(const psa_sign_hash_interruptible_operation_t *operation)</argsstring>
+        <name>psa_sign_hash_get_num_ops</name>
+        <param>
+          <type>const <ref refid="group__interruptible__hash_1ga6948d4653175b1b530a265540066a7e7" kindref="member">psa_sign_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of ops that a hash signing operation has taken so far. If the operation has completed, then this will represent the number of ops required for the entire operation. After initialization or calling <computeroutput>psa_sign_hash_interruptible_abort()</computeroutput> on the operation, a value of 0 will be returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This interface is guaranteed re-entrant and thus may be called from driver code.</para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+This is a helper provided to help you tune the value passed to <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_sign_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of ops that the operation has taken so far. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4466" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga0abdbf79939c61a9726342f3a1ab59d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_verify_hash_get_num_ops</definition>
+        <argsstring>(const psa_verify_hash_interruptible_operation_t *operation)</argsstring>
+        <name>psa_verify_hash_get_num_ops</name>
+        <param>
+          <type>const <ref refid="group__interruptible__hash_1ga537054cf4909ad1426331ae4ce7148bb" kindref="member">psa_verify_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of ops that a hash verification operation has taken so far. If the operation has completed, then this will represent the number of ops required for the entire operation. After initialization or calling <computeroutput>psa_verify_hash_interruptible_abort()</computeroutput> on the operation, a value of 0 will be returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+This is a helper provided to help you tune the value passed to <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_verify_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of ops that the operation has taken so far. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4493" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga441988da830205182b3e791352537fac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_sign_hash_start</definition>
+        <argsstring>(psa_sign_hash_interruptible_operation_t *operation, mbedtls_svc_key_id_t key, psa_algorithm_t alg, const uint8_t *hash, size_t hash_length)</argsstring>
+        <name>psa_sign_hash_start</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga6948d4653175b1b530a265540066a7e7" kindref="member">psa_sign_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_length</declname>
+        </param>
+        <briefdescription>
+<para>Start signing a hash or short message with a private key, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__asymmetric_1ga785e746a31a7b2a35ae5175c5ace3c5c" kindref="member">psa_sign_hash()</ref></computeroutput> but <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function call.</para><simplesectsep/><para>Users should call <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> repeatedly on the same context after a successful call to this function until <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> either returns 0 or an error. <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> will return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if there is more work to do. Alternatively users can call <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_sign_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. It must be an asymmetric key pair. The key must allow the usage <ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A signature algorithm (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga7664f69c28b193cc6cb8368481fcda64" kindref="member">PSA_ALG_IS_SIGN_HASH</ref>(<computeroutput>alg</computeroutput>) is true), that is compatible with the type of <computeroutput>key</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash or message to sign. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation started successfully - call <computeroutput><ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref></computeroutput> with the same context to complete the operation</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key does not have the <ref refid="group__policy_1ga181c73e00d9e95aa3a8366f26c4380b6" kindref="member">PSA_KEY_USAGE_SIGN_HASH</ref> flag, or it does not permit the requested algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An operation has previously been started on this context, and is still in progress. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4567" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_sign_hash_complete</definition>
+        <argsstring>(psa_sign_hash_interruptible_operation_t *operation, uint8_t *signature, size_t signature_size, size_t *signature_length)</argsstring>
+        <name>psa_sign_hash_complete</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga6948d4653175b1b530a265540066a7e7" kindref="member">psa_sign_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>signature_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>signature_length</declname>
+        </param>
+        <briefdescription>
+<para>Continue and eventually complete the action of signing a hash or short message with a private key, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__asymmetric_1ga785e746a31a7b2a35ae5175c5ace3c5c" kindref="member">psa_sign_hash()</ref></computeroutput> but this function can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function call.</para><simplesectsep/><para>Users should call this function on the same operation object repeatedly until it either returns 0 or an error. This function will return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if there is more work to do. Alternatively users can call <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_sign_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first, and have had <computeroutput><ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref></computeroutput> called with it first.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the signature is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>signature</computeroutput> buffer in bytes. This must be appropriate for the selected algorithm and key:<itemizedlist>
+<listitem><para>The required signature size is <ref refid="crypto__sizes_8h_1a31021bbd8bb365fc350532b5fd18a25a" kindref="member">PSA_SIGN_OUTPUT_SIZE</ref>(<computeroutput>key_type</computeroutput>, <computeroutput>key_bits</computeroutput>, <computeroutput>alg</computeroutput>) where <computeroutput>key_type</computeroutput> and <computeroutput>key_bits</computeroutput> are the type and bit-size respectively of key.</para></listitem><listitem><para><ref refid="crypto__sizes_8h_1a687a317642db9486fda38ea553900a1e" kindref="member">PSA_SIGNATURE_MAX_SIZE</ref> evaluates to the maximum signature size of any supported signature algorithm. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">signature_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned signature value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation completed successfully</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation was interrupted due to the setting of <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>. There is still work to be done. Call this function again with the same operation object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>signature</computeroutput> buffer is too small. You can determine a sufficient buffer size by calling <ref refid="crypto__sizes_8h_1a31021bbd8bb365fc350532b5fd18a25a" kindref="member">PSA_SIGN_OUTPUT_SIZE</ref>(<computeroutput>key_type</computeroutput>, <computeroutput>key_bits</computeroutput>, <computeroutput>alg</computeroutput>) where <computeroutput>key_type</computeroutput> and <computeroutput>key_bits</computeroutput> are the type and bit-size respectively of <computeroutput>key</computeroutput>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An operation was not previously started on this context via <computeroutput><ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref></computeroutput>.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has either not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> or you did not previously call <ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref> with this operation object. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4660" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_sign_hash_abort</definition>
+        <argsstring>(psa_sign_hash_interruptible_operation_t *operation)</argsstring>
+        <name>psa_sign_hash_abort</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga6948d4653175b1b530a265540066a7e7" kindref="member">psa_sign_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Abort a sign hash operation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function is the only function that clears the number of ops completed as part of the operation. Please ensure you copy this value via <computeroutput><ref refid="group__interruptible__hash_1ga2740b39986a7bd6b8dd61b9e36770ef2" kindref="member">psa_sign_hash_get_num_ops()</ref></computeroutput> if required before calling.</para><simplesectsep/><para>Aborting an operation frees all associated resources except for the <computeroutput>operation</computeroutput> structure itself. Once aborted, the operation object can be reused for another operation by calling <computeroutput><ref refid="group__interruptible__hash_1ga441988da830205182b3e791352537fac" kindref="member">psa_sign_hash_start()</ref></computeroutput> again.</para><simplesectsep/><para>You may call this function any time after the operation object has been initialized. In particular, calling <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput> after the operation has already been terminated by a call to <computeroutput><ref refid="group__interruptible__hash_1gae893a4813aa8e03bd201fe4f1bbbb403" kindref="member">psa_sign_hash_abort()</ref></computeroutput> or <ref refid="group__interruptible__hash_1ga79849aaa7004a85d2ffbc4b658a333dd" kindref="member">psa_sign_hash_complete()</ref> is safe.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialized sign hash operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation was aborted successfully.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4702" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_verify_hash_start</definition>
+        <argsstring>(psa_verify_hash_interruptible_operation_t *operation, mbedtls_svc_key_id_t key, psa_algorithm_t alg, const uint8_t *hash, size_t hash_length, const uint8_t *signature, size_t signature_length)</argsstring>
+        <name>psa_verify_hash_start</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga537054cf4909ad1426331ae4ce7148bb" kindref="member">psa_verify_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hash_length</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>signature</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>signature_length</declname>
+        </param>
+        <briefdescription>
+<para>Start reading and verifying a hash or short message, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__asymmetric_1gae2ffbf01e5266391aff22b101a49f5f5" kindref="member">psa_verify_hash()</ref></computeroutput> but <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function.</para><simplesectsep/><para>Users should call <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> repeatedly on the same operation object after a successful call to this function until <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> either returns 0 or an error. <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> will return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if there is more work to do. Alternatively users can call <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_verify_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. The key must allow the usage <ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A signature algorithm (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga7664f69c28b193cc6cb8368481fcda64" kindref="member">PSA_ALG_IS_SIGN_HASH</ref>(<computeroutput>alg</computeroutput>) is true), that is compatible with the type of <computeroutput>key</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The hash whose signature is to be verified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>hash</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">signature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the signature to verify. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>signature_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>signature</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation started successfully - please call <computeroutput><ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref></computeroutput> with the same context to complete the operation.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Another operation has already been started on this context, and is still in progress.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key does not have the <ref refid="group__policy_1gafadf131ef2182045e3483d03aadaa1bd" kindref="member">PSA_KEY_USAGE_VERIFY_HASH</ref> flag, or it does not permit the requested algorithm.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_DATA_CORRUPT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_DATA_INVALID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4779" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_verify_hash_complete</definition>
+        <argsstring>(psa_verify_hash_interruptible_operation_t *operation)</argsstring>
+        <name>psa_verify_hash_complete</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga537054cf4909ad1426331ae4ce7148bb" kindref="member">psa_verify_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Continue and eventually complete the action of reading and verifying a hash or short message signed with a private key, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__asymmetric_1gae2ffbf01e5266391aff22b101a49f5f5" kindref="member">psa_verify_hash()</ref></computeroutput> but this function can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function call.</para><simplesectsep/><para>Users should call this function on the same operation object repeatedly until it either returns 0 or an error. This function will return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if there is more work to do. Alternatively users can call <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_verify_hash_interruptible_operation_t</computeroutput> to use. This must be initialized first, and have had <computeroutput><ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref></computeroutput> called with it first.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation completed successfully, and the passed signature is valid.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation was interrupted due to the setting of <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>. There is still work to be done. Call this function again with the same operation object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The calculation was performed successfully, but the passed signature is not a valid signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An operation was not previously started on this context via <computeroutput><ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref></computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has either not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> or you did not previously call <ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref> on this object. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4856" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_verify_hash_abort</definition>
+        <argsstring>(psa_verify_hash_interruptible_operation_t *operation)</argsstring>
+        <name>psa_verify_hash_abort</name>
+        <param>
+          <type><ref refid="group__interruptible__hash_1ga537054cf4909ad1426331ae4ce7148bb" kindref="member">psa_verify_hash_interruptible_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Abort a verify hash operation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function is the only function that clears the number of ops completed as part of the operation. Please ensure you copy this value via <computeroutput><ref refid="group__interruptible__hash_1ga0abdbf79939c61a9726342f3a1ab59d7" kindref="member">psa_verify_hash_get_num_ops()</ref></computeroutput> if required before calling.</para><simplesectsep/><para>Aborting an operation frees all associated resources except for the operation structure itself. Once aborted, the operation object can be reused for another operation by calling <computeroutput><ref refid="group__interruptible__hash_1ga912eb51fb94056858f451f276ee289cb" kindref="member">psa_verify_hash_start()</ref></computeroutput> again.</para><simplesectsep/><para>You may call this function any time after the operation object has been initialized. In particular, calling <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput> after the operation has already been terminated by a call to <computeroutput><ref refid="group__interruptible__hash_1ga18dc9c0cc27d590c5e3b186094d90f88" kindref="member">psa_verify_hash_abort()</ref></computeroutput> or <ref refid="group__interruptible__hash_1ga67fe82352bc2f8c0343e231a70a5bc7d" kindref="member">psa_verify_hash_complete()</ref> is safe.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialized verify hash operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation was aborted successfully.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="4896" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

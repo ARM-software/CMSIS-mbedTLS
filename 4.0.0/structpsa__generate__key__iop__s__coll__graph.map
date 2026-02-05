@@ -1,0 +1,6 @@
+<map id="psa_generate_key_iop_s" name="psa_generate_key_iop_s">
+<area shape="rect" id="node2" href="$structmbedtls__psa__generate__key__iop__t.html" title="mbedtls_psa_generate\l_key_iop_t" alt="" coords="5,95,159,136"/>
+<area shape="rect" id="node3" href="$structpsa__key__attributes__s.html" title="psa_key_attributes_s" alt="" coords="183,102,330,129"/>
+<area shape="rect" id="node4" href="$structpsa__key__policy__s.html" title="psa_key_policy_s" alt="" coords="112,5,239,32"/>
+<area shape="rect" id="node5" href="$structmbedtls__svc__key__id__t.html" title="mbedtls_svc_key_id_t" alt="" coords="263,5,413,32"/>
+</map>

@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="memory__buffer__alloc_8h" kind="file">
+    <compoundname>memory_buffer_alloc.h</compoundname>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="3257">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3260">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3256">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+      </node>
+      <node id="3262">
+        <label>stddef.h</label>
+      </node>
+      <node id="3261">
+        <label>limits.h</label>
+      </node>
+      <node id="3255">
+        <label>memory_buffer_alloc.h</label>
+        <link refid="memory_buffer_alloc.h"/>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+      </node>
+      <node id="3258">
+        <label>/dev/null</label>
+      </node>
+      <node id="3259">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="memory__buffer__alloc_8h_1a2b9fd1ef7a128cf7680e6c9c377134d4" prot="public" static="no">
+        <name>MBEDTLS_MEMORY_VERIFY_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="31" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory__buffer__alloc_8h_1a3fb815b3f3b7cfce7c5ddd6f2a33b80d" prot="public" static="no">
+        <name>MBEDTLS_MEMORY_VERIFY_ALLOC</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="32" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory__buffer__alloc_8h_1a1c7f2d8956e95373dcb4fe24154b6650" prot="public" static="no">
+        <name>MBEDTLS_MEMORY_VERIFY_FREE</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="33" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="memory__buffer__alloc_8h_1a581a709e67d33b34d3c8a7dfb4b3df00" prot="public" static="no">
+        <name>MBEDTLS_MEMORY_VERIFY_ALWAYS</name>
+        <initializer>(<ref refid="memory__buffer__alloc_8h_1a3fb815b3f3b7cfce7c5ddd6f2a33b80d" kindref="member">MBEDTLS_MEMORY_VERIFY_ALLOC</ref> | \
+                                            <ref refid="memory__buffer__alloc_8h_1a1c7f2d8956e95373dcb4fe24154b6650" kindref="member">MBEDTLS_MEMORY_VERIFY_FREE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="34" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1ac70d134be54133c272d8eab2cb85dfbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_init</definition>
+        <argsstring>(unsigned char *buf, size_t len)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_init</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Initialize use of stack-based memory allocator. The stack-based allocator does memory management inside the presented buffer and does not call calloc() and free(). It sets the global <ref refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" kindref="member">mbedtls_calloc()</ref> and <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref> pointers to its own functions. (Provided <ref refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" kindref="member">mbedtls_calloc()</ref> and <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref> are thread-safe if MBEDTLS_THREADING_C is defined) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This code is not optimized and provides a straight-forward implementation of a stack-based memory allocator.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to use as heap </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1ae9d7316a19b72776f34ba74720a06325" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_free</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_free</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Free the mutex for thread-safety and clear remaining memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1aaa50603bb2f2f1fe8d97d6953589b832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_set_verify</definition>
+        <argsstring>(int verify)</argsstring>
+        <name>mbedtls_memory_buffer_set_verify</name>
+        <param>
+          <type>int</type>
+          <declname>verify</declname>
+        </param>
+        <briefdescription>
+<para>Determine when the allocator should automatically verify the state of the entire chain of headers / meta-data. (Default: MBEDTLS_MEMORY_VERIFY_NONE) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verify</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of MBEDTLS_MEMORY_VERIFY_NONE, MBEDTLS_MEMORY_VERIFY_ALLOC, MBEDTLS_MEMORY_VERIFY_FREE or MBEDTLS_MEMORY_VERIFY_ALWAYS </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1a1bba2926075405563c0376667e1670ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_status</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_status</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Print out the status of the allocated memory (primarily for use after a program should have de-allocated all memory) Prints out a list of &apos;still allocated&apos; blocks and their stack trace if MBEDTLS_MEMORY_BACKTRACE is defined. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1a1fa2317fa1a140795bd55bcbb5ccb6c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_count_get</definition>
+        <argsstring>(size_t *alloc_count, size_t *free_count)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_count_get</name>
+        <param>
+          <type>size_t *</type>
+          <declname>alloc_count</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>free_count</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of alloc/free so far. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alloc_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of allocations. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frees. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1af66eabf57b4778c23ad93f82db5d02e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_max_get</definition>
+        <argsstring>(size_t *max_used, size_t *max_blocks)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_max_get</name>
+        <param>
+          <type>size_t *</type>
+          <declname>max_used</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>max_blocks</declname>
+        </param>
+        <briefdescription>
+<para>Get the peak heap usage so far. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>max_used</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peak number of bytes in use or committed. This includes bytes in allocated blocks too small to split into smaller blocks but larger than the requested size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max_blocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Peak number of blocks in use, including free and used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1a09f5bd31baaa7c50507085c061371b8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_max_reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_max_reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reset peak statistics. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1ad677fd8c219056d4dc9992534a913677" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_memory_buffer_alloc_cur_get</definition>
+        <argsstring>(size_t *cur_used, size_t *cur_blocks)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_cur_get</name>
+        <param>
+          <type>size_t *</type>
+          <declname>cur_used</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>cur_blocks</declname>
+        </param>
+        <briefdescription>
+<para>Get the current heap usage. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cur_used</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current number of bytes in use or committed. This includes bytes in allocated blocks too small to split into smaller blocks but larger than the requested size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cur_blocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current number of blocks in use, including free and used </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1a7aae8a0cd61f08dd6734ebc8a8a3ba38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_memory_buffer_alloc_verify</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_verify</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Verifies that all headers in the memory buffer are correct and contain sane values. Helps debug buffer-overflow errors. </para>        </briefdescription>
+        <detaileddescription>
+<para>Prints out first failure if MBEDTLS_MEMORY_DEBUG is defined. Prints out full header information if MBEDTLS_MEMORY_DEBUG is defined. (Includes stack trace information for each block if MBEDTLS_MEMORY_BACKTRACE is defined as well).</para><para><simplesect kind="return"><para>0 if verified, 1 otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="memory__buffer__alloc_8h_1ab1304c317468fb66c21ee52c79efe084" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_memory_buffer_alloc_self_test</definition>
+        <argsstring>(int verbose)</argsstring>
+        <name>mbedtls_memory_buffer_alloc_self_test</name>
+        <param>
+          <type>int</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Checkup routine. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if successful, or 1 if a test failed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h" line="135" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Buffer-based memory allocator. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_MEMORY_BUFFER_ALLOC_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_BUFFER_ALLOC_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_MEMORY_ALIGN_MULTIPLE)</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_ALIGN_MULTIPLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>4<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="31" refid="memory__buffer__alloc_8h_1a2b9fd1ef7a128cf7680e6c9c377134d4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_VERIFY_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline lineno="32" refid="memory__buffer__alloc_8h_1a3fb815b3f3b7cfce7c5ddd6f2a33b80d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_VERIFY_ALLOC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="33" refid="memory__buffer__alloc_8h_1a1c7f2d8956e95373dcb4fe24154b6650" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_VERIFY_FREE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="34" refid="memory__buffer__alloc_8h_1a581a709e67d33b34d3c8a7dfb4b3df00" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_MEMORY_VERIFY_ALWAYS<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(MBEDTLS_MEMORY_VERIFY_ALLOC<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_MEMORY_VERIFY_FREE)</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="56"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1ac70d134be54133c272d8eab2cb85dfbf" kindref="member">mbedtls_memory_buffer_alloc_init</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1ae9d7316a19b72776f34ba74720a06325" kindref="member">mbedtls_memory_buffer_alloc_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1aaa50603bb2f2f1fe8d97d6953589b832" kindref="member">mbedtls_memory_buffer_set_verify</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verify);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_MEMORY_DEBUG)</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1a1bba2926075405563c0376667e1670ae" kindref="member">mbedtls_memory_buffer_alloc_status</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1a1fa2317fa1a140795bd55bcbb5ccb6c7" kindref="member">mbedtls_memory_buffer_alloc_count_get</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*alloc_count,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*free_count);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1af66eabf57b4778c23ad93f82db5d02e3" kindref="member">mbedtls_memory_buffer_alloc_max_get</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*max_used,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*max_blocks);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1a09f5bd31baaa7c50507085c061371b8b" kindref="member">mbedtls_memory_buffer_alloc_max_reset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1ad677fd8c219056d4dc9992534a913677" kindref="member">mbedtls_memory_buffer_alloc_cur_get</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*cur_used,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*cur_blocks);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_MEMORY_DEBUG<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="127"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1a7aae8a0cd61f08dd6734ebc8a8a3ba38" kindref="member">mbedtls_memory_buffer_alloc_verify</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SELF_TEST)</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="135"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="memory__buffer__alloc_8h_1ab1304c317468fb66c21ee52c79efe084" kindref="member">mbedtls_memory_buffer_alloc_self_test</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>verbose);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="137"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>memory_buffer_alloc.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/memory_buffer_alloc.h"/>
+  </compounddef>
+</doxygen>

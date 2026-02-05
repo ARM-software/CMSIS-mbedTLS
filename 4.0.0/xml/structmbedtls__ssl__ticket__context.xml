@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__ticket__context" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_ticket_context</compoundname>
+    <includes refid="ssl__ticket_8h" local="no">ssl_ticket.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__context_1a9d733956afa6c8e5d1068f473bee621a" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__ticket__key" kindref="compound">mbedtls_ssl_ticket_key</ref></type>
+        <definition>mbedtls_ssl_ticket_key mbedtls_ssl_ticket_context::private_keys[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>private_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ticket protection keys </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="65" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__context_1a668ff4c442928912987b263249b77151" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_ticket_context::private_active</definition>
+        <argsstring></argsstring>
+        <name>private_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>index of the currently active key </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="66" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__context_1a361acadc43473495769aaa837c6f93ea" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_ssl_ticket_context::private_ticket_lifetime</definition>
+        <argsstring></argsstring>
+        <name>private_ticket_lifetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>lifetime of tickets in seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="68" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__context_1afaade46e444460f3efde7bb79d6e945e" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_ssl_ticket_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for getting (pseudo-)random numbers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="73" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context for session ticket handling functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="593">
+        <label>mbedtls_ssl_ticket_key</label>
+        <link refid="structmbedtls__ssl__ticket__key"/>
+        <childnode refid="594" relation="usage">
+          <edgelabel>private_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="594">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="592">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+      <node id="591">
+        <label>mbedtls_ssl_ticket_context</label>
+        <link refid="structmbedtls__ssl__ticket__context"/>
+        <childnode refid="592" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="593" relation="usage">
+          <edgelabel>private_keys</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="64" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="64" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__ticket__context_1a668ff4c442928912987b263249b77151" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_context</scope><name>private_active</name></member>
+      <member refid="structmbedtls__ssl__ticket__context_1a9d733956afa6c8e5d1068f473bee621a" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_context</scope><name>private_keys</name></member>
+      <member refid="structmbedtls__ssl__ticket__context_1afaade46e444460f3efde7bb79d6e945e" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__ssl__ticket__context_1a361acadc43473495769aaa837c6f93ea" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_context</scope><name>private_ticket_lifetime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

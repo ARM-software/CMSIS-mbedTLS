@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="threading__alt_8h" kind="file">
+    <compoundname>threading_alt.h</compoundname>
+    <includedby refid="threading_8h" local="yes">threading.h</includedby>
+    <invincdepgraph>
+      <node id="3790">
+        <label>threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="3791" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+      </node>
+      <node id="3789">
+        <label>threading_alt.h</label>
+        <link refid="threading_alt.h"/>
+        <childnode refid="3790" relation="include">
+        </childnode>
+      </node>
+      <node id="3792">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3791">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__threading__mutex__t" prot="public">mbedtls_threading_mutex_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="threading__alt_8h_1aeb3bf51c492406c24d3ae91b864a6a18" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>typedef struct mbedtls_threading_mutex_t  mbedtls_threading_mutex_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_threading_mutex_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/threading_alt.h" line="12" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>threading_alt.h<sp/>with<sp/>dummy<sp/>types<sp/>for<sp/>MBEDTLS_THREADING_ALT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>THREADING_ALT_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>THREADING_ALT_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structmbedtls__threading__mutex__t_1ae9871917f5d7a48a88c3b355d98217ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__threading__mutex__t_1ae9871917f5d7a48a88c3b355d98217ac" kindref="member">dummy</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}<sp/><ref refid="threading__alt_8h_1aeb3bf51c492406c24d3ae91b864a6a18" kindref="member">mbedtls_threading_mutex_t</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>threading_alt.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/threading_alt.h"/>
+  </compounddef>
+</doxygen>

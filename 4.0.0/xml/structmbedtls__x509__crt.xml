@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__crt" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_crt</compoundname>
+    <includes refid="x509__crt_8h" local="no">x509_crt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1abd1a77978c82fdad6706ba6a4cac7893" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt::private_own_buffer</definition>
+        <argsstring></argsstring>
+        <name>private_own_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates if <computeroutput>raw</computeroutput> is owned by the structure or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="42" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a5bfef6b8b81bc081f796cb1f6bb28839" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw certificate data (DER). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="44" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a44e9a884baad5737ef0930af94ca3f94" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::tbs</definition>
+        <argsstring></argsstring>
+        <name>tbs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw certificate body (DER). The part that is To Be Signed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="45" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a879ea07a05ab857c0f5793572bf1696e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The X.509 version. (1=v1, 2=v2, 3=v3) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="47" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a5c3ae8b4aba6e1c40cb1f6a85da36116" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::serial</definition>
+        <argsstring></argsstring>
+        <name>serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique id for certificate issued by a specific CA. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="48" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a128c3a665ffdce696b402435a74e97aa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::sig_oid</definition>
+        <argsstring></argsstring>
+        <name>sig_oid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Signature algorithm, e.g. sha1RSA </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="49" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1afb876a6a7b85e160620c4549324d9e8d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::issuer_raw</definition>
+        <argsstring></argsstring>
+        <name>issuer_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw issuer data (DER). Used for quick comparison. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="51" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1ac30aeab20c2cdf74dae631d6d0691651" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::subject_raw</definition>
+        <argsstring></argsstring>
+        <name>subject_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The raw subject data (DER). Used for quick comparison. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1ade48d67edd24629e28361d3fbc0aafd9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga2272228c7776102328df31623af3168c" kindref="member">mbedtls_x509_name</ref></type>
+        <definition>mbedtls_x509_name mbedtls_x509_crt::issuer</definition>
+        <argsstring></argsstring>
+        <name>issuer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parsed issuer data (named information object). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="54" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a773e92423092ab65e5e50031bd9663a5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga2272228c7776102328df31623af3168c" kindref="member">mbedtls_x509_name</ref></type>
+        <definition>mbedtls_x509_name mbedtls_x509_crt::subject</definition>
+        <argsstring></argsstring>
+        <name>subject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parsed subject data (named information object). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="55" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1aad3cad5d228545a1950850239741784f" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref></type>
+        <definition>mbedtls_x509_time mbedtls_x509_crt::valid_from</definition>
+        <argsstring></argsstring>
+        <name>valid_from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start time of certificate validity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="57" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a05af94003d5948703ca537b6a5f2d5b4" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref></type>
+        <definition>mbedtls_x509_time mbedtls_x509_crt::valid_to</definition>
+        <argsstring></argsstring>
+        <name>valid_to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>End time of certificate validity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="58" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a960a6a5926280bb4b3f8d258bd30f820" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::pk_raw</definition>
+        <argsstring></argsstring>
+        <name>pk_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="60" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a64f66291338e6b230542d83035fe5f20" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref></type>
+        <definition>mbedtls_pk_context mbedtls_x509_crt::pk</definition>
+        <argsstring></argsstring>
+        <name>pk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for the public key context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="61" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a6bb2a7142b718fa43b948770ccc98dcd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::issuer_id</definition>
+        <argsstring></argsstring>
+        <name>issuer_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional X.509 v2/v3 issuer unique identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="63" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1adbbaba207a103a73f41b4b72ffc540f5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::subject_id</definition>
+        <argsstring></argsstring>
+        <name>subject_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional X.509 v2/v3 subject unique identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="64" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a6baebf9741097506a60521fbcaf5996b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::v3_ext</definition>
+        <argsstring></argsstring>
+        <name>v3_ext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional X.509 v3 extensions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="65" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a1f148e8fb52e03e2604e716386a07df4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1gabd52d60a09315854d9ef849d02154f35" kindref="member">mbedtls_x509_sequence</ref></type>
+        <definition>mbedtls_x509_sequence mbedtls_x509_crt::subject_alt_names</definition>
+        <argsstring></argsstring>
+        <name>subject_alt_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional list of raw entries of Subject Alternative Names extension. These can be later parsed by mbedtls_x509_parse_subject_alt_name. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="66" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a55f4006b1e3991d459d9ad609491fe6c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::subject_key_id</definition>
+        <argsstring></argsstring>
+        <name>subject_key_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional X.509 v3 extension subject key identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="67" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a53f156a16507b6d040471b6ef9c35709" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__authority" kindref="compound">mbedtls_x509_authority</ref></type>
+        <definition>mbedtls_x509_authority mbedtls_x509_crt::authority_key_id</definition>
+        <argsstring></argsstring>
+        <name>authority_key_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional X.509 v3 extension authority key identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="68" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a81c81c3105b2abcd527be60d718d7e48" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1gabd52d60a09315854d9ef849d02154f35" kindref="member">mbedtls_x509_sequence</ref></type>
+        <definition>mbedtls_x509_sequence mbedtls_x509_crt::certificate_policies</definition>
+        <argsstring></argsstring>
+        <name>certificate_policies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional list of certificate policies (Only anyPolicy is printed and enforced, however the rest of the policies are still listed). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="70" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1afd232220e32b52eabd1a26c92898516c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt::private_ext_types</definition>
+        <argsstring></argsstring>
+        <name>private_ext_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bit string containing detected and parsed extensions </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="72" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a6ff91751f640b38883bdf5698a7b040b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt::private_ca_istrue</definition>
+        <argsstring></argsstring>
+        <name>private_ca_istrue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional Basic Constraint extension value: 1 if this certificate belongs to a CA, 0 otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="73" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a8292eadbea5d0c354397b70ca39462ea" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt::private_max_pathlen</definition>
+        <argsstring></argsstring>
+        <name>private_max_pathlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional Basic Constraint extension value: The maximum path length to the root certificate. Path length is 1 higher than RFC 5280 &apos;meaning&apos;, so 1+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="74" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a486a42355835d63139c1eb6febc8de7e" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_x509_crt::private_key_usage</definition>
+        <argsstring></argsstring>
+        <name>private_key_usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional key usage extension value: See the values in <ref refid="x509_8h" kindref="compound">x509.h</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="76" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1ac94f7360a7143ce1b983fab46c34dcf2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1gabd52d60a09315854d9ef849d02154f35" kindref="member">mbedtls_x509_sequence</ref></type>
+        <definition>mbedtls_x509_sequence mbedtls_x509_crt::ext_key_usage</definition>
+        <argsstring></argsstring>
+        <name>ext_key_usage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional list of extended key usage OIDs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="78" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a9838239e02136b74a6052729d8c6ebfb" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_x509_crt::private_ns_cert_type</definition>
+        <argsstring></argsstring>
+        <name>private_ns_cert_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional Netscape certificate type extension value: See the values in <ref refid="x509_8h" kindref="compound">x509.h</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="80" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a7233a2876cc05ff0dc4954781fe473b2" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crt::private_sig</definition>
+        <argsstring></argsstring>
+        <name>private_sig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Signature: hash of the tbs part signed with the private key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="82" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a7ef4fd5e6ab3dc6c97015d56ba85b29c" prot="public" static="no" mutable="no">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_x509_crt::private_sig_md</definition>
+        <argsstring></argsstring>
+        <name>private_sig_md</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal representation of the MD algorithm of the signature algorithm, e.g. MBEDTLS_MD_SHA256 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="83" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1a3c34f1af092ed70c93f54aa268683430" prot="public" static="no" mutable="no">
+        <type><ref refid="pk_8h_1afa76daa88e7f480ea923f1bc8754a436" kindref="member">mbedtls_pk_sigalg_t</ref></type>
+        <definition>mbedtls_pk_sigalg_t mbedtls_x509_crt::private_sig_pk</definition>
+        <argsstring></argsstring>
+        <name>private_sig_pk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Internal representation of the Public Key algorithm of the signature algorithm, e.g. MBEDTLS_PK_RSA </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="84" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt_1ac9dbc43b90ddd74fe55452495a304923" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+        <definition>struct mbedtls_x509_crt* mbedtls_x509_crt::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Next certificate in the linked list that constitutes the CA chain. <computeroutput>NULL</computeroutput> indicates the end of the list. Do not modify this field directly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="89" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container for an X.509 certificate. The certificate may be chained.</para><para>Some fields of this structure are publicly readable. Do not modify them except via Mbed TLS library functions: the effect of modifying those fields or the data that those fields points to is unspecified. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="628">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="628" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="629" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="629">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="634">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="627">
+        <label>mbedtls_x509_crt</label>
+        <link refid="structmbedtls__x509__crt"/>
+        <childnode refid="628" relation="usage">
+          <edgelabel>subject_alt_names</edgelabel>
+          <edgelabel>ext_key_usage</edgelabel>
+          <edgelabel>certificate_policies</edgelabel>
+        </childnode>
+        <childnode refid="630" relation="usage">
+          <edgelabel>authority_key_id</edgelabel>
+        </childnode>
+        <childnode refid="631" relation="usage">
+          <edgelabel>issuer</edgelabel>
+          <edgelabel>subject</edgelabel>
+        </childnode>
+        <childnode refid="629" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>pk_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>v3_ext</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>subject_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>subject_id</edgelabel>
+          <edgelabel>subject_key_id</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="632" relation="usage">
+          <edgelabel>valid_to</edgelabel>
+          <edgelabel>valid_from</edgelabel>
+        </childnode>
+        <childnode refid="627" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="633" relation="usage">
+          <edgelabel>pk</edgelabel>
+        </childnode>
+      </node>
+      <node id="630">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="628" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="629" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+      <node id="632">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+      <node id="633">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+        <childnode refid="634" relation="usage">
+          <edgelabel>private_priv_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="631">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="631" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="629" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="41" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="41" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crt_1a53f156a16507b6d040471b6ef9c35709" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>authority_key_id</name></member>
+      <member refid="structmbedtls__x509__crt_1a81c81c3105b2abcd527be60d718d7e48" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>certificate_policies</name></member>
+      <member refid="structmbedtls__x509__crt_1ac94f7360a7143ce1b983fab46c34dcf2" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>ext_key_usage</name></member>
+      <member refid="structmbedtls__x509__crt_1ade48d67edd24629e28361d3fbc0aafd9" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>issuer</name></member>
+      <member refid="structmbedtls__x509__crt_1a6bb2a7142b718fa43b948770ccc98dcd" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>issuer_id</name></member>
+      <member refid="structmbedtls__x509__crt_1afb876a6a7b85e160620c4549324d9e8d" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>issuer_raw</name></member>
+      <member refid="structmbedtls__x509__crt_1ac9dbc43b90ddd74fe55452495a304923" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>next</name></member>
+      <member refid="structmbedtls__x509__crt_1a64f66291338e6b230542d83035fe5f20" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>pk</name></member>
+      <member refid="structmbedtls__x509__crt_1a960a6a5926280bb4b3f8d258bd30f820" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>pk_raw</name></member>
+      <member refid="structmbedtls__x509__crt_1a6ff91751f640b38883bdf5698a7b040b" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_ca_istrue</name></member>
+      <member refid="structmbedtls__x509__crt_1afd232220e32b52eabd1a26c92898516c" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_ext_types</name></member>
+      <member refid="structmbedtls__x509__crt_1a486a42355835d63139c1eb6febc8de7e" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_key_usage</name></member>
+      <member refid="structmbedtls__x509__crt_1a8292eadbea5d0c354397b70ca39462ea" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_max_pathlen</name></member>
+      <member refid="structmbedtls__x509__crt_1a9838239e02136b74a6052729d8c6ebfb" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_ns_cert_type</name></member>
+      <member refid="structmbedtls__x509__crt_1abd1a77978c82fdad6706ba6a4cac7893" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_own_buffer</name></member>
+      <member refid="structmbedtls__x509__crt_1a7233a2876cc05ff0dc4954781fe473b2" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_sig</name></member>
+      <member refid="structmbedtls__x509__crt_1a7ef4fd5e6ab3dc6c97015d56ba85b29c" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_sig_md</name></member>
+      <member refid="structmbedtls__x509__crt_1a3c34f1af092ed70c93f54aa268683430" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>private_sig_pk</name></member>
+      <member refid="structmbedtls__x509__crt_1a5bfef6b8b81bc081f796cb1f6bb28839" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>raw</name></member>
+      <member refid="structmbedtls__x509__crt_1a5c3ae8b4aba6e1c40cb1f6a85da36116" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>serial</name></member>
+      <member refid="structmbedtls__x509__crt_1a128c3a665ffdce696b402435a74e97aa" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>sig_oid</name></member>
+      <member refid="structmbedtls__x509__crt_1a773e92423092ab65e5e50031bd9663a5" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>subject</name></member>
+      <member refid="structmbedtls__x509__crt_1a1f148e8fb52e03e2604e716386a07df4" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>subject_alt_names</name></member>
+      <member refid="structmbedtls__x509__crt_1adbbaba207a103a73f41b4b72ffc540f5" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>subject_id</name></member>
+      <member refid="structmbedtls__x509__crt_1a55f4006b1e3991d459d9ad609491fe6c" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>subject_key_id</name></member>
+      <member refid="structmbedtls__x509__crt_1ac30aeab20c2cdf74dae631d6d0691651" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>subject_raw</name></member>
+      <member refid="structmbedtls__x509__crt_1a44e9a884baad5737ef0930af94ca3f94" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>tbs</name></member>
+      <member refid="structmbedtls__x509__crt_1a6baebf9741097506a60521fbcaf5996b" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>v3_ext</name></member>
+      <member refid="structmbedtls__x509__crt_1aad3cad5d228545a1950850239741784f" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>valid_from</name></member>
+      <member refid="structmbedtls__x509__crt_1a05af94003d5948703ca537b6a5f2d5b4" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>valid_to</name></member>
+      <member refid="structmbedtls__x509__crt_1a879ea07a05ab857c0f5793572bf1696e" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

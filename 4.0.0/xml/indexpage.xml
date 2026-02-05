@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Mbed TLS v4.0.0 API Documentation</title>
+    <detaileddescription>
+<para>This documentation describes the application programming interface (API) of Mbed TLS. It was automatically generated from specially formatted comment blocks in Mbed TLS&apos;s source code using <ulink url="https://www.doxygen.nl">Doxygen</ulink>.</para><para><heading level="2">Main entry points</heading>
+</para><para>You can explore the full API from the “Files” or “Files list” section. Locate the header file for the module that you are interested in and explore its contents.</para><para>Some parts of the API are best explored from the “Topics” or “Group list” section. This is notably the case for the PSA Cryptography API. Note that many parts of the API are not classified under a topic and can only be seen through the file structure.</para><para>For information on configuring the library at compile time, see the configuration header files <ref refid="mbedtls__config_8h" kindref="compound">mbedtls/mbedtls_config.h</ref> and <ref refid="crypto__config_8h" kindref="compound">psa/crypto_config.h</ref>.</para><para><heading level="2">Private interfaces</heading>
+</para><para>For technical reasons, the rendered documentation includes elements that are not considered part of the stable API. Private elements may be removed or may have their semantics changed in a future minor release without notice.</para><para>The following elements are considered private:</para><para><itemizedlist>
+<listitem><para>Any header file whose path contains <computeroutput>/private</computeroutput>, and its contents (unless re-exported and documented in another non-private header).</para></listitem><listitem><para>Any structure or union field whose name starts with <computeroutput>private_</computeroutput>.</para></listitem><listitem><para>Any preprocessor macro that is just listed with its automatically rendered parameter list, value and location. Macros are part of the API only if their documentation has custom text. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

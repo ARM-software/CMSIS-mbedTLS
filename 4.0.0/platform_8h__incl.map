@@ -1,0 +1,11 @@
+<map id="platform.h" name="platform.h">
+<area shape="rect" id="node3" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="486,379,611,420"/>
+<area shape="rect" id="node9" href="$platform__time_8h.html" title="Mbed TLS Platform time abstraction. " alt="" coords="623,155,784,181"/>
+<area shape="rect" id="node10" href="$crypto__driver__random_8h.html" title="Definitions for PSA random and entropy drivers. " alt="" coords="301,80,482,107"/>
+<area shape="rect" id="node21" href="$platform__alt_8h.html" title="platform_alt.h" alt="" coords="940,80,1040,107"/>
+<area shape="rect" id="node4" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="223,475,357,502"/>
+<area shape="rect" id="node11" href="$crypto__driver__common_8h.html" title="Definitions for all PSA crypto drivers. " alt="" coords="270,155,433,181"/>
+<area shape="rect" id="node14" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="221,304,329,331"/>
+<area shape="rect" id="node16" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="177,229,289,256"/>
+<area shape="rect" id="node17" href="$crypto__sizes_8h.html" title="PSA cryptography module: Mbed TLS buffer size macros. " alt="" coords="415,304,547,331"/>
+</map>

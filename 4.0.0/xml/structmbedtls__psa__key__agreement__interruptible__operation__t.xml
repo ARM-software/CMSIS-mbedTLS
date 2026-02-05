@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__key__agreement__interruptible__operation__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_key_agreement_interruptible_operation_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__key__agreement__interruptible__operation__t_1a6548eba8ca2f6cbedf16e39b9907b6a0" prot="public" static="no" mutable="no">
+        <type>mbedtls_ecdh_context</type>
+        <definition>mbedtls_ecdh_context mbedtls_psa_key_agreement_interruptible_operation_t::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="239" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__key__agreement__interruptible__operation__t_1acba5b0e2ff5ee0de6393a3c89a8d8380" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_psa_key_agreement_interruptible_operation_t::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="240" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="237" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="237" bodyend="245"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__key__agreement__interruptible__operation__t_1a6548eba8ca2f6cbedf16e39b9907b6a0" prot="public" virt="non-virtual"><scope>mbedtls_psa_key_agreement_interruptible_operation_t</scope><name>private_ctx</name></member>
+      <member refid="structmbedtls__psa__key__agreement__interruptible__operation__t_1acba5b0e2ff5ee0de6393a3c89a8d8380" prot="public" virt="non-virtual"><scope>mbedtls_psa_key_agreement_interruptible_operation_t</scope><name>private_num_ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

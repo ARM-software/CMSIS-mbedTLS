@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_c9218f60c7194638d63f7f6207f7e543" kind="dir">
+    <compoundname>psa</compoundname>
+    <innerfile refid="crypto_8h">crypto.h</innerfile>
+    <innerfile refid="crypto__adjust__auto__enabled_8h">crypto_adjust_auto_enabled.h</innerfile>
+    <innerfile refid="crypto__adjust__config__dependencies_8h">crypto_adjust_config_dependencies.h</innerfile>
+    <innerfile refid="crypto__adjust__config__derived_8h">crypto_adjust_config_derived.h</innerfile>
+    <innerfile refid="crypto__adjust__config__key__pair__types_8h">crypto_adjust_config_key_pair_types.h</innerfile>
+    <innerfile refid="crypto__adjust__config__synonyms_8h">crypto_adjust_config_synonyms.h</innerfile>
+    <innerfile refid="crypto__builtin__composites_8h">crypto_builtin_composites.h</innerfile>
+    <innerfile refid="crypto__builtin__key__derivation_8h">crypto_builtin_key_derivation.h</innerfile>
+    <innerfile refid="crypto__builtin__primitives_8h">crypto_builtin_primitives.h</innerfile>
+    <innerfile refid="crypto__compat_8h">crypto_compat.h</innerfile>
+    <innerfile refid="crypto__config_8h">crypto_config.h</innerfile>
+    <innerfile refid="crypto__driver__common_8h">crypto_driver_common.h</innerfile>
+    <innerfile refid="crypto__driver__contexts__composites_8h">crypto_driver_contexts_composites.h</innerfile>
+    <innerfile refid="crypto__driver__contexts__key__derivation_8h">crypto_driver_contexts_key_derivation.h</innerfile>
+    <innerfile refid="crypto__driver__contexts__primitives_8h">crypto_driver_contexts_primitives.h</innerfile>
+    <innerfile refid="crypto__driver__random_8h">crypto_driver_random.h</innerfile>
+    <innerfile refid="crypto__extra_8h">crypto_extra.h</innerfile>
+    <innerfile refid="crypto__platform_8h">crypto_platform.h</innerfile>
+    <innerfile refid="crypto__sizes_8h">crypto_sizes.h</innerfile>
+    <innerfile refid="crypto__struct_8h">crypto_struct.h</innerfile>
+    <innerfile refid="crypto__types_8h">crypto_types.h</innerfile>
+    <innerfile refid="crypto__values_8h">crypto_values.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/"/>
+  </compounddef>
+</doxygen>

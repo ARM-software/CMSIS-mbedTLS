@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__psa__tls__helpers" kind="group">
+    <compoundname>psa_tls_helpers</compoundname>
+    <title>TLS helper functions</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__psa__tls__helpers_1gab10d4760c8311a2601e87d26c3ea5405" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t mbedtls_md_psa_alg_from_type</definition>
+        <argsstring>(mbedtls_md_type_t md_type)</argsstring>
+        <name>mbedtls_md_psa_alg_from_type</name>
+        <param>
+          <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+          <declname>md_type</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the PSA algorithm identifier associated with the given digest type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>md_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of digest to search for. Must not be NONE.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>If <computeroutput>md_type</computeroutput> is <computeroutput>MBEDTLS_MD_NONE</computeroutput>, this function will not return <computeroutput>PSA_ALG_NONE</computeroutput>, but an invalid algorithm.</para><simplesectsep/><para>This function does not check if the algorithm is supported, it always returns the corresponding identifier.</para></simplesect>
+<simplesect kind="return"><para>The PSA algorithm identifier associated with <computeroutput>md_type</computeroutput>, regardless of whether it is supported or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="87" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="87" bodyend="90"/>
+        <references refid="group__crypto__types_1gafd048e1835b80e6daaff7fddce699757" compoundref="crypto__values_8h" startline="773">PSA_ALG_CATEGORY_HASH</references>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga0fb398139f41ab2978760cbfd20fe11e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>static mbedtls_md_type_t mbedtls_md_type_from_psa_alg</definition>
+        <argsstring>(psa_algorithm_t psa_alg)</argsstring>
+        <name>mbedtls_md_type_from_psa_alg</name>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>psa_alg</declname>
+        </param>
+        <briefdescription>
+<para>This function returns the given digest type associated with the PSA algorithm identifier. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>psa_alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The PSA algorithm identifier to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>This function does not check if the algorithm is supported, it always returns the corresponding identifier.</para></simplesect>
+<simplesect kind="return"><para>The MD type associated with <computeroutput>psa_alg</computeroutput>, regardless of whether it is supported or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="104" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="104" bodyend="107"/>
+        <references refid="group__crypto__types_1gac41a7077aef55bb20c629c8949d43c57" compoundref="crypto__values_8h" startline="903">PSA_ALG_HASH_MASK</references>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga9295799b5437bdff8ce8abd524c5ef2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_raw_to_der</definition>
+        <argsstring>(size_t bits, const unsigned char *raw, size_t raw_len, unsigned char *der, size_t der_size, size_t *der_len)</argsstring>
+        <name>mbedtls_ecdsa_raw_to_der</name>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>raw_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>der</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>der_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>der_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECDSA signature from raw format to DER ASN.1 format.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of each coordinate in bits. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that contains the signature in raw format. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of <computeroutput>raw</computeroutput> in bytes. This must be <ref refid="crypto__sizes_8h_1af2edfe992db358f8eefd4bc82d069592" kindref="member">PSA_BITS_TO_BYTES(bits)</ref> bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">der</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that will be filled with the converted DER output. It can overlap with raw buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>der</computeroutput> in bytes. It is enough if <computeroutput>der_size</computeroutput> is at least the size of the actual output. (The size of the output can vary depending on the presence of leading zeros in the data.) You can use <ref refid="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" kindref="member">MBEDTLS_ECDSA_DER_MAX_SIG_LEN</ref>(<computeroutput>bits</computeroutput>) to determine a size that is large enough for all signatures for a given value of <computeroutput>bits</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">der_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success it contains the amount of valid data (in bytes) written to <computeroutput>der</computeroutput>. It&apos;s undefined in case of failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The behavior is undefined if <computeroutput>der</computeroutput> is null, even if <computeroutput>der_size</computeroutput> is 0.</para></simplesect>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if <computeroutput>der_size</computeroutput> is too small or if <computeroutput>bits</computeroutput> is larger than the largest supported curve. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if one of the numbers in the signature is 0. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__tls__helpers_1ga33b3cf65d5992ccc724b7ee00186ae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ecdsa_der_to_raw</definition>
+        <argsstring>(size_t bits, const unsigned char *der, size_t der_len, unsigned char *raw, size_t raw_size, size_t *raw_len)</argsstring>
+        <name>mbedtls_ecdsa_der_to_raw</name>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>der</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>der_len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>raw_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>raw_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert an ECDSA signature from DER ASN.1 format to raw format.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of each coordinate in bits. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that contains the signature in DER format. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>der_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>der</computeroutput> in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">raw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer that will be filled with the converted raw signature. It can overlap with der buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>raw_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of <computeroutput>raw</computeroutput> in bytes. Must be at least 2 * <ref refid="crypto__sizes_8h_1af2edfe992db358f8eefd4bc82d069592" kindref="member">PSA_BITS_TO_BYTES(bits)</ref> bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">raw_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success it is updated with the amount of valid data (in bytes) written to <computeroutput>raw</computeroutput>. It&apos;s undefined in case of failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if <computeroutput>raw_size</computeroutput> is too small or if <computeroutput>bits</computeroutput> is larger than the largest supported curve. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if the data in <computeroutput>der</computeroutput> is inconsistent with <computeroutput>bits</computeroutput>. </para><simplesectsep/><para>An <computeroutput>MBEDTLS_ERR_ASN1_xxx</computeroutput> error code if <computeroutput>der</computeroutput> is malformed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="192" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_DER_MAX_SIG_LEN</name>
+        <param><defname>bits</defname></param>
+        <initializer>(/*T,L of SEQUENCE*/ ((bits) &gt;= 61 * 8 ? 3 : 2) +              \
+     /*T,L of r,s*/ 2 * (((bits) &gt;= 127 * 8 ? 3 : 2) +     \
+                         /*V of r,s*/ ((bits) + 8) / 8))</initializer>
+        <briefdescription>
+<para>Maximum size of a DER-encoded ECDSA signature for a given curve bit size. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Curve size in bits. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Maximum signature size in bytes.</para></simplesect>
+<simplesect kind="note"><para>This macro returns a compile-time constant if its argument is one. It may evaluate its argument multiple times. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="130" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__psa__tls__helpers_1ga583b1c71be4f47f850e55b2331cf2fbb" prot="public" static="no">
+        <name>MBEDTLS_ECDSA_DER_MAX_LEN</name>
+        <initializer><ref refid="group__psa__tls__helpers_1gad0e232a5d5b29f0fccee1522debba85c" kindref="member">MBEDTLS_ECDSA_DER_MAX_SIG_LEN</ref>(<ref refid="crypto__sizes_8h_1a81080a6cbbab87f35b114cb991e3f550" kindref="member">PSA_VENDOR_ECC_MAX_CURVE_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximal size of a DER-encoded ECDSA signature in Bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" line="136" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/psa_util.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

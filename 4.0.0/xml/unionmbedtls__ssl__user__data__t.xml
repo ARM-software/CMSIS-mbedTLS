@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="unionmbedtls__ssl__user__data__t" kind="union" prot="public">
+    <compoundname>mbedtls_ssl_user_data_t</compoundname>
+    <includes refid="ssl_8h" local="no">ssl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionmbedtls__ssl__user__data__t_1a6993f9ab9e42d384657488c9705610a7" prot="public" static="no" mutable="no">
+        <type>uintptr_t</type>
+        <definition>uintptr_t mbedtls_ssl_user_data_t::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1330" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionmbedtls__ssl__user__data__t_1ad0d496b3288ad2c849a96e223762cc1b" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_ssl_user_data_t::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1331" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1331" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" line="1329" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl.h" bodystart="1329" bodyend="1332"/>
+    <listofallmembers>
+      <member refid="unionmbedtls__ssl__user__data__t_1a6993f9ab9e42d384657488c9705610a7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_user_data_t</scope><name>n</name></member>
+      <member refid="unionmbedtls__ssl__user__data__t_1ad0d496b3288ad2c849a96e223762cc1b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_user_data_t</scope><name>p</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

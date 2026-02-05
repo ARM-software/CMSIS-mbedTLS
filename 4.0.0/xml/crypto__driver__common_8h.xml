@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__driver__common_8h" kind="file">
+    <compoundname>crypto_driver_common.h</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes refid="crypto__types_8h" local="yes">crypto_types.h</includes>
+    <includes refid="crypto__values_8h" local="yes">crypto_values.h</includes>
+    <includes refid="crypto__sizes_8h" local="no">psa/crypto_sizes.h</includes>
+    <includedby refid="crypto__driver__random_8h" local="yes">crypto_driver_random.h</includedby>
+    <includedby refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includedby>
+    <includedby refid="crypto__builtin__key__derivation_8h" local="no">crypto_builtin_key_derivation.h</includedby>
+    <includedby refid="crypto__builtin__primitives_8h" local="no">crypto_builtin_primitives.h</includedby>
+    <includedby refid="crypto__driver__contexts__composites_8h" local="yes">crypto_driver_contexts_composites.h</includedby>
+    <includedby refid="crypto__driver__contexts__key__derivation_8h" local="yes">crypto_driver_contexts_key_derivation.h</includedby>
+    <includedby refid="crypto__driver__contexts__primitives_8h" local="yes">crypto_driver_contexts_primitives.h</includedby>
+    <incdepgraph>
+      <node id="2798">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2796" relation="include">
+        </childnode>
+        <childnode refid="2789" relation="include">
+        </childnode>
+      </node>
+      <node id="2791">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2788">
+        <label>stdint.h</label>
+      </node>
+      <node id="2797">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2794">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2790">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2791" relation="include">
+        </childnode>
+        <childnode refid="2792" relation="include">
+        </childnode>
+        <childnode refid="2793" relation="include">
+        </childnode>
+        <childnode refid="2794" relation="include">
+        </childnode>
+        <childnode refid="2795" relation="include">
+        </childnode>
+      </node>
+      <node id="2787">
+        <label>stddef.h</label>
+      </node>
+      <node id="2795">
+        <label>limits.h</label>
+      </node>
+      <node id="2789">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2790" relation="include">
+        </childnode>
+        <childnode refid="2796" relation="include">
+        </childnode>
+        <childnode refid="2797" relation="include">
+        </childnode>
+        <childnode refid="2788" relation="include">
+        </childnode>
+      </node>
+      <node id="2799">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2790" relation="include">
+        </childnode>
+      </node>
+      <node id="2796">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2792">
+        <label>/dev/null</label>
+      </node>
+      <node id="2786">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto_driver_common.h"/>
+        <childnode refid="2787" relation="include">
+        </childnode>
+        <childnode refid="2788" relation="include">
+        </childnode>
+        <childnode refid="2789" relation="include">
+        </childnode>
+        <childnode refid="2798" relation="include">
+        </childnode>
+        <childnode refid="2799" relation="include">
+        </childnode>
+      </node>
+      <node id="2793">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2807">
+        <label>crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="2805" relation="include">
+        </childnode>
+      </node>
+      <node id="2808">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="2809" relation="include">
+        </childnode>
+      </node>
+      <node id="2803">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="2804" relation="include">
+        </childnode>
+      </node>
+      <node id="2809">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2805" relation="include">
+        </childnode>
+      </node>
+      <node id="2802">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="2804">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="2805" relation="include">
+        </childnode>
+      </node>
+      <node id="2801">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto__driver__random_8h"/>
+        <childnode refid="2802" relation="include">
+        </childnode>
+      </node>
+      <node id="2805">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+      </node>
+      <node id="2800">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto_driver_common.h"/>
+        <childnode refid="2801" relation="include">
+        </childnode>
+        <childnode refid="2803" relation="include">
+        </childnode>
+        <childnode refid="2806" relation="include">
+        </childnode>
+        <childnode refid="2808" relation="include">
+        </childnode>
+        <childnode refid="2804" relation="include">
+        </childnode>
+        <childnode refid="2807" relation="include">
+        </childnode>
+        <childnode refid="2809" relation="include">
+        </childnode>
+      </node>
+      <node id="2806">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="2807" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371d" prot="public" static="no">
+        <name>psa_encrypt_or_decrypt_t</name>
+        <enumvalue id="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dacd326f5219289083239b57390dabc7e9" prot="public">
+          <name>PSA_CRYPTO_DRIVER_DECRYPT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dae541a6b16e6c403c3d58cec4ecb08cce" prot="public">
+          <name>PSA_CRYPTO_DRIVER_ENCRYPT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For encrypt-decrypt functions, whether the operation is an encryption or a decryption. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_common.h" line="37" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_common.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definitions for all PSA crypto drivers. </para>    </briefdescription>
+    <detaileddescription>
+<para>This file contains common definitions shared by all PSA crypto drivers. Do not include it directly: instead, include the header file(s) for the type(s) of driver that you are implementing.</para><para>This file is part of the PSA Crypto Driver Model, containing functions for driver developers to implement to enable hardware to be called in a standardized way by a PSA Cryptographic API implementation. The functions comprising the driver model, which driver authors implement, are not intended to be called by application developers. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="16"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_DRIVER_COMMON_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_DRIVER_COMMON_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>type<sp/>definitions<sp/>(psa_status_t,<sp/>psa_algorithm_t,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>psa_key_type_t,<sp/>etc.)<sp/>and<sp/>macros<sp/>to<sp/>build<sp/>and<sp/>analyze<sp/>values</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>of<sp/>these<sp/>types.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__types_8h" kindref="compound">crypto_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__values_8h" kindref="compound">crypto_values.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Include<sp/>size<sp/>definitions<sp/>which<sp/>are<sp/>used<sp/>to<sp/>size<sp/>some<sp/>arrays<sp/>in<sp/>operation</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>structures.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="crypto__sizes_8h" kindref="compound">psa/crypto_sizes.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371d" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dacd326f5219289083239b57390dabc7e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dacd326f5219289083239b57390dabc7e9" kindref="member">PSA_CRYPTO_DRIVER_DECRYPT</ref>,</highlight></codeline>
+<codeline lineno="39" refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dae541a6b16e6c403c3d58cec4ecb08cce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371dae541a6b16e6c403c3d58cec4ecb08cce" kindref="member">PSA_CRYPTO_DRIVER_ENCRYPT</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="crypto__driver__common_8h_1ad4cfad719c2b1ad88835d193f593371d" kindref="member">psa_encrypt_or_decrypt_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_DRIVER_COMMON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_common.h"/>
+  </compounddef>
+</doxygen>

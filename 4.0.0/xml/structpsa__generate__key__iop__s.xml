@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__generate__key__iop__s" kind="struct" prot="public">
+    <compoundname>psa_generate_key_iop_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__generate__key__iop__s_1a1a2b4871fd5aedebdb140ead7a473290" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_generate_key_iop_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="531" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="531" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__generate__key__iop__s_1a1e1a56eafdc91c59d4589c7aac83a249" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__generate__key__iop__t" kindref="compound">mbedtls_psa_generate_key_iop_t</ref></type>
+        <definition>mbedtls_psa_generate_key_iop_t psa_generate_key_iop_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="532" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="532" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__generate__key__iop__s_1a03c16e12c52167392a0b9f852ea1885b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref></type>
+        <definition>psa_key_attributes_t psa_generate_key_iop_s::private_attributes</definition>
+        <argsstring></argsstring>
+        <name>private_attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="533" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="533" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__generate__key__iop__s_1a061a3da1da342f1881cccf219b9606b5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_generate_key_iop_s::private_error_occurred</definition>
+        <argsstring></argsstring>
+        <name>private_error_occurred</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="534" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="534" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__generate__key__iop__s_1a8b35f32eb6712841dee1ded606805821" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_generate_key_iop_s::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="535" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The context for PSA interruptible key generation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="767">
+        <label>psa_key_policy_s</label>
+        <link refid="structpsa__key__policy__s"/>
+      </node>
+      <node id="768">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="766">
+        <label>psa_key_attributes_s</label>
+        <link refid="structpsa__key__attributes__s"/>
+        <childnode refid="767" relation="usage">
+          <edgelabel>private_policy</edgelabel>
+        </childnode>
+        <childnode refid="768" relation="usage">
+          <edgelabel>private_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="764">
+        <label>psa_generate_key_iop_s</label>
+        <link refid="structpsa__generate__key__iop__s"/>
+        <childnode refid="765" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+        <childnode refid="766" relation="usage">
+          <edgelabel>private_attributes</edgelabel>
+        </childnode>
+      </node>
+      <node id="765">
+        <label>mbedtls_psa_generate_key_iop_t</label>
+        <link refid="structmbedtls__psa__generate__key__iop__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="519" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="519" bodyend="537"/>
+    <listofallmembers>
+      <member refid="structpsa__generate__key__iop__s_1a03c16e12c52167392a0b9f852ea1885b" prot="public" virt="non-virtual"><scope>psa_generate_key_iop_s</scope><name>private_attributes</name></member>
+      <member refid="structpsa__generate__key__iop__s_1a1e1a56eafdc91c59d4589c7aac83a249" prot="public" virt="non-virtual"><scope>psa_generate_key_iop_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__generate__key__iop__s_1a061a3da1da342f1881cccf219b9606b5" prot="public" virt="non-virtual"><scope>psa_generate_key_iop_s</scope><name>private_error_occurred</name></member>
+      <member refid="structpsa__generate__key__iop__s_1a1a2b4871fd5aedebdb140ead7a473290" prot="public" virt="non-virtual"><scope>psa_generate_key_iop_s</scope><name>private_id</name></member>
+      <member refid="structpsa__generate__key__iop__s_1a8b35f32eb6712841dee1ded606805821" prot="public" virt="non-virtual"><scope>psa_generate_key_iop_s</scope><name>private_num_ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1947 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="oid_8h" kind="file">
+    <compoundname>oid.h</compoundname>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="asn1_8h" local="yes">mbedtls/asn1.h</includes>
+    <incdepgraph>
+      <node id="3327">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3336">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+      </node>
+      <node id="3321">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3333">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3320" relation="include">
+        </childnode>
+      </node>
+      <node id="3318">
+        <label>oid.h</label>
+        <link refid="oid.h"/>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+      </node>
+      <node id="3339">
+        <label>stdint.h</label>
+      </node>
+      <node id="3326">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3338">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3324">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3320">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3321" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3324" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+      </node>
+      <node id="3332">
+        <label>stddef.h</label>
+      </node>
+      <node id="3325">
+        <label>limits.h</label>
+      </node>
+      <node id="3337">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+      </node>
+      <node id="3335">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+      </node>
+      <node id="3331">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3333" relation="include">
+        </childnode>
+        <childnode refid="3334" relation="include">
+        </childnode>
+      </node>
+      <node id="3330">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3334">
+        <label>time.h</label>
+      </node>
+      <node id="3319">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+      </node>
+      <node id="3329">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3331" relation="include">
+        </childnode>
+        <childnode refid="3335" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3340" relation="include">
+        </childnode>
+      </node>
+      <node id="3322">
+        <label>/dev/null</label>
+      </node>
+      <node id="3323">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3340">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3328">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="oid_8h_1a7383dccb147106b3e37e2d2c4e8e364c" prot="public" static="no">
+        <name>MBEDTLS_OID_ISO_MEMBER_BODIES</name>
+        <initializer>&quot;\x2a&quot;          /* {iso(1) member-body(2)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="19" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" prot="public" static="no">
+        <name>MBEDTLS_OID_ISO_IDENTIFIED_ORG</name>
+        <initializer>&quot;\x2b&quot;          /* {iso(1) identified-organization(3)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="20" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0fe08b92016b01b08e6c85f25f1a9138" prot="public" static="no">
+        <name>MBEDTLS_OID_ISO_CCITT_DS</name>
+        <initializer>&quot;\x55&quot;          /* {joint-iso-ccitt(2) ds(5)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="21" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a03032f8a6463b9430deb318fa4549b4f" prot="public" static="no">
+        <name>MBEDTLS_OID_ISO_ITU_COUNTRY</name>
+        <initializer>&quot;\x60&quot;          /* {joint-iso-itu-t(2) country(16)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="22" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1acdc643a66f419aff6a9c8edad9d0e3fa" prot="public" static="no">
+        <name>MBEDTLS_OID_COUNTRY_US</name>
+        <initializer>&quot;\x86\x48&quot;      /* {us(840)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="27" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ab9ff48dfb869a6deb04c071d68d215d9" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_RSA_DATA_SECURITY</name>
+        <initializer>&quot;\x86\xf7\x0d&quot;  /* {rsadsi(113549)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="28" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a944abd9f333c98c374040b9850bc8868" prot="public" static="no">
+        <name>MBEDTLS_OID_RSA_COMPANY</name>
+        <initializer><ref refid="oid_8h_1a7383dccb147106b3e37e2d2c4e8e364c" kindref="member">MBEDTLS_OID_ISO_MEMBER_BODIES</ref> <ref refid="oid_8h_1acdc643a66f419aff6a9c8edad9d0e3fa" kindref="member">MBEDTLS_OID_COUNTRY_US</ref> \
+        <ref refid="oid_8h_1ab9ff48dfb869a6deb04c071d68d215d9" kindref="member">MBEDTLS_OID_ORG_RSA_DATA_SECURITY</ref>                                 /* {iso(1) member-body(2) us(840) rsadsi(113549)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="29" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ac2a51df3703aa7b9cded090e7101915f" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_ANSI_X9_62</name>
+        <initializer>&quot;\xce\x3d&quot; /* ansi-X9-62(10045) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="31" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a1b3ca852cc95265da55867d71656e765" prot="public" static="no">
+        <name>MBEDTLS_OID_ANSI_X9_62</name>
+        <initializer><ref refid="oid_8h_1a7383dccb147106b3e37e2d2c4e8e364c" kindref="member">MBEDTLS_OID_ISO_MEMBER_BODIES</ref> <ref refid="oid_8h_1acdc643a66f419aff6a9c8edad9d0e3fa" kindref="member">MBEDTLS_OID_COUNTRY_US</ref> \
+        <ref refid="oid_8h_1ac2a51df3703aa7b9cded090e7101915f" kindref="member">MBEDTLS_OID_ORG_ANSI_X9_62</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="32" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a36eef310003c500b41aa00e0d955b791" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_DOD</name>
+        <initializer>&quot;\x06&quot;          /* {dod(6)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="38" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ae9d1d39b6918b602d6951c6757389e95" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_OIW</name>
+        <initializer>&quot;\x0e&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="39" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1adba0f5f11c7c544d4e91f8643fbc8b6f" prot="public" static="no">
+        <name>MBEDTLS_OID_OIW_SECSIG</name>
+        <initializer><ref refid="oid_8h_1ae9d1d39b6918b602d6951c6757389e95" kindref="member">MBEDTLS_OID_ORG_OIW</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="40" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a21cff116c9466e1158b54c2f69e73623" prot="public" static="no">
+        <name>MBEDTLS_OID_OIW_SECSIG_ALG</name>
+        <initializer><ref refid="oid_8h_1adba0f5f11c7c544d4e91f8643fbc8b6f" kindref="member">MBEDTLS_OID_OIW_SECSIG</ref> &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="41" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a6734d72a1ecf40ae9ff1552cae35ce46" prot="public" static="no">
+        <name>MBEDTLS_OID_OIW_SECSIG_SHA1</name>
+        <initializer><ref refid="oid_8h_1a21cff116c9466e1158b54c2f69e73623" kindref="member">MBEDTLS_OID_OIW_SECSIG_ALG</ref> &quot;\x1a&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="42" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a93c17b964bc871a137f7a883248cae11" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_THAWTE</name>
+        <initializer>&quot;\x65&quot;          /* thawte(101) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="43" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1adda1d08436205cafba4128a91378dcf5" prot="public" static="no">
+        <name>MBEDTLS_OID_THAWTE</name>
+        <initializer><ref refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" kindref="member">MBEDTLS_OID_ISO_IDENTIFIED_ORG</ref> \
+        <ref refid="oid_8h_1a93c17b964bc871a137f7a883248cae11" kindref="member">MBEDTLS_OID_ORG_THAWTE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="44" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a656741cd1078282b1d032669ca61b658" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_CERTICOM</name>
+        <initializer>&quot;\x81\x04&quot;  /* certicom(132) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="46" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aaecf9aa568f2c29764b72ea81d3fcd63" prot="public" static="no">
+        <name>MBEDTLS_OID_CERTICOM</name>
+        <initializer><ref refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" kindref="member">MBEDTLS_OID_ISO_IDENTIFIED_ORG</ref> \
+        <ref refid="oid_8h_1a656741cd1078282b1d032669ca61b658" kindref="member">MBEDTLS_OID_ORG_CERTICOM</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="47" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0aab6823a8fc06174c7ea7cf1fb9601d" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_TELETRUST</name>
+        <initializer>&quot;\x24&quot; /* teletrust(36) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="49" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1af4a57374da067f7287acd2a2afea6d07" prot="public" static="no">
+        <name>MBEDTLS_OID_TELETRUST</name>
+        <initializer><ref refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" kindref="member">MBEDTLS_OID_ISO_IDENTIFIED_ORG</ref> \
+        <ref refid="oid_8h_1a0aab6823a8fc06174c7ea7cf1fb9601d" kindref="member">MBEDTLS_OID_ORG_TELETRUST</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="50" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a5af76b5e9e3061f4578276d2731b308a" prot="public" static="no">
+        <name>MBEDTLS_OID_ORGANIZATION</name>
+        <initializer>&quot;\x01&quot;          /* {organization(1)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="56" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a01eeae3fb92ee7c1df25c9713abe4754" prot="public" static="no">
+        <name>MBEDTLS_OID_ISO_ITU_US_ORG</name>
+        <initializer><ref refid="oid_8h_1a03032f8a6463b9430deb318fa4549b4f" kindref="member">MBEDTLS_OID_ISO_ITU_COUNTRY</ref> <ref refid="oid_8h_1acdc643a66f419aff6a9c8edad9d0e3fa" kindref="member">MBEDTLS_OID_COUNTRY_US</ref> \
+        <ref refid="oid_8h_1a5af76b5e9e3061f4578276d2731b308a" kindref="member">MBEDTLS_OID_ORGANIZATION</ref>                                                                                            /* {joint-iso-itu-t(2) country(16) us(840) organization(1)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="57" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa5a6f9facdf1ea79edb6c29ea77dd2c0" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_GOV</name>
+        <initializer>&quot;\x65&quot;          /* {gov(101)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a2a88b11e23c4b7cb689afcace55bc6e2" prot="public" static="no">
+        <name>MBEDTLS_OID_GOV</name>
+        <initializer><ref refid="oid_8h_1a01eeae3fb92ee7c1df25c9713abe4754" kindref="member">MBEDTLS_OID_ISO_ITU_US_ORG</ref> <ref refid="oid_8h_1aa5a6f9facdf1ea79edb6c29ea77dd2c0" kindref="member">MBEDTLS_OID_ORG_GOV</ref> /* {joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="61" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a5fc6bfe81093b64fd699a9aba2ab1ff2" prot="public" static="no">
+        <name>MBEDTLS_OID_ORG_NETSCAPE</name>
+        <initializer>&quot;\x86\xF8\x42&quot;  /* {netscape(113730)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="63" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a6c4b404c9c67ecc0d9176e1b91dd839c" prot="public" static="no">
+        <name>MBEDTLS_OID_NETSCAPE</name>
+        <initializer><ref refid="oid_8h_1a01eeae3fb92ee7c1df25c9713abe4754" kindref="member">MBEDTLS_OID_ISO_ITU_US_ORG</ref> <ref refid="oid_8h_1a5fc6bfe81093b64fd699a9aba2ab1ff2" kindref="member">MBEDTLS_OID_ORG_NETSCAPE</ref> /* Netscape OID {joint-iso-itu-t(2) country(16) us(840) organization(1) netscape(113730)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="64" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a45d181b92d2b42398cd8090214ab7548" prot="public" static="no">
+        <name>MBEDTLS_OID_ID_CE</name>
+        <initializer><ref refid="oid_8h_1a0fe08b92016b01b08e6c85f25f1a9138" kindref="member">MBEDTLS_OID_ISO_CCITT_DS</ref> &quot;\x1D&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce OBJECT IDENTIFIER ::= {joint-iso-ccitt(2) ds(5) 29} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="67" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" prot="public" static="no">
+        <name>MBEDTLS_OID_NIST_ALG</name>
+        <initializer><ref refid="oid_8h_1a2a88b11e23c4b7cb689afcace55bc6e2" kindref="member">MBEDTLS_OID_GOV</ref> &quot;\x03\x04&quot; /** { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithm(4) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="69" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ad660e2e21f449588d65835cb43449b34" prot="public" static="no">
+        <name>MBEDTLS_OID_INTERNET</name>
+        <initializer><ref refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" kindref="member">MBEDTLS_OID_ISO_IDENTIFIED_ORG</ref> <ref refid="oid_8h_1a36eef310003c500b41aa00e0d955b791" kindref="member">MBEDTLS_OID_ORG_DOD</ref> \
+    &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private Internet Extensions { iso(1) identified-organization(3) dod(6) internet(1) security(5) mechanisms(5) pkix(7) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="76" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ac711a26e8da91c73d27d7cd582d2d6d8" prot="public" static="no">
+        <name>MBEDTLS_OID_PKIX</name>
+        <initializer><ref refid="oid_8h_1ad660e2e21f449588d65835cb43449b34" kindref="member">MBEDTLS_OID_INTERNET</ref> &quot;\x05\x05\x07&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="78" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1add867a815d56c71f8728a343c57bd963" prot="public" static="no">
+        <name>MBEDTLS_OID_AT</name>
+        <initializer><ref refid="oid_8h_1a0fe08b92016b01b08e6c85f25f1a9138" kindref="member">MBEDTLS_OID_ISO_CCITT_DS</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at OBJECT IDENTIFIER ::= {joint-iso-ccitt(2) ds(5) 4} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="83" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aed77a0ed6d223075b9fb1f346368cf89" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_CN</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-commonName AttributeType:= {id-at 3} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="84" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a7d0c477fb4c5c11f34e125792289f928" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_SUR_NAME</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-surName AttributeType:= {id-at 4} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="85" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a288608f190ebeeeb0287c026ffa45578" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_SERIAL_NUMBER</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-serialNumber AttributeType:= {id-at 5} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="86" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa0a40910c92769782568fba1aa197310" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_COUNTRY</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x06&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-countryName AttributeType:= {id-at 6} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="87" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a55a096dbc79a66c4e7729ca795f63bc3" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_LOCALITY</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x07&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-locality AttributeType:= {id-at 7} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="88" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a84965b3da3240d7189d78cb00d92a569" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_STATE</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-state AttributeType:= {id-at 8} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="89" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ad9db6deb1609351cf1eac7d2ca32b80b" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_ORGANIZATION</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x0A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-organizationName AttributeType:= {id-at 10} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="90" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1af764cca645e3b046a9a001d786d70715" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_ORG_UNIT</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x0B&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-organizationalUnitName AttributeType:= {id-at 11} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="91" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a9b12474db750af2e508618ce69971de2" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_TITLE</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x0C&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-title AttributeType:= {id-at 12} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="92" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a25ff595205be812b0494c6c8280dd8b5" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_POSTAL_ADDRESS</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x10&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-postalAddress AttributeType:= {id-at 16} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="93" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a69242d2fda38d1cefe38738e660bfc35" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_POSTAL_CODE</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x11&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-postalCode AttributeType:= {id-at 17} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="94" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ad82c6d34c40fd29eda37d7b1f35c7a0f" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_GIVEN_NAME</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x2A&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-givenName AttributeType:= {id-at 42} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="95" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a3dd24fca4f4e7ff5c0fda1b5adc282ea" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_INITIALS</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x2B&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-initials AttributeType:= {id-at 43} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="96" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0c0354f26066feb3f9da8a92bc7cbfda" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_GENERATION_QUALIFIER</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x2C&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-generationQualifier AttributeType:= {id-at 44} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="97" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a2d5765d4afcc9c3b6a6c24d797ba8f96" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_UNIQUE_IDENTIFIER</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x2D&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-uniqueIdentifier AttributeType:= {id-at 45} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="98" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a2d1401e6d2a88766988d39926a3e3c5b" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_DN_QUALIFIER</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x2E&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-dnQualifier AttributeType:= {id-at 46} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="99" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aab2fb77f1c86a04cd4c0be2e7f7f7775" prot="public" static="no">
+        <name>MBEDTLS_OID_AT_PSEUDONYM</name>
+        <initializer><ref refid="oid_8h_1add867a815d56c71f8728a343c57bd963" kindref="member">MBEDTLS_OID_AT</ref> &quot;\x41&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-at-pseudonym AttributeType:= {id-at 65} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="100" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aad74bcbb1c617c358de44e796fb504ef" prot="public" static="no">
+        <name>MBEDTLS_OID_UID</name>
+        <initializer>&quot;\x09\x92\x26\x89\x93\xF2\x2C\x64\x01\x01&quot; /** id-domainComponent AttributeType:= {itu-t(0) data(9) pss(2342) ucl(19200300) pilot(100) pilotAttributeType(1) uid(1)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="102" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ad0895d42f05ae770eb2b50bce18355a4" prot="public" static="no">
+        <name>MBEDTLS_OID_DOMAIN_COMPONENT</name>
+        <initializer>&quot;\x09\x92\x26\x89\x93\xF2\x2C\x64\x01\x19&quot; /** id-domainComponent AttributeType:= {itu-t(0) data(9) pss(2342) ucl(19200300) pilot(100) pilotAttributeType(1) domainComponent(25)} */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="103" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a8db3ad616aaec9dd351e76d7b8618c58" prot="public" static="no">
+        <name>MBEDTLS_OID_AUTHORITY_KEY_IDENTIFIER</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x23&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-authorityKeyIdentifier OBJECT IDENTIFIER ::= { id-ce 35 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="108" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a698cce56e06194d62bf49201e44dc5d8" prot="public" static="no">
+        <name>MBEDTLS_OID_SUBJECT_KEY_IDENTIFIER</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x0E&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-subjectKeyIdentifier OBJECT IDENTIFIER ::= { id-ce 14 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="109" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a6d7556c43f7fc4f3af5bbdfd26cb2620" prot="public" static="no">
+        <name>MBEDTLS_OID_KEY_USAGE</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x0F&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-keyUsage OBJECT IDENTIFIER ::= { id-ce 15 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="110" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ae89ed083c9b13940b5d940b9e70d1d17" prot="public" static="no">
+        <name>MBEDTLS_OID_CERTIFICATE_POLICIES</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x20&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-certificatePolicies OBJECT IDENTIFIER ::= { id-ce 32 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="111" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a60cb6904e309c47c39d370beaf54007c" prot="public" static="no">
+        <name>MBEDTLS_OID_POLICY_MAPPINGS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x21&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-policyMappings OBJECT IDENTIFIER ::= { id-ce 33 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="112" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a03c23655749d213fb26e608d7d0b952c" prot="public" static="no">
+        <name>MBEDTLS_OID_SUBJECT_ALT_NAME</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x11&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-subjectAltName OBJECT IDENTIFIER ::= { id-ce 17 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="113" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aeea9acd528a40c3630b42d9ec4162ce4" prot="public" static="no">
+        <name>MBEDTLS_OID_ISSUER_ALT_NAME</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x12&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-issuerAltName OBJECT IDENTIFIER ::= { id-ce 18 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="114" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a1bc877b377f188063914019663920ce4" prot="public" static="no">
+        <name>MBEDTLS_OID_SUBJECT_DIRECTORY_ATTRS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x09&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-subjectDirectoryAttributes OBJECT IDENTIFIER ::= { id-ce 9 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="115" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a5f878af0c9f3f73986f982aa15f5d580" prot="public" static="no">
+        <name>MBEDTLS_OID_BASIC_CONSTRAINTS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x13&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-basicConstraints OBJECT IDENTIFIER ::= { id-ce 19 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="116" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1acdfbc5ead965aaec5b1f82a575a8b2d2" prot="public" static="no">
+        <name>MBEDTLS_OID_NAME_CONSTRAINTS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x1E&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-nameConstraints OBJECT IDENTIFIER ::= { id-ce 30 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="117" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a50d5ff081bcca9a268cf4e2145d65145" prot="public" static="no">
+        <name>MBEDTLS_OID_POLICY_CONSTRAINTS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x24&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-policyConstraints OBJECT IDENTIFIER ::= { id-ce 36 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="118" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a19e9613b36efd1b1df43fb7da917b7f7" prot="public" static="no">
+        <name>MBEDTLS_OID_EXTENDED_KEY_USAGE</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x25&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-extKeyUsage OBJECT IDENTIFIER ::= { id-ce 37 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="119" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a8184fdce4edfcc2cccc03eedc5a195c8" prot="public" static="no">
+        <name>MBEDTLS_OID_CRL_DISTRIBUTION_POINTS</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x1F&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-cRLDistributionPoints OBJECT IDENTIFIER ::= { id-ce 31 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="120" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aea885904f5b5556d40b40e8cdea4aabf" prot="public" static="no">
+        <name>MBEDTLS_OID_INIHIBIT_ANYPOLICY</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x36&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-inhibitAnyPolicy OBJECT IDENTIFIER ::= { id-ce 54 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="121" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a02b94a8cf5d24bf50eaf6452f605f384" prot="public" static="no">
+        <name>MBEDTLS_OID_FRESHEST_CRL</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x2E&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-freshestCRL OBJECT IDENTIFIER ::= { id-ce 46 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="122" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a58de2a634dc02289e26b468d4617039b" prot="public" static="no">
+        <name>MBEDTLS_OID_ANY_POLICY</name>
+        <initializer><ref refid="oid_8h_1ae89ed083c9b13940b5d940b9e70d1d17" kindref="member">MBEDTLS_OID_CERTIFICATE_POLICIES</ref> &quot;\x00&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>anyPolicy OBJECT IDENTIFIER ::= { id-ce-certificatePolicies 0 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="127" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_CERT</name>
+        <initializer><ref refid="oid_8h_1a6c4b404c9c67ecc0d9176e1b91dd839c" kindref="member">MBEDTLS_OID_NETSCAPE</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="132" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a90d38c5b5f4181bdf9cbc51dc51f6678" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_CERT_TYPE</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="133" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a73998e01aa2b81f86575795b8923ffde" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_BASE_URL</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="134" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a967ced39c8538c0a9b9612b241050346" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_REVOCATION_URL</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="135" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa9081f5d363044a30e2303b7ba389be8" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_CA_REVOCATION_URL</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="136" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1acf293f32fa3055b9bc4b9dba8091089a" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_RENEWAL_URL</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x07&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="137" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a53e30ea7a75dfc9e7a13de62f3cb8ca5" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_CA_POLICY_URL</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="138" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a8d84a4bfb78d4587d084febe74207738" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_SSL_SERVER_NAME</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x0C&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="139" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a77df1043ad7ef4fced4a6625990d8411" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_COMMENT</name>
+        <initializer><ref refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" kindref="member">MBEDTLS_OID_NS_CERT</ref>  &quot;\x0D&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="140" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a175109eb1fa60dca32df3426369488c8" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_DATA_TYPE</name>
+        <initializer><ref refid="oid_8h_1a6c4b404c9c67ecc0d9176e1b91dd839c" kindref="member">MBEDTLS_OID_NETSCAPE</ref> &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="141" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a42d481f3d837e226760bce12f1e66f59" prot="public" static="no">
+        <name>MBEDTLS_OID_NS_CERT_SEQUENCE</name>
+        <initializer><ref refid="oid_8h_1a175109eb1fa60dca32df3426369488c8" kindref="member">MBEDTLS_OID_NS_DATA_TYPE</ref> &quot;\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="142" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a7fad16c4f004f21205fd83999c67e8dc" prot="public" static="no">
+        <name>MBEDTLS_OID_PRIVATE_KEY_USAGE_PERIOD</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x10&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="147" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a1c760658437633541572c413a2856ac4" prot="public" static="no">
+        <name>MBEDTLS_OID_CRL_NUMBER</name>
+        <initializer><ref refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" kindref="member">MBEDTLS_OID_ID_CE</ref> &quot;\x14&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ce-cRLNumber OBJECT IDENTIFIER ::= { id-ce 20 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="148" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a61da0671b3897e73edf219d44e45b693" prot="public" static="no">
+        <name>MBEDTLS_OID_ANY_EXTENDED_KEY_USAGE</name>
+        <initializer><ref refid="oid_8h_1a19e9613b36efd1b1df43fb7da917b7f7" kindref="member">MBEDTLS_OID_EXTENDED_KEY_USAGE</ref> &quot;\x00&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>anyExtendedKeyUsage OBJECT IDENTIFIER ::= { id-ce-extKeyUsage 0 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="153" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" prot="public" static="no">
+        <name>MBEDTLS_OID_KP</name>
+        <initializer><ref refid="oid_8h_1ac711a26e8da91c73d27d7cd582d2d6d8" kindref="member">MBEDTLS_OID_PKIX</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp OBJECT IDENTIFIER ::= { id-pkix 3 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="155" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ab47804622cec9a9e021efcd12e22b6bf" prot="public" static="no">
+        <name>MBEDTLS_OID_SERVER_AUTH</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-serverAuth OBJECT IDENTIFIER ::= { id-kp 1 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="156" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a4844194884542843ed41c02344bcd2f0" prot="public" static="no">
+        <name>MBEDTLS_OID_CLIENT_AUTH</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-clientAuth OBJECT IDENTIFIER ::= { id-kp 2 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="157" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a009e8dcda015bc2320261a1faf6e066a" prot="public" static="no">
+        <name>MBEDTLS_OID_CODE_SIGNING</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-codeSigning OBJECT IDENTIFIER ::= { id-kp 3 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="158" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a96c02fe1530d4c737d2bf391cbd82f5e" prot="public" static="no">
+        <name>MBEDTLS_OID_EMAIL_PROTECTION</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-emailProtection OBJECT IDENTIFIER ::= { id-kp 4 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="159" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa4758a9869e5160037e4a1f9327738ed" prot="public" static="no">
+        <name>MBEDTLS_OID_TIME_STAMPING</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-timeStamping OBJECT IDENTIFIER ::= { id-kp 8 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="160" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aad03a9c85a0c3f922095e3cf6fb7d9c4" prot="public" static="no">
+        <name>MBEDTLS_OID_OCSP_SIGNING</name>
+        <initializer><ref refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" kindref="member">MBEDTLS_OID_KP</ref> &quot;\x09&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-kp-OCSPSigning OBJECT IDENTIFIER ::= { id-kp 9 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="161" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ac7e8e17959d1fd76c8d1da987024f349" prot="public" static="no">
+        <name>MBEDTLS_OID_WISUN_FAN</name>
+        <initializer><ref refid="oid_8h_1ad660e2e21f449588d65835cb43449b34" kindref="member">MBEDTLS_OID_INTERNET</ref> &quot;\x04\x01\x82\xe4\x25\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wi-SUN Alliance Field Area Network { iso(1) identified-organization(3) dod(6) internet(1) private(4) enterprise(1) WiSUN(45605) FieldAreaNetwork(1) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="168" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a9b2826404b5b2a33ca516c38a2fe9521" prot="public" static="no">
+        <name>MBEDTLS_OID_ON</name>
+        <initializer><ref refid="oid_8h_1ac711a26e8da91c73d27d7cd582d2d6d8" kindref="member">MBEDTLS_OID_PKIX</ref> &quot;\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-on OBJECT IDENTIFIER ::= { id-pkix 8 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="170" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a29f986b8122289b5d4b0393be9dcc93a" prot="public" static="no">
+        <name>MBEDTLS_OID_ON_HW_MODULE_NAME</name>
+        <initializer><ref refid="oid_8h_1a9b2826404b5b2a33ca516c38a2fe9521" kindref="member">MBEDTLS_OID_ON</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-on-hardwareModuleName OBJECT IDENTIFIER ::= { id-on 4 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="171" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS</name>
+        <initializer><ref refid="oid_8h_1a944abd9f333c98c374040b9850bc8868" kindref="member">MBEDTLS_OID_RSA_COMPANY</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) 1 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="177" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1</name>
+        <initializer><ref refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" kindref="member">MBEDTLS_OID_PKCS</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs-1 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) 1 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="178" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1abdcf10444f5d151e481644b59f8335c6" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS5</name>
+        <initializer><ref refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" kindref="member">MBEDTLS_OID_PKCS</ref> &quot;\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs-5 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) 5 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="179" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7</name>
+        <initializer><ref refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" kindref="member">MBEDTLS_OID_PKCS</ref> &quot;\x07&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs-7 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) 7 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="180" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1acfde345687a3ba616fde6f1a67e5b235" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS9</name>
+        <initializer><ref refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" kindref="member">MBEDTLS_OID_PKCS</ref> &quot;\x09&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs-9 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) 9 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="181" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a54f5eedb526dfbb4fcb3f2de505f9c72" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS12</name>
+        <initializer><ref refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" kindref="member">MBEDTLS_OID_PKCS</ref> &quot;\x0c&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pkcs-12 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) 12 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="182" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a94c671bace8030d886c47a6d05f6502f" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_MD5</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>md5WithRSAEncryption ::= { pkcs-1 4 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="187" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ae710a98611c746a02a0428e62c72a4ec" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_SHA1</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sha1WithRSAEncryption ::= { pkcs-1 5 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="188" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1af6ce7fdcb5e585cd154b3002316c8fa2" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_SHA224</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x0e&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sha224WithRSAEncryption ::= { pkcs-1 14 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="189" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa399842c889d21120906b8857746c10d" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_SHA256</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x0b&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sha256WithRSAEncryption ::= { pkcs-1 11 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="190" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a2d88f660f0ed44574780d6f1cf859afe" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_SHA384</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x0c&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sha384WithRSAEncryption ::= { pkcs-1 12 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="191" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aef9372b133362b187794b599f283e4fb" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS1_SHA512</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x0d&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sha512WithRSAEncryption ::= { pkcs-1 13 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="192" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a67f799a2b0698d206c6de67f34432272" prot="public" static="no">
+        <name>MBEDTLS_OID_RSA_SHA_OBS</name>
+        <initializer>&quot;\x2B\x0E\x03\x02\x1D&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="194" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a906ce873f43785cddfd0e0b47d6301e2" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS9_EMAIL</name>
+        <initializer><ref refid="oid_8h_1acfde345687a3ba616fde6f1a67e5b235" kindref="member">MBEDTLS_OID_PKCS9</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>emailAddress AttributeType ::= { pkcs-9 1 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="196" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aae3c0457fb260acc7811e4f54c7c407d" prot="public" static="no">
+        <name>MBEDTLS_OID_RSASSA_PSS</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x0a&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-RSASSA-PSS ::= { pkcs-1 10 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="199" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a41d20b2f31811636313feeafcd7959b9" prot="public" static="no">
+        <name>MBEDTLS_OID_MGF1</name>
+        <initializer><ref refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" kindref="member">MBEDTLS_OID_PKCS1</ref> &quot;\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-mgf1 ::= { pkcs-1 8 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="200" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a48fad9d4b63fd94ea67b8dca0dd1933b" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_MD5</name>
+        <initializer><ref refid="oid_8h_1a944abd9f333c98c374040b9850bc8868" kindref="member">MBEDTLS_OID_RSA_COMPANY</ref> &quot;\x02\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-mbedtls_md5 OBJECT IDENTIFIER ::= { iso(1) member-body(2) us(840) rsadsi(113549) digestAlgorithm(2) 5 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="205" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0d6d3de544d2701dcc180fe538f830a0" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA1</name>
+        <initializer><ref refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" kindref="member">MBEDTLS_OID_ISO_IDENTIFIED_ORG</ref> \
+        <ref refid="oid_8h_1a6734d72a1ecf40ae9ff1552cae35ce46" kindref="member">MBEDTLS_OID_OIW_SECSIG_SHA1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-mbedtls_sha1 OBJECT IDENTIFIER ::= { iso(1) identified-organization(3) oiw(14) secsig(3) algorithms(2) 26 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="206" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a9901a9fc6c04cd3396bfce7578fe8782" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA224</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha224 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 4 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="208" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0c139de494bd65ff1f5b3fb8460d66f2" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA256</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-mbedtls_sha256 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 1 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="209" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a009bb4ed3a37a07ac3b56e4e7368c33d" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA384</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha384 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 2 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="211" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a49a6e10222d13db7f7a88dfc42b6a036" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA512</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-mbedtls_sha512 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistalgorithm(4) hashalgs(2) 3 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="213" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ab65ea824f21411d1b79ed3072f359a89" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_RIPEMD160</name>
+        <initializer><ref refid="oid_8h_1af4a57374da067f7287acd2a2afea6d07" kindref="member">MBEDTLS_OID_TELETRUST</ref> &quot;\x03\x02\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-ripemd160 OBJECT IDENTIFIER :: { iso(1) identified-organization(3) teletrust(36) algorithm(3) hashAlgorithm(2) ripemd160(1) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="215" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a71e577b2733106418add73d6bfea4233" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA3_224</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x07&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha3-224 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) hashalgs(2) sha3-224(7) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="217" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ab2b34eac1e3dca983da23a57362af0a2" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA3_256</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x08&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha3-256 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) hashalgs(2) sha3-256(8) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="219" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a7ba3a11158e6a9db62b683ed424f6e2b" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA3_384</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x09&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha3-384 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) hashalgs(2) sha3-384(9) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="221" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a40e9af7f6d5b43c18eb863dbfebef37a" prot="public" static="no">
+        <name>MBEDTLS_OID_DIGEST_ALG_SHA3_512</name>
+        <initializer><ref refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" kindref="member">MBEDTLS_OID_NIST_ALG</ref> &quot;\x02\x0a&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>id-sha3-512 OBJECT IDENTIFIER ::= { joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) hashalgs(2) sha3-512(10) } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="223" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a55ce308c559015354f73560ef30c7442" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Data OBJECT IDENTIFIER ::= {pkcs-7 1} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="228" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0deef781070aecba203e51a4d945c45f" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_SIGNED_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Signed Data OBJECT IDENTIFIER ::= {pkcs-7 2} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="229" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a0217030925472ad55a6bf366c7d5763d" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_ENVELOPED_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Enveloped Data OBJECT IDENTIFIER ::= {pkcs-7 3} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="230" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a1d05fba686b65a2ced92c81fff570895" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_SIGNED_AND_ENVELOPED_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Signed and Enveloped Data OBJECT IDENTIFIER ::= {pkcs-7 4} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="231" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a8d9daf5bc23581bd0a108a7d56ec2fb0" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_DIGESTED_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x05&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Digested Data OBJECT IDENTIFIER ::= {pkcs-7 5} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="232" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a8875bb52803cca3c468386574568887c" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS7_ENCRYPTED_DATA</name>
+        <initializer><ref refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" kindref="member">MBEDTLS_OID_PKCS7</ref> &quot;\x06&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Content type is Encrypted Data OBJECT IDENTIFIER ::= {pkcs-7 6} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="233" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a683642cedc9dfe3b005e123a3d828e0f" prot="public" static="no">
+        <name>MBEDTLS_OID_PKCS9_CSR_EXT_REQ</name>
+        <initializer><ref refid="oid_8h_1acfde345687a3ba616fde6f1a67e5b235" kindref="member">MBEDTLS_OID_PKCS9</ref> &quot;\x0e&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>extensionRequest OBJECT IDENTIFIER ::= {pkcs-9 14} </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="235" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a119fb8a6633d32e6a15219064d24aba3" prot="public" static="no">
+        <name>MBEDTLS_OID_ANSI_X9_62_SIG</name>
+        <initializer><ref refid="oid_8h_1a1b3ca852cc95265da55867d71656e765" kindref="member">MBEDTLS_OID_ANSI_X9_62</ref> &quot;\x04&quot; /* signatures(4) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="241" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a15050cd72403719139235ee3d962b6f9" prot="public" static="no">
+        <name>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2</name>
+        <initializer><ref refid="oid_8h_1a119fb8a6633d32e6a15219064d24aba3" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG</ref> &quot;\x03&quot; /* ecdsa-with-SHA2(3) */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="242" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1adcb4877f8a3b59ef5a2adda22cc7c5a5" prot="public" static="no">
+        <name>MBEDTLS_OID_ECDSA_SHA1</name>
+        <initializer><ref refid="oid_8h_1a119fb8a6633d32e6a15219064d24aba3" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="246" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aea2b4ae2c87c31b1c45f930146090c97" prot="public" static="no">
+        <name>MBEDTLS_OID_ECDSA_SHA224</name>
+        <initializer><ref refid="oid_8h_1a15050cd72403719139235ee3d962b6f9" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG_SHA2</ref> &quot;\x01&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="251" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1ade22d1fad2fb47d7b5b81a338939b36c" prot="public" static="no">
+        <name>MBEDTLS_OID_ECDSA_SHA256</name>
+        <initializer><ref refid="oid_8h_1a15050cd72403719139235ee3d962b6f9" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG_SHA2</ref> &quot;\x02&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="256" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1a4c9b835b2728851644acea1b55f5b5fd" prot="public" static="no">
+        <name>MBEDTLS_OID_ECDSA_SHA384</name>
+        <initializer><ref refid="oid_8h_1a15050cd72403719139235ee3d962b6f9" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG_SHA2</ref> &quot;\x03&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="261" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="oid_8h_1aa5f6228eea18ee6e7be673b1a4bdc6ee" prot="public" static="no">
+        <name>MBEDTLS_OID_ECDSA_SHA512</name>
+        <initializer><ref refid="oid_8h_1a15050cd72403719139235ee3d962b6f9" kindref="member">MBEDTLS_OID_ANSI_X9_62_SIG_SHA2</ref> &quot;\x04&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="266" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="oid_8h_1afdf526c6529dce3f967ed018f28bed07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_oid_get_numeric_string</definition>
+        <argsstring>(char *buf, size_t size, const mbedtls_asn1_buf *oid)</argsstring>
+        <name>mbedtls_oid_get_numeric_string</name>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>oid</declname>
+        </param>
+        <briefdescription>
+<para>Translate an ASN.1 OID into its numeric representation (e.g. &quot;\x2A\x86\x48\x86\xF7\x0D&quot; into &quot;1.2.840.113549&quot;) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to put representation in </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size of the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>OID to translate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Length of the string written (excluding final NULL) or PSA_ERROR_BUFFER_TOO_SMALL in case of error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="280" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="oid_8h_1a94d0ebc58d23cddbf3013f8c513d0a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_oid_from_numeric_string</definition>
+        <argsstring>(mbedtls_asn1_buf *oid, const char *oid_str, size_t size)</argsstring>
+        <name>mbedtls_oid_from_numeric_string</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid_str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Translate a string containing a dotted-decimal representation of an ASN.1 OID into its encoded form (e.g. &quot;1.2.840.113549&quot; into &quot;\x2A\x86\x48\x86\xF7\x0D&quot;). On success, this function allocates oid-&gt;buf from the heap. It must be freed by the caller using <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> to populate with the DER-encoded OID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string representation of the OID to parse </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the OID string, not including any null terminator</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if <computeroutput>oid_str</computeroutput> does not represent a valid OID </para><simplesectsep/><para><ref refid="compat-3-crypto_8h_1ab7d40360e48e414ffa1a4df1961723d2" kindref="member">MBEDTLS_ERR_ASN1_ALLOC_FAILED</ref> if the function fails to allocate oid-&gt;buf </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h" line="301" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Object Identifier (OID) values. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_OID_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asn1_8h" kindref="compound">mbedtls/asn1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Top<sp/>level<sp/>OID<sp/>tuples</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="oid_8h_1a7383dccb147106b3e37e2d2c4e8e364c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISO_MEMBER_BODIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x2a&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{iso(1)<sp/>member-body(2)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="20" refid="oid_8h_1ad5f57dabd8eb2bca547f62f81a883e96" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x2b&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{iso(1)<sp/>identified-organization(3)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="21" refid="oid_8h_1a0fe08b92016b01b08e6c85f25f1a9138" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISO_CCITT_DS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x55&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{joint-iso-ccitt(2)<sp/>ds(5)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="22" refid="oid_8h_1a03032f8a6463b9430deb318fa4549b4f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISO_ITU_COUNTRY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x60&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{joint-iso-itu-t(2)<sp/>country(16)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>ISO<sp/>Member<sp/>bodies<sp/>OID<sp/>parts</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="oid_8h_1acdc643a66f419aff6a9c8edad9d0e3fa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_COUNTRY_US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x86\x48&quot;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{us(840)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="28" refid="oid_8h_1ab9ff48dfb869a6deb04c071d68d215d9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_RSA_DATA_SECURITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x86\xf7\x0d&quot;<sp/><sp/></highlight><highlight class="comment">/*<sp/>{rsadsi(113549)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="29" refid="oid_8h_1a944abd9f333c98c374040b9850bc8868" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_RSA_COMPANY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_MEMBER_BODIES<sp/>MBEDTLS_OID_COUNTRY_US<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_RSA_DATA_SECURITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>rsadsi(113549)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="31" refid="oid_8h_1ac2a51df3703aa7b9cded090e7101915f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_ANSI_X9_62<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\xce\x3d&quot;<sp/></highlight><highlight class="comment">/*<sp/>ansi-X9-62(10045)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32" refid="oid_8h_1a1b3ca852cc95265da55867d71656e765" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ANSI_X9_62<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_MEMBER_BODIES<sp/>MBEDTLS_OID_COUNTRY_US<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_ANSI_X9_62</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>ISO<sp/>Identified<sp/>organization<sp/>OID<sp/>parts</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="oid_8h_1a36eef310003c500b41aa00e0d955b791" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_DOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x06&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{dod(6)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="39" refid="oid_8h_1ae9d1d39b6918b602d6951c6757389e95" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_OIW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x0e&quot;</highlight></codeline>
+<codeline lineno="40" refid="oid_8h_1adba0f5f11c7c544d4e91f8643fbc8b6f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_OIW_SECSIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_OIW<sp/>&quot;\x03&quot;</highlight></codeline>
+<codeline lineno="41" refid="oid_8h_1a21cff116c9466e1158b54c2f69e73623" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_OIW_SECSIG_ALG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_OIW_SECSIG<sp/>&quot;\x02&quot;</highlight></codeline>
+<codeline lineno="42" refid="oid_8h_1a6734d72a1ecf40ae9ff1552cae35ce46" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_OIW_SECSIG_SHA1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_OIW_SECSIG_ALG<sp/>&quot;\x1a&quot;</highlight></codeline>
+<codeline lineno="43" refid="oid_8h_1a93c17b964bc871a137f7a883248cae11" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_THAWTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x65&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>thawte(101)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="44" refid="oid_8h_1adda1d08436205cafba4128a91378dcf5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_THAWTE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_THAWTE</highlight></codeline>
+<codeline lineno="46" refid="oid_8h_1a656741cd1078282b1d032669ca61b658" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_CERTICOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x81\x04&quot;<sp/><sp/></highlight><highlight class="comment">/*<sp/>certicom(132)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="47" refid="oid_8h_1aaecf9aa568f2c29764b72ea81d3fcd63" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CERTICOM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_CERTICOM</highlight></codeline>
+<codeline lineno="49" refid="oid_8h_1a0aab6823a8fc06174c7ea7cf1fb9601d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_TELETRUST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x24&quot;<sp/></highlight><highlight class="comment">/*<sp/>teletrust(36)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="50" refid="oid_8h_1af4a57374da067f7287acd2a2afea6d07" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_TELETRUST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORG_TELETRUST</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*<sp/>ISO<sp/>ITU<sp/>OID<sp/>parts</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="oid_8h_1a5af76b5e9e3061f4578276d2731b308a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORGANIZATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x01&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{organization(1)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="57" refid="oid_8h_1a01eeae3fb92ee7c1df25c9713abe4754" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISO_ITU_US_ORG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_ITU_COUNTRY<sp/>MBEDTLS_OID_COUNTRY_US<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ORGANIZATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{joint-iso-itu-t(2)<sp/>country(16)<sp/>us(840)<sp/>organization(1)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="oid_8h_1aa5a6f9facdf1ea79edb6c29ea77dd2c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_GOV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x65&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>{gov(101)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="61" refid="oid_8h_1a2a88b11e23c4b7cb689afcace55bc6e2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_GOV<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_ITU_US_ORG<sp/>MBEDTLS_OID_ORG_GOV<sp/></highlight><highlight class="comment">/*<sp/>{joint-iso-itu-t(2)<sp/>country(16)<sp/>us(840)<sp/>organization(1)<sp/>gov(101)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="oid_8h_1a5fc6bfe81093b64fd699a9aba2ab1ff2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ORG_NETSCAPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x86\xF8\x42&quot;<sp/><sp/></highlight><highlight class="comment">/*<sp/>{netscape(113730)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="64" refid="oid_8h_1a6c4b404c9c67ecc0d9176e1b91dd839c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NETSCAPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_ITU_US_ORG<sp/>MBEDTLS_OID_ORG_NETSCAPE<sp/></highlight><highlight class="comment">/*<sp/>Netscape<sp/>OID<sp/>{joint-iso-itu-t(2)<sp/>country(16)<sp/>us(840)<sp/>organization(1)<sp/>netscape(113730)}<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ISO<sp/>arc<sp/>for<sp/>standard<sp/>certificate<sp/>and<sp/>CRL<sp/>extensions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="oid_8h_1a45d181b92d2b42398cd8090214ab7548" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ID_CE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_CCITT_DS<sp/>&quot;\x1D&quot;<sp/></highlight></codeline>
+<codeline lineno="69" refid="oid_8h_1a5714e30ae887a3d288a84cd6889a585b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NIST_ALG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_GOV<sp/>&quot;\x03\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="76" refid="oid_8h_1ad660e2e21f449588d65835cb43449b34" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_INTERNET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/>MBEDTLS_OID_ORG_DOD<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;\x01&quot;</highlight></codeline>
+<codeline lineno="78" refid="oid_8h_1ac711a26e8da91c73d27d7cd582d2d6d8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKIX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_INTERNET<sp/>&quot;\x05\x05\x07&quot;</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*<sp/>Arc<sp/>for<sp/>standard<sp/>naming<sp/>attributes</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="oid_8h_1add867a815d56c71f8728a343c57bd963" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_CCITT_DS<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="84" refid="oid_8h_1aed77a0ed6d223075b9fb1f346368cf89" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_CN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x03&quot;<sp/></highlight></codeline>
+<codeline lineno="85" refid="oid_8h_1a7d0c477fb4c5c11f34e125792289f928" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_SUR_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="86" refid="oid_8h_1a288608f190ebeeeb0287c026ffa45578" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_SERIAL_NUMBER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x05&quot;<sp/></highlight></codeline>
+<codeline lineno="87" refid="oid_8h_1aa0a40910c92769782568fba1aa197310" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_COUNTRY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x06&quot;<sp/></highlight></codeline>
+<codeline lineno="88" refid="oid_8h_1a55a096dbc79a66c4e7729ca795f63bc3" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_LOCALITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x07&quot;<sp/></highlight></codeline>
+<codeline lineno="89" refid="oid_8h_1a84965b3da3240d7189d78cb00d92a569" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_STATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x08&quot;<sp/></highlight></codeline>
+<codeline lineno="90" refid="oid_8h_1ad9db6deb1609351cf1eac7d2ca32b80b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_ORGANIZATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x0A&quot;<sp/></highlight></codeline>
+<codeline lineno="91" refid="oid_8h_1af764cca645e3b046a9a001d786d70715" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_ORG_UNIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x0B&quot;<sp/></highlight></codeline>
+<codeline lineno="92" refid="oid_8h_1a9b12474db750af2e508618ce69971de2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_TITLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x0C&quot;<sp/></highlight></codeline>
+<codeline lineno="93" refid="oid_8h_1a25ff595205be812b0494c6c8280dd8b5" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_POSTAL_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x10&quot;<sp/></highlight></codeline>
+<codeline lineno="94" refid="oid_8h_1a69242d2fda38d1cefe38738e660bfc35" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_POSTAL_CODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x11&quot;<sp/></highlight></codeline>
+<codeline lineno="95" refid="oid_8h_1ad82c6d34c40fd29eda37d7b1f35c7a0f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_GIVEN_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x2A&quot;<sp/></highlight></codeline>
+<codeline lineno="96" refid="oid_8h_1a3dd24fca4f4e7ff5c0fda1b5adc282ea" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_INITIALS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x2B&quot;<sp/></highlight></codeline>
+<codeline lineno="97" refid="oid_8h_1a0c0354f26066feb3f9da8a92bc7cbfda" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_GENERATION_QUALIFIER<sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x2C&quot;<sp/></highlight></codeline>
+<codeline lineno="98" refid="oid_8h_1a2d5765d4afcc9c3b6a6c24d797ba8f96" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_UNIQUE_IDENTIFIER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x2D&quot;<sp/></highlight></codeline>
+<codeline lineno="99" refid="oid_8h_1a2d1401e6d2a88766988d39926a3e3c5b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_DN_QUALIFIER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x2E&quot;<sp/></highlight></codeline>
+<codeline lineno="100" refid="oid_8h_1aab2fb77f1c86a04cd4c0be2e7f7f7775" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AT_PSEUDONYM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_AT<sp/>&quot;\x41&quot;<sp/></highlight></codeline>
+<codeline lineno="102" refid="oid_8h_1aad74bcbb1c617c358de44e796fb504ef" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_UID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x09\x92\x26\x89\x93\xF2\x2C\x64\x01\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="103" refid="oid_8h_1ad0895d42f05ae770eb2b50bce18355a4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DOMAIN_COMPONENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x09\x92\x26\x89\x93\xF2\x2C\x64\x01\x19&quot;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/>*<sp/>OIDs<sp/>for<sp/>standard<sp/>certificate<sp/>extensions</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="108" refid="oid_8h_1a8db3ad616aaec9dd351e76d7b8618c58" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_AUTHORITY_KEY_IDENTIFIER<sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x23&quot;<sp/></highlight></codeline>
+<codeline lineno="109" refid="oid_8h_1a698cce56e06194d62bf49201e44dc5d8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_SUBJECT_KEY_IDENTIFIER<sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x0E&quot;<sp/></highlight></codeline>
+<codeline lineno="110" refid="oid_8h_1a6d7556c43f7fc4f3af5bbdfd26cb2620" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_KEY_USAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x0F&quot;<sp/></highlight></codeline>
+<codeline lineno="111" refid="oid_8h_1ae89ed083c9b13940b5d940b9e70d1d17" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CERTIFICATE_POLICIES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x20&quot;<sp/></highlight></codeline>
+<codeline lineno="112" refid="oid_8h_1a60cb6904e309c47c39d370beaf54007c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_POLICY_MAPPINGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x21&quot;<sp/></highlight></codeline>
+<codeline lineno="113" refid="oid_8h_1a03c23655749d213fb26e608d7d0b952c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_SUBJECT_ALT_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x11&quot;<sp/></highlight></codeline>
+<codeline lineno="114" refid="oid_8h_1aeea9acd528a40c3630b42d9ec4162ce4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ISSUER_ALT_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x12&quot;<sp/></highlight></codeline>
+<codeline lineno="115" refid="oid_8h_1a1bc877b377f188063914019663920ce4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_SUBJECT_DIRECTORY_ATTRS<sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x09&quot;<sp/></highlight></codeline>
+<codeline lineno="116" refid="oid_8h_1a5f878af0c9f3f73986f982aa15f5d580" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_BASIC_CONSTRAINTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x13&quot;<sp/></highlight></codeline>
+<codeline lineno="117" refid="oid_8h_1acdfbc5ead965aaec5b1f82a575a8b2d2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NAME_CONSTRAINTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x1E&quot;<sp/></highlight></codeline>
+<codeline lineno="118" refid="oid_8h_1a50d5ff081bcca9a268cf4e2145d65145" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_POLICY_CONSTRAINTS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x24&quot;<sp/></highlight></codeline>
+<codeline lineno="119" refid="oid_8h_1a19e9613b36efd1b1df43fb7da917b7f7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_EXTENDED_KEY_USAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x25&quot;<sp/></highlight></codeline>
+<codeline lineno="120" refid="oid_8h_1a8184fdce4edfcc2cccc03eedc5a195c8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CRL_DISTRIBUTION_POINTS<sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x1F&quot;<sp/></highlight></codeline>
+<codeline lineno="121" refid="oid_8h_1aea885904f5b5556d40b40e8cdea4aabf" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_INIHIBIT_ANYPOLICY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x36&quot;<sp/></highlight></codeline>
+<codeline lineno="122" refid="oid_8h_1a02b94a8cf5d24bf50eaf6452f605f384" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_FRESHEST_CRL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x2E&quot;<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*<sp/>Certificate<sp/>policies</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="127" refid="oid_8h_1a58de2a634dc02289e26b468d4617039b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ANY_POLICY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_CERTIFICATE_POLICIES<sp/>&quot;\x00&quot;<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/>*<sp/>Netscape<sp/>certificate<sp/>extensions</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="132" refid="oid_8h_1a81de1247ecaaa9b1b8760bae562fa6df" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_CERT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NETSCAPE<sp/>&quot;\x01&quot;</highlight></codeline>
+<codeline lineno="133" refid="oid_8h_1a90d38c5b5f4181bdf9cbc51dc51f6678" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_CERT_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x01&quot;</highlight></codeline>
+<codeline lineno="134" refid="oid_8h_1a73998e01aa2b81f86575795b8923ffde" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_BASE_URL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x02&quot;</highlight></codeline>
+<codeline lineno="135" refid="oid_8h_1a967ced39c8538c0a9b9612b241050346" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_REVOCATION_URL<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x03&quot;</highlight></codeline>
+<codeline lineno="136" refid="oid_8h_1aa9081f5d363044a30e2303b7ba389be8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_CA_REVOCATION_URL<sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x04&quot;</highlight></codeline>
+<codeline lineno="137" refid="oid_8h_1acf293f32fa3055b9bc4b9dba8091089a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_RENEWAL_URL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x07&quot;</highlight></codeline>
+<codeline lineno="138" refid="oid_8h_1a53e30ea7a75dfc9e7a13de62f3cb8ca5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_CA_POLICY_URL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x08&quot;</highlight></codeline>
+<codeline lineno="139" refid="oid_8h_1a8d84a4bfb78d4587d084febe74207738" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_SSL_SERVER_NAME<sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x0C&quot;</highlight></codeline>
+<codeline lineno="140" refid="oid_8h_1a77df1043ad7ef4fced4a6625990d8411" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_COMMENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_CERT<sp/><sp/>&quot;\x0D&quot;</highlight></codeline>
+<codeline lineno="141" refid="oid_8h_1a175109eb1fa60dca32df3426369488c8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_DATA_TYPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NETSCAPE<sp/>&quot;\x02&quot;</highlight></codeline>
+<codeline lineno="142" refid="oid_8h_1a42d481f3d837e226760bce12f1e66f59" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_NS_CERT_SEQUENCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NS_DATA_TYPE<sp/>&quot;\x05&quot;</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/>OIDs<sp/>for<sp/>CRL<sp/>extensions</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="oid_8h_1a7fad16c4f004f21205fd83999c67e8dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PRIVATE_KEY_USAGE_PERIOD<sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x10&quot;</highlight></codeline>
+<codeline lineno="148" refid="oid_8h_1a1c760658437633541572c413a2856ac4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CRL_NUMBER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ID_CE<sp/>&quot;\x14&quot;<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/>*<sp/>X.509<sp/>v3<sp/>Extended<sp/>key<sp/>usage<sp/>OIDs</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="153" refid="oid_8h_1a61da0671b3897e73edf219d44e45b693" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ANY_EXTENDED_KEY_USAGE<sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_EXTENDED_KEY_USAGE<sp/>&quot;\x00&quot;<sp/></highlight></codeline>
+<codeline lineno="155" refid="oid_8h_1a00f4d4d98ab235a1e3b5f3dcaf2e14f8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_KP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKIX<sp/>&quot;\x03&quot;<sp/></highlight></codeline>
+<codeline lineno="156" refid="oid_8h_1ab47804622cec9a9e021efcd12e22b6bf" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_SERVER_AUTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="157" refid="oid_8h_1a4844194884542843ed41c02344bcd2f0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CLIENT_AUTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x02&quot;<sp/></highlight></codeline>
+<codeline lineno="158" refid="oid_8h_1a009e8dcda015bc2320261a1faf6e066a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CODE_SIGNING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x03&quot;<sp/></highlight></codeline>
+<codeline lineno="159" refid="oid_8h_1a96c02fe1530d4c737d2bf391cbd82f5e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_EMAIL_PROTECTION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="160" refid="oid_8h_1aa4758a9869e5160037e4a1f9327738ed" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_TIME_STAMPING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x08&quot;<sp/></highlight></codeline>
+<codeline lineno="161" refid="oid_8h_1aad03a9c85a0c3f922095e3cf6fb7d9c4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_OCSP_SIGNING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_KP<sp/>&quot;\x09&quot;<sp/></highlight></codeline>
+<codeline lineno="168" refid="oid_8h_1ac7e8e17959d1fd76c8d1da987024f349" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_WISUN_FAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_INTERNET<sp/>&quot;\x04\x01\x82\xe4\x25\x01&quot;</highlight></codeline>
+<codeline lineno="169"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="oid_8h_1a9b2826404b5b2a33ca516c38a2fe9521" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKIX<sp/>&quot;\x08&quot;<sp/></highlight></codeline>
+<codeline lineno="171" refid="oid_8h_1a29f986b8122289b5d4b0393be9dcc93a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ON_HW_MODULE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ON<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*<sp/>PKCS<sp/>definition<sp/>OIDs</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="oid_8h_1af14ca6f25be2df68aefb743374bc67c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_RSA_COMPANY<sp/>&quot;\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="178" refid="oid_8h_1afb1e14265b5d4e6e4bda16b4a2b9853c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS<sp/>&quot;\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="179" refid="oid_8h_1abdcf10444f5d151e481644b59f8335c6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS<sp/>&quot;\x05&quot;<sp/></highlight></codeline>
+<codeline lineno="180" refid="oid_8h_1a1d0ebdd8b17f564186bcebc602a2125f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS<sp/>&quot;\x07&quot;<sp/></highlight></codeline>
+<codeline lineno="181" refid="oid_8h_1acfde345687a3ba616fde6f1a67e5b235" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS<sp/>&quot;\x09&quot;<sp/></highlight></codeline>
+<codeline lineno="182" refid="oid_8h_1a54f5eedb526dfbb4fcb3f2de505f9c72" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS12<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS<sp/>&quot;\x0c&quot;<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="185"><highlight class="comment"><sp/>*<sp/>PKCS#1<sp/>OIDs</highlight></codeline>
+<codeline lineno="186"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="187" refid="oid_8h_1a94c671bace8030d886c47a6d05f6502f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_MD5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="188" refid="oid_8h_1ae710a98611c746a02a0428e62c72a4ec" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_SHA1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x05&quot;<sp/></highlight></codeline>
+<codeline lineno="189" refid="oid_8h_1af6ce7fdcb5e585cd154b3002316c8fa2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_SHA224<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x0e&quot;<sp/></highlight></codeline>
+<codeline lineno="190" refid="oid_8h_1aa399842c889d21120906b8857746c10d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x0b&quot;<sp/></highlight></codeline>
+<codeline lineno="191" refid="oid_8h_1a2d88f660f0ed44574780d6f1cf859afe" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x0c&quot;<sp/></highlight></codeline>
+<codeline lineno="192" refid="oid_8h_1aef9372b133362b187794b599f283e4fb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS1_SHA512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x0d&quot;<sp/></highlight></codeline>
+<codeline lineno="194" refid="oid_8h_1a67f799a2b0698d206c6de67f34432272" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_RSA_SHA_OBS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x2B\x0E\x03\x02\x1D&quot;</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="oid_8h_1a906ce873f43785cddfd0e0b47d6301e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS9_EMAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS9<sp/>&quot;\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>RFC<sp/>4055<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="199" refid="oid_8h_1aae3c0457fb260acc7811e4f54c7c407d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_RSASSA_PSS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x0a&quot;<sp/></highlight></codeline>
+<codeline lineno="200" refid="oid_8h_1a41d20b2f31811636313feeafcd7959b9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_MGF1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS1<sp/>&quot;\x08&quot;<sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="203"><highlight class="comment"><sp/>*<sp/>Digest<sp/>algorithms</highlight></codeline>
+<codeline lineno="204"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="205" refid="oid_8h_1a48fad9d4b63fd94ea67b8dca0dd1933b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_MD5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_RSA_COMPANY<sp/>&quot;\x02\x05&quot;<sp/></highlight></codeline>
+<codeline lineno="206" refid="oid_8h_1a0d6d3de544d2701dcc180fe538f830a0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ISO_IDENTIFIED_ORG<sp/>\</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_OIW_SECSIG_SHA1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208" refid="oid_8h_1a9901a9fc6c04cd3396bfce7578fe8782" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA224<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="209" refid="oid_8h_1a0c139de494bd65ff1f5b3fb8460d66f2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="211" refid="oid_8h_1a009bb4ed3a37a07ac3b56e4e7368c33d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x02&quot;<sp/></highlight></codeline>
+<codeline lineno="213" refid="oid_8h_1a49a6e10222d13db7f7a88dfc42b6a036" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x03&quot;<sp/></highlight></codeline>
+<codeline lineno="215" refid="oid_8h_1ab65ea824f21411d1b79ed3072f359a89" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_RIPEMD160<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_TELETRUST<sp/>&quot;\x03\x02\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="217" refid="oid_8h_1a71e577b2733106418add73d6bfea4233" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA3_224<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x07&quot;<sp/></highlight></codeline>
+<codeline lineno="219" refid="oid_8h_1ab2b34eac1e3dca983da23a57362af0a2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA3_256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x08&quot;<sp/></highlight></codeline>
+<codeline lineno="221" refid="oid_8h_1a7ba3a11158e6a9db62b683ed424f6e2b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA3_384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x09&quot;<sp/></highlight></codeline>
+<codeline lineno="223" refid="oid_8h_1a40e9af7f6d5b43c18eb863dbfebef37a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_DIGEST_ALG_SHA3_512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_NIST_ALG<sp/>&quot;\x02\x0a&quot;<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/>*<sp/>PKCS#7<sp/>OIDs</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="228" refid="oid_8h_1a55ce308c559015354f73560ef30c7442" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x01&quot;<sp/></highlight></codeline>
+<codeline lineno="229" refid="oid_8h_1a0deef781070aecba203e51a4d945c45f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_SIGNED_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x02&quot;<sp/></highlight></codeline>
+<codeline lineno="230" refid="oid_8h_1a0217030925472ad55a6bf366c7d5763d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_ENVELOPED_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x03&quot;<sp/></highlight></codeline>
+<codeline lineno="231" refid="oid_8h_1a1d05fba686b65a2ced92c81fff570895" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_SIGNED_AND_ENVELOPED_DATA<sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x04&quot;<sp/></highlight></codeline>
+<codeline lineno="232" refid="oid_8h_1a8d9daf5bc23581bd0a108a7d56ec2fb0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_DIGESTED_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x05&quot;<sp/></highlight></codeline>
+<codeline lineno="233" refid="oid_8h_1a8875bb52803cca3c468386574568887c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS7_ENCRYPTED_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS7<sp/>&quot;\x06&quot;<sp/></highlight></codeline>
+<codeline lineno="235" refid="oid_8h_1a683642cedc9dfe3b005e123a3d828e0f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_PKCS9_CSR_EXT_REQ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_PKCS9<sp/>&quot;\x0e&quot;<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="239"><highlight class="comment"><sp/>*<sp/>ECDSA<sp/>signature<sp/>identifiers,<sp/>from<sp/>RFC<sp/>5480</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="241" refid="oid_8h_1a119fb8a6633d32e6a15219064d24aba3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ANSI_X9_62_SIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62<sp/>&quot;\x04&quot;<sp/></highlight><highlight class="comment">/*<sp/>signatures(4)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="242" refid="oid_8h_1a15050cd72403719139235ee3d962b6f9" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2<sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG<sp/>&quot;\x03&quot;<sp/></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA2(3)<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="243"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA1<sp/>OBJECT<sp/>IDENTIFIER<sp/>::=<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/>*<sp/><sp/><sp/>iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>ansi-X9-62(10045)<sp/>signatures(4)<sp/>1<sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="oid_8h_1adcb4877f8a3b59ef5a2adda22cc7c5a5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ECDSA_SHA1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG<sp/>&quot;\x01&quot;</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA224<sp/>OBJECT<sp/>IDENTIFIER<sp/>::=<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/>*<sp/><sp/><sp/>iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>ansi-X9-62(10045)<sp/>signatures(4)</highlight></codeline>
+<codeline lineno="250"><highlight class="comment"><sp/>*<sp/><sp/><sp/>ecdsa-with-SHA2(3)<sp/>1<sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="oid_8h_1aea2b4ae2c87c31b1c45f930146090c97" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ECDSA_SHA224<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2<sp/>&quot;\x01&quot;</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA256<sp/>OBJECT<sp/>IDENTIFIER<sp/>::=<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="comment"><sp/>*<sp/><sp/><sp/>iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>ansi-X9-62(10045)<sp/>signatures(4)</highlight></codeline>
+<codeline lineno="255"><highlight class="comment"><sp/>*<sp/><sp/><sp/>ecdsa-with-SHA2(3)<sp/>2<sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="oid_8h_1ade22d1fad2fb47d7b5b81a338939b36c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ECDSA_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2<sp/>&quot;\x02&quot;</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA384<sp/>OBJECT<sp/>IDENTIFIER<sp/>::=<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="comment"><sp/>*<sp/><sp/><sp/>iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>ansi-X9-62(10045)<sp/>signatures(4)</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/>*<sp/><sp/><sp/>ecdsa-with-SHA2(3)<sp/>3<sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="oid_8h_1a4c9b835b2728851644acea1b55f5b5fd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ECDSA_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2<sp/>&quot;\x03&quot;</highlight></codeline>
+<codeline lineno="262"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ecdsa-with-SHA512<sp/>OBJECT<sp/>IDENTIFIER<sp/>::=<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/>*<sp/><sp/><sp/>iso(1)<sp/>member-body(2)<sp/>us(840)<sp/>ansi-X9-62(10045)<sp/>signatures(4)</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/>*<sp/><sp/><sp/>ecdsa-with-SHA2(3)<sp/>4<sp/>}<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="oid_8h_1aa5f6228eea18ee6e7be673b1a4bdc6ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_ECDSA_SHA512<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_OID_ANSI_X9_62_SIG_SHA2<sp/>&quot;\x04&quot;</highlight></codeline>
+<codeline lineno="267"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_X509_USE_C)</highlight></codeline>
+<codeline lineno="269"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="280"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="oid_8h_1afdf526c6529dce3f967ed018f28bed07" kindref="member">mbedtls_oid_get_numeric_string</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*oid);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_X509_USE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="282"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_X509_CREATE_C)</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="301"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="oid_8h_1a94d0ebc58d23cddbf3013f8c513d0a47" kindref="member">mbedtls_oid_from_numeric_string</ref>(<ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*oid,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*oid_str,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_X509_CREATE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>oid.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/oid.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__encdec__module" kind="group">
+    <compoundname>encdec_module</compoundname>
+    <title>Encryption/decryption module</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The Encryption/decryption module provides encryption/decryption functions. One can differentiate between symmetric and asymmetric algorithms; the symmetric ones are mostly used for message confidentiality and the asymmetric ones for key exchange and message integrity. Some symmetric algorithms provide different block cipher modes, mainly Electronic Code Book (ECB) which is used for short (64-bit) messages and Cipher Block Chaining (CBC) which provides the structure needed for longer messages. In addition the Cipher Feedback Mode (CFB-128) stream cipher mode, Counter mode (CTR) and Galois Counter Mode (GCM) are implemented for specific algorithms.</para><para>All symmetric encryption algorithms are accessible via the generic cipher layer (see <computeroutput>mbedtls_cipher_setup()</computeroutput>).</para><para>The asymmetric encryption algorithms are accessible via the generic public key layer (see <computeroutput><ref refid="pk_8h_1a999d1160bb30c03d0c4382c3a9b0aa89" kindref="member">mbedtls_pk_init()</ref></computeroutput>).</para><para>The following algorithms are provided:<itemizedlist>
+<listitem><para>Symmetric:<itemizedlist>
+<listitem><para>AES (see <computeroutput>mbedtls_aes_crypt_ecb()</computeroutput>, <computeroutput>mbedtls_aes_crypt_cbc()</computeroutput>, <computeroutput>mbedtls_aes_crypt_cfb128()</computeroutput> and <computeroutput>mbedtls_aes_crypt_ctr()</computeroutput>).</para></listitem><listitem><para>Camellia (see <computeroutput>mbedtls_camellia_crypt_ecb()</computeroutput>, <computeroutput>mbedtls_camellia_crypt_cbc()</computeroutput>, <computeroutput>mbedtls_camellia_crypt_cfb128()</computeroutput> and <computeroutput>mbedtls_camellia_crypt_ctr()</computeroutput>).</para></listitem><listitem><para>DES/3DES (see <computeroutput>mbedtls_des_crypt_ecb()</computeroutput>, <computeroutput>mbedtls_des_crypt_cbc()</computeroutput>, <computeroutput>mbedtls_des3_crypt_ecb()</computeroutput> and <computeroutput>mbedtls_des3_crypt_cbc()</computeroutput>).</para></listitem><listitem><para>GCM (AES-GCM and CAMELLIA-GCM) (see <computeroutput>mbedtls_gcm_init()</computeroutput>)</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Asymmetric:<itemizedlist>
+<listitem><para>RSA (see <computeroutput>mbedtls_rsa_public()</computeroutput> and <computeroutput>mbedtls_rsa_private()</computeroutput>).</para></listitem><listitem><para>Elliptic Curves over GF(p) (see <computeroutput>mbedtls_ecp_point_init()</computeroutput>).</para></listitem><listitem><para>Elliptic Curve Digital Signature Algorithm (ECDSA) (see <computeroutput>mbedtls_ecdsa_init()</computeroutput>).</para></listitem><listitem><para>Elliptic Curve Diffie Hellman (ECDH) (see <computeroutput>mbedtls_ecdh_init()</computeroutput>).</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para><para>This module provides encryption/decryption which can be used to provide secrecy.</para><para>It also provides asymmetric key functions which can be used for confidentiality, integrity, authentication and non-repudiation. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

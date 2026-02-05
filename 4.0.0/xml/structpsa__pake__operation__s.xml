@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__pake__operation__s" kind="struct" prot="public">
+    <compoundname>psa_pake_operation_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a7b182d313a53336e34a6f1a1aa4586d5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_pake_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1055" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1055" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a5e3e027585b301e7811113c07fe03a68" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_pake_operation_s::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1057" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1057" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a7eab200e882306b9fd80ca6e94a76320" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1ga37ed4ea6bba6bacc72d0ecb9b95af96c" kindref="member">psa_pake_primitive_t</ref></type>
+        <definition>psa_pake_primitive_t psa_pake_operation_s::private_primitive</definition>
+        <argsstring></argsstring>
+        <name>private_primitive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1059" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1059" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a414aa550fa9945826f6b32d96ba536b6" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_pake_operation_s::private_stage</definition>
+        <argsstring></argsstring>
+        <name>private_stage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1062" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a0e0e8f60216bcfaff47584cb8c33ac93" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_pake_operation_s::private_dummy</definition>
+        <argsstring></argsstring>
+        <name>private_dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1065" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1065" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1a303b732826b085c2f2d5ad3816e0c633" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpsa__jpake__computation__stage__s" kindref="compound">psa_jpake_computation_stage_s</ref></type>
+        <definition>struct psa_jpake_computation_stage_s psa_pake_operation_s::private_jpake</definition>
+        <argsstring></argsstring>
+        <name>private_jpake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1065" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1067" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1aa5b8cfbcc704119a4e53d33854778a91" prot="public" static="no" mutable="no">
+        <type>union psa_pake_operation_s::@9</type>
+        <definition>union psa_pake_operation_s::@9  psa_pake_operation_s::private_computation_stage</definition>
+        <argsstring></argsstring>
+        <name>private_computation_stage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1069" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1ad6e6328124a26e4d3bb05c9eda5ce40f" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__pake__context__t" kindref="compound">psa_driver_pake_context_t</ref></type>
+        <definition>psa_driver_pake_context_t psa_pake_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1071" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1071" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1ae65d321cb67bdf236523f40d8a9aae1a" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structpsa__crypto__driver__pake__inputs__s" kindref="compound">psa_crypto_driver_pake_inputs_s</ref></type>
+        <definition>struct psa_crypto_driver_pake_inputs_s psa_pake_operation_s::private_inputs</definition>
+        <argsstring></argsstring>
+        <name>private_inputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1071" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1072" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__operation__s_1ac40e9624fce048bcc9a61ec20405fd10" prot="public" static="no" mutable="no">
+        <type>union psa_pake_operation_s::@10</type>
+        <definition>union psa_pake_operation_s::@10  psa_pake_operation_s::private_data</definition>
+        <argsstring></argsstring>
+        <name>private_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1073" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="822">
+        <label>psa_crypto_driver_pake_inputs_s</label>
+        <link refid="structpsa__crypto__driver__pake__inputs__s"/>
+        <childnode refid="823" relation="usage">
+          <edgelabel>private_cipher_suite</edgelabel>
+        </childnode>
+        <childnode refid="824" relation="usage">
+          <edgelabel>private_attributes</edgelabel>
+        </childnode>
+      </node>
+      <node id="825">
+        <label>psa_key_policy_s</label>
+        <link refid="structpsa__key__policy__s"/>
+      </node>
+      <node id="821">
+        <label>psa_pake_operation_s</label>
+        <link refid="structpsa__pake__operation__s"/>
+        <childnode refid="822" relation="usage">
+          <edgelabel>private_inputs</edgelabel>
+        </childnode>
+        <childnode refid="827" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+        <childnode refid="829" relation="usage">
+          <edgelabel>private_jpake</edgelabel>
+        </childnode>
+      </node>
+      <node id="826">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="828">
+        <label>mbedtls_psa_pake_operation_t</label>
+        <link refid="structmbedtls__psa__pake__operation__t"/>
+      </node>
+      <node id="823">
+        <label>psa_pake_cipher_suite_s</label>
+        <link refid="structpsa__pake__cipher__suite__s"/>
+      </node>
+      <node id="829">
+        <label>psa_jpake_computation_stage_s</label>
+        <link refid="structpsa__jpake__computation__stage__s"/>
+      </node>
+      <node id="824">
+        <label>psa_key_attributes_s</label>
+        <link refid="structpsa__key__attributes__s"/>
+        <childnode refid="825" relation="usage">
+          <edgelabel>private_policy</edgelabel>
+        </childnode>
+        <childnode refid="826" relation="usage">
+          <edgelabel>private_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="827">
+        <label>psa_driver_pake_context_t</label>
+        <link refid="unionpsa__driver__pake__context__t"/>
+        <childnode refid="828" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="1045" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="1045" bodyend="1075"/>
+    <listofallmembers>
+      <member refid="structpsa__pake__operation__s_1a5e3e027585b301e7811113c07fe03a68" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_alg</name></member>
+      <member refid="structpsa__pake__operation__s_1aa5b8cfbcc704119a4e53d33854778a91" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_computation_stage</name></member>
+      <member refid="structpsa__pake__operation__s_1ad6e6328124a26e4d3bb05c9eda5ce40f" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__pake__operation__s_1ac40e9624fce048bcc9a61ec20405fd10" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_data</name></member>
+      <member refid="structpsa__pake__operation__s_1a0e0e8f60216bcfaff47584cb8c33ac93" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_dummy</name></member>
+      <member refid="structpsa__pake__operation__s_1a7b182d313a53336e34a6f1a1aa4586d5" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__pake__operation__s_1ae65d321cb67bdf236523f40d8a9aae1a" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_inputs</name></member>
+      <member refid="structpsa__pake__operation__s_1a303b732826b085c2f2d5ad3816e0c633" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_jpake</name></member>
+      <member refid="structpsa__pake__operation__s_1a7eab200e882306b9fd80ca6e94a76320" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_primitive</name></member>
+      <member refid="structpsa__pake__operation__s_1a414aa550fa9945826f6b32d96ba536b6" prot="public" virt="non-virtual"><scope>psa_pake_operation_s</scope><name>private_stage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

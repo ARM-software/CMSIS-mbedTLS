@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__ssltls__communication__module" kind="group">
+    <compoundname>ssltls_communication_module</compoundname>
+    <title>SSL/TLS communication module</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The SSL/TLS communication module provides the means to create an SSL/TLS communication channel.</para><para>The basic provisions are:<itemizedlist>
+<listitem><para>initialise an SSL/TLS context (see <computeroutput><ref refid="ssl_8h_1a8560dea66d7830a11874188727ec4c45" kindref="member">mbedtls_ssl_init()</ref></computeroutput>).</para></listitem><listitem><para>perform an SSL/TLS handshake (see <computeroutput><ref refid="ssl_8h_1a4a37e497cd08c896870a42b1b618186e" kindref="member">mbedtls_ssl_handshake()</ref></computeroutput>).</para></listitem><listitem><para>read/write (see <computeroutput><ref refid="ssl_8h_1aa2c29eeb1deaf5ad9f01a7515006ede5" kindref="member">mbedtls_ssl_read()</ref></computeroutput> and <computeroutput><ref refid="ssl_8h_1a5bbda87d484de82df730758b475f32e5" kindref="member">mbedtls_ssl_write()</ref></computeroutput>).</para></listitem><listitem><para>notify a peer that connection is being closed (see <computeroutput><ref refid="ssl_8h_1ac2c1b17128ead2df3082e27b603deb4c" kindref="member">mbedtls_ssl_close_notify()</ref></computeroutput>).</para></listitem></itemizedlist>
+</para><para>Many aspects of such a channel are set through parameters and callback functions:<itemizedlist>
+<listitem><para>the endpoint role: client or server.</para></listitem><listitem><para>the authentication mode. Should verification take place.</para></listitem><listitem><para>the Host-to-host communication channel. A TCP/IP module is provided.</para></listitem><listitem><para>the random number generator (RNG).</para></listitem><listitem><para>the ciphers to use for encryption/decryption.</para></listitem><listitem><para>session control functions.</para></listitem><listitem><para>X.509 parameters for certificate-handling and key exchange.</para></listitem></itemizedlist>
+</para><para>This module can be used to create an SSL/TLS server and client and to provide a basic framework to setup and communicate through an SSL/TLS communication channel.<linebreak/>
+Note that you need to provide for several aspects yourself as mentioned above. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

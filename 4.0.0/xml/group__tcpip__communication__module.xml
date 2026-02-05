@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__tcpip__communication__module" kind="group">
+    <compoundname>tcpip_communication_module</compoundname>
+    <title>TCP/IP communication module</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The TCP/IP communication module provides for a channel of communication for the <ref refid="group__ssltls__communication__module" kindref="compound">SSL/TLS communication module</ref> to use. In the TCP/IP-model it provides for communication up to the Transport (or Host-to-host) layer. SSL/TLS resides on top of that, in the Application layer, and makes use of its basic provisions:<itemizedlist>
+<listitem><para>listening on a port (see <computeroutput><ref refid="net__sockets_8h_1aa1cb7fc819153c43a2c75c95d0152c75" kindref="member">mbedtls_net_bind()</ref></computeroutput>).</para></listitem><listitem><para>accepting a connection (through <computeroutput><ref refid="net__sockets_8h_1a14ca8a2d8af16ea53bd1b9a872a39ff8" kindref="member">mbedtls_net_accept()</ref></computeroutput>).</para></listitem><listitem><para>read/write (through <computeroutput><ref refid="net__sockets_8h_1a03af351ec420bbeb5e91357abcfb3663" kindref="member">mbedtls_net_recv()</ref>/<computeroutput><ref refid="net__sockets_8h_1a4841afd0e14f1fd44b82c3a850961ab7" kindref="member">mbedtls_net_send()</ref></computeroutput>)</computeroutput>.</para></listitem><listitem><para>close a connection (through <computeroutput><ref refid="net__sockets_8h_1a4fbf879a94a7640a8b07f53250c4698c" kindref="member">mbedtls_net_close()</ref></computeroutput>).</para></listitem></itemizedlist>
+</para><para>This way you have the means to, for example, implement and use an UDP or IPSec communication solution as a basis.</para><para>This module can be used at server- and clientside to provide a basic means of communication over the internet. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__san__list" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_san_list</compoundname>
+    <includes refid="x509_8h" local="no">x509.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__san__list_1adc0ee4ab1256402a33b44be7e598e5ca" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__subject__alternative__name" kindref="compound">mbedtls_x509_subject_alternative_name</ref></type>
+        <definition>mbedtls_x509_subject_alternative_name mbedtls_x509_san_list::node</definition>
+        <argsstring></argsstring>
+        <name>node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="297" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__list_1ade280db82d423e794d3c1e23ba889211" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__x509__san__list" kindref="compound">mbedtls_x509_san_list</ref> *</type>
+        <definition>struct mbedtls_x509_san_list* mbedtls_x509_san_list::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="298" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="680">
+        <label>mbedtls_x509_subject_alternative_name</label>
+        <link refid="structmbedtls__x509__subject__alternative__name"/>
+        <childnode refid="681" relation="usage">
+          <edgelabel>other_name</edgelabel>
+        </childnode>
+        <childnode refid="682" relation="usage">
+          <edgelabel>unstructured_name</edgelabel>
+        </childnode>
+        <childnode refid="683" relation="usage">
+          <edgelabel>directory_name</edgelabel>
+        </childnode>
+      </node>
+      <node id="679">
+        <label>mbedtls_x509_san_list</label>
+        <link refid="structmbedtls__x509__san__list"/>
+        <childnode refid="680" relation="usage">
+          <edgelabel>node</edgelabel>
+        </childnode>
+        <childnode refid="679" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="682">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="683">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="683" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="682" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="681">
+        <label>mbedtls_x509_san_other_name</label>
+        <link refid="structmbedtls__x509__san__other__name"/>
+        <childnode refid="682" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>type_id</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="296" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="296" bodyend="299"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__san__list_1ade280db82d423e794d3c1e23ba889211" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_list</scope><name>next</name></member>
+      <member refid="structmbedtls__x509__san__list_1adc0ee4ab1256402a33b44be7e598e5ca" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_list</scope><name>node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

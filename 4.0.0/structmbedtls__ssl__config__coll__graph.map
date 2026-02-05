@@ -1,0 +1,18 @@
+<map id="mbedtls_ssl_config" name="mbedtls_ssl_config">
+<area shape="rect" id="node2" href="$structmbedtls__ssl__context.html" title="mbedtls_ssl_context" alt="" coords="1680,116,1823,143"/>
+<area shape="rect" id="node3" href="$structmbedtls__dtls__srtp__info__t.html" title="mbedtls_dtls_srtp_info_t" alt="" coords="1316,71,1479,97"/>
+<area shape="rect" id="node4" href="$unionmbedtls__ssl__user__data__t.html" title="mbedtls_ssl_user_data_t" alt="" coords="967,16,1133,43"/>
+<area shape="rect" id="node5" href="$structmbedtls__ssl__session.html" title="mbedtls_ssl_session" alt="" coords="1325,451,1469,477"/>
+<area shape="rect" id="node6" href="$structmbedtls__ssl__tls13__application__secrets.html" title="mbedtls_ssl_tls13_application\l_secrets" alt="" coords="952,675,1148,717"/>
+<area shape="rect" id="node7" href="$structmbedtls__x509__crt.html" title="mbedtls_x509_crt" alt="" coords="987,451,1113,477"/>
+<area shape="rect" id="node8" href="$structmbedtls__asn1__sequence.html" title="mbedtls_asn1_sequence" alt="" coords="290,451,457,477"/>
+<area shape="rect" id="node10" href="$structmbedtls__x509__authority.html" title="mbedtls_x509_authority" alt="" coords="625,512,785,539"/>
+<area shape="rect" id="node9" href="$structmbedtls__asn1__buf.html" title="mbedtls_asn1_buf" alt="" coords="9,584,136,611"/>
+<area shape="rect" id="node11" href="$structmbedtls__asn1__named__data.html" title="mbedtls_asn1_named_data" alt="" coords="283,647,464,673"/>
+<area shape="rect" id="node16" href="$structmbedtls__x509__crl.html" title="mbedtls_x509_crl" alt="" coords="643,787,767,813"/>
+<area shape="rect" id="node17" href="$structmbedtls__x509__crl__entry.html" title="mbedtls_x509_crl_entry" alt="" coords="293,887,453,913"/>
+<area shape="rect" id="node12" href="$structmbedtls__x509__time.html" title="mbedtls_x509_time" alt="" coords="5,953,140,980"/>
+<area shape="rect" id="node13" href="$structmbedtls__pk__context.html" title="Public key container. " alt="" coords="636,215,775,241"/>
+<area shape="rect" id="node14" href="$structmbedtls__svc__key__id__t.html" title="mbedtls_svc_key_id_t" alt="" coords="298,145,449,172"/>
+<area shape="rect" id="node15" href="$structmbedtls__x509__crt__profile.html" title="mbedtls_x509_crt_profile" alt="" coords="967,77,1133,104"/>
+</map>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__timing__hr__time" kind="struct" prot="public">
+    <compoundname>mbedtls_timing_hr_time</compoundname>
+    <includes refid="timing__alt_8h" local="no">timing_alt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__timing__hr__time_1a4a5b9a41bd03bc65d87136094690692f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_timing_hr_time::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" line="11" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" line="10" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/timing_alt.h" bodystart="10" bodyend="12"/>
+    <listofallmembers>
+      <member refid="structmbedtls__timing__hr__time_1a4a5b9a41bd03bc65d87136094690692f" prot="public" virt="non-virtual"><scope>mbedtls_timing_hr_time</scope><name>dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

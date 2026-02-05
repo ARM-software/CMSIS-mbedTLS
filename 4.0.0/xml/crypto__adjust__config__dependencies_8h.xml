@@ -1,0 +1,646 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__adjust__config__dependencies_8h" kind="file">
+    <compoundname>crypto_adjust_config_dependencies.h</compoundname>
+    <includedby refid="config__psa_8h" local="yes">config_psa.h</includedby>
+    <invincdepgraph>
+      <node id="2386">
+        <label>threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+      </node>
+      <node id="2384">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2385" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+      </node>
+      <node id="2391">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="2390" relation="include">
+        </childnode>
+      </node>
+      <node id="2409">
+        <label>chacha20.h</label>
+        <link refid="chacha20_8h"/>
+        <childnode refid="2407" relation="include">
+        </childnode>
+      </node>
+      <node id="2413">
+        <label>sha256.h</label>
+        <link refid="sha256_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2380">
+        <label>platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+      </node>
+      <node id="2352">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2351" relation="include">
+        </childnode>
+        <childnode refid="2353" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+      </node>
+      <node id="2382">
+        <label>bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+      </node>
+      <node id="2364">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="2360">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2361" relation="include">
+        </childnode>
+        <childnode refid="2362" relation="include">
+        </childnode>
+      </node>
+      <node id="2359">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2365">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="2387">
+        <label>base64.h</label>
+        <link refid="base64_8h"/>
+      </node>
+      <node id="2397">
+        <label>crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="2374" relation="include">
+        </childnode>
+      </node>
+      <node id="2368">
+        <label>ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+      </node>
+      <node id="2416">
+        <label>version.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h"/>
+      </node>
+      <node id="2398">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="2399" relation="include">
+        </childnode>
+      </node>
+      <node id="2378">
+        <label>asn1write.h</label>
+        <link refid="asn1write_8h"/>
+        <childnode refid="2379" relation="include">
+        </childnode>
+      </node>
+      <node id="2356">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2390">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2379" relation="include">
+        </childnode>
+      </node>
+      <node id="2404">
+        <label>cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2357">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+      </node>
+      <node id="2407">
+        <label>chachapoly.h</label>
+        <link refid="chachapoly_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2389">
+        <label>pem.h</label>
+        <link refid="pem_8h"/>
+      </node>
+      <node id="2355">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2366">
+        <label>version.h</label>
+        <link refid="include_2mbedtls_2version_8h"/>
+      </node>
+      <node id="2363">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="2392">
+        <label>error_common.h</label>
+        <link refid="error__common_8h"/>
+        <childnode refid="2363" relation="include">
+        </childnode>
+      </node>
+      <node id="2349">
+        <label>build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2350" relation="include">
+        </childnode>
+        <childnode refid="2367" relation="include">
+        </childnode>
+        <childnode refid="2380" relation="include">
+        </childnode>
+        <childnode refid="2382" relation="include">
+        </childnode>
+        <childnode refid="2383" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2381" relation="include">
+        </childnode>
+        <childnode refid="2379" relation="include">
+        </childnode>
+        <childnode refid="2403" relation="include">
+        </childnode>
+        <childnode refid="2404" relation="include">
+        </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+        <childnode refid="2371" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+        <childnode refid="2416" relation="include">
+        </childnode>
+      </node>
+      <node id="2371">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2348">
+        <label>config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="2349" relation="include">
+        </childnode>
+      </node>
+      <node id="2372">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="2373" relation="include">
+        </childnode>
+      </node>
+      <node id="2412">
+        <label>sha1.h</label>
+        <link refid="sha1_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2374" relation="include">
+        </childnode>
+      </node>
+      <node id="2370">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2383">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2384" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+      </node>
+      <node id="2376">
+        <label>cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2357" relation="include">
+        </childnode>
+      </node>
+      <node id="2369">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2371" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+      </node>
+      <node id="2351">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2354">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2414">
+        <label>sha512.h</label>
+        <link refid="sha512_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2379">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="2400">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>nist_kw.h</label>
+        <link refid="nist__kw_8h"/>
+      </node>
+      <node id="2385">
+        <label>compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="2370" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+        <childnode refid="2386" relation="include">
+        </childnode>
+        <childnode refid="2387" relation="include">
+        </childnode>
+        <childnode refid="2388" relation="include">
+        </childnode>
+        <childnode refid="2389" relation="include">
+        </childnode>
+      </node>
+      <node id="2403">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="2390" relation="include">
+        </childnode>
+      </node>
+      <node id="2362">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2375">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2381">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="2405">
+        <label>gcm.h</label>
+        <link refid="gcm_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2367">
+        <label>platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2368" relation="include">
+        </childnode>
+        <childnode refid="2369" relation="include">
+        </childnode>
+        <childnode refid="2376" relation="include">
+        </childnode>
+        <childnode refid="2377" relation="include">
+        </childnode>
+      </node>
+      <node id="2402">
+        <label>memory_buffer_alloc.h</label>
+        <link refid="memory__buffer__alloc_8h"/>
+      </node>
+      <node id="2411">
+        <label>ripemd160.h</label>
+        <link refid="ripemd160_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2410">
+        <label>md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2373">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="2374" relation="include">
+        </childnode>
+      </node>
+      <node id="2347">
+        <label>crypto_adjust_config_dependencies.h</label>
+        <link refid="crypto_adjust_config_dependencies.h"/>
+        <childnode refid="2348" relation="include">
+        </childnode>
+      </node>
+      <node id="2395">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto__driver__random_8h"/>
+        <childnode refid="2381" relation="include">
+        </childnode>
+      </node>
+      <node id="2350">
+        <label>build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="2351" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2361" relation="include">
+        </childnode>
+        <childnode refid="2363" relation="include">
+        </childnode>
+        <childnode refid="2353" relation="include">
+        </childnode>
+        <childnode refid="2364" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2365" relation="include">
+        </childnode>
+        <childnode refid="2366" relation="include">
+        </childnode>
+        <childnode refid="2362" relation="include">
+        </childnode>
+      </node>
+      <node id="2377">
+        <label>asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="2360" relation="include">
+        </childnode>
+        <childnode refid="2364" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2378" relation="include">
+        </childnode>
+      </node>
+      <node id="2374">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+      </node>
+      <node id="2408">
+        <label>poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="2407" relation="include">
+        </childnode>
+      </node>
+      <node id="2406">
+        <label>ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+      </node>
+      <node id="2415">
+        <label>sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="2398" relation="include">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+        <childnode refid="2373" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+      </node>
+      <node id="2388">
+        <label>lms.h</label>
+        <link refid="lms_8h"/>
+      </node>
+      <node id="2358">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+      </node>
+      <node id="2396">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="2397" relation="include">
+        </childnode>
+      </node>
+      <node id="2353">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2401">
+        <label>ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+      </node>
+      <node id="2361">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2352" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+<para>Adjust PSA configuration by resolving some dependencies. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an internal header. Do not include it directly.</para><para>See docs/proposed/psa-conditional-inclusion-c.md. If the Mbed TLS implementation of a cryptographic mechanism A depends on a cryptographic mechanism B then if the cryptographic mechanism A is enabled and not accelerated enable B. Note that if A is enabled and accelerated, it is not necessary to enable B for A support. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="13"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_ADJUST_CONFIG_DEPENDENCIES_H</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_ADJUST_CONFIG_DEPENDENCIES_H</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(TF_PSA_CRYPTO_CONFIG_FILES_READ)</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Do<sp/>not<sp/>include<sp/>psa/crypto_adjust_*.h<sp/>manually!<sp/>This<sp/>can<sp/>lead<sp/>to<sp/>problems,<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;up<sp/>to<sp/>and<sp/>including<sp/>runtime<sp/>errors<sp/>such<sp/>as<sp/>buffer<sp/>overflows.<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;If<sp/>you&apos;re<sp/>trying<sp/>to<sp/>fix<sp/>a<sp/>complaint<sp/>from<sp/>check_config.h,<sp/>just<sp/>remove<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;it<sp/>from<sp/>your<sp/>configuration<sp/>file:<sp/>since<sp/>Mbed<sp/>TLS<sp/>3.0,<sp/>it<sp/>is<sp/>included<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;automatically<sp/>at<sp/>the<sp/>right<sp/>point.&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(PSA_WANT_ALG_TLS12_PRF)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_TLS12_PRF))<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_TLS12_PSK_TO_MS)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_TLS12_PSK_TO_MS))<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_HKDF)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_HKDF))<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_HKDF_EXTRACT)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_HKDF_EXTRACT))<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_HKDF_EXPAND)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_HKDF_EXPAND))<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(PSA_WANT_ALG_PBKDF2_HMAC)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_PBKDF2_HMAC))</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_ALG_HMAC<sp/>1</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_KEY_TYPE_HMAC<sp/>1</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(PSA_WANT_ALG_PBKDF2_AES_CMAC_PRF_128)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(MBEDTLS_PSA_ACCEL_ALG_PBKDF2_AES_CMAC_PRF_128))</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_KEY_TYPE_AES<sp/>1</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_ALG_CMAC<sp/>1</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_NIST_KW_C)</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_ALG_ECB_NO_PADDING<sp/>1</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_ADJUST_CONFIG_DEPENDENCIES_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_dependencies.h"/>
+  </compounddef>
+</doxygen>

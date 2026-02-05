@@ -1,0 +1,28 @@
+<map id="ssl_ticket.h" name="ssl_ticket.h">
+<area shape="rect" id="node3" href="$include_2mbedtls_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="502,379,639,405"/>
+<area shape="rect" id="node13" href="$ssl_8h.html" title="SSL/TLS functions. " alt="" coords="1251,80,1351,107"/>
+<area shape="rect" id="node16" href="$platform__time_8h.html" title="Mbed TLS Platform time abstraction. " alt="" coords="2273,617,2434,644"/>
+<area shape="rect" id="node28" href="$crypto_8h.html" title="Platform Security Architecture cryptography module. " alt="" coords="2086,461,2181,487"/>
+<area shape="rect" id="node41" href="$threading_8h.html" title="Threading abstraction layer. " alt="" coords="2552,461,2688,487"/>
+<area shape="rect" id="node4" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="1952,767,2077,808"/>
+<area shape="rect" id="node10" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="485,461,656,487"/>
+<area shape="rect" id="node11" href="$config__adjust__x509_8h.html" title="Adjust X.509 configuration. " alt="" coords="144,453,291,495"/>
+<area shape="rect" id="node12" href="$config__adjust__ssl_8h.html" title="Adjust TLS configuration. " alt="" coords="315,453,461,495"/>
+<area shape="rect" id="node5" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="2009,863,2143,890"/>
+<area shape="rect" id="node14" href="$platform__util_8h.html" title="Common and shared functions used by multiple modules in the Mbed TLS library. " alt="" coords="1355,543,1509,569"/>
+<area shape="rect" id="node20" href="$ssl__ciphersuites_8h.html" title="SSL Ciphersuites for Mbed TLS. " alt="" coords="1151,304,1329,331"/>
+<area shape="rect" id="node27" href="$md_8h.html" title="This file contains the generic functions for message&#45;digest (hashing) and HMAC. " alt="" coords="1267,461,1368,487"/>
+<area shape="rect" id="node36" href="$x509__crt_8h.html" title="X.509 certificate parsing and writing. " alt="" coords="651,155,784,181"/>
+<area shape="rect" id="node39" href="$x509__crl_8h.html" title="X.509 certificate revocation list parsing. " alt="" coords="403,229,535,256"/>
+<area shape="rect" id="node21" href="$pk_8h.html" title="Public Key abstraction layer. " alt="" coords="1235,379,1333,405"/>
+<area shape="rect" id="node22" href="$compat-3-crypto_8h.html" title="Compatibility definitions for MbedTLS 3.x code built with MbedTLS 4.x or TF&#45;PSA&#45;Crypto 1..." alt="" coords="1585,543,1762,569"/>
+<area shape="rect" id="node23" href="$crypto__values_8h.html" title="PSA cryptography module: macros to build and analyze integer values. " alt="" coords="1635,617,1773,644"/>
+<area shape="rect" id="node24" href="$crypto__types_8h.html" title="PSA cryptography module: type aliases. " alt="" coords="2183,692,2316,719"/>
+<area shape="rect" id="node29" href="$crypto__sizes_8h.html" title="PSA cryptography module: Mbed TLS buffer size macros. " alt="" coords="2052,692,2159,719"/>
+<area shape="rect" id="node31" href="$crypto__extra_8h.html" title="PSA cryptography module: Mbed TLS vendor extensions. " alt="" coords="1939,543,2045,569"/>
+<area shape="rect" id="node33" href="$crypto__platform_8h.html" title="PSA cryptography module: Mbed TLS platform definitions. " alt="" coords="2560,692,2683,719"/>
+<area shape="rect" id="node32" href="$crypto__compat_8h.html" title="PSA cryptography module: Backward compatibility aliases. " alt="" coords="1926,617,2045,644"/>
+<area shape="rect" id="node37" href="$x509_8h.html" title="X.509 generic defines and structures. " alt="" coords="713,304,823,331"/>
+<area shape="rect" id="node38" href="$asn1_8h.html" title="Generic ASN.1 parsing. " alt="" coords="1110,461,1221,487"/>
+<area shape="rect" id="node44" href="$threading__alt_8h.html" title="threading_alt.h" alt="" coords="2755,543,2861,569"/>
+</map>

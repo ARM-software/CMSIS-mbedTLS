@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__helper__macros" kind="group">
+    <compoundname>helper_macros</compoundname>
+    <title>Helper macros</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__helper__macros_1gadd88e30fe90f6497958acd3f73a950b5" prot="public" static="no">
+        <name>MBEDTLS_PSA_ALG_AEAD_EQUAL</name>
+        <param><defname>aead_alg_1</defname></param>
+        <param><defname>aead_alg_2</defname></param>
+        <initializer>(!(((aead_alg_1) ^ (aead_alg_2)) &amp; \
+       ~(<ref refid="group__crypto__types_1ga575d9082463a06a86c2a22dd63c2e772" kindref="member">PSA_ALG_AEAD_TAG_LENGTH_MASK</ref> | <ref refid="group__crypto__types_1gaee189802f40c881b887a71d2e5ec53e1" kindref="member">PSA_ALG_AEAD_AT_LEAST_THIS_LENGTH_FLAG</ref>)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if two AEAD algorithm identifiers refer to the same AEAD algorithm regardless of the tag length they encode.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>aead_alg_1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An AEAD algorithm identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aead_alg_2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An AEAD algorithm identifier.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if both identifiers refer to the same AEAD algorithm, 0 otherwise. Unspecified if neither <computeroutput>aead_alg_1</computeroutput> nor <computeroutput>aead_alg_2</computeroutput> are a supported AEAD algorithm. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2764" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2764" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

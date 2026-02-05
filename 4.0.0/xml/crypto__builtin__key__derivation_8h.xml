@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__builtin__key__derivation_8h" kind="file">
+    <compoundname>crypto_builtin_key_derivation.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="crypto__driver__common_8h" local="no">psa/crypto_driver_common.h</includes>
+    <includedby refid="crypto__driver__contexts__key__derivation_8h" local="yes">crypto_driver_contexts_key_derivation.h</includedby>
+    <incdepgraph>
+      <node id="2668">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+      </node>
+      <node id="2662">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2659">
+        <label>stdint.h</label>
+      </node>
+      <node id="2667">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2665">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2661">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+      </node>
+      <node id="2658">
+        <label>stddef.h</label>
+      </node>
+      <node id="2666">
+        <label>limits.h</label>
+      </node>
+      <node id="2660">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2661" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+      </node>
+      <node id="2669">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2661" relation="include">
+        </childnode>
+      </node>
+      <node id="2656">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2663">
+        <label>/dev/null</label>
+      </node>
+      <node id="2657">
+        <label>psa/crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="2658" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+      </node>
+      <node id="2664">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="2655">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto_builtin_key_derivation.h"/>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2671">
+        <label>crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="2672" relation="include">
+        </childnode>
+      </node>
+      <node id="2672">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+      </node>
+      <node id="2670">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto_builtin_key_derivation.h"/>
+        <childnode refid="2671" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpsa__hkdf__key__derivation__t" prot="public">psa_hkdf_key_derivation_t</innerclass>
+    <innerclass refid="structpsa__tls12__ecjpake__to__pms__t" prot="public">psa_tls12_ecjpake_to_pms_t</innerclass>
+    <innerclass refid="structpsa__tls12__prf__key__derivation__s" prot="public">psa_tls12_prf_key_derivation_s</innerclass>
+    <innerclass refid="structpsa__pbkdf2__key__derivation__t" prot="public">psa_pbkdf2_key_derivation_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079b" prot="public" static="no">
+        <name>psa_tls12_prf_key_derivation_state_t</name>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bae159fb7c5e27ec794eec67004acf71d2" prot="public">
+          <name>PSA_TLS12_PRF_STATE_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba3fd6ceb01dc06646bbb8363db83128e3" prot="public">
+          <name>PSA_TLS12_PRF_STATE_SEED_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bad6a12d509ed077a88032b00811f79726" prot="public">
+          <name>PSA_TLS12_PRF_STATE_OTHER_KEY_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bab546290226eed3dab4ba541557437547" prot="public">
+          <name>PSA_TLS12_PRF_STATE_KEY_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba75db17160b151618de00ea3f02c201c0" prot="public">
+          <name>PSA_TLS12_PRF_STATE_LABEL_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079baa785dcebb7c6590b8596a2ce1758b03e" prot="public">
+          <name>PSA_TLS12_PRF_STATE_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="57" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="57" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416" prot="public" static="no">
+        <name>psa_pbkdf2_key_derivation_state_t</name>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aaaf5fe13e832b86fc066a5e3aace5c85" prot="public">
+          <name>PSA_PBKDF2_STATE_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aae535bcf60a17d2f4d3c373d36ed98d2" prot="public">
+          <name>PSA_PBKDF2_STATE_INPUT_COST_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aebe34c782ee79e547a2ed1336061e5c0" prot="public">
+          <name>PSA_PBKDF2_STATE_SALT_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416adbee42b0d810585ab925f2d955e7338f" prot="public">
+          <name>PSA_PBKDF2_STATE_PASSWORD_SET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416a95c1678028f94db7ce9bec111826fc1d" prot="public">
+          <name>PSA_PBKDF2_STATE_OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="99" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="99" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="crypto__builtin__key__derivation_8h_1a5376a3b7e0639d1ac4e75838909d293a" prot="public" static="no">
+        <type>struct <ref refid="structpsa__tls12__prf__key__derivation__s" kindref="compound">psa_tls12_prf_key_derivation_s</ref></type>
+        <definition>typedef struct psa_tls12_prf_key_derivation_s  psa_tls12_prf_key_derivation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_tls12_prf_key_derivation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context structure declaration of the Mbed TLS software-based PSA drivers called through the PSA Crypto driver dispatch layer. This file contains the context structures of key derivation algorithms which need to rely on other algorithms. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>.</para><simplesectsep/><para>This header and its content are not part of the Mbed TLS API and applications must not depend on it. Its main purpose is to define the multi-part state objects of the Mbed TLS software-based PSA drivers. The definitions of these objects are then used by <ref refid="crypto__struct_8h" kindref="compound">crypto_struct.h</ref> to define the implementation-defined types of PSA multi-part state objects. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_BUILTIN_KEY_DERIVATION_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_BUILTIN_KEY_DERIVATION_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="crypto__driver__common_8h" kindref="compound">psa/crypto_driver_common.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_HKDF)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_HKDF_EXTRACT)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_HKDF_EXPAND)</highlight></codeline>
+<codeline lineno="32" refid="structpsa__hkdf__key__derivation__t" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33" refid="structpsa__hkdf__key__derivation__t_1a83bec98bff66d97e4f68203cac6327e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(info);</highlight></codeline>
+<codeline lineno="34" refid="structpsa__hkdf__key__derivation__t_1a2f62fd5a841fa8b7f2ce3380e7b6516d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(info_length);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PSA_HASH_MAX_SIZE<sp/>&gt;<sp/>0xff</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;PSA_HASH_MAX_SIZE<sp/>does<sp/>not<sp/>fit<sp/>in<sp/>uint8_t&quot;</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38" refid="structpsa__hkdf__key__derivation__t_1a74bb62a6d784cb4dd470c5baeacef99a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(offset_in_block);</highlight></codeline>
+<codeline lineno="39" refid="structpsa__hkdf__key__derivation__t_1a7b20b2c3595fa7d11be4173b24aacbb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(block_number);</highlight></codeline>
+<codeline lineno="40" refid="structpsa__hkdf__key__derivation__t_1aece5d973aea49d40c31994e71cfaa9fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(state)<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="41" refid="structpsa__hkdf__key__derivation__t_1a4a98aa5a6a542abf3b71b718c04229f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(info_set)<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="42" refid="structpsa__hkdf__key__derivation__t_1af90fcd931b21ebb483163def5b21959c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(output_block)[<ref refid="crypto__sizes_8h_1a6ce1014efbbc0bcca286ef7f9a72cb29" kindref="member">PSA_HASH_MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="43" refid="structpsa__hkdf__key__derivation__t_1aa15c7163bc3102a9fc3326c2fa9c9a22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(prk)[<ref refid="crypto__sizes_8h_1a6ce1014efbbc0bcca286ef7f9a72cb29" kindref="member">PSA_HASH_MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="44" refid="structpsa__hkdf__key__derivation__t_1ad4eb269237f0f16e9b926cb966f6cf7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__mac__operation__s" kindref="compound">psa_mac_operation_s</ref><sp/>MBEDTLS_PRIVATE(hmac);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="structpsa__hkdf__key__derivation__t" kindref="compound">psa_hkdf_key_derivation_t</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_BUILTIN_ALG_HKDF<sp/>||</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PSA_BUILTIN_ALG_HKDF_EXTRACT<sp/>||</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PSA_BUILTIN_ALG_HKDF_EXPAND<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_TLS12_ECJPAKE_TO_PMS)</highlight></codeline>
+<codeline lineno="50" refid="structpsa__tls12__ecjpake__to__pms__t" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51" refid="structpsa__tls12__ecjpake__to__pms__t_1aa0d23a76827bb2c1f9184833ad3490bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(data)[<ref refid="crypto__sizes_8h_1a25d5de5a2c512d8ecc51319cc2ee1f3b" kindref="member">PSA_TLS12_ECJPAKE_TO_PMS_DATA_SIZE</ref>];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><ref refid="structpsa__tls12__ecjpake__to__pms__t" kindref="compound">psa_tls12_ecjpake_to_pms_t</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_BUILTIN_ALG_TLS12_ECJPAKE_TO_PMS<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_TLS12_PRF)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_TLS12_PSK_TO_MS)</highlight></codeline>
+<codeline lineno="57" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="58" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bae159fb7c5e27ec794eec67004acf71d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bae159fb7c5e27ec794eec67004acf71d2" kindref="member">PSA_TLS12_PRF_STATE_INIT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>input<sp/>provided<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba3fd6ceb01dc06646bbb8363db83128e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba3fd6ceb01dc06646bbb8363db83128e3" kindref="member">PSA_TLS12_PRF_STATE_SEED_SET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>seed<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bad6a12d509ed077a88032b00811f79726" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bad6a12d509ed077a88032b00811f79726" kindref="member">PSA_TLS12_PRF_STATE_OTHER_KEY_SET</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>other<sp/>key<sp/>has<sp/>been<sp/>set<sp/>-<sp/>optional<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bab546290226eed3dab4ba541557437547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079bab546290226eed3dab4ba541557437547" kindref="member">PSA_TLS12_PRF_STATE_KEY_SET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>key<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba75db17160b151618de00ea3f02c201c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079ba75db17160b151618de00ea3f02c201c0" kindref="member">PSA_TLS12_PRF_STATE_LABEL_SET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>label<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079baa785dcebb7c6590b8596a2ce1758b03e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079baa785dcebb7c6590b8596a2ce1758b03e" kindref="member">PSA_TLS12_PRF_STATE_OUTPUT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>output<sp/>has<sp/>been<sp/>started<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079b" kindref="member">psa_tls12_prf_key_derivation_state_t</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="structpsa__tls12__prf__key__derivation__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpsa__tls12__prf__key__derivation__s" kindref="compound">psa_tls12_prf_key_derivation_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>PSA_HASH_MAX_SIZE<sp/>&gt;<sp/>0xff</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;PSA_HASH_MAX_SIZE<sp/>does<sp/>not<sp/>fit<sp/>in<sp/>uint8_t&quot;</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Indicates<sp/>how<sp/>many<sp/>bytes<sp/>in<sp/>the<sp/>current<sp/>HMAC<sp/>block<sp/>have</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>not<sp/>yet<sp/>been<sp/>read<sp/>by<sp/>the<sp/>user.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="structpsa__tls12__prf__key__derivation__s_1a0077c15808be725a5571f2b6138b1b03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(left_in_block);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>1-based<sp/>number<sp/>of<sp/>the<sp/>block.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="structpsa__tls12__prf__key__derivation__s_1a467ba4c06834753ae478cca1bb8a28c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(block_number);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="structpsa__tls12__prf__key__derivation__s_1aeb9e95b5e3c4c268018004d1c8828323" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1af5b4db0c5878ef42f71db7b5e9b3079b" kindref="member">psa_tls12_prf_key_derivation_state_t</ref><sp/>MBEDTLS_PRIVATE(state);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structpsa__tls12__prf__key__derivation__s_1ae93bbd9ce259e04c7945182c46f99246" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(secret);</highlight></codeline>
+<codeline lineno="81" refid="structpsa__tls12__prf__key__derivation__s_1a9de966558f95efaa960efd34a51a670b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(secret_length);</highlight></codeline>
+<codeline lineno="82" refid="structpsa__tls12__prf__key__derivation__s_1afcbdc7d1b252ce2c19cb960ce76572f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(seed);</highlight></codeline>
+<codeline lineno="83" refid="structpsa__tls12__prf__key__derivation__s_1ab6e5ffff9644722fabff06d050e37019" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(seed_length);</highlight></codeline>
+<codeline lineno="84" refid="structpsa__tls12__prf__key__derivation__s_1a4e4ddfeac8823fb21b0bfdadaf7b51ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(label);</highlight></codeline>
+<codeline lineno="85" refid="structpsa__tls12__prf__key__derivation__s_1a052c28b6ec836196edd85a645a633f84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(label_length);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_BUILTIN_ALG_TLS12_PSK_TO_MS)</highlight></codeline>
+<codeline lineno="87" refid="structpsa__tls12__prf__key__derivation__s_1abeb58709df0b81f910aaf21a84a64a6e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(other_secret);</highlight></codeline>
+<codeline lineno="88" refid="structpsa__tls12__prf__key__derivation__s_1a7d231adb62c9f1d892cf36d245d4c131" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(other_secret_length);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_BUILTIN_ALG_TLS12_PSK_TO_MS<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="structpsa__tls12__prf__key__derivation__s_1a4ce6925ca33ab51dc863dd6d82dfc048" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(Ai)[<ref refid="crypto__sizes_8h_1a6ce1014efbbc0bcca286ef7f9a72cb29" kindref="member">PSA_HASH_MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>`HMAC_hash(<sp/>prk,<sp/>A(<sp/>i<sp/>)<sp/>+<sp/>seed<sp/>)`<sp/>in<sp/>the<sp/>notation<sp/>of<sp/>RFC<sp/>5246,<sp/>Sect.<sp/>5.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structpsa__tls12__prf__key__derivation__s_1a335dcb6d2a8374404cb9fdc5e463f64d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(output_block)[<ref refid="crypto__sizes_8h_1a6ce1014efbbc0bcca286ef7f9a72cb29" kindref="member">PSA_HASH_MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}<sp/><ref refid="crypto__builtin__key__derivation_8h_1a5376a3b7e0639d1ac4e75838909d293a" kindref="member">psa_tls12_prf_key_derivation_t</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_BUILTIN_ALG_TLS12_PRF)<sp/>||</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>MBEDTLS_PSA_BUILTIN_ALG_TLS12_PSK_TO_MS<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_HAVE_SOFT_PBKDF2)</highlight></codeline>
+<codeline lineno="99" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="100" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aaaf5fe13e832b86fc066a5e3aace5c85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aaaf5fe13e832b86fc066a5e3aace5c85" kindref="member">PSA_PBKDF2_STATE_INIT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>no<sp/>input<sp/>provided<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aae535bcf60a17d2f4d3c373d36ed98d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aae535bcf60a17d2f4d3c373d36ed98d2" kindref="member">PSA_PBKDF2_STATE_INPUT_COST_SET</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>input<sp/>cost<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aebe34c782ee79e547a2ed1336061e5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416aebe34c782ee79e547a2ed1336061e5c0" kindref="member">PSA_PBKDF2_STATE_SALT_SET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>salt<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416adbee42b0d810585ab925f2d955e7338f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416adbee42b0d810585ab925f2d955e7338f" kindref="member">PSA_PBKDF2_STATE_PASSWORD_SET</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>password<sp/>has<sp/>been<sp/>set<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416a95c1678028f94db7ce9bec111826fc1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416a95c1678028f94db7ce9bec111826fc1d" kindref="member">PSA_PBKDF2_STATE_OUTPUT</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>output<sp/>has<sp/>been<sp/>started<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416" kindref="member">psa_pbkdf2_key_derivation_state_t</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structpsa__pbkdf2__key__derivation__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="108" refid="structpsa__pbkdf2__key__derivation__t_1aec808b1885d5631316829afe8d713f37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416" kindref="member">psa_pbkdf2_key_derivation_state_t</ref><sp/>MBEDTLS_PRIVATE(state);</highlight></codeline>
+<codeline lineno="109" refid="structpsa__pbkdf2__key__derivation__t_1a152e852620e5378908937df7c656a852" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/>MBEDTLS_PRIVATE(input_cost);</highlight></codeline>
+<codeline lineno="110" refid="structpsa__pbkdf2__key__derivation__t_1a2bd741ff209097228410d24cd59b75e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*MBEDTLS_PRIVATE(salt);</highlight></codeline>
+<codeline lineno="111" refid="structpsa__pbkdf2__key__derivation__t_1ada5cbec390b9ddb6c67e0369bf89883f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(salt_length);</highlight></codeline>
+<codeline lineno="112" refid="structpsa__pbkdf2__key__derivation__t_1acd2fd06131b23f2ba20096250f0094e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(password)[<ref refid="crypto__sizes_8h_1a123539632874601194b1d86a398e14ff" kindref="member">PSA_HMAC_MAX_HASH_BLOCK_SIZE</ref>];</highlight></codeline>
+<codeline lineno="113" refid="structpsa__pbkdf2__key__derivation__t_1a33a98326e7fa770f8d69e33df65136b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(password_length);</highlight></codeline>
+<codeline lineno="114" refid="structpsa__pbkdf2__key__derivation__t_1a064491a14117f1d4b42cced57c1f20f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(output_block)[<ref refid="crypto__sizes_8h_1a6ce1014efbbc0bcca286ef7f9a72cb29" kindref="member">PSA_HASH_MAX_SIZE</ref>];</highlight></codeline>
+<codeline lineno="115" refid="structpsa__pbkdf2__key__derivation__t_1ae2544f3fd5d39b125d2cbff486e882f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(bytes_used);</highlight></codeline>
+<codeline lineno="116" refid="structpsa__pbkdf2__key__derivation__t_1ad097f71ac687675ad39904c2d13b3310" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>MBEDTLS_PRIVATE(block_number);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/><ref refid="structpsa__pbkdf2__key__derivation__t" kindref="compound">psa_pbkdf2_key_derivation_t</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_HAVE_SOFT_PBKDF2<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_BUILTIN_KEY_DERIVATION_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h"/>
+  </compounddef>
+</doxygen>

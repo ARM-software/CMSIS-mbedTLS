@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_5be53cab6acc006abdffc75cc9efd8f6" kind="dir">
+    <compoundname>mbedtls</compoundname>
+    <innerfile refid="asn1_8h">asn1.h</innerfile>
+    <innerfile refid="asn1write_8h">asn1write.h</innerfile>
+    <innerfile refid="base64_8h">base64.h</innerfile>
+    <innerfile refid="compat-3-crypto_8h">compat-3-crypto.h</innerfile>
+    <innerfile refid="constant__time_8h">constant_time.h</innerfile>
+    <innerfile refid="lms_8h">lms.h</innerfile>
+    <innerfile refid="md_8h">md.h</innerfile>
+    <innerfile refid="memory__buffer__alloc_8h">memory_buffer_alloc.h</innerfile>
+    <innerfile refid="nist__kw_8h">nist_kw.h</innerfile>
+    <innerfile refid="pem_8h">pem.h</innerfile>
+    <innerfile refid="pk_8h">pk.h</innerfile>
+    <innerfile refid="platform_8h">platform.h</innerfile>
+    <innerfile refid="platform__time_8h">platform_time.h</innerfile>
+    <innerfile refid="platform__util_8h">platform_util.h</innerfile>
+    <innerfile refid="psa__util_8h">psa_util.h</innerfile>
+    <innerfile refid="threading_8h">threading.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/"/>
+  </compounddef>
+</doxygen>

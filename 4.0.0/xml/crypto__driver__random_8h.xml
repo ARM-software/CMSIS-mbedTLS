@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__driver__random_8h" kind="file">
+    <compoundname>crypto_driver_random.h</compoundname>
+    <includes refid="crypto__driver__common_8h" local="yes">crypto_driver_common.h</includes>
+    <includedby refid="platform_8h" local="no">platform.h</includedby>
+    <incdepgraph>
+      <node id="2891">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2882" relation="include">
+        </childnode>
+      </node>
+      <node id="2884">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2881">
+        <label>stdint.h</label>
+      </node>
+      <node id="2890">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2887">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2883">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2884" relation="include">
+        </childnode>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+      </node>
+      <node id="2880">
+        <label>stddef.h</label>
+      </node>
+      <node id="2888">
+        <label>limits.h</label>
+      </node>
+      <node id="2882">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2883" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+      </node>
+      <node id="2892">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2883" relation="include">
+        </childnode>
+      </node>
+      <node id="2889">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2878">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto_driver_random.h"/>
+        <childnode refid="2879" relation="include">
+        </childnode>
+      </node>
+      <node id="2885">
+        <label>/dev/null</label>
+      </node>
+      <node id="2879">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="2880" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2882" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+      </node>
+      <node id="2886">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2894">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="2893">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto_driver_random.h"/>
+        <childnode refid="2894" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__driver__random_1gaad02d5ae7505a35f5957c0fd602f2317" prot="public" static="no">
+        <name>PSA_DRIVER_GET_ENTROPY_FLAGS_NONE</name>
+        <initializer>((<ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref>) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags requesting the default behavior for a <computeroutput>&quot;get_entropy&quot;</computeroutput> driver entry point. This is equivalent to <computeroutput>0</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" line="41" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_driver_get_entropy_flags_t</definition>
+        <argsstring></argsstring>
+        <name>psa_driver_get_entropy_flags_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the <computeroutput>flags</computeroutput> argument to <computeroutput>&quot;get_entropy&quot;</computeroutput> driver entry points.</para><para>This implementation does not support any flags yet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" line="34" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definitions for PSA random and entropy drivers. </para>    </briefdescription>
+    <detaileddescription>
+<para>This file is part of the PSA Crypto Driver Model, containing functions for driver developers to implement to enable hardware to be called in a standardized way by a PSA Cryptographic API implementation. The functions comprising the driver model, which driver authors implement, are not intended to be called by application developers. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_DRIVER_RANDOM_H</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_DRIVER_RANDOM_H</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__driver__common_8h" kindref="compound">crypto_driver_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="34" refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="group__driver__random_1gaad02d5ae7505a35f5957c0fd602f2317" refkind="member"><highlight class="preprocessor">#define<sp/>PSA_DRIVER_GET_ENTROPY_FLAGS_NONE<sp/>((psa_driver_get_entropy_flags_t)<sp/>0)</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_DRIVER_COMMON_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h"/>
+  </compounddef>
+</doxygen>

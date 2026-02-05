@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__psa__crypto__client" kind="group">
+    <compoundname>psa_crypto_client</compoundname>
+    <title>Functions defined by a client provider</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The functions in this group are meant to be implemented by providers of the PSA Crypto client interface. They are provided by the library when <ref refid="crypto__config_8h_1a7035fab808a098a76627fb4d466e3b21" kindref="member">MBEDTLS_PSA_CRYPTO_C</ref> is enabled.</para><para><simplesect kind="note"><para>All functions in this group are experimental, as using alternative client interface providers is experimental. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

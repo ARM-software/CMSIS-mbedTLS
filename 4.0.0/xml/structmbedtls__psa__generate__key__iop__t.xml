@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__psa__generate__key__iop__t" kind="struct" prot="public">
+    <compoundname>mbedtls_psa_generate_key_iop_t</compoundname>
+    <includes refid="crypto__builtin__composites_8h" local="no">crypto_builtin_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__psa__generate__key__iop__t_1a300cd20bf44c64ee90bc456226788696" prot="public" static="no" mutable="no">
+        <type>mbedtls_ecp_keypair</type>
+        <definition>mbedtls_ecp_keypair mbedtls_psa_generate_key_iop_t::private_ecp</definition>
+        <argsstring></argsstring>
+        <name>private_ecp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="222" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__psa__generate__key__iop__t_1a7cfabaab385e05159da6dff58f921879" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_psa_generate_key_iop_t::num_ops</definition>
+        <argsstring></argsstring>
+        <name>num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="223" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" line="220" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_composites.h" bodystart="220" bodyend="228"/>
+    <listofallmembers>
+      <member refid="structmbedtls__psa__generate__key__iop__t_1a7cfabaab385e05159da6dff58f921879" prot="public" virt="non-virtual"><scope>mbedtls_psa_generate_key_iop_t</scope><name>num_ops</name></member>
+      <member refid="structmbedtls__psa__generate__key__iop__t_1a300cd20bf44c64ee90bc456226788696" prot="public" virt="non-virtual"><scope>mbedtls_psa_generate_key_iop_t</scope><name>private_ecp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

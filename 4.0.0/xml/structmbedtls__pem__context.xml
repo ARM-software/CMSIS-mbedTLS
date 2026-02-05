@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__pem__context" kind="struct" prot="public">
+    <compoundname>mbedtls_pem_context</compoundname>
+    <includes refid="pem_8h" local="no">pem.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__pem__context_1a167b74fc8a1d43dde2c22cdf0bac3b93" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_pem_context::private_buf</definition>
+        <argsstring></argsstring>
+        <name>private_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>buffer for decoded data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="50" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pem__context_1a4dfe0671f5a770156917da110f63975e" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_pem_context::private_buflen</definition>
+        <argsstring></argsstring>
+        <name>private_buflen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>length of the buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="51" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pem__context_1ac96f69af92790741a6430c3860aa3657" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_pem_context::private_info</definition>
+        <argsstring></argsstring>
+        <name>private_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>buffer for extra header information </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PEM context structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" line="49" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pem.h" bodystart="49" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structmbedtls__pem__context_1a167b74fc8a1d43dde2c22cdf0bac3b93" prot="public" virt="non-virtual"><scope>mbedtls_pem_context</scope><name>private_buf</name></member>
+      <member refid="structmbedtls__pem__context_1a4dfe0671f5a770156917da110f63975e" prot="public" virt="non-virtual"><scope>mbedtls_pem_context</scope><name>private_buflen</name></member>
+      <member refid="structmbedtls__pem__context_1ac96f69af92790741a6430c3860aa3657" prot="public" virt="non-virtual"><scope>mbedtls_pem_context</scope><name>private_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

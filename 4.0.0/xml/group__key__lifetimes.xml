@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__key__lifetimes" kind="group">
+    <compoundname>key_lifetimes</compoundname>
+    <title>Key lifetimes</title>
+    <innerclass refid="structmbedtls__svc__key__id__t" prot="public">mbedtls_svc_key_id_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_lifetime_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_lifetime_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key lifetimes.</para><para>The lifetime of a key indicates where it is stored and what system actions may create and destroy it.</para><para>Lifetime values have the following structure:<itemizedlist>
+<listitem><para>Bits 0-7 (<ref refid="group__key__lifetimes_1ga1679b7e418ba86b312291d689153dd2a" kindref="member">PSA_KEY_LIFETIME_GET_PERSISTENCE</ref>(<computeroutput>lifetime</computeroutput>)): persistence level. This value indicates what device management actions can cause it to be destroyed. In particular, it indicates whether the key is <emphasis>volatile</emphasis> or <emphasis>persistent</emphasis>. See <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref> for more information.</para></listitem><listitem><para>Bits 8-31 (<ref refid="group__key__lifetimes_1ga4bd83feb0ca4853eee26d5394e69a5de" kindref="member">PSA_KEY_LIFETIME_GET_LOCATION</ref>(<computeroutput>lifetime</computeroutput>)): location indicator. This value indicates which part of the system has access to the key material and can perform operations using the key. See <ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref> for more information.</para></listitem></itemizedlist>
+</para><para>Volatile keys are automatically destroyed when the application instance terminates or on a power reset of the device. Persistent keys are preserved until the application explicitly destroys them or until an integration-specific device management event occurs (for example, a factory reset).</para><para>Persistent keys have a key identifier of type <ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref>. This identifier remains valid throughout the lifetime of the key, even if the application instance that created the key terminates. The application can call psa_open_key() to open a persistent key that it created previously.</para><para>The default lifetime of a key is <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>. The lifetime <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref> is supported if persistent storage is available. Other lifetime values may be supported depending on the library configuration.</para><para>Values of this type are generally constructed by macros called <computeroutput>PSA_KEY_LIFETIME_xxx</computeroutput>.</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="176" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" prot="public" static="no">
+        <type>uint8_t</type>
+        <definition>typedef uint8_t psa_key_persistence_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_persistence_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key persistence levels.</para><para>What distinguishes different persistence levels is what device management events may cause keys to be destroyed. <emphasis>Volatile</emphasis> keys are destroyed by a power reset. Persistent keys may be destroyed by events such as a transfer of ownership or a factory reset. What management events actually affect persistent keys at different levels is outside the scope of the PSA Cryptography specification.</para><para>The PSA Cryptography specification defines the following values of persistence levels:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput> = <ref refid="group__key__lifetimes_1gaf3d1317436d19a15e7f2be1b9827edfc" kindref="member">PSA_KEY_PERSISTENCE_VOLATILE</ref>: volatile key. A volatile key is automatically destroyed by the implementation when the application instance terminates. In particular, a volatile key is automatically destroyed on a power reset of the device.</para></listitem><listitem><para><computeroutput>1</computeroutput> = <ref refid="group__key__lifetimes_1gafc5d5c94f98e885ae5a2bb789deb4d91" kindref="member">PSA_KEY_PERSISTENCE_DEFAULT</ref>: persistent key with a default lifetime.</para></listitem><listitem><para><computeroutput>2-254</computeroutput>: currently not supported by Mbed TLS.</para></listitem><listitem><para><computeroutput>255</computeroutput> = <ref refid="group__key__lifetimes_1ga6be0f97ba7fb86f626b3fd2b03a1ac79" kindref="member">PSA_KEY_PERSISTENCE_READ_ONLY</ref>: read-only or write-once key. A key with this persistence level cannot be destroyed. Mbed TLS does not currently offer a way to create such keys, but integrations of Mbed TLS can use it for built-in keys that the application cannot modify (for example, a hardware unique key (HUK)).</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Key persistence levels are 8-bit values. Key management interfaces operate on lifetimes (type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) which encode the persistence as the lower 8 bits of a 32-bit value.</para><simplesectsep/><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="212" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_location_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_location_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of key location indicators.</para><para>If an integration of Mbed TLS can make calls to external cryptoprocessors such as secure elements, the location of a key indicates which secure element performs the operations on the key. Depending on the design of the secure element, the key material may be stored either in the secure element, or in wrapped (encrypted) form alongside the key metadata in the primary local storage.</para><para>The PSA Cryptography API specification defines the following values of location indicators:<itemizedlist>
+<listitem><para><computeroutput>0</computeroutput>: primary local storage. This location is always available. The primary local storage is typically the same storage area that contains the key metadata.</para></listitem><listitem><para><computeroutput>1</computeroutput>: primary secure element. Integrations of Mbed TLS should support this value if there is a secure element attached to the operating environment. As a guideline, secure elements may provide higher resistance against side channel and physical attacks than the primary local storage, but may have restrictions on supported key types, sizes, policies and operations and may have different performance characteristics.</para></listitem><listitem><para><computeroutput>2-0x7fffff</computeroutput>: other locations defined by a PSA specification. The PSA Cryptography API does not currently assign any meaning to these locations, but future versions of that specification or other PSA specifications may do so.</para></listitem><listitem><para><computeroutput>0x800000-0xffffff</computeroutput>: vendor-defined locations. No PSA specification will assign a meaning to locations in this range.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Key location indicators are 24-bit values. Key management interfaces operate on lifetimes (type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) which encode the location as the upper 24 bits of a 32-bit value.</para><simplesectsep/><para>Values of this type are encoded in the persistent key store. Any changes to existing values will require bumping the storage format version and providing a translation when reading the old format. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="253" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_key_id_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_id_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encoding of identifiers of persistent keys.</para><para><itemizedlist>
+<listitem><para>Applications may freely choose key identifiers in the range <ref refid="group__key__lifetimes_1ga2b062011d930839695577138858ec136" kindref="member">PSA_KEY_ID_USER_MIN</ref> to <ref refid="group__key__lifetimes_1ga9cb2bf7c6f7abfacccff4fd31dcfd564" kindref="member">PSA_KEY_ID_USER_MAX</ref>.</para></listitem><listitem><para>The implementation may define additional key identifiers in the range <ref refid="group__key__lifetimes_1ga1f7e6d90f523bef964d207c1d3236e0b" kindref="member">PSA_KEY_ID_VENDOR_MIN</ref> to <ref refid="group__key__lifetimes_1ga3afb6bb4644c995cf95309a71e7baeb1" kindref="member">PSA_KEY_ID_VENDOR_MAX</ref>.</para></listitem><listitem><para>0 is reserved as an invalid key identifier.</para></listitem><listitem><para>Key identifiers outside these ranges are reserved for future use.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>Values of this type are encoded in the persistent key store. Any changes to how values are allocated must require careful consideration to allow backward compatibility. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="268" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__key__lifetimes_1ga4610fac06e7f6bfb30bbee22d412d5c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+        <definition>static mbedtls_svc_key_id_t mbedtls_svc_key_id_make</definition>
+        <argsstring>(mbedtls_key_owner_id_t owner_id, psa_key_id_t key_id)</argsstring>
+        <name>mbedtls_svc_key_id_make</name>
+        <param>
+          <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+          <declname>owner_id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref></type>
+          <declname>key_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Utility to initialize a key identifier at runtime.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key owner. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2472" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2472" bodyend="2477"/>
+      </memberdef>
+      <memberdef kind="function" id="group__key__lifetimes_1gaab6fc421fef34615a625208de62dd682" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_svc_key_id_equal</definition>
+        <argsstring>(mbedtls_svc_key_id_t id1, mbedtls_svc_key_id_t id2)</argsstring>
+        <name>mbedtls_svc_key_id_equal</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>id1</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>id2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two key identifiers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First key identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second key identifier.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the two key identifier are equal, zero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2486" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2486" bodyend="2491"/>
+        <references refid="crypto__platform_8h_1a6b5396efe3ed166ea0b5d12e0c185305" compoundref="crypto__platform_8h" startline="49" endline="53">mbedtls_key_owner_id_equal</references>
+      </memberdef>
+      <memberdef kind="function" id="group__key__lifetimes_1ga131f49c7d8f4cae1c40a018b956dbe78" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_svc_key_id_is_null</definition>
+        <argsstring>(mbedtls_svc_key_id_t key)</argsstring>
+        <name>mbedtls_svc_key_id_is_null</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether a key identifier is null.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key identifier.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the key identifier is null, zero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2499" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2499" bodyend="2502"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_VOLATILE</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) 0x00000000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default lifetime for volatile keys.</para><para>A volatile key only exists as long as the identifier to it is not destroyed. The key material is guaranteed to be erased on a power reset.</para><para>A key with this lifetime is typically stored in the RAM area of the PSA Crypto subsystem. However this is an implementation choice. If an implementation stores data about the key in a non-volatile memory, it must release all the resources associated with the key and erase the key material if the calling application terminates. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2290" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_PERSISTENT</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>) 0x00000001)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default lifetime for persistent keys.</para><para>A persistent key remains in storage until it is explicitly destroyed or until the corresponding storage area is wiped. This specification does not define any mechanism to wipe a storage area, but integrations may provide their own mechanism (for example to perform a factory reset, to prepare for device refurbishment, or to uninstall an application).</para><para>This lifetime value is the default storage area for the calling application. Integrations of Mbed TLS may support other persistent lifetimes. See <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2304" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2304" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" compoundref="crypto__struct_8h" startline="290" endline="303">psa_set_key_id</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gaf3d1317436d19a15e7f2be1b9827edfc" prot="public" static="no">
+        <name>PSA_KEY_PERSISTENCE_VOLATILE</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>) 0x00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The persistence level of volatile keys.</para><para>See <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2310" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gafc5d5c94f98e885ae5a2bb789deb4d91" prot="public" static="no">
+        <name>PSA_KEY_PERSISTENCE_DEFAULT</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>) 0x01)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The default persistence level for persistent keys.</para><para>See <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2316" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga6be0f97ba7fb86f626b3fd2b03a1ac79" prot="public" static="no">
+        <name>PSA_KEY_PERSISTENCE_READ_ONLY</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>) 0xff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A persistence level indicating that a key is never destroyed.</para><para>See <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2322" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga1679b7e418ba86b312291d689153dd2a" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_GET_PERSISTENCE</name>
+        <param><defname>lifetime</defname></param>
+        <initializer>((<ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>) ((lifetime) &amp; 0x000000ff))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2324" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga4bd83feb0ca4853eee26d5394e69a5de" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_GET_LOCATION</name>
+        <param><defname>lifetime</defname></param>
+        <initializer>((<ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref>) ((lifetime) &gt;&gt; 8))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2327" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2327" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" compoundref="crypto__struct_8h" startline="290" endline="303">psa_set_key_id</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga63d63adbfc947cab4dee4f4b39e840a1" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_IS_VOLATILE</name>
+        <param><defname>lifetime</defname></param>
+        <initializer>(<ref refid="group__key__lifetimes_1ga1679b7e418ba86b312291d689153dd2a" kindref="member">PSA_KEY_LIFETIME_GET_PERSISTENCE</ref>(lifetime) == \
+     <ref refid="group__key__lifetimes_1gaf3d1317436d19a15e7f2be1b9827edfc" kindref="member">PSA_KEY_PERSISTENCE_VOLATILE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether a key lifetime indicates that the key is volatile.</para><para>A volatile key is automatically destroyed by the implementation when the application instance terminates. In particular, a volatile key is automatically destroyed on a power reset of the device.</para><para>A key that is not volatile is persistent. Persistent keys are preserved until the application explicitly destroys them or until an implementation-specific device management event occurs (for example, a factory reset).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lifetime value to query (value of type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> if the key is volatile, otherwise <computeroutput>0</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2346" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2346" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" compoundref="crypto__struct_8h" startline="290" endline="303">psa_set_key_id</referencedby>
+        <referencedby refid="crypto__struct_8h_1ac03ccf09ca6d36cc3d5b43f8303db6f7" compoundref="crypto__struct_8h" startline="319" endline="330">psa_set_key_lifetime</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga9a0c9ef3051882eb5154c88a0ed46d0e" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_IS_READ_ONLY</name>
+        <param><defname>lifetime</defname></param>
+        <initializer>(<ref refid="group__key__lifetimes_1ga1679b7e418ba86b312291d689153dd2a" kindref="member">PSA_KEY_LIFETIME_GET_PERSISTENCE</ref>(lifetime) == \
+     <ref refid="group__key__lifetimes_1ga6be0f97ba7fb86f626b3fd2b03a1ac79" kindref="member">PSA_KEY_PERSISTENCE_READ_ONLY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether a key lifetime indicates that the key is read-only.</para><para>Read-only keys cannot be created or destroyed through the PSA Crypto API. They must be created through platform-specific means that bypass the API.</para><para>Some platforms may offer ways to destroy read-only keys. For example, consider a platform with multiple levels of privilege, where a low-privilege application can use a key but is not allowed to destroy it, and the platform exposes the key to the application with a read-only lifetime. High-privilege code can destroy the key even though the application sees the key as read-only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lifetime value to query (value of type <ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>1</computeroutput> if the key is read-only, otherwise <computeroutput>0</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2367" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gaef4d244b4d33ae7876ed87226b8112aa" prot="public" static="no">
+        <name>PSA_KEY_LIFETIME_FROM_PERSISTENCE_AND_LOCATION</name>
+        <param><defname>persistence</defname></param>
+        <param><defname>location</defname></param>
+        <initializer>((location) &lt;&lt; 8 | (persistence))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a lifetime from a persistence level and a location.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>persistence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The persistence level (value of type <ref refid="group__key__lifetimes_1ga183689a3018896e1e2e4f2bcc57bcff3" kindref="member">psa_key_persistence_t</ref>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location indicator (value of type <ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The constructed lifetime value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2380" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2380" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1ae48fcfdc72a23e7499957d7f54ff5a64" compoundref="crypto__struct_8h" startline="290" endline="303">psa_set_key_id</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga3fbfe4a4cf7430a51cf740fe05b2ab27" prot="public" static="no">
+        <name>PSA_KEY_LOCATION_LOCAL_STORAGE</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref>) 0x000000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The local storage area for persistent keys.</para><para>This storage area is available on all systems that can store persistent keys without delegating the storage to a third-party cryptoprocessor.</para><para>See <ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2390" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gabdf17ac752737b380e345494e3f3dba6" prot="public" static="no">
+        <name>PSA_KEY_LOCATION_VENDOR_FLAG</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga5e700601f686237a8d1e29363ae543d5" kindref="member">psa_key_location_t</ref>) 0x800000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2392" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga650b5f7c553bf6f8db2076dbd9f4dd44" prot="public" static="no">
+        <name>PSA_KEY_ID_NULL</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The null key identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2402" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga2b062011d930839695577138858ec136" prot="public" static="no">
+        <name>PSA_KEY_ID_USER_MIN</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x00000001)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minimum value for a key identifier chosen by the application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2406" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga9cb2bf7c6f7abfacccff4fd31dcfd564" prot="public" static="no">
+        <name>PSA_KEY_ID_USER_MAX</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x3fffffff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum value for a key identifier chosen by the application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2409" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga1f7e6d90f523bef964d207c1d3236e0b" prot="public" static="no">
+        <name>PSA_KEY_ID_VENDOR_MIN</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x40000000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minimum value for a key identifier chosen by the implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2412" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga3afb6bb4644c995cf95309a71e7baeb1" prot="public" static="no">
+        <name>PSA_KEY_ID_VENDOR_MAX</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x7fffffff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum value for a key identifier chosen by the implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2415" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1ga838f2dc64e670aa69fc4c0b82932f021" prot="public" static="no">
+        <name>MBEDTLS_SVC_KEY_ID_INIT</name>
+        <initializer>((<ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref>){ 0, 0 })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2463" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gafac336b4a8b7309d90370fc57c71f01e" prot="public" static="no">
+        <name>MBEDTLS_SVC_KEY_ID_GET_KEY_ID</name>
+        <param><defname>id</defname></param>
+        <initializer>((id).MBEDTLS_PRIVATE(key_id))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2464" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__key__lifetimes_1gae05471b23d45767d768416bfe882eb79" prot="public" static="no">
+        <name>MBEDTLS_SVC_KEY_ID_GET_OWNER_ID</name>
+        <param><defname>id</defname></param>
+        <initializer>((id).MBEDTLS_PRIVATE(owner))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2465" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2465" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

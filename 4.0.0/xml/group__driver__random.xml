@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__driver__random" kind="group">
+    <compoundname>driver_random</compoundname>
+    <title>Random and entropy drivers</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" prot="public" static="no">
+        <type>uint32_t</type>
+        <definition>typedef uint32_t psa_driver_get_entropy_flags_t</definition>
+        <argsstring></argsstring>
+        <name>psa_driver_get_entropy_flags_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the <computeroutput>flags</computeroutput> argument to <computeroutput>&quot;get_entropy&quot;</computeroutput> driver entry points.</para><para>This implementation does not support any flags yet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" line="34" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__driver__random_1gaad02d5ae7505a35f5957c0fd602f2317" prot="public" static="no">
+        <name>PSA_DRIVER_GET_ENTROPY_FLAGS_NONE</name>
+        <initializer>((<ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref>) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flags requesting the default behavior for a <computeroutput>&quot;get_entropy&quot;</computeroutput> driver entry point. This is equivalent to <computeroutput>0</computeroutput>.</para><para><simplesect kind="see"><para><ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" line="41" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_random.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

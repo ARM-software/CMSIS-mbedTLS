@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__platform_8h" kind="file">
+    <compoundname>crypto_platform.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includes local="yes">crypto_spe.h</includes>
+    <includedby refid="crypto_8h" local="yes">crypto.h</includedby>
+    <incdepgraph>
+      <node id="2927">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2932">
+        <label>stdint.h</label>
+      </node>
+      <node id="2930">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="2933">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="2926">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2927" relation="include">
+        </childnode>
+        <childnode refid="2928" relation="include">
+        </childnode>
+        <childnode refid="2929" relation="include">
+        </childnode>
+        <childnode refid="2930" relation="include">
+        </childnode>
+        <childnode refid="2931" relation="include">
+        </childnode>
+      </node>
+      <node id="2931">
+        <label>limits.h</label>
+      </node>
+      <node id="2924">
+        <label>crypto_platform.h</label>
+        <link refid="crypto_platform.h"/>
+        <childnode refid="2925" relation="include">
+        </childnode>
+        <childnode refid="2926" relation="include">
+        </childnode>
+        <childnode refid="2932" relation="include">
+        </childnode>
+        <childnode refid="2933" relation="include">
+        </childnode>
+      </node>
+      <node id="2925">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2928">
+        <label>/dev/null</label>
+      </node>
+      <node id="2929">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2938">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2939" relation="include">
+        </childnode>
+        <childnode refid="2940" relation="include">
+        </childnode>
+        <childnode refid="2941" relation="include">
+        </childnode>
+        <childnode refid="2942" relation="include">
+        </childnode>
+        <childnode refid="2943" relation="include">
+        </childnode>
+      </node>
+      <node id="2944">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2945" relation="include">
+        </childnode>
+        <childnode refid="2947" relation="include">
+        </childnode>
+        <childnode refid="2948" relation="include">
+        </childnode>
+      </node>
+      <node id="2946">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2943">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2935">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2936" relation="include">
+        </childnode>
+        <childnode refid="2938" relation="include">
+        </childnode>
+        <childnode refid="2943" relation="include">
+        </childnode>
+        <childnode refid="2949" relation="include">
+        </childnode>
+      </node>
+      <node id="2937">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2938" relation="include">
+        </childnode>
+      </node>
+      <node id="2942">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2936">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="2937" relation="include">
+        </childnode>
+        <childnode refid="2944" relation="include">
+        </childnode>
+      </node>
+      <node id="2939">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2941">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2949">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="2934">
+        <label>crypto_platform.h</label>
+        <link refid="crypto_platform.h"/>
+        <childnode refid="2935" relation="include">
+        </childnode>
+      </node>
+      <node id="2948">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2945">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2938" relation="include">
+        </childnode>
+        <childnode refid="2946" relation="include">
+        </childnode>
+      </node>
+      <node id="2940">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2947">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2945" relation="include">
+        </childnode>
+        <childnode refid="2938" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__psa__external__random__context__t" prot="public">mbedtls_psa_external_random_context_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crypto__platform_8h_1a7f68b862d31dc86d0ad859a9f980caab" prot="public" static="no">
+        <name>PSA_CRYPTO_SECURE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" line="65" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t mbedtls_key_owner_id_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_key_owner_id_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" line="40" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crypto__platform_8h_1a6b5396efe3ed166ea0b5d12e0c185305" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_key_owner_id_equal</definition>
+        <argsstring>(mbedtls_key_owner_id_t id1, mbedtls_key_owner_id_t id2)</argsstring>
+        <name>mbedtls_key_owner_id_equal</name>
+        <param>
+          <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+          <declname>id1</declname>
+        </param>
+        <param>
+          <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+          <declname>id2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compare two key owner identifiers.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First key owner identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second key owner identifier.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Non-zero if the two key owner identifiers are equal, zero otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" line="49" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h" bodystart="49" bodyend="53"/>
+        <referencedby refid="group__key__lifetimes_1gaab6fc421fef34615a625208de62dd682" compoundref="crypto__values_8h" startline="2486" endline="2491">mbedtls_svc_key_id_equal</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PSA cryptography module: Mbed TLS platform definitions. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This file may not be included directly. Applications must include <ref refid="crypto_8h" kindref="compound">psa/crypto.h</ref>.</para></simplesect>
+This file contains platform-dependent type definitions.</para><para>In implementations with isolation between the application and the cryptography module, implementers should take care to ensure that the definitions that are exposed to applications match what the module implements. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="16"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_PLATFORM_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_PLATFORM_H</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PSA<sp/>requires<sp/>several<sp/>types<sp/>which<sp/>C99<sp/>provides<sp/>in<sp/>stdint.h.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER)</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Building<sp/>for<sp/>the<sp/>PSA<sp/>Crypto<sp/>service<sp/>on<sp/>a<sp/>PSA<sp/>platform,<sp/>a<sp/>key<sp/>owner<sp/>is<sp/>a<sp/>PSA</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>partition<sp/>identifier.</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>psa_its_identifier_of_slot()<sp/>in<sp/>psa_crypto_storage.c<sp/>that</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>translates<sp/>a<sp/>key<sp/>identifier<sp/>to<sp/>a<sp/>key<sp/>storage<sp/>file<sp/>name<sp/>assumes<sp/>that</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>mbedtls_key_owner_id_t<sp/>is<sp/>a<sp/>32-bit<sp/>integer.<sp/>This<sp/>function<sp/>thus<sp/>needs</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>reworking<sp/>if<sp/>mbedtls_key_owner_id_t<sp/>is<sp/>not<sp/>defined<sp/>as<sp/>a<sp/>32-bit<sp/>integer</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>here<sp/>anymore.</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="crypto__platform_8h_1a6b5396efe3ed166ea0b5d12e0c185305" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="crypto__platform_8h_1a6b5396efe3ed166ea0b5d12e0c185305" kindref="member">mbedtls_key_owner_id_equal</ref>(<ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref><sp/>id1,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref><sp/>id2)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>id1<sp/>==<sp/>id2;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>When<sp/>MBEDTLS_PSA_CRYPTO_SPM<sp/>is<sp/>defined,<sp/>the<sp/>code<sp/>is<sp/>being<sp/>built<sp/>for<sp/>SPM</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/>(Secure<sp/>Partition<sp/>Manager)<sp/>integration<sp/>which<sp/>separates<sp/>the<sp/>code<sp/>into<sp/>two</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>parts:<sp/>NSPE<sp/>(Non-Secure<sp/>Processing<sp/>Environment)<sp/>and<sp/>SPE<sp/>(Secure<sp/>Processing</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>*<sp/>Environment).<sp/>When<sp/>building<sp/>for<sp/>the<sp/>SPE,<sp/>an<sp/>additional<sp/>header<sp/>file<sp/>should<sp/>be</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>included.</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_SPM)</highlight></codeline>
+<codeline lineno="65" refid="crypto__platform_8h_1a7f68b862d31dc86d0ad859a9f980caab" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_SECURE<sp/>1</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;crypto_spe.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MBEDTLS_PSA_CRYPTO_SPM</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG)</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="79" refid="structmbedtls__psa__external__random__context__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80" refid="structmbedtls__psa__external__random__context__t_1a9a79f4e686dc65b337b414a03865867b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uintptr_t<sp/>MBEDTLS_PRIVATE(opaque)[2];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="structmbedtls__psa__external__random__context__t" kindref="compound">mbedtls_psa_external_random_context_t</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_CRYPTO_CLIENT)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_C)</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="91"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/>mbedtls_psa_client_handle_t;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_PLATFORM_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_platform.h"/>
+  </compounddef>
+</doxygen>

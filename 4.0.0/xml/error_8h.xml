@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="error_8h" kind="file">
+    <compoundname>error.h</compoundname>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes local="yes">mbedtls/private/error_common.h</includes>
+    <includes local="no">stddef.h</includes>
+    <incdepgraph>
+      <node id="3185">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3179">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3184">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3182">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3176">
+        <label>error.h</label>
+        <link refid="error.h"/>
+        <childnode refid="3177" relation="include">
+        </childnode>
+        <childnode refid="3187" relation="include">
+        </childnode>
+        <childnode refid="3188" relation="include">
+        </childnode>
+      </node>
+      <node id="3178">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3179" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3181" relation="include">
+        </childnode>
+        <childnode refid="3182" relation="include">
+        </childnode>
+        <childnode refid="3183" relation="include">
+        </childnode>
+      </node>
+      <node id="3188">
+        <label>stddef.h</label>
+      </node>
+      <node id="3183">
+        <label>limits.h</label>
+      </node>
+      <node id="3187">
+        <label>mbedtls/private/error_common.h</label>
+      </node>
+      <node id="3177">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3178" relation="include">
+        </childnode>
+        <childnode refid="3184" relation="include">
+        </childnode>
+        <childnode refid="3180" relation="include">
+        </childnode>
+        <childnode refid="3185" relation="include">
+        </childnode>
+        <childnode refid="3186" relation="include">
+        </childnode>
+      </node>
+      <node id="3180">
+        <label>/dev/null</label>
+      </node>
+      <node id="3181">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3186">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="error_8h_1a8c41c149b77a4807115b19c2af858558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_strerror</definition>
+        <argsstring>(int errnum, char *buffer, size_t buflen)</argsstring>
+        <name>mbedtls_strerror</name>
+        <param>
+          <type>int</type>
+          <declname>errnum</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Translate an Mbed TLS error code into a string representation. The result is truncated if necessary and always includes a terminating null byte. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errnum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error code </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer to place representation in </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>length of the buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/error.h" line="31" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Error to string translation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ERROR_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ERROR_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private/error_common.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="31"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="error_8h_1a8c41c149b77a4807115b19c2af858558" kindref="member">mbedtls_strerror</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errnum,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>error.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/error.h"/>
+  </compounddef>
+</doxygen>

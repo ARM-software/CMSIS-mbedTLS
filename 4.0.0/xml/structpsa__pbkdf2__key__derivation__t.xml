@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__pbkdf2__key__derivation__t" kind="struct" prot="public">
+    <compoundname>psa_pbkdf2_key_derivation_t</compoundname>
+    <includes refid="crypto__builtin__key__derivation_8h" local="no">crypto_builtin_key_derivation.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1aec808b1885d5631316829afe8d713f37" prot="public" static="no" mutable="no">
+        <type><ref refid="crypto__builtin__key__derivation_8h_1abfc53d59025b59fae17b376ef58b4416" kindref="member">psa_pbkdf2_key_derivation_state_t</ref></type>
+        <definition>psa_pbkdf2_key_derivation_state_t psa_pbkdf2_key_derivation_t::private_state</definition>
+        <argsstring></argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="108" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1a152e852620e5378908937df7c656a852" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t psa_pbkdf2_key_derivation_t::private_input_cost</definition>
+        <argsstring></argsstring>
+        <name>private_input_cost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="109" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1a2bd741ff209097228410d24cd59b75e1" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* psa_pbkdf2_key_derivation_t::private_salt</definition>
+        <argsstring></argsstring>
+        <name>private_salt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="110" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1ada5cbec390b9ddb6c67e0369bf89883f" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_pbkdf2_key_derivation_t::private_salt_length</definition>
+        <argsstring></argsstring>
+        <name>private_salt_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="111" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1acd2fd06131b23f2ba20096250f0094e7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_pbkdf2_key_derivation_t::private_password[PSA_HMAC_MAX_HASH_BLOCK_SIZE]</definition>
+        <argsstring>[PSA_HMAC_MAX_HASH_BLOCK_SIZE]</argsstring>
+        <name>private_password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="112" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1a33a98326e7fa770f8d69e33df65136b6" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_pbkdf2_key_derivation_t::private_password_length</definition>
+        <argsstring></argsstring>
+        <name>private_password_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="113" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1a064491a14117f1d4b42cced57c1f20f1" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_pbkdf2_key_derivation_t::private_output_block[PSA_HASH_MAX_SIZE]</definition>
+        <argsstring>[PSA_HASH_MAX_SIZE]</argsstring>
+        <name>private_output_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="114" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1ae2544f3fd5d39b125d2cbff486e882f9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_pbkdf2_key_derivation_t::private_bytes_used</definition>
+        <argsstring></argsstring>
+        <name>private_bytes_used</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="115" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pbkdf2__key__derivation__t_1ad097f71ac687675ad39904c2d13b3310" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_pbkdf2_key_derivation_t::private_block_number</definition>
+        <argsstring></argsstring>
+        <name>private_block_number</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="116" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="107" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="107" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1ad097f71ac687675ad39904c2d13b3310" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_block_number</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1ae2544f3fd5d39b125d2cbff486e882f9" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_bytes_used</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1a152e852620e5378908937df7c656a852" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_input_cost</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1a064491a14117f1d4b42cced57c1f20f1" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_output_block</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1acd2fd06131b23f2ba20096250f0094e7" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_password</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1a33a98326e7fa770f8d69e33df65136b6" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_password_length</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1a2bd741ff209097228410d24cd59b75e1" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_salt</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1ada5cbec390b9ddb6c67e0369bf89883f" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_salt_length</name></member>
+      <member refid="structpsa__pbkdf2__key__derivation__t_1aec808b1885d5631316829afe8d713f37" prot="public" virt="non-virtual"><scope>psa_pbkdf2_key_derivation_t</scope><name>private_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

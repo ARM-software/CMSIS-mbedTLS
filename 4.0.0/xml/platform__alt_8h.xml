@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="platform__alt_8h" kind="file">
+    <compoundname>platform_alt.h</compoundname>
+    <includedby refid="platform_8h" local="yes">platform.h</includedby>
+    <invincdepgraph>
+      <node id="3454">
+        <label>platform_alt.h</label>
+        <link refid="platform_alt.h"/>
+        <childnode refid="3455" relation="include">
+        </childnode>
+      </node>
+      <node id="3455">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__platform__context" prot="public">mbedtls_platform_context</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="platform__alt_8h_1a27178846868b49daddcadee808c6e81e" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref></type>
+        <definition>typedef struct mbedtls_platform_context
+ mbedtls_platform_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_platform_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>platform_alt.h<sp/>with<sp/>dummy<sp/>types<sp/>for<sp/>MBEDTLS_PLATFORM_SETUP_TEARDOWN_ALT<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PLATFORM_ALT_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PLATFORM_ALT_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structmbedtls__platform__context" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structmbedtls__platform__context_1a3bec481a82d26b31e2cccc55a81ffc9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__platform__context_1a3bec481a82d26b31e2cccc55a81ffc9d" kindref="member">dummy</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="platform__alt_8h_1a27178846868b49daddcadee808c6e81e" kindref="member">mbedtls_platform_context</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>platform_alt.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h"/>
+  </compounddef>
+</doxygen>

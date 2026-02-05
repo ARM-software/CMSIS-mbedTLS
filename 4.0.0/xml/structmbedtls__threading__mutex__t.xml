@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__threading__mutex__t" kind="struct" prot="public">
+    <compoundname>mbedtls_threading_mutex_t</compoundname>
+    <includes refid="threading_8h" local="no">threading.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1a513b178e31054dd7a51de880501448bc" prot="public" static="no" mutable="no">
+        <type><ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref></type>
+        <definition>mbedtls_platform_mutex_t mbedtls_threading_mutex_t::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="128" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1a7218b39fe7e1fd7ef5beef11d89c09c4" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_threading_mutex_t::private_initialized</definition>
+        <argsstring></argsstring>
+        <name>private_initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="141" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1aaf41b61c0c2dc5f0bdb3f243d3a9c5ae" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char mbedtls_threading_mutex_t::private_state</definition>
+        <argsstring></argsstring>
+        <name>private_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="148" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__threading__mutex__t_1ae9871917f5d7a48a88c3b355d98217ac" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_threading_mutex_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/threading_alt.h" line="11" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/threading_alt.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="127" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="127" bodyend="150"/>
+    <listofallmembers>
+      <member refid="structmbedtls__threading__mutex__t_1ae9871917f5d7a48a88c3b355d98217ac" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>dummy</name></member>
+      <member refid="structmbedtls__threading__mutex__t_1a7218b39fe7e1fd7ef5beef11d89c09c4" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>private_initialized</name></member>
+      <member refid="structmbedtls__threading__mutex__t_1a513b178e31054dd7a51de880501448bc" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__threading__mutex__t_1aaf41b61c0c2dc5f0bdb3f243d3a9c5ae" prot="public" virt="non-virtual"><scope>mbedtls_threading_mutex_t</scope><name>private_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,10 @@
+<map id="psa_pake_operation_s" name="psa_pake_operation_s">
+<area shape="rect" id="node2" href="$structpsa__crypto__driver__pake__inputs__s.html" title="psa_crypto_driver_pake\l_inputs_s" alt="" coords="665,43,823,85"/>
+<area shape="rect" id="node3" href="$structpsa__pake__cipher__suite__s.html" title="psa_pake_cipher_suite_s" alt="" coords="303,5,473,32"/>
+<area shape="rect" id="node4" href="$structpsa__key__attributes__s.html" title="psa_key_attributes_s" alt="" coords="315,56,461,83"/>
+<area shape="rect" id="node5" href="$structpsa__key__policy__s.html" title="psa_key_policy_s" alt="" coords="17,31,144,57"/>
+<area shape="rect" id="node6" href="$structmbedtls__svc__key__id__t.html" title="mbedtls_svc_key_id_t" alt="" coords="5,81,156,108"/>
+<area shape="rect" id="node7" href="$unionpsa__driver__pake__context__t.html" title="psa_driver_pake_context_t" alt="" coords="656,109,832,136"/>
+<area shape="rect" id="node8" href="$structmbedtls__psa__pake__operation__t.html" title="mbedtls_psa_pake_operation_t" alt="" coords="287,109,489,136"/>
+<area shape="rect" id="node9" href="$structpsa__jpake__computation__stage__s.html" title="psa_jpake_computation\l_stage_s" alt="" coords="665,161,823,202"/>
+</map>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="unionpsa__driver__sign__hash__interruptible__context__t" kind="union" prot="public">
+    <compoundname>psa_driver_sign_hash_interruptible_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__composites_8h" local="no">crypto_driver_contexts_composites.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__sign__hash__interruptible__context__t_1a6cf7923b3acb64abfc4487756f2c1846" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_sign_hash_interruptible_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="134" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__sign__hash__interruptible__context__t_1a2d399ecb6a5f3d9b7551601ecef5cbb7" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__sign__hash__interruptible__operation__t" kindref="compound">mbedtls_psa_sign_hash_interruptible_operation_t</ref></type>
+        <definition>mbedtls_psa_sign_hash_interruptible_operation_t psa_driver_sign_hash_interruptible_context_t::mbedtls_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="135" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="755">
+        <label>psa_driver_sign_hash_interruptible_context_t</label>
+        <link refid="unionpsa__driver__sign__hash__interruptible__context__t"/>
+        <childnode refid="756" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="756">
+        <label>mbedtls_psa_sign_hash_interruptible_operation_t</label>
+        <link refid="structmbedtls__psa__sign__hash__interruptible__operation__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" line="133" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_composites.h" bodystart="133" bodyend="136"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__sign__hash__interruptible__context__t_1a6cf7923b3acb64abfc4487756f2c1846" prot="public" virt="non-virtual"><scope>psa_driver_sign_hash_interruptible_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__sign__hash__interruptible__context__t_1a2d399ecb6a5f3d9b7551601ecef5cbb7" prot="public" virt="non-virtual"><scope>psa_driver_sign_hash_interruptible_context_t</scope><name>mbedtls_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="unionpsa__driver__cipher__context__t" kind="union" prot="public">
+    <compoundname>psa_driver_cipher_context_t</compoundname>
+    <includes refid="crypto__driver__contexts__primitives_8h" local="no">crypto_driver_contexts_primitives.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionpsa__driver__cipher__context__t_1a61a42357fca930790b86369844ad833c" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned psa_driver_cipher_context_t::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" line="98" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionpsa__driver__cipher__context__t_1aef9de0085e0a72914a4e542d66fce5d2" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__psa__cipher__operation__t" kindref="compound">mbedtls_psa_cipher_operation_t</ref></type>
+        <definition>mbedtls_psa_cipher_operation_t psa_driver_cipher_context_t::mbedtls_ctx</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" line="99" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="727">
+        <label>mbedtls_psa_cipher_operation_t</label>
+        <link refid="structmbedtls__psa__cipher__operation__t"/>
+      </node>
+      <node id="726">
+        <label>psa_driver_cipher_context_t</label>
+        <link refid="unionpsa__driver__cipher__context__t"/>
+        <childnode refid="727" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" line="97" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_driver_contexts_primitives.h" bodystart="97" bodyend="104"/>
+    <listofallmembers>
+      <member refid="unionpsa__driver__cipher__context__t_1a61a42357fca930790b86369844ad833c" prot="public" virt="non-virtual"><scope>psa_driver_cipher_context_t</scope><name>dummy</name></member>
+      <member refid="unionpsa__driver__cipher__context__t_1aef9de0085e0a72914a4e542d66fce5d2" prot="public" virt="non-virtual"><scope>psa_driver_cipher_context_t</scope><name>mbedtls_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

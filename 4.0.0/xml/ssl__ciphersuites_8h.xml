@@ -1,0 +1,1785 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ssl__ciphersuites_8h" kind="file">
+    <compoundname>ssl_ciphersuites.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="pk_8h" local="yes">mbedtls/pk.h</includes>
+    <includes local="yes">mbedtls/private/cipher.h</includes>
+    <includes refid="md_8h" local="yes">mbedtls/md.h</includes>
+    <includedby refid="ssl_8h" local="yes">ssl.h</includedby>
+    <incdepgraph>
+      <node id="3655">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3670">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3659">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3660" relation="include">
+        </childnode>
+      </node>
+      <node id="3649">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3671">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3660" relation="include">
+        </childnode>
+        <childnode refid="3672" relation="include">
+        </childnode>
+        <childnode refid="3659" relation="include">
+        </childnode>
+      </node>
+      <node id="3666">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+      </node>
+      <node id="3668">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3660" relation="include">
+        </childnode>
+        <childnode refid="3659" relation="include">
+        </childnode>
+        <childnode refid="3669" relation="include">
+        </childnode>
+        <childnode refid="3670" relation="include">
+        </childnode>
+        <childnode refid="3671" relation="include">
+        </childnode>
+        <childnode refid="3673" relation="include">
+        </childnode>
+      </node>
+      <node id="3662">
+        <label>stdint.h</label>
+      </node>
+      <node id="3654">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3661">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3645">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl_ciphersuites.h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3647" relation="include">
+        </childnode>
+        <childnode refid="3657" relation="include">
+        </childnode>
+        <childnode refid="3675" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+      </node>
+      <node id="3652">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3674">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3648">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3649" relation="include">
+        </childnode>
+        <childnode refid="3650" relation="include">
+        </childnode>
+        <childnode refid="3651" relation="include">
+        </childnode>
+        <childnode refid="3652" relation="include">
+        </childnode>
+        <childnode refid="3653" relation="include">
+        </childnode>
+      </node>
+      <node id="3664">
+        <label>stddef.h</label>
+      </node>
+      <node id="3653">
+        <label>limits.h</label>
+      </node>
+      <node id="3657">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3658" relation="include">
+        </childnode>
+        <childnode refid="3663" relation="include">
+        </childnode>
+        <childnode refid="3668" relation="include">
+        </childnode>
+      </node>
+      <node id="3660">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3661" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+      </node>
+      <node id="3663">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3665" relation="include">
+        </childnode>
+      </node>
+      <node id="3669">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+      </node>
+      <node id="3658">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3659" relation="include">
+        </childnode>
+      </node>
+      <node id="3673">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3646" relation="include">
+        </childnode>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3662" relation="include">
+        </childnode>
+        <childnode refid="3674" relation="include">
+        </childnode>
+      </node>
+      <node id="3672">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3665">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3664" relation="include">
+        </childnode>
+        <childnode refid="3666" relation="include">
+        </childnode>
+        <childnode refid="3667" relation="include">
+        </childnode>
+      </node>
+      <node id="3646">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3675">
+        <label>mbedtls/private/cipher.h</label>
+      </node>
+      <node id="3667">
+        <label>time.h</label>
+      </node>
+      <node id="3647">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3648" relation="include">
+        </childnode>
+        <childnode refid="3654" relation="include">
+        </childnode>
+        <childnode refid="3650" relation="include">
+        </childnode>
+        <childnode refid="3655" relation="include">
+        </childnode>
+        <childnode refid="3656" relation="include">
+        </childnode>
+      </node>
+      <node id="3650">
+        <label>/dev/null</label>
+      </node>
+      <node id="3651">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3656">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3677">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3678" relation="include">
+        </childnode>
+        <childnode refid="3679" relation="include">
+        </childnode>
+        <childnode refid="3680" relation="include">
+        </childnode>
+        <childnode refid="3681" relation="include">
+        </childnode>
+        <childnode refid="3682" relation="include">
+        </childnode>
+      </node>
+      <node id="3682">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3676">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl_ciphersuites.h"/>
+        <childnode refid="3677" relation="include">
+        </childnode>
+      </node>
+      <node id="3681">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="3678">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="3680">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="3679">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__ssl__ciphersuite__t" prot="public">mbedtls_ssl_ciphersuite_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a29a1417a6a370fea39af2574331049ea" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_NULL_SHA</name>
+        <initializer>0x2C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="27" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a68262d008963677656f0edacbd699fd4" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA</name>
+        <initializer>0x8C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="29" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1adbe2d8e09637ad1ca4b390567ef3be93" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA</name>
+        <initializer>0x8D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="30" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a59e8a3af727d077b47322d90a5592001" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_128_GCM_SHA256</name>
+        <initializer>0xA8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="32" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a0cff69d96ab1ee0dd5eaef6fe2a5a592" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_256_GCM_SHA384</name>
+        <initializer>0xA9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="33" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a1dbe6960b340e5f863af7b6ef927d6e0" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA256</name>
+        <initializer>0xAE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="35" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad0f9cf8ac782e743a8b67f2aec9c20b2" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA384</name>
+        <initializer>0xAF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="36" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a02fd01670af3ffa7207c996ccf52ee1f" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_NULL_SHA256</name>
+        <initializer>0xB0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="37" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a4e1d2aae46aeeba5a32ef8737763a5e8" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_NULL_SHA384</name>
+        <initializer>0xB1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="38" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a74a8cea63eb3259bbd89750742d43d10" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_NULL_SHA</name>
+        <initializer>0xC006</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="40" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a04628d6486564ca5f6d30f876fec72a9" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</name>
+        <initializer>0xC009</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="41" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a866e8a6b985204fc3e8111ef506d94b4" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</name>
+        <initializer>0xC00A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="42" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a6a3b1aaac1798df68b54a88229222476" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_NULL_SHA</name>
+        <initializer>0xC010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="44" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a21b4bdb8de8f579c591bc5c45f1faf05" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</name>
+        <initializer>0xC013</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="45" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad345b02fd7b519c4980fcbb5a7cabc88" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</name>
+        <initializer>0xC014</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="46" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1abd3d4b82de52f23d9f852b74b3897cdc" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</name>
+        <initializer>0xC023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="48" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ac7c8985571929c4a076ac7dae53ac460" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</name>
+        <initializer>0xC024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="49" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a70908a91d8e474b415acfaf437e451a1" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</name>
+        <initializer>0xC027</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="50" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aed277b98a024d972ffcbb8a41443ed8c" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</name>
+        <initializer>0xC028</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="51" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a2cedef0e0bfae1a154084add0280e975" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</name>
+        <initializer>0xC02B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="53" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a623797e4c376e49eee56ea5529b11c02" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</name>
+        <initializer>0xC02C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="54" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a3d0bf2e4e26ea78e93012aa71225bb45" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</name>
+        <initializer>0xC02F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="55" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1accc1a6f82abe98ed5b9377c9013514ce" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</name>
+        <initializer>0xC030</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="56" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a5e96a17bad57e86ec12f40f1107788b6" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA</name>
+        <initializer>0xC035</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="58" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1acb735791d25d93a6aefe489c6795f9fa" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA</name>
+        <initializer>0xC036</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="59" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a97a69259835f6891d51813068f084ef5" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256</name>
+        <initializer>0xC037</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a6eaae8a34db3908aa0ca1dd0bfd34f26" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384</name>
+        <initializer>0xC038</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="61" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a25faf3187de6a46f6acdc655d7c94a8f" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA</name>
+        <initializer>0xC039</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="62" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ac701c727d1c9f4bab4c07a4faa712d48" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA256</name>
+        <initializer>0xC03A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="63" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a101125135f27cb15a59db289ec1a9705" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA384</name>
+        <initializer>0xC03B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="64" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ac640a01d6043c8e7a41833889532c6d3" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256</name>
+        <initializer>0xC048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="66" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a7c4578233897fb9e481a33cbfd5d8269" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384</name>
+        <initializer>0xC049</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="67" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ab22ecb0478f72c1d5256c4c3fcae1549" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256</name>
+        <initializer>0xC04C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="68" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad82275e2459e1d7fd6b9548415fda0cd" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384</name>
+        <initializer>0xC04D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="69" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1abe1060abc90aaf3daeae9dc8bb7bae13" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256</name>
+        <initializer>0xC05C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="70" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aaf5366ca762c931fe6f153a5264aeb3d" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384</name>
+        <initializer>0xC05D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="71" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1af7bc0c2dc6f0c3d88d19ce209e609204" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256</name>
+        <initializer>0xC060</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="72" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a7280040907aada43656ed9aec54c31b5" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384</name>
+        <initializer>0xC061</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="73" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a1cc7fe47eec2c9c5936b5a2cb380bee7" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_ARIA_128_CBC_SHA256</name>
+        <initializer>0xC064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="74" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a96dc663e77154b1e432671f60f41d8b9" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_ARIA_256_CBC_SHA384</name>
+        <initializer>0xC065</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="75" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ae9a92cbee4efa0b23e01b5d953c271dc" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_ARIA_128_GCM_SHA256</name>
+        <initializer>0xC06A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="76" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1abc2912b11e8b588b928eaa0607e98966" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_ARIA_256_GCM_SHA384</name>
+        <initializer>0xC06B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="77" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a49b47d0258357bbde8edca6d68bde709" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_ARIA_128_CBC_SHA256</name>
+        <initializer>0xC070</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="78" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a1d4996b235ceca218f245b885c49e5fc" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_ARIA_256_CBC_SHA384</name>
+        <initializer>0xC071</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="79" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a894e337cba52e16fea71c59b9dfc337d" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256</name>
+        <initializer>0xC072</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="81" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1af9f6960455884d1403eebc12c12a5723" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384</name>
+        <initializer>0xC073</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="82" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a17aafd00b4755df5d3358962ae77ce06" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256</name>
+        <initializer>0xC076</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="83" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ab212aa3f9d2551530a74e5cfc26ee83c" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384</name>
+        <initializer>0xC077</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="84" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a8b4884d7e7c4583adeeee578d6ea3551" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256</name>
+        <initializer>0xC086</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="86" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1af4a21bbea6146cc416ad7eb3a9a98b98" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384</name>
+        <initializer>0xC087</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="87" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a1cef8735e16a7d976c676ae4a66ef2d6" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256</name>
+        <initializer>0xC08A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="88" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a3ca0c1514848eb8dbd636052c7e9b7a6" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384</name>
+        <initializer>0xC08B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="89" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1afec870e616180efaa258455a2c0f72f6" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256</name>
+        <initializer>0xC08E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="91" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ae49e849e3aadebb2cfc455f990a613a2" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384</name>
+        <initializer>0xC08F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="92" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a6a1a12a1be0ff2b00ef1e8429c80a5f3" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256</name>
+        <initializer>0xC094</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="94" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad4d2219b5ba3f58cd5fed5fe7d5c6aa8" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384</name>
+        <initializer>0xC095</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="95" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1afcf557653ff7276108a9065d69f1a545" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256</name>
+        <initializer>0xC09A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="96" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ae35802c1a888e90755ee8e644fb15ab0" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384</name>
+        <initializer>0xC09B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="97" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aca8fbd49efcde7d69143a64d337eeff4" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_128_CCM</name>
+        <initializer>0xC0A4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="99" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad6ad788d7288c59a5a473450884e3c9d" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_256_CCM</name>
+        <initializer>0xC0A5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="100" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a2633488de6be17d4a5b004f8ab9f95e0" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_128_CCM_8</name>
+        <initializer>0xC0A8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="101" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ab8f3a8b0f488d78fd91c81b7d287a583" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_AES_256_CCM_8</name>
+        <initializer>0xC0A9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="102" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a0c16b21dabaf2bad2c925ba32b8a0241" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CCM</name>
+        <initializer>0xC0AC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="105" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1adb74f5656c7d83b40eaca016af88571d" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CCM</name>
+        <initializer>0xC0AD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="106" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1afd212c1204b13e30fcffb1e5800a293f" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8</name>
+        <initializer>0xC0AE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="107" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aada6a719705315d2d69212693aecf34b" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8</name>
+        <initializer>0xC0AF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="108" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ad72699f3aec7405d5d871bf00fd1ae04" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECJPAKE_WITH_AES_128_CCM_8</name>
+        <initializer>0xC0FF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>experimental </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="110" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1af9fec7886aabf105bb7626ce3fa3c1a3" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</name>
+        <initializer>0xCCA8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="113" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a869ad8671507762319652055abb75057" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</name>
+        <initializer>0xCCA9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="114" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1add1b04a5e311b5d9ffa47e88a1b71d4e" prot="public" static="no">
+        <name>MBEDTLS_TLS_PSK_WITH_CHACHA20_POLY1305_SHA256</name>
+        <initializer>0xCCAB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="115" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a859bae5e4940072ce9daa63bbe606168" prot="public" static="no">
+        <name>MBEDTLS_TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256</name>
+        <initializer>0xCCAC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="116" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a4b0241d99c6ad6f55dcc9e494d0a7c8c" prot="public" static="no">
+        <name>MBEDTLS_TLS1_3_AES_128_GCM_SHA256</name>
+        <initializer>0x1301</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="119" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a8d7fc8baa43818c161ed8b307817d013" prot="public" static="no">
+        <name>MBEDTLS_TLS1_3_AES_256_GCM_SHA384</name>
+        <initializer>0x1302</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="120" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a9d1de7342acf65490a6cadd27559fec1" prot="public" static="no">
+        <name>MBEDTLS_TLS1_3_CHACHA20_POLY1305_SHA256</name>
+        <initializer>0x1303</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="121" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a6a9c59f48b12cbcaed2f285771307268" prot="public" static="no">
+        <name>MBEDTLS_TLS1_3_AES_128_CCM_SHA256</name>
+        <initializer>0x1304</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="122" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ae87b698ee5833333272be04ab1eac5be" prot="public" static="no">
+        <name>MBEDTLS_TLS1_3_AES_128_CCM_8_SHA256</name>
+        <initializer>0x1305</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TLS 1.3 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="123" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aba4366d3f13c77cd2486bc92df93d36d" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="140" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a152ff5d12542fee2e0c4527cf62caa32" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_WITH_ECDSA_ANY_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="147" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1ada5487d09b7f771d4050168c8081476a" prot="public" static="no">
+        <name>MBEDTLS_SSL_HANDSHAKE_WITH_CERT_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="152" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1acee0c1b2084fdfa16cf80ba5278a9fe3" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_CERT_REQ_ALLOWED_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="165" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a4d8f72dda9cf6ad5bc5eacd006d5305e" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ALLOWED_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="172" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1af979ad080c7d985f34c799c17079be60" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ANY_ALLOWED_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="178" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a7098141cdadcb4d9d8e535cc63ea9afd" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_WITH_SERVER_SIGNATURE_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="184" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1acde72b507ad48c59b20d786b9273db51" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_PFS_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="192" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a14238e4cbf151bd1e841e010d2ef21a6" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="198" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aec8c836cd5dca7f13d6136e005877f7f" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_ECDHE_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="205" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a31340fa953649727bdb5b72a37b6de96" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_1_2_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="210" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1afa7aff0b5c1baf6d3e2f3d0833428ca0" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="216" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a03811b6cbed4dabf834b2f204aefaf7f" prot="public" static="no">
+        <name>MBEDTLS_SSL_HANDSHAKE_WITH_PSK_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="222" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a43d83b559a7fe0d38ae66daf95662360" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_EPHEMERAL_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="228" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a13bb185d8b7b1b8ce53a184c2d1ca5bb" prot="public" static="no">
+        <name>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_ECDHE_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="234" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a94b748ec597d53299493a4ef0738b242" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_ANY_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="240" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a279aa84c2e895f8741961f994a0fb1ac" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_XXDH_PSA_1_2_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="249" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a1c432153cd0ea4885871a4494ce321a0" prot="public" static="no">
+        <name>MBEDTLS_KEY_EXCHANGE_SOME_XXDH_PSA_ANY_ENABLED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="253" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a16358b8eb0384954a6932a13fbebb13e" prot="public" static="no">
+        <name>MBEDTLS_CIPHERSUITE_WEAK</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Weak ciphersuite flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="258" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1aa4802f19cdfd24bb9cdbf643460b0355" prot="public" static="no">
+        <name>MBEDTLS_CIPHERSUITE_SHORT_TAG</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Short authentication tag, eg for CCM_8 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="260" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ssl__ciphersuites_8h_1a9b28a41a6dc8566ed93e1d534572785f" prot="public" static="no">
+        <name>MBEDTLS_CIPHERSUITE_NODTLS</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Can&apos;t be used with DTLS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="261" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3a" prot="public" static="no">
+        <name>mbedtls_key_exchange_type_t</name>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aae5fd90bba0d7baf012e58f51a9bbfb60" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aad6e31db4d8a8adbaccafecc282fc3eb7" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_ECDHE_RSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa7e96c7b66f9a860ede49dc4070f9620b" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa1df892ab1ab714fb52542d3c03690425" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_PSK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aabb6271eda95454da5d8a0176852d7d40" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_ECDHE_PSK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aaadcb75e1846747a1f90e56f0965d3f26" prot="public">
+          <name>MBEDTLS_KEY_EXCHANGE_ECJPAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="128" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="128" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ssl__ciphersuites_8h_1af19a88347160c1c32522cfbc7b2737be" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref></type>
+        <definition>typedef struct mbedtls_ssl_ciphersuite_t mbedtls_ssl_ciphersuite_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_ciphersuite_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="72" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1aa475d287496d8a93a236a9b91b71dc87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const int *</type>
+        <definition>const int* mbedtls_ssl_list_ciphersuites</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_ssl_list_ciphersuites</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="284" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1adc425dd37a1fc451adddfdafdff2e395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref> *</type>
+        <definition>const mbedtls_ssl_ciphersuite_t* mbedtls_ssl_ciphersuite_from_string</definition>
+        <argsstring>(const char *ciphersuite_name)</argsstring>
+        <name>mbedtls_ssl_ciphersuite_from_string</name>
+        <param>
+          <type>const char *</type>
+          <declname>ciphersuite_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="286" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1adbb98a69bbb944f0da4e1078aa8ac83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref> *</type>
+        <definition>const mbedtls_ssl_ciphersuite_t* mbedtls_ssl_ciphersuite_from_id</definition>
+        <argsstring>(int ciphersuite_id)</argsstring>
+        <name>mbedtls_ssl_ciphersuite_from_id</name>
+        <param>
+          <type>int</type>
+          <declname>ciphersuite_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1a6f0fe73d4d87f672f618ee47bc77bc4f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char* mbedtls_ssl_ciphersuite_get_name</definition>
+        <argsstring>(const mbedtls_ssl_ciphersuite_t *info)</argsstring>
+        <name>mbedtls_ssl_ciphersuite_get_name</name>
+        <param>
+          <type>const <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="289" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1ac93ea0162bcc3258b4b6e319f6ce1c4a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_ssl_ciphersuite_get_id</definition>
+        <argsstring>(const mbedtls_ssl_ciphersuite_t *info)</argsstring>
+        <name>mbedtls_ssl_ciphersuite_get_id</name>
+        <param>
+          <type>const <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="294" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__ciphersuites_8h_1a58e21b4eaba65e43ebe91fad4460cc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_ciphersuite_get_cipher_key_bitlen</definition>
+        <argsstring>(const mbedtls_ssl_ciphersuite_t *info)</argsstring>
+        <name>mbedtls_ssl_ciphersuite_get_cipher_key_bitlen</name>
+        <param>
+          <type>const <ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref> *</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h" line="299" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SSL Ciphersuites for Mbed TLS. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SSL_CIPHERSUITES_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CIPHERSUITES_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pk_8h" kindref="compound">mbedtls/pk.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private/cipher.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="md_8h" kindref="compound">mbedtls/md.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>Supported<sp/>ciphersuites<sp/>(Official<sp/>IANA<sp/>names)</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="ssl__ciphersuites_8h_1a29a1417a6a370fea39af2574331049ea" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_NULL_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x2C<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="ssl__ciphersuites_8h_1a68262d008963677656f0edacbd699fd4" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x8C</highlight></codeline>
+<codeline lineno="30" refid="ssl__ciphersuites_8h_1adbe2d8e09637ad1ca4b390567ef3be93" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x8D</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="ssl__ciphersuites_8h_1a59e8a3af727d077b47322d90a5592001" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_128_GCM_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA8<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="ssl__ciphersuites_8h_1a0cff69d96ab1ee0dd5eaef6fe2a5a592" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_256_GCM_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA9<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="ssl__ciphersuites_8h_1a1dbe6960b340e5f863af7b6ef927d6e0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_128_CBC_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAE</highlight></codeline>
+<codeline lineno="36" refid="ssl__ciphersuites_8h_1ad0f9cf8ac782e743a8b67f2aec9c20b2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_256_CBC_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xAF</highlight></codeline>
+<codeline lineno="37" refid="ssl__ciphersuites_8h_1a02fd01670af3ffa7207c996ccf52ee1f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_NULL_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB0<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="ssl__ciphersuites_8h_1a4e1d2aae46aeeba5a32ef8737763a5e8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_NULL_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xB1<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="ssl__ciphersuites_8h_1a74a8cea63eb3259bbd89750742d43d10" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_NULL_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC006<sp/></highlight></codeline>
+<codeline lineno="41" refid="ssl__ciphersuites_8h_1a04628d6486564ca5f6d30f876fec72a9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA<sp/><sp/><sp/><sp/><sp/>0xC009</highlight></codeline>
+<codeline lineno="42" refid="ssl__ciphersuites_8h_1a866e8a6b985204fc3e8111ef506d94b4" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA<sp/><sp/><sp/><sp/><sp/>0xC00A</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="ssl__ciphersuites_8h_1a6a3b1aaac1798df68b54a88229222476" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_NULL_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC010<sp/></highlight></codeline>
+<codeline lineno="45" refid="ssl__ciphersuites_8h_1a21b4bdb8de8f579c591bc5c45f1faf05" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC013</highlight></codeline>
+<codeline lineno="46" refid="ssl__ciphersuites_8h_1ad345b02fd7b519c4980fcbb5a7cabc88" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC014</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="ssl__ciphersuites_8h_1abd3d4b82de52f23d9f852b74b3897cdc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256<sp/><sp/>0xC023<sp/></highlight></codeline>
+<codeline lineno="49" refid="ssl__ciphersuites_8h_1ac7c8985571929c4a076ac7dae53ac460" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384<sp/><sp/>0xC024<sp/></highlight></codeline>
+<codeline lineno="50" refid="ssl__ciphersuites_8h_1a70908a91d8e474b415acfaf437e451a1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256<sp/><sp/><sp/><sp/>0xC027<sp/></highlight></codeline>
+<codeline lineno="51" refid="ssl__ciphersuites_8h_1aed277b98a024d972ffcbb8a41443ed8c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384<sp/><sp/><sp/><sp/>0xC028<sp/></highlight></codeline>
+<codeline lineno="53" refid="ssl__ciphersuites_8h_1a2cedef0e0bfae1a154084add0280e975" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256<sp/><sp/>0xC02B<sp/></highlight></codeline>
+<codeline lineno="54" refid="ssl__ciphersuites_8h_1a623797e4c376e49eee56ea5529b11c02" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384<sp/><sp/>0xC02C<sp/></highlight></codeline>
+<codeline lineno="55" refid="ssl__ciphersuites_8h_1a3d0bf2e4e26ea78e93012aa71225bb45" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256<sp/><sp/><sp/><sp/>0xC02F<sp/></highlight></codeline>
+<codeline lineno="56" refid="ssl__ciphersuites_8h_1accc1a6f82abe98ed5b9377c9013514ce" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384<sp/><sp/><sp/><sp/>0xC030<sp/></highlight></codeline>
+<codeline lineno="58" refid="ssl__ciphersuites_8h_1a5e96a17bad57e86ec12f40f1107788b6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC035</highlight></codeline>
+<codeline lineno="59" refid="ssl__ciphersuites_8h_1acb735791d25d93a6aefe489c6795f9fa" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC036</highlight></codeline>
+<codeline lineno="60" refid="ssl__ciphersuites_8h_1a97a69259835f6891d51813068f084ef5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256<sp/><sp/><sp/><sp/>0xC037</highlight></codeline>
+<codeline lineno="61" refid="ssl__ciphersuites_8h_1a6eaae8a34db3908aa0ca1dd0bfd34f26" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384<sp/><sp/><sp/><sp/>0xC038</highlight></codeline>
+<codeline lineno="62" refid="ssl__ciphersuites_8h_1a25faf3187de6a46f6acdc655d7c94a8f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC039</highlight></codeline>
+<codeline lineno="63" refid="ssl__ciphersuites_8h_1ac701c727d1c9f4bab4c07a4faa712d48" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC03A</highlight></codeline>
+<codeline lineno="64" refid="ssl__ciphersuites_8h_1a101125135f27cb15a59db289ec1a9705" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_NULL_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC03B</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="ssl__ciphersuites_8h_1ac640a01d6043c8e7a41833889532c6d3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_128_CBC_SHA256<sp/>0xC048<sp/></highlight></codeline>
+<codeline lineno="67" refid="ssl__ciphersuites_8h_1a7c4578233897fb9e481a33cbfd5d8269" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_256_CBC_SHA384<sp/>0xC049<sp/></highlight></codeline>
+<codeline lineno="68" refid="ssl__ciphersuites_8h_1ab22ecb0478f72c1d5256c4c3fcae1549" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_128_CBC_SHA256<sp/><sp/><sp/>0xC04C<sp/></highlight></codeline>
+<codeline lineno="69" refid="ssl__ciphersuites_8h_1ad82275e2459e1d7fd6b9548415fda0cd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_256_CBC_SHA384<sp/><sp/><sp/>0xC04D<sp/></highlight></codeline>
+<codeline lineno="70" refid="ssl__ciphersuites_8h_1abe1060abc90aaf3daeae9dc8bb7bae13" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_128_GCM_SHA256<sp/>0xC05C<sp/></highlight></codeline>
+<codeline lineno="71" refid="ssl__ciphersuites_8h_1aaf5366ca762c931fe6f153a5264aeb3d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_ARIA_256_GCM_SHA384<sp/>0xC05D<sp/></highlight></codeline>
+<codeline lineno="72" refid="ssl__ciphersuites_8h_1af7bc0c2dc6f0c3d88d19ce209e609204" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256<sp/><sp/><sp/>0xC060<sp/></highlight></codeline>
+<codeline lineno="73" refid="ssl__ciphersuites_8h_1a7280040907aada43656ed9aec54c31b5" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384<sp/><sp/><sp/>0xC061<sp/></highlight></codeline>
+<codeline lineno="74" refid="ssl__ciphersuites_8h_1a1cc7fe47eec2c9c5936b5a2cb380bee7" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_ARIA_128_CBC_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC064<sp/></highlight></codeline>
+<codeline lineno="75" refid="ssl__ciphersuites_8h_1a96dc663e77154b1e432671f60f41d8b9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_ARIA_256_CBC_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC065<sp/></highlight></codeline>
+<codeline lineno="76" refid="ssl__ciphersuites_8h_1ae9a92cbee4efa0b23e01b5d953c271dc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_ARIA_128_GCM_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC06A<sp/></highlight></codeline>
+<codeline lineno="77" refid="ssl__ciphersuites_8h_1abc2912b11e8b588b928eaa0607e98966" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_ARIA_256_GCM_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC06B<sp/></highlight></codeline>
+<codeline lineno="78" refid="ssl__ciphersuites_8h_1a49b47d0258357bbde8edca6d68bde709" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_ARIA_128_CBC_SHA256<sp/><sp/><sp/>0xC070<sp/></highlight></codeline>
+<codeline lineno="79" refid="ssl__ciphersuites_8h_1a1d4996b235ceca218f245b885c49e5fc" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_ARIA_256_CBC_SHA384<sp/><sp/><sp/>0xC071<sp/></highlight></codeline>
+<codeline lineno="81" refid="ssl__ciphersuites_8h_1a894e337cba52e16fea71c59b9dfc337d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256<sp/>0xC072</highlight></codeline>
+<codeline lineno="82" refid="ssl__ciphersuites_8h_1af9f6960455884d1403eebc12c12a5723" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384<sp/>0xC073</highlight></codeline>
+<codeline lineno="83" refid="ssl__ciphersuites_8h_1a17aafd00b4755df5d3358962ae77ce06" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256<sp/><sp/><sp/>0xC076</highlight></codeline>
+<codeline lineno="84" refid="ssl__ciphersuites_8h_1ab212aa3f9d2551530a74e5cfc26ee83c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384<sp/><sp/><sp/>0xC077</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="ssl__ciphersuites_8h_1a8b4884d7e7c4583adeeee578d6ea3551" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256<sp/>0xC086<sp/></highlight></codeline>
+<codeline lineno="87" refid="ssl__ciphersuites_8h_1af4a21bbea6146cc416ad7eb3a9a98b98" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384<sp/>0xC087<sp/></highlight></codeline>
+<codeline lineno="88" refid="ssl__ciphersuites_8h_1a1cef8735e16a7d976c676ae4a66ef2d6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256<sp/><sp/><sp/>0xC08A<sp/></highlight></codeline>
+<codeline lineno="89" refid="ssl__ciphersuites_8h_1a3ca0c1514848eb8dbd636052c7e9b7a6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384<sp/><sp/><sp/>0xC08B<sp/></highlight></codeline>
+<codeline lineno="91" refid="ssl__ciphersuites_8h_1afec870e616180efaa258455a2c0f72f6" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC08E<sp/></highlight></codeline>
+<codeline lineno="92" refid="ssl__ciphersuites_8h_1ae49e849e3aadebb2cfc455f990a613a2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC08F<sp/></highlight></codeline>
+<codeline lineno="94" refid="ssl__ciphersuites_8h_1a6a1a12a1be0ff2b00ef1e8429c80a5f3" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC094</highlight></codeline>
+<codeline lineno="95" refid="ssl__ciphersuites_8h_1ad4d2219b5ba3f58cd5fed5fe7d5c6aa8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC095</highlight></codeline>
+<codeline lineno="96" refid="ssl__ciphersuites_8h_1afcf557653ff7276108a9065d69f1a545" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256<sp/>0xC09A</highlight></codeline>
+<codeline lineno="97" refid="ssl__ciphersuites_8h_1ae35802c1a888e90755ee8e644fb15ab0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384<sp/>0xC09B</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="ssl__ciphersuites_8h_1aca8fbd49efcde7d69143a64d337eeff4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_128_CCM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0A4<sp/><sp/></highlight></codeline>
+<codeline lineno="100" refid="ssl__ciphersuites_8h_1ad6ad788d7288c59a5a473450884e3c9d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_256_CCM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0A5<sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="ssl__ciphersuites_8h_1a2633488de6be17d4a5b004f8ab9f95e0" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_128_CCM_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0A8<sp/><sp/></highlight></codeline>
+<codeline lineno="102" refid="ssl__ciphersuites_8h_1ab8f3a8b0f488d78fd91c81b7d287a583" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_AES_256_CCM_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0A9<sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>The<sp/>last<sp/>two<sp/>are<sp/>named<sp/>with<sp/>PSK_DHE<sp/>in<sp/>the<sp/>RFC,<sp/>which<sp/>looks<sp/>like<sp/>a<sp/>typo<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="ssl__ciphersuites_8h_1a0c16b21dabaf2bad2c925ba32b8a0241" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CCM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0AC<sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="ssl__ciphersuites_8h_1adb74f5656c7d83b40eaca016af88571d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CCM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0AD<sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="ssl__ciphersuites_8h_1afd212c1204b13e30fcffb1e5800a293f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8<sp/><sp/><sp/><sp/><sp/><sp/>0xC0AE<sp/><sp/></highlight></codeline>
+<codeline lineno="108" refid="ssl__ciphersuites_8h_1aada6a719705315d2d69212693aecf34b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8<sp/><sp/><sp/><sp/><sp/><sp/>0xC0AF<sp/><sp/></highlight></codeline>
+<codeline lineno="110" refid="ssl__ciphersuites_8h_1ad72699f3aec7405d5d871bf00fd1ae04" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECJPAKE_WITH_AES_128_CCM_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0FF<sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>RFC<sp/>7905<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="113" refid="ssl__ciphersuites_8h_1af9fec7886aabf105bb7626ce3fa3c1a3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256<sp/><sp/><sp/>0xCCA8<sp/></highlight></codeline>
+<codeline lineno="114" refid="ssl__ciphersuites_8h_1a869ad8671507762319652055abb75057" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256<sp/>0xCCA9<sp/></highlight></codeline>
+<codeline lineno="115" refid="ssl__ciphersuites_8h_1add1b04a5e311b5d9ffa47e88a1b71d4e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_PSK_WITH_CHACHA20_POLY1305_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xCCAB<sp/></highlight></codeline>
+<codeline lineno="116" refid="ssl__ciphersuites_8h_1a859bae5e4940072ce9daa63bbe606168" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS_ECDHE_PSK_WITH_CHACHA20_POLY1305_SHA256<sp/><sp/><sp/>0xCCAC<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>RFC<sp/>8446,<sp/>Appendix<sp/>B.4<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="119" refid="ssl__ciphersuites_8h_1a4b0241d99c6ad6f55dcc9e494d0a7c8c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS1_3_AES_128_GCM_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1301<sp/></highlight></codeline>
+<codeline lineno="120" refid="ssl__ciphersuites_8h_1a8d7fc8baa43818c161ed8b307817d013" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS1_3_AES_256_GCM_SHA384<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1302<sp/></highlight></codeline>
+<codeline lineno="121" refid="ssl__ciphersuites_8h_1a9d1de7342acf65490a6cadd27559fec1" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS1_3_CHACHA20_POLY1305_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1303<sp/></highlight></codeline>
+<codeline lineno="122" refid="ssl__ciphersuites_8h_1a6a9c59f48b12cbcaed2f285771307268" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS1_3_AES_128_CCM_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1304<sp/></highlight></codeline>
+<codeline lineno="123" refid="ssl__ciphersuites_8h_1ae87b698ee5833333272be04ab1eac5be" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_TLS1_3_AES_128_CCM_8_SHA256<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1305<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Reminder:<sp/>update<sp/>mbedtls_ssl_premaster_secret<sp/>when<sp/>adding<sp/>a<sp/>new<sp/>key<sp/>exchange.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>Reminder:<sp/>update<sp/>MBEDTLS_KEY_EXCHANGE__xxx<sp/>below</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="128" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="129" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aae5fd90bba0d7baf012e58f51a9bbfb60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aae5fd90bba0d7baf012e58f51a9bbfb60" kindref="member">MBEDTLS_KEY_EXCHANGE_NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="130" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aad6e31db4d8a8adbaccafecc282fc3eb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aad6e31db4d8a8adbaccafecc282fc3eb7" kindref="member">MBEDTLS_KEY_EXCHANGE_ECDHE_RSA</ref>,</highlight></codeline>
+<codeline lineno="131" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa7e96c7b66f9a860ede49dc4070f9620b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa7e96c7b66f9a860ede49dc4070f9620b" kindref="member">MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA</ref>,</highlight></codeline>
+<codeline lineno="132" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa1df892ab1ab714fb52542d3c03690425" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aa1df892ab1ab714fb52542d3c03690425" kindref="member">MBEDTLS_KEY_EXCHANGE_PSK</ref>,</highlight></codeline>
+<codeline lineno="133" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aabb6271eda95454da5d8a0176852d7d40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aabb6271eda95454da5d8a0176852d7d40" kindref="member">MBEDTLS_KEY_EXCHANGE_ECDHE_PSK</ref>,</highlight></codeline>
+<codeline lineno="134" refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aaadcb75e1846747a1f90e56f0965d3f26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3aaadcb75e1846747a1f90e56f0965d3f26" kindref="member">MBEDTLS_KEY_EXCHANGE_ECJPAKE</ref>,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}<sp/><ref refid="ssl__ciphersuites_8h_1ae04606bda9a15cfd8bd51c2f6fd52a3a" kindref="member">mbedtls_key_exchange_type_t</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>using<sp/>a<sp/>certificate<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED)</highlight></codeline>
+<codeline lineno="140" refid="ssl__ciphersuites_8h_1aba4366d3f13c77cd2486bc92df93d36d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>in<sp/>either<sp/>TLS<sp/>1.2<sp/>or<sp/>1.3<sp/>which<sp/>are<sp/>using<sp/>an<sp/>ECDSA</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/>*<sp/>signature<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="146"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="147" refid="ssl__ciphersuites_8h_1a152ff5d12542fee2e0c4527cf62caa32" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_WITH_ECDSA_ANY_ENABLED</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="149"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="152" refid="ssl__ciphersuites_8h_1ada5487d09b7f771d4050168c8081476a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_HANDSHAKE_WITH_CERT_ENABLED</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="154"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>allowing<sp/>client<sp/>certificate<sp/>requests.</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>now<sp/>the<sp/>same<sp/>as<sp/>MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED,</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/>*<sp/>and<sp/>the<sp/>two<sp/>macros<sp/>could<sp/>be<sp/>unified.</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/>*<sp/>Until<sp/>Mbed<sp/>TLS<sp/>3.x,<sp/>the<sp/>two<sp/>sets<sp/>were<sp/>different<sp/>because</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/>*<sp/>MBEDTLS_KEY_EXCHANGE_CERT_REQ_ALLOWED_ENABLED<sp/>covers</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/>*<sp/>MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED<sp/>plus<sp/>RSA-PSK.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/>*<sp/>But<sp/>RSA-PSK<sp/>was<sp/>removed<sp/>in<sp/>Mbed<sp/>TLS<sp/>4.0.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED)</highlight></codeline>
+<codeline lineno="165" refid="ssl__ciphersuites_8h_1acee0c1b2084fdfa16cf80ba5278a9fe3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_CERT_REQ_ALLOWED_ENABLED</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Helper<sp/>to<sp/>state<sp/>that<sp/>certificate-based<sp/>client<sp/>authentication<sp/>through<sp/>ECDSA</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/>is<sp/>supported<sp/>in<sp/>TLS<sp/>1.2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_CERT_REQ_ALLOWED_ENABLED)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(PSA_HAVE_ALG_ECDSA_SIGN)<sp/>&amp;&amp;<sp/>defined(PSA_HAVE_ALG_ECDSA_VERIFY)</highlight></codeline>
+<codeline lineno="172" refid="ssl__ciphersuites_8h_1a4d8f72dda9cf6ad5bc5eacd006d5305e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ALLOWED_ENABLED</highlight></codeline>
+<codeline lineno="173"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>ECDSA<sp/>required<sp/>for<sp/>certificates<sp/>in<sp/>either<sp/>TLS<sp/>1.2<sp/>or<sp/>1.3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ALLOWED_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="178" refid="ssl__ciphersuites_8h_1af979ad080c7d985f34c799c17079be60" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ANY_ALLOWED_ENABLED</highlight></codeline>
+<codeline lineno="179"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>involving<sp/>server<sp/>signature<sp/>in<sp/>ServerKeyExchange<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED)</highlight></codeline>
+<codeline lineno="184" refid="ssl__ciphersuites_8h_1a7098141cdadcb4d9d8e535cc63ea9afd" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_WITH_SERVER_SIGNATURE_ENABLED</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>that<sp/>involve<sp/>ephemeral<sp/>keys<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="189"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="190"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="191"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED)</highlight></codeline>
+<codeline lineno="192" refid="ssl__ciphersuites_8h_1acde72b507ad48c59b20d786b9273db51" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_PFS_ENABLED</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>using<sp/>a<sp/>PSK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_PSK_ENABLED)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED)</highlight></codeline>
+<codeline lineno="198" refid="ssl__ciphersuites_8h_1a14238e4cbf151bd1e841e010d2ef21a6" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_PSK_ENABLED</highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Key<sp/>exchanges<sp/>using<sp/>ECDHE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_RSA_ENABLED)<sp/><sp/><sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="203"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_ECDSA_ENABLED)<sp/><sp/><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_KEY_EXCHANGE_ECDHE_PSK_ENABLED)</highlight></codeline>
+<codeline lineno="205" refid="ssl__ciphersuites_8h_1aec8c836cd5dca7f13d6136e005877f7f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_ECDHE_ENABLED</highlight></codeline>
+<codeline lineno="206"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.2<sp/>key<sp/>exchanges<sp/>using<sp/>ECDH<sp/>or<sp/>ECDHE*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_SOME_ECDHE_ENABLED)</highlight></codeline>
+<codeline lineno="210" refid="ssl__ciphersuites_8h_1a31340fa953649727bdb5b72a37b6de96" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_1_2_ENABLED</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="212"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.3<sp/>PSK<sp/>key<sp/>exchanges<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="215"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="216" refid="ssl__ciphersuites_8h_1afa7aff0b5c1baf6d3e2f3d0833428ca0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_PSK_ENABLED</highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.2<sp/>or<sp/>1.3<sp/>key<sp/>exchanges<sp/>with<sp/>PSK<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_SOME_PSK_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_PSK_ENABLED)</highlight></codeline>
+<codeline lineno="222" refid="ssl__ciphersuites_8h_1a03811b6cbed4dabf834b2f204aefaf7f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_HANDSHAKE_WITH_PSK_ENABLED</highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.3<sp/>ephemeral<sp/>key<sp/>exchanges<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_EPHEMERAL_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="227"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_PSK_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="228" refid="ssl__ciphersuites_8h_1a43d83b559a7fe0d38ae66daf95662360" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_EPHEMERAL_ENABLED</highlight></codeline>
+<codeline lineno="229"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="230"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.3<sp/>key<sp/>exchanges<sp/>using<sp/>ECDHE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_EPHEMERAL_ENABLED)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="233"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(PSA_WANT_ALG_ECDH)</highlight></codeline>
+<codeline lineno="234" refid="ssl__ciphersuites_8h_1a13bb185d8b7b1b8ce53a184c2d1ca5bb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_ECDHE_ENABLED</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="236"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>TLS<sp/>1.2<sp/>or<sp/>1.3<sp/>key<sp/>exchanges<sp/>using<sp/>ECDH<sp/>or<sp/>ECDHE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_1_2_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_ECDHE_ENABLED)</highlight></codeline>
+<codeline lineno="240" refid="ssl__ciphersuites_8h_1a94b748ec597d53299493a4ef0738b242" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_ANY_ENABLED</highlight></codeline>
+<codeline lineno="241"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="242"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>handshake<sp/>params<sp/>structure<sp/>has<sp/>a<sp/>set<sp/>of<sp/>fields<sp/>called<sp/>xxdh_psa<sp/>which<sp/>are<sp/>used:</highlight></codeline>
+<codeline lineno="244"><highlight class="comment"><sp/>*<sp/>-<sp/>by<sp/>TLS<sp/>1.2<sp/>to<sp/>do<sp/>ECDH<sp/>or<sp/>ECDHE;</highlight></codeline>
+<codeline lineno="245"><highlight class="comment"><sp/>*<sp/>-<sp/>by<sp/>TLS<sp/>1.3<sp/>to<sp/>do<sp/>ECDHE<sp/>or<sp/>FFDHE.</highlight></codeline>
+<codeline lineno="246"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>macros<sp/>can<sp/>be<sp/>used<sp/>to<sp/>guard<sp/>their<sp/>declaration<sp/>and<sp/>use.</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_SOME_ECDH_OR_ECDHE_1_2_ENABLED)</highlight></codeline>
+<codeline lineno="249" refid="ssl__ciphersuites_8h_1a279aa84c2e895f8741961f994a0fb1ac" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_XXDH_PSA_1_2_ENABLED</highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="251"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_KEY_EXCHANGE_SOME_XXDH_PSA_1_2_ENABLED)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="252"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_SSL_TLS1_3_KEY_EXCHANGE_MODE_SOME_EPHEMERAL_ENABLED)</highlight></codeline>
+<codeline lineno="253" refid="ssl__ciphersuites_8h_1a1c432153cd0ea4885871a4494ce321a0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_KEY_EXCHANGE_SOME_XXDH_PSA_ANY_ENABLED</highlight></codeline>
+<codeline lineno="254"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="255"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="ssl__ciphersuites_8h_1af19a88347160c1c32522cfbc7b2737be" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref>;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="ssl__ciphersuites_8h_1a16358b8eb0384954a6932a13fbebb13e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHERSUITE_WEAK<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259" refid="ssl__ciphersuites_8h_1aa4802f19cdfd24bb9cdbf643460b0355" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHERSUITE_SHORT_TAG<sp/><sp/>0x02<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="preprocessor">#define<sp/>MBEDTLS_CIPHERSUITE_NODTLS<sp/><sp/><sp/><sp/><sp/>0x04<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="preprocessor">struct<sp/>mbedtls_ssl_ciphersuite_t<sp/>{</highlight></codeline>
+<codeline lineno="271" refid="structmbedtls__ssl__ciphersuite__t" refkind="compound"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272" refid="structmbedtls__ssl__ciphersuite__t_1ad796c86ca44f48aa1c76d07f7c2faf49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(name);</highlight></codeline>
+<codeline lineno="273" refid="structmbedtls__ssl__ciphersuite__t_1a07316338ba96d461dd2b59d77ba0c3a7" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(cipher);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>mbedtls_cipher_type_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="structmbedtls__ssl__ciphersuite__t_1a56c957bba33700423cbec756fb68f3b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(mac);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>mbedtls_md_type_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="structmbedtls__ssl__ciphersuite__t_1af15298a39f6129b0577aa9f10bbd1c3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(key_exchange);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>mbedtls_key_exchange_type_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="structmbedtls__ssl__ciphersuite__t_1ac88c1d8c5ff5a410840a469271c819a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>MBEDTLS_PRIVATE(flags);</highlight></codeline>
+<codeline lineno="278" refid="structmbedtls__ssl__ciphersuite__t_1ae265285bf2b3ce7f4cc62de96844b402" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>MBEDTLS_PRIVATE(min_tls_version);<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_ssl_protocol_version<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="structmbedtls__ssl__ciphersuite__t_1a3a613311a5ab33930844c476a59e9199" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>MBEDTLS_PRIVATE(max_tls_version);<sp/></highlight><highlight class="comment">/*<sp/>mbedtls_ssl_protocol_version<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="structmbedtls__ssl__ciphersuite__t_1a0977520058a5288eb25f950c5a758643" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="ssl__ciphersuites_8h_1aa475d287496d8a93a236a9b91b71dc87" kindref="member">mbedtls_ssl_list_ciphersuites</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/>*<ref refid="ssl__ciphersuites_8h_1adc425dd37a1fc451adddfdafdff2e395" kindref="member">mbedtls_ssl_ciphersuite_from_string</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ciphersuite_name);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/>*<ref refid="ssl__ciphersuites_8h_1adbb98a69bbb944f0da4e1078aa8ac83d" kindref="member">mbedtls_ssl_ciphersuite_from_id</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ciphersuite_id);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ssl__ciphersuites_8h_1a6f0fe73d4d87f672f618ee47bc77bc4f" kindref="member">mbedtls_ssl_ciphersuite_get_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/>*info)</highlight></codeline>
+<codeline lineno="289" refid="ssl__ciphersuites_8h_1a6f0fe73d4d87f672f618ee47bc77bc4f" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>info-&gt;MBEDTLS_PRIVATE(name);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__ciphersuites_8h_1ac93ea0162bcc3258b4b6e319f6ce1c4a" kindref="member">mbedtls_ssl_ciphersuite_get_id</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/>*info)</highlight></codeline>
+<codeline lineno="294" refid="ssl__ciphersuites_8h_1ac93ea0162bcc3258b4b6e319f6ce1c4a" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>info-&gt;MBEDTLS_PRIVATE(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="ssl__ciphersuites_8h_1a58e21b4eaba65e43ebe91fad4460cc4f" kindref="member">mbedtls_ssl_ciphersuite_get_cipher_key_bitlen</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__ciphersuite__t" kindref="compound">mbedtls_ssl_ciphersuite_t</ref><sp/>*info);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="301"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ssl_ciphersuites.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ciphersuites.h"/>
+  </compounddef>
+</doxygen>

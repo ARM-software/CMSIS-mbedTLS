@@ -1,0 +1,711 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__attributes" kind="group">
+    <compoundname>attributes</compoundname>
+    <title>Key attributes</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" prot="public" static="no">
+        <type>struct <ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_s</ref></type>
+        <definition>typedef struct psa_key_attributes_s psa_key_attributes_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_attributes_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of a structure containing key attributes.</para><para>This is an opaque structure that can represent the metadata of a key object. Metadata that can be stored in attributes includes:<itemizedlist>
+<listitem><para>The location of the key in storage, indicated by its key identifier and its lifetime.</para></listitem><listitem><para>The key&apos;s policy, comprising usage flags and a specification of the permitted algorithm(s).</para></listitem><listitem><para>Information about the key itself: the key type and its size.</para></listitem><listitem><para>Additional implementation-defined attributes.</para></listitem></itemizedlist>
+</para><para>The actual key material is not considered an attribute of a key. Key attributes do not contain information that is generally considered highly confidential.</para><para>An attribute structure works like a simple data structure where each function <computeroutput>psa_set_key_xxx</computeroutput> sets a field and the corresponding function <computeroutput>psa_get_key_xxx</computeroutput> retrieves the value of the corresponding field. However, a future version of the library may report values that are equivalent to the original one, but have a different encoding. Invalid values may be mapped to different, also invalid values.</para><para>An attribute structure may contain references to auxiliary resources, for example pointers to allocated memory or indirect references to pre-calculated values. In order to free such resources, the application must call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>. As an exception, calling <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref> on an attribute structure is optional if the structure has only been modified by the following functions since it was initialized or last reset with <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>:<itemizedlist>
+<listitem><para><ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref></para></listitem><listitem><para><ref refid="group__attributes_1ga6857ef0ecb3fa844d4536939d9c64025" kindref="member">psa_set_key_type()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gaf61683ac87f87687a40262b5afbfa018" kindref="member">psa_set_key_bits()</ref></para></listitem><listitem><para><ref refid="group__attributes_1ga42a65b3c4522ce9b67ea5ea7720e17de" kindref="member">psa_set_key_usage_flags()</ref></para></listitem><listitem><para><ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref></para></listitem></itemizedlist>
+</para><para>Before calling any function on a key attribute structure, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;attributes,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(attributes));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes<sp/>=<sp/><ref refid="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" kindref="member">PSA_KEY_ATTRIBUTES_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="group__attributes_1ga06966a8812aacd323ccdf06dbb43667d" kindref="member">psa_key_attributes_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__key__attributes__s" kindref="compound">psa_key_attributes_t</ref><sp/>attributes;</highlight></codeline>
+<codeline><highlight class="normal">attributes<sp/>=<sp/><ref refid="group__attributes_1ga06966a8812aacd323ccdf06dbb43667d" kindref="member">psa_key_attributes_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>A freshly initialized attribute structure contains the following values:</para><para><itemizedlist>
+<listitem><para>lifetime: <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>.</para></listitem><listitem><para>key identifier: 0 (which is not a valid key identifier).</para></listitem><listitem><para>type: <computeroutput>0</computeroutput> (meaning that the type is unspecified).</para></listitem><listitem><para>key size: <computeroutput>0</computeroutput> (meaning that the size is unspecified).</para></listitem><listitem><para>usage flags: <computeroutput>0</computeroutput> (which allows no usage except exporting a public key).</para></listitem><listitem><para>algorithm: <computeroutput>0</computeroutput> (which allows no cryptographic usage, but allows exporting).</para></listitem></itemizedlist>
+</para><para>A typical sequence to create a key is as follows:<orderedlist>
+<listitem><para>Create and initialize an attribute structure.</para></listitem><listitem><para>If the key is persistent, call <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref>. Also call <ref refid="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" kindref="member">psa_set_key_lifetime()</ref> to place the key in a non-default location.</para></listitem><listitem><para>Set the key policy with <ref refid="group__attributes_1ga42a65b3c4522ce9b67ea5ea7720e17de" kindref="member">psa_set_key_usage_flags()</ref> and <ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref>.</para></listitem><listitem><para>Set the key type with <ref refid="group__attributes_1ga6857ef0ecb3fa844d4536939d9c64025" kindref="member">psa_set_key_type()</ref>. Skip this step if copying an existing key with <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>.</para></listitem><listitem><para>When generating a random key with <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref> or deriving a key with <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>, set the desired key size with <ref refid="group__attributes_1gaf61683ac87f87687a40262b5afbfa018" kindref="member">psa_set_key_bits()</ref>.</para></listitem><listitem><para>Call a key creation function: <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref>, <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>, <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref> or <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>. This function reads the attribute structure, creates a key with these attributes, and outputs a key identifier to the newly created key.</para></listitem><listitem><para>The attribute structure is now no longer necessary. You may call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>, although this is optional with the workflow presented here because the attributes currently defined in this specification do not require any additional resources beyond the structure itself.</para></listitem></orderedlist>
+</para><para>A typical sequence to query a key&apos;s attributes is as follows:<orderedlist>
+<listitem><para>Call <ref refid="group__attributes_1gacbbf5c11eac6cd70c87ffb936e1b9be2" kindref="member">psa_get_key_attributes()</ref>.</para></listitem><listitem><para>Call <computeroutput>psa_get_key_xxx</computeroutput> functions to retrieve the attribute(s) that you are interested in.</para></listitem><listitem><para>Call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref> to free any resources that may be used by the attribute structure.</para></listitem></orderedlist>
+</para><para>Once a key has been created, it is impossible to change its attributes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="316" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__attributes_1ga06966a8812aacd323ccdf06dbb43667d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref></type>
+        <definition>static psa_key_attributes_t psa_key_attributes_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_key_attributes_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an initial value for a key attributes structure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_id</definition>
+        <argsstring>(psa_key_attributes_t *attributes, mbedtls_svc_key_id_t key)</argsstring>
+        <name>psa_set_key_id</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare a key as persistent and set its key identifier.</para><para>If the attribute structure currently declares the key as volatile (which is the default content of an attribute structure), this function sets the lifetime attribute to <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref>.</para><para>This function does not access storage, it merely stores the given value in the structure. The persistent key will be written to storage when the attribute structure is passed to a key creation function such as <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref>, <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>, <ref refid="group__random_1ga800e50bf74396f7026bbccf4c92181f8" kindref="member">psa_generate_key_custom()</ref>, <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>, <ref refid="group__key__derivation_1ga0fc5273188cdeb7d5235ae01261df913" kindref="member">psa_key_derivation_output_key_custom()</ref> or <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The persistent identifier for the key. This can be any value in the range from <ref refid="group__key__lifetimes_1ga2b062011d930839695577138858ec136" kindref="member">PSA_KEY_ID_USER_MIN</ref> to <ref refid="group__key__lifetimes_1ga9cb2bf7c6f7abfacccff4fd31dcfd564" kindref="member">PSA_KEY_ID_USER_MAX</ref> inclusive. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="148" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga72dc358ef6ceadc0d1ed1df807f0fce8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mbedtls_set_key_owner_id</definition>
+        <argsstring>(psa_key_attributes_t *attributes, mbedtls_key_owner_id_t owner)</argsstring>
+        <name>mbedtls_set_key_owner_id</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="crypto__platform_8h_1adfcbcc369bf3388b46e65d5cd4778b7f" kindref="member">mbedtls_key_owner_id_t</ref></type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the owner identifier of a key.</para><para>When key identifiers encode key owner identifiers, <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref> does not allow to define in key attributes the owner of volatile keys as <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref> enforces the key to be persistent.</para><para>This function allows to set in key attributes the owner identifier of a key. It is intended to be used for volatile keys. For persistent keys, it is recommended to use the PSA Cryptography API <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref> to define the owner of a key.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key owner identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gac03ccf09ca6d36cc3d5b43f8303db6f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_lifetime</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_lifetime_t lifetime)</argsstring>
+        <name>psa_set_key_lifetime</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref></type>
+          <declname>lifetime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the location of a persistent key.</para><para>To make a key persistent, you must give it a persistent key identifier with <ref refid="group__attributes_1gae48fcfdc72a23e7499957d7f54ff5a64" kindref="member">psa_set_key_id()</ref>. By default, a key that has a persistent identifier is stored in the default storage area identifier by <ref refid="group__key__lifetimes_1ga3713a01c5fcd5f7eae46ff22ceaf6d02" kindref="member">PSA_KEY_LIFETIME_PERSISTENT</ref>. Call this function to choose a storage area, or to explicitly declare the key as volatile.</para><para>This function does not access storage, it merely stores the given value in the structure. The persistent key will be written to storage when the attribute structure is passed to a key creation function such as <ref refid="group__import__export_1ga0336ea76bf30587ab204a8296462327b" kindref="member">psa_import_key()</ref>, <ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref>, <ref refid="group__random_1ga800e50bf74396f7026bbccf4c92181f8" kindref="member">psa_generate_key_custom()</ref>, <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>, <ref refid="group__key__derivation_1ga0fc5273188cdeb7d5235ae01261df913" kindref="member">psa_key_derivation_output_key_custom()</ref> or <ref refid="group__key__management_1gaac27a547ca634d439e89b17aacc99943" kindref="member">psa_copy_key()</ref>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lifetime for the key. If this is <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>, the key will be volatile, and the key identifier attribute is reset to 0. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="196" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gafd8a339ef75f9ec0f72c97edfc99a2a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+        <definition>static mbedtls_svc_key_id_t psa_get_key_id</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_id</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the key identifier from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The persistent identifier stored in the attribute structure. This value is unspecified if the attribute structure declares the key as volatile. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="211" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga9ea8eae1b81e480cc56dec858859aff9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref></type>
+        <definition>static psa_key_lifetime_t psa_get_key_lifetime</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_lifetime</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the lifetime from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The lifetime value stored in the attribute structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga42a65b3c4522ce9b67ea5ea7720e17de" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_usage_flags</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_usage_t usage_flags)</argsstring>
+        <name>psa_set_key_usage_flags</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+          <declname>usage_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare usage flags for a key.</para><para>Usage flags are part of a key&apos;s usage policy. They encode what kind of operations are permitted on the key. For more details, refer to the documentation of the type <ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref>.</para><para>This function overwrites any usage flags previously set in <computeroutput>attributes</computeroutput>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usage_flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The usage flags to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gaa1af20f142ca722222c6d98678a0c448" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__policy_1ga7bb9de71337e0e98de843aa7f9b55f25" kindref="member">psa_key_usage_t</ref></type>
+        <definition>static psa_key_usage_t psa_get_key_usage_flags</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_usage_flags</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the usage flags from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The usage flags stored in the attribute structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="256" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_algorithm</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_algorithm_t alg)</argsstring>
+        <name>psa_set_key_algorithm</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the permitted algorithm policy for a key.</para><para>The permitted algorithm policy of a key encodes which algorithm or algorithms are permitted to be used with this key. The following algorithm policies are supported:<itemizedlist>
+<listitem><para>0 does not allow any cryptographic operation with the key. The key may be used for non-cryptographic actions such as exporting (if permitted by the usage flags).</para></listitem><listitem><para>An algorithm value permits this particular algorithm.</para></listitem><listitem><para>An algorithm wildcard built from <ref refid="group__crypto__types_1gaa1288ea8bd397a8a3f5e19e94110f2e4" kindref="member">PSA_ALG_ANY_HASH</ref> allows the specified signature scheme with any hash algorithm.</para></listitem><listitem><para>An algorithm built from <ref refid="group__crypto__types_1gae9b6eed00b39ff89a0325c83554295d3" kindref="member">PSA_ALG_AT_LEAST_THIS_LENGTH_MAC</ref> allows any MAC algorithm from the same base class (e.g. CMAC) which generates/verifies a MAC length greater than or equal to the length encoded in the wildcard algorithm.</para></listitem><listitem><para>An algorithm built from <ref refid="group__crypto__types_1ga09c63eca9d111ca7581b63c38bda3cd7" kindref="member">PSA_ALG_AEAD_WITH_AT_LEAST_THIS_LENGTH_TAG</ref> allows any AEAD algorithm from the same base class (e.g. CCM) which generates/verifies a tag length greater than or equal to the length encoded in the wildcard algorithm.</para></listitem></itemizedlist>
+</para><para>This function overwrites any algorithm policy previously set in <computeroutput>attributes</computeroutput>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The permitted algorithm policy to write. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="289" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gac255da850a00bbed925390044f016b34" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t psa_get_key_algorithm</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_algorithm</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the algorithm policy from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The algorithm stored in the attribute structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="303" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga6857ef0ecb3fa844d4536939d9c64025" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_type</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_key_type_t type)</argsstring>
+        <name>psa_set_key_type</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the type of a key.</para><para>This function overwrites any key type previously set in <computeroutput>attributes</computeroutput>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key type to write. If this is 0, the key type in <computeroutput>attributes</computeroutput> becomes unspecified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="320" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gaf61683ac87f87687a40262b5afbfa018" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_bits</definition>
+        <argsstring>(psa_key_attributes_t *attributes, size_t bits)</argsstring>
+        <name>psa_set_key_bits</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Declare the size of a key.</para><para>This function overwrites any key size previously set in <computeroutput>attributes</computeroutput>.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate each of its arguments exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key size in bits. If this is 0, the key size in <computeroutput>attributes</computeroutput> becomes unspecified. Keys of size 0 are not supported. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="338" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gae4fb812af4f57aa1ad85e335a865b918" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+        <definition>static psa_key_type_t psa_get_key_type</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_type</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the key type from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The key type stored in the attribute structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="351" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga5bee85c2164ad3d4c0d42501241eeb06" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t psa_get_key_bits</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_bits</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the key size from key attributes.</para><para>This function may be declared as <computeroutput>static</computeroutput> (i.e. without external linkage). This function may be provided as a function-like macro, but in this case it must evaluate its argument exactly once.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The key size stored in the attribute structure, in bits. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="363" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gacbbf5c11eac6cd70c87ffb936e1b9be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_get_key_attributes</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_attributes</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the attributes of a key.</para><para>This function first resets the attribute structure as with <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref>. It then copies the attributes of the given key into the given attribute structure.</para><para><simplesect kind="note"><para>This function may allocate memory or other resources. Once you have called this function on an attribute structure, you must call <ref refid="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" kindref="member">psa_reset_key_attributes()</ref> to free these resources.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to query. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the attributes of the key. On failure, equivalent to a freshly-initialized structure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="393" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga382b7f11fc6d706645cefea22c3bd458" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void psa_reset_key_attributes</definition>
+        <argsstring>(psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_reset_key_attributes</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset a key attribute structure to a freshly initialized state.</para><para>You must initialize the attribute structure as described in the documentation of the type <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> before calling this function. Once the structure has been initialized, you may call this function at any time.</para><para>This function frees any auxiliary resources that the structure may contain.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to reset. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="408" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1gaffa134b74aa52aa3ed9397fcab4005aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void psa_set_key_enrollment_algorithm</definition>
+        <argsstring>(psa_key_attributes_t *attributes, psa_algorithm_t alg2)</argsstring>
+        <name>psa_set_key_enrollment_algorithm</name>
+        <param>
+          <type><ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg2</declname>
+        </param>
+        <briefdescription>
+<para>Declare the enrollment algorithm for a key. </para>        </briefdescription>
+        <detaileddescription>
+<para>An operation on a key may indifferently use the algorithm set with <ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref> or with this function.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attribute structure to write to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A second algorithm that the key may be used for, in addition to the algorithm set with <ref refid="group__attributes_1gaeb8341ca52baa0279475ea3fd3bcdc98" kindref="member">psa_set_key_algorithm()</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Setting an enrollment algorithm is not recommended, because using the same key with different algorithms can allow some attacks based on arithmetic relations between different computations made with the same key, or can escalate harmless side channels into exploitable ones. Use this function only if it is necessary to support a protocol for which it has been verified that the usage of the key with multiple algorithms is safe. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="69" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="group__attributes_1ga39803b62a97198cf630854db9b53c588" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>static psa_algorithm_t psa_get_key_enrollment_algorithm</definition>
+        <argsstring>(const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_get_key_enrollment_algorithm</name>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the enrollment algorithm policy from key attributes.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attribute structure to query.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The enrollment algorithm stored in the attribute structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="82" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="82" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__attributes_1gac45b6c1e7228a1f425338279ee679c4e" prot="public" static="no">
+        <name>PSA_KEY_ATTRIBUTES_INIT</name>
+        <initializer>{ <ref refid="group__crypto__types_1gafce7ab2b54ce97ea5bff73f13a9f3e5b" kindref="member">PSA_KEY_TYPE_NONE</ref>, 0,            \
+                                  <ref refid="group__key__lifetimes_1ga8b438870ba69489b685730d346455108" kindref="member">PSA_KEY_LIFETIME_VOLATILE</ref>,       \
+                                  <ref refid="crypto__struct_8h_1a5e6bc5f550e88fdc7790f2a75e79f7c5" kindref="member">PSA_KEY_POLICY_INIT</ref>,             \
+                                  <ref refid="group__key__lifetimes_1ga838f2dc64e670aa69fc4c0b82932f021" kindref="member">MBEDTLS_SVC_KEY_ID_INIT</ref> }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a key attribute structure of type <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="279" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="279" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a68f3f03c6a5d98812ddd2d6d9212ee5a" compoundref="crypto__struct_8h" startline="284" endline="288">psa_key_attributes_init</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__attributes_1ga36f877b443410900579cb552a782a530" prot="public" static="no">
+        <name>PSA_PAKE_OPERATION_STAGE_SETUP</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PAKE operation stages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="235" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__attributes_1ga4be0d07c44b6c31aec20e8cb5ca8a841" prot="public" static="no">
+        <name>PSA_PAKE_OPERATION_STAGE_COLLECT_INPUTS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="236" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__attributes_1gae4c92a4f1697f0cf279492a4528324bf" prot="public" static="no">
+        <name>PSA_PAKE_OPERATION_STAGE_COMPUTATION</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="237" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

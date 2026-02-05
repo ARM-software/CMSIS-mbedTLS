@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__pk__restart__ctx" kind="struct" prot="public">
+    <compoundname>mbedtls_pk_restart_ctx</compoundname>
+    <includes refid="pk_8h" local="no">pk.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__pk__restart__ctx_1ab65d7dd4398e7ca5da60e10d45146fe6" prot="public" static="no" mutable="no">
+        <type>const <ref refid="pk_8h_1a5929d902e6b2dad79458c8583ca5c42d" kindref="member">mbedtls_pk_info_t</ref> *</type>
+        <definition>const mbedtls_pk_info_t* mbedtls_pk_restart_ctx::private_pk_info</definition>
+        <argsstring></argsstring>
+        <name>private_pk_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="192" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__pk__restart__ctx_1a2a747fdb8e6f65cf650675145f13a6c1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_pk_restart_ctx::private_rs_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_rs_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="193" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context for resuming operations. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" line="191" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/pk.h" bodystart="191" bodyend="194"/>
+    <listofallmembers>
+      <member refid="structmbedtls__pk__restart__ctx_1ab65d7dd4398e7ca5da60e10d45146fe6" prot="public" virt="non-virtual"><scope>mbedtls_pk_restart_ctx</scope><name>private_pk_info</name></member>
+      <member refid="structmbedtls__pk__restart__ctx_1a2a747fdb8e6f65cf650675145f13a6c1" prot="public" virt="non-virtual"><scope>mbedtls_pk_restart_ctx</scope><name>private_rs_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

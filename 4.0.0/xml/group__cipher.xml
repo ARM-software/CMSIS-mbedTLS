@@ -1,0 +1,1225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__cipher" kind="group">
+    <compoundname>cipher</compoundname>
+    <title>Symmetric ciphers</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__cipher_1ga1399de29db657e3737bb09927aae51fa" prot="public" static="no">
+        <type>struct <ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_s</ref></type>
+        <definition>typedef struct psa_cipher_operation_s psa_cipher_operation_t</definition>
+        <argsstring></argsstring>
+        <name>psa_cipher_operation_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for multipart cipher operations.</para><para>Before calling any function on a cipher operation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(operation));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_t</ref><sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" kindref="member">PSA_CIPHER_OPERATION_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_t</ref><sp/>operation<sp/>=<sp/><ref refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" kindref="member">PSA_CIPHER_OPERATION_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="group__cipher_1ga0e2a249d48ab4d4d9ef716d02e370ef9" kindref="member">psa_cipher_operation_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__cipher__operation__s" kindref="compound">psa_cipher_operation_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/><ref refid="group__cipher_1ga0e2a249d48ab4d4d9ef716d02e370ef9" kindref="member">psa_cipher_operation_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1676" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" bodystart="1712" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__cipher_1ga61f02fbfa681c2659546eca52277dbf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_encrypt</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, psa_algorithm_t alg, const uint8_t *input, size_t input_length, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>psa_cipher_encrypt</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encrypt a message using a symmetric cipher.</para><para>This function encrypts a message with a random IV (initialization vector). Use the multipart operation interface with a <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> object to provide other forms of IV.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. It must allow the usage <ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d1a5a402ad89a2e68f12bfb535490eb" kindref="member">PSA_ALG_IS_CIPHER</ref>(<computeroutput>alg</computeroutput>) is true). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message to encrypt. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the output is to be written. The output contains the IV followed by the ciphertext proper. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the output.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>key</computeroutput> is not compatible with <computeroutput>alg</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a cipher algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1629" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1gab3593f5f14d8c0431dd306d80929215e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_decrypt</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, psa_algorithm_t alg, const uint8_t *input, size_t input_length, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>psa_cipher_decrypt</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Decrypt a message using a symmetric cipher.</para><para>This function decrypts a message encrypted with a symmetric cipher.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. It must remain valid until the operation terminates. It must allow the usage <ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d1a5a402ad89a2e68f12bfb535490eb" kindref="member">PSA_ALG_IS_CIPHER</ref>(<computeroutput>alg</computeroutput>) is true). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message to decrypt. This consists of the IV followed by the ciphertext proper. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the plaintext is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the output.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>key</computeroutput> is not compatible with <computeroutput>alg</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a cipher algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1676" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1ga0e2a249d48ab4d4d9ef716d02e370ef9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref></type>
+        <definition>static psa_cipher_operation_t psa_cipher_operation_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>psa_cipher_operation_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return an initial value for a cipher operation object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1722" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_encrypt_setup</definition>
+        <argsstring>(psa_cipher_operation_t *operation, mbedtls_svc_key_id_t key, psa_algorithm_t alg)</argsstring>
+        <name>psa_cipher_encrypt_setup</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the key for a multipart symmetric encryption operation.</para><para>The sequence of operations to encrypt a message with a symmetric cipher is as follows:<orderedlist>
+<listitem><para>Allocate an operation object which will be passed to all the functions listed here.</para></listitem><listitem><para>Initialize the operation object with one of the methods described in the documentation for <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref>, e.g. <ref refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" kindref="member">PSA_CIPHER_OPERATION_INIT</ref>.</para></listitem><listitem><para>Call <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> to specify the algorithm and key.</para></listitem><listitem><para>Call either <ref refid="group__cipher_1ga29fd7d32a5729226a2f73e7b6487bd8a" kindref="member">psa_cipher_generate_iv()</ref> or <ref refid="group__cipher_1ga9caddac1a429a5032d6d4a907fb70ba1" kindref="member">psa_cipher_set_iv()</ref> to generate or set the IV (initialization vector). You should use <ref refid="group__cipher_1ga29fd7d32a5729226a2f73e7b6487bd8a" kindref="member">psa_cipher_generate_iv()</ref> unless the protocol you are implementing requires a specific IV value.</para></listitem><listitem><para>Call <ref refid="group__cipher_1gac3ca27ac6682917c48247d01fd96cd0f" kindref="member">psa_cipher_update()</ref> zero, one or more times, passing a fragment of the message each time.</para></listitem><listitem><para>Call <ref refid="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" kindref="member">psa_cipher_finish()</ref>.</para></listitem></orderedlist>
+</para><para>If an error occurs at any step after a call to <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref>, the operation will need to be reset by a call to <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>. The application may call <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref> at any time after the operation has been initialized.</para><para>After a successful call to <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref>, the application must eventually terminate the operation. The following events terminate an operation:<itemizedlist>
+<listitem><para>A successful call to <ref refid="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" kindref="member">psa_cipher_finish()</ref>.</para></listitem><listitem><para>A call to <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set up. It must have been initialized as per the documentation for <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> and not yet in use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. It must remain valid until the operation terminates. It must allow the usage <ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d1a5a402ad89a2e68f12bfb535490eb" kindref="member">PSA_ALG_IS_CIPHER</ref>(<computeroutput>alg</computeroutput>) is true).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>key</computeroutput> is not compatible with <computeroutput>alg</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a cipher algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be inactive), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1783" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_decrypt_setup</definition>
+        <argsstring>(psa_cipher_operation_t *operation, mbedtls_svc_key_id_t key, psa_algorithm_t alg)</argsstring>
+        <name>psa_cipher_decrypt_setup</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the key for a multipart symmetric decryption operation.</para><para>The sequence of operations to decrypt a message with a symmetric cipher is as follows:<orderedlist>
+<listitem><para>Allocate an operation object which will be passed to all the functions listed here.</para></listitem><listitem><para>Initialize the operation object with one of the methods described in the documentation for <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref>, e.g. <ref refid="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" kindref="member">PSA_CIPHER_OPERATION_INIT</ref>.</para></listitem><listitem><para>Call <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref> to specify the algorithm and key.</para></listitem><listitem><para>Call <ref refid="group__cipher_1ga9caddac1a429a5032d6d4a907fb70ba1" kindref="member">psa_cipher_set_iv()</ref> with the IV (initialization vector) for the decryption. If the IV is prepended to the ciphertext, you can call <ref refid="group__cipher_1gac3ca27ac6682917c48247d01fd96cd0f" kindref="member">psa_cipher_update()</ref> on a buffer containing the IV followed by the beginning of the message.</para></listitem><listitem><para>Call <ref refid="group__cipher_1gac3ca27ac6682917c48247d01fd96cd0f" kindref="member">psa_cipher_update()</ref> zero, one or more times, passing a fragment of the message each time.</para></listitem><listitem><para>Call <ref refid="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" kindref="member">psa_cipher_finish()</ref>.</para></listitem></orderedlist>
+</para><para>If an error occurs at any step after a call to <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref>, the operation will need to be reset by a call to <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>. The application may call <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref> at any time after the operation has been initialized.</para><para>After a successful call to <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref>, the application must eventually terminate the operation. The following events terminate an operation:<itemizedlist>
+<listitem><para>A successful call to <ref refid="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" kindref="member">psa_cipher_finish()</ref>.</para></listitem><listitem><para>A call to <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation object to set up. It must have been initialized as per the documentation for <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> and not yet in use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the key to use for the operation. It must remain valid until the operation terminates. It must allow the usage <ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The cipher algorithm to compute (<computeroutput>PSA_ALG_XXX</computeroutput> value such that <ref refid="group__crypto__types_1ga1d1a5a402ad89a2e68f12bfb535490eb" kindref="member">PSA_ALG_IS_CIPHER</ref>(<computeroutput>alg</computeroutput>) is true).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>key</computeroutput> is not compatible with <computeroutput>alg</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>alg</computeroutput> is not supported or is not a cipher algorithm. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be inactive), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1846" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1ga29fd7d32a5729226a2f73e7b6487bd8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_generate_iv</definition>
+        <argsstring>(psa_cipher_operation_t *operation, uint8_t *iv, size_t iv_size, size_t *iv_length)</argsstring>
+        <name>psa_cipher_generate_iv</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>iv_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate an IV for a symmetric encryption operation.</para><para>This function generates a random IV (initialization vector), nonce or initial counter value for the encryption operation as appropriate for the chosen algorithm, key type and key size.</para><para>The application must call <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> before calling this function.</para><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active cipher operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the generated IV is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>iv</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">iv_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes of the generated IV.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>iv</computeroutput> buffer is too small. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active, with no IV set), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1884" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1ga9caddac1a429a5032d6d4a907fb70ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_set_iv</definition>
+        <argsstring>(psa_cipher_operation_t *operation, const uint8_t *iv, size_t iv_length)</argsstring>
+        <name>psa_cipher_set_iv</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>iv</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>iv_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the IV for a symmetric encryption or decryption operation.</para><para>This function sets the IV (initialization vector), nonce or initial counter value for the encryption or decryption operation.</para><para>The application must call <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> before calling this function.</para><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para><para><simplesect kind="note"><para>When encrypting, applications should use <ref refid="group__cipher_1ga29fd7d32a5729226a2f73e7b6487bd8a" kindref="member">psa_cipher_generate_iv()</ref> instead of this function, unless implementing a protocol that requires a non-random IV.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active cipher operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">iv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the IV to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iv_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the IV in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of <computeroutput>iv</computeroutput> is not acceptable for the chosen algorithm, or the chosen algorithm does not use an IV. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be an active cipher encrypt operation, with no IV set), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1925" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1gac3ca27ac6682917c48247d01fd96cd0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_update</definition>
+        <argsstring>(psa_cipher_operation_t *operation, const uint8_t *input, size_t input_length, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>psa_cipher_update</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Encrypt or decrypt a message fragment in an active cipher operation.</para><para>Before calling this function, you must:<orderedlist>
+<listitem><para>Call either <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> or <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref>. The choice of setup function determines whether this function encrypts or decrypts its input.</para></listitem><listitem><para>If the algorithm requires an IV, call <ref refid="group__cipher_1ga29fd7d32a5729226a2f73e7b6487bd8a" kindref="member">psa_cipher_generate_iv()</ref> (recommended when encrypting) or <ref refid="group__cipher_1ga9caddac1a429a5032d6d4a907fb70ba1" kindref="member">psa_cipher_set_iv()</ref>.</para></listitem></orderedlist>
+</para><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active cipher operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing the message fragment to encrypt or decrypt. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>input</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the output is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned output.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>output</computeroutput> buffer is too small. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active, with an IV set if required for the algorithm), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="1966" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_finish</definition>
+        <argsstring>(psa_cipher_operation_t *operation, uint8_t *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>psa_cipher_finish</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finish encrypting or decrypting a message in a cipher operation.</para><para>The application must call <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> or <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref> before calling this function. The choice of setup function determines whether this function encrypts or decrypts its input.</para><para>This function finishes the encryption or decryption of the message formed by concatenating the inputs passed to preceding calls to <ref refid="group__cipher_1gac3ca27ac6682917c48247d01fd96cd0f" kindref="member">psa_cipher_update()</ref>.</para><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active cipher operation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where the output is to be written. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes that make up the returned output.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total input size passed to this operation is not valid for this particular algorithm. For example, the algorithm is a based on block cipher and requires a whole number of blocks, but the total input size is not a multiple of the block size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gabe29594edbfb152cf153975b0597ac48" kindref="member">PSA_ERROR_INVALID_PADDING</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is a decryption operation for an algorithm that includes padding, and the ciphertext does not contain valid padding. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the <computeroutput>output</computeroutput> buffer is too small. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation state is not valid (it must be active, with an IV set if required for the algorithm), or the library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="2018" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_cipher_abort</definition>
+        <argsstring>(psa_cipher_operation_t *operation)</argsstring>
+        <name>psa_cipher_abort</name>
+        <param>
+          <type><ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Abort a cipher operation.</para><para>Aborting an operation frees all associated resources except for the <computeroutput>operation</computeroutput> structure itself. Once aborted, the operation object can be reused for another operation by calling <ref refid="group__cipher_1ga587374c0eb8137a572f8e2fc409bb2b4" kindref="member">psa_cipher_encrypt_setup()</ref> or <ref refid="group__cipher_1gaa4ba3a167066eaef2ea49abc5dcd1d4b" kindref="member">psa_cipher_decrypt_setup()</ref> again.</para><para>You may call this function any time after the operation object has been initialized as described in <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref>.</para><para>In particular, calling <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref> after the operation has been terminated by a call to <ref refid="group__cipher_1gaad482cdca2098bca0620596aaa02eaa4" kindref="member">psa_cipher_abort()</ref> or <ref refid="group__cipher_1ga1dcb58b8befe23f8a4d7a1d49c99249b" kindref="member">psa_cipher_finish()</ref> is safe and has no effect.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialized cipher operation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref>. It is implementation-dependent whether a failure to initialize results in this error code. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="2048" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__cipher_1ga2da0541aabf9a4995cf2004e36311919" prot="public" static="no">
+        <name>PSA_CIPHER_OPERATION_INIT</name>
+        <initializer>{ 0, 0, 0, 0, { 0 } }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This macro returns a suitable initializer for a cipher operation object of type <ref refid="group__cipher_1ga1399de29db657e3737bb09927aae51fa" kindref="member">psa_cipher_operation_t</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="112" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="112" bodyend="-1"/>
+        <referencedby refid="crypto__struct_8h_1a75d990a3e181f887a018b74e0bc60e7b" compoundref="crypto__struct_8h" startline="114" endline="118">psa_cipher_operation_init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

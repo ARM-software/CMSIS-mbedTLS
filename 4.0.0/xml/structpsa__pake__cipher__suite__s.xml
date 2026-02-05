@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__pake__cipher__suite__s" kind="struct" prot="public">
+    <compoundname>psa_pake_cipher_suite_s</compoundname>
+    <includes refid="crypto__extra_8h" local="no">crypto_extra.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_pake_cipher_suite_s::algorithm</definition>
+        <argsstring></argsstring>
+        <name>algorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="982" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="982" bodyend="-1"/>
+        <referencedby refid="group__pake_1gaf20c5d67933a6a7e8ef4c517bc80a885" compoundref="crypto__extra_8h" startline="1874" endline="1878">psa_pake_cs_get_algorithm</referencedby>
+        <referencedby refid="group__pake_1gaa819f7df77522699674de962b268ed7e" compoundref="crypto__extra_8h" startline="1880" endline="1889">psa_pake_cs_set_algorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1gad8b29b6efa90ad2887d7b1252d23e5bc" kindref="member">psa_pake_primitive_type_t</ref></type>
+        <definition>psa_pake_primitive_type_t psa_pake_cipher_suite_s::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="983" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="983" bodyend="-1"/>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1891" endline="1896">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1898" endline="1905">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__pake_1gae20cc74390755f28b6f2b893a936d893" kindref="member">psa_pake_family_t</ref></type>
+        <definition>psa_pake_family_t psa_pake_cipher_suite_s::family</definition>
+        <argsstring></argsstring>
+        <name>family</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="984" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="984" bodyend="-1"/>
+        <referencedby refid="group__pake_1gab1c9d9857644ee44a515b384b9c728db" compoundref="crypto__extra_8h" startline="1907" endline="1911">psa_pake_cs_get_family</referencedby>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1891" endline="1896">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1898" endline="1905">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t psa_pake_cipher_suite_s::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="985" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="985" bodyend="-1"/>
+        <referencedby refid="group__pake_1ga048be6e239ccd25a3080863053e68576" compoundref="crypto__extra_8h" startline="1913" endline="1917">psa_pake_cs_get_bits</referencedby>
+        <referencedby refid="group__pake_1ga092067cc7dc9af367706c032480ebdf0" compoundref="crypto__extra_8h" startline="1891" endline="1896">psa_pake_cs_get_primitive</referencedby>
+        <referencedby refid="group__pake_1ga65563e28c31b26f96f70eddd1252f3d1" compoundref="crypto__extra_8h" startline="1898" endline="1905">psa_pake_cs_set_primitive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__pake__cipher__suite__s_1aeb25af1ff4f3029ff76ef1765cc89ac3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_pake_cipher_suite_s::key_confirmation</definition>
+        <argsstring></argsstring>
+        <name>key_confirmation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="986" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="986" bodyend="-1"/>
+        <referencedby refid="group__pake_1gaf876111b9d14f09612016bcd555059e7" compoundref="crypto__extra_8h" startline="1920" endline="1923">psa_pake_cs_get_key_confirmation</referencedby>
+        <referencedby refid="group__pake_1gad95e89c1744ac767f561bbeca4ea5e65" compoundref="crypto__extra_8h" startline="1925" endline="1929">psa_pake_cs_set_key_confirmation</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="981" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="981" bodyend="987"/>
+    <listofallmembers>
+      <member refid="structpsa__pake__cipher__suite__s_1a5a4fcadbf2ef270a16c01649abaffca4" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>algorithm</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1af6cafb513de0427e69487d71e1ed7c84" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>bits</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1af0ca6a6ae95ae81d9971d0c607658ebc" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>family</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1aeb25af1ff4f3029ff76ef1765cc89ac3" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>key_confirmation</name></member>
+      <member refid="structpsa__pake__cipher__suite__s_1ad071789455678b0d082935db9c8de7be" prot="public" virt="non-virtual"><scope>psa_pake_cipher_suite_s</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

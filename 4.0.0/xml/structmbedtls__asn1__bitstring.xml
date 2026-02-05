@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__asn1__bitstring" kind="struct" prot="public">
+    <compoundname>mbedtls_asn1_bitstring</compoundname>
+    <includes refid="asn1_8h" local="no">asn1.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__asn1__bitstring_1a943b4155650f680f3906ca9be0e66f80" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_asn1_bitstring::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ASN1 length, in octets. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="148" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__bitstring_1aca26541c9ecb384ef2d5c2ca6a05a25b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_asn1_bitstring::unused_bits</definition>
+        <argsstring></argsstring>
+        <name>unused_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of unused bits at the end of the string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="149" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__bitstring_1af09328f8b1a8cb5bf4afae369ce3629c" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_asn1_bitstring::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Raw ASN1 data for the bit string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="150" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container for ASN1 bit strings. </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="147" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="147" bodyend="151"/>
+    <listofallmembers>
+      <member refid="structmbedtls__asn1__bitstring_1a943b4155650f680f3906ca9be0e66f80" prot="public" virt="non-virtual"><scope>mbedtls_asn1_bitstring</scope><name>len</name></member>
+      <member refid="structmbedtls__asn1__bitstring_1af09328f8b1a8cb5bf4afae369ce3629c" prot="public" virt="non-virtual"><scope>mbedtls_asn1_bitstring</scope><name>p</name></member>
+      <member refid="structmbedtls__asn1__bitstring_1aca26541c9ecb384ef2d5c2ca6a05a25b" prot="public" virt="non-virtual"><scope>mbedtls_asn1_bitstring</scope><name>unused_bits</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

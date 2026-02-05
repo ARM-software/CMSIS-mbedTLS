@@ -1,0 +1,911 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="threading_8h" kind="file">
+    <compoundname>threading.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="compat-3-crypto_8h" local="yes">mbedtls/compat-3-crypto.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes refid="threading__alt_8h" local="yes">threading_alt.h</includes>
+    <includedby refid="ssl__cache_8h" local="yes">ssl_cache.h</includedby>
+    <includedby refid="ssl__ticket_8h" local="yes">ssl_ticket.h</includedby>
+    <incdepgraph>
+      <node id="3769">
+        <label>threading.h</label>
+        <link refid="threading.h"/>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3771" relation="include">
+        </childnode>
+        <childnode refid="3777" relation="include">
+        </childnode>
+        <childnode refid="3782" relation="include">
+        </childnode>
+        <childnode refid="3783" relation="include">
+        </childnode>
+        <childnode refid="3784" relation="include">
+        </childnode>
+      </node>
+      <node id="3778">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3779" relation="include">
+        </childnode>
+      </node>
+      <node id="3772">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3784">
+        <label>threading_alt.h</label>
+        <link refid="threading__alt_8h"/>
+      </node>
+      <node id="3781">
+        <label>stdint.h</label>
+      </node>
+      <node id="3782">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3780">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3775">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3771">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3772" relation="include">
+        </childnode>
+        <childnode refid="3773" relation="include">
+        </childnode>
+        <childnode refid="3774" relation="include">
+        </childnode>
+        <childnode refid="3775" relation="include">
+        </childnode>
+        <childnode refid="3776" relation="include">
+        </childnode>
+      </node>
+      <node id="3776">
+        <label>limits.h</label>
+      </node>
+      <node id="3779">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3771" relation="include">
+        </childnode>
+        <childnode refid="3770" relation="include">
+        </childnode>
+        <childnode refid="3780" relation="include">
+        </childnode>
+        <childnode refid="3781" relation="include">
+        </childnode>
+      </node>
+      <node id="3783">
+        <label>pthread.h</label>
+      </node>
+      <node id="3777">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3778" relation="include">
+        </childnode>
+      </node>
+      <node id="3770">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3773">
+        <label>/dev/null</label>
+      </node>
+      <node id="3774">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3785">
+        <label>threading.h</label>
+        <link refid="threading.h"/>
+        <childnode refid="3786" relation="include">
+        </childnode>
+        <childnode refid="3787" relation="include">
+        </childnode>
+      </node>
+      <node id="3787">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="3786">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__threading__mutex__t" prot="public">mbedtls_threading_mutex_t</innerclass>
+    <innerclass refid="structmbedtls__threading__condition__variable__t" prot="public">mbedtls_threading_condition_variable_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" prot="public" static="no">
+        <name>MBEDTLS_ERR_THREADING_USAGE_ERROR</name>
+        <initializer>-0x001E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Detected error in mutex or condition variable usage.</para><para>Note that depending on the platform, many usage errors of synchronization primitives have undefined behavior. But where it is practical to detect usage errors at runtime, mutex and condition primitives can return this error code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="30" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="threading_8h_1a51005c51b928706511d3c2ea3390c07f" prot="public" static="no">
+        <name>MBEDTLS_ERR_THREADING_MUTEX_ERROR</name>
+        <initializer><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A historical alias for <ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="33" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" prot="public" static="no">
+        <type>pthread_mutex_t</type>
+        <definition>typedef pthread_mutex_t mbedtls_platform_mutex_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_platform_mutex_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="39" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" prot="public" static="no">
+        <type>pthread_cond_t</type>
+        <definition>typedef pthread_cond_t mbedtls_platform_condition_variable_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_platform_condition_variable_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="40" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="threading_8h_1aeb3bf51c492406c24d3ae91b864a6a18" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>typedef struct mbedtls_threading_mutex_t  mbedtls_threading_mutex_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_threading_mutex_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="threading_8h_1ae29082eece137b2c4dd0b05657957bf9" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref></type>
+        <definition>typedef struct mbedtls_threading_condition_variable_t  mbedtls_threading_condition_variable_t</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_threading_condition_variable_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="154" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="threading_8h_1a87bbccdf40874b80a9f7313627734c38" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_threading_readdir_mutex</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_threading_readdir_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="393" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="threading_8h_1a50deddcdecda06beb3d985c17a78d905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_threading_set_alt</definition>
+        <argsstring>(int(*mutex_init)(mbedtls_platform_mutex_t *), void(*mutex_destroy)(mbedtls_platform_mutex_t *), int(*mutex_lock)(mbedtls_platform_mutex_t *), int(*mutex_unlock)(mbedtls_platform_mutex_t *), int(*cond_init)(mbedtls_platform_condition_variable_t *), void(*cond_destroy)(mbedtls_platform_condition_variable_t *), int(*cond_signal)(mbedtls_platform_condition_variable_t *), int(*cond_broadcast)(mbedtls_platform_condition_variable_t *), int(*cond_wait)(mbedtls_platform_condition_variable_t *, mbedtls_platform_mutex_t *))</argsstring>
+        <name>mbedtls_threading_set_alt</name>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref> *)</type>
+          <declname>mutex_init</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref> *)</type>
+          <declname>mutex_destroy</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref> *)</type>
+          <declname>mutex_lock</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref> *)</type>
+          <declname>mutex_unlock</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref> *)</type>
+          <declname>cond_init</declname>
+        </param>
+        <param>
+          <type>void(*)(<ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref> *)</type>
+          <declname>cond_destroy</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref> *)</type>
+          <declname>cond_signal</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref> *)</type>
+          <declname>cond_broadcast</declname>
+        </param>
+        <param>
+          <type>int(*)(<ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref> *, <ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref> *)</type>
+          <declname>cond_wait</declname>
+        </param>
+        <briefdescription>
+<para>Set your alternate threading implementation function pointers and initialize global mutexes. If used, this function must be called once in the main thread before any other Mbed TLS function is called, and <ref refid="threading_8h_1a57912b195ee76e378ced4197822599af" kindref="member">mbedtls_threading_free_alt()</ref> must be called once in the main thread after all other Mbed TLS functions. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Functions should return <ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref> if a mutex usage error is detected. However, it is acceptable for usage errors to result in undefined behavior (including deadlocks and crashes) if detecting usage errors is not practical on your platform.</para><simplesectsep/><para>The library will always unlock a mutex from the same thread that locked it, and will never lock a mutex in a thread that has already locked it.</para><simplesectsep/><para>Spurious wakeups on condition variables are permitted.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex_init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex init function implementation. <linebreak/>
+ The behavior is undefined if the mutex is already initialized and has not been destroyed, or if this function is called concurrently from multiple threads. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex_destroy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex destroy function implementation. <linebreak/>
+ This function must free any resources associated with the mutex object. <linebreak/>
+ The behavior is undefined if the mutex was not initialized, if it has already been destroyed, if it is currently locked, or if this function is called concurrently from multiple threads. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex_lock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex lock function implementation. <linebreak/>
+ The behavior is undefined if the mutex was not initialized, if it has already been destroyed, or if it is currently locked by the calling thread. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex_unlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex unlock function implementation. <linebreak/>
+ The behavior is undefined if the mutex is not currently locked by the calling thread. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond_init</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable initialization implementation. <linebreak/>
+ The behavior is undefined if the variable is already initialized, if it has been destroyed, or if this function is called concurrently from multiple threads. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond_destroy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable destroy implementation. <linebreak/>
+ This function must free any resources associated with the condition variable object. <linebreak/>
+ The behavior is undefined if the condition variable was not initialized, if it has already been destroyed, if a thread is waiting on it, or if this function is called concurrently from multiple threads. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond_signal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable signal implementation. <linebreak/>
+ The behavior is undefined if the condition variable was not initialized or if it has already been destroyed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond_broadcast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable broadcast implementation. <linebreak/>
+ The behavior is undefined if the condition variable was not initialized or if it has already been destroyed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cond_wait</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable wait implementation. <linebreak/>
+ The behavior is undefined if the mutex and the condition variable have not both been initialized, if one of them has already been destroyed, or if the mutex is not currently locked by the calling thread. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a57912b195ee76e378ced4197822599af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_threading_free_alt</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_threading_free_alt</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Free global mutexes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_mutex_init</definition>
+        <argsstring>(mbedtls_threading_mutex_t *mutex)</argsstring>
+        <name>mbedtls_mutex_init</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a mutex (mutual exclusion lock).</para><para>You must call this function on a mutex object before using it for any purpose.</para><para><simplesect kind="note"><para>This function may fail internally, but for historical reasons, it does not return a value. If the mutex initialization fails internally, <ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free()</ref> will still work normally, and all other mutex functions will fail safely with a nonzero return code.</para><simplesectsep/><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> is already initialized;</para></listitem><listitem><para>this function is called concurrently on the same object from multiple threads.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex to initialize. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_mutex_free</definition>
+        <argsstring>(mbedtls_threading_mutex_t *mutex)</argsstring>
+        <name>mbedtls_mutex_free</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a mutex.</para><para>After this function returns, you may call <ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref> again on <computeroutput>mutex</computeroutput>.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para>any function is called concurrently on the same object from another thread;</para></listitem><listitem><para><ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref> has never been called on the object, and it is not all-bits-zero or <computeroutput>{0}</computeroutput>;</para></listitem><listitem><para><computeroutput>mutex</computeroutput> is locked.</para></listitem></itemizedlist>
+</para><simplesectsep/><para>This function does nothing if:<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> is all-bits-zero or <computeroutput>{0}</computeroutput>.</para></listitem><listitem><para>The last function called on <computeroutput>mutex</computeroutput> is <ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free()</ref> (i.e. a double free is safe).</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex to destroy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a3a9e3c745377efdfe5afc7d55671f987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_mutex_lock</definition>
+        <argsstring>(mbedtls_threading_mutex_t *mutex)</argsstring>
+        <name>mbedtls_mutex_lock</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lock a mutex.</para><para>It must not be already locked by the calling thread (mutexes are not recursive).</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> has not been initialized with <ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref>, or has already been freed with <ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free()</ref>;</para></listitem><listitem><para><computeroutput>mutex</computeroutput> is already locked by the same thread.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex to lock.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref> failed, or a mutex usage error was detected. Note that depending on the platform, a mutex usage error may result in a deadlock, a crash or other undesirable behavior instead of returning an error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There were insufficient resources to initialize or lock the mutex. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="226" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a6ff1b320a3fd5cd7c5c186b3d0089d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_mutex_unlock</definition>
+        <argsstring>(mbedtls_threading_mutex_t *mutex)</argsstring>
+        <name>mbedtls_mutex_unlock</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unlock a mutex.</para><para>It must be currently locked by the calling thread.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> has not been initialized with <ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref>, or has already been freed with <ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free()</ref>;</para></listitem><listitem><para><computeroutput>mutex</computeroutput> is not locked;</para></listitem><listitem><para><computeroutput>mutex</computeroutput> was locked by a different thread.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex to unlock.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref> failed, or a mutex usage error was detected. Note that depending on the platform, a mutex usage error may result in a deadlock, a crash or other undesirable behavior instead of returning an error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="254" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_condition_variable_init</definition>
+        <argsstring>(mbedtls_threading_condition_variable_t *cond)</argsstring>
+        <name>mbedtls_condition_variable_init</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a condition variable.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>cond</computeroutput> is already initialized;</para></listitem><listitem><para>this function is called concurrently on the same object from multiple threads.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable to initialize.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable is already initialized (on platforms where this can be detected), or an unpecified error occurred. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>There were insufficient resources to initialize the object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1af3aad8f1db1534e7634a084609dc81fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_condition_variable_free</definition>
+        <argsstring>(mbedtls_threading_condition_variable_t *cond)</argsstring>
+        <name>mbedtls_condition_variable_free</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a condition variable.</para><para>After this function returns, you may call <ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init()</ref> again on <computeroutput>cond</computeroutput>.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>cond</computeroutput> has not been initialized with <ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init()</ref>;</para></listitem><listitem><para>any function is called concurrently on the same object from another thread.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable to destroy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a08a8a5e4a57cdc06c7d7d7b21a34b55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_condition_variable_signal</definition>
+        <argsstring>(mbedtls_threading_condition_variable_t *cond)</argsstring>
+        <name>mbedtls_condition_variable_signal</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wake up one thread that is waiting on the given condition variable.</para><para>Do nothing, successfully, if no thread is waiting.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>cond</computeroutput> has not been initialized with <ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init()</ref>, or has already been freed with <ref refid="threading_8h_1af3aad8f1db1534e7634a084609dc81fe" kindref="member">mbedtls_condition_variable_free()</ref>.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable to signal.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A usage error was detected. Note that depending on the platform, a condition variable usage error may result in a deadlock, a crash or other undesirable behavior instead of returning an error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="321" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1ac6a4245885e4648bebdef677a526f7ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_condition_variable_broadcast</definition>
+        <argsstring>(mbedtls_threading_condition_variable_t *cond)</argsstring>
+        <name>mbedtls_condition_variable_broadcast</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wake up all threads that are waiting on the given condition variable.</para><para><simplesect kind="note"><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>cond</computeroutput> has not been initialized with <ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init()</ref>, or has already been freed with <ref refid="threading_8h_1af3aad8f1db1534e7634a084609dc81fe" kindref="member">mbedtls_condition_variable_free()</ref>.</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable to signal.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A usage error was detected. Note that depending on the platform, a condition variable usage error may result in a deadlock, a crash or other undesirable behavior instead of returning an error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="345" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="threading_8h_1a0c58db3a24775d90aac0eb480f78a4f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_condition_variable_wait</definition>
+        <argsstring>(mbedtls_threading_condition_variable_t *cond, mbedtls_threading_mutex_t *mutex)</argsstring>
+        <name>mbedtls_condition_variable_wait</name>
+        <param>
+          <type><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref> *</type>
+          <declname>cond</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref> *</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for a wakeup signal on a condition variable.</para><para>On entry, this function atomically unlocks <computeroutput>mutex</computeroutput> and blocks until another thread calls <ref refid="threading_8h_1a08a8a5e4a57cdc06c7d7d7b21a34b55e" kindref="member">mbedtls_condition_variable_signal()</ref> or <ref refid="threading_8h_1ac6a4245885e4648bebdef677a526f7ea" kindref="member">mbedtls_condition_variable_broadcast()</ref> on <computeroutput>cond</computeroutput>.</para><para>Before returning, this function locks <computeroutput>mutex</computeroutput>.</para><para><simplesect kind="note"><para>On some platforms, it is possible for this function to stop blocking even if no signal is raised on <computeroutput>cond</computeroutput> (spurious wakeup).</para><simplesectsep/><para>The behavior is undefined if:<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> has not been initialized with <ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init()</ref>, or has already been freed with <ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free()</ref>;</para></listitem><listitem><para><computeroutput>cond</computeroutput> has not been initialized with <ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init()</ref>, or has already been freed with <ref refid="threading_8h_1af3aad8f1db1534e7634a084609dc81fe" kindref="member">mbedtls_condition_variable_free()</ref>;<itemizedlist>
+<listitem><para><computeroutput>mutex</computeroutput> is not currently locked by the calling thread.</para></listitem></itemizedlist>
+</para></listitem></itemizedlist>
+</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cond</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The condition variable to wait on. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mutex to unlock and re-lock. It must currently be locked by the calling thread.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" kindref="member">MBEDTLS_ERR_THREADING_USAGE_ERROR</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A usage error was detected. Note that depending on the platform, a condition variable usage error may result in a deadlock, a crash or other undesirable behavior instead of returning an error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The compilation option <ref refid="crypto__config_8h_1abe7c4328406cacf7873f59024bf7047b" kindref="member">MBEDTLS_THREADING_ALT</ref> is enabled, and <ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt()</ref> has not been called. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="385" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Threading abstraction layer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_THREADING_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_THREADING_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compat-3-crypto_8h" kindref="compound">mbedtls/compat-3-crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="30" refid="threading_8h_1a00a65d93ecadc2b08f63eacdc265b855" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_THREADING_USAGE_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x001E</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="33" refid="threading_8h_1a51005c51b928706511d3c2ea3390c07f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_THREADING_MUTEX_ERROR<sp/>MBEDTLS_ERR_THREADING_USAGE_ERROR</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_PTHREAD)</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>pthread_mutex_t<sp/><ref refid="threading_8h_1a4ae9dc672e0e4f5b74fa3a226fb173c1" kindref="member">mbedtls_platform_mutex_t</ref>;</highlight></codeline>
+<codeline lineno="40" refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>pthread_cond_t<sp/><ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_ALT)</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>You<sp/>should<sp/>define<sp/>the<sp/>types<sp/>mbedtls_platform_mutex_t<sp/>and</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>mbedtls_platform_condition_variable_t<sp/>in<sp/>your<sp/>header.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading__alt_8h" kindref="compound">threading_alt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a50deddcdecda06beb3d985c17a78d905" kindref="member">mbedtls_threading_set_alt</ref>(</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*mutex_init)(mbedtls_platform_mutex_t<sp/>*),</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*mutex_destroy)(mbedtls_platform_mutex_t<sp/>*),</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*mutex_lock)(mbedtls_platform_mutex_t<sp/>*),</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*mutex_unlock)(mbedtls_platform_mutex_t<sp/>*),</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*cond_init)(mbedtls_platform_condition_variable_t<sp/>*),</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*cond_destroy)(mbedtls_platform_condition_variable_t<sp/>*),</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*cond_signal)(mbedtls_platform_condition_variable_t<sp/>*),</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*cond_broadcast)(mbedtls_platform_condition_variable_t<sp/>*),</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*cond_wait)(mbedtls_platform_condition_variable_t<sp/>*,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbedtls_platform_mutex_t<sp/>*));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a57912b195ee76e378ced4197822599af" kindref="member">mbedtls_threading_free_alt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="structmbedtls__threading__mutex__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="128" refid="structmbedtls__threading__mutex__t_1a513b178e31054dd7a51de880501448bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_platform_mutex_t<sp/>MBEDTLS_PRIVATE(mutex);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Whether<sp/>the<sp/>mutex<sp/>has<sp/>been<sp/>initialized<sp/>successfully.</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>Attempting<sp/>to<sp/>lock<sp/>or<sp/>destroy<sp/>a<sp/>platform<sp/>mutex<sp/>that<sp/>hasn&apos;t<sp/>been</highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>successfully<sp/>initialized<sp/>can<sp/>cause<sp/>a<sp/>crash<sp/>or<sp/>other<sp/>undefined</highlight></codeline>
+<codeline lineno="134"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>behavior<sp/>on<sp/>some<sp/>platforms.<sp/>Keeping<sp/>track<sp/>of<sp/>a<sp/>successful</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>initialization<sp/>makes<sp/>it<sp/>possible<sp/>to<sp/>turn<sp/>such<sp/>misuse<sp/>into</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>a<sp/>predictable<sp/>error.<sp/>This<sp/>is<sp/>especially<sp/>useful<sp/>because</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>mbedtls_mutex_init()<sp/>doesn&apos;t<sp/>return<sp/>an<sp/>error<sp/>code,<sp/>for</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>historical<sp/>reasons,<sp/>so<sp/>the<sp/>application<sp/>cannot<sp/>handle<sp/>such</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>failures<sp/>by<sp/>itself.</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structmbedtls__threading__mutex__t_1a7218b39fe7e1fd7ef5beef11d89c09c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(initialized);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>WARNING<sp/>-<sp/>state<sp/>should<sp/>only<sp/>be<sp/>accessed<sp/>when<sp/>holding<sp/>the<sp/>mutex<sp/>lock<sp/>in</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>framework/tests/src/threading_helpers.c,<sp/>otherwise<sp/>corruption<sp/>can<sp/>occur.</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>state<sp/>will<sp/>be<sp/>0<sp/>after<sp/>a<sp/>failed<sp/>init<sp/>or<sp/>a<sp/>free,<sp/>and<sp/>nonzero<sp/>after<sp/>a</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>successful<sp/>init.<sp/>This<sp/>field<sp/>is<sp/>for<sp/>testing<sp/>only<sp/>and<sp/>thus<sp/>not<sp/>considered</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>part<sp/>of<sp/>the<sp/>public<sp/>API<sp/>of<sp/>Mbed<sp/>TLS<sp/>and<sp/>may<sp/>change<sp/>without<sp/>notice.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="structmbedtls__threading__mutex__t_1aaf41b61c0c2dc5f0bdb3f243d3a9c5ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(state);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/><ref refid="threading_8h_1aeb3bf51c492406c24d3ae91b864a6a18" kindref="member">mbedtls_threading_mutex_t</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="structmbedtls__threading__condition__variable__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="153" refid="structmbedtls__threading__condition__variable__t_1abe3104efd84dd038f40f8f5a84ca02d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_platform_condition_variable_t<sp/>MBEDTLS_PRIVATE(cond);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}<sp/><ref refid="threading_8h_1ae29082eece137b2c4dd0b05657957bf9" kindref="member">mbedtls_threading_condition_variable_t</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a10e08eb1bcffbbe1eb600ea173ecf36a" kindref="member">mbedtls_mutex_init</ref>(<ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a3ba643b8261533b2cebd11cb4391ace9" kindref="member">mbedtls_mutex_free</ref>(<ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a3a9e3c745377efdfe5afc7d55671f987" kindref="member">mbedtls_mutex_lock</ref>(<ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a6ff1b320a3fd5cd7c5c186b3d0089d88" kindref="member">mbedtls_mutex_unlock</ref>(<ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a24627a6ea3bf2d8e76fa2bd215132dad" kindref="member">mbedtls_condition_variable_init</ref>(</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>*cond);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1af3aad8f1db1534e7634a084609dc81fe" kindref="member">mbedtls_condition_variable_free</ref>(</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>*cond);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a08a8a5e4a57cdc06c7d7d7b21a34b55e" kindref="member">mbedtls_condition_variable_signal</ref>(</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>*cond);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1ac6a4245885e4648bebdef677a526f7ea" kindref="member">mbedtls_condition_variable_broadcast</ref>(</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>*cond);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="threading_8h_1a0c58db3a24775d90aac0eb480f78a4f9" kindref="member">mbedtls_condition_variable_wait</ref>(</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__condition__variable__t" kindref="compound">mbedtls_threading_condition_variable_t</ref><sp/>*cond,</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>*mutex);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="390"><highlight class="comment"><sp/>*<sp/>Global<sp/>mutexes</highlight></codeline>
+<codeline lineno="391"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="393"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/><ref refid="threading_8h_1a87bbccdf40874b80a9f7313627734c38" kindref="member">mbedtls_threading_readdir_mutex</ref>;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="395"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME_DATE)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PLATFORM_GMTIME_R_ALT)</highlight></codeline>
+<codeline lineno="397"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>This<sp/>mutex<sp/>may<sp/>or<sp/>may<sp/>not<sp/>be<sp/>used<sp/>in<sp/>the<sp/>default<sp/>definition<sp/>of</highlight></codeline>
+<codeline lineno="398"><highlight class="comment"><sp/>*<sp/>mbedtls_platform_gmtime_r(),<sp/>but<sp/>in<sp/>order<sp/>to<sp/>determine<sp/>that,</highlight></codeline>
+<codeline lineno="399"><highlight class="comment"><sp/>*<sp/>we<sp/>need<sp/>to<sp/>check<sp/>POSIX<sp/>features,<sp/>hence<sp/>modify<sp/>_POSIX_C_SOURCE.</highlight></codeline>
+<codeline lineno="400"><highlight class="comment"><sp/>*<sp/>With<sp/>the<sp/>current<sp/>approach,<sp/>this<sp/>declaration<sp/>is<sp/>orphaned,<sp/>lacking</highlight></codeline>
+<codeline lineno="401"><highlight class="comment"><sp/>*<sp/>an<sp/>accompanying<sp/>definition,<sp/>in<sp/>case<sp/>mbedtls_platform_gmtime_r()</highlight></codeline>
+<codeline lineno="402"><highlight class="comment"><sp/>*<sp/>doesn&apos;t<sp/>need<sp/>it,<sp/>but<sp/>that&apos;s<sp/>not<sp/>a<sp/>problem.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>mbedtls_threading_gmtime_mutex;</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_HAVE_TIME_DATE<sp/>&amp;&amp;<sp/>!MBEDTLS_PLATFORM_GMTIME_R_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="405"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_THREADING_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="407"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="409"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="411"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>threading.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h"/>
+  </compounddef>
+</doxygen>

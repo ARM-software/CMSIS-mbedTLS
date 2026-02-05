@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__key__derivation__s" kind="struct" prot="public">
+    <compoundname>psa_key_derivation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__key__derivation__s_1ad4e5495469b5d5ce0c1d8c550726adfd" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t psa_key_derivation_s::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="199" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__key__derivation__s_1afaf7039b22a5c605908cb7d1a6f5ba00" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_key_derivation_s::private_can_output_key</definition>
+        <argsstring></argsstring>
+        <name>private_can_output_key</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="200" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__key__derivation__s_1a07d76b2f9f634400516aac3d7f79b1f1" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t psa_key_derivation_s::private_capacity</definition>
+        <argsstring></argsstring>
+        <name>private_capacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="201" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__key__derivation__s_1a02fcc977730fe8f8b08a8242e48ce77b" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__key__derivation__context__t" kindref="compound">psa_driver_key_derivation_context_t</ref></type>
+        <definition>psa_driver_key_derivation_context_t psa_key_derivation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="202" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="796">
+        <label>psa_driver_key_derivation_context_t</label>
+        <link refid="unionpsa__driver__key__derivation__context__t"/>
+        <childnode refid="797" relation="usage">
+          <edgelabel>private_tls12_ecjpake_to_pms</edgelabel>
+        </childnode>
+        <childnode refid="798" relation="usage">
+          <edgelabel>private_hkdf</edgelabel>
+        </childnode>
+        <childnode refid="806" relation="usage">
+          <edgelabel>private_pbkdf2</edgelabel>
+        </childnode>
+        <childnode refid="807" relation="usage">
+          <edgelabel>private_tls12_prf</edgelabel>
+        </childnode>
+      </node>
+      <node id="800">
+        <label>psa_driver_mac_context_t</label>
+        <link refid="unionpsa__driver__mac__context__t"/>
+        <childnode refid="801" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="805">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+      </node>
+      <node id="799">
+        <label>psa_mac_operation_s</label>
+        <link refid="structpsa__mac__operation__s"/>
+        <childnode refid="800" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="797">
+        <label>psa_tls12_ecjpake_to_pms_t</label>
+        <link refid="structpsa__tls12__ecjpake__to__pms__t"/>
+      </node>
+      <node id="798">
+        <label>psa_hkdf_key_derivation_t</label>
+        <link refid="structpsa__hkdf__key__derivation__t"/>
+        <childnode refid="799" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+      <node id="804">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="805" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="807">
+        <label>psa_tls12_prf_key_derivation_s</label>
+        <link refid="structpsa__tls12__prf__key__derivation__s"/>
+      </node>
+      <node id="802">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="803" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="806">
+        <label>psa_pbkdf2_key_derivation_t</label>
+        <link refid="structpsa__pbkdf2__key__derivation__t"/>
+      </node>
+      <node id="795">
+        <label>psa_key_derivation_s</label>
+        <link refid="structpsa__key__derivation__s"/>
+        <childnode refid="796" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="803">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="804" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="801">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="802" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="195" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="195" bodyend="204"/>
+    <listofallmembers>
+      <member refid="structpsa__key__derivation__s_1ad4e5495469b5d5ce0c1d8c550726adfd" prot="public" virt="non-virtual"><scope>psa_key_derivation_s</scope><name>private_alg</name></member>
+      <member refid="structpsa__key__derivation__s_1afaf7039b22a5c605908cb7d1a6f5ba00" prot="public" virt="non-virtual"><scope>psa_key_derivation_s</scope><name>private_can_output_key</name></member>
+      <member refid="structpsa__key__derivation__s_1a07d76b2f9f634400516aac3d7f79b1f1" prot="public" virt="non-virtual"><scope>psa_key_derivation_s</scope><name>private_capacity</name></member>
+      <member refid="structpsa__key__derivation__s_1a02fcc977730fe8f8b08a8242e48ce77b" prot="public" virt="non-virtual"><scope>psa_key_derivation_s</scope><name>private_ctx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

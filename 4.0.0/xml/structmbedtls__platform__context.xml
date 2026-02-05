@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__platform__context" kind="struct" prot="public">
+    <compoundname>mbedtls_platform_context</compoundname>
+    <includes refid="platform__alt_8h" local="no">platform_alt.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__platform__context_1a3bec481a82d26b31e2cccc55a81ffc9d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_platform_context::dummy</definition>
+        <argsstring></argsstring>
+        <name>dummy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h" line="11" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h" line="10" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tests/include/alt-dummy/platform_alt.h" bodystart="10" bodyend="12"/>
+    <listofallmembers>
+      <member refid="structmbedtls__platform__context_1a3bec481a82d26b31e2cccc55a81ffc9d" prot="public" virt="non-virtual"><scope>mbedtls_platform_context</scope><name>dummy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

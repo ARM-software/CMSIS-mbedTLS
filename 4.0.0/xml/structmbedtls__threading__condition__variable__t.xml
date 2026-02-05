@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__threading__condition__variable__t" kind="struct" prot="public">
+    <compoundname>mbedtls_threading_condition_variable_t</compoundname>
+    <includes refid="threading_8h" local="no">threading.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__threading__condition__variable__t_1abe3104efd84dd038f40f8f5a84ca02d6" prot="public" static="no" mutable="no">
+        <type><ref refid="threading_8h_1a2c1e1f1979162f6d8f2f29bbef411d17" kindref="member">mbedtls_platform_condition_variable_t</ref></type>
+        <definition>mbedtls_platform_condition_variable_t mbedtls_threading_condition_variable_t::private_cond</definition>
+        <argsstring></argsstring>
+        <name>private_cond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="153" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" line="152" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/threading.h" bodystart="152" bodyend="154"/>
+    <listofallmembers>
+      <member refid="structmbedtls__threading__condition__variable__t_1abe3104efd84dd038f40f8f5a84ca02d6" prot="public" virt="non-virtual"><scope>mbedtls_threading_condition_variable_t</scope><name>private_cond</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1667 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="asn1_8h" kind="file">
+    <compoundname>asn1.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="platform__util_8h" local="yes">mbedtls/platform_util.h</includes>
+    <includes refid="compat-3-crypto_8h" local="yes">mbedtls/compat-3-crypto.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="yes">mbedtls/private/bignum.h</includes>
+    <includedby refid="x509_8h" local="yes">x509.h</includedby>
+    <includedby refid="oid_8h" local="yes">oid.h</includedby>
+    <includedby refid="pkcs7_8h" local="yes">pkcs7.h</includedby>
+    <includedby refid="asn1write_8h" local="yes">asn1write.h</includedby>
+    <incdepgraph>
+      <node id="2009">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2010" relation="include">
+        </childnode>
+      </node>
+      <node id="1999">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="2006">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="1998" relation="include">
+        </childnode>
+      </node>
+      <node id="2012">
+        <label>stdint.h</label>
+      </node>
+      <node id="2011">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="2002">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="1998">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="1999" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+        <childnode refid="2001" relation="include">
+        </childnode>
+        <childnode refid="2002" relation="include">
+        </childnode>
+        <childnode refid="2003" relation="include">
+        </childnode>
+      </node>
+      <node id="2005">
+        <label>stddef.h</label>
+      </node>
+      <node id="2003">
+        <label>limits.h</label>
+      </node>
+      <node id="2010">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2011" relation="include">
+        </childnode>
+        <childnode refid="2012" relation="include">
+        </childnode>
+      </node>
+      <node id="2008">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="2009" relation="include">
+        </childnode>
+      </node>
+      <node id="2004">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="2005" relation="include">
+        </childnode>
+        <childnode refid="2006" relation="include">
+        </childnode>
+        <childnode refid="2007" relation="include">
+        </childnode>
+      </node>
+      <node id="1997">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="2007">
+        <label>time.h</label>
+      </node>
+      <node id="1996">
+        <label>asn1.h</label>
+        <link refid="asn1.h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="2004" relation="include">
+        </childnode>
+        <childnode refid="2008" relation="include">
+        </childnode>
+        <childnode refid="2005" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+      </node>
+      <node id="2000">
+        <label>/dev/null</label>
+      </node>
+      <node id="2001">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="2013">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2017">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2018" relation="include">
+        </childnode>
+        <childnode refid="2019" relation="include">
+        </childnode>
+        <childnode refid="2020" relation="include">
+        </childnode>
+        <childnode refid="2021" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+      </node>
+      <node id="2026">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="2015">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+        <childnode refid="2024" relation="include">
+        </childnode>
+        <childnode refid="2025" relation="include">
+        </childnode>
+      </node>
+      <node id="2023">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2027">
+        <label>asn1write.h</label>
+        <link refid="asn1write_8h"/>
+        <childnode refid="2028" relation="include">
+        </childnode>
+      </node>
+      <node id="2022">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2021">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2018">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2020">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2028">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="2025">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2014">
+        <label>asn1.h</label>
+        <link refid="asn1.h"/>
+        <childnode refid="2015" relation="include">
+        </childnode>
+        <childnode refid="2026" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
+        </childnode>
+        <childnode refid="2027" relation="include">
+        </childnode>
+      </node>
+      <node id="2016">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2017" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
+        </childnode>
+      </node>
+      <node id="2019">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2024">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+        <childnode refid="2017" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmbedtls__asn1__buf" prot="public">mbedtls_asn1_buf</innerclass>
+    <innerclass refid="structmbedtls__asn1__bitstring" prot="public">mbedtls_asn1_bitstring</innerclass>
+    <innerclass refid="structmbedtls__asn1__sequence" prot="public">mbedtls_asn1_sequence</innerclass>
+    <innerclass refid="structmbedtls__asn1__named__data" prot="public">mbedtls_asn1_named_data</innerclass>
+      <sectiondef kind="user-defined">
+      <header>ASN1 Error codes</header>
+      <description><para>These error codes are combined with other error codes for higher error granularity. e.g. X.509 and PKCS #7 error codes ASN1 is a standard to specify data structures. </para></description>
+      <memberdef kind="define" id="group__asn1__module_1ga284c12cf03a4ffeee89a63750f00dfdd" prot="public" static="no">
+        <name>MBEDTLS_ERR_ASN1_OUT_OF_DATA</name>
+        <initializer>-0x0060</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Out of data when parsing an ASN1 data structure. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="38" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gab055945fda47ad0e16dc59f8c5ecb86e" prot="public" static="no">
+        <name>MBEDTLS_ERR_ASN1_UNEXPECTED_TAG</name>
+        <initializer>-0x0062</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ASN1 tag was of an unexpected value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="40" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" prot="public" static="no">
+        <name>MBEDTLS_ERR_ASN1_INVALID_LENGTH</name>
+        <initializer>-0x0064</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error when trying to determine the length or invalid length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="42" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gacf6fad8d80fa050c3463539412674a20" prot="public" static="no">
+        <name>MBEDTLS_ERR_ASN1_LENGTH_MISMATCH</name>
+        <initializer>-0x0066</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Actual length differs from expected length. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="44" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" prot="public" static="no">
+        <name>MBEDTLS_ERR_ASN1_INVALID_DATA</name>
+        <initializer>-0x0068</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data is invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="46" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DER constants</header>
+      <description><para>These constants comply with the DER encoded ASN.1 type tags. DER encoding uses hexadecimal representation. An example DER sequence is:<linebreak/>
+<itemizedlist>
+<listitem><para>0x02 <ndash/> tag indicating INTEGER</para></listitem><listitem><para>0x01 <ndash/> length in octets</para></listitem><listitem><para>0x05 <ndash/> value </para></listitem></itemizedlist>
+</para></description>
+      <memberdef kind="define" id="group__asn1__module_1ga1382980a474a765365d8f5c7bd63795a" prot="public" static="no">
+        <name>MBEDTLS_ASN1_BOOLEAN</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga6e8614f8937956c294fe791bc5ac6a7c" prot="public" static="no">
+        <name>MBEDTLS_ASN1_INTEGER</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="61" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gafd5c5ecc822b7e2f4d2e64bf388fc559" prot="public" static="no">
+        <name>MBEDTLS_ASN1_BIT_STRING</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="62" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga080d1f82b0996a63c561541eb22a7d0f" prot="public" static="no">
+        <name>MBEDTLS_ASN1_OCTET_STRING</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="63" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gae26e36d787617e0b2dd067ccc342db0d" prot="public" static="no">
+        <name>MBEDTLS_ASN1_NULL</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="64" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gad87ad0570a31add4ecac6cc3694ca79a" prot="public" static="no">
+        <name>MBEDTLS_ASN1_OID</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="65" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gacbaecf2f809a9c73b6b42307527a288c" prot="public" static="no">
+        <name>MBEDTLS_ASN1_ENUMERATED</name>
+        <initializer>0x0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="66" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gafc28060cb0e9b2be4f0960ad345a2e42" prot="public" static="no">
+        <name>MBEDTLS_ASN1_UTF8_STRING</name>
+        <initializer>0x0C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="67" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga64ce838eb4418e69fe9aa251436203b3" prot="public" static="no">
+        <name>MBEDTLS_ASN1_SEQUENCE</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="68" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga67afaa83253889dacb9fcb47062162c5" prot="public" static="no">
+        <name>MBEDTLS_ASN1_SET</name>
+        <initializer>0x11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="69" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga57f497984e573597e1ed100afcc3f965" prot="public" static="no">
+        <name>MBEDTLS_ASN1_PRINTABLE_STRING</name>
+        <initializer>0x13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="70" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gabe4ca1599521c0a3b4c54391906c2083" prot="public" static="no">
+        <name>MBEDTLS_ASN1_T61_STRING</name>
+        <initializer>0x14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="71" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga30d5d0f805af50deb5820e741a53e481" prot="public" static="no">
+        <name>MBEDTLS_ASN1_IA5_STRING</name>
+        <initializer>0x16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="72" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gac4e932ef9cdf9fa9b8fb152357c6ec64" prot="public" static="no">
+        <name>MBEDTLS_ASN1_UTC_TIME</name>
+        <initializer>0x17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="73" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga29f746333b11a4d9e0b7624dcd982fdb" prot="public" static="no">
+        <name>MBEDTLS_ASN1_GENERALIZED_TIME</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="74" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gacdbc7c6bcf1b8eb158a52ed773f3cdf3" prot="public" static="no">
+        <name>MBEDTLS_ASN1_UNIVERSAL_STRING</name>
+        <initializer>0x1C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="75" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga577f12d1a059eb52928614c50f2bb0d8" prot="public" static="no">
+        <name>MBEDTLS_ASN1_BMP_STRING</name>
+        <initializer>0x1E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="76" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga800aec91d6d124d917bb2707b246c551" prot="public" static="no">
+        <name>MBEDTLS_ASN1_PRIMITIVE</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="77" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga8d855bf93e7f26e7c0c9c70af7f04d8e" prot="public" static="no">
+        <name>MBEDTLS_ASN1_CONSTRUCTED</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="78" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga8d78fbb123ee982c80d8020050bf86e0" prot="public" static="no">
+        <name>MBEDTLS_ASN1_CONTEXT_SPECIFIC</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="79" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga4819e8909ac8f16f937a945d75cc442c" prot="public" static="no">
+        <name>MBEDTLS_ASN1_IS_STRING_TAG</name>
+        <param><defname>tag</defname></param>
+        <initializer>((unsigned int) (tag) &lt; 32u &amp;&amp; (                                   \
+         ((1u &lt;&lt; (tag)) &amp; ((1u &lt;&lt; MBEDTLS_ASN1_BMP_STRING)       |     \
+                           (1u &lt;&lt; MBEDTLS_ASN1_UTF8_STRING)      |     \
+                           (1u &lt;&lt; MBEDTLS_ASN1_T61_STRING)       |     \
+                           (1u &lt;&lt; MBEDTLS_ASN1_IA5_STRING)       |     \
+                           (1u &lt;&lt; MBEDTLS_ASN1_UNIVERSAL_STRING) |     \
+                           (1u &lt;&lt; MBEDTLS_ASN1_PRINTABLE_STRING))) != 0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="83" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga01a2dcbe2148d903c4bc6eaad4dbcd3d" prot="public" static="no">
+        <name>MBEDTLS_ASN1_TAG_CLASS_MASK</name>
+        <initializer>0xC0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="102" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga5994a5ddfb487f14d03d5b61e335e9cc" prot="public" static="no">
+        <name>MBEDTLS_ASN1_TAG_PC_MASK</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="103" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1gaa2a3c5289c11edb569b306df3411ff3b" prot="public" static="no">
+        <name>MBEDTLS_ASN1_TAG_VALUE_MASK</name>
+        <initializer>0x1F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="104" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Functions to parse ASN.1 data structures</header>
+      <memberdef kind="typedef" id="group__asn1__module_1ga92008d574dc457ec6c925ef29631545b" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref></type>
+        <definition>typedef struct mbedtls_asn1_buf
+ mbedtls_asn1_buf</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_asn1_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type-length-value structure that allows for ASN1 using DER. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__asn1__module_1gadfc9b9fed6d69849942d4a63ece7513d" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__asn1__bitstring" kindref="compound">mbedtls_asn1_bitstring</ref></type>
+        <definition>typedef struct mbedtls_asn1_bitstring
+ mbedtls_asn1_bitstring</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_asn1_bitstring</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for ASN1 bit strings. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__asn1__module_1ga21302e30db75b1b5e3387b16958080bf" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref></type>
+        <definition>typedef struct mbedtls_asn1_sequence
+ mbedtls_asn1_sequence</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_asn1_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for a sequence of ASN.1 items </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="169" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__asn1__module_1ga3f3ca4991620a3ab05d747d00a6cb70e" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref></type>
+        <definition>typedef struct mbedtls_asn1_named_data
+ mbedtls_asn1_named_data</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_asn1_named_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for a sequence or list of &apos;named&apos; ASN.1 data items </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="194" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gad45c1d0ed3694fe903342cb32647bfb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_len</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, size_t *len)</argsstring>
+        <name>mbedtls_asn1_get_len</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Get the length of an ASN.1 element. Updates the pointer to immediately behind the length. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the first byte of the length, i.e. immediately after the tag. On successful completion, <computeroutput>*p</computeroutput> points to the first byte after the length, i.e. the first byte of the content. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On successful completion, <computeroutput>*len</computeroutput> contains the length read from the ASN.1 input.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga284c12cf03a4ffeee89a63750f00dfdd" kindref="member">MBEDTLS_ERR_ASN1_OUT_OF_DATA</ref> if the ASN.1 element would end beyond <computeroutput>end</computeroutput>. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" kindref="member">MBEDTLS_ERR_ASN1_INVALID_LENGTH</ref> if the length is unparsable. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gae8d7dd42a3b99b61d2ef60bc0c2eaf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_tag</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, size_t *len, int tag)</argsstring>
+        <name>mbedtls_asn1_get_tag</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Get the tag and length of the element. Check for the requested tag. Updates the pointer to immediately behind the tag and length. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte after the length, i.e. the first byte of the content. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On successful completion, <computeroutput>*len</computeroutput> contains the length read from the ASN.1 input. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The expected tag.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__asn1__module_1gab055945fda47ad0e16dc59f8c5ecb86e" kindref="member">MBEDTLS_ERR_ASN1_UNEXPECTED_TAG</ref> if the data does not start with the requested tag. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga284c12cf03a4ffeee89a63750f00dfdd" kindref="member">MBEDTLS_ERR_ASN1_OUT_OF_DATA</ref> if the ASN.1 element would end beyond <computeroutput>end</computeroutput>. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" kindref="member">MBEDTLS_ERR_ASN1_INVALID_LENGTH</ref> if the length is unparsable. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gaec9e4bbd8690a8ab17cabf87893dbd2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_bool</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, int *val)</argsstring>
+        <name>mbedtls_asn1_get_bool</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a boolean ASN.1 tag and its value. Updates the pointer to immediately behind the full tag. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the ASN.1 element. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the parsed value (<computeroutput>0</computeroutput> or <computeroutput>1</computeroutput>).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 BOOLEAN. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga7f8a8b447c11f2200cc5aa8033801b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_int</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, int *val)</argsstring>
+        <name>mbedtls_asn1_get_int</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an INTEGER ASN.1 tag and its value. Updates the pointer to immediately behind the full tag. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the ASN.1 element. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the parsed value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 INTEGER. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" kindref="member">MBEDTLS_ERR_ASN1_INVALID_LENGTH</ref> if the parsed value does not fit in an <computeroutput>int</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="283" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga59a0f23a9a1a68fdb2b57d9ab4be0334" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_integer</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, unsigned char **head, size_t *length)</argsstring>
+        <name>mbedtls_asn1_get_integer</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>unsigned char **</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Parse an INTEGER in DER representation and return a pointer to its big-endian representation and length of the representation. The pointers are only valid as long as the input buffer is. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the ASN.1 element. On error, the value of <computeroutput>*p</computeroutput> is unchanged. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, set to point to the start of the big-endian representation of the INTEGER without any leading zeros. On failure, set to NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, set to the length of the big-endian representation of the INTEGER, measured in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 INTEGER in DER representation. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if the parsed value is negative. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="309" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga61bd2b9ab13412094878a364101f9121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_enum</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, int *val)</argsstring>
+        <name>mbedtls_asn1_get_enum</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an enumerated ASN.1 tag and its value. Updates the pointer to immediately behind the full tag. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the ASN.1 element. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the parsed value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 ENUMERATED. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" kindref="member">MBEDTLS_ERR_ASN1_INVALID_LENGTH</ref> if the parsed value does not fit in an <computeroutput>int</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="328" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gae2dcf021cf1326b62e2f23aa3bda69d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_bitstring</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, mbedtls_asn1_bitstring *bs)</argsstring>
+        <name>mbedtls_asn1_get_bitstring</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__asn1__bitstring" kindref="compound">mbedtls_asn1_bitstring</ref> *</type>
+          <declname>bs</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a bitstring ASN.1 tag and its value. Updates the pointer to immediately behind the full tag. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> is equal to <computeroutput>end</computeroutput>. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, <ref refid="structmbedtls__asn1__bitstring" kindref="compound">mbedtls_asn1_bitstring</ref> information about the parsed value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__asn1__module_1gacf6fad8d80fa050c3463539412674a20" kindref="member">MBEDTLS_ERR_ASN1_LENGTH_MISMATCH</ref> if the input contains extra data after a valid BIT STRING. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 BIT STRING. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="349" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga0f9d2d846b16d5ce18ad99de6224313b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_bitstring_null</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, size_t *len)</argsstring>
+        <name>mbedtls_asn1_get_bitstring_null</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a bitstring ASN.1 tag without unused bits and its value. Updates the pointer to the beginning of the bit/octet string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte of the content of the BIT STRING. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, <computeroutput>*len</computeroutput> is the length of the content in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" kindref="member">MBEDTLS_ERR_ASN1_INVALID_DATA</ref> if the input starts with a valid BIT STRING with a nonzero number of unused bits. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 BIT STRING. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="370" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga872d62128956b3574bb0e681536c0d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_sequence_of</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, mbedtls_asn1_sequence *cur, int tag)</argsstring>
+        <name>mbedtls_asn1_get_sequence_of</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> *</type>
+          <declname>cur</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+<para>Parses and splits an ASN.1 &quot;SEQUENCE OF &lt;tag&gt;&quot;. Updates the pointer to immediately behind the full sequence tag. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function allocates memory for the sequence elements. You can free the allocated memory with <ref refid="group__asn1__module_1ga835bfde2dc9ada1a3ee434f7ed2da750" kindref="member">mbedtls_asn1_sequence_free()</ref>.</para><para><simplesect kind="note"><para>On error, this function may return a partial list in <computeroutput>cur</computeroutput>. You must set <computeroutput>cur-&gt;next = NULL</computeroutput> before calling this function! Otherwise it is impossible to distinguish a previously non-null pointer from a pointer to an object allocated by this function.</para><simplesectsep/><para>If the sequence is empty, this function does not modify <computeroutput>*cur</computeroutput>. If the sequence is valid and non-empty, this function sets <computeroutput>cur-&gt;buf.tag</computeroutput> to <computeroutput>tag</computeroutput>. This allows callers to distinguish between an empty sequence and a one-element sequence.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> is equal to <computeroutput>end</computeroutput>. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> which this function fills. When this function returns, <computeroutput>*cur</computeroutput> is the head of a linked list. Each node in this list is allocated with <ref refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" kindref="member">mbedtls_calloc()</ref> apart from <computeroutput>cur</computeroutput> itself, and should therefore be freed with <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref>. The list describes the content of the sequence. The head of the list (i.e. <computeroutput>*cur</computeroutput> itself) describes the first element, <computeroutput>*cur-&gt;next</computeroutput> describes the second element, etc. For each element, <computeroutput>buf.tag == tag</computeroutput>, <computeroutput>buf.len</computeroutput> is the length of the content of the content of the element, and <computeroutput>buf.p</computeroutput> points to the first byte of the content (i.e. immediately past the length of the element). Note that list elements may be allocated even on error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Each element of the sequence must have this tag.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful. </para><simplesectsep/><para><ref refid="group__asn1__module_1gacf6fad8d80fa050c3463539412674a20" kindref="member">MBEDTLS_ERR_ASN1_LENGTH_MISMATCH</ref> if the input contains extra data after a valid SEQUENCE OF <computeroutput>tag</computeroutput>. </para><simplesectsep/><para><ref refid="group__asn1__module_1gab055945fda47ad0e16dc59f8c5ecb86e" kindref="member">MBEDTLS_ERR_ASN1_UNEXPECTED_TAG</ref> if the input starts with an ASN.1 SEQUENCE in which an element has a tag that is different from <computeroutput>tag</computeroutput>. </para><simplesectsep/><para><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref> if a memory allocation failed. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 SEQUENCE. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="421" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga835bfde2dc9ada1a3ee434f7ed2da750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_asn1_sequence_free</definition>
+        <argsstring>(mbedtls_asn1_sequence *seq)</argsstring>
+        <name>mbedtls_asn1_sequence_free</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> *</type>
+          <declname>seq</declname>
+        </param>
+        <briefdescription>
+<para>Free a heap-allocated linked list presentation of an ASN.1 sequence, including the first element. </para>        </briefdescription>
+        <detaileddescription>
+<para>There are two common ways to manage the memory used for the representation of a parsed ASN.1 sequence:<itemizedlist>
+<listitem><para>Allocate a head node <computeroutput><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> *head</computeroutput> with <ref refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" kindref="member">mbedtls_calloc()</ref>. Pass this node as the <computeroutput>cur</computeroutput> argument to <ref refid="group__asn1__module_1ga872d62128956b3574bb0e681536c0d6b" kindref="member">mbedtls_asn1_get_sequence_of()</ref>. When you have finished processing the sequence, call <ref refid="group__asn1__module_1ga835bfde2dc9ada1a3ee434f7ed2da750" kindref="member">mbedtls_asn1_sequence_free()</ref> on <computeroutput>head</computeroutput>.</para></listitem><listitem><para>Allocate a head node <computeroutput><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> *head</computeroutput> in any manner, for example on the stack. Make sure that <computeroutput>head-&gt;next == NULL</computeroutput>. Pass <computeroutput>head</computeroutput> as the <computeroutput>cur</computeroutput> argument to <ref refid="group__asn1__module_1ga872d62128956b3574bb0e681536c0d6b" kindref="member">mbedtls_asn1_get_sequence_of()</ref>. When you have finished processing the sequence, call <ref refid="group__asn1__module_1ga835bfde2dc9ada1a3ee434f7ed2da750" kindref="member">mbedtls_asn1_sequence_free()</ref> on <computeroutput>head-&gt;cur</computeroutput>, then free <computeroutput>head</computeroutput> itself in the appropriate manner.</para></listitem></itemizedlist>
+</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the first sequence component. This may be <computeroutput>NULL</computeroutput>, in which case this functions returns immediately. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="446" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gaaae35fadc8746f712e496f017064177d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_traverse_sequence_of</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, unsigned char tag_must_mask, unsigned char tag_must_val, unsigned char tag_may_mask, unsigned char tag_may_val, int(*cb)(void *ctx, int tag, unsigned char *start, size_t len), void *ctx)</argsstring>
+        <name>mbedtls_asn1_traverse_sequence_of</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>tag_must_mask</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>tag_must_val</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>tag_may_mask</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>tag_may_val</declname>
+        </param>
+        <param>
+          <type>int(*)(void *ctx, int tag, unsigned char *start, size_t len)</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Traverse an ASN.1 SEQUENCE container and call a callback for each entry. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function checks that the input is a SEQUENCE of elements that each have a &quot;must&quot; tag, and calls a callback function on the elements that have a &quot;may&quot; tag.</para><para>For example, to validate that the input is a SEQUENCE of <computeroutput>tag1</computeroutput> and call <computeroutput>cb</computeroutput> on each element, use ``` mbedtls_asn1_traverse_sequence_of(&amp;p, end, 0xff, tag1, 0, 0, cb, ctx); ```</para><para>To validate that the input is a SEQUENCE of ANY and call <computeroutput>cb</computeroutput> on each element, use ``` mbedtls_asn1_traverse_sequence_of(&amp;p, end, 0, 0, 0, 0, cb, ctx); ```</para><para>To validate that the input is a SEQUENCE of CHOICE {NULL, OCTET STRING} and call <computeroutput>cb</computeroutput> on each element that is an OCTET STRING, use ``` mbedtls_asn1_traverse_sequence_of(&amp;p, end, 0xfe, 0x04, 0xff, 0x04, cb, ctx); ```</para><para>The callback is called on the elements with a &quot;may&quot; tag from left to right. If the input is not a valid SEQUENCE of elements with a &quot;must&quot; tag, the callback is called on the elements up to the leftmost point where the input is invalid.</para><para><simplesect kind="warning"><para>This function is still experimental and may change at any time.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the pointer to the beginning of the ASN.1 SEQUENCE header. This is updated to point to the end of the ASN.1 SEQUENCE container on a successful invocation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end of the ASN.1 SEQUENCE container. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_must_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask to be applied to the ASN.1 tags found within the SEQUENCE before comparing to <computeroutput>tag_must_val</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_must_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The required value of each ASN.1 tag found in the SEQUENCE, after masking with <computeroutput>tag_must_mask</computeroutput>. Mismatching tags lead to an error. For example, a value of <computeroutput>0</computeroutput> for both <computeroutput>tag_must_mask</computeroutput> and <computeroutput>tag_must_val</computeroutput> means that every tag is allowed, while a value of <computeroutput>0xFF</computeroutput> for <computeroutput>tag_must_mask</computeroutput> means that <computeroutput>tag_must_val</computeroutput> is the only allowed tag. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_may_mask</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask to be applied to the ASN.1 tags found within the SEQUENCE before comparing to <computeroutput>tag_may_val</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag_may_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired value of each ASN.1 tag found in the SEQUENCE, after masking with <computeroutput>tag_may_mask</computeroutput>. Mismatching tags will be silently ignored. For example, a value of <computeroutput>0</computeroutput> for <computeroutput>tag_may_mask</computeroutput> and <computeroutput>tag_may_val</computeroutput> means that any tag will be considered, while a value of <computeroutput>0xFF</computeroutput> for <computeroutput>tag_may_mask</computeroutput> means that all tags with value different from <computeroutput>tag_may_val</computeroutput> will be ignored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback to trigger for each component in the ASN.1 SEQUENCE that matches <computeroutput>tag_may_val</computeroutput>. The callback function is called with the following parameters:<itemizedlist>
+<listitem><para><computeroutput>ctx</computeroutput>.</para></listitem><listitem><para>The tag of the current element.</para></listitem><listitem><para>A pointer to the start of the current element&apos;s content inside the input.</para></listitem><listitem><para>The length of the content of the current element. If the callback returns a non-zero value, the function stops immediately, forwarding the callback&apos;s return value. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to be passed to the callback <computeroutput>cb</computeroutput>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> if successful the entire ASN.1 SEQUENCE was traversed without parsing or callback errors. </para><simplesectsep/><para><ref refid="group__asn1__module_1gacf6fad8d80fa050c3463539412674a20" kindref="member">MBEDTLS_ERR_ASN1_LENGTH_MISMATCH</ref> if the input contains extra data after a valid SEQUENCE of elements with an accepted tag. </para><simplesectsep/><para><ref refid="group__asn1__module_1gab055945fda47ad0e16dc59f8c5ecb86e" kindref="member">MBEDTLS_ERR_ASN1_UNEXPECTED_TAG</ref> if the input starts with an ASN.1 SEQUENCE in which an element has a tag that is not accepted. </para><simplesectsep/><para>An ASN.1 error code if the input does not start with a valid ASN.1 SEQUENCE. </para><simplesectsep/><para>A non-zero error code forwarded from the callback <computeroutput>cb</computeroutput> in case the latter returns a non-zero value. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="533" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gadd253579640ea717f368d9a0f6085be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_alg</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, mbedtls_asn1_buf *alg, mbedtls_asn1_buf *params)</argsstring>
+        <name>mbedtls_asn1_get_alg</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>alg</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an AlgorithmIdentifier ASN.1 sequence. Updates the pointer to immediately behind the full AlgorithmIdentifier. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the AlgorithmIdentifier element. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to receive the OID. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to receive the parameters. This is zeroized if there are no parameters.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful or a specific ASN.1 or MPI error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="559" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gadad023ecf92a50d47eaf206705efdb0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_asn1_get_alg_null</definition>
+        <argsstring>(unsigned char **p, const unsigned char *end, mbedtls_asn1_buf *alg)</argsstring>
+        <name>mbedtls_asn1_get_alg_null</name>
+        <param>
+          <type>unsigned char **</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> *</type>
+          <declname>alg</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve an AlgorithmIdentifier ASN.1 sequence with NULL or no params. Updates the pointer to immediately behind the full AlgorithmIdentifier. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On entry, <computeroutput>*p</computeroutput> points to the start of the ASN.1 element. On successful completion, <computeroutput>*p</computeroutput> points to the first byte beyond the AlgorithmIdentifier element. On error, the value of <computeroutput>*p</computeroutput> is unspecified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to receive the OID.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful or a specific ASN.1 or MPI error code. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="578" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga4b93f1c3d4ee1d60f62ce072d4fb3b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+        <definition>const mbedtls_asn1_named_data* mbedtls_asn1_find_named_data</definition>
+        <argsstring>(const mbedtls_asn1_named_data *list, const char *oid, size_t len)</argsstring>
+        <name>mbedtls_asn1_find_named_data</name>
+        <param>
+          <type>const <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>oid</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Find a specific named_data entry in a sequence or list based on the OID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list to seek through </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OID to look for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the OID</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL if not found, or a pointer to the existing entry. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="592" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1gafd1a084a9285cebcd289bf6df0e6c021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_asn1_free_named_data_list</definition>
+        <argsstring>(mbedtls_asn1_named_data **head)</argsstring>
+        <name>mbedtls_asn1_free_named_data_list</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> **</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+<para>Free all entries in a <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> list. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the head of the list of named data entries to free. This function calls <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref> on <computeroutput>entry-&gt;oid.p</computeroutput> and <computeroutput>entry-&gt;val.p</computeroutput> and then on <computeroutput>entry</computeroutput> for each list entry, and sets <computeroutput>*head</computeroutput> to <computeroutput>NULL</computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="603" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__asn1__module_1ga6a42d8e2aaee5fdfb4466d5862dd83cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_asn1_free_named_data_list_shallow</definition>
+        <argsstring>(mbedtls_asn1_named_data *name)</argsstring>
+        <name>mbedtls_asn1_free_named_data_list_shallow</name>
+        <param>
+          <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Free all shallow entries in a <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> list, but do not free internal pointer targets. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Head of the list of named data entries to free. This function calls <ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free()</ref> on each list element. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="612" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__asn1__module_1gac2f2e00874ca486c912c33bb4f7bb16a" prot="public" static="no">
+        <name>MBEDTLS_OID_SIZE</name>
+        <param><defname>x</defname></param>
+        <initializer>(sizeof(x) - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the size of the binary string, without the trailing \0 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="109" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga0b81f225b3551ec7c4da69b2d183d10b" prot="public" static="no">
+        <name>MBEDTLS_OID_CMP</name>
+        <param><defname>oid_str</defname></param>
+        <param><defname>oid_buf</defname></param>
+        <initializer>((<ref refid="group__asn1__module_1gac2f2e00874ca486c912c33bb4f7bb16a" kindref="member">MBEDTLS_OID_SIZE</ref>(oid_str) != (oid_buf)-&gt;len) ||                \
+     memcmp((oid_str), (oid_buf)-&gt;p, (oid_buf)-&gt;len) != 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compares an <ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref> structure to a reference OID.</para><para>Only works for &apos;defined&apos; oid_str values (MBEDTLS_OID_HMAC_SHA1), you cannot use a &apos;unsigned char *oid&apos; here! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="117" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__asn1__module_1ga88259e7a5163b63bc9b618cc0faac0be" prot="public" static="no">
+        <name>MBEDTLS_OID_CMP_RAW</name>
+        <param><defname>oid_str</defname></param>
+        <param><defname>oid_buf</defname></param>
+        <param><defname>oid_buf_len</defname></param>
+        <initializer>((<ref refid="group__asn1__module_1gac2f2e00874ca486c912c33bb4f7bb16a" kindref="member">MBEDTLS_OID_SIZE</ref>(oid_str) != (oid_buf_len)) ||             \
+     memcmp((oid_str), (oid_buf), (oid_buf_len)) != 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="121" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Generic ASN.1 parsing. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_ASN1_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__util_8h" kindref="compound">mbedtls/platform_util.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="compat-3-crypto_8h" kindref="compound">mbedtls/compat-3-crypto.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_BIGNUM_C)</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private/bignum.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="38" refid="group__asn1__module_1ga284c12cf03a4ffeee89a63750f00dfdd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ASN1_OUT_OF_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0060</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="40" refid="group__asn1__module_1gab055945fda47ad0e16dc59f8c5ecb86e" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ASN1_UNEXPECTED_TAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0062</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="42" refid="group__asn1__module_1ga0ebe8e0a4894533db505303504eea59b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ASN1_INVALID_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0064</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="44" refid="group__asn1__module_1gacf6fad8d80fa050c3463539412674a20" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ASN1_LENGTH_MISMATCH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0066</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="46" refid="group__asn1__module_1ga9ac36bf8c63a9968afe1d35d0569e4d8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_ASN1_INVALID_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0068</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="60" refid="group__asn1__module_1ga1382980a474a765365d8f5c7bd63795a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_BOOLEAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight></codeline>
+<codeline lineno="61" refid="group__asn1__module_1ga6e8614f8937956c294fe791bc5ac6a7c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_INTEGER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight></codeline>
+<codeline lineno="62" refid="group__asn1__module_1gafd5c5ecc822b7e2f4d2e64bf388fc559" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_BIT_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight></codeline>
+<codeline lineno="63" refid="group__asn1__module_1ga080d1f82b0996a63c561541eb22a7d0f" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_OCTET_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight></codeline>
+<codeline lineno="64" refid="group__asn1__module_1gae26e36d787617e0b2dd067ccc342db0d" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_NULL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight></codeline>
+<codeline lineno="65" refid="group__asn1__module_1gad87ad0570a31add4ecac6cc3694ca79a" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_OID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x06</highlight></codeline>
+<codeline lineno="66" refid="group__asn1__module_1gacbaecf2f809a9c73b6b42307527a288c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_ENUMERATED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0A</highlight></codeline>
+<codeline lineno="67" refid="group__asn1__module_1gafc28060cb0e9b2be4f0960ad345a2e42" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_UTF8_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0C</highlight></codeline>
+<codeline lineno="68" refid="group__asn1__module_1ga64ce838eb4418e69fe9aa251436203b3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_SEQUENCE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight></codeline>
+<codeline lineno="69" refid="group__asn1__module_1ga67afaa83253889dacb9fcb47062162c5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_SET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x11</highlight></codeline>
+<codeline lineno="70" refid="group__asn1__module_1ga57f497984e573597e1ed100afcc3f965" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_PRINTABLE_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x13</highlight></codeline>
+<codeline lineno="71" refid="group__asn1__module_1gabe4ca1599521c0a3b4c54391906c2083" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_T61_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x14</highlight></codeline>
+<codeline lineno="72" refid="group__asn1__module_1ga30d5d0f805af50deb5820e741a53e481" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_IA5_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x16</highlight></codeline>
+<codeline lineno="73" refid="group__asn1__module_1gac4e932ef9cdf9fa9b8fb152357c6ec64" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_UTC_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x17</highlight></codeline>
+<codeline lineno="74" refid="group__asn1__module_1ga29f746333b11a4d9e0b7624dcd982fdb" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_GENERALIZED_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18</highlight></codeline>
+<codeline lineno="75" refid="group__asn1__module_1gacdbc7c6bcf1b8eb158a52ed773f3cdf3" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_UNIVERSAL_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1C</highlight></codeline>
+<codeline lineno="76" refid="group__asn1__module_1ga577f12d1a059eb52928614c50f2bb0d8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_BMP_STRING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1E</highlight></codeline>
+<codeline lineno="77" refid="group__asn1__module_1ga800aec91d6d124d917bb2707b246c551" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_PRIMITIVE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight></codeline>
+<codeline lineno="78" refid="group__asn1__module_1ga8d855bf93e7f26e7c0c9c70af7f04d8e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_CONSTRUCTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight></codeline>
+<codeline lineno="79" refid="group__asn1__module_1ga8d78fbb123ee982c80d8020050bf86e0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_CONTEXT_SPECIFIC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Slightly<sp/>smaller<sp/>way<sp/>to<sp/>check<sp/>if<sp/>tag<sp/>is<sp/>a<sp/>string<sp/>tag</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>compared<sp/>to<sp/>canonical<sp/>implementation.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="group__asn1__module_1ga4819e8909ac8f16f937a945d75cc442c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_IS_STRING_TAG(tag)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((unsigned<sp/>int)<sp/>(tag)<sp/>&lt;<sp/>32u<sp/>&amp;&amp;<sp/>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((1u<sp/>&lt;&lt;<sp/>(tag))<sp/>&amp;<sp/>((1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_BMP_STRING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_UTF8_STRING)<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_T61_STRING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_IA5_STRING)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_UNIVERSAL_STRING)<sp/>|<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1u<sp/>&lt;&lt;<sp/>MBEDTLS_ASN1_PRINTABLE_STRING)))<sp/>!=<sp/>0))</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*<sp/>Bit<sp/>masks<sp/>for<sp/>each<sp/>of<sp/>the<sp/>components<sp/>of<sp/>an<sp/>ASN.1<sp/>tag<sp/>as<sp/>specified<sp/>in</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>ITU<sp/>X.690<sp/>(08/2015),<sp/>section<sp/>8.1<sp/>&quot;General<sp/>rules<sp/>for<sp/>encoding&quot;,</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>paragraph<sp/>8.1.2.2:</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*<sp/>Bit<sp/><sp/>8<sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/>6<sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>+-------+-----+------------+</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>|<sp/>Class<sp/>|<sp/>P/C<sp/>|<sp/>Tag<sp/>number<sp/>|</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>+-------+-----+------------+</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group__asn1__module_1ga01a2dcbe2148d903c4bc6eaad4dbcd3d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_TAG_CLASS_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xC0</highlight></codeline>
+<codeline lineno="103" refid="group__asn1__module_1ga5994a5ddfb487f14d03d5b61e335e9cc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_TAG_PC_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight></codeline>
+<codeline lineno="104" refid="group__asn1__module_1gaa2a3c5289c11edb569b306df3411ff3b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ASN1_TAG_VALUE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1F</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="109" refid="group__asn1__module_1gac2f2e00874ca486c912c33bb4f7bb16a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_SIZE(x)<sp/>(sizeof(x)<sp/>-<sp/>1)</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="117" refid="group__asn1__module_1ga0b81f225b3551ec7c4da69b2d183d10b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CMP(oid_str,<sp/>oid_buf)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((MBEDTLS_OID_SIZE(oid_str)<sp/>!=<sp/>(oid_buf)-&gt;len)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>memcmp((oid_str),<sp/>(oid_buf)-&gt;p,<sp/>(oid_buf)-&gt;len)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="group__asn1__module_1ga88259e7a5163b63bc9b618cc0faac0be" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_OID_CMP_RAW(oid_str,<sp/>oid_buf,<sp/>oid_buf_len)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((MBEDTLS_OID_SIZE(oid_str)<sp/>!=<sp/>(oid_buf_len))<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/>memcmp((oid_str),<sp/>(oid_buf),<sp/>(oid_buf_len))<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="137" refid="structmbedtls__asn1__buf" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>{</highlight></codeline>
+<codeline lineno="138" refid="structmbedtls__asn1__buf_1abcca2df9a773acd5b59831ac55993dd1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__buf_1abcca2df9a773acd5b59831ac55993dd1" kindref="member">tag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="structmbedtls__asn1__buf_1a046821787f2c5ecbf2df9f15e0d9486c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__buf_1a046821787f2c5ecbf2df9f15e0d9486c" kindref="member">len</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="structmbedtls__asn1__buf_1a0af0cf9b0801a21ce4652e859876f195" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__buf_1a0af0cf9b0801a21ce4652e859876f195" kindref="member">p</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="group__asn1__module_1ga92008d574dc457ec6c925ef29631545b" kindref="member">mbedtls_asn1_buf</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="structmbedtls__asn1__bitstring" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__bitstring" kindref="compound">mbedtls_asn1_bitstring</ref><sp/>{</highlight></codeline>
+<codeline lineno="148" refid="structmbedtls__asn1__bitstring_1a943b4155650f680f3906ca9be0e66f80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__bitstring_1a943b4155650f680f3906ca9be0e66f80" kindref="member">len</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149" refid="structmbedtls__asn1__bitstring_1aca26541c9ecb384ef2d5c2ca6a05a25b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__bitstring_1aca26541c9ecb384ef2d5c2ca6a05a25b" kindref="member">unused_bits</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="structmbedtls__asn1__bitstring_1af09328f8b1a8cb5bf4afae369ce3629c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__bitstring_1af09328f8b1a8cb5bf4afae369ce3629c" kindref="member">p</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="group__asn1__module_1gadfc9b9fed6d69849942d4a63ece7513d" kindref="member">mbedtls_asn1_bitstring</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structmbedtls__asn1__sequence" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref><sp/>{</highlight></codeline>
+<codeline lineno="158" refid="structmbedtls__asn1__sequence_1a6ef535e31a30926169ee6877af393434" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/><ref refid="structmbedtls__asn1__sequence_1a6ef535e31a30926169ee6877af393434" kindref="member">buf</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167" refid="structmbedtls__asn1__sequence_1ac81969ddae2ace4340503530588d83e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref><sp/>*<ref refid="structmbedtls__asn1__sequence_1ac81969ddae2ace4340503530588d83e1" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="group__asn1__module_1ga21302e30db75b1b5e3387b16958080bf" kindref="member">mbedtls_asn1_sequence</ref>;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="structmbedtls__asn1__named__data" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="175" refid="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/><ref refid="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" kindref="member">oid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176" refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/><ref refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" kindref="member">val</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="structmbedtls__asn1__named__data_1a38f29c37c55319b3c0a9c998c3e5bd0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*<ref refid="structmbedtls__asn1__named__data_1a38f29c37c55319b3c0a9c998c3e5bd0d" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structmbedtls__asn1__named__data_1a6b6ba28e508aae0b897d2e6559c6d527" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(next_merged);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="group__asn1__module_1ga3f3ca4991620a3ab05d747d00a6cb70e" kindref="member">mbedtls_asn1_named_data</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ASN1_PARSE_C)<sp/>||<sp/>defined(MBEDTLS_ASN1_WRITE_C)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(PSA_HAVE_ALG_SOME_ECDSA)</highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="216"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gad45c1d0ed3694fe903342cb32647bfb1" kindref="member">mbedtls_asn1_get_len</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*len);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gae8d7dd42a3b99b61d2ef60bc0c2eaf0d" kindref="member">mbedtls_asn1_get_tag</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_PARSE_C<sp/>||<sp/>MBEDTLS_ASN1_WRITE_C<sp/>||<sp/>PSA_HAVE_ALG_SOME_ECDSA<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="245"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ASN1_PARSE_C)</highlight></codeline>
+<codeline lineno="247"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="262"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gaec9e4bbd8690a8ab17cabf87893dbd2b" kindref="member">mbedtls_asn1_get_bool</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" kindref="member">val</ref>);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga7f8a8b447c11f2200cc5aa8033801b72" kindref="member">mbedtls_asn1_get_int</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" kindref="member">val</ref>);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga59a0f23a9a1a68fdb2b57d9ab4be0334" kindref="member">mbedtls_asn1_get_integer</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**head,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*length);</highlight></codeline>
+<codeline lineno="328"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga61bd2b9ab13412094878a364101f9121" kindref="member">mbedtls_asn1_get_enum</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" kindref="member">val</ref>);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gae2dcf021cf1326b62e2f23aa3bda69d0" kindref="member">mbedtls_asn1_get_bitstring</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__bitstring" kindref="compound">mbedtls_asn1_bitstring</ref><sp/>*bs);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga0f9d2d846b16d5ce18ad99de6224313b" kindref="member">mbedtls_asn1_get_bitstring_null</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*len);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga872d62128956b3574bb0e681536c0d6b" kindref="member">mbedtls_asn1_get_sequence_of</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref><sp/>*cur,</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag);</highlight></codeline>
+<codeline lineno="446"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga835bfde2dc9ada1a3ee434f7ed2da750" kindref="member">mbedtls_asn1_sequence_free</ref>(<ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref><sp/>*seq);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="533"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gaaae35fadc8746f712e496f017064177d" kindref="member">mbedtls_asn1_traverse_sequence_of</ref>(</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tag_must_mask,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tag_must_val,</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tag_may_mask,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tag_may_val,</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*cb)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tag,</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*start,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len),</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx);</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight></codeline>
+<codeline lineno="559"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gadd253579640ea717f368d9a0f6085be0" kindref="member">mbedtls_asn1_get_alg</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*alg,<sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*params);</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"></highlight></codeline>
+<codeline lineno="578"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gadad023ecf92a50d47eaf206705efdb0e" kindref="member">mbedtls_asn1_get_alg_null</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**p,</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*end,</highlight></codeline>
+<codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/>*alg);</highlight></codeline>
+<codeline lineno="581"><highlight class="normal"></highlight></codeline>
+<codeline lineno="592"><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*<ref refid="group__asn1__module_1ga4b93f1c3d4ee1d60f62ce072d4fb3b8f" kindref="member">mbedtls_asn1_find_named_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*list,</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" kindref="member">oid</ref>,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1gafd1a084a9285cebcd289bf6df0e6c021" kindref="member">mbedtls_asn1_free_named_data_list</ref>(<ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>**head);</highlight></codeline>
+<codeline lineno="604"><highlight class="normal"></highlight></codeline>
+<codeline lineno="612"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__asn1__module_1ga6a42d8e2aaee5fdfb4466d5862dd83cf" kindref="member">mbedtls_asn1_free_named_data_list_shallow</ref>(<ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/>*name);</highlight></codeline>
+<codeline lineno="613"><highlight class="normal"></highlight></codeline>
+<codeline lineno="617"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ASN1_PARSE_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="618"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="619"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="620"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="622"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="623"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>asn1.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h"/>
+  </compounddef>
+</doxygen>

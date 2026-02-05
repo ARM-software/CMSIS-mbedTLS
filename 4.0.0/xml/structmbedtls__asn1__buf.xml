@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__asn1__buf" kind="struct" prot="public">
+    <compoundname>mbedtls_asn1_buf</compoundname>
+    <includes refid="asn1_8h" local="no">asn1.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__asn1__buf_1abcca2df9a773acd5b59831ac55993dd1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_asn1_buf::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ASN1 type, e.g. MBEDTLS_ASN1_UTF8_STRING. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="138" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__buf_1a046821787f2c5ecbf2df9f15e0d9486c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_asn1_buf::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ASN1 length, in octets. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="139" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__buf_1a0af0cf9b0801a21ce4652e859876f195" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* mbedtls_asn1_buf::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ASN1 data, e.g. in ASCII. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="140" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Type-length-value structure that allows for ASN1 using DER. </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="137" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="137" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structmbedtls__asn1__buf_1a046821787f2c5ecbf2df9f15e0d9486c" prot="public" virt="non-virtual"><scope>mbedtls_asn1_buf</scope><name>len</name></member>
+      <member refid="structmbedtls__asn1__buf_1a0af0cf9b0801a21ce4652e859876f195" prot="public" virt="non-virtual"><scope>mbedtls_asn1_buf</scope><name>p</name></member>
+      <member refid="structmbedtls__asn1__buf_1abcca2df9a773acd5b59831ac55993dd1" prot="public" virt="non-virtual"><scope>mbedtls_asn1_buf</scope><name>tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

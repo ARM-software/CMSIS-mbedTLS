@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__md__context__t" kind="struct" prot="public">
+    <compoundname>mbedtls_md_context_t</compoundname>
+    <includes refid="md_8h" local="no">md.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__md__context__t_1a46c323f4395d345b4c918e3b6990f1ad" prot="public" static="no" mutable="no">
+        <type>const <ref refid="md_8h_1a496e73a6f229eba89b4abd9955822adb" kindref="member">mbedtls_md_info_t</ref> *</type>
+        <definition>const mbedtls_md_info_t* mbedtls_md_context_t::private_md_info</definition>
+        <argsstring></argsstring>
+        <name>private_md_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Information about the associated message digest. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" line="112" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__md__context__t_1a73d4cfb51391c0329c1bd7d191f740cd" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_md_context_t::private_md_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_md_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The digest-specific context (legacy) or the PSA operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" line="120" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__md__context__t_1a894eb0d7b347fa91fdd3808c9003c50e" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* mbedtls_md_context_t::private_hmac_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_hmac_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The HMAC part of the context. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" line="124" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The generic message-digest context. </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" line="110" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/md.h" bodystart="110" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structmbedtls__md__context__t_1a894eb0d7b347fa91fdd3808c9003c50e" prot="public" virt="non-virtual"><scope>mbedtls_md_context_t</scope><name>private_hmac_ctx</name></member>
+      <member refid="structmbedtls__md__context__t_1a73d4cfb51391c0329c1bd7d191f740cd" prot="public" virt="non-virtual"><scope>mbedtls_md_context_t</scope><name>private_md_ctx</name></member>
+      <member refid="structmbedtls__md__context__t_1a46c323f4395d345b4c918e3b6990f1ad" prot="public" virt="non-virtual"><scope>mbedtls_md_context_t</scope><name>private_md_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

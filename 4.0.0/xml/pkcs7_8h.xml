@@ -1,0 +1,913 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="pkcs7_8h" kind="file">
+    <compoundname>pkcs7.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="asn1_8h" local="yes">mbedtls/asn1.h</includes>
+    <includes refid="x509__crt_8h" local="yes">mbedtls/x509_crt.h</includes>
+    <incdepgraph>
+      <node id="3405">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3424">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3413">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+      </node>
+      <node id="3399">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3425">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3426" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+      </node>
+      <node id="3410">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+      </node>
+      <node id="3419">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3407" relation="include">
+        </childnode>
+        <childnode refid="3420" relation="include">
+        </childnode>
+      </node>
+      <node id="3395">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7.h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3407" relation="include">
+        </childnode>
+        <childnode refid="3418" relation="include">
+        </childnode>
+      </node>
+      <node id="3422">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3415" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+        <childnode refid="3423" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3427" relation="include">
+        </childnode>
+      </node>
+      <node id="3416">
+        <label>stdint.h</label>
+      </node>
+      <node id="3404">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3415">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3402">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3428">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3398">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+        <childnode refid="3401" relation="include">
+        </childnode>
+        <childnode refid="3402" relation="include">
+        </childnode>
+        <childnode refid="3403" relation="include">
+        </childnode>
+      </node>
+      <node id="3409">
+        <label>stddef.h</label>
+      </node>
+      <node id="3403">
+        <label>limits.h</label>
+      </node>
+      <node id="3420">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3421" relation="include">
+        </childnode>
+        <childnode refid="3422" relation="include">
+        </childnode>
+      </node>
+      <node id="3414">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3415" relation="include">
+        </childnode>
+        <childnode refid="3416" relation="include">
+        </childnode>
+      </node>
+      <node id="3421">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+      </node>
+      <node id="3423">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+      </node>
+      <node id="3412">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3413" relation="include">
+        </childnode>
+      </node>
+      <node id="3427">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3416" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+      </node>
+      <node id="3426">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3408">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3410" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+      </node>
+      <node id="3396">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3411">
+        <label>time.h</label>
+      </node>
+      <node id="3397">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+      </node>
+      <node id="3407">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3417" relation="include">
+        </childnode>
+      </node>
+      <node id="3400">
+        <label>/dev/null</label>
+      </node>
+      <node id="3418">
+        <label>mbedtls/x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+        <childnode refid="3429" relation="include">
+        </childnode>
+        <childnode refid="3417" relation="include">
+        </childnode>
+      </node>
+      <node id="3401">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3417">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3406">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="3429">
+        <label>mbedtls/x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__pkcs7__signer__info" prot="public">mbedtls_pkcs7_signer_info</innerclass>
+    <innerclass refid="structmbedtls__pkcs7__signed__data" prot="public">mbedtls_pkcs7_signed_data</innerclass>
+    <innerclass refid="structmbedtls__pkcs7" prot="public">mbedtls_pkcs7</innerclass>
+      <sectiondef kind="user-defined">
+      <header>PKCS #7 Module Error codes</header>
+      <description><para>Note: For the time being, this implementation of the PKCS #7 cryptographic message syntax is a partial implementation of RFC 2315. Differences include:<itemizedlist>
+<listitem><para>The RFC specifies 6 different content types. The only type currently supported in Mbed TLS is the signed-data content type.</para></listitem><listitem><para>The only supported PKCS #7 Signed Data syntax version is version 1</para></listitem><listitem><para>The RFC specifies support for BER. This implementation is limited to DER only.</para></listitem><listitem><para>The RFC specifies that multiple digest algorithms can be specified in the Signed Data type. Only one digest algorithm is supported in Mbed TLS.</para></listitem><listitem><para>The RFC specifies the Signed Data type can contain multiple X.509 or PKCS #6 extended certificates. In Mbed TLS, this list can only contain 0 or 1 certificates and they must be in X.509 format.</para></listitem><listitem><para>The RFC specifies the Signed Data type can contain certificate-revocation lists (CRLs). This implementation has no support for CRLs so it is assumed to be an empty list.</para></listitem><listitem><para>The RFC allows for SignerInfo structure to optionally contain unauthenticatedAttributes and authenticatedAttributes. In Mbed TLS it is assumed these fields are empty.</para></listitem><listitem><para>The RFC allows for the signed Data type to contain contentInfo. This implementation assumes the type is DATA and the content is empty. </para></listitem></itemizedlist>
+</para></description>
+      <memberdef kind="define" id="pkcs7_8h_1ade66df53882a06fc42e6a60983af5958" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_FORMAT</name>
+        <initializer>-0x5300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The format is invalid, e.g. different type expected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="50" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a399644e8cdb610d007a436f751980cd9" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_FEATURE_UNAVAILABLE</name>
+        <initializer>-0x5380</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unavailable feature, e.g. anything other than signed data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="51" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a5910c54d8eba44c453913fcfd1418f8c" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_VERSION</name>
+        <initializer>-0x5400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The PKCS #7 version element is invalid or cannot be parsed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="52" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a4b418034b89beeec2263aacf9b3b07b3" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_CONTENT_INFO</name>
+        <initializer>-0x5480</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The PKCS #7 content info is invalid or cannot be parsed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="53" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a6bc9a8a0eddd6b35acbb593a9b23647a" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_ALG</name>
+        <initializer>-0x5500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The algorithm tag or value is invalid or cannot be parsed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="54" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1addc0a33842c84981d92f14055d938db8" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_CERT</name>
+        <initializer>-0x5580</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The certificate tag or value is invalid or cannot be parsed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="55" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1ac83f9a5ce78ece2b191f996dcc47c528" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_SIGNATURE</name>
+        <initializer>-0x5600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error parsing the signature </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="56" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a9a0333c73e94ed2dffc8486be496252f" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_INVALID_SIGNER_INFO</name>
+        <initializer>-0x5680</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error parsing the signer&apos;s info </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="57" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a17f1b6a79f3f0fca794a21e5a96a0008" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_BAD_INPUT_DATA</name>
+        <initializer><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="58" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1aea99f637be72363c199f8d949a58ebde" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_ALLOC_FAILED</name>
+        <initializer><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allocation of memory failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="59" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a8346b6503f8a7a47d420c7d2cf386674" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_VERIFY_FAIL</name>
+        <initializer><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verification Failed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="pkcs7_8h_1a9f2bb9e33ebca02702ef5743c352367c" prot="public" static="no">
+        <name>MBEDTLS_ERR_PKCS7_CERT_DATE_INVALID</name>
+        <initializer>-0x5880</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The PKCS #7 date issued/expired dates are invalid </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="61" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>PKCS #7 Supported Version</header>
+      <memberdef kind="define" id="pkcs7_8h_1a0f04af4a98910e5ea707ee442581885c" prot="public" static="no">
+        <name>MBEDTLS_PKCS7_SUPPORTED_VERSION</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="68" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921" prot="public" static="no">
+        <name>mbedtls_pkcs7_type</name>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a89946b1d6eedc534150cefdb70ead314" prot="public">
+          <name>MBEDTLS_PKCS7_NONE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ae2c6bd90371dbf2e9c97209177f0ea2c" prot="public">
+          <name>MBEDTLS_PKCS7_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921adffbaccc64f036a8712ce87d5d804c35" prot="public">
+          <name>MBEDTLS_PKCS7_SIGNED_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921abc6de895fd72c5839e2611716289199d" prot="public">
+          <name>MBEDTLS_PKCS7_ENVELOPED_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ab543107204138bdccfeb6124ba20d591" prot="public">
+          <name>MBEDTLS_PKCS7_SIGNED_AND_ENVELOPED_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a56458a9ed590bb2a091799bcacca62c2" prot="public">
+          <name>MBEDTLS_PKCS7_DIGESTED_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ad1fc92dd31c47609b2048406525c4392" prot="public">
+          <name>MBEDTLS_PKCS7_ENCRYPTED_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>PKCS #7 types </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="94" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="94" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="pkcs7_8h_1a7dd415986cd772d7012d2ab3ece3dbe0" prot="public" static="no">
+        <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref></type>
+        <definition>typedef mbedtls_asn1_buf mbedtls_pkcs7_buf</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type-length-value structure that allows for ASN.1 using DER. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="78" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pkcs7_8h_1ad14afbeb54b3f5909a16f36049332c71" prot="public" static="no">
+        <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref></type>
+        <definition>typedef mbedtls_asn1_named_data mbedtls_pkcs7_name</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for ASN.1 named information objects. It allows for Relative Distinguished Names (e.g. cn=localhost,ou=code,etc.). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="84" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pkcs7_8h_1a966cddf6f51682bab3669a7cf19134c5" prot="public" static="no">
+        <type><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref></type>
+        <definition>typedef mbedtls_asn1_sequence mbedtls_pkcs7_sequence</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7_sequence</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Container for a sequence of ASN.1 items </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="89" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pkcs7_8h_1a37f3077159225d8c7179082d0345aaf9" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__pkcs7__signer__info" kindref="compound">mbedtls_pkcs7_signer_info</ref></type>
+        <definition>typedef struct mbedtls_pkcs7_signer_info
+ mbedtls_pkcs7_signer_info</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7_signer_info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure holding PKCS #7 signer info </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pkcs7_8h_1a94226e7d8fa1eb462a5caf32c7270610" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__pkcs7__signed__data" kindref="compound">mbedtls_pkcs7_signed_data</ref></type>
+        <definition>typedef struct mbedtls_pkcs7_signed_data
+ mbedtls_pkcs7_signed_data</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7_signed_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure holding the signed data section </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pkcs7_8h_1aeae91fc6de837e552695628dbb1c0c71" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref></type>
+        <definition>typedef struct mbedtls_pkcs7
+ mbedtls_pkcs7</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_pkcs7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure holding PKCS #7 structure, only signed data for now </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="142" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pkcs7_8h_1a54c26b96188a0ce00aa7506689919629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pkcs7_init</definition>
+        <argsstring>(mbedtls_pkcs7 *pkcs7)</argsstring>
+        <name>mbedtls_pkcs7_init</name>
+        <param>
+          <type><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> *</type>
+          <declname>pkcs7</declname>
+        </param>
+        <briefdescription>
+<para>Initialize <ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> structure. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkcs7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> structure. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs7_8h_1a1578a5703e6013916440f6580f2a1a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pkcs7_parse_der</definition>
+        <argsstring>(mbedtls_pkcs7 *pkcs7, const unsigned char *buf, const size_t buflen)</argsstring>
+        <name>mbedtls_pkcs7_parse_der</name>
+        <param>
+          <type><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> *</type>
+          <declname>pkcs7</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>buflen</declname>
+        </param>
+        <briefdescription>
+<para>Parse a single DER formatted PKCS #7 detached signature. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkcs7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> structure to be filled by the parser. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding only the DER encoded PKCS #7 content. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buflen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size in bytes of <computeroutput>buf</computeroutput>. The size must be exactly the length of the DER encoded PKCS #7 content.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function makes an internal copy of the PKCS #7 buffer <computeroutput>buf</computeroutput>. In particular, <computeroutput>buf</computeroutput> may be destroyed or reused after this call returns. </para><simplesectsep/><para>Signatures with internal data are not supported.</para></simplesect>
+<simplesect kind="return"><para>The <computeroutput>mbedtls_pkcs7_type</computeroutput> of <computeroutput>buf</computeroutput>, if successful. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs7_8h_1a753e183f8690c25b4f9f0bad3e74ce22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pkcs7_signed_data_verify</definition>
+        <argsstring>(mbedtls_pkcs7 *pkcs7, const mbedtls_x509_crt *cert, const unsigned char *data, size_t datalen)</argsstring>
+        <name>mbedtls_pkcs7_signed_data_verify</name>
+        <param>
+          <type><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> *</type>
+          <declname>pkcs7</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+          <declname>cert</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>datalen</declname>
+        </param>
+        <briefdescription>
+<para>Verification of PKCS #7 signature against a caller-supplied certificate. </para>        </briefdescription>
+        <detaileddescription>
+<para>For each signer in the PKCS structure, this function computes a signature over the supplied data, using the supplied certificate and the same digest algorithm as specified by the signer. It then compares this signature against the signer&apos;s signature; verification succeeds if any comparison matches.</para><para>This function does not use the certificates held within the PKCS #7 structure itself, and does not check that the certificate is signed by a trusted certification authority.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkcs7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> structure containing signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Certificate containing key to verify signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Plain data on which signature has to be verified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>datalen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function internally calculates the hash on the supplied plain data for signature verification.</para></simplesect>
+<simplesect kind="return"><para>0 if the signature verifies, or a negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs7_8h_1a7032d51008865683a32d3dc6b8ab389a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_pkcs7_signed_hash_verify</definition>
+        <argsstring>(mbedtls_pkcs7 *pkcs7, const mbedtls_x509_crt *cert, const unsigned char *hash, size_t hashlen)</argsstring>
+        <name>mbedtls_pkcs7_signed_hash_verify</name>
+        <param>
+          <type><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> *</type>
+          <declname>pkcs7</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+          <declname>cert</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>hashlen</declname>
+        </param>
+        <briefdescription>
+<para>Verification of PKCS #7 signature against a caller-supplied certificate. </para>        </briefdescription>
+        <detaileddescription>
+<para>For each signer in the PKCS structure, this function validates a signature over the supplied hash, using the supplied certificate and the same digest algorithm as specified by the signer. Verification succeeds if any signature is good.</para><para>This function does not use the certificates held within the PKCS #7 structure itself, and does not check that the certificate is signed by a trusted certification authority.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkcs7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>PKCS #7 structure containing signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cert</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Certificate containing key to verify signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hash of the plain data on which signature has to be verified. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hashlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the hash.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is different from <ref refid="pkcs7_8h_1a753e183f8690c25b4f9f0bad3e74ce22" kindref="member">mbedtls_pkcs7_signed_data_verify()</ref> in that it is directly passed the hash of the data.</para></simplesect>
+<simplesect kind="return"><para>0 if the signature verifies, or a negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="pkcs7_8h_1abb2798ee91fa3d0d2611fff0d11b5ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_pkcs7_free</definition>
+        <argsstring>(mbedtls_pkcs7 *pkcs7)</argsstring>
+        <name>mbedtls_pkcs7_free</name>
+        <param>
+          <type><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> *</type>
+          <declname>pkcs7</declname>
+        </param>
+        <briefdescription>
+<para>Unallocate all PKCS #7 data and zeroize the memory. It doesn&apos;t free <computeroutput>pkcs7</computeroutput> itself. This should be done by the caller. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pkcs7</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref> structure to free. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h" line="234" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>PKCS #7 generic defines and structures <ulink url="https://tools.ietf.org/html/rfc2315">https://tools.ietf.org/html/rfc2315</ulink>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PKCS7_H</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS7_H</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="asn1_8h" kindref="compound">mbedtls/asn1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="x509__crt_8h" kindref="compound">mbedtls/x509_crt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="pkcs7_8h_1ade66df53882a06fc42e6a60983af5958" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_FORMAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5300<sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="pkcs7_8h_1a399644e8cdb610d007a436f751980cd9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_FEATURE_UNAVAILABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5380<sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="pkcs7_8h_1a5910c54d8eba44c453913fcfd1418f8c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5400<sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="pkcs7_8h_1a4b418034b89beeec2263aacf9b3b07b3" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_CONTENT_INFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5480<sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="pkcs7_8h_1a6bc9a8a0eddd6b35acbb593a9b23647a" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_ALG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5500<sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="pkcs7_8h_1addc0a33842c84981d92f14055d938db8" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_CERT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5580<sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="pkcs7_8h_1ac83f9a5ce78ece2b191f996dcc47c528" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_SIGNATURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5600<sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="pkcs7_8h_1a9a0333c73e94ed2dffc8486be496252f" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_INVALID_SIGNER_INFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5680<sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="pkcs7_8h_1a17f1b6a79f3f0fca794a21e5a96a0008" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_BAD_INPUT_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_ERROR_INVALID_ARGUMENT<sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="pkcs7_8h_1aea99f637be72363c199f8d949a58ebde" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_ALLOC_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_ERROR_INSUFFICIENT_MEMORY<sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="pkcs7_8h_1a8346b6503f8a7a47d420c7d2cf386674" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_VERIFY_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_ERROR_INVALID_SIGNATURE<sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="pkcs7_8h_1a9f2bb9e33ebca02702ef5743c352367c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_PKCS7_CERT_DATE_INVALID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x5880<sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="68" refid="pkcs7_8h_1a0f04af4a98910e5ea707ee442581885c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_PKCS7_SUPPORTED_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>\}<sp/>name<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="78" refid="pkcs7_8h_1a7dd415986cd772d7012d2ab3ece3dbe0" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref><sp/><ref refid="pkcs7_8h_1a7dd415986cd772d7012d2ab3ece3dbe0" kindref="member">mbedtls_pkcs7_buf</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="pkcs7_8h_1ad14afbeb54b3f5909a16f36049332c71" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref><sp/><ref refid="pkcs7_8h_1ad14afbeb54b3f5909a16f36049332c71" kindref="member">mbedtls_pkcs7_name</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="pkcs7_8h_1a966cddf6f51682bab3669a7cf19134c5" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref><sp/><ref refid="pkcs7_8h_1a966cddf6f51682bab3669a7cf19134c5" kindref="member">mbedtls_pkcs7_sequence</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="95" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a89946b1d6eedc534150cefdb70ead314" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a89946b1d6eedc534150cefdb70ead314" kindref="member">MBEDTLS_PKCS7_NONE</ref>=0,</highlight></codeline>
+<codeline lineno="96" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ae2c6bd90371dbf2e9c97209177f0ea2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ae2c6bd90371dbf2e9c97209177f0ea2c" kindref="member">MBEDTLS_PKCS7_DATA</ref>,</highlight></codeline>
+<codeline lineno="97" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921adffbaccc64f036a8712ce87d5d804c35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921adffbaccc64f036a8712ce87d5d804c35" kindref="member">MBEDTLS_PKCS7_SIGNED_DATA</ref>,</highlight></codeline>
+<codeline lineno="98" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921abc6de895fd72c5839e2611716289199d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921abc6de895fd72c5839e2611716289199d" kindref="member">MBEDTLS_PKCS7_ENVELOPED_DATA</ref>,</highlight></codeline>
+<codeline lineno="99" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ab543107204138bdccfeb6124ba20d591" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ab543107204138bdccfeb6124ba20d591" kindref="member">MBEDTLS_PKCS7_SIGNED_AND_ENVELOPED_DATA</ref>,</highlight></codeline>
+<codeline lineno="100" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a56458a9ed590bb2a091799bcacca62c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921a56458a9ed590bb2a091799bcacca62c2" kindref="member">MBEDTLS_PKCS7_DIGESTED_DATA</ref>,</highlight></codeline>
+<codeline lineno="101" refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ad1fc92dd31c47609b2048406525c4392" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921ad1fc92dd31c47609b2048406525c4392" kindref="member">MBEDTLS_PKCS7_ENCRYPTED_DATA</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="pkcs7_8h_1adcc18b53c5b8f2f6557bc152f4aa6921" kindref="member">mbedtls_pkcs7_type</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structmbedtls__pkcs7__signer__info" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pkcs7__signer__info" kindref="compound">mbedtls_pkcs7_signer_info</ref><sp/>{</highlight></codeline>
+<codeline lineno="109" refid="structmbedtls__pkcs7__signer__info_1a35cf176ebb267c2f8b2ef4b16843e231" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(version);</highlight></codeline>
+<codeline lineno="110" refid="structmbedtls__pkcs7__signer__info_1abed81772025a00beb5ddff354578704c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(serial);</highlight></codeline>
+<codeline lineno="111" refid="structmbedtls__pkcs7__signer__info_1a9798bc49ab75cdba9dafafc797f20888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_x509_name</ref><sp/>MBEDTLS_PRIVATE(issuer);</highlight></codeline>
+<codeline lineno="112" refid="structmbedtls__pkcs7__signer__info_1ada1993dd0ecef1fd4dc9dbb42bfa4c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(issuer_raw);</highlight></codeline>
+<codeline lineno="113" refid="structmbedtls__pkcs7__signer__info_1a99897d5b4e81085e720c98ca8357f322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(alg_identifier);</highlight></codeline>
+<codeline lineno="114" refid="structmbedtls__pkcs7__signer__info_1ae2e52219b1ad5bea0e26124b5c9cb5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(sig_alg_identifier);</highlight></codeline>
+<codeline lineno="115" refid="structmbedtls__pkcs7__signer__info_1ad371a1d47beff6af4eee5068fc1f5b5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_x509_buf</ref><sp/>MBEDTLS_PRIVATE(sig);</highlight></codeline>
+<codeline lineno="116" refid="structmbedtls__pkcs7__signer__info_1a5412c89f1132ddea73003f74ac899228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pkcs7__signer__info" kindref="compound">mbedtls_pkcs7_signer_info</ref><sp/>*MBEDTLS_PRIVATE(next);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><ref refid="pkcs7_8h_1a37f3077159225d8c7179082d0345aaf9" kindref="member">mbedtls_pkcs7_signer_info</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="structmbedtls__pkcs7__signed__data" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pkcs7__signed__data" kindref="compound">mbedtls_pkcs7_signed_data</ref><sp/>{</highlight></codeline>
+<codeline lineno="124" refid="structmbedtls__pkcs7__signed__data_1a0242c4759e56dc74acfdddd39df79346" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(version);</highlight></codeline>
+<codeline lineno="125" refid="structmbedtls__pkcs7__signed__data_1a89fb7cba53df72c061d13155339dcf68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_pkcs7_buf<sp/>MBEDTLS_PRIVATE(digest_alg_identifiers);</highlight></codeline>
+<codeline lineno="126" refid="structmbedtls__pkcs7__signed__data_1aae4b74fca22825e071360095c90f2837" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(no_of_certs);</highlight></codeline>
+<codeline lineno="127" refid="structmbedtls__pkcs7__signed__data_1a1cb6b086269a700eb38c86d53a521706" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref><sp/>MBEDTLS_PRIVATE(certs);</highlight></codeline>
+<codeline lineno="128" refid="structmbedtls__pkcs7__signed__data_1a589f3c8bab631daf436114e88af463ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(no_of_crls);</highlight></codeline>
+<codeline lineno="129" refid="structmbedtls__pkcs7__signed__data_1a0da2605daddeca92d1d152ca096be737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__x509__crl" kindref="compound">mbedtls_x509_crl</ref><sp/>MBEDTLS_PRIVATE(crl);</highlight></codeline>
+<codeline lineno="130" refid="structmbedtls__pkcs7__signed__data_1a94964a5e82177da4d9c1a78ee6c40168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(no_of_signers);</highlight></codeline>
+<codeline lineno="131" refid="structmbedtls__pkcs7__signed__data_1afde6163a22f8ebbfe6f747bccd36d5e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pkcs7__signer__info" kindref="compound">mbedtls_pkcs7_signer_info</ref><sp/>MBEDTLS_PRIVATE(signers);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><ref refid="pkcs7_8h_1a94226e7d8fa1eb462a5caf32c7270610" kindref="member">mbedtls_pkcs7_signed_data</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structmbedtls__pkcs7" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>{</highlight></codeline>
+<codeline lineno="139" refid="structmbedtls__pkcs7_1a76b592973604f78281811c7478674605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>mbedtls_pkcs7_buf<sp/>MBEDTLS_PRIVATE(raw);</highlight></codeline>
+<codeline lineno="140" refid="structmbedtls__pkcs7_1afac7baaec18a86e040e563655587ffb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__pkcs7__signed__data" kindref="compound">mbedtls_pkcs7_signed_data</ref><sp/>MBEDTLS_PRIVATE(signed_data);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><ref refid="pkcs7_8h_1aeae91fc6de837e552695628dbb1c0c71" kindref="member">mbedtls_pkcs7</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pkcs7_8h_1a54c26b96188a0ce00aa7506689919629" kindref="member">mbedtls_pkcs7_init</ref>(<ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>*pkcs7);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkcs7_8h_1a1578a5703e6013916440f6580f2a1a90" kindref="member">mbedtls_pkcs7_parse_der</ref>(<ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>*pkcs7,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buflen);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkcs7_8h_1a753e183f8690c25b4f9f0bad3e74ce22" kindref="member">mbedtls_pkcs7_signed_data_verify</ref>(<ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>*pkcs7,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref><sp/>*cert,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>datalen);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pkcs7_8h_1a7032d51008865683a32d3dc6b8ab389a" kindref="member">mbedtls_pkcs7_signed_hash_verify</ref>(<ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>*pkcs7,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref><sp/>*cert,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*hash,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>hashlen);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="pkcs7_8h_1abb2798ee91fa3d0d2611fff0d11b5ec2" kindref="member">mbedtls_pkcs7_free</ref>(<ref refid="structmbedtls__pkcs7" kindref="compound">mbedtls_pkcs7</ref><sp/>*pkcs7);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="237"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="239"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>pkcs7.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/pkcs7.h"/>
+  </compounddef>
+</doxygen>

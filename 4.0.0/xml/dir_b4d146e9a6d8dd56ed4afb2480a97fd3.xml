@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_b4d146e9a6d8dd56ed4afb2480a97fd3" kind="dir">
+    <compoundname>mbedtls</compoundname>
+    <innerdir refid="dir_1c092fe723a0e2881ceefbf461672f2c">private</innerdir>
+    <innerfile refid="include_2mbedtls_2build__info_8h">include/mbedtls/build_info.h</innerfile>
+    <innerfile refid="debug_8h">debug.h</innerfile>
+    <innerfile refid="error_8h">error.h</innerfile>
+    <innerfile refid="mbedtls__config_8h">mbedtls_config.h</innerfile>
+    <innerfile refid="net__sockets_8h">net_sockets.h</innerfile>
+    <innerfile refid="oid_8h">oid.h</innerfile>
+    <innerfile refid="pkcs7_8h">pkcs7.h</innerfile>
+    <innerfile refid="ssl_8h">ssl.h</innerfile>
+    <innerfile refid="ssl__cache_8h">ssl_cache.h</innerfile>
+    <innerfile refid="ssl__ciphersuites_8h">ssl_ciphersuites.h</innerfile>
+    <innerfile refid="ssl__cookie_8h">ssl_cookie.h</innerfile>
+    <innerfile refid="ssl__ticket_8h">ssl_ticket.h</innerfile>
+    <innerfile refid="timing_8h">timing.h</innerfile>
+    <innerfile refid="include_2mbedtls_2version_8h">include/mbedtls/version.h</innerfile>
+    <innerfile refid="x509_8h">x509.h</innerfile>
+    <innerfile refid="x509__crl_8h">x509_crl.h</innerfile>
+    <innerfile refid="x509__crt_8h">x509_crt.h</innerfile>
+    <innerfile refid="x509__csr_8h">x509_csr.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/"/>
+  </compounddef>
+</doxygen>

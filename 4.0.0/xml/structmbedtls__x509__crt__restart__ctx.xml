@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__crt__restart__ctx" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_crt_restart_ctx</compoundname>
+    <includes refid="x509__crt_8h" local="no">x509_crt.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structmbedtls__x509__crt__restart__ctx_1a5b4ae54d73db49b809e7ae89d1a3a2fb" prot="public" static="no">
+        <name>@3</name>
+        <enumvalue id="structmbedtls__x509__crt__restart__ctx_1a5b4ae54d73db49b809e7ae89d1a3a2fba2cb19e9a171b1690366a27a99cbb6cb2" prot="public">
+          <name>x509_crt_rs_none</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmbedtls__x509__crt__restart__ctx_1a5b4ae54d73db49b809e7ae89d1a3a2fbaa390c992967af34cb2177b81ba6dabd6" prot="public">
+          <name>x509_crt_rs_find_parent</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="293" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="293" bodyend="296"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1a926719699e75b70cc4960c226aa204cf" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__pk__restart__ctx" kindref="compound">mbedtls_pk_restart_ctx</ref></type>
+        <definition>mbedtls_pk_restart_ctx mbedtls_x509_crt_restart_ctx::private_pk</definition>
+        <argsstring></argsstring>
+        <name>private_pk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="282" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1a238a0be742260e1dd42c6b6e7904ccd5" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+        <definition>mbedtls_x509_crt* mbedtls_x509_crt_restart_ctx::private_parent</definition>
+        <argsstring></argsstring>
+        <name>private_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="285" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1ab63ca3dc466fd8f78e895c2673d69a23" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt" kindref="compound">mbedtls_x509_crt</ref> *</type>
+        <definition>mbedtls_x509_crt* mbedtls_x509_crt_restart_ctx::private_fallback_parent</definition>
+        <argsstring></argsstring>
+        <name>private_fallback_parent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="286" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1a02bb232d11e11683517ad988824f2ea8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt_restart_ctx::private_fallback_signature_is_good</definition>
+        <argsstring></argsstring>
+        <name>private_fallback_signature_is_good</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="287" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1acc02e8fc810fe275296fb68d8fc8e225" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt_restart_ctx::private_parent_is_trusted</definition>
+        <argsstring></argsstring>
+        <name>private_parent_is_trusted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="290" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1a86709f59ab330eca450954dd0a073b6d" prot="public" static="no" mutable="no">
+        <type>enum mbedtls_x509_crt_restart_ctx::@3</type>
+        <definition>enum mbedtls_x509_crt_restart_ctx::@3  mbedtls_x509_crt_restart_ctx::private_in_progress</definition>
+        <argsstring></argsstring>
+        <name>private_in_progress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="296" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1abf6af638f4d3adc1e3f603ecb50c9a7f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_x509_crt_restart_ctx::private_self_cnt</definition>
+        <argsstring></argsstring>
+        <name>private_self_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="297" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crt__restart__ctx_1a47b415d9ae473c16a26df70abcf3eef5" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__crt__verify__chain" kindref="compound">mbedtls_x509_crt_verify_chain</ref></type>
+        <definition>mbedtls_x509_crt_verify_chain mbedtls_x509_crt_restart_ctx::private_ver_chain</definition>
+        <argsstring></argsstring>
+        <name>private_ver_chain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="298" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context for resuming X.509 verify operations. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="641">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="641" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="642" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="642">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="647">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="640">
+        <label>mbedtls_x509_crt</label>
+        <link refid="structmbedtls__x509__crt"/>
+        <childnode refid="641" relation="usage">
+          <edgelabel>subject_alt_names</edgelabel>
+          <edgelabel>ext_key_usage</edgelabel>
+          <edgelabel>certificate_policies</edgelabel>
+        </childnode>
+        <childnode refid="643" relation="usage">
+          <edgelabel>authority_key_id</edgelabel>
+        </childnode>
+        <childnode refid="644" relation="usage">
+          <edgelabel>issuer</edgelabel>
+          <edgelabel>subject</edgelabel>
+        </childnode>
+        <childnode refid="642" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>issuer_raw</edgelabel>
+          <edgelabel>pk_raw</edgelabel>
+          <edgelabel>sig_oid</edgelabel>
+          <edgelabel>v3_ext</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>subject_raw</edgelabel>
+          <edgelabel>private_sig</edgelabel>
+          <edgelabel>subject_id</edgelabel>
+          <edgelabel>subject_key_id</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="645" relation="usage">
+          <edgelabel>valid_to</edgelabel>
+          <edgelabel>valid_from</edgelabel>
+        </childnode>
+        <childnode refid="640" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="646" relation="usage">
+          <edgelabel>pk</edgelabel>
+        </childnode>
+      </node>
+      <node id="643">
+        <label>mbedtls_x509_authority</label>
+        <link refid="structmbedtls__x509__authority"/>
+        <childnode refid="641" relation="usage">
+          <edgelabel>authorityCertIssuer</edgelabel>
+        </childnode>
+        <childnode refid="642" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>keyIdentifier</edgelabel>
+          <edgelabel>authorityCertSerialNumber</edgelabel>
+        </childnode>
+      </node>
+      <node id="645">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+      <node id="649">
+        <label>mbedtls_x509_crt_verify_chain_item</label>
+        <link refid="structmbedtls__x509__crt__verify__chain__item"/>
+        <childnode refid="640" relation="usage">
+          <edgelabel>private_crt</edgelabel>
+        </childnode>
+      </node>
+      <node id="638">
+        <label>mbedtls_x509_crt_restart_ctx</label>
+        <link refid="structmbedtls__x509__crt__restart__ctx"/>
+        <childnode refid="639" relation="usage">
+          <edgelabel>private_pk</edgelabel>
+        </childnode>
+        <childnode refid="640" relation="usage">
+          <edgelabel>private_fallback_parent</edgelabel>
+          <edgelabel>private_parent</edgelabel>
+        </childnode>
+        <childnode refid="648" relation="usage">
+          <edgelabel>private_ver_chain</edgelabel>
+        </childnode>
+      </node>
+      <node id="646">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+        <childnode refid="647" relation="usage">
+          <edgelabel>private_priv_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="644">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="644" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="642" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+      <node id="648">
+        <label>mbedtls_x509_crt_verify_chain</label>
+        <link refid="structmbedtls__x509__crt__verify__chain"/>
+        <childnode refid="640" relation="usage">
+          <edgelabel>private_trust_ca_cb_result</edgelabel>
+        </childnode>
+        <childnode refid="649" relation="usage">
+          <edgelabel>private_items</edgelabel>
+        </childnode>
+      </node>
+      <node id="639">
+        <label>mbedtls_pk_restart_ctx</label>
+        <link refid="structmbedtls__pk__restart__ctx"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" line="280" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crt.h" bodystart="280" bodyend="300"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1ab63ca3dc466fd8f78e895c2673d69a23" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_fallback_parent</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a02bb232d11e11683517ad988824f2ea8" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_fallback_signature_is_good</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a86709f59ab330eca450954dd0a073b6d" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_in_progress</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a238a0be742260e1dd42c6b6e7904ccd5" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_parent</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1acc02e8fc810fe275296fb68d8fc8e225" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_parent_is_trusted</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a926719699e75b70cc4960c226aa204cf" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_pk</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1abf6af638f4d3adc1e3f603ecb50c9a7f" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_self_cnt</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a47b415d9ae473c16a26df70abcf3eef5" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>private_ver_chain</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a5b4ae54d73db49b809e7ae89d1a3a2fbaa390c992967af34cb2177b81ba6dabd6" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>x509_crt_rs_find_parent</name></member>
+      <member refid="structmbedtls__x509__crt__restart__ctx_1a5b4ae54d73db49b809e7ae89d1a3a2fba2cb19e9a171b1690366a27a99cbb6cb2" prot="public" virt="non-virtual"><scope>mbedtls_x509_crt_restart_ctx</scope><name>x509_crt_rs_none</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

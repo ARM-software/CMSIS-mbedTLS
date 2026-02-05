@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__cookie__ctx" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_cookie_ctx</compoundname>
+    <includes refid="ssl__cookie_8h" local="no">ssl_cookie.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__cookie__ctx_1aedc96e1317aee7d942eef6995c0258b1" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+        <definition>mbedtls_svc_key_id_t mbedtls_ssl_cookie_ctx::private_psa_hmac_key</definition>
+        <argsstring></argsstring>
+        <name>private_psa_hmac_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key id for the HMAC portion </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="40" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cookie__ctx_1a7642919792a1cf19445305af9b78d3c7" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_ssl_cookie_ctx::private_psa_hmac_alg</definition>
+        <argsstring></argsstring>
+        <name>private_psa_hmac_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key algorithm for the HMAC portion </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="41" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cookie__ctx_1ad38cf167c3cae39cf8b39098e607721f" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long mbedtls_ssl_cookie_ctx::private_timeout</definition>
+        <argsstring></argsstring>
+        <name>private_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>timeout delay, in seconds if HAVE_TIME, or in number of tickets issued </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="45" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Context for the default cookie functions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="575">
+        <label>mbedtls_ssl_cookie_ctx</label>
+        <link refid="structmbedtls__ssl__cookie__ctx"/>
+        <childnode refid="576" relation="usage">
+          <edgelabel>private_psa_hmac_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="576">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" line="39" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cookie.h" bodystart="39" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__cookie__ctx_1a7642919792a1cf19445305af9b78d3c7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cookie_ctx</scope><name>private_psa_hmac_alg</name></member>
+      <member refid="structmbedtls__ssl__cookie__ctx_1aedc96e1317aee7d942eef6995c0258b1" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cookie_ctx</scope><name>private_psa_hmac_key</name></member>
+      <member refid="structmbedtls__ssl__cookie__ctx_1ad38cf167c3cae39cf8b39098e607721f" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cookie_ctx</scope><name>private_timeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

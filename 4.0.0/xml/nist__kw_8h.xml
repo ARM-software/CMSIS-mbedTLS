@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="nist__kw_8h" kind="file">
+    <compoundname>nist_kw.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="crypto__types_8h" local="yes">psa/crypto_types.h</includes>
+    <includes refid="crypto__values_8h" local="yes">psa/crypto_values.h</includes>
+    <incdepgraph>
+      <node id="3316">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3313" relation="include">
+        </childnode>
+      </node>
+      <node id="3308">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3315">
+        <label>stdint.h</label>
+      </node>
+      <node id="3314">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3311">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3307">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3308" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+        <childnode refid="3310" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3312" relation="include">
+        </childnode>
+      </node>
+      <node id="3312">
+        <label>limits.h</label>
+      </node>
+      <node id="3313">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3314" relation="include">
+        </childnode>
+        <childnode refid="3315" relation="include">
+        </childnode>
+      </node>
+      <node id="3305">
+        <label>nist_kw.h</label>
+        <link refid="nist_kw.h"/>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3313" relation="include">
+        </childnode>
+        <childnode refid="3316" relation="include">
+        </childnode>
+      </node>
+      <node id="3306">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3309">
+        <label>/dev/null</label>
+      </node>
+      <node id="3310">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" prot="public" static="no">
+        <name>mbedtls_nist_kw_mode_t</name>
+        <enumvalue id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" prot="public">
+          <name>MBEDTLS_KW_MODE_KW</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" prot="public">
+          <name>MBEDTLS_KW_MODE_KWP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/nist_kw.h" line="35" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/nist_kw.h" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nist__kw_8h_1aa86eca7003c8f361dca317742a02fdd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t mbedtls_nist_kw_wrap</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, mbedtls_nist_kw_mode_t mode, const unsigned char *input, size_t input_length, unsigned char *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>mbedtls_nist_kw_wrap</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+<para>This function encrypts a buffer using key wrapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping PSA key ID to use for encryption. The key should have the following attributes:<itemizedlist>
+<listitem><para>type: <ref refid="group__crypto__types_1ga6ee54579dcf278c677eda4bb1a29575e" kindref="member">PSA_KEY_TYPE_AES</ref></para></listitem><listitem><para>algorithm: <ref refid="group__crypto__types_1gab8f0609cd0f12cccc9c950fd5a81a0e3" kindref="member">PSA_ALG_ECB_NO_PADDING</ref></para></listitem><listitem><para>usage flag: <ref refid="group__policy_1ga75153b296d045d529d97203a6a995dad" kindref="member">PSA_KEY_USAGE_ENCRYPT</ref> + other flags if required by the application. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping mode to use (<ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" kindref="member">MBEDTLS_KW_MODE_KW</ref> or <ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" kindref="member">MBEDTLS_KW_MODE_KWP</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. The input uses units of 8 Bytes called semiblocks. <itemizedlist>
+<listitem>
+<para>For KW mode: a multiple of 8 bytes between 16 and 2^57-8 inclusive.  </para></listitem>
+<listitem>
+<para>For KWP mode: any length between 1 and 2^32-1 inclusive.</para></listitem>
+</itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. <itemizedlist>
+<listitem>
+<para>For KW mode: Must be at least 8 bytes larger than <computeroutput>in_len</computeroutput>. </para></listitem>
+<listitem>
+<para>For KWP mode: Must be at least 8 bytes larger rounded up to a multiple of 8 bytes for KWP (15 bytes at most).</para></listitem>
+</itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The capacity of the output buffer. <computeroutput>0</computeroutput> on failure. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the number of bytes written to the output buffer. <computeroutput>0</computeroutput> on failure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> for invalid input length. </para><simplesectsep/><para>Another error code on failure of the underlying cipher. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/nist_kw.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="nist__kw_8h_1a072b43aba23a012bc7b1991eee84dfd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t mbedtls_nist_kw_unwrap</definition>
+        <argsstring>(mbedtls_svc_key_id_t key, mbedtls_nist_kw_mode_t mode, const unsigned char *input, size_t input_length, unsigned char *output, size_t output_size, size_t *output_length)</argsstring>
+        <name>mbedtls_nist_kw_unwrap</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>input_length</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>output_length</declname>
+        </param>
+        <briefdescription>
+<para>This function decrypts a buffer using key wrapping. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping PSA key ID to use for encryption. The key should have the following attributes:<itemizedlist>
+<listitem><para>type: <ref refid="group__crypto__types_1ga6ee54579dcf278c677eda4bb1a29575e" kindref="member">PSA_KEY_TYPE_AES</ref></para></listitem><listitem><para>algorithm: <ref refid="group__crypto__types_1gab8f0609cd0f12cccc9c950fd5a81a0e3" kindref="member">PSA_ALG_ECB_NO_PADDING</ref></para></listitem><listitem><para>usage flag: <ref refid="group__policy_1gac3f2d2e5983db1edde9f142ca9bf8e6a" kindref="member">PSA_KEY_USAGE_DECRYPT</ref> + other flags if required by the application. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key wrapping mode to use (<ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" kindref="member">MBEDTLS_KW_MODE_KW</ref> or <ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" kindref="member">MBEDTLS_KW_MODE_KWP</ref>) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the input data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the input data in Bytes. The input uses units of 8 Bytes called semiblocks. The input must be a multiple of semiblocks. <itemizedlist>
+<listitem>
+<para>For KW mode: a multiple of 8 bytes between 24 and 2^57 inclusive.  </para></listitem>
+<listitem>
+<para>For KWP mode: a multiple of 8 bytes between 16 and 2^32 inclusive.</para></listitem>
+</itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer holding the output data. The output buffer&apos;s minimal length is 8 bytes shorter than <computeroutput>in_len</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The capacity of the output buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output_length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes written to the output buffer. <computeroutput>0</computeroutput> on failure. For KWP mode, the length could be up to 15 bytes shorter than <computeroutput>in_len</computeroutput>, depending on how much padding was added to the data.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> for invalid input length. </para><simplesectsep/><para><ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref> for invalid ciphertext. </para><simplesectsep/><para>Another error code on failure of the underlying cipher. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/nist_kw.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file provides an API for key wrapping (KW) and key wrapping with padding (KWP) as defined in NIST SP 800-38F. <ulink url="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38F.pdf">https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-38F.pdf</ulink>. </para>    </briefdescription>
+    <detaileddescription>
+<para>Key wrapping specifies a deterministic authenticated-encryption mode of operation, according to <emphasis>NIST SP 800-38F: Recommendation for Block Cipher Modes of Operation: Methods for Key Wrapping</emphasis>. Its purpose is to protect cryptographic keys.</para><para>Its equivalent is RFC 3394 for KW, and RFC 5649 for KWP. <ulink url="https://tools.ietf.org/html/rfc3394">https://tools.ietf.org/html/rfc3394</ulink> <ulink url="https://tools.ietf.org/html/rfc5649">https://tools.ietf.org/html/rfc5649</ulink> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_NIST_KW_H</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_NIST_KW_H</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__types_8h" kindref="compound">psa/crypto_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="crypto__values_8h" kindref="compound">psa/crypto_values.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a38a95849df9d69ff61f79a41acce0448" kindref="member">MBEDTLS_KW_MODE_KW</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="37" refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59a9c6773529a16ea7f99a3ab98cee0918c" kindref="member">MBEDTLS_KW_MODE_KWP</ref><sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref><sp/><ref refid="nist__kw_8h_1aa86eca7003c8f361dca317742a02fdd0" kindref="member">mbedtls_nist_kw_wrap</ref>(<ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref><sp/>mode,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>input_length,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*output_length);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref><sp/><ref refid="nist__kw_8h_1a072b43aba23a012bc7b1991eee84dfd6" kindref="member">mbedtls_nist_kw_unwrap</ref>(<ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref><sp/>key,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="nist__kw_8h_1a84b63905229e3a4350f470b803c4de59" kindref="member">mbedtls_nist_kw_mode_t</ref><sp/>mode,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*input,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>input_length,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*output_length);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_NIST_KW_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/nist_kw.h"/>
+  </compounddef>
+</doxygen>

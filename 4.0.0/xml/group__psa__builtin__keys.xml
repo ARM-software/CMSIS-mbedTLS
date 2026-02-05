@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__psa__builtin__keys" kind="group">
+    <compoundname>psa_builtin_keys</compoundname>
+    <title>Built-in keys</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__psa__builtin__keys_1ga1eb805bebc295cc2f7132679fa85d43d" prot="public" static="no">
+        <type>uint64_t</type>
+        <definition>typedef uint64_t psa_drv_slot_number_t</definition>
+        <argsstring></argsstring>
+        <name>psa_drv_slot_number_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A slot number identifying a key in a driver.</para><para>Values of this type are used to identify built-in keys. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="321" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__psa__builtin__keys_1gadc4d72a56b1aa44a9e244d4843cfe209" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int psa_key_id_is_builtin</definition>
+        <argsstring>(psa_key_id_t key_id)</argsstring>
+        <name>psa_key_id_is_builtin</name>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref></type>
+          <declname>key_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test whether a key identifier belongs to the builtin key range.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key identifier to test.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key identifier is a builtin key identifier. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key identifier is not a builtin key identifier. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="333" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="333" bodyend="337"/>
+        <references refid="group__psa__builtin__keys_1ga0af04ffbbc3f6bc08562381205b8ef5e" compoundref="crypto__extra_8h" startline="315">MBEDTLS_PSA_KEY_ID_BUILTIN_MAX</references>
+        <references refid="group__psa__builtin__keys_1gaa0cdcd889aaaca7d78c378deb1e14353" compoundref="crypto__extra_8h" startline="308">MBEDTLS_PSA_KEY_ID_BUILTIN_MIN</references>
+      </memberdef>
+      <memberdef kind="function" id="group__psa__builtin__keys_1gaffcd70aaab258bd6a1721b031f9965c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t mbedtls_psa_platform_get_builtin_key</definition>
+        <argsstring>(mbedtls_svc_key_id_t key_id, psa_key_lifetime_t *lifetime, psa_drv_slot_number_t *slot_number)</argsstring>
+        <name>mbedtls_psa_platform_get_builtin_key</name>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+          <declname>key_id</declname>
+        </param>
+        <param>
+          <type><ref refid="group__key__lifetimes_1ga6821ff6dd39dc2bc370ded760ad8b0cf" kindref="member">psa_key_lifetime_t</ref> *</type>
+          <declname>lifetime</declname>
+        </param>
+        <param>
+          <type><ref refid="group__psa__builtin__keys_1ga1eb805bebc295cc2f7132679fa85d43d" kindref="member">psa_drv_slot_number_t</ref> *</type>
+          <declname>slot_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Platform function to obtain the location and slot number of a built-in key.</para><para>An application-specific implementation of this function must be provided if <ref refid="crypto__config_8h_1a1bd8bee51fb122e552a4cbc1bbdb0b96" kindref="member">MBEDTLS_PSA_CRYPTO_BUILTIN_KEYS</ref> is enabled. This would typically be provided as part of a platform&apos;s system image.</para><para><ref refid="group__key__lifetimes_1gafac336b4a8b7309d90370fc57c71f01e" kindref="member">MBEDTLS_SVC_KEY_ID_GET_KEY_ID</ref>(<computeroutput>key_id</computeroutput>) needs to be in the range from <ref refid="group__psa__builtin__keys_1gaa0cdcd889aaaca7d78c378deb1e14353" kindref="member">MBEDTLS_PSA_KEY_ID_BUILTIN_MIN</ref> to <ref refid="group__psa__builtin__keys_1ga0af04ffbbc3f6bc08562381205b8ef5e" kindref="member">MBEDTLS_PSA_KEY_ID_BUILTIN_MAX</ref>.</para><para>In a multi-application configuration (<computeroutput>MBEDTLS_PSA_CRYPTO_KEY_ID_ENCODES_OWNER</computeroutput> is defined), this function should check that <ref refid="group__key__lifetimes_1gae05471b23d45767d768416bfe882eb79" kindref="member">MBEDTLS_SVC_KEY_ID_GET_OWNER_ID</ref>(<computeroutput>key_id</computeroutput>) is allowed to use the given key.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key ID for which to retrieve the location and slot attributes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the lifetime associated with the key corresponding to <computeroutput>key_id</computeroutput>. Lifetime is a combination of which driver contains the key, and with what persistence level the key is intended to be used. If the platform implementation does not contain specific information about the intended key persistence level, the persistence level may be reported as <ref refid="group__key__lifetimes_1gafc5d5c94f98e885ae5a2bb789deb4d91" kindref="member">PSA_KEY_PERSISTENCE_DEFAULT</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">slot_number</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, the slot number known to the driver registered at the lifetime location reported through <computeroutput>lifetime</computeroutput> which corresponds to the requested built-in key.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The requested key identifier designates a built-in key. In a multi-application configuration, the requested owner is allowed to access it. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" kindref="member">PSA_ERROR_DOES_NOT_EXIST</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The requested key identifier is not a built-in key which is known to this function. If a key exists in the key storage with this identifier, the data from the storage will be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>(any other error) Any other error is propagated to the function that requested the key. Common errors include:<itemizedlist>
+<listitem><para><ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref>: the key exists but the requested owner is not allowed to access it. </para></listitem></itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="383" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__psa__builtin__keys_1gaa0cdcd889aaaca7d78c378deb1e14353" prot="public" static="no">
+        <name>MBEDTLS_PSA_KEY_ID_BUILTIN_MIN</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x7fff0000)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minimum value for a key identifier that is built into the implementation.</para><para>The range of key identifiers from <ref refid="group__psa__builtin__keys_1gaa0cdcd889aaaca7d78c378deb1e14353" kindref="member">MBEDTLS_PSA_KEY_ID_BUILTIN_MIN</ref> to <ref refid="group__psa__builtin__keys_1ga0af04ffbbc3f6bc08562381205b8ef5e" kindref="member">MBEDTLS_PSA_KEY_ID_BUILTIN_MAX</ref> within the range from <ref refid="group__key__lifetimes_1ga1f7e6d90f523bef964d207c1d3236e0b" kindref="member">PSA_KEY_ID_VENDOR_MIN</ref> and <ref refid="group__key__lifetimes_1ga3afb6bb4644c995cf95309a71e7baeb1" kindref="member">PSA_KEY_ID_VENDOR_MAX</ref> and must not intersect with any other set of implementation-chosen key identifiers.</para><para>This value is part of the library&apos;s API since changing it would invalidate the values of built-in key identifiers in applications. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="308" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="308" bodyend="-1"/>
+        <referencedby refid="group__psa__builtin__keys_1gadc4d72a56b1aa44a9e244d4843cfe209" compoundref="crypto__extra_8h" startline="333" endline="337">psa_key_id_is_builtin</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="group__psa__builtin__keys_1ga0af04ffbbc3f6bc08562381205b8ef5e" prot="public" static="no">
+        <name>MBEDTLS_PSA_KEY_ID_BUILTIN_MAX</name>
+        <initializer>((<ref refid="group__key__lifetimes_1ga11e986351c65bd3dc3c0fe2cd9926e4b" kindref="member">psa_key_id_t</ref>) 0x7fffefff)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum value for a key identifier that is built into the implementation.</para><para>See <ref refid="group__psa__builtin__keys_1gaa0cdcd889aaaca7d78c378deb1e14353" kindref="member">MBEDTLS_PSA_KEY_ID_BUILTIN_MIN</ref> for more information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" line="315" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_extra.h" bodystart="315" bodyend="-1"/>
+        <referencedby refid="group__psa__builtin__keys_1gadc4d72a56b1aa44a9e244d4843cfe209" compoundref="crypto__extra_8h" startline="333" endline="337">psa_key_id_is_builtin</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

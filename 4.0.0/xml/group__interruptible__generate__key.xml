@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__interruptible__generate__key" kind="group">
+    <compoundname>interruptible_generate_key</compoundname>
+    <title>Interruptible Key Generation</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__interruptible__generate__key_1ga30c62d199e0aacc84996e1b93c8c7987" prot="public" static="no">
+        <type>struct <ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_s</ref></type>
+        <definition>typedef struct psa_generate_key_iop_s psa_generate_key_iop_t</definition>
+        <argsstring></argsstring>
+        <name>psa_generate_key_iop_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type of the state data structure for interruptible key generation operations.</para><para>Before calling any function on an interruptible key generation object, the application must initialize it by any of the following means:<itemizedlist>
+<listitem><para>Set the structure to all-bits-zero, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">memset(&amp;operation,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(operation));</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to logical zero values, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_t</ref><sp/>operation<sp/>=<sp/>{0};</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Initialize the structure to the initializer <ref refid="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" kindref="member">PSA_GENERATE_KEY_IOP_INIT</ref>, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_t</ref><sp/>operation<sp/>=<sp/><ref refid="crypto__struct_8h_1ad788ad5f94366600760e7a6b06f23ee8" kindref="member">PSA_GENERATE_KEY_IOP_INIT</ref>;</highlight></codeline>
+</programlisting></para></listitem><listitem><para>Assign the result of the function <ref refid="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" kindref="member">psa_generate_key_iop_init()</ref> to the structure, for example: <programlisting><codeline><highlight class="normal"><ref refid="structpsa__generate__key__iop__s" kindref="compound">psa_generate_key_iop_t</ref><sp/>operation;</highlight></codeline>
+<codeline><highlight class="normal">operation<sp/>=<sp/><ref refid="crypto__struct_8h_1ac0bc38894df022be42076cb34a535153" kindref="member">psa_generate_key_iop_init</ref>();</highlight></codeline>
+</programlisting></para></listitem></itemizedlist>
+</para><para>This is an implementation-defined <computeroutput>struct</computeroutput>. Applications should not make any assumptions about the content of this structure. Implementation details can change in future versions without notice. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="5248" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" bodystart="5289" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__interruptible__generate__key_1gad2e3a4cf8496963d572a45e35666bed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_generate_key_iop_get_num_ops</definition>
+        <argsstring>(psa_generate_key_iop_t *operation)</argsstring>
+        <name>psa_generate_key_iop_get_num_ops</name>
+        <param>
+          <type><ref refid="group__interruptible__generate__key_1ga30c62d199e0aacc84996e1b93c8c7987" kindref="member">psa_generate_key_iop_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Get the number of ops that a key generation operation has taken so far. If the operation has completed, then this will represent the number of ops required for the entire operation. After initialization or calling <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput> on the operation, a value of 0 will be returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises. This is a helper provided to help you tune the value passed to <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_generate_key_iop_t</computeroutput> to use. This must be initialized first.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of ops that the operation has taken so far. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="5313" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__generate__key_1ga8a84ae9d5922e6a0d0f0356d5c7ab29c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_key_iop_setup</definition>
+        <argsstring>(psa_generate_key_iop_t *operation, const psa_key_attributes_t *attributes)</argsstring>
+        <name>psa_generate_key_iop_setup</name>
+        <param>
+          <type><ref refid="group__interruptible__generate__key_1ga30c62d199e0aacc84996e1b93c8c7987" kindref="member">psa_generate_key_iop_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__attributes_1ga0ec645e1fdafe59d591104451ebf5680" kindref="member">psa_key_attributes_t</ref> *</type>
+          <declname>attributes</declname>
+        </param>
+        <briefdescription>
+<para>Start a key generation operation, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref></computeroutput> but <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function.</para><simplesectsep/><para>Users should call <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> repeatedly on the same operation object after a successful call to this function until <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> either returns <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> or an error. <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> will return <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref> if there is more work to do. Alternatively users can call <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>This function clears the number of ops completed as part of the operation. Please ensure you copy this value via <computeroutput><ref refid="group__interruptible__generate__key_1gad2e3a4cf8496963d572a45e35666bed3" kindref="member">psa_generate_key_iop_get_num_ops()</ref></computeroutput> if required before calling.</para><simplesectsep/><para>If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput>.</para><simplesectsep/><para>Only asymmetric key pairs are supported. (See <computeroutput>attributes</computeroutput>.)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_generate_key_iop_t</computeroutput> to use. This must be initialized as per the documentation for <computeroutput>psa_generate_key_iop_t</computeroutput>, and be inactive.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attributes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The attributes for the new key. The following attributes are required for all keys:<itemizedlist>
+<listitem><para>The key type. It must be an asymmetric key-pair.</para></listitem><listitem><para>The key size. It must be a valid size for the key type. The following attributes must be set for keys used in cryptographic operations:</para></listitem><listitem><para>The key permitted-algorithm policy.</para></listitem><listitem><para>The key usage flags. The following attributes must be set for keys that do not use the default volatile lifetime:</para></listitem><listitem><para>The key lifetime.</para></listitem><listitem><para>The key identifier is required for a key with a persistent lifetime,</para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para><computeroutput>attributes</computeroutput> is an input parameter, it is not updated with the final key attributes. The final attributes of the new key can be queried by calling <computeroutput><ref refid="group__attributes_1gacbbf5c11eac6cd70c87ffb936e1b9be2" kindref="member">psa_get_key_attributes()</ref></computeroutput> with the key&apos;s identifier.</para></simplesect>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation started successfully. Call <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> with the same context to complete the operation.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_ALREADY_EXISTS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an attempt to create a persistent key, and there is already a persistent key with the given identifier </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_NOT_SUPPORTED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key attributes, as a whole, are not supported, either in general or in the specified storage location. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_INVALID_ARGUMENT</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The following conditions can result in this error:<itemizedlist>
+<listitem><para>The key type is invalid, or is an asymmetric public key type.</para></listitem><listitem><para>The key size is not valid for the key type.</para></listitem><listitem><para>The key lifetime is invalid.</para></listitem><listitem><para>The key identifier is not valid for the key lifetime.</para></listitem><listitem><para>The key usage flags include invalid values.</para></listitem><listitem><para>The key&apos;s permitted-usage algorithm is invalid.</para></listitem><listitem><para>The key attributes, as a whole, are invalid. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PSA_ERROR_NOT_PERMITTED</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Creating a key with the specified attributes is not permitted.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The following conditions can result in this error:<itemizedlist>
+<listitem><para>The library has not been previously initialized by <computeroutput><ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref></computeroutput>.</para></listitem><listitem><para>The operation state is not valid: it must be inactive. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="5423" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_key_iop_complete</definition>
+        <argsstring>(psa_generate_key_iop_t *operation, mbedtls_svc_key_id_t *key)</argsstring>
+        <name>psa_generate_key_iop_complete</name>
+        <param>
+          <type><ref refid="group__interruptible__generate__key_1ga30c62d199e0aacc84996e1b93c8c7987" kindref="member">psa_generate_key_iop_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref> *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Continue and eventually complete the action of key generation, in an interruptible manner. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><computeroutput><ref refid="group__interruptible__generate__key_1ga8a84ae9d5922e6a0d0f0356d5c7ab29c" kindref="member">psa_generate_key_iop_setup()</ref></computeroutput> </para></simplesect>
+<simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function combined with <computeroutput><ref refid="group__interruptible__generate__key_1ga8a84ae9d5922e6a0d0f0356d5c7ab29c" kindref="member">psa_generate_key_iop_setup()</ref></computeroutput> is equivalent to <computeroutput><ref refid="group__random_1ga1f154687b24e5508d97681cdd17946a8" kindref="member">psa_generate_key()</ref></computeroutput> but this function can return early and resume according to the limit set with <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput> to reduce the maximum time spent in a function call.</para><simplesectsep/><para>Users should call this function on the same operation object repeatedly whilst it returns <ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref>, stopping when it returns either <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> or an error. Alternatively users can call <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput> at any point if they no longer want the result.</para><simplesectsep/><para>When this function returns successfully, the operation becomes inactive. If this function returns an error status, the operation enters an error state and must be aborted by calling <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput>.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_generate_key_iop_t</computeroutput> to use. This must be initialized first, and have had <computeroutput><ref refid="group__interruptible__generate__key_1ga8a84ae9d5922e6a0d0f0356d5c7ab29c" kindref="member">psa_generate_key_iop_setup()</ref></computeroutput> called with it first.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>On success, an identifier for the newly created key, on failure this will be set to <ref refid="group__key__lifetimes_1ga650b5f7c553bf6f8db2076dbd9f4dd44" kindref="member">PSA_KEY_ID_NULL</ref>.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation is complete and <computeroutput>key</computeroutput> contains the new key. If the key is persistent, the key material and the key&apos;s metadata have been saved to persistent storage.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" kindref="member">PSA_OPERATION_INCOMPLETE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operation was interrupted due to the setting of <computeroutput><ref refid="group__interruptible__hash_1ga6d86790b31657c13705214f373af869e" kindref="member">psa_interruptible_set_max_ops()</ref></computeroutput>. There is still work to be done. Call this function again with the same operation object.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" kindref="member">PSA_ERROR_ALREADY_EXISTS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is an attempt to create a persistent key, and there is already a persistent key with the given identifier.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" kindref="member">PSA_ERROR_INSUFFICIENT_MEMORY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The following conditions can result in this error:<itemizedlist>
+<listitem><para>The library has not been previously initialized by <computeroutput><ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref></computeroutput>.</para></listitem><listitem><para>The operation state is not valid: it must be active. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="5499" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref></type>
+        <definition>psa_status_t psa_generate_key_iop_abort</definition>
+        <argsstring>(psa_generate_key_iop_t *operation)</argsstring>
+        <name>psa_generate_key_iop_abort</name>
+        <param>
+          <type><ref refid="group__interruptible__generate__key_1ga30c62d199e0aacc84996e1b93c8c7987" kindref="member">psa_generate_key_iop_t</ref> *</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Abort a key generation operation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>This is a beta API, and thus subject to change at any point. It is not bound by the usual interface stability promises.</para></simplesect>
+<simplesect kind="note"><para>This function clears the number of ops completed as part of the operation. Please ensure you copy this value via <computeroutput><ref refid="group__interruptible__generate__key_1gad2e3a4cf8496963d572a45e35666bed3" kindref="member">psa_generate_key_iop_get_num_ops()</ref></computeroutput> if required before calling.</para><simplesectsep/><para>Aborting an operation frees all associated resources except for the operation structure itself. Once aborted, the operation object can be reused for another operation by calling <computeroutput><ref refid="group__interruptible__generate__key_1ga8a84ae9d5922e6a0d0f0356d5c7ab29c" kindref="member">psa_generate_key_iop_setup()</ref></computeroutput> again.</para><simplesectsep/><para>You may call this function any time after the operation object has been initialized. In particular, calling <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput> after the operation has already been terminated by a call to <computeroutput><ref refid="group__interruptible__generate__key_1ga89bd1f32305f9009184b0a8efee2228e" kindref="member">psa_generate_key_iop_abort()</ref></computeroutput> or <computeroutput><ref refid="group__interruptible__generate__key_1ga3e0139e17907c67a4acc52c20c6363bb" kindref="member">psa_generate_key_iop_complete()</ref></computeroutput> is safe.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>psa_key_agreement_iop_t</computeroutput> to use</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation was aborted successfully. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga933d40fa2a591004f2e93aa91e11db84" kindref="member">PSA_ERROR_BAD_STATE</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The library has not been previously initialized by <computeroutput><ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref></computeroutput>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto.h" line="5538" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

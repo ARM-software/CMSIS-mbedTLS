@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__cache__context" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_cache_context</compoundname>
+    <includes refid="ssl__cache_8h" local="no">ssl_cache.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__context_1a3e268a8d32a56074eb22fb8fcdc6e515" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref> *</type>
+        <definition>mbedtls_ssl_cache_entry* mbedtls_ssl_cache_context::private_chain</definition>
+        <argsstring></argsstring>
+        <name>private_chain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start of the chain </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="68" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__context_1a253b475b7561d273daeba939ff7e2aa7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cache_context::private_timeout</definition>
+        <argsstring></argsstring>
+        <name>private_timeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>cache entry timeout </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="69" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__context_1a21260c28163dc0c658e901f91d2a2dfc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cache_context::private_max_entries</definition>
+        <argsstring></argsstring>
+        <name>private_max_entries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum entries </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="70" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__cache__context_1a8d8d749dd16848d6d26e7dbab600dd9b" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref></type>
+        <definition>mbedtls_threading_mutex_t mbedtls_ssl_cache_context::private_mutex</definition>
+        <argsstring></argsstring>
+        <name>private_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mutex </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="72" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Cache context. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="532">
+        <label>mbedtls_threading_mutex_t</label>
+        <link refid="structmbedtls__threading__mutex__t"/>
+      </node>
+      <node id="531">
+        <label>mbedtls_ssl_cache_context</label>
+        <link refid="structmbedtls__ssl__cache__context"/>
+        <childnode refid="532" relation="usage">
+          <edgelabel>private_mutex</edgelabel>
+        </childnode>
+        <childnode refid="533" relation="usage">
+          <edgelabel>private_chain</edgelabel>
+        </childnode>
+      </node>
+      <node id="533">
+        <label>mbedtls_ssl_cache_entry</label>
+        <link refid="structmbedtls__ssl__cache__entry"/>
+        <childnode refid="533" relation="usage">
+          <edgelabel>private_next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="67" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="67" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__cache__context_1a3e268a8d32a56074eb22fb8fcdc6e515" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_context</scope><name>private_chain</name></member>
+      <member refid="structmbedtls__ssl__cache__context_1a21260c28163dc0c658e901f91d2a2dfc" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_context</scope><name>private_max_entries</name></member>
+      <member refid="structmbedtls__ssl__cache__context_1a8d8d749dd16848d6d26e7dbab600dd9b" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_context</scope><name>private_mutex</name></member>
+      <member refid="structmbedtls__ssl__cache__context_1a253b475b7561d273daeba939ff7e2aa7" prot="public" virt="non-virtual"><scope>mbedtls_ssl_cache_context</scope><name>private_timeout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

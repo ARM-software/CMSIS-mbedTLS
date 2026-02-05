@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509write__csr" kind="struct" prot="public">
+    <compoundname>mbedtls_x509write_csr</compoundname>
+    <includes refid="x509__csr_8h" local="no">x509_csr.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509write__csr_1afbdc878d2ab9439923be193d3622bafd" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__pk__context" kindref="compound">mbedtls_pk_context</ref> *</type>
+        <definition>mbedtls_pk_context* mbedtls_x509write_csr::private_key</definition>
+        <argsstring></argsstring>
+        <name>private_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="66" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509write__csr_1ae63ba1d7ce40e5b2f29e0f9b2ecbfa19" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+        <definition>mbedtls_asn1_named_data* mbedtls_x509write_csr::private_subject</definition>
+        <argsstring></argsstring>
+        <name>private_subject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="67" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509write__csr_1a843d4f6e394a55a808b995b0db62e1cb" prot="public" static="no" mutable="no">
+        <type><ref refid="md_8h_1a219313cb40503ec3e34a857ab98b2296" kindref="member">mbedtls_md_type_t</ref></type>
+        <definition>mbedtls_md_type_t mbedtls_x509write_csr::private_md_alg</definition>
+        <argsstring></argsstring>
+        <name>private_md_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="68" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509write__csr_1a53d080dc6b0fea35ff5df5d49fc86ed5" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+        <definition>mbedtls_asn1_named_data* mbedtls_x509write_csr::private_extensions</definition>
+        <argsstring></argsstring>
+        <name>private_extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="69" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container for writing a CSR </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="701">
+        <label>mbedtls_x509write_csr</label>
+        <link refid="structmbedtls__x509write__csr"/>
+        <childnode refid="702" relation="usage">
+          <edgelabel>private_extensions</edgelabel>
+          <edgelabel>private_subject</edgelabel>
+        </childnode>
+        <childnode refid="704" relation="usage">
+          <edgelabel>private_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="703">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="705">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+      <node id="704">
+        <label>mbedtls_pk_context</label>
+        <link refid="structmbedtls__pk__context"/>
+        <childnode refid="705" relation="usage">
+          <edgelabel>private_priv_id</edgelabel>
+        </childnode>
+      </node>
+      <node id="702">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="702" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="703" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" line="65" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_csr.h" bodystart="65" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509write__csr_1a53d080dc6b0fea35ff5df5d49fc86ed5" prot="public" virt="non-virtual"><scope>mbedtls_x509write_csr</scope><name>private_extensions</name></member>
+      <member refid="structmbedtls__x509write__csr_1afbdc878d2ab9439923be193d3622bafd" prot="public" virt="non-virtual"><scope>mbedtls_x509write_csr</scope><name>private_key</name></member>
+      <member refid="structmbedtls__x509write__csr_1a843d4f6e394a55a808b995b0db62e1cb" prot="public" virt="non-virtual"><scope>mbedtls_x509write_csr</scope><name>private_md_alg</name></member>
+      <member refid="structmbedtls__x509write__csr_1ae63ba1d7ce40e5b2f29e0f9b2ecbfa19" prot="public" virt="non-virtual"><scope>mbedtls_x509write_csr</scope><name>private_subject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

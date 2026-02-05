@@ -1,0 +1,747 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crypto__adjust__config__derived_8h" kind="file">
+    <compoundname>crypto_adjust_config_derived.h</compoundname>
+    <includedby refid="config__psa_8h" local="yes">config_psa.h</includedby>
+    <invincdepgraph>
+      <node id="2457">
+        <label>threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+      </node>
+      <node id="2455">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2456" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+        <childnode refid="2465" relation="include">
+        </childnode>
+      </node>
+      <node id="2462">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="2461" relation="include">
+        </childnode>
+      </node>
+      <node id="2480">
+        <label>chacha20.h</label>
+        <link refid="chacha20_8h"/>
+        <childnode refid="2478" relation="include">
+        </childnode>
+      </node>
+      <node id="2484">
+        <label>sha256.h</label>
+        <link refid="sha256_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2451">
+        <label>platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="2438" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+      </node>
+      <node id="2423">
+        <label>ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+      </node>
+      <node id="2453">
+        <label>bignum.h</label>
+        <link refid="bignum_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+      <node id="2435">
+        <label>oid.h</label>
+        <link refid="oid_8h"/>
+      </node>
+      <node id="2431">
+        <label>x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+      </node>
+      <node id="2430">
+        <label>pkcs7.h</label>
+        <link refid="pkcs7_8h"/>
+      </node>
+      <node id="2436">
+        <label>timing.h</label>
+        <link refid="timing_8h"/>
+      </node>
+      <node id="2458">
+        <label>base64.h</label>
+        <link refid="base64_8h"/>
+      </node>
+      <node id="2468">
+        <label>crypto_driver_contexts_key_derivation.h</label>
+        <link refid="crypto__driver__contexts__key__derivation_8h"/>
+        <childnode refid="2445" relation="include">
+        </childnode>
+      </node>
+      <node id="2439">
+        <label>ecp.h</label>
+        <link refid="ecp_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+      <node id="2487">
+        <label>version.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2version_8h"/>
+      </node>
+      <node id="2469">
+        <label>crypto_builtin_primitives.h</label>
+        <link refid="crypto__builtin__primitives_8h"/>
+        <childnode refid="2470" relation="include">
+        </childnode>
+      </node>
+      <node id="2449">
+        <label>asn1write.h</label>
+        <link refid="asn1write_8h"/>
+        <childnode refid="2450" relation="include">
+        </childnode>
+      </node>
+      <node id="2427">
+        <label>ssl_ticket.h</label>
+        <link refid="ssl__ticket_8h"/>
+      </node>
+      <node id="2461">
+        <label>crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+      </node>
+      <node id="2475">
+        <label>cmac.h</label>
+        <link refid="cmac_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+      <node id="2478">
+        <label>chachapoly.h</label>
+        <link refid="chachapoly_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2460">
+        <label>pem.h</label>
+        <link refid="pem_8h"/>
+      </node>
+      <node id="2426">
+        <label>ssl_cookie.h</label>
+        <link refid="ssl__cookie_8h"/>
+      </node>
+      <node id="2437">
+        <label>version.h</label>
+        <link refid="include_2mbedtls_2version_8h"/>
+      </node>
+      <node id="2434">
+        <label>error.h</label>
+        <link refid="error_8h"/>
+      </node>
+      <node id="2463">
+        <label>error_common.h</label>
+        <link refid="error__common_8h"/>
+        <childnode refid="2434" relation="include">
+        </childnode>
+      </node>
+      <node id="2420">
+        <label>build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+        <childnode refid="2451" relation="include">
+        </childnode>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2454" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2471" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+        <childnode refid="2472" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+        <childnode refid="2457" relation="include">
+        </childnode>
+        <childnode refid="2449" relation="include">
+        </childnode>
+        <childnode refid="2458" relation="include">
+        </childnode>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2473" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+        <childnode refid="2460" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2474" relation="include">
+        </childnode>
+        <childnode refid="2475" relation="include">
+        </childnode>
+        <childnode refid="2476" relation="include">
+        </childnode>
+        <childnode refid="2477" relation="include">
+        </childnode>
+        <childnode refid="2478" relation="include">
+        </childnode>
+        <childnode refid="2479" relation="include">
+        </childnode>
+        <childnode refid="2480" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+        <childnode refid="2481" relation="include">
+        </childnode>
+        <childnode refid="2482" relation="include">
+        </childnode>
+        <childnode refid="2483" relation="include">
+        </childnode>
+        <childnode refid="2484" relation="include">
+        </childnode>
+        <childnode refid="2485" relation="include">
+        </childnode>
+        <childnode refid="2486" relation="include">
+        </childnode>
+        <childnode refid="2445" relation="include">
+        </childnode>
+        <childnode refid="2487" relation="include">
+        </childnode>
+      </node>
+      <node id="2442">
+        <label>ecdsa.h</label>
+        <link refid="ecdsa_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2418">
+        <label>crypto_adjust_config_derived.h</label>
+        <link refid="crypto_adjust_config_derived.h"/>
+        <childnode refid="2419" relation="include">
+        </childnode>
+      </node>
+      <node id="2419">
+        <label>config_psa.h</label>
+        <link refid="config__psa_8h"/>
+        <childnode refid="2420" relation="include">
+        </childnode>
+      </node>
+      <node id="2443">
+        <label>crypto_builtin_composites.h</label>
+        <link refid="crypto__builtin__composites_8h"/>
+        <childnode refid="2444" relation="include">
+        </childnode>
+      </node>
+      <node id="2483">
+        <label>sha1.h</label>
+        <link refid="sha1_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2470">
+        <label>crypto_driver_contexts_primitives.h</label>
+        <link refid="crypto__driver__contexts__primitives_8h"/>
+        <childnode refid="2445" relation="include">
+        </childnode>
+      </node>
+      <node id="2441">
+        <label>pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+      </node>
+      <node id="2454">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="2455" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+        <childnode refid="2465" relation="include">
+        </childnode>
+      </node>
+      <node id="2447">
+        <label>cipher.h</label>
+        <link refid="cipher_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2440">
+        <label>md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+      </node>
+      <node id="2422">
+        <label>debug.h</label>
+        <link refid="debug_8h"/>
+      </node>
+      <node id="2425">
+        <label>ssl_cache.h</label>
+        <link refid="ssl__cache_8h"/>
+      </node>
+      <node id="2485">
+        <label>sha512.h</label>
+        <link refid="sha512_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2450">
+        <label>psa_util.h</label>
+        <link refid="psa__util_8h"/>
+      </node>
+      <node id="2471">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2465" relation="include">
+        </childnode>
+      </node>
+      <node id="2464">
+        <label>nist_kw.h</label>
+        <link refid="nist__kw_8h"/>
+      </node>
+      <node id="2456">
+        <label>compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="2441" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+        <childnode refid="2457" relation="include">
+        </childnode>
+        <childnode refid="2458" relation="include">
+        </childnode>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2460" relation="include">
+        </childnode>
+      </node>
+      <node id="2474">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="2461" relation="include">
+        </childnode>
+      </node>
+      <node id="2433">
+        <label>x509_csr.h</label>
+        <link refid="x509__csr_8h"/>
+      </node>
+      <node id="2446">
+        <label>ecjpake.h</label>
+        <link refid="ecjpake_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2452">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+      </node>
+      <node id="2476">
+        <label>gcm.h</label>
+        <link refid="gcm_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2438">
+        <label>platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2447" relation="include">
+        </childnode>
+        <childnode refid="2448" relation="include">
+        </childnode>
+      </node>
+      <node id="2473">
+        <label>memory_buffer_alloc.h</label>
+        <link refid="memory__buffer__alloc_8h"/>
+      </node>
+      <node id="2482">
+        <label>ripemd160.h</label>
+        <link refid="ripemd160_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2481">
+        <label>md5.h</label>
+        <link refid="md5_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2444">
+        <label>crypto_driver_contexts_composites.h</label>
+        <link refid="crypto__driver__contexts__composites_8h"/>
+        <childnode refid="2445" relation="include">
+        </childnode>
+      </node>
+      <node id="2466">
+        <label>crypto_driver_random.h</label>
+        <link refid="crypto__driver__random_8h"/>
+        <childnode refid="2452" relation="include">
+        </childnode>
+      </node>
+      <node id="2421">
+        <label>build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2425" relation="include">
+        </childnode>
+        <childnode refid="2426" relation="include">
+        </childnode>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+      </node>
+      <node id="2448">
+        <label>asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+        <childnode refid="2449" relation="include">
+        </childnode>
+      </node>
+      <node id="2445">
+        <label>crypto_struct.h</label>
+        <link refid="crypto__struct_8h"/>
+      </node>
+      <node id="2479">
+        <label>poly1305.h</label>
+        <link refid="poly1305_8h"/>
+        <childnode refid="2478" relation="include">
+        </childnode>
+      </node>
+      <node id="2477">
+        <label>ccm.h</label>
+        <link refid="ccm_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2486">
+        <label>sha3.h</label>
+        <link refid="sha3_8h"/>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+      <node id="2465">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2443" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+        <childnode refid="2444" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+        <childnode refid="2470" relation="include">
+        </childnode>
+      </node>
+      <node id="2459">
+        <label>lms.h</label>
+        <link refid="lms_8h"/>
+      </node>
+      <node id="2429">
+        <label>x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+      </node>
+      <node id="2467">
+        <label>crypto_builtin_key_derivation.h</label>
+        <link refid="crypto__builtin__key__derivation_8h"/>
+        <childnode refid="2468" relation="include">
+        </childnode>
+      </node>
+      <node id="2424">
+        <label>net_sockets.h</label>
+        <link refid="net__sockets_8h"/>
+      </node>
+      <node id="2472">
+        <label>ecdh.h</label>
+        <link refid="ecdh_8h"/>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crypto__adjust__config__derived_8h_1a49b5a106d3e7b497a70ce30df382b2a2" prot="public" static="no">
+        <name>MBEDTLS_PSA_BUILTIN_GET_ENTROPY_DEFINED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" line="31" column="10" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto__adjust__config__derived_8h_1a69a93e8c47032b77b0087f91de3c8c86" prot="public" static="no">
+        <name>MBEDTLS_PSA_DRIVER_GET_ENTROPY_DEFINED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" line="36" column="11" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto__adjust__config__derived_8h_1a4c8a4bf7bd68c1e4df50b3b816bbfb81" prot="public" static="no">
+        <name>MBEDTLS_ENTROPY_TRUE_SOURCES</name>
+        <initializer>( \
+        <ref refid="crypto__adjust__config__derived_8h_1a49b5a106d3e7b497a70ce30df382b2a2" kindref="member">MBEDTLS_PSA_BUILTIN_GET_ENTROPY_DEFINED</ref> + \
+        <ref refid="crypto__adjust__config__derived_8h_1a69a93e8c47032b77b0087f91de3c8c86" kindref="member">MBEDTLS_PSA_DRIVER_GET_ENTROPY_DEFINED</ref> + \
+        0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" line="39" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="crypto__adjust__config__derived_8h_1aed52a8a4788623e642d318d770d861d7" prot="public" static="no">
+        <name>MBEDTLS_PSA_CRYPTO_RNG_STRENGTH</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" line="81" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Adjust PSA configuration by defining internal symbols. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is an internal header. Do not include it directly. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PSA_CRYPTO_ADJUST_CONFIG_DERIVED_H</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_CRYPTO_ADJUST_CONFIG_DERIVED_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(TF_PSA_CRYPTO_CONFIG_FILES_READ)</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Do<sp/>not<sp/>include<sp/>psa/crypto_adjust_*.h<sp/>manually!<sp/>This<sp/>can<sp/>lead<sp/>to<sp/>problems,<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;up<sp/>to<sp/>and<sp/>including<sp/>runtime<sp/>errors<sp/>such<sp/>as<sp/>buffer<sp/>overflows.<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;If<sp/>you&apos;re<sp/>trying<sp/>to<sp/>fix<sp/>a<sp/>complaint<sp/>from<sp/>check_config.h,<sp/>just<sp/>remove<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;it<sp/>from<sp/>your<sp/>configuration<sp/>file:<sp/>since<sp/>Mbed<sp/>TLS<sp/>3.0,<sp/>it<sp/>is<sp/>included<sp/>&quot;<sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>&quot;automatically<sp/>at<sp/>the<sp/>right<sp/>point.&quot;</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>The<sp/>number<sp/>of<sp/>&quot;true&quot;<sp/>entropy<sp/>sources<sp/>(excluding<sp/>NV<sp/>seed).</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>This<sp/>must<sp/>be<sp/>consistent<sp/>with<sp/>mbedtls_entropy_init()<sp/>in<sp/>entropy.c.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Define<sp/>auxiliary<sp/>macros,<sp/>because<sp/>in<sp/>standard<sp/>C,<sp/>defined(xxx)<sp/>is<sp/>only</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>allowed<sp/>directly<sp/>on<sp/>an<sp/>#if<sp/>or<sp/>#elif<sp/>line,<sp/>not<sp/>in<sp/>recursive<sp/>expansion.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_BUILTIN_GET_ENTROPY)</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_BUILTIN_GET_ENTROPY_DEFINED<sp/>1</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="31" refid="crypto__adjust__config__derived_8h_1a49b5a106d3e7b497a70ce30df382b2a2" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_BUILTIN_GET_ENTROPY_DEFINED<sp/>0</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PSA_DRIVER_GET_ENTROPY)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_DRIVER_GET_ENTROPY_DEFINED<sp/>1</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="36" refid="crypto__adjust__config__derived_8h_1a69a93e8c47032b77b0087f91de3c8c86" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_DRIVER_GET_ENTROPY_DEFINED<sp/>0</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="crypto__adjust__config__derived_8h_1a4c8a4bf7bd68c1e4df50b3b816bbfb81" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_TRUE_SOURCES<sp/>(<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PSA_BUILTIN_GET_ENTROPY_DEFINED<sp/>+<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PSA_DRIVER_GET_ENTROPY_DEFINED<sp/>+<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Whether<sp/>there<sp/>is<sp/>at<sp/>least<sp/>one<sp/>entropy<sp/>source<sp/>for<sp/>the<sp/>entropy<sp/>module.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Note<sp/>that<sp/>when<sp/>MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG<sp/>is<sp/>enabled,<sp/>the<sp/>entropy</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>module<sp/>is<sp/>unused<sp/>and<sp/>the<sp/>configuration<sp/>will<sp/>typically<sp/>not<sp/>include<sp/>any</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>entropy<sp/>source,<sp/>so<sp/>this<sp/>macro<sp/>will<sp/>typically<sp/>remain<sp/>undefined.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_NV_SEED)</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_HAVE_SOURCES<sp/>(MBEDTLS_ENTROPY_TRUE_SOURCES<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#elif<sp/>MBEDTLS_ENTROPY_TRUE_SOURCES<sp/>!=<sp/>0</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_ENTROPY_HAVE_SOURCES<sp/>MBEDTLS_ENTROPY_TRUE_SOURCES</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>MBEDTLS_ENTROPY_HAVE_SOURCES</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_ALG_ECDSA)<sp/>||<sp/>defined(PSA_WANT_ALG_DETERMINISTIC_ECDSA)</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_HAVE_ALG_SOME_ECDSA</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_HAVE_ALG_SOME_ECDSA)<sp/>&amp;&amp;<sp/>defined(PSA_WANT_KEY_TYPE_ECC_KEY_PAIR_BASIC)</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_HAVE_ALG_ECDSA_SIGN</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_HAVE_ALG_SOME_ECDSA)<sp/>&amp;&amp;<sp/>defined(PSA_WANT_KEY_TYPE_ECC_PUBLIC_KEY)</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_HAVE_ALG_ECDSA_VERIFY</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_ALG_JPAKE)</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>PSA_WANT_ALG_SOME_PAKE<sp/>1</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/>*<sp/>If<sp/>the<sp/>RNG<sp/>strength<sp/>is<sp/>not<sp/>explicitly<sp/>defined<sp/>in<sp/>the<sp/>configuration,<sp/>define</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/>*<sp/>it<sp/>here<sp/>to<sp/>its<sp/>default<sp/>value.<sp/>This<sp/>ensures<sp/>it<sp/>is<sp/>available<sp/>for<sp/>use<sp/>in</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/>*<sp/>adjusting<sp/>the<sp/>configuration<sp/>of<sp/>RNG<sp/>internal<sp/>modules<sp/>in</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*<sp/>config_adjust_legacy_crypto.h.</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PSA_CRYPTO_RNG_STRENGTH)</highlight></codeline>
+<codeline lineno="81" refid="crypto__adjust__config__derived_8h_1aed52a8a4788623e642d318d770d861d7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_CRYPTO_RNG_STRENGTH<sp/>256</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PSA_CRYPTO_RNG_HASH)</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(PSA_WANT_ALG_SHA_256)</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_CRYPTO_RNG_HASH<sp/>PSA_ALG_SHA_256</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#elif<sp/>defined(PSA_WANT_ALG_SHA_512)</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PSA_CRYPTO_RNG_HASH<sp/>PSA_ALG_SHA_512</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>(defined(MBEDTLS_PSA_CRYPTO_C)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PSA_CRYPTO_EXTERNAL_RNG))</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Not<sp/>able<sp/>to<sp/>define<sp/>MBEDTLS_PSA_CRYPTO_RNG_HASH<sp/>for<sp/>the<sp/>entropy<sp/>module.&quot;</highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HMAC_DRBG_C)</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Not<sp/>able<sp/>to<sp/>define<sp/>MBEDTLS_PSA_CRYPTO_RNG_HASH<sp/>for<sp/>HMAC_DRBG.&quot;</highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!PSA_WANT_ALG_SHA_256,<sp/>!PSA_WANT_ALG_SHA_512<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_PSA_CRYPTO_RNG_HASH<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>PSA_CRYPTO_ADJUST_CONFIG_DERIVED_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_adjust_config_derived.h"/>
+  </compounddef>
+</doxygen>

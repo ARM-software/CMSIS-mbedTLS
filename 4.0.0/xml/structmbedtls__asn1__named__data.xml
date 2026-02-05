@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__asn1__named__data" kind="struct" prot="public">
+    <compoundname>mbedtls_asn1_named_data</compoundname>
+    <includes refid="asn1_8h" local="no">asn1.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref></type>
+        <definition>mbedtls_asn1_buf mbedtls_asn1_named_data::oid</definition>
+        <argsstring></argsstring>
+        <name>oid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The object identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="175" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref></type>
+        <definition>mbedtls_asn1_buf mbedtls_asn1_named_data::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The named value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="176" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__named__data_1a38f29c37c55319b3c0a9c998c3e5bd0d" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__asn1__named__data" kindref="compound">mbedtls_asn1_named_data</ref> *</type>
+        <definition>struct mbedtls_asn1_named_data* mbedtls_asn1_named_data::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The next entry in the sequence.</para><para>The details of memory management for named data sequences are not documented and may change in future versions. Set this field to <computeroutput>NULL</computeroutput> when initializing a structure, and do not modify it except via Mbed TLS library functions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="185" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="185" bodyend="-1"/>
+        <referencedby refid="x509_8h_1a95debe4ffc1f0fcdc8dc997fc352e494" compoundref="x509_8h" startline="347" endline="354">mbedtls_x509_dn_get_next</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__named__data_1a6b6ba28e508aae0b897d2e6559c6d527" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_asn1_named_data::private_next_merged</definition>
+        <argsstring></argsstring>
+        <name>private_next_merged</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Merge next item into the current one?</para><para>This field exists for the sake of Mbed TLS&apos;s X.509 certificate parsing code and may change in future versions of the library. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="192" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container for a sequence or list of &apos;named&apos; ASN.1 data items </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="428">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="427">
+        <label>mbedtls_asn1_named_data</label>
+        <link refid="structmbedtls__asn1__named__data"/>
+        <childnode refid="427" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="428" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="174" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="174" bodyend="193"/>
+    <listofallmembers>
+      <member refid="structmbedtls__asn1__named__data_1a38f29c37c55319b3c0a9c998c3e5bd0d" prot="public" virt="non-virtual"><scope>mbedtls_asn1_named_data</scope><name>next</name></member>
+      <member refid="structmbedtls__asn1__named__data_1a0981fcdac0ce14b6922a953adf0624d9" prot="public" virt="non-virtual"><scope>mbedtls_asn1_named_data</scope><name>oid</name></member>
+      <member refid="structmbedtls__asn1__named__data_1a6b6ba28e508aae0b897d2e6559c6d527" prot="public" virt="non-virtual"><scope>mbedtls_asn1_named_data</scope><name>private_next_merged</name></member>
+      <member refid="structmbedtls__asn1__named__data_1ad99636f90fae31a96c26df85a7896b07" prot="public" virt="non-virtual"><scope>mbedtls_asn1_named_data</scope><name>val</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

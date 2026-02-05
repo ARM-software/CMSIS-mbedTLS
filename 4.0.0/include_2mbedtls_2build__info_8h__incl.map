@@ -1,0 +1,7 @@
+<map id="build_info.h" name="build_info.h">
+<area shape="rect" id="node2" href="$tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h.html" title="Build&#45;time configuration info. " alt="" coords="187,80,312,121"/>
+<area shape="rect" id="node8" href="$mbedtls__config_8h.html" title="Configuration options (set of defines) " alt="" coords="336,87,507,114"/>
+<area shape="rect" id="node9" href="$config__adjust__x509_8h.html" title="Adjust X.509 configuration. " alt="" coords="531,80,677,121"/>
+<area shape="rect" id="node10" href="$config__adjust__ssl_8h.html" title="Adjust TLS configuration. " alt="" coords="701,80,848,121"/>
+<area shape="rect" id="node3" href="$crypto__config_8h.html" title="PSA crypto configuration options (set of defines) " alt="" coords="99,177,234,203"/>
+</map>

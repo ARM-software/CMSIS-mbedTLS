@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_403c6a8d9e06b70fc1e83482d72e0353" kind="dir">
+    <compoundname>input</compoundname>
+    <innerfile refid="doc__encdec_8h">doc_encdec.h</innerfile>
+    <innerfile refid="doc__hashing_8h">doc_hashing.h</innerfile>
+    <innerfile refid="doc__mainpage_8h">doc_mainpage.h</innerfile>
+    <innerfile refid="doc__rng_8h">doc_rng.h</innerfile>
+    <innerfile refid="doc__ssltls_8h">doc_ssltls.h</innerfile>
+    <innerfile refid="doc__tcpip_8h">doc_tcpip.h</innerfile>
+    <innerfile refid="doc__x509_8h">doc_x509.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/doxygen/input/"/>
+  </compounddef>
+</doxygen>

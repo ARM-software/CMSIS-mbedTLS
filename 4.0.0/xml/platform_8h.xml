@@ -1,0 +1,968 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="platform_8h" kind="file">
+    <compoundname>platform.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" local="yes">tf-psa-crypto/build_info.h</includes>
+    <includes refid="platform__time_8h" local="yes">mbedtls/platform_time.h</includes>
+    <includes refid="crypto__driver__random_8h" local="no">psa/crypto_driver_random.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdarg.h</includes>
+    <includes refid="platform__alt_8h" local="yes">platform_alt.h</includes>
+    <incdepgraph>
+      <node id="3446">
+        <label>crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+      </node>
+      <node id="3434">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3450">
+        <label>stdarg.h</label>
+      </node>
+      <node id="3439">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3433" relation="include">
+        </childnode>
+      </node>
+      <node id="3451">
+        <label>platform_alt.h</label>
+        <link refid="platform__alt_8h"/>
+      </node>
+      <node id="3443">
+        <label>stdint.h</label>
+      </node>
+      <node id="3448">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3445">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3437">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3433">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3434" relation="include">
+        </childnode>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3437" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+      </node>
+      <node id="3442">
+        <label>stddef.h</label>
+      </node>
+      <node id="3438">
+        <label>limits.h</label>
+      </node>
+      <node id="3444">
+        <label>crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3445" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+      </node>
+      <node id="3447">
+        <label>psa/crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3433" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>platform.h</label>
+        <link refid="platform.h"/>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+        <childnode refid="3448" relation="include">
+        </childnode>
+        <childnode refid="3449" relation="include">
+        </childnode>
+        <childnode refid="3450" relation="include">
+        </childnode>
+        <childnode refid="3451" relation="include">
+        </childnode>
+      </node>
+      <node id="3432">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3440">
+        <label>psa/crypto_driver_random.h</label>
+        <link refid="crypto__driver__random_8h"/>
+        <childnode refid="3441" relation="include">
+        </childnode>
+      </node>
+      <node id="3435">
+        <label>/dev/null</label>
+      </node>
+      <node id="3441">
+        <label>crypto_driver_common.h</label>
+        <link refid="crypto__driver__common_8h"/>
+        <childnode refid="3442" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+        <childnode refid="3446" relation="include">
+        </childnode>
+        <childnode refid="3447" relation="include">
+        </childnode>
+      </node>
+      <node id="3436">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3449">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" prot="public" static="no">
+        <name>mbedtls_free</name>
+        <initializer><ref refid="crypto__config_8h_1a939127948c0ace7f544f13605fa73386" kindref="member">MBEDTLS_PLATFORM_FREE_MACRO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="145" column="11" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" prot="public" static="no">
+        <name>mbedtls_calloc</name>
+        <initializer><ref refid="crypto__config_8h_1a92db1136212e94ccb522e25281ed657a" kindref="member">MBEDTLS_PLATFORM_CALLOC_MACRO</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="146" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform_8h_1ae0beaef88e29bfd432cb2543ac79f109" prot="public" static="no">
+        <name>MBEDTLS_EXIT_SUCCESS</name>
+        <initializer><ref refid="crypto__config_8h_1ad9a994f168868af54652a992937df5d0" kindref="member">MBEDTLS_PLATFORM_STD_EXIT_SUCCESS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="380" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="platform_8h_1a416732ec24ebb55fb12969e849ba27c0" prot="public" static="no">
+        <name>MBEDTLS_EXIT_FAILURE</name>
+        <initializer><ref refid="crypto__config_8h_1a04892f78f480255957e858fd6f82053a" kindref="member">MBEDTLS_PLATFORM_STD_EXIT_FAILURE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="385" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="platform_8h_1a75cb31ecf79e67e3b0ba6ee9c8015ac8" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_fprintf)(FILE *stream, const char *format,...)</definition>
+        <argsstring>)(FILE *stream, const char *format,...)</argsstring>
+        <name>mbedtls_fprintf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="178" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1a616be8cf98ea84e7b20e32dc6e7d1e33" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_printf)(const char *format,...)</definition>
+        <argsstring>)(const char *format,...)</argsstring>
+        <name>mbedtls_printf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1ace74e82cb027049fb03d575ec603b5d8" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_snprintf)(char *s, size_t n, const char *format,...)</definition>
+        <argsstring>)(char *s, size_t n, const char *format,...)</argsstring>
+        <name>mbedtls_snprintf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="240" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1a170f7d3bf4bcc2aa5f8b9522627f1892" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_vsnprintf)(char *s, size_t n, const char *format, va_list arg)</definition>
+        <argsstring>)(char *s, size_t n, const char *format, va_list arg)</argsstring>
+        <name>mbedtls_vsnprintf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1a78e91f58418fcc8e9f0eb84875f679f7" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* mbedtls_setbuf)(FILE *stream, char *buf)</definition>
+        <argsstring>)(FILE *stream, char *buf)</argsstring>
+        <name>mbedtls_setbuf</name>
+        <briefdescription>
+<para>Function pointer to call for <computeroutput>setbuf()</computeroutput> functionality (changing the internal buffering on stdio calls). </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The library calls this function to disable buffering when reading or writing sensitive data, to avoid having extra copies of sensitive data remaining in stdio buffers after the file is closed. If this is not a concern, for example if your platform&apos;s stdio doesn&apos;t have any buffering, you can set mbedtls_setbuf to a function that does nothing.</para></simplesect>
+The library always calls this function with <computeroutput>buf</computeroutput> equal to <computeroutput>NULL</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="319" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1aada64434d4d3f3dc5de1a4cbf3c3a8d0" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* mbedtls_exit)(int status)</definition>
+        <argsstring>)(int status)</argsstring>
+        <name>mbedtls_exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="355" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1a11da24d31c430d433f1e53109f305c9f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_nv_seed_read)(unsigned char *buf, size_t buf_len)</definition>
+        <argsstring>)(unsigned char *buf, size_t buf_len)</argsstring>
+        <name>mbedtls_nv_seed_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="404" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="platform_8h_1a5f8968e9702a35c23bcbdd3ecf5ec916" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* mbedtls_nv_seed_write)(unsigned char *buf, size_t buf_len)</definition>
+        <argsstring>)(unsigned char *buf, size_t buf_len)</argsstring>
+        <name>mbedtls_nv_seed_write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="405" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="platform_8h_1af24ab1334235e3b41bf41e9cf56a9ed1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_fprintf</definition>
+        <argsstring>(int(*fprintf_func)(FILE *stream, const char *,...))</argsstring>
+        <name>mbedtls_platform_set_fprintf</name>
+        <param>
+          <type>int(*)(FILE *stream, const char *,...)</type>
+          <declname>fprintf_func</declname>
+        </param>
+        <briefdescription>
+<para>This function dynamically configures the fprintf function that is called when the <ref refid="platform_8h_1a75cb31ecf79e67e3b0ba6ee9c8015ac8" kindref="member">mbedtls_fprintf()</ref> function is invoked by the library. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fprintf_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>fprintf</computeroutput> function implementation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1ad5514a1309870f4b297f6a45ed249ae0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_printf</definition>
+        <argsstring>(int(*printf_func)(const char *,...))</argsstring>
+        <name>mbedtls_platform_set_printf</name>
+        <param>
+          <type>int(*)(const char *,...)</type>
+          <declname>printf_func</declname>
+        </param>
+        <briefdescription>
+<para>This function dynamically configures the snprintf function that is called when the <ref refid="platform_8h_1ace74e82cb027049fb03d575ec603b5d8" kindref="member">mbedtls_snprintf()</ref> function is invoked by the library. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>printf_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>printf</computeroutput> function implementation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a9291b1f986f9d901147fdff535e31a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_snprintf</definition>
+        <argsstring>(int(*snprintf_func)(char *s, size_t n, const char *format,...))</argsstring>
+        <name>mbedtls_platform_set_snprintf</name>
+        <param>
+          <type>int(*)(char *s, size_t n, const char *format,...)</type>
+          <declname>snprintf_func</declname>
+        </param>
+        <briefdescription>
+<para>This function allows configuring a custom <computeroutput>snprintf</computeroutput> function pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>snprintf_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>snprintf</computeroutput> function implementation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="250" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1ada26e687a256ea9e43861ac98bbb691e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_vsnprintf</definition>
+        <argsstring>(int(*vsnprintf_func)(char *s, size_t n, const char *format, va_list arg))</argsstring>
+        <name>mbedtls_platform_set_vsnprintf</name>
+        <param>
+          <type>int(*)(char *s, size_t n, const char *format, va_list arg)</type>
+          <declname>vsnprintf_func</declname>
+        </param>
+        <briefdescription>
+<para>Set your own snprintf function pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vsnprintf_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>vsnprintf</computeroutput> function implementation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a21a2b71df692dff5bff784d91db47b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_setbuf</definition>
+        <argsstring>(void(*setbuf_func)(FILE *stream, char *buf))</argsstring>
+        <name>mbedtls_platform_set_setbuf</name>
+        <param>
+          <type>void(*)(FILE *stream, char *buf)</type>
+          <declname>setbuf_func</declname>
+        </param>
+        <briefdescription>
+<para>Dynamically configure the function that is called when the <ref refid="platform_8h_1a78e91f58418fcc8e9f0eb84875f679f7" kindref="member">mbedtls_setbuf()</ref> function is called by the library. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>setbuf_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>setbuf</computeroutput> function implementation</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a05389824861deaa4ca30992bd7daca23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_exit</definition>
+        <argsstring>(void(*exit_func)(int status))</argsstring>
+        <name>mbedtls_platform_set_exit</name>
+        <param>
+          <type>void(*)(int status)</type>
+          <declname>exit_func</declname>
+        </param>
+        <briefdescription>
+<para>This function dynamically configures the exit function that is called when the <ref refid="platform_8h_1aada64434d4d3f3dc5de1a4cbf3c3a8d0" kindref="member">mbedtls_exit()</ref> function is invoked by the library. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>exit_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>exit</computeroutput> function implementation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="366" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a047954a8d4960f8bc16081ac4b3c6460" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_set_nv_seed</definition>
+        <argsstring>(int(*nv_seed_read_func)(unsigned char *buf, size_t buf_len), int(*nv_seed_write_func)(unsigned char *buf, size_t buf_len))</argsstring>
+        <name>mbedtls_platform_set_nv_seed</name>
+        <param>
+          <type>int(*)(unsigned char *buf, size_t buf_len)</type>
+          <declname>nv_seed_read_func</declname>
+        </param>
+        <param>
+          <type>int(*)(unsigned char *buf, size_t buf_len)</type>
+          <declname>nv_seed_write_func</declname>
+        </param>
+        <briefdescription>
+<para>This function allows configuring custom seed file writing and reading functions. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nv_seed_read_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed reading function implementation. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nv_seed_write_func</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The seed writing function implementation.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="416" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a6821060faca92a7c18fd557ca8681a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_get_entropy</definition>
+        <argsstring>(psa_driver_get_entropy_flags_t flags, size_t *estimate_bits, unsigned char *output, size_t output_size)</argsstring>
+        <name>mbedtls_platform_get_entropy</name>
+        <param>
+          <type><ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>estimate_bits</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>output_size</declname>
+        </param>
+        <briefdescription>
+<para>User defined callback function that is used from the entropy module to gather entropy data from some hardware device. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mask of <computeroutput>PSA_DRIVER_GET_ENTROPY_xxx</computeroutput> flags. As of TF-PSA-Crypto 1.0, this is always <computeroutput>0</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">estimate_bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Measure of the entropy content (in bits) of the data written in the <computeroutput>output</computeroutput> buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output buffer where the entropy data will be stored. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the <computeroutput>output</computeroutput> buffer in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Success. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The entropy source failed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of <computeroutput>flags</computeroutput> is not supported.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>For the time being TF-PSA-Crypto only supports implementations that return a maximum entropy output on each call, i.e. <computeroutput>estimate_bits</computeroutput> = <computeroutput>8 * output_size</computeroutput>. Returning a smaller entropy content is the same as returning <ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref> so the hardware polling will fail. In the future TF-PSA-Crypto will be smarter and capable to cope with entropy sources with lower entropy content (i.e. 0 &lt; <computeroutput>estimate_bits</computeroutput> &lt; 8 * output_size) by calling the callback function in loop.</para></simplesect>
+<simplesect kind="note"><para>This function is not meant to be called by application code, and it is not guaranteed that this function will exist or will behave in the same way in future versions of the library. Applications should call <ref refid="group__random_1ga1985eae417dfbccedf50d5fff54ea8c5" kindref="member">psa_generate_random()</ref> to obtain random data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="486" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1af0f37c11be234650bec95ce37e9a4a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_platform_setup</definition>
+        <argsstring>(mbedtls_platform_context *ctx)</argsstring>
+        <name>mbedtls_platform_setup</name>
+        <param>
+          <type><ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function performs any platform-specific initialization operations. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function should be called before any other library functions. <verbatim>     Its implementation is platform-specific, and unless
+     platform-specific code is provided, it does nothing.
+</verbatim></para><simplesectsep/><para>The usage and necessity of this function is dependent on the platform.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The platform context.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="505" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="platform_8h_1a264d5dd442e32a262d331f8889a0997c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_platform_teardown</definition>
+        <argsstring>(mbedtls_platform_context *ctx)</argsstring>
+        <name>mbedtls_platform_teardown</name>
+        <param>
+          <type><ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>This function performs any platform teardown operations. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function should be called after every other Mbed TLS module has been correctly freed using the appropriate free function.</para></simplesect>
+Its implementation is platform-specific, and unless platform-specific code is provided, it does nothing.</para><para><simplesect kind="note"><para>The usage and necessity of this function is dependent on the platform.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The platform context. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h" line="520" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file contains the definitions and functions of the Mbed TLS platform abstraction layer. </para>    </briefdescription>
+    <detaileddescription>
+<para>The platform abstraction layer removes the need for the library to directly link to standard C library functions or operating system services, making the library easier to port and embed. Application developers and users of the library can provide their own implementations of these functions, or implementations specific to their platform, which can be statically linked to the library or dynamically configured at runtime.</para><para>When all compilation options related to platform abstraction are disabled, this header just defines <computeroutput>mbedtls_xxx</computeroutput> function names as aliases to the standard <computeroutput>xxx</computeroutput> function.</para><para>Most modules in the library and example programs are expected to include this header. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="22"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_PLATFORM_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h" kindref="compound">tf-psa-crypto/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__time_8h" kindref="compound">mbedtls/platform_time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="crypto__driver__random_8h" kindref="compound">psa/crypto_driver_random.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="50"><highlight class="comment">/*<sp/>The<sp/>older<sp/>Microsoft<sp/>Windows<sp/>common<sp/>runtime<sp/>provides<sp/>non-conforming</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>implementations<sp/>of<sp/>some<sp/>standard<sp/>library<sp/>functions,<sp/>including<sp/>snprintf</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>*<sp/>and<sp/>vsnprintf.<sp/>This<sp/>affects<sp/>MSVC<sp/>and<sp/>MinGW<sp/>builds.</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__MINGW32__)<sp/>||<sp/>(defined(_MSC_VER)<sp/>&amp;&amp;<sp/>_MSC_VER<sp/>&lt;=<sp/>1900)</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_HAS_NON_CONFORMING_SNPRINTF</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_HAS_NON_CONFORMING_VSNPRINTF</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_NO_STD_FUNCTIONS)</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_SNPRINTF)</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_HAS_NON_CONFORMING_SNPRINTF)</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_SNPRINTF<sp/><sp/><sp/>mbedtls_platform_win32_snprintf<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_SNPRINTF<sp/><sp/><sp/>snprintf<sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_VSNPRINTF)</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_HAS_NON_CONFORMING_VSNPRINTF)</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_VSNPRINTF<sp/><sp/><sp/>mbedtls_platform_win32_vsnprintf<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_VSNPRINTF<sp/><sp/><sp/>vsnprintf<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="79"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_PRINTF)</highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_PRINTF<sp/><sp/><sp/>printf<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="82"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_FPRINTF)</highlight></codeline>
+<codeline lineno="83"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_FPRINTF<sp/>fprintf<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_CALLOC)</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_CALLOC<sp/><sp/><sp/>calloc<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_FREE)</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_FREE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>free<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="91"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_SETBUF)</highlight></codeline>
+<codeline lineno="92"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_SETBUF<sp/><sp/><sp/>setbuf<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_EXIT)</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_EXIT<sp/><sp/><sp/><sp/><sp/><sp/>exit<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="97"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_TIME)</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_TIME<sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="100"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_EXIT_SUCCESS)</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_EXIT_SUCCESS<sp/><sp/>EXIT_SUCCESS<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="103"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_EXIT_FAILURE)</highlight></codeline>
+<codeline lineno="104"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_EXIT_FAILURE<sp/><sp/>EXIT_FAILURE<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_NV_SEED_READ)</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_READ<sp/><sp/><sp/>mbedtls_platform_std_nv_seed_read</highlight></codeline>
+<codeline lineno="109"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="110"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_NV_SEED_WRITE)</highlight></codeline>
+<codeline lineno="111"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_WRITE<sp/><sp/>mbedtls_platform_std_nv_seed_write</highlight></codeline>
+<codeline lineno="112"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="113"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_STD_NV_SEED_FILE)</highlight></codeline>
+<codeline lineno="114"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_NV_SEED_FILE<sp/><sp/><sp/>&quot;seedfile&quot;</highlight></codeline>
+<codeline lineno="115"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_FS_IO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_NO_STD_FUNCTIONS<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_STD_MEM_HDR)</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>MBEDTLS_PLATFORM_STD_MEM_HDR</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_NO_STD_FUNCTIONS<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Enable<sp/>certain<sp/>documented<sp/>defines<sp/>only<sp/>when<sp/>generating<sp/>doxygen<sp/>to<sp/>avoid</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>an<sp/>&quot;unrecognized<sp/>define&quot;<sp/>error.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__DOXYGEN__)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PLATFORM_STD_CALLOC)</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_CALLOC</highlight></codeline>
+<codeline lineno="127"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__DOXYGEN__)<sp/>&amp;&amp;<sp/>!defined(MBEDTLS_PLATFORM_STD_FREE)</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_PLATFORM_STD_FREE</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>calloc<sp/>and<sp/>free.</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/>*<sp/>Please<sp/>see<sp/>MBEDTLS_PLATFORM_STD_CALLOC<sp/>and<sp/>MBEDTLS_PLATFORM_STD_FREE</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>*<sp/>in<sp/>mbedtls_config.h<sp/>for<sp/>more<sp/>information<sp/>about<sp/>behaviour<sp/>and<sp/>requirements.</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_MEMORY)</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_FREE_MACRO)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_PLATFORM_CALLOC_MACRO)</highlight></codeline>
+<codeline lineno="143"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_free</highlight></codeline>
+<codeline lineno="144"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_calloc</highlight></codeline>
+<codeline lineno="145" refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_free<sp/><sp/><sp/><sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_FREE_MACRO</highlight></codeline>
+<codeline lineno="146" refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_calloc<sp/><sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_CALLOC_MACRO</highlight></codeline>
+<codeline lineno="147"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="148"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>For<sp/>size_t<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="platform_8h_1aa7fa389b6ec8a6c33f594f8c3f5c76ef" kindref="member">mbedtls_calloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a4f80030b2d10f956f8ac00b57eebfbe8" kindref="member">mbedtls_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_platform_set_calloc_free(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*(*calloc_func)(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*free_func)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_FREE_MACRO<sp/>&amp;&amp;<sp/>MBEDTLS_PLATFORM_CALLOC_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_PLATFORM_MEMORY<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_free</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_calloc</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_free<sp/><sp/><sp/><sp/><sp/><sp/><sp/>free</highlight></codeline>
+<codeline lineno="169"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_calloc<sp/><sp/><sp/><sp/><sp/>calloc</highlight></codeline>
+<codeline lineno="170"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_MEMORY<sp/>&amp;&amp;<sp/>!MBEDTLS_PLATFORM_{FREE,CALLOC}_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="171"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>fprintf</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_FPRINTF_ALT)</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>We<sp/>need<sp/>FILE<sp/>*<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1a75cb31ecf79e67e3b0ba6ee9c8015ac8" kindref="member">mbedtls_fprintf</ref>)(FILE<sp/>*stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1af24ab1334235e3b41bf41e9cf56a9ed1" kindref="member">mbedtls_platform_set_fprintf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*fprintf_func)(FILE<sp/>*stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_fprintf</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_FPRINTF_MACRO)</highlight></codeline>
+<codeline lineno="194"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_fprintf<sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_FPRINTF_MACRO</highlight></codeline>
+<codeline lineno="195"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_fprintf<sp/><sp/><sp/><sp/>fprintf</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_FPRINTF_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="198"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_FPRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="199"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>printf</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_PRINTF_ALT)</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1a616be8cf98ea84e7b20e32dc6e7d1e33" kindref="member">mbedtls_printf</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1ad5514a1309870f4b297f6a45ed249ae0" kindref="member">mbedtls_platform_set_printf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*printf_func)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/>...));</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_PLATFORM_PRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="217"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_printf</highlight></codeline>
+<codeline lineno="218"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_PRINTF_MACRO)</highlight></codeline>
+<codeline lineno="219"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_printf<sp/><sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_PRINTF_MACRO</highlight></codeline>
+<codeline lineno="220"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="221"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_printf<sp/><sp/><sp/><sp/><sp/>printf</highlight></codeline>
+<codeline lineno="222"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_PRINTF_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="223"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_PRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="224"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>snprintf</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/>*<sp/>The<sp/>snprintf<sp/>implementation<sp/>should<sp/>conform<sp/>to<sp/>C99:</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/>*<sp/>-<sp/>it<sp/>*must*<sp/>always<sp/>correctly<sp/>zero-terminate<sp/>the<sp/>buffer</highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(except<sp/>when<sp/>n<sp/>==<sp/>0,<sp/>then<sp/>it<sp/>must<sp/>leave<sp/>the<sp/>buffer<sp/>untouched)</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/>*<sp/>-<sp/>however<sp/>it<sp/>is<sp/>acceptable<sp/>to<sp/>return<sp/>-1<sp/>instead<sp/>of<sp/>the<sp/>required<sp/>length<sp/>when</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>destination<sp/>buffer<sp/>is<sp/>too<sp/>short.</highlight></codeline>
+<codeline lineno="233"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_HAS_NON_CONFORMING_SNPRINTF)</highlight></codeline>
+<codeline lineno="235"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>For<sp/>Windows<sp/>(inc.<sp/>MSYS2),<sp/>we<sp/>provide<sp/>our<sp/>own<sp/>fixed<sp/>implementation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_platform_win32_snprintf(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="238"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_SNPRINTF_ALT)</highlight></codeline>
+<codeline lineno="240"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1ace74e82cb027049fb03d575ec603b5d8" kindref="member">mbedtls_snprintf</ref>)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a9291b1f986f9d901147fdff535e31a62" kindref="member">mbedtls_platform_set_snprintf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*snprintf_func)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...));</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_SNPRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_snprintf</highlight></codeline>
+<codeline lineno="254"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_SNPRINTF_MACRO)</highlight></codeline>
+<codeline lineno="255"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_snprintf<sp/><sp/><sp/>MBEDTLS_PLATFORM_SNPRINTF_MACRO</highlight></codeline>
+<codeline lineno="256"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="257"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_snprintf<sp/><sp/><sp/>MBEDTLS_PLATFORM_STD_SNPRINTF</highlight></codeline>
+<codeline lineno="258"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_SNPRINTF_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="259"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_SNPRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="260"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>vsnprintf</highlight></codeline>
+<codeline lineno="263"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="264"><highlight class="comment"><sp/>*<sp/>The<sp/>vsnprintf<sp/>implementation<sp/>should<sp/>conform<sp/>to<sp/>C99:</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/>*<sp/>-<sp/>it<sp/>*must*<sp/>always<sp/>correctly<sp/>zero-terminate<sp/>the<sp/>buffer</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/>*<sp/><sp/><sp/>(except<sp/>when<sp/>n<sp/>==<sp/>0,<sp/>then<sp/>it<sp/>must<sp/>leave<sp/>the<sp/>buffer<sp/>untouched)</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/>*<sp/>-<sp/>however<sp/>it<sp/>is<sp/>acceptable<sp/>to<sp/>return<sp/>-1<sp/>instead<sp/>of<sp/>the<sp/>required<sp/>length<sp/>when</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/>*<sp/><sp/><sp/>the<sp/>destination<sp/>buffer<sp/>is<sp/>too<sp/>short.</highlight></codeline>
+<codeline lineno="269"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_HAS_NON_CONFORMING_VSNPRINTF)</highlight></codeline>
+<codeline lineno="271"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>For<sp/>Older<sp/>Windows<sp/>(inc.<sp/>MSYS2),<sp/>we<sp/>provide<sp/>our<sp/>own<sp/>fixed<sp/>implementation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_platform_win32_vsnprintf(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>va_list<sp/>arg);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="275"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_VSNPRINTF_ALT)</highlight></codeline>
+<codeline lineno="277"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1a170f7d3bf4bcc2aa5f8b9522627f1892" kindref="member">mbedtls_vsnprintf</ref>)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>va_list<sp/>arg);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1ada26e687a256ea9e43861ac98bbb691e" kindref="member">mbedtls_platform_set_vsnprintf</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*vsnprintf_func)(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n,</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>va_list<sp/>arg));</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_VSNPRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="290"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_vsnprintf</highlight></codeline>
+<codeline lineno="291"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_VSNPRINTF_MACRO)</highlight></codeline>
+<codeline lineno="292"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_vsnprintf<sp/><sp/><sp/>MBEDTLS_PLATFORM_VSNPRINTF_MACRO</highlight></codeline>
+<codeline lineno="293"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="294"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_vsnprintf<sp/><sp/><sp/>vsnprintf</highlight></codeline>
+<codeline lineno="295"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_VSNPRINTF_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="296"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_VSNPRINTF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="297"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="299"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>setbuf</highlight></codeline>
+<codeline lineno="300"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_SETBUF_ALT)</highlight></codeline>
+<codeline lineno="302"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight></codeline>
+<codeline lineno="319"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="platform_8h_1a78e91f58418fcc8e9f0eb84875f679f7" kindref="member">mbedtls_setbuf</ref>)(FILE<sp/>*stream,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a21a2b71df692dff5bff784d91db47b72" kindref="member">mbedtls_platform_set_setbuf</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*setbuf_func)(</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILE<sp/>*stream,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf));</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="333"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_setbuf</highlight></codeline>
+<codeline lineno="334"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_SETBUF_MACRO)</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="345"><highlight class="preprocessor">#define<sp/>mbedtls_setbuf<sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_SETBUF_MACRO</highlight></codeline>
+<codeline lineno="346"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="347"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_setbuf<sp/><sp/><sp/><sp/>setbuf</highlight></codeline>
+<codeline lineno="348"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_SETBUF_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="349"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_SETBUF_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="350"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="352"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>exit</highlight></codeline>
+<codeline lineno="353"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_EXIT_ALT)</highlight></codeline>
+<codeline lineno="355"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="platform_8h_1aada64434d4d3f3dc5de1a4cbf3c3a8d0" kindref="member">mbedtls_exit</ref>)(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a05389824861deaa4ca30992bd7daca23" kindref="member">mbedtls_platform_set_exit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*exit_func)(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>status));</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="368"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_exit</highlight></codeline>
+<codeline lineno="369"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_EXIT_MACRO)</highlight></codeline>
+<codeline lineno="370"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_exit<sp/><sp/><sp/>MBEDTLS_PLATFORM_EXIT_MACRO</highlight></codeline>
+<codeline lineno="371"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="372"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_exit<sp/><sp/><sp/>exit</highlight></codeline>
+<codeline lineno="373"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_EXIT_MACRO<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="374"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_EXIT_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="375"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="377"><highlight class="comment"><sp/>*<sp/>The<sp/>default<sp/>exit<sp/>values</highlight></codeline>
+<codeline lineno="378"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_STD_EXIT_SUCCESS)</highlight></codeline>
+<codeline lineno="380" refid="platform_8h_1ae0beaef88e29bfd432cb2543ac79f109" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_EXIT_SUCCESS<sp/>MBEDTLS_PLATFORM_STD_EXIT_SUCCESS</highlight></codeline>
+<codeline lineno="381"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="382"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_EXIT_SUCCESS<sp/>0</highlight></codeline>
+<codeline lineno="383"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="384"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_STD_EXIT_FAILURE)</highlight></codeline>
+<codeline lineno="385" refid="platform_8h_1a416732ec24ebb55fb12969e849ba27c0" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_EXIT_FAILURE<sp/>MBEDTLS_PLATFORM_STD_EXIT_FAILURE</highlight></codeline>
+<codeline lineno="386"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="387"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_EXIT_FAILURE<sp/>1</highlight></codeline>
+<codeline lineno="388"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="389"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="391"><highlight class="comment"><sp/>*<sp/>The<sp/>function<sp/>pointers<sp/>for<sp/>reading<sp/>from<sp/>and<sp/>writing<sp/>a<sp/>seed<sp/>file<sp/>to</highlight></codeline>
+<codeline lineno="392"><highlight class="comment"><sp/>*<sp/>Non-Volatile<sp/>storage<sp/>(NV)<sp/>in<sp/>a<sp/>platform-independent<sp/>way</highlight></codeline>
+<codeline lineno="393"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="394"><highlight class="comment"><sp/>*<sp/>Only<sp/>enabled<sp/>when<sp/>the<sp/>NV<sp/>seed<sp/>entropy<sp/>source<sp/>is<sp/>enabled</highlight></codeline>
+<codeline lineno="395"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_ENTROPY_NV_SEED)</highlight></codeline>
+<codeline lineno="397"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_NO_STD_FUNCTIONS)<sp/>&amp;&amp;<sp/>defined(MBEDTLS_FS_IO)</highlight></codeline>
+<codeline lineno="398"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Internal<sp/>standard<sp/>platform<sp/>definitions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_platform_std_nv_seed_read(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mbedtls_platform_std_nv_seed_write(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="402"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_NV_SEED_ALT)</highlight></codeline>
+<codeline lineno="404"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1a11da24d31c430d433f1e53109f305c9f" kindref="member">mbedtls_nv_seed_read</ref>)(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len);</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="platform_8h_1a5f8968e9702a35c23bcbdd3ecf5ec916" kindref="member">mbedtls_nv_seed_write</ref>)(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a047954a8d4960f8bc16081ac4b3c6460" kindref="member">mbedtls_platform_set_nv_seed</ref>(</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*nv_seed_read_func)(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len),</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*nv_seed_write_func)(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_len)</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="421"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_nv_seed_read</highlight></codeline>
+<codeline lineno="422"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>mbedtls_nv_seed_write</highlight></codeline>
+<codeline lineno="423"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_PLATFORM_NV_SEED_READ_MACRO)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="424"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(MBEDTLS_PLATFORM_NV_SEED_WRITE_MACRO)</highlight></codeline>
+<codeline lineno="425"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_nv_seed_read<sp/><sp/><sp/><sp/>MBEDTLS_PLATFORM_NV_SEED_READ_MACRO</highlight></codeline>
+<codeline lineno="426"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_nv_seed_write<sp/><sp/><sp/>MBEDTLS_PLATFORM_NV_SEED_WRITE_MACRO</highlight></codeline>
+<codeline lineno="427"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="428"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_nv_seed_read<sp/><sp/><sp/><sp/>mbedtls_platform_std_nv_seed_read</highlight></codeline>
+<codeline lineno="429"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>mbedtls_nv_seed_write<sp/><sp/><sp/>mbedtls_platform_std_nv_seed_write</highlight></codeline>
+<codeline lineno="430"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="431"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_PLATFORM_NV_SEED_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="432"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_ENTROPY_NV_SEED<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="433"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_PLATFORM_SETUP_TEARDOWN_ALT)</highlight></codeline>
+<codeline lineno="435"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="442"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(<ref refid="structmbedtls__platform__context_1a3bec481a82d26b31e2cccc55a81ffc9d" kindref="member">dummy</ref>);<sp/></highlight></codeline>
+<codeline lineno="444"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><ref refid="platform__alt_8h_1a27178846868b49daddcadee808c6e81e" kindref="member">mbedtls_platform_context</ref>;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"></highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="448"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform__alt_8h" kindref="compound">platform_alt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>!MBEDTLS_PLATFORM_SETUP_TEARDOWN_ALT<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="450"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="486"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a6821060faca92a7c18fd557ca8681a50" kindref="member">mbedtls_platform_get_entropy</ref>(<ref refid="group__driver__random_1gafffba5e90dca98f3099eb8756a5669b7" kindref="member">psa_driver_get_entropy_flags_t</ref><sp/>flags,</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*estimate_bits,</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*output,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>output_size);</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"></highlight></codeline>
+<codeline lineno="505"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1af0f37c11be234650bec95ce37e9a4a6b" kindref="member">mbedtls_platform_setup</ref>(<ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="520"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="platform_8h_1a264d5dd442e32a262d331f8889a0997c" kindref="member">mbedtls_platform_teardown</ref>(<ref refid="structmbedtls__platform__context" kindref="compound">mbedtls_platform_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="523"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="525"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>platform.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/platform.h"/>
+  </compounddef>
+</doxygen>

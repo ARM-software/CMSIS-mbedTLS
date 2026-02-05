@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__asn1__sequence" kind="struct" prot="public">
+    <compoundname>mbedtls_asn1_sequence</compoundname>
+    <includes refid="asn1_8h" local="no">asn1.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__asn1__sequence_1a6ef535e31a30926169ee6877af393434" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__asn1__buf" kindref="compound">mbedtls_asn1_buf</ref></type>
+        <definition>mbedtls_asn1_buf mbedtls_asn1_sequence::buf</definition>
+        <argsstring></argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer containing the given ASN.1 item. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="158" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__asn1__sequence_1ac81969ddae2ace4340503530588d83e1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__asn1__sequence" kindref="compound">mbedtls_asn1_sequence</ref> *</type>
+        <definition>struct mbedtls_asn1_sequence* mbedtls_asn1_sequence::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The next entry in the sequence.</para><para>The details of memory management for sequences are not documented and may change in future versions. Set this field to <computeroutput>NULL</computeroutput> when initializing a structure, and do not modify it except via Mbed TLS library functions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="167" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container for a sequence of ASN.1 items </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="430">
+        <label>mbedtls_asn1_sequence</label>
+        <link refid="structmbedtls__asn1__sequence"/>
+        <childnode refid="430" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="431" relation="usage">
+          <edgelabel>buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="431">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" line="157" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/mbedtls/asn1.h" bodystart="157" bodyend="168"/>
+    <listofallmembers>
+      <member refid="structmbedtls__asn1__sequence_1a6ef535e31a30926169ee6877af393434" prot="public" virt="non-virtual"><scope>mbedtls_asn1_sequence</scope><name>buf</name></member>
+      <member refid="structmbedtls__asn1__sequence_1ac81969ddae2ace4340503530588d83e1" prot="public" virt="non-virtual"><scope>mbedtls_asn1_sequence</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

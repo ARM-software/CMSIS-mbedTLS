@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__tls12__ecjpake__to__pms__t" kind="struct" prot="public">
+    <compoundname>psa_tls12_ecjpake_to_pms_t</compoundname>
+    <includes refid="crypto__builtin__key__derivation_8h" local="no">crypto_builtin_key_derivation.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__tls12__ecjpake__to__pms__t_1aa0d23a76827bb2c1f9184833ad3490bc" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_tls12_ecjpake_to_pms_t::private_data[PSA_TLS12_ECJPAKE_TO_PMS_DATA_SIZE]</definition>
+        <argsstring>[PSA_TLS12_ECJPAKE_TO_PMS_DATA_SIZE]</argsstring>
+        <name>private_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="51" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" line="50" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_builtin_key_derivation.h" bodystart="50" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structpsa__tls12__ecjpake__to__pms__t_1aa0d23a76827bb2c1f9184833ad3490bc" prot="public" virt="non-virtual"><scope>psa_tls12_ecjpake_to_pms_t</scope><name>private_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

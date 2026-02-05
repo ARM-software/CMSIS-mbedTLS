@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__verify__hash__interruptible__operation__s" kind="struct" prot="public">
+    <compoundname>psa_verify_hash_interruptible_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1aeb4849c82c72b385761c7849c3fa0228" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_verify_hash_interruptible_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_crypto_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="453" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a6dc34cd9e1ba2e01d899f29c4ca288fb" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__verify__hash__interruptible__context__t" kindref="compound">psa_driver_verify_hash_interruptible_context_t</ref></type>
+        <definition>psa_driver_verify_hash_interruptible_context_t psa_verify_hash_interruptible_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="455" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a1d3720f4b36df06edf67103341d5a6b9" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_verify_hash_interruptible_operation_s::private_error_occurred</definition>
+        <argsstring></argsstring>
+        <name>private_error_occurred</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="457" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__verify__hash__interruptible__operation__s_1a05ab9c279f6c3f3cba77c777fb4d3933" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t psa_verify_hash_interruptible_operation_s::private_num_ops</definition>
+        <argsstring></argsstring>
+        <name>private_num_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="459" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The context for PSA interruptible hash verification. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="843">
+        <label>mbedtls_psa_verify_hash_interruptible_operation_t</label>
+        <link refid="structmbedtls__psa__verify__hash__interruptible__operation__t"/>
+      </node>
+      <node id="842">
+        <label>psa_driver_verify_hash_interruptible_context_t</label>
+        <link refid="unionpsa__driver__verify__hash__interruptible__context__t"/>
+        <childnode refid="843" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="841">
+        <label>psa_verify_hash_interruptible_operation_s</label>
+        <link refid="structpsa__verify__hash__interruptible__operation__s"/>
+        <childnode refid="842" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="443" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="443" bodyend="461"/>
+    <listofallmembers>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a6dc34cd9e1ba2e01d899f29c4ca288fb" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a1d3720f4b36df06edf67103341d5a6b9" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_error_occurred</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1aeb4849c82c72b385761c7849c3fa0228" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__verify__hash__interruptible__operation__s_1a05ab9c279f6c3f3cba77c777fb4d3933" prot="public" virt="non-virtual"><scope>psa_verify_hash_interruptible_operation_s</scope><name>private_num_ops</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

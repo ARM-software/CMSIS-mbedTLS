@@ -1,0 +1,11 @@
+<map id="mbedtls_ssl_session" name="mbedtls_ssl_session">
+<area shape="rect" id="node2" href="$structmbedtls__ssl__tls13__application__secrets.html" title="mbedtls_ssl_tls13_application\l_secrets" alt="" coords="905,243,1101,285"/>
+<area shape="rect" id="node3" href="$structmbedtls__x509__crt.html" title="mbedtls_x509_crt" alt="" coords="941,348,1066,375"/>
+<area shape="rect" id="node4" href="$structmbedtls__asn1__sequence.html" title="mbedtls_asn1_sequence" alt="" coords="201,248,368,275"/>
+<area shape="rect" id="node6" href="$structmbedtls__x509__authority.html" title="mbedtls_x509_authority" alt="" coords="597,309,757,336"/>
+<area shape="rect" id="node5" href="$structmbedtls__asn1__buf.html" title="mbedtls_asn1_buf" alt="" coords="5,309,132,336"/>
+<area shape="rect" id="node7" href="$structmbedtls__asn1__named__data.html" title="mbedtls_asn1_named_data" alt="" coords="392,416,573,443"/>
+<area shape="rect" id="node8" href="$structmbedtls__x509__time.html" title="mbedtls_x509_time" alt="" coords="610,437,745,464"/>
+<area shape="rect" id="node9" href="$structmbedtls__pk__context.html" title="Public key container. " alt="" coords="608,488,747,515"/>
+<area shape="rect" id="node10" href="$structmbedtls__svc__key__id__t.html" title="mbedtls_svc_key_id_t" alt="" coords="209,488,360,515"/>
+</map>

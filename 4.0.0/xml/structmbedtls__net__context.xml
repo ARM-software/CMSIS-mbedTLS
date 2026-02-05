@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__net__context" kind="struct" prot="public">
+    <compoundname>mbedtls_net_context</compoundname>
+    <includes refid="net__sockets_8h" local="no">net_sockets.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__net__context_1ad6eda44e3bfee722150d12a591408995" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mbedtls_net_context::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The underlying file descriptor.</para><para>This field is only guaranteed to be present on POSIX/Unix-like platforms. On other platforms, it may have a different type, have a different meaning, or be absent altogether. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="90" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Wrapper type for sockets.</para><para>Currently backed by just a file descriptor, but might be more in the future (eg two file descriptors for combined IPv4 + IPv6 support, or additional structures for hand-made UDP demultiplexing). </para>    </detaileddescription>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="83" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="83" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structmbedtls__net__context_1ad6eda44e3bfee722150d12a591408995" prot="public" virt="non-virtual"><scope>mbedtls_net_context</scope><name>fd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

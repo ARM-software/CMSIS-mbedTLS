@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__error" kind="group">
+    <compoundname>error</compoundname>
+    <title>Error codes</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t psa_status_t</definition>
+        <argsstring></argsstring>
+        <name>psa_status_t</name>
+        <briefdescription>
+<para>Function return status. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is either <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> (which is zero), indicating success, or a small negative value indicating that an error occurred. Errors are encoded as one of the <computeroutput>PSA_ERROR_xxx</computeroutput> values defined here. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="52" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" prot="public" static="no">
+        <name>PSA_SUCCESS</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The action was completed successfully. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="58" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga8bfafd6baac18ce5d3192d1de256238f" prot="public" static="no">
+        <name>PSA_ERROR_GENERIC_ERROR</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-132)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An error occurred that does not correspond to any defined failure cause.</para><para>Implementations may use this error code if none of the other standard error codes are applicable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="65" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga1dcc6d130633ed5db8942257581b55dd" prot="public" static="no">
+        <name>PSA_ERROR_NOT_SUPPORTED</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-134)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The requested operation or a parameter is not supported by this implementation.</para><para>Implementations should return this error code when an enumeration parameter such as a key type, algorithm, etc. is not recognized. If a combination of parameters is recognized and identified as not valid, return <ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="74" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" prot="public" static="no">
+        <name>PSA_ERROR_NOT_PERMITTED</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-133)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The requested action is denied by a policy.</para><para>Implementations should return this error code when the parameters are recognized as valid and supported, and a policy explicitly denies the requested operation.</para><para>If a subset of the parameters of a function call identify a forbidden operation, and another subset of the parameters are not valid or not supported, it is unspecified whether the function returns <ref refid="group__error_1ga4d1b8dd8526177a15a210b7afc1accb1" kindref="member">PSA_ERROR_NOT_PERMITTED</ref>, <ref refid="group__error_1ga1dcc6d130633ed5db8942257581b55dd" kindref="member">PSA_ERROR_NOT_SUPPORTED</ref> or <ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="87" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" prot="public" static="no">
+        <name>PSA_ERROR_BUFFER_TOO_SMALL</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-138)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An output buffer is too small.</para><para>Applications can call the <computeroutput>PSA_xxx_SIZE</computeroutput> macro listed in the function description to determine a sufficient buffer size.</para><para>Implementations should preferably return this error code only in cases when performing the operation with a larger output buffer would succeed. However implementations may return this error if a function has invalid or unsupported parameters in addition to the parameters that determine the necessary output buffer size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="99" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" prot="public" static="no">
+        <name>PSA_ERROR_ALREADY_EXISTS</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-139)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asking for an item that already exists</para><para>Implementations should return this error, when attempting to write an item (like a key) that already exists. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="105" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" prot="public" static="no">
+        <name>PSA_ERROR_DOES_NOT_EXIST</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-140)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asking for an item that doesn&apos;t exist</para><para>Implementations should return this error, if a requested item (like a key) does not exist. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="111" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga933d40fa2a591004f2e93aa91e11db84" prot="public" static="no">
+        <name>PSA_ERROR_BAD_STATE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-137)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The requested action cannot be performed in the current state.</para><para>Multipart operations return this error when one of the functions is called out of sequence. Refer to the function descriptions for permitted sequencing of functions.</para><para>Implementations shall not return this error code to indicate that a key either exists or not, but shall instead return <ref refid="group__error_1gaf2b34cc87edc72f3ba90071a08210d20" kindref="member">PSA_ERROR_ALREADY_EXISTS</ref> or <ref refid="group__error_1ga18646babb2ae6cbde02ea3828bbd9141" kindref="member">PSA_ERROR_DOES_NOT_EXIST</ref> as applicable.</para><para>Implementations shall not return this error code to indicate that a key identifier is invalid, but shall return <ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref> instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="127" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" prot="public" static="no">
+        <name>PSA_ERROR_INVALID_ARGUMENT</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-135)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The parameters passed to the function are invalid.</para><para>Implementations may return this error any time a parameter or combination of parameters are recognized as invalid.</para><para>Implementations shall not return this error code to indicate that a key identifier is invalid, but shall return <ref refid="group__error_1gadf22718935657c2c3168c228204085f9" kindref="member">PSA_ERROR_INVALID_HANDLE</ref> instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="138" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga91b2ad8a867517a2651f1b076c5216e5" prot="public" static="no">
+        <name>PSA_ERROR_INSUFFICIENT_MEMORY</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-141)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There is not enough runtime memory.</para><para>If the action is carried out across multiple security realms, this error can refer to available memory in any of the security realms. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="144" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" prot="public" static="no">
+        <name>PSA_ERROR_INSUFFICIENT_STORAGE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-142)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There is not enough persistent storage.</para><para>Functions that modify the key storage return this error code if there is insufficient storage space on the host media. In addition, many functions that do not otherwise access storage may return this error code if the implementation requires a mandatory log entry for the requested action and the log storage space is full. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="153" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga5cdb6948371d49e916106249020ea3f7" prot="public" static="no">
+        <name>PSA_ERROR_COMMUNICATION_FAILURE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-145)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There was a communication failure inside the implementation.</para><para>This can indicate a communication failure between the application and an external cryptoprocessor or between the cryptoprocessor and an external volatile or persistent memory. A communication failure may be transient or permanent depending on the cause.</para><para><simplesect kind="warning"><para>If a function returns this error, it is undetermined whether the requested action has completed or not. Implementations should return <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> on successful completion whenever possible, however functions may return <ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref> if the requested action was completed successfully in an external cryptoprocessor but there was a breakdown of communication before the cryptoprocessor could report the status to the application. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="170" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gadd169a1af2707862b95fb9df91dfc37d" prot="public" static="no">
+        <name>PSA_ERROR_STORAGE_FAILURE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-146)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There was a storage failure that may have led to data loss.</para><para>This error indicates that some persistent storage is corrupted. It should not be used for a corruption of volatile memory (use <ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref>), for a communication error between the cryptoprocessor and its external storage (use <ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref>), or when the storage is in a valid state but is full (use <ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref>).</para><para>Note that a storage failure does not indicate that any data that was previously read is invalid. However this previously read data may no longer be readable from storage.</para><para>When a storage failure occurs, it is no longer possible to ensure the global integrity of the keystore. Depending on the global integrity guarantees offered by the implementation, access to other data may or may not fail even if the data is still readable but its integrity cannot be guaranteed.</para><para>Implementations should only use this error code to report a permanent storage corruption. However application writers should keep in mind that transient errors while reading the storage may be reported using this error code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="195" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" prot="public" static="no">
+        <name>PSA_ERROR_HARDWARE_FAILURE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-147)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A hardware failure was detected.</para><para>A hardware failure may be transient or permanent depending on the cause. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="201" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" prot="public" static="no">
+        <name>PSA_ERROR_CORRUPTION_DETECTED</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-151)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A tampering attempt was detected.</para><para>If an application receives this error code, there is no guarantee that previously accessed or computed data was correct and remains confidential. Applications should not perform any security function and should enter a safe failure state.</para><para>Implementations may return this error code if they detect an invalid state that cannot happen during normal operation and that indicates that the implementation&apos;s security guarantees no longer hold. Depending on the implementation architecture and on its security and safety goals, the implementation may forcibly terminate the application.</para><para>This error code is intended as a last resort when a security breach is detected and it is unsure whether the keystore data is still protected. Implementations shall only return this error code to report an alarm from a tampering detector, to indicate that the confidentiality of stored data can no longer be guaranteed, or to indicate that the integrity of previously returned data is now considered compromised. Implementations shall not use this error code to indicate a hardware failure that merely makes it impossible to perform the requested operation (use <ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref>, <ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref>, <ref refid="group__error_1ga08b10e70fa5ff0b05c631d9f8f6b2c6b" kindref="member">PSA_ERROR_HARDWARE_FAILURE</ref>, <ref refid="group__error_1ga4deb59fec02297ec5d8b42178323f675" kindref="member">PSA_ERROR_INSUFFICIENT_ENTROPY</ref> or other applicable error code instead).</para><para>This error indicates an attack against the application. Implementations shall not return this error code as a consequence of the behavior of the application itself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="232" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga4deb59fec02297ec5d8b42178323f675" prot="public" static="no">
+        <name>PSA_ERROR_INSUFFICIENT_ENTROPY</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-148)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>There is not enough entropy to generate random data needed for the requested action.</para><para>This error indicates a failure of a hardware random generator. Application writers should note that this error can be returned not only by functions whose purpose is to generate random data, such as key, IV or nonce generation, but also by functions that execute an algorithm with a randomized result, as well as functions that use randomization of intermediate computations as a countermeasure to certain attacks.</para><para>Implementations should avoid returning this error after <ref refid="group__initialization_1ga2de150803fc2f7dc6101d5af7e921dd9" kindref="member">psa_crypto_init()</ref> has succeeded. Implementations should generate sufficient entropy during initialization and subsequently use a cryptographically secure pseudorandom generator (PRNG). However implementations may return this error at any time if a policy requires the PRNG to be reseeded during normal operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="251" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga35927f755d232c4766de600f2c49e9f2" prot="public" static="no">
+        <name>PSA_ERROR_INVALID_SIGNATURE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-149)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The signature, MAC or hash is incorrect.</para><para>Verification functions return this error if the verification calculations completed successfully, and the value to be verified was determined to be incorrect.</para><para>If the value to verify has an invalid size, implementations may return either <ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref> or <ref refid="group__error_1ga35927f755d232c4766de600f2c49e9f2" kindref="member">PSA_ERROR_INVALID_SIGNATURE</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="261" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gabe29594edbfb152cf153975b0597ac48" prot="public" static="no">
+        <name>PSA_ERROR_INVALID_PADDING</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-150)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The decrypted padding is incorrect.</para><para><simplesect kind="warning"><para>In some protocols, when decrypting data, it is essential that the behavior of the application does not depend on whether the padding is correct, down to precise timing. Applications should prefer protocols that use authenticated encryption rather than plain encryption. If the application must perform a decryption of unauthenticated data, the application writer should take care not to reveal whether the padding is invalid.</para></simplesect>
+Implementations should strive to make valid and invalid padding as close as possible to indistinguishable to an external observer. In particular, the timing of a decryption operation should not depend on the validity of the padding. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="277" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga086ac09f3a555f86e7997beb186f5eef" prot="public" static="no">
+        <name>PSA_ERROR_INSUFFICIENT_DATA</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-143)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return this error when there&apos;s insufficient data when attempting to read from a resource. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="281" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga08f877db7840b03583122a4f20529c2b" prot="public" static="no">
+        <name>PSA_ERROR_SERVICE_FAILURE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-144)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This can be returned if a function can no longer operate correctly. For example, if an essential initialization operation failed or a mutex operation failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="286" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gadf22718935657c2c3168c228204085f9" prot="public" static="no">
+        <name>PSA_ERROR_INVALID_HANDLE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-136)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The key identifier is not valid. See also :ref:`key-handles`. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="290" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" prot="public" static="no">
+        <name>PSA_ERROR_DATA_CORRUPT</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-152)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stored data has been corrupted.</para><para>This error indicates that some persistent storage has suffered corruption. It does not indicate the following situations, which have specific error codes:</para><para><itemizedlist>
+<listitem><para>A corruption of volatile memory - use <ref refid="group__error_1ga116f4d4c6a9d9db3397991a8472d8950" kindref="member">PSA_ERROR_CORRUPTION_DETECTED</ref>.</para></listitem><listitem><para>A communication error between the cryptoprocessor and its external storage - use <ref refid="group__error_1ga5cdb6948371d49e916106249020ea3f7" kindref="member">PSA_ERROR_COMMUNICATION_FAILURE</ref>.</para></listitem><listitem><para>When the storage is in a valid state but is full - use <ref refid="group__error_1ga897a45eb206a6f6b7be7ffbe36f0d766" kindref="member">PSA_ERROR_INSUFFICIENT_STORAGE</ref>.</para></listitem><listitem><para>When the storage fails for other reasons - use <ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref>.</para></listitem><listitem><para>When the stored data is not valid - use <ref refid="group__error_1gacebfbd25a7c2a727694fb57182a66533" kindref="member">PSA_ERROR_DATA_INVALID</ref>.</para></listitem></itemizedlist>
+</para><para><simplesect kind="note"><para>A storage corruption does not indicate that any data that was previously read is invalid. However this previously read data might no longer be readable from storage.</para></simplesect>
+When a storage failure occurs, it is no longer possible to ensure the global integrity of the keystore. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="314" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gacebfbd25a7c2a727694fb57182a66533" prot="public" static="no">
+        <name>PSA_ERROR_DATA_INVALID</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-153)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data read from storage is not valid for the implementation.</para><para>This error indicates that some data read from storage does not have a valid format. It does not indicate the following situations, which have specific error codes:</para><para><itemizedlist>
+<listitem><para>When the storage or stored data is corrupted - use <ref refid="group__error_1ga9febb81a44bdeb4c6c42bf4f697b13bf" kindref="member">PSA_ERROR_DATA_CORRUPT</ref></para></listitem><listitem><para>When the storage fails for other reasons - use <ref refid="group__error_1gadd169a1af2707862b95fb9df91dfc37d" kindref="member">PSA_ERROR_STORAGE_FAILURE</ref></para></listitem><listitem><para>An invalid argument to the API - use <ref refid="group__error_1ga798df25a505ebf931f7bec1f80f1f85f" kindref="member">PSA_ERROR_INVALID_ARGUMENT</ref></para></listitem></itemizedlist>
+</para><para>This error is typically a result of either storage corruption on a cleartext storage backend, or an attempt to read data that was written by an incompatible version of the library. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="330" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__error_1gac0be2a39bf95ab559b75c7ff616450f0" prot="public" static="no">
+        <name>PSA_OPERATION_INCOMPLETE</name>
+        <initializer>((<ref refid="group__error_1ga05676e70ba5c6a7565aff3c36677c1f9" kindref="member">psa_status_t</ref>)-248)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The function that returns this status is defined as interruptible and still has work to do, thus the user should call the function again with the same operation context until it either returns <ref refid="group__error_1ga4cc859e2c66ca381c7418db3527a65e1" kindref="member">PSA_SUCCESS</ref> or any other error. This is not an error per se, more a notification of status. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="337" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

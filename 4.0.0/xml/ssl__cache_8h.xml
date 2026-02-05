@@ -1,0 +1,800 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="ssl__cache_8h" kind="file">
+    <compoundname>ssl_cache.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ssl_8h" local="yes">mbedtls/ssl.h</includes>
+    <includes refid="threading_8h" local="yes">mbedtls/threading.h</includes>
+    <incdepgraph>
+      <node id="3610">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3640">
+        <label>mbedtls/threading.h</label>
+        <link refid="threading_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3621" relation="include">
+        </childnode>
+        <childnode refid="3641" relation="include">
+        </childnode>
+        <childnode refid="3642" relation="include">
+        </childnode>
+        <childnode refid="3643" relation="include">
+        </childnode>
+      </node>
+      <node id="3629">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3622">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3623" relation="include">
+        </childnode>
+      </node>
+      <node id="3604">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3630">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3623" relation="include">
+        </childnode>
+        <childnode refid="3631" relation="include">
+        </childnode>
+        <childnode refid="3622" relation="include">
+        </childnode>
+      </node>
+      <node id="3615">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3612">
+        <label>mbedtls/ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+        <childnode refid="3618" relation="include">
+        </childnode>
+        <childnode refid="3619" relation="include">
+        </childnode>
+        <childnode refid="3635" relation="include">
+        </childnode>
+        <childnode refid="3638" relation="include">
+        </childnode>
+        <childnode refid="3626" relation="include">
+        </childnode>
+        <childnode refid="3639" relation="include">
+        </childnode>
+        <childnode refid="3615" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3636">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3637" relation="include">
+        </childnode>
+        <childnode refid="3620" relation="include">
+        </childnode>
+      </node>
+      <node id="3643">
+        <label>threading_alt.h</label>
+        <link refid="threading__alt_8h"/>
+      </node>
+      <node id="3627">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3624" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3623" relation="include">
+        </childnode>
+        <childnode refid="3622" relation="include">
+        </childnode>
+        <childnode refid="3628" relation="include">
+        </childnode>
+        <childnode refid="3629" relation="include">
+        </childnode>
+        <childnode refid="3630" relation="include">
+        </childnode>
+        <childnode refid="3632" relation="include">
+        </childnode>
+      </node>
+      <node id="3625">
+        <label>stdint.h</label>
+      </node>
+      <node id="3641">
+        <label>stdlib.h</label>
+      </node>
+      <node id="3609">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3624">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3619">
+        <label>mbedtls/ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3620" relation="include">
+        </childnode>
+        <childnode refid="3634" relation="include">
+        </childnode>
+        <childnode refid="3626" relation="include">
+        </childnode>
+      </node>
+      <node id="3607">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3633">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3603">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3604" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3606" relation="include">
+        </childnode>
+        <childnode refid="3607" relation="include">
+        </childnode>
+        <childnode refid="3608" relation="include">
+        </childnode>
+      </node>
+      <node id="3614">
+        <label>stddef.h</label>
+      </node>
+      <node id="3608">
+        <label>limits.h</label>
+      </node>
+      <node id="3620">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3621" relation="include">
+        </childnode>
+        <childnode refid="3626" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3623">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3624" relation="include">
+        </childnode>
+        <childnode refid="3625" relation="include">
+        </childnode>
+      </node>
+      <node id="3626">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+      </node>
+      <node id="3600">
+        <label>ssl_cache.h</label>
+        <link refid="ssl_cache.h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3612" relation="include">
+        </childnode>
+        <childnode refid="3640" relation="include">
+        </childnode>
+      </node>
+      <node id="3642">
+        <label>pthread.h</label>
+      </node>
+      <node id="3628">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+      </node>
+      <node id="3621">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3622" relation="include">
+        </childnode>
+      </node>
+      <node id="3632">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3625" relation="include">
+        </childnode>
+        <childnode refid="3633" relation="include">
+        </childnode>
+      </node>
+      <node id="3631">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3613">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3615" relation="include">
+        </childnode>
+        <childnode refid="3616" relation="include">
+        </childnode>
+      </node>
+      <node id="3601">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3634">
+        <label>mbedtls/private/cipher.h</label>
+      </node>
+      <node id="3616">
+        <label>time.h</label>
+      </node>
+      <node id="3618">
+        <label>mbedtls/private/ecp.h</label>
+      </node>
+      <node id="3602">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3609" relation="include">
+        </childnode>
+        <childnode refid="3605" relation="include">
+        </childnode>
+        <childnode refid="3610" relation="include">
+        </childnode>
+        <childnode refid="3611" relation="include">
+        </childnode>
+      </node>
+      <node id="3639">
+        <label>mbedtls/private/ecdh.h</label>
+      </node>
+      <node id="3637">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3603" relation="include">
+        </childnode>
+        <childnode refid="3613" relation="include">
+        </childnode>
+        <childnode refid="3621" relation="include">
+        </childnode>
+        <childnode refid="3614" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3605">
+        <label>/dev/null</label>
+      </node>
+      <node id="3635">
+        <label>mbedtls/x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3636" relation="include">
+        </childnode>
+        <childnode refid="3638" relation="include">
+        </childnode>
+        <childnode refid="3617" relation="include">
+        </childnode>
+      </node>
+      <node id="3606">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3617">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3611">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="3638">
+        <label>mbedtls/x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3601" relation="include">
+        </childnode>
+        <childnode refid="3602" relation="include">
+        </childnode>
+        <childnode refid="3636" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__ssl__cache__entry" prot="public">mbedtls_ssl_cache_entry</innerclass>
+    <innerclass refid="structmbedtls__ssl__cache__context" prot="public">mbedtls_ssl_cache_context</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="ssl__cache_8h_1a9abd00554287df218aa9c3b035a2037a" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref></type>
+        <definition>typedef struct mbedtls_ssl_cache_context mbedtls_ssl_cache_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_cache_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="1856" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="ssl__cache_8h_1a332c11cba2ba38db69b96458551da577" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref></type>
+        <definition>typedef struct mbedtls_ssl_cache_entry mbedtls_ssl_cache_entry</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_ssl_cache_entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="1856" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ssl__cache_8h_1a90886fd9ad56471c5ebaed2e05086cd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cache_init</definition>
+        <argsstring>(mbedtls_ssl_cache_context *cache)</argsstring>
+        <name>mbedtls_ssl_cache_init</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref> *</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+<para>Initialize an SSL cache context. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSL cache context </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1a9b8d1a4920c468e41611e7f2b5828d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cache_get</definition>
+        <argsstring>(void *data, unsigned char const *session_id, size_t session_id_len, mbedtls_ssl_session *session)</argsstring>
+        <name>mbedtls_ssl_cache_get</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>session_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>session_id_len</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Cache get callback implementation (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSL cache context to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the buffer holding the session ID for the session to load. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>session_id</computeroutput> in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address at which to store the session associated with <computeroutput>session_id</computeroutput>, if present.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para><ref refid="ssl_8h_1a8aacd7800641540018eccacb43c822cc" kindref="member">MBEDTLS_ERR_SSL_CACHE_ENTRY_NOT_FOUND</ref> if there is no cache entry with specified session ID found, or any other negative error code for other failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1a43f93b715cb9ddb2543b44e691dc0569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cache_set</definition>
+        <argsstring>(void *data, unsigned char const *session_id, size_t session_id_len, const mbedtls_ssl_session *session)</argsstring>
+        <name>mbedtls_ssl_cache_set</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>session_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>session_id_len</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref> *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+<para>Cache set callback implementation (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSL cache context to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the buffer holding the session ID associated to <computeroutput>session</computeroutput>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>session_id</computeroutput> in bytes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session to store.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1a56612b99754a20b04bb93c4c7361bea6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_ssl_cache_remove</definition>
+        <argsstring>(void *data, unsigned char const *session_id, size_t session_id_len)</argsstring>
+        <name>mbedtls_ssl_cache_remove</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>unsigned char const *</type>
+          <declname>session_id</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>session_id_len</declname>
+        </param>
+        <briefdescription>
+<para>Remove the cache entry by the session ID (Thread-safe if MBEDTLS_THREADING_C is enabled) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SSL cache context to use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pointer to the buffer holding the session ID associated to session. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_id_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of <computeroutput>session_id</computeroutput> in bytes.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>0</computeroutput> on success. This indicates the cache entry for the session with provided ID is removed or does not exist. </para><simplesectsep/><para>A negative error code on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1aa3468c4ebd9484227436014db30b8f5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cache_set_timeout</definition>
+        <argsstring>(mbedtls_ssl_cache_context *cache, int timeout)</argsstring>
+        <name>mbedtls_ssl_cache_set_timeout</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref> *</type>
+          <declname>cache</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Set the cache timeout (Default: MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT (1 day)) </para>        </briefdescription>
+        <detaileddescription>
+<para>A timeout of 0 indicates no timeout.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSL cache context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cache entry timeout in seconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1a360102f29d075d382b12ad6ff2e5b4b6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mbedtls_ssl_cache_get_timeout</definition>
+        <argsstring>(mbedtls_ssl_cache_context *cache)</argsstring>
+        <name>mbedtls_ssl_cache_get_timeout</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref> *</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+<para>Get the cache timeout. </para>        </briefdescription>
+        <detaileddescription>
+<para>A timeout of 0 indicates no timeout.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSL cache context</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>cache entry timeout in seconds </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="161" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1abc39c23cf3f791359104d9094bd9cf6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cache_set_max_entries</definition>
+        <argsstring>(mbedtls_ssl_cache_context *cache, int max)</argsstring>
+        <name>mbedtls_ssl_cache_set_max_entries</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref> *</type>
+          <declname>cache</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Set the maximum number of cache entries (Default: MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES (50)) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSL cache context </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cache entry maximum </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="ssl__cache_8h_1a93a35f5cd109f9d698bfac659905c0d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_ssl_cache_free</definition>
+        <argsstring>(mbedtls_ssl_cache_context *cache)</argsstring>
+        <name>mbedtls_ssl_cache_free</name>
+        <param>
+          <type><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref> *</type>
+          <declname>cache</declname>
+        </param>
+        <briefdescription>
+<para>Free referenced items in a cache context and clear memory. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SSL cache context </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h" line="181" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SSL session cache implementation. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_SSL_CACHE_H</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_H</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ssl_8h" kindref="compound">mbedtls/ssl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="threading_8h" kindref="compound">mbedtls/threading.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT)</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/>86400<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES)</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_SSL_CACHE_DEFAULT_MAX_ENTRIES<sp/><sp/><sp/><sp/><sp/><sp/>50<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="ssl__cache_8h_1a9abd00554287df218aa9c3b035a2037a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref>;</highlight></codeline>
+<codeline lineno="45" refid="ssl__cache_8h_1a332c11cba2ba38db69b96458551da577" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref><sp/><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="structmbedtls__ssl__cache__entry" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight></codeline>
+<codeline lineno="52" refid="structmbedtls__ssl__cache__entry_1a793218c7cb0704dba08dcca94389e094" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="platform__time_8h_1ab250f6b51bf1a0a612094c3eadd4c6f6" kindref="member">mbedtls_time_t</ref><sp/>MBEDTLS_PRIVATE(timestamp);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structmbedtls__ssl__cache__entry_1a68ac33ad4cb6d7254cb2141d0aec14de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(session_id)[32];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structmbedtls__ssl__cache__entry_1a189b894d73a9d0bf2ebf36f0a8e2cb4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(session_id_len);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structmbedtls__ssl__cache__entry_1a99c61b183fd5c587e64c697df2141482" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*MBEDTLS_PRIVATE(session);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="structmbedtls__ssl__cache__entry_1af2ed3b1f1cc353f43f043b830a7c9e1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(session_len);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="structmbedtls__ssl__cache__entry_1a66f6e76696381c2a5659be9a11064772" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref><sp/>*MBEDTLS_PRIVATE(next);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="structmbedtls__ssl__cache__context" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="structmbedtls__ssl__cache__context_1a3e268a8d32a56074eb22fb8fcdc6e515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ssl__cache__entry" kindref="compound">mbedtls_ssl_cache_entry</ref><sp/>*MBEDTLS_PRIVATE(chain);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="structmbedtls__ssl__cache__context_1a253b475b7561d273daeba939ff7e2aa7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(timeout);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="structmbedtls__ssl__cache__context_1a21260c28163dc0c658e901f91d2a2dfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>MBEDTLS_PRIVATE(max_entries);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_THREADING_C)</highlight></codeline>
+<codeline lineno="72" refid="structmbedtls__ssl__cache__context_1a8d8d749dd16848d6d26e7dbab600dd9b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmbedtls__threading__mutex__t" kindref="compound">mbedtls_threading_mutex_t</ref><sp/>MBEDTLS_PRIVATE(mutex);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a90886fd9ad56471c5ebaed2e05086cd5" kindref="member">mbedtls_ssl_cache_init</ref>(<ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>*cache);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a9b8d1a4920c468e41611e7f2b5828d1c" kindref="member">mbedtls_ssl_cache_get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*session_id,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>session_id_len,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref><sp/>*session);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a43f93b715cb9ddb2543b44e691dc0569" kindref="member">mbedtls_ssl_cache_set</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*session_id,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>session_id_len,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__ssl__session" kindref="compound">mbedtls_ssl_session</ref><sp/>*session);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a56612b99754a20b04bb93c4c7361bea6" kindref="member">mbedtls_ssl_cache_remove</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*session_id,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>session_id_len);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_HAVE_TIME)</highlight></codeline>
+<codeline lineno="141"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="150"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1aa3468c4ebd9484227436014db30b8f5f" kindref="member">mbedtls_ssl_cache_set_timeout</ref>(<ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>*cache,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeout);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="ssl__cache_8h_1a360102f29d075d382b12ad6ff2e5b4b6" refkind="member"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a360102f29d075d382b12ad6ff2e5b4b6" kindref="member">mbedtls_ssl_cache_get_timeout</ref>(<ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>*cache)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cache-&gt;MBEDTLS_PRIVATE(timeout);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_HAVE_TIME<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="174"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1abc39c23cf3f791359104d9094bd9cf6f" kindref="member">mbedtls_ssl_cache_set_max_entries</ref>(<ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>*cache,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ssl__cache_8h_1a93a35f5cd109f9d698bfac659905c0d8" kindref="member">mbedtls_ssl_cache_free</ref>(<ref refid="structmbedtls__ssl__cache__context" kindref="compound">mbedtls_ssl_cache_context</ref><sp/>*cache);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ssl_cache.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_cache.h"/>
+  </compounddef>
+</doxygen>

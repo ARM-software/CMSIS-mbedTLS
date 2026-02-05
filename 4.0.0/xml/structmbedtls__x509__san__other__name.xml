@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__san__other__name" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_san_other_name</compoundname>
+    <includes refid="x509_8h" local="no">x509.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__san__other__name_1af73e6ce7e7b20eceda8fb97a872eefce" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_san_other_name::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The type_id is an OID as defined in RFC 5280. To check the value of the type id, you should use <computeroutput>MBEDTLS_OID_CMP</computeroutput> with a known OID mbedtls_x509_buf.The type id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="260" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__other__name_1a5ad9ada49753ed980a004be00de419d3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_san_other_name::oid</definition>
+        <argsstring></argsstring>
+        <name>oid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The object identifier. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="269" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__other__name_1a6cc135e3a7752211d637ef3e14b6da6c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_san_other_name::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The named value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="270" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__other__name_1ac4dff379224c3b663981238f71df0da7" prot="public" static="no" mutable="no">
+        <type>struct mbedtls_x509_san_other_name::@0::@1</type>
+        <definition>struct mbedtls_x509_san_other_name::@0::@1
+         mbedtls_x509_san_other_name::hardware_module_name</definition>
+        <argsstring></argsstring>
+        <name>hardware_module_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>From RFC 4108 section 5: HardwareModuleName ::= SEQUENCE { hwType OBJECT IDENTIFIER, hwSerialNum OCTET STRING } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="272" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__san__other__name_1a21aaafb5c478082ef37a8e3f9f49f37f" prot="public" static="no" mutable="no">
+        <type>union mbedtls_x509_san_other_name::@0</type>
+        <definition>union mbedtls_x509_san_other_name::@0
+     mbedtls_x509_san_other_name::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="274" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>From RFC 5280 section 4.2.1.6: OtherName ::= SEQUENCE { type-id OBJECT IDENTIFIER, value [0] EXPLICIT ANY DEFINED BY type-id }</para><para>Future versions of the library may add new fields to this structure or to its embedded union and structure. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="686">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="685">
+        <label>mbedtls_x509_san_other_name</label>
+        <link refid="structmbedtls__x509__san__other__name"/>
+        <childnode refid="686" relation="usage">
+          <edgelabel>oid</edgelabel>
+          <edgelabel>type_id</edgelabel>
+          <edgelabel>val</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" line="254" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509.h" bodystart="254" bodyend="275"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__san__other__name_1ac4dff379224c3b663981238f71df0da7" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_other_name</scope><name>hardware_module_name</name></member>
+      <member refid="structmbedtls__x509__san__other__name_1a5ad9ada49753ed980a004be00de419d3" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_other_name</scope><name>oid</name></member>
+      <member refid="structmbedtls__x509__san__other__name_1af73e6ce7e7b20eceda8fb97a872eefce" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_other_name</scope><name>type_id</name></member>
+      <member refid="structmbedtls__x509__san__other__name_1a6cc135e3a7752211d637ef3e14b6da6c" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_other_name</scope><name>val</name></member>
+      <member refid="structmbedtls__x509__san__other__name_1a21aaafb5c478082ef37a8e3f9f49f37f" prot="public" virt="non-virtual"><scope>mbedtls_x509_san_other_name</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,29 @@
+<map id="platform_time.h" name="platform_time.h">
+<area shape="rect" id="node2" href="$platform__util_8h.html" title="Common and shared functions used by multiple modules in the Mbed TLS library. " alt="" coords="406,80,509,107"/>
+<area shape="rect" id="node3" href="$ssl_8h.html" title="SSL/TLS functions. " alt="" coords="382,543,432,569"/>
+<area shape="rect" id="node8" href="$ssl__ticket_8h.html" title="TLS server ticket callbacks implementation. " alt="" coords="772,617,861,644"/>
+<area shape="rect" id="node28" href="$platform_8h.html" title="This file contains the definitions and functions of the Mbed TLS platform abstraction layer..." alt="" coords="945,80,1024,107"/>
+<area shape="rect" id="node9" href="$ecp_8h.html" title="ecp.h" alt="" coords="45,468,100,495"/>
+<area shape="rect" id="node10" href="$md_8h.html" title="This file contains the generic functions for message&#45;digest (hashing) and HMAC. " alt="" coords="379,155,430,181"/>
+<area shape="rect" id="node23" href="$cipher_8h.html" title="cipher.h" alt="" coords="477,155,545,181"/>
+<area shape="rect" id="node24" href="$asn1_8h.html" title="Generic ASN.1 parsing. " alt="" coords="651,229,712,256"/>
+<area shape="rect" id="node4" href="$debug_8h.html" title="Functions for controlling and providing debug output from the library. " alt="" coords="318,617,386,644"/>
+<area shape="rect" id="node5" href="$net__sockets_8h.html" title="Network sockets abstraction layer to integrate Mbed TLS into a BSD&#45;style sockets API. " alt="" coords="411,617,515,644"/>
+<area shape="rect" id="node6" href="$ssl__cache_8h.html" title="SSL session cache implementation. " alt="" coords="540,617,632,644"/>
+<area shape="rect" id="node7" href="$ssl__cookie_8h.html" title="DTLS cookie callbacks implementation. " alt="" coords="200,617,294,644"/>
+<area shape="rect" id="node11" href="$pk_8h.html" title="Public Key abstraction layer. " alt="" coords="470,229,517,256"/>
+<area shape="rect" id="node12" href="$ssl__ciphersuites_8h.html" title="SSL Ciphersuites for Mbed TLS. " alt="" coords="420,304,546,331"/>
+<area shape="rect" id="node18" href="$ecdsa_8h.html" title="ecdsa.h" alt="" coords="173,229,241,256"/>
+<area shape="rect" id="node22" href="$ecjpake_8h.html" title="ecjpake.h" alt="" coords="265,229,344,256"/>
+<area shape="rect" id="node13" href="$x509_8h.html" title="X.509 generic defines and structures. " alt="" coords="571,304,632,331"/>
+<area shape="rect" id="node14" href="$x509__crt_8h.html" title="X.509 certificate parsing and writing. " alt="" coords="604,468,687,495"/>
+<area shape="rect" id="node16" href="$x509__crl_8h.html" title="X.509 certificate revocation list parsing. " alt="" coords="470,386,552,413"/>
+<area shape="rect" id="node17" href="$x509__csr_8h.html" title="X.509 certificate signing request parsing and writing. " alt="" coords="577,386,664,413"/>
+<area shape="rect" id="node15" href="$pkcs7_8h.html" title="PKCS #7 generic defines and structures https://tools.ietf.org/html/rfc2315. " alt="" coords="706,543,774,569"/>
+<area shape="rect" id="node19" href="$crypto__builtin__composites_8h.html" title="Context structure declaration of the Mbed TLS software&#45;based PSA drivers called through the PSA Crypt..." alt="" coords="160,304,344,331"/>
+<area shape="rect" id="node20" href="$crypto__driver__contexts__composites_8h.html" title="Declaration of context structures for use with the PSA driver wrapper interface. This file contains t..." alt="" coords="176,379,328,420"/>
+<area shape="rect" id="node21" href="$crypto__struct_8h.html" title="PSA cryptography module: Mbed TLS structured type implementations. " alt="" coords="198,468,307,495"/>
+<area shape="rect" id="node25" href="$oid_8h.html" title="Object Identifier (OID) values. " alt="" coords="656,304,707,331"/>
+<area shape="rect" id="node26" href="$asn1write_8h.html" title="ASN.1 buffer writing functionality. " alt="" coords="731,304,819,331"/>
+<area shape="rect" id="node27" href="$psa__util_8h.html" title="Utility functions for the use of the PSA Crypto library. " alt="" coords="740,386,818,413"/>
+</map>

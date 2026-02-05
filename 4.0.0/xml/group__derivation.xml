@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="group__derivation" kind="group">
+    <compoundname>derivation</compoundname>
+    <title>Key derivation</title>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t psa_key_derivation_step_t</definition>
+        <argsstring></argsstring>
+        <name>psa_key_derivation_step_t</name>
+        <briefdescription>
+<para>Encoding of the step of a key derivation. </para>        </briefdescription>
+        <detaileddescription>
+<para>Values of this type are generally constructed by macros called <computeroutput>PSA_KEY_DERIVATION_INPUT_xxx</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="438" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__derivation_1ga34f78d879ae3f1a3ccd8d51bfa9868d8" prot="public" static="no">
+        <type>struct <ref refid="structpsa__custom__key__parameters__s" kindref="compound">psa_custom_key_parameters_s</ref></type>
+        <definition>typedef struct psa_custom_key_parameters_s psa_custom_key_parameters_t</definition>
+        <argsstring></argsstring>
+        <name>psa_custom_key_parameters_t</name>
+        <briefdescription>
+<para>Custom parameters for key generation or key derivation. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is a structure type with at least the following field:</para><para><itemizedlist>
+<listitem><para><computeroutput>flags:</computeroutput> an unsigned integer type. 0 for the default production parameters.</para></listitem></itemizedlist>
+</para><para>Functions that take such a structure as input also take an associated input buffer <computeroutput>custom_data</computeroutput> of length <computeroutput>custom_data_length</computeroutput>.</para><para>The interpretation of this structure and the associated <computeroutput>custom_data</computeroutput> parameter depend on the type of the created key.</para><para><itemizedlist>
+<listitem><para><ref refid="group__crypto__types_1ga11745b110166e927e2abeabc7d532051" kindref="member">PSA_KEY_TYPE_RSA_KEY_PAIR</ref>:<itemizedlist>
+<listitem><para><computeroutput>flags:</computeroutput> must be 0.</para></listitem><listitem><para><computeroutput>custom_data:</computeroutput> the public exponent, in little-endian order. This must be an odd integer and must not be 1. Implementations must support 65537, should support 3 and may support other values. When not using a driver, Mbed TLS supports values up to <computeroutput>INT_MAX</computeroutput>. If this is empty, the default value 65537 is used.</para></listitem></itemizedlist>
+</para></listitem><listitem><para>Other key types: reserved for future use. <computeroutput>flags</computeroutput> must be 0. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" line="438" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_types.h" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__derivation_1ga0ddfbe764baba995c402b1b0ef59392e" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_SECRET</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0101)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A secret input for key derivation.</para><para>This should be a key of type <ref refid="group__crypto__types_1gae871b2357b8593f33bfd51abbf93ebb1" kindref="member">PSA_KEY_TYPE_DERIVE</ref> (passed to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref>) or the shared secret resulting from a key agreement (obtained via <ref refid="group__key__derivation_1ga2cd5a8ac906747d3204ec442db78745f" kindref="member">psa_key_derivation_key_agreement()</ref>).</para><para>The secret can also be a direct input (passed to key_derivation_input_bytes()). In this case, the derivation operation may not be used to derive keys: the operation will only allow <ref refid="group__key__derivation_1ga06b7eb34a2fa88965f68e3d023fa12b9" kindref="member">psa_key_derivation_output_bytes()</ref>, <ref refid="group__key__derivation_1gae446f3352c87e3f7ceb8f659c2e17642" kindref="member">psa_key_derivation_verify_bytes()</ref>, or <ref refid="group__key__derivation_1gac041714e34a94742e8ee006ac7dfea5a" kindref="member">psa_key_derivation_verify_key()</ref>, but not <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2680" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1gae19de2d7c74759878b4a6677b0acdda7" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_PASSWORD</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0102)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A low-entropy secret input for password hashing / key stretching.</para><para>This is usually a key of type <ref refid="group__crypto__types_1gaad682c8fe975aee537af922f9503d510" kindref="member">PSA_KEY_TYPE_PASSWORD</ref> (passed to <ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref>) or a direct input (passed to <ref refid="group__key__derivation_1ga8fd934dfb0ca45cbf89542ef2a5494c2" kindref="member">psa_key_derivation_input_bytes()</ref>) that is a password or passphrase. It can also be high-entropy secret such as a key of type <ref refid="group__crypto__types_1gae871b2357b8593f33bfd51abbf93ebb1" kindref="member">PSA_KEY_TYPE_DERIVE</ref> or the shared secret resulting from a key agreement.</para><para>The secret can also be a direct input (passed to key_derivation_input_bytes()). In this case, the derivation operation may not be used to derive keys: the operation will only allow <ref refid="group__key__derivation_1ga06b7eb34a2fa88965f68e3d023fa12b9" kindref="member">psa_key_derivation_output_bytes()</ref>, <ref refid="group__key__derivation_1gae446f3352c87e3f7ceb8f659c2e17642" kindref="member">psa_key_derivation_verify_bytes()</ref>, or <ref refid="group__key__derivation_1gac041714e34a94742e8ee006ac7dfea5a" kindref="member">psa_key_derivation_verify_key()</ref>, but not <ref refid="group__key__derivation_1gada7a6e17222ea9e7a6be6864a00316e1" kindref="member">psa_key_derivation_output_key()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2698" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2698" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1gab21b29b1193a900ebfe94945700f9c54" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_OTHER_SECRET</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0103)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A high-entropy additional secret input for key derivation.</para><para>This is typically the shared secret resulting from a key agreement obtained via <computeroutput><ref refid="group__key__derivation_1ga2cd5a8ac906747d3204ec442db78745f" kindref="member">psa_key_derivation_key_agreement()</ref></computeroutput>. It may alternatively be a key of type <computeroutput>PSA_KEY_TYPE_DERIVE</computeroutput> passed to <computeroutput><ref refid="group__key__derivation_1gab2d7ce8705dd8e4a093f4b8a21a0c15a" kindref="member">psa_key_derivation_input_key()</ref></computeroutput>, or a direct input passed to <computeroutput><ref refid="group__key__derivation_1ga8fd934dfb0ca45cbf89542ef2a5494c2" kindref="member">psa_key_derivation_input_bytes()</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2707" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1ga6489d91aa4a2eb50d28c1209bffe9541" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_LABEL</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0201)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A label for key derivation.</para><para>This should be a direct input. It can also be a key of type <ref refid="group__crypto__types_1gaa97f92025533102616b32d571c940d80" kindref="member">PSA_KEY_TYPE_RAW_DATA</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2715" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2715" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1gab62757fb125243562c3947a752470d4a" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_SALT</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0202)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A salt for key derivation.</para><para>This should be a direct input. It can also be a key of type <ref refid="group__crypto__types_1gaa97f92025533102616b32d571c940d80" kindref="member">PSA_KEY_TYPE_RAW_DATA</ref> or <ref refid="group__crypto__types_1gab47765c3f82af1b6a7d213f9881cb6d6" kindref="member">PSA_KEY_TYPE_PEPPER</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2723" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2723" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1gacef8df989e09c769233f4b779acb5b7d" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_INFO</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0203)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An information string for key derivation.</para><para>This should be a direct input. It can also be a key of type <ref refid="group__crypto__types_1gaa97f92025533102616b32d571c940d80" kindref="member">PSA_KEY_TYPE_RAW_DATA</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2730" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2730" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1gaccc41e8b4bd4e34bcb46ad1577709535" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_SEED</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0204)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A seed for key derivation.</para><para>This should be a direct input. It can also be a key of type <ref refid="group__crypto__types_1gaa97f92025533102616b32d571c940d80" kindref="member">PSA_KEY_TYPE_RAW_DATA</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2737" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__derivation_1ga4cc0f85fedc37168ac55117ffdba6cd1" prot="public" static="no">
+        <name>PSA_KEY_DERIVATION_INPUT_COST</name>
+        <initializer>((<ref refid="group__derivation_1gaac4eeacd36596c548b3a48fc06c5048b" kindref="member">psa_key_derivation_step_t</ref>) 0x0205)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A cost parameter for password hashing / key stretching.</para><para>This must be a direct input, passed to <ref refid="group__key__derivation_1gac14f4c2fa41c2c1f6154f8a9c7a5a0cd" kindref="member">psa_key_derivation_input_integer()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" line="2743" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_values.h" bodystart="2743" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

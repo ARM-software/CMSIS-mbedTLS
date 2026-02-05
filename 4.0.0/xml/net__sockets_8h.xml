@@ -1,0 +1,1205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="net__sockets_8h" kind="file">
+    <compoundname>net_sockets.h</compoundname>
+    <includes local="yes">mbedtls/private_access.h</includes>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <includes refid="ssl_8h" local="yes">mbedtls/ssl.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="3274">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3293">
+        <label>psa/crypto_struct_alt.h</label>
+      </node>
+      <node id="3286">
+        <label>psa/crypto_values.h</label>
+        <link refid="crypto__values_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3268">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3294">
+        <label>crypto_extra.h</label>
+        <link refid="crypto__extra_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3295" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+      </node>
+      <node id="3279">
+        <label>mbedtls/platform_time.h</label>
+        <link refid="platform__time_8h"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+      </node>
+      <node id="3276">
+        <label>mbedtls/ssl.h</label>
+        <link refid="ssl_8h"/>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+        <childnode refid="3299" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3291" relation="include">
+        </childnode>
+      </node>
+      <node id="3300">
+        <label>mbedtls/x509.h</label>
+        <link refid="x509_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3301" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+      </node>
+      <node id="3291">
+        <label>psa/crypto.h</label>
+        <link refid="crypto_8h"/>
+        <childnode refid="3288" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+        <childnode refid="3292" relation="include">
+        </childnode>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3296" relation="include">
+        </childnode>
+      </node>
+      <node id="3289">
+        <label>stdint.h</label>
+      </node>
+      <node id="3273">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3288">
+        <label>psa/crypto_platform_alt.h</label>
+      </node>
+      <node id="3283">
+        <label>mbedtls/ssl_ciphersuites.h</label>
+        <link refid="ssl__ciphersuites_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3271">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3297">
+        <label>crypto_spe.h</label>
+      </node>
+      <node id="3267">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+      </node>
+      <node id="3278">
+        <label>stddef.h</label>
+      </node>
+      <node id="3272">
+        <label>limits.h</label>
+      </node>
+      <node id="3284">
+        <label>mbedtls/pk.h</label>
+        <link refid="pk_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3291" relation="include">
+        </childnode>
+      </node>
+      <node id="3287">
+        <label>psa/crypto_types.h</label>
+        <link refid="crypto__types_8h"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+      </node>
+      <node id="3290">
+        <label>mbedtls/md.h</label>
+        <link refid="md_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+      </node>
+      <node id="3292">
+        <label>crypto_sizes.h</label>
+        <link refid="crypto__sizes_8h"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>mbedtls/compat-3-crypto.h</label>
+        <link refid="compat-3-crypto_8h"/>
+        <childnode refid="3286" relation="include">
+        </childnode>
+      </node>
+      <node id="3296">
+        <label>crypto_platform.h</label>
+        <link refid="crypto__platform_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+      </node>
+      <node id="3295">
+        <label>crypto_compat.h</label>
+        <link refid="crypto__compat_8h"/>
+      </node>
+      <node id="3277">
+        <label>mbedtls/platform_util.h</label>
+        <link refid="platform__util_8h"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+      </node>
+      <node id="3265">
+        <label>mbedtls/private_access.h</label>
+      </node>
+      <node id="3298">
+        <label>mbedtls/private/cipher.h</label>
+      </node>
+      <node id="3280">
+        <label>time.h</label>
+      </node>
+      <node id="3282">
+        <label>mbedtls/private/ecp.h</label>
+      </node>
+      <node id="3266">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+      </node>
+      <node id="3303">
+        <label>mbedtls/private/ecdh.h</label>
+      </node>
+      <node id="3301">
+        <label>mbedtls/asn1.h</label>
+        <link refid="asn1_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+      </node>
+      <node id="3269">
+        <label>/dev/null</label>
+      </node>
+      <node id="3299">
+        <label>mbedtls/x509_crt.h</label>
+        <link refid="x509__crt_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+      </node>
+      <node id="3270">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3264">
+        <label>net_sockets.h</label>
+        <link refid="net_sockets.h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+      </node>
+      <node id="3281">
+        <label>mbedtls/private/bignum.h</label>
+      </node>
+      <node id="3275">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+      <node id="3302">
+        <label>mbedtls/x509_crl.h</label>
+        <link refid="x509__crl_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structmbedtls__net__context" prot="public">mbedtls_net_context</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="net__sockets_8h_1aa639b33eeaf6414c0de66ab9b8ff6cde" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_SOCKET_FAILED</name>
+        <initializer>-0x0042</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Failed to open a socket. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="38" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1acdd34e19acf5a23c593895605bf3f219" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_CONNECT_FAILED</name>
+        <initializer>-0x0044</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The connection to the given server / port failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="40" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a4dbd66233b3f8bdd812f388667fcf123" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_BIND_FAILED</name>
+        <initializer>-0x0046</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Binding of the socket failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="42" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a4bf7cbe6fff470186e4a7a275dde4bdd" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_LISTEN_FAILED</name>
+        <initializer>-0x0048</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Could not listen on the socket. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="44" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a030cd35e75797c983c61152fd36bd135" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_ACCEPT_FAILED</name>
+        <initializer>-0x004A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Could not accept the incoming connection. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="46" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a0c95b85b300ddc10a753899ff2f154f2" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_RECV_FAILED</name>
+        <initializer>-0x004C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reading information from the socket failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="48" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1ad11d72cca1319fd35fb9e73c9428e92d" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_SEND_FAILED</name>
+        <initializer>-0x004E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sending information through the socket failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="50" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a1793f099e5c010750c7a07bf259898d9" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_CONN_RESET</name>
+        <initializer>-0x0050</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Connection was reset by peer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="52" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a937d55e9aa02f1554a43f562a5fc24f9" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_UNKNOWN_HOST</name>
+        <initializer>-0x0052</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Failed to get an IP address for the given hostname. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="54" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a6a089c6b33dd98bfae43a42ed726cacb" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_BUFFER_TOO_SMALL</name>
+        <initializer><ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer is too small to hold the data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="56" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a945ec2afc6c9d9d73166ce1e073aaa18" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_INVALID_CONTEXT</name>
+        <initializer>-0x0045</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The context is invalid, eg because it was free()ed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="58" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a08416162853b65f874c50fe44cf269b2" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_POLL_FAILED</name>
+        <initializer>-0x0047</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Polling the net context failed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="60" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a46679f0ee267a053fe227422a2f0048b" prot="public" static="no">
+        <name>MBEDTLS_ERR_NET_BAD_INPUT_DATA</name>
+        <initializer>-0x0049</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input invalid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="62" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a28c00c358ccc381ecfc2a28f59db8bd3" prot="public" static="no">
+        <name>MBEDTLS_NET_LISTEN_BACKLOG</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The backlog that listen() should use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="64" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a989e1bc1aae7e48ac318d5ddd24efa3b" prot="public" static="no">
+        <name>MBEDTLS_NET_PROTO_TCP</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The TCP transport protocol </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="66" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a8d6d212e9f0ea5756fff8d06c46f4f44" prot="public" static="no">
+        <name>MBEDTLS_NET_PROTO_UDP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The UDP transport protocol </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="67" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a7315a36b5a33a0ebc630315bde70c05c" prot="public" static="no">
+        <name>MBEDTLS_NET_POLL_READ</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used in <computeroutput>mbedtls_net_poll</computeroutput> to check for pending data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="69" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="net__sockets_8h_1a78ab08a462896b76aa4edeefe57e9c59" prot="public" static="no">
+        <name>MBEDTLS_NET_POLL_WRITE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used in <computeroutput>mbedtls_net_poll</computeroutput> to check if write possible </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="70" column="9" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="net__sockets_8h_1aa31216e19b79fbce42661bbd9c5f92a7" prot="public" static="no">
+        <type>struct <ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref></type>
+        <definition>typedef struct mbedtls_net_context
+ mbedtls_net_context</definition>
+        <argsstring></argsstring>
+        <name>mbedtls_net_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper type for sockets.</para><para>Currently backed by just a file descriptor, but might be more in the future (eg two file descriptors for combined IPv4 + IPv6 support, or additional structures for hand-made UDP demultiplexing). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="92" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="net__sockets_8h_1aed7458e19fc1b4794f3a23aa3df49543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_net_init</definition>
+        <argsstring>(mbedtls_net_context *ctx)</argsstring>
+        <name>mbedtls_net_init</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a context Just makes the context ready to be used or freed safely. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context to initialize </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1ac12c400864a5aad46666828ce2a089a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_connect</definition>
+        <argsstring>(mbedtls_net_context *ctx, const char *host, const char *port, int proto)</argsstring>
+        <name>mbedtls_net_connect</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>host</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proto</declname>
+        </param>
+        <briefdescription>
+<para>Initiate a connection with host:port in the given protocol. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>host</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Host to connect to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port to connect to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>proto</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Protocol: MBEDTLS_NET_PROTO_TCP or MBEDTLS_NET_PROTO_UDP</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or one of: MBEDTLS_ERR_NET_SOCKET_FAILED, MBEDTLS_ERR_NET_UNKNOWN_HOST, MBEDTLS_ERR_NET_CONNECT_FAILED</para></simplesect>
+<simplesect kind="note"><para>Sets the socket in connected mode even with UDP. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1aa1cb7fc819153c43a2c75c95d0152c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_bind</definition>
+        <argsstring>(mbedtls_net_context *ctx, const char *bind_ip, const char *port, int proto)</argsstring>
+        <name>mbedtls_net_bind</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>bind_ip</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>proto</declname>
+        </param>
+        <briefdescription>
+<para>Create a receiving socket on bind_ip:port in the chosen protocol. If bind_ip == NULL, all interfaces are bound. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bind_ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IP to bind to, can be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Port number to use </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>proto</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Protocol: MBEDTLS_NET_PROTO_TCP or MBEDTLS_NET_PROTO_UDP</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or one of: MBEDTLS_ERR_NET_SOCKET_FAILED, MBEDTLS_ERR_NET_UNKNOWN_HOST, MBEDTLS_ERR_NET_BIND_FAILED, MBEDTLS_ERR_NET_LISTEN_FAILED</para></simplesect>
+<simplesect kind="note"><para>Regardless of the protocol, opens the sockets and binds it. In addition, make the socket listening if protocol is TCP. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a14ca8a2d8af16ea53bd1b9a872a39ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_accept</definition>
+        <argsstring>(mbedtls_net_context *bind_ctx, mbedtls_net_context *client_ctx, void *client_ip, size_t buf_size, size_t *cip_len)</argsstring>
+        <name>mbedtls_net_accept</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>bind_ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>client_ctx</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>client_ip</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>buf_size</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>cip_len</declname>
+        </param>
+        <briefdescription>
+<para>Accept a connection from a remote client. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bind_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Relevant socket </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client_ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will contain the connected client socket </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>client_ip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will contain the client IP address, can be NULL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the client_ip buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cip_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Will receive the size of the client IP written, can be NULL if client_ip is null</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or <ref refid="net__sockets_8h_1aa639b33eeaf6414c0de66ab9b8ff6cde" kindref="member">MBEDTLS_ERR_NET_SOCKET_FAILED</ref>, <ref refid="net__sockets_8h_1a4dbd66233b3f8bdd812f388667fcf123" kindref="member">MBEDTLS_ERR_NET_BIND_FAILED</ref>, <ref refid="net__sockets_8h_1a030cd35e75797c983c61152fd36bd135" kindref="member">MBEDTLS_ERR_NET_ACCEPT_FAILED</ref>, or <ref refid="group__error_1ga695025f4ec11249aee7ea3d0f65e01c8" kindref="member">PSA_ERROR_BUFFER_TOO_SMALL</ref> if buf_size is too small, <ref refid="ssl_8h_1a67a1e093cf042831aa60bb567915b560" kindref="member">MBEDTLS_ERR_SSL_WANT_READ</ref> if bind_fd was set to non-blocking and accept() would block. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1ab91fb801098214f91e032866d7493494" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_poll</definition>
+        <argsstring>(mbedtls_net_context *ctx, uint32_t rw, uint32_t timeout)</argsstring>
+        <name>mbedtls_net_poll</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>rw</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Check and wait for the context to be ready for read/write. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The current implementation of this function uses select() and returns an error if the file descriptor is <computeroutput>FD_SETSIZE</computeroutput> or greater.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to check </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bitflag composed of MBEDTLS_NET_POLL_READ and MBEDTLS_NET_POLL_WRITE specifying the events to wait for:<itemizedlist>
+<listitem><para>If MBEDTLS_NET_POLL_READ is set, the function will return as soon as the net context is available for reading.</para></listitem><listitem><para>If MBEDTLS_NET_POLL_WRITE is set, the function will return as soon as the net context is available for writing. </para></listitem></itemizedlist>
+</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximal amount of time to wait before returning, in milliseconds. If <computeroutput>timeout</computeroutput> is zero, the function returns immediately. If <computeroutput>timeout</computeroutput> is -1u, the function blocks potentially indefinitely.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Bitmask composed of MBEDTLS_NET_POLL_READ/WRITE on success or timeout, or a negative return code otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1aeea4e6fd5ad3167bf8563e61f6f75963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_set_block</definition>
+        <argsstring>(mbedtls_net_context *ctx)</argsstring>
+        <name>mbedtls_net_set_block</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Set the socket blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a non-zero error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="195" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a2ee4acdc24ef78c9acf5068a423b8c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_set_nonblock</definition>
+        <argsstring>(mbedtls_net_context *ctx)</argsstring>
+        <name>mbedtls_net_set_nonblock</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Set the socket non-blocking. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket to set</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if successful, or a non-zero error code </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a716044d3c30c449bd68052b7c418ff84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_net_usleep</definition>
+        <argsstring>(unsigned long usec)</argsstring>
+        <name>mbedtls_net_usleep</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>usec</declname>
+        </param>
+        <briefdescription>
+<para>Portable usleep helper. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of microseconds to sleep</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Real amount of time slept will not be less than select()&apos;s timeout granularity (typically, 10ms). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a03af351ec420bbeb5e91357abcfb3663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_recv</definition>
+        <argsstring>(void *ctx, unsigned char *buf, size_t len)</argsstring>
+        <name>mbedtls_net_recv</name>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Read at most &apos;len&apos; characters. If no error occurs, the actual amount read is returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of bytes received, or a non-zero error code; with a non-blocking socket, MBEDTLS_ERR_SSL_WANT_READ indicates read() would block. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a4841afd0e14f1fd44b82c3a850961ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_send</definition>
+        <argsstring>(void *ctx, const unsigned char *buf, size_t len)</argsstring>
+        <name>mbedtls_net_send</name>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write at most &apos;len&apos; characters. If no error occurs, the actual amount written is returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The length of the buffer</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of bytes sent, or a non-zero error code; with a non-blocking socket, MBEDTLS_ERR_SSL_WANT_WRITE indicates write() would block. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="242" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a67810154d2328a80b146155d8cdecfd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_net_recv_timeout</definition>
+        <argsstring>(void *ctx, unsigned char *buf, size_t len, uint32_t timeout)</argsstring>
+        <name>mbedtls_net_recv_timeout</name>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Read at most &apos;len&apos; characters, blocking for at most &apos;timeout&apos; seconds. If no error occurs, the actual amount read is returned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The current implementation of this function uses select() and returns an error if the file descriptor is <computeroutput>FD_SETSIZE</computeroutput> or greater.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Socket </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum length of the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of milliseconds to wait for data 0 means no timeout (wait forever)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes received if successful. MBEDTLS_ERR_SSL_TIMEOUT if the operation timed out. MBEDTLS_ERR_SSL_WANT_READ if interrupted by a signal. Another negative error code (MBEDTLS_ERR_NET_xxx) for other failures.</para></simplesect>
+<simplesect kind="note"><para>This function will block (until data becomes available or timeout is reached) even if the socket is set to non-blocking. Handling timeouts with non-blocking reads requires a different strategy. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a4fbf879a94a7640a8b07f53250c4698c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_net_close</definition>
+        <argsstring>(mbedtls_net_context *ctx)</argsstring>
+        <name>mbedtls_net_close</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Closes down the connection and free associated data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to close</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function frees and clears data associated with the context but does not free the memory pointed to by <computeroutput>ctx</computeroutput>. This memory is the responsibility of the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="282" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="net__sockets_8h_1a77c35cb3f4b9fe6035d1d3742f3b4a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mbedtls_net_free</definition>
+        <argsstring>(mbedtls_net_context *ctx)</argsstring>
+        <name>mbedtls_net_free</name>
+        <param>
+          <type><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref> *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+<para>Gracefully shutdown the connection and free associated data. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The context to free</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function frees and clears data associated with the context but does not free the memory pointed to by <computeroutput>ctx</computeroutput>. This memory is the responsibility of the caller. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h" line="293" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Network sockets abstraction layer to integrate Mbed TLS into a BSD-style sockets API. </para>    </briefdescription>
+    <detaileddescription>
+<para>The network sockets module provides an example integration of the Mbed TLS library into a BSD sockets implementation. The module is intended to be an example of how Mbed TLS can be integrated into a networking stack, as well as to be Mbed TLS&apos;s network integration for its supported platforms.</para><para>The module is intended only to be used with the Mbed TLS library and is not intended to be used by third party application software directly.</para><para>The supported platforms are as follows:<itemizedlist>
+<listitem><para>Microsoft Windows and Windows CE</para></listitem><listitem><para>POSIX/Unix platforms including Linux, OS X </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="22"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_NET_SOCKETS_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_SOCKETS_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;mbedtls/private_access.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ssl_8h" kindref="compound">mbedtls/ssl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="net__sockets_8h_1aa639b33eeaf6414c0de66ab9b8ff6cde" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_SOCKET_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0042</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="40" refid="net__sockets_8h_1acdd34e19acf5a23c593895605bf3f219" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_CONNECT_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0044</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="42" refid="net__sockets_8h_1a4dbd66233b3f8bdd812f388667fcf123" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_BIND_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0046</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="44" refid="net__sockets_8h_1a4bf7cbe6fff470186e4a7a275dde4bdd" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_LISTEN_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0048</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="46" refid="net__sockets_8h_1a030cd35e75797c983c61152fd36bd135" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_ACCEPT_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x004A</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="48" refid="net__sockets_8h_1a0c95b85b300ddc10a753899ff2f154f2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_RECV_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x004C</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="50" refid="net__sockets_8h_1ad11d72cca1319fd35fb9e73c9428e92d" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_SEND_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x004E</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="52" refid="net__sockets_8h_1a1793f099e5c010750c7a07bf259898d9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_CONN_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0050</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="54" refid="net__sockets_8h_1a937d55e9aa02f1554a43f562a5fc24f9" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_UNKNOWN_HOST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0052</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="56" refid="net__sockets_8h_1a6a089c6b33dd98bfae43a42ed726cacb" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_BUFFER_TOO_SMALL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSA_ERROR_BUFFER_TOO_SMALL</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="58" refid="net__sockets_8h_1a945ec2afc6c9d9d73166ce1e073aaa18" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_INVALID_CONTEXT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0045</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="60" refid="net__sockets_8h_1a08416162853b65f874c50fe44cf269b2" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_POLL_FAILED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0047</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="62" refid="net__sockets_8h_1a46679f0ee267a053fe227422a2f0048b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_ERR_NET_BAD_INPUT_DATA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0x0049</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="net__sockets_8h_1a28c00c358ccc381ecfc2a28f59db8bd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_LISTEN_BACKLOG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10<sp/></highlight></codeline>
+<codeline lineno="66" refid="net__sockets_8h_1a989e1bc1aae7e48ac318d5ddd24efa3b" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_PROTO_TCP<sp/>0<sp/></highlight></codeline>
+<codeline lineno="67" refid="net__sockets_8h_1a8d6d212e9f0ea5756fff8d06c46f4f44" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_PROTO_UDP<sp/>1<sp/></highlight></codeline>
+<codeline lineno="69" refid="net__sockets_8h_1a7315a36b5a33a0ebc630315bde70c05c" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_POLL_READ<sp/><sp/>1<sp/></highlight></codeline>
+<codeline lineno="70" refid="net__sockets_8h_1a78ab08a462896b76aa4edeefe57e9c59" refkind="member"><highlight class="preprocessor">#define<sp/>MBEDTLS_NET_POLL_WRITE<sp/>2<sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="73"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="83" refid="structmbedtls__net__context" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>{</highlight></codeline>
+<codeline lineno="90" refid="structmbedtls__net__context_1ad6eda44e3bfee722150d12a591408995" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structmbedtls__net__context_1ad6eda44e3bfee722150d12a591408995" kindref="member">fd</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><ref refid="net__sockets_8h_1aa31216e19b79fbce42661bbd9c5f92a7" kindref="member">mbedtls_net_context</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1aed7458e19fc1b4794f3a23aa3df49543" kindref="member">mbedtls_net_init</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1ac12c400864a5aad46666828ce2a089a4" kindref="member">mbedtls_net_connect</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*host,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*port,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>proto);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1aa1cb7fc819153c43a2c75c95d0152c75" kindref="member">mbedtls_net_bind</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*bind_ip,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*port,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>proto);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a14ca8a2d8af16ea53bd1b9a872a39ff8" kindref="member">mbedtls_net_accept</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*bind_ctx,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*client_ctx,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*client_ip,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>buf_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*cip_len);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1ab91fb801098214f91e032866d7493494" kindref="member">mbedtls_net_poll</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx,<sp/>uint32_t<sp/>rw,<sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1aeea4e6fd5ad3167bf8563e61f6f75963" kindref="member">mbedtls_net_set_block</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a2ee4acdc24ef78c9acf5068a423b8c30" kindref="member">mbedtls_net_set_nonblock</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a716044d3c30c449bd68052b7c418ff84" kindref="member">mbedtls_net_usleep</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>usec);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a03af351ec420bbeb5e91357abcfb3663" kindref="member">mbedtls_net_recv</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a4841afd0e14f1fd44b82c3a850961ab7" kindref="member">mbedtls_net_send</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a67810154d2328a80b146155d8cdecfd9" kindref="member">mbedtls_net_recv_timeout</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ctx,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a4fbf879a94a7640a8b07f53250c4698c" kindref="member">mbedtls_net_close</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="net__sockets_8h_1a77c35cb3f4b9fe6035d1d3742f3b4a24" kindref="member">mbedtls_net_free</ref>(<ref refid="structmbedtls__net__context" kindref="compound">mbedtls_net_context</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="296"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="298"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>net_sockets.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/net_sockets.h"/>
+  </compounddef>
+</doxygen>

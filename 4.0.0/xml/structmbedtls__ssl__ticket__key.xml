@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__ssl__ticket__key" kind="struct" prot="public">
+    <compoundname>mbedtls_ssl_ticket_key</compoundname>
+    <includes refid="ssl__ticket_8h" local="no">ssl_ticket.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a662c211916e822dee3f69aad495c2e7f" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char mbedtls_ssl_ticket_key::private_name[MBEDTLS_SSL_TICKET_KEY_NAME_BYTES]</definition>
+        <argsstring>[MBEDTLS_SSL_TICKET_KEY_NAME_BYTES]</argsstring>
+        <name>private_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>random key identifier </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="45" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a28ee3c17b8bfd5ab50edbf0ee0fbb6fe" prot="public" static="no" mutable="no">
+        <type><ref refid="platform__time_8h_1ab250f6b51bf1a0a612094c3eadd4c6f6" kindref="member">mbedtls_time_t</ref></type>
+        <definition>mbedtls_time_t mbedtls_ssl_ticket_key::private_generation_time</definition>
+        <argsstring></argsstring>
+        <name>private_generation_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key generation timestamp (seconds) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="48" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1afcd9ec690e5188f1baa0f90a036ea6a1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mbedtls_ssl_ticket_key::private_lifetime</definition>
+        <argsstring></argsstring>
+        <name>private_lifetime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Lifetime of the key in seconds. This is also the lifetime of the tickets created under that key. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="53" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a26b5a00cf4561bcadcfbdb3eaa0a22c3" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__svc__key__id__t" kindref="compound">mbedtls_svc_key_id_t</ref></type>
+        <definition>mbedtls_svc_key_id_t mbedtls_ssl_ticket_key::private_key</definition>
+        <argsstring></argsstring>
+        <name>private_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key used for auth enc/decryption </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="54" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a764b92e9a3147c4b1c92d0fdbd849288" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1gac2e4d47f1300d73c2f829a6d99252d69" kindref="member">psa_algorithm_t</ref></type>
+        <definition>psa_algorithm_t mbedtls_ssl_ticket_key::private_alg</definition>
+        <argsstring></argsstring>
+        <name>private_alg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>algorithm of auth enc/decryption </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="55" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a041e5e5239c40deafbd012e78ce58076" prot="public" static="no" mutable="no">
+        <type><ref refid="group__crypto__types_1ga63fce6880ca5933b5d6baa257febf1f6" kindref="member">psa_key_type_t</ref></type>
+        <definition>psa_key_type_t mbedtls_ssl_ticket_key::private_key_type</definition>
+        <argsstring></argsstring>
+        <name>private_key_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="56" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__ssl__ticket__key_1a8f61d06a6fb178878a8f2aeac3caebb9" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t mbedtls_ssl_ticket_key::private_key_bits</definition>
+        <argsstring></argsstring>
+        <name>private_key_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>key length in bits </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="57" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Information for session ticket protection. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="596">
+        <label>mbedtls_ssl_ticket_key</label>
+        <link refid="structmbedtls__ssl__ticket__key"/>
+        <childnode refid="597" relation="usage">
+          <edgelabel>private_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="597">
+        <label>mbedtls_svc_key_id_t</label>
+        <link refid="structmbedtls__svc__key__id__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" line="44" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/ssl_ticket.h" bodystart="44" bodyend="58"/>
+    <listofallmembers>
+      <member refid="structmbedtls__ssl__ticket__key_1a764b92e9a3147c4b1c92d0fdbd849288" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_alg</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1a28ee3c17b8bfd5ab50edbf0ee0fbb6fe" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_generation_time</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1a26b5a00cf4561bcadcfbdb3eaa0a22c3" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_key</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1a8f61d06a6fb178878a8f2aeac3caebb9" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_key_bits</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1a041e5e5239c40deafbd012e78ce58076" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_key_type</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1afcd9ec690e5188f1baa0f90a036ea6a1" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_lifetime</name></member>
+      <member refid="structmbedtls__ssl__ticket__key_1a662c211916e822dee3f69aad495c2e7f" prot="public" virt="non-virtual"><scope>mbedtls_ssl_ticket_key</scope><name>private_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

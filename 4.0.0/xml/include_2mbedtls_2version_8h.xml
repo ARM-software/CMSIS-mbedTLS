@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="include_2mbedtls_2version_8h" kind="file">
+    <compoundname>include/mbedtls/version.h</compoundname>
+    <includes refid="include_2mbedtls_2build__info_8h" local="yes">mbedtls/build_info.h</includes>
+    <incdepgraph>
+      <node id="3820">
+        <label>mbedtls/private/config_adjust_x509.h</label>
+        <link refid="config__adjust__x509_8h"/>
+      </node>
+      <node id="3814">
+        <label>psa/crypto_config.h</label>
+        <link refid="crypto__config_8h"/>
+      </node>
+      <node id="3819">
+        <label>mbedtls/mbedtls_config.h</label>
+        <link refid="mbedtls__config_8h"/>
+      </node>
+      <node id="3817">
+        <label>mbedtls/config_adjust_legacy_crypto.h</label>
+      </node>
+      <node id="3811">
+        <label>version.h</label>
+        <link refid="include/mbedtls/version.h"/>
+        <childnode refid="3812" relation="include">
+        </childnode>
+      </node>
+      <node id="3813">
+        <label>tf-psa-crypto/build_info.h</label>
+        <link refid="tf-psa-crypto_2include_2tf-psa-crypto_2build__info_8h"/>
+        <childnode refid="3814" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3816" relation="include">
+        </childnode>
+        <childnode refid="3817" relation="include">
+        </childnode>
+        <childnode refid="3818" relation="include">
+        </childnode>
+      </node>
+      <node id="3818">
+        <label>limits.h</label>
+      </node>
+      <node id="3812">
+        <label>mbedtls/build_info.h</label>
+        <link refid="include_2mbedtls_2build__info_8h"/>
+        <childnode refid="3813" relation="include">
+        </childnode>
+        <childnode refid="3819" relation="include">
+        </childnode>
+        <childnode refid="3815" relation="include">
+        </childnode>
+        <childnode refid="3820" relation="include">
+        </childnode>
+        <childnode refid="3821" relation="include">
+        </childnode>
+      </node>
+      <node id="3815">
+        <label>/dev/null</label>
+      </node>
+      <node id="3816">
+        <label>mbedtls/private/config_psa.h</label>
+      </node>
+      <node id="3821">
+        <label>mbedtls/private/config_adjust_ssl.h</label>
+        <link refid="config__adjust__ssl_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="include_2mbedtls_2version_8h_1a3d780043d5104f5e5863255dd55b3951" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int mbedtls_version_get_number</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_version_get_number</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the version number.</para><para><simplesect kind="return"><para>The constructed version number in the format MMNNPP00 (Major, Minor, Patch). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/version.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2mbedtls_2version_8h_1acbbae1933cade8d5ba4ef13e4f86b0d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mbedtls_version_get_string</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_version_get_string</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a pointer to the version string (&quot;x.y.z&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/version.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2mbedtls_2version_8h_1a22b5cba748606d915f8a6d0be57c33cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* mbedtls_version_get_string_full</definition>
+        <argsstring>(void)</argsstring>
+        <name>mbedtls_version_get_string_full</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a pointer to the full version string (&quot;Mbed TLS x.y.z&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/version.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="include_2mbedtls_2version_8h_1afe471be7bb2bd441b0c693256ab298ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mbedtls_version_check_feature</definition>
+        <argsstring>(const char *feature)</argsstring>
+        <name>mbedtls_version_check_feature</name>
+        <param>
+          <type>const char *</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+<para>Check if support for a feature was compiled into this Mbed TLS binary. This allows you to see at runtime if the library was for instance compiled with or without Multi-threading support. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>only checks against defines in the sections &quot;System
+                 support&quot;, &quot;Mbed TLS modules&quot; and &quot;Mbed TLS feature
+                 support&quot; in <ref refid="mbedtls__config_8h" kindref="compound">mbedtls_config.h</ref></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string for the define to check (e.g. &quot;MBEDTLS_SSL_SRV_C&quot;)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 if the feature is present, -1 if the feature is not present and -2 if support for feature checking as a whole was not compiled in. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/version.h" line="61" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Run-time version information. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>The<sp/>Mbed<sp/>TLS<sp/>Contributors</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>SPDX-License-Identifier:<sp/>Apache-2.0<sp/>OR<sp/>GPL-2.0-or-later</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>This<sp/>set<sp/>of<sp/>run-time<sp/>variables<sp/>can<sp/>be<sp/>used<sp/>to<sp/>determine<sp/>the<sp/>version<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Mbed<sp/>TLS<sp/>library<sp/>used.<sp/>Compile-time<sp/>version<sp/>defines<sp/>for<sp/>the<sp/>same<sp/>can<sp/>be</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>found<sp/>in<sp/>build_info.h</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MBEDTLS_VERSION_H</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MBEDTLS_VERSION_H</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="include_2mbedtls_2build__info_8h" kindref="compound">mbedtls/build_info.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MBEDTLS_VERSION_C)</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="32"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="include_2mbedtls_2version_8h_1a3d780043d5104f5e5863255dd55b3951" kindref="member">mbedtls_version_get_number</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="include_2mbedtls_2version_8h_1acbbae1933cade8d5ba4ef13e4f86b0d4" kindref="member">mbedtls_version_get_string</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="include_2mbedtls_2version_8h_1a22b5cba748606d915f8a6d0be57c33cb" kindref="member">mbedtls_version_get_string_full</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="include_2mbedtls_2version_8h_1afe471be7bb2bd441b0c693256ab298ea" kindref="member">mbedtls_version_check_feature</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*feature);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MBEDTLS_VERSION_C<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>version.h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/version.h"/>
+  </compounddef>
+</doxygen>

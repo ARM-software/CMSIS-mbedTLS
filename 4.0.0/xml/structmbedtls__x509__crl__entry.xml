@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structmbedtls__x509__crl__entry" kind="struct" prot="public">
+    <compoundname>mbedtls_x509_crl_entry</compoundname>
+    <includes refid="x509__crl_8h" local="no">x509_crl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmbedtls__x509__crl__entry_1aa629ec226c2e624eb1bf72f4d5c2cc8d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crl_entry::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Direct access to the whole entry inside the containing buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="41" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crl__entry_1a2cbc8acba11f2040948532389218741d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crl_entry::serial</definition>
+        <argsstring></argsstring>
+        <name>serial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The serial number of the revoked certificate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="43" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crl__entry_1abb22e83d676a60bfd93bb6e3960daa3e" prot="public" static="no" mutable="no">
+        <type><ref refid="structmbedtls__x509__time" kindref="compound">mbedtls_x509_time</ref></type>
+        <definition>mbedtls_x509_time mbedtls_x509_crl_entry::revocation_date</definition>
+        <argsstring></argsstring>
+        <name>revocation_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The revocation date of this entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="45" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crl__entry_1a5803a38521d5dbfd7240b364bde540a5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__x509__module_1ga4d02c9e8e4e2934555e0d132cd2976dc" kindref="member">mbedtls_x509_buf</ref></type>
+        <definition>mbedtls_x509_buf mbedtls_x509_crl_entry::entry_ext</definition>
+        <argsstring></argsstring>
+        <name>entry_ext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Direct access to the list of CRL entry extensions (an ASN.1 constructed sequence).</para><para>If there are no extensions, <computeroutput>entry_ext.len == 0</computeroutput> and <computeroutput>entry_ext.p == NULL</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="51" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmbedtls__x509__crl__entry_1abb908815d7bcf91ff87992682efe33b0" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structmbedtls__x509__crl__entry" kindref="compound">mbedtls_x509_crl_entry</ref> *</type>
+        <definition>struct mbedtls_x509_crl_entry* mbedtls_x509_crl_entry::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Next element in the linked list of entries. <computeroutput>NULL</computeroutput> indicates the end of the list. Do not modify this field directly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="56" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Certificate revocation list entry. Contains the CA-specific serial numbers and revocation dates.</para><para>Some fields of this structure are publicly readable. Do not modify them except via Mbed TLS library functions: the effect of modifying those fields or the data that those fields points to is unspecified. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="623">
+        <label>mbedtls_x509_crl_entry</label>
+        <link refid="structmbedtls__x509__crl__entry"/>
+        <childnode refid="623" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+        <childnode refid="624" relation="usage">
+          <edgelabel>raw</edgelabel>
+          <edgelabel>serial</edgelabel>
+          <edgelabel>entry_ext</edgelabel>
+        </childnode>
+        <childnode refid="625" relation="usage">
+          <edgelabel>revocation_date</edgelabel>
+        </childnode>
+      </node>
+      <node id="624">
+        <label>mbedtls_asn1_buf</label>
+        <link refid="structmbedtls__asn1__buf"/>
+      </node>
+      <node id="625">
+        <label>mbedtls_x509_time</label>
+        <link refid="structmbedtls__x509__time"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" line="39" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/include/mbedtls/x509_crl.h" bodystart="39" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structmbedtls__x509__crl__entry_1a5803a38521d5dbfd7240b364bde540a5" prot="public" virt="non-virtual"><scope>mbedtls_x509_crl_entry</scope><name>entry_ext</name></member>
+      <member refid="structmbedtls__x509__crl__entry_1abb908815d7bcf91ff87992682efe33b0" prot="public" virt="non-virtual"><scope>mbedtls_x509_crl_entry</scope><name>next</name></member>
+      <member refid="structmbedtls__x509__crl__entry_1aa629ec226c2e624eb1bf72f4d5c2cc8d" prot="public" virt="non-virtual"><scope>mbedtls_x509_crl_entry</scope><name>raw</name></member>
+      <member refid="structmbedtls__x509__crl__entry_1abb22e83d676a60bfd93bb6e3960daa3e" prot="public" virt="non-virtual"><scope>mbedtls_x509_crl_entry</scope><name>revocation_date</name></member>
+      <member refid="structmbedtls__x509__crl__entry_1a2cbc8acba11f2040948532389218741d" prot="public" virt="non-virtual"><scope>mbedtls_x509_crl_entry</scope><name>serial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

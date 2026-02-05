@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structpsa__mac__operation__s" kind="struct" prot="public">
+    <compoundname>psa_mac_operation_s</compoundname>
+    <includes refid="crypto__struct_8h" local="no">crypto_struct.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a4a62a90a9064bf16663c8fcaa8134bcf" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_mac_operation_s::private_id</definition>
+        <argsstring></argsstring>
+        <name>private_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique ID indicating which driver got assigned to do the operation. Since driver contexts are driver-specific, swapping drivers halfway through the operation is not supported. ID values are auto-generated in psa_driver_wrappers.h ID value zero means the context is not valid or not assigned to any driver (i.e. none of the driver contexts are active). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="134" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1ae89babec2d2750b819de7784d22dd8d5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t psa_mac_operation_s::private_mac_size</definition>
+        <argsstring></argsstring>
+        <name>private_mac_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="135" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a6274a0a32a1bc6db9c4ca5978e48dfae" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int psa_mac_operation_s::private_is_sign</definition>
+        <argsstring></argsstring>
+        <name>private_is_sign</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="136" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpsa__mac__operation__s_1a1c2a236099f8578ddd1df3f875e32739" prot="public" static="no" mutable="no">
+        <type><ref refid="unionpsa__driver__mac__context__t" kindref="compound">psa_driver_mac_context_t</ref></type>
+        <definition>psa_driver_mac_context_t psa_mac_operation_s::private_ctx</definition>
+        <argsstring></argsstring>
+        <name>private_ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="137" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="812">
+        <label>psa_driver_mac_context_t</label>
+        <link refid="unionpsa__driver__mac__context__t"/>
+        <childnode refid="813" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="817">
+        <label>mbedtls_psa_hash_operation_t</label>
+        <link refid="structmbedtls__psa__hash__operation__t"/>
+      </node>
+      <node id="811">
+        <label>psa_mac_operation_s</label>
+        <link refid="structpsa__mac__operation__s"/>
+        <childnode refid="812" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="816">
+        <label>psa_driver_hash_context_t</label>
+        <link refid="unionpsa__driver__hash__context__t"/>
+        <childnode refid="817" relation="usage">
+          <edgelabel>mbedtls_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="814">
+        <label>mbedtls_psa_hmac_operation_t</label>
+        <link refid="structmbedtls__psa__hmac__operation__t"/>
+        <childnode refid="815" relation="usage">
+          <edgelabel>hash_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="815">
+        <label>psa_hash_operation_s</label>
+        <link refid="structpsa__hash__operation__s"/>
+        <childnode refid="816" relation="usage">
+          <edgelabel>private_ctx</edgelabel>
+        </childnode>
+      </node>
+      <node id="813">
+        <label>mbedtls_psa_mac_operation_t</label>
+        <link refid="structmbedtls__psa__mac__operation__t"/>
+        <childnode refid="814" relation="usage">
+          <edgelabel>private_hmac</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" line="124" column="1" bodyfile="D:/GitHub/ARM-software/CMSIS-mbedTLS/tf-psa-crypto/include/psa/crypto_struct.h" bodystart="124" bodyend="139"/>
+    <listofallmembers>
+      <member refid="structpsa__mac__operation__s_1a1c2a236099f8578ddd1df3f875e32739" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_ctx</name></member>
+      <member refid="structpsa__mac__operation__s_1a4a62a90a9064bf16663c8fcaa8134bcf" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_id</name></member>
+      <member refid="structpsa__mac__operation__s_1a6274a0a32a1bc6db9c4ca5978e48dfae" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_is_sign</name></member>
+      <member refid="structpsa__mac__operation__s_1ae89babec2d2750b819de7784d22dd8d5" prot="public" virt="non-virtual"><scope>psa_mac_operation_s</scope><name>private_mac_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
