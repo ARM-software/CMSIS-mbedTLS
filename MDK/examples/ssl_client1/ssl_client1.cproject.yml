@@ -1,6 +1,14 @@
 # A project translates into one executable or library.
 project:
 
+  connections:
+    - connect: SSL Client
+      provides:
+        - CMSIS-RTOS2
+      consumes:
+        - CMSIS_ETH
+        - STDOUT
+
   define:
     - MBEDTLS_CONFIG_FILE: \"app_mbedtls_config.h\"
     - TF_PSA_CRYPTO_CONFIG_FILE: \"app_crypto_config.h\"
