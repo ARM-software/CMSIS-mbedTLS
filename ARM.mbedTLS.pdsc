@@ -13,6 +13,9 @@
   <url>https://www.keil.com/pack/</url>
   <repository type="git">https://github.com/ARM-software/CMSIS-mbedTLS.git</repository>
   <releases>
+    <release version="4.1.0-dev">
+      Updated to mbedTLS V4.1.0
+    </release>
     <release version="4.0.0" date="2026-02-05">
       Updated to mbedTLS V4.0.0
       Removed RTE configuration files (rely on mbedtls configuration)
@@ -111,7 +114,7 @@
     </condition>
   </conditions>
   <components>
-    <component Cclass="Security" Cgroup="mbed TLS" Cversion="4.0.0">
+    <component Cclass="Security" Cgroup="mbed TLS" Cversion="4.1.0">
       <description>ARM mbed Cryptographic and SSL/TLS library</description>
       <RTE_Components_h>
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
@@ -161,21 +164,20 @@
         <file category="source"  name="tf-psa-crypto/core/psa_crypto.c"/>
         <file category="source"  name="tf-psa-crypto/core/psa_crypto_client.c"/>
         <file category="source"  name="tf-psa-crypto/core/psa_crypto_driver_wrappers_no_static.c"/>
+        <file category="source"  name="tf-psa-crypto/core/psa_crypto_random.c"/>
         <file category="source"  name="tf-psa-crypto/core/psa_crypto_slot_management.c"/>
         <file category="source"  name="tf-psa-crypto/core/psa_crypto_storage.c"/>
         <file category="source"  name="tf-psa-crypto/core/psa_its_file.c"/>
+        <file category="source"  name="tf-psa-crypto/core/psa_util.c"/>
         <file category="source"  name="tf-psa-crypto/core/tf_psa_crypto_config.c"/>
         <file category="source"  name="tf-psa-crypto/core/tf_psa_crypto_version.c"/>
-        <!-- PSA Crypto built-in drivers -->
+        <file category="include" name="tf-psa-crypto/dispatch/"/>
         <file category="include" name="tf-psa-crypto/drivers/builtin/include/"/>
         <file category="include" name="tf-psa-crypto/drivers/builtin/src/"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/aes.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/aesce.c"/>
    <!-- <file category="source"  name="tf-psa-crypto/drivers/builtin/src/aesni.c"/> -->
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/aria.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/asn1parse.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/asn1write.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/base64.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/bignum.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/bignum_core.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/bignum_mod.c"/>
@@ -184,13 +186,12 @@
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/camellia.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ccm.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/chacha20.c"/>
+        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/chacha20_neon.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/chachapoly.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/cipher.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/cipher_wrap.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/cmac.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/constant_time.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ctr_drbg.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ecdh.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ecdsa.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ecjpake.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ecp.c"/>
@@ -201,23 +202,7 @@
         <file category="source"  name="MDK/library/entropy_poll_hw.c" condition="CMSIS RTOS"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/gcm.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/hmac_drbg.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/lmots.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/lms.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/md.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/md5.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/memory_buffer_alloc.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/nist_kw.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/oid.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pem.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pk.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pk_ecc.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pk_rsa.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pk_wrap.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pkcs5.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pkparse.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/pkwrite.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/platform.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/platform_util.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/poly1305.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_aead.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_cipher.c"/>
@@ -227,7 +212,8 @@
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_mac.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_pake.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_rsa.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_util.c"/>
+        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_crypto_xof.c"/>
+        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/psa_util_internal.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/ripemd160.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/rsa.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/rsa_alt_helpers.c"/>
@@ -235,7 +221,30 @@
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/sha3.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/sha256.c"/>
         <file category="source"  name="tf-psa-crypto/drivers/builtin/src/sha512.c"/>
-        <file category="source"  name="tf-psa-crypto/drivers/builtin/src/threading.c"/>
+        <file category="include" name="tf-psa-crypto/extras/"/>
+        <file category="source"  name="tf-psa-crypto/extras/lmots.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/lms.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/md.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/nist_kw.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pk.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pk_ecc.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pk_rsa.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pk_wrap.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pkparse.c"/>
+        <file category="source"  name="tf-psa-crypto/extras/pkwrite.c"/>
+        <file category="include" name="tf-psa-crypto/platform/"/>
+        <file category="source"  name="tf-psa-crypto/platform/memory_buffer_alloc.c"/>
+        <file category="source"  name="tf-psa-crypto/platform/platform.c"/>
+        <file category="source"  name="tf-psa-crypto/platform/platform_util.c"/>
+        <file category="source"  name="tf-psa-crypto/platform/threading.c"/>
+        <file category="include" name="tf-psa-crypto/utilities/"/>
+        <file category="source"  name="tf-psa-crypto/utilities/asn1parse.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/asn1write.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/base64.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/constant_time.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/oid.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/pem.c"/>
+        <file category="source"  name="tf-psa-crypto/utilities/pkcs5.c"/>
       </files>
     </component>
   </components>
