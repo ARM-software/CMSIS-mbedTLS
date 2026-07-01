@@ -9,7 +9,7 @@ set -o pipefail
 # Set version of gen pack library
 # For available versions see https://github.com/Open-CMSIS-Pack/gen-pack/tags.
 # Use the tag name without the prefix "v", e.g., 0.7.0
-REQUIRED_GEN_PACK_LIB="0.13.0"
+REQUIRED_GEN_PACK_LIB="0.14.0"
 
 # Set default command line arguments
 DEFAULT_ARGS=(-c "cmsis_mbedtls_")
@@ -38,10 +38,14 @@ PACK_DIRS="
   programs
   tf-psa-crypto/configs
   tf-psa-crypto/core
+  tf-psa-crypto/dispatch
   tf-psa-crypto/docs
-  tf-psa-crypto/drivers
+  tf-psa-crypto/drivers/builtin
+  tf-psa-crypto/extras
   tf-psa-crypto/include
+  tf-psa-crypto/platform
   tf-psa-crypto/programs
+  tf-psa-crypto/utilities
 "
 
 # Specify file names to be added to pack base directory
@@ -61,6 +65,8 @@ PACK_BASE_FILES="
 PACK_DELETE_FILES="
   **/Makefile
   **/CMakeLists.txt
+  tf-psa-crypto/core/crypto-library.make
+  tf-psa-crypto/programs/crypto-programs.make
 "
 
 # Specify patches to be applied
@@ -122,9 +128,18 @@ function preprocess() {
   echo "Fetching mbedtls sources from upstream '${VERSION}' ..."
   "${UTILITY_GHCLI}" release download "mbedtls-${VERSION}" -p mbedtls-${VERSION}.tar.bz2 --repo Mbed-TLS/mbedtls
 
+  mbedtls_extract_dirs=(
+    "mbedtls-${VERSION}/library"
+    "mbedtls-${VERSION}/programs/test"
+    "mbedtls-${VERSION}/tf-psa-crypto/core"
+    "mbedtls-${VERSION}/tf-psa-crypto/programs/psa"
+    "mbedtls-${VERSION}/tests/include"
+    "mbedtls-${VERSION}/tests/src"
+  )
+
   echo "Extracting mbedtls sources ..."
   "${UTILITY_ZIP}" x mbedtls-${VERSION}.tar.bz2 > /dev/null
-  "${UTILITY_ZIP}" x mbedtls-${VERSION}.tar > /dev/null
+  "${UTILITY_ZIP}" x mbedtls-${VERSION}.tar "${mbedtls_extract_dirs[@]}" > /dev/null
 
   echo "Copy generated mbedtls source files ..."
 
@@ -132,18 +147,18 @@ function preprocess() {
     /^GENERATED_FILES[[:space:]]*:=/{
       :a
       n
+      /^[[:space:]]*\$(TF_PSA_CRYPTO_LIBRARY_GENERATED_FILES)$/q
       /\\$/{
         s/[[:space:]]*\\$//
         p
         ba
       }
       p
-      /\\$/ba
     }
   ' mbedtls-${VERSION}/library/Makefile)
 
   crypto_files=$(sed -n '
-    /^GENERATED_FILES[[:space:]]*+=/{
+    /^TF_PSA_CRYPTO_LIBRARY_GENERATED_FILES[[:space:]]*:=/{
       :a
       n
       /\\$/{
@@ -154,8 +169,9 @@ function preprocess() {
       }
       s|\$(TF_PSA_CRYPTO_CORE_PATH)/||
       p
+      q
     }
-  ' mbedtls-${VERSION}/library/Makefile)
+  ' mbedtls-${VERSION}/tf-psa-crypto/core/crypto-library.make)
 
   mkdir -p "$1/library"
   pushd mbedtls-${VERSION}/library > /dev/null
