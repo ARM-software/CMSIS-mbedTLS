@@ -15,8 +15,8 @@
 #include "debug_internal.h"
 #include "mbedtls/error.h"
 #include "mbedtls/platform_util.h"
-#include "constant_time_internal.h"
 #include "mbedtls/constant_time.h"
+#include "mbedtls_utils.h"
 
 #include <string.h>
 
@@ -30,10 +30,6 @@ static int local_err_translation(psa_status_t status)
                                  psa_generic_status_to_mbedtls);
 }
 #define PSA_TO_MBEDTLS_ERR(status) local_err_translation(status)
-#endif
-
-#if defined(MBEDTLS_ECP_C)
-#include "mbedtls/private/ecp.h"
 #endif
 
 #if defined(MBEDTLS_HAVE_TIME)
@@ -760,7 +756,7 @@ static int ssl_ciphersuite_match(mbedtls_ssl_context *ssl, int suite_id,
     const mbedtls_ssl_ciphersuite_t *suite_info;
 
 #if defined(MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED)
-    mbedtls_pk_type_t sig_type;
+    mbedtls_pk_sigalg_t sig_type;
 #endif
 
     suite_info = mbedtls_ssl_ciphersuite_from_id(suite_id);
@@ -829,7 +825,7 @@ static int ssl_ciphersuite_match(mbedtls_ssl_context *ssl, int suite_id,
     /* If the ciphersuite requires signing, check whether
      * a suitable hash algorithm is present. */
     sig_type = mbedtls_ssl_get_ciphersuite_sig_alg(suite_info);
-    if (sig_type != MBEDTLS_PK_NONE &&
+    if (sig_type != MBEDTLS_PK_SIGALG_NONE &&
         mbedtls_ssl_tls12_get_preferred_hash_for_sig_alg(
             ssl, mbedtls_ssl_sig_from_pk_alg(sig_type)) == MBEDTLS_SSL_HASH_NONE) {
         MBEDTLS_SSL_DEBUG_MSG(3, ("ciphersuite mismatch: no suitable hash algorithm "
@@ -873,131 +869,68 @@ static int ssl_parse_client_hello(mbedtls_ssl_context *ssl)
 
     MBEDTLS_SSL_DEBUG_MSG(2, ("=> parse client hello"));
 
-    int renegotiating;
-
-#if defined(MBEDTLS_SSL_DTLS_ANTI_REPLAY)
-read_record_header:
-#endif
     /*
-     * If renegotiating, then the input was read with mbedtls_ssl_read_record(),
-     * otherwise read it ourselves manually in order to support SSLv2
-     * ClientHello, which doesn't use the same record layer format.
-     * Otherwise in a scenario of TLS 1.3/TLS 1.2 version negotiation, the
-     * ClientHello has been already fully fetched by the TLS 1.3 code and the
-     * flag ssl->keep_current_message is raised.
+     * Fetch the expected ClientHello handshake message. Do not ask
+     * mbedtls_ssl_read_record() to update the handshake digest, because the
+     * ClientHello may already have been read in ssl_tls13_process_client_hello()
+     * or as a post-handshake message (renegotiation). In those cases we need
+     * to update the digest ourselves, and it is simpler to do so
+     * unconditionally than to track whether it is needed.
      */
-    renegotiating = 0;
-#if defined(MBEDTLS_SSL_RENEGOTIATION)
-    renegotiating = (ssl->renego_status != MBEDTLS_SSL_INITIAL_HANDSHAKE);
-#endif
-    if (!renegotiating && !ssl->keep_current_message) {
-        if ((ret = mbedtls_ssl_fetch_input(ssl, 5)) != 0) {
-            /* No alert on a read error. */
-            MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_fetch_input", ret);
-            return ret;
-        }
-    }
+    if ((ret = mbedtls_ssl_read_record(ssl, 0)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_read_record ", ret);
 
-    buf = ssl->in_hdr;
-
-    MBEDTLS_SSL_DEBUG_BUF(4, "record header", buf, mbedtls_ssl_in_hdr_len(ssl));
-
-    /*
-     * TLS Client Hello
-     *
-     * Record layer:
-     *     0  .   0   message type
-     *     1  .   2   protocol version
-     *     3  .   11  DTLS: epoch + record sequence number
-     *     3  .   4   message length
-     */
-    MBEDTLS_SSL_DEBUG_MSG(3, ("client hello, message type: %d",
-                              buf[0]));
-
-    if (buf[0] != MBEDTLS_SSL_MSG_HANDSHAKE) {
-        MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message"));
-        return MBEDTLS_ERR_SSL_UNEXPECTED_MESSAGE;
-    }
-
-    MBEDTLS_SSL_DEBUG_MSG(3, ("client hello, message len.: %d",
-                              MBEDTLS_GET_UINT16_BE(ssl->in_len, 0)));
-
-    MBEDTLS_SSL_DEBUG_MSG(3, ("client hello, protocol version: [%d:%d]",
-                              buf[1], buf[2]));
-
-    /* For DTLS if this is the initial handshake, remember the client sequence
-     * number to use it in our next message (RFC 6347 4.2.1) */
 #if defined(MBEDTLS_SSL_PROTO_DTLS)
-    if (ssl->conf->transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM
+        /*
+         * In the case of an alert message corresponding to the termination of
+         * a previous connection, `ssl_parse_record_header()` and then
+         * `mbedtls_ssl_read_record()` may return
+         * MBEDTLS_ERR_SSL_UNEXPECTED_RECORD because of a non zero epoch.
+         *
+         * Historically, the library has returned
+         * MBEDTLS_ERR_SSL_UNEXPECTED_MESSAGE in this situation.
+         * The sample program dtls_server.c relies on this behavior
+         * (see
+         * https://github.com/Mbed-TLS/mbedtls/blob/d5e35a376bee23fad0b17f2e3e94a32ce4017c64/programs/ssl/dtls_server.c#L295),
+         * and user applications may rely on it as well.
+         *
+         * For compatibility, map MBEDTLS_ERR_SSL_UNEXPECTED_RECORD
+         * to MBEDTLS_ERR_SSL_UNEXPECTED_MESSAGE here.
+         *
+         * MBEDTLS_ERR_SSL_UNEXPECTED_RECORD does not appear to be
+         * used to detect a specific error condition, so this mapping
+         * should not remove any meaningful distinction.
+         */
+        if ((ssl->conf->transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM)
 #if defined(MBEDTLS_SSL_RENEGOTIATION)
-        && ssl->renego_status == MBEDTLS_SSL_INITIAL_HANDSHAKE
+            && (ssl->renego_status == MBEDTLS_SSL_INITIAL_HANDSHAKE)
 #endif
-        ) {
-        /* Epoch should be 0 for initial handshakes */
-        if (ssl->in_ctr[0] != 0 || ssl->in_ctr[1] != 0) {
-            MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message"));
-            return MBEDTLS_ERR_SSL_ILLEGAL_PARAMETER;
+            ) {
+            if (ret == MBEDTLS_ERR_SSL_UNEXPECTED_RECORD) {
+                ret = MBEDTLS_ERR_SSL_UNEXPECTED_MESSAGE;
+            }
         }
-
-        memcpy(&ssl->cur_out_ctr[2], ssl->in_ctr + 2,
-               sizeof(ssl->cur_out_ctr) - 2);
-
-#if defined(MBEDTLS_SSL_DTLS_ANTI_REPLAY)
-        if (mbedtls_ssl_dtls_replay_check(ssl) != 0) {
-            MBEDTLS_SSL_DEBUG_MSG(1, ("replayed record, discarding"));
-            ssl->next_record_offset = 0;
-            ssl->in_left = 0;
-            goto read_record_header;
-        }
-
-        /* No MAC to check yet, so we can update right now */
-        mbedtls_ssl_dtls_replay_update(ssl);
-#endif
-    }
 #endif /* MBEDTLS_SSL_PROTO_DTLS */
 
-    msg_len = MBEDTLS_GET_UINT16_BE(ssl->in_len, 0);
+        return ret;
+    }
 
-#if defined(MBEDTLS_SSL_RENEGOTIATION)
-    if (ssl->renego_status != MBEDTLS_SSL_INITIAL_HANDSHAKE) {
-        /* Set by mbedtls_ssl_read_record() */
-        msg_len = ssl->in_hslen;
-    } else
-#endif
-    {
-        if (ssl->keep_current_message) {
-            ssl->keep_current_message = 0;
-        } else {
-            if (msg_len > MBEDTLS_SSL_IN_CONTENT_LEN) {
-                MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message"));
-                return MBEDTLS_ERR_SSL_ILLEGAL_PARAMETER;
-            }
-
-            if ((ret = mbedtls_ssl_fetch_input(ssl,
-                                               mbedtls_ssl_in_hdr_len(ssl) + msg_len)) != 0) {
-                MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_fetch_input", ret);
-                return ret;
-            }
-
-            /* Done reading this record, get ready for the next one */
-#if defined(MBEDTLS_SSL_PROTO_DTLS)
-            if (ssl->conf->transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM) {
-                ssl->next_record_offset = msg_len + mbedtls_ssl_in_hdr_len(ssl);
-            } else
-#endif
-            ssl->in_left = 0;
-        }
+    /*
+     * Update the handshake checksum.
+     *
+     * Note that the checksum must be updated before parsing the extensions
+     * because ssl_parse_session_ticket_ext() may decrypt the ticket in place
+     * and therefore modify the ClientHello message. This occurs when using
+     * the Mbed TLS ssl_ticket.c implementation.
+     */
+    ret = mbedtls_ssl_update_handshake_status(ssl);
+    if (0 != ret) {
+        MBEDTLS_SSL_DEBUG_RET(1, ("mbedtls_ssl_update_handshake_status"), ret);
+        return ret;
     }
 
     buf = ssl->in_msg;
-
-    MBEDTLS_SSL_DEBUG_BUF(4, "record contents", buf, msg_len);
-
-    ret = ssl->handshake->update_checksum(ssl, buf, msg_len);
-    if (0 != ret) {
-        MBEDTLS_SSL_DEBUG_RET(1, ("update_checksum"), ret);
-        return ret;
-    }
+    msg_len = ssl->in_hslen;
 
     /*
      * Handshake layer:
@@ -1007,63 +940,11 @@ read_record_header:
      *     6  .   8   DTLS only: fragment offset
      *     9  .  11   DTLS only: fragment length
      */
-    if (msg_len < mbedtls_ssl_hs_hdr_len(ssl)) {
-        MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message"));
-        return MBEDTLS_ERR_SSL_DECODE_ERROR;
-    }
-
-    MBEDTLS_SSL_DEBUG_MSG(3, ("client hello v3, handshake type: %d", buf[0]));
-
-    if (buf[0] != MBEDTLS_SSL_HS_CLIENT_HELLO) {
+    if ((ssl->in_msgtype != MBEDTLS_SSL_MSG_HANDSHAKE) ||
+        (buf[0] != MBEDTLS_SSL_HS_CLIENT_HELLO)) {
         MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message"));
         return MBEDTLS_ERR_SSL_UNEXPECTED_MESSAGE;
     }
-
-#if defined(MBEDTLS_SSL_PROTO_DTLS)
-    if (ssl->conf->transport == MBEDTLS_SSL_TRANSPORT_DATAGRAM) {
-        /*
-         * Copy the client's handshake message_seq on initial handshakes,
-         * check sequence number on renego.
-         */
-#if defined(MBEDTLS_SSL_RENEGOTIATION)
-        if (ssl->renego_status == MBEDTLS_SSL_RENEGOTIATION_IN_PROGRESS) {
-            /* This couldn't be done in ssl_prepare_handshake_record() */
-            unsigned int cli_msg_seq = (unsigned int) MBEDTLS_GET_UINT16_BE(ssl->in_msg, 4);
-            if (cli_msg_seq != ssl->handshake->in_msg_seq) {
-                MBEDTLS_SSL_DEBUG_MSG(1, ("bad client hello message_seq: "
-                                          "%u (expected %u)", cli_msg_seq,
-                                          ssl->handshake->in_msg_seq));
-                return MBEDTLS_ERR_SSL_DECODE_ERROR;
-            }
-
-            ssl->handshake->in_msg_seq++;
-        } else
-#endif
-        {
-            unsigned int cli_msg_seq = (unsigned int) MBEDTLS_GET_UINT16_BE(ssl->in_msg, 4);
-            ssl->handshake->out_msg_seq = cli_msg_seq;
-            ssl->handshake->in_msg_seq  = cli_msg_seq + 1;
-        }
-        {
-            /*
-             * For now we don't support fragmentation, so make sure
-             * fragment_offset == 0 and fragment_length == length
-             */
-            size_t fragment_offset, fragment_length, length;
-            fragment_offset = MBEDTLS_GET_UINT24_BE(ssl->in_msg, 6);
-            fragment_length = MBEDTLS_GET_UINT24_BE(ssl->in_msg, 9);
-            length = MBEDTLS_GET_UINT24_BE(ssl->in_msg, 1);
-            MBEDTLS_SSL_DEBUG_MSG(
-                4, ("fragment_offset=%u fragment_length=%u length=%u",
-                    (unsigned) fragment_offset, (unsigned) fragment_length,
-                    (unsigned) length));
-            if (fragment_offset != 0 || length != fragment_length) {
-                MBEDTLS_SSL_DEBUG_MSG(1, ("ClientHello fragmentation not supported"));
-                return MBEDTLS_ERR_SSL_FEATURE_UNAVAILABLE;
-            }
-        }
-    }
-#endif /* MBEDTLS_SSL_PROTO_DTLS */
 
     buf += mbedtls_ssl_hs_hdr_len(ssl);
     msg_len -= mbedtls_ssl_hs_hdr_len(ssl);
@@ -1394,7 +1275,11 @@ read_record_header:
 #if defined(MBEDTLS_SSL_SESSION_TICKETS)
             case MBEDTLS_TLS_EXT_SESSION_TICKET:
                 MBEDTLS_SSL_DEBUG_MSG(3, ("found session ticket extension"));
-
+                /*
+                 * If the Mbed TLS ssl_ticket.c implementation is used, the
+                 * ticket is decrypted in place. This modifies the ClientHello
+                 * message in the input buffer.
+                 */
                 ret = ssl_parse_session_ticket_ext(ssl, ext + 4, ext_size);
                 if (ret != 0) {
                     return ret;
@@ -1447,7 +1332,7 @@ read_record_header:
             MBEDTLS_SSL_TLS12_SIG_AND_HASH_ALG(MBEDTLS_SSL_SIG_ECDSA,
                                                MBEDTLS_SSL_HASH_SHA1),
 #endif
-#if defined(MBEDTLS_RSA_C)
+#if defined(PSA_WANT_KEY_TYPE_RSA_KEY_PAIR_BASIC)
             MBEDTLS_SSL_TLS12_SIG_AND_HASH_ALG(MBEDTLS_SSL_SIG_RSA,
                                                MBEDTLS_SSL_HASH_SHA1),
 #endif
@@ -1608,8 +1493,8 @@ have_ciphersuite:
     /* Debugging-only output for testsuite */
 #if defined(MBEDTLS_DEBUG_C)                         && \
     defined(MBEDTLS_KEY_EXCHANGE_WITH_CERT_ENABLED)
-    mbedtls_pk_type_t sig_alg = mbedtls_ssl_get_ciphersuite_sig_alg(ciphersuite_info);
-    if (sig_alg != MBEDTLS_PK_NONE) {
+    mbedtls_pk_sigalg_t sig_alg = mbedtls_ssl_get_ciphersuite_sig_alg(ciphersuite_info);
+    if (sig_alg != MBEDTLS_PK_SIGALG_NONE) {
         unsigned int sig_hash = mbedtls_ssl_tls12_get_preferred_hash_for_sig_alg(
             ssl, mbedtls_ssl_sig_from_pk_alg(sig_alg));
         MBEDTLS_SSL_DEBUG_MSG(3, ("client hello v3, signature_algorithm ext: %u",
@@ -2017,8 +1902,8 @@ static int ssl_write_hello_verify_request(mbedtls_ssl_context *ssl)
 
     mbedtls_ssl_handshake_set_state(ssl, MBEDTLS_SSL_SERVER_HELLO_VERIFY_REQUEST_SENT);
 
-    if ((ret = mbedtls_ssl_write_handshake_msg(ssl)) != 0) {
-        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg", ret);
+    if ((ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg_ext", ret);
         return ret;
     }
 
@@ -2315,7 +2200,7 @@ static int ssl_write_server_hello(mbedtls_ssl_context *ssl)
     ssl->out_msgtype = MBEDTLS_SSL_MSG_HANDSHAKE;
     ssl->out_msg[0]  = MBEDTLS_SSL_HS_SERVER_HELLO;
 
-    ret = mbedtls_ssl_write_handshake_msg(ssl);
+    ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1);
 
     MBEDTLS_SSL_DEBUG_MSG(2, ("<= write server hello"));
 
@@ -2394,7 +2279,7 @@ static int ssl_write_certificate_request(mbedtls_ssl_context *ssl)
      */
     ct_len = 0;
 
-#if defined(MBEDTLS_RSA_C)
+#if defined(PSA_WANT_KEY_TYPE_RSA_KEY_PAIR_BASIC)
     p[1 + ct_len++] = MBEDTLS_SSL_CERT_TYPE_RSA_SIGN;
 #endif
 #if defined(MBEDTLS_KEY_EXCHANGE_ECDSA_CERT_REQ_ALLOWED_ENABLED)
@@ -2505,7 +2390,7 @@ static int ssl_write_certificate_request(mbedtls_ssl_context *ssl)
     ssl->out_msg[0]  = MBEDTLS_SSL_HS_CERTIFICATE_REQUEST;
     MBEDTLS_PUT_UINT16_BE(total_dn_size, ssl->out_msg, 4 + ct_len + sa_len);
 
-    ret = mbedtls_ssl_write_handshake_msg(ssl);
+    ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1);
 
     MBEDTLS_SSL_DEBUG_MSG(2, ("<= write certificate request"));
 
@@ -2683,7 +2568,7 @@ curve_matching_done:
         psa_key_type_t key_type = PSA_KEY_TYPE_NONE;
         size_t ec_bits = 0;
 
-        MBEDTLS_SSL_DEBUG_MSG(1, ("Perform PSA-based ECDH computation."));
+        MBEDTLS_SSL_DEBUG_MSG(3, ("Perform PSA-based ECDH computation."));
 
         /* Convert EC's TLS ID to PSA key type. */
         if (mbedtls_ssl_get_psa_curve_info_from_tls_id(*curr_tls_id,
@@ -2788,7 +2673,7 @@ curve_matching_done:
          *      to choose appropriate hash.
          */
 
-        mbedtls_pk_type_t sig_alg =
+        mbedtls_pk_sigalg_t sig_alg =
             mbedtls_ssl_get_ciphersuite_sig_pk_alg(ciphersuite_info);
 
         unsigned char sig_hash =
@@ -2799,7 +2684,7 @@ curve_matching_done:
 
         /*    For TLS 1.2, obey signature-hash-algorithm extension
          *    (RFC 5246, Sec. 7.4.1.4.1). */
-        if (sig_alg == MBEDTLS_PK_NONE || md_alg == MBEDTLS_MD_NONE) {
+        if (sig_alg == MBEDTLS_PK_SIGALG_NONE || md_alg == MBEDTLS_MD_NONE) {
             MBEDTLS_SSL_DEBUG_MSG(1, ("should never happen"));
             /* (... because we choose a cipher suite
              *      only if there is a matching hash.) */
@@ -2880,12 +2765,12 @@ curve_matching_done:
          * after the call to ssl_prepare_server_key_exchange.
          * ssl_write_server_key_exchange also takes care of incrementing
          * ssl->out_msglen. */
-        if ((ret = mbedtls_pk_sign(mbedtls_ssl_own_key(ssl),
-                                   md_alg, hash, hashlen,
-                                   ssl->out_msg + ssl->out_msglen + 2,
-                                   out_buf_len - ssl->out_msglen - 2,
-                                   signature_len)) != 0) {
-            MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_pk_sign", ret);
+        if ((ret = mbedtls_pk_sign_ext(sig_alg, mbedtls_ssl_own_key(ssl),
+                                       md_alg, hash, hashlen,
+                                       ssl->out_msg + ssl->out_msglen + 2,
+                                       out_buf_len - ssl->out_msglen - 2,
+                                       signature_len)) != 0) {
+            MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_pk_sign_ext", ret);
             return ret;
         }
     }
@@ -2971,8 +2856,8 @@ static int ssl_write_server_key_exchange(mbedtls_ssl_context *ssl)
 
     mbedtls_ssl_handshake_increment_state(ssl);
 
-    if ((ret = mbedtls_ssl_write_handshake_msg(ssl)) != 0) {
-        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg", ret);
+    if ((ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg_ext", ret);
         return ret;
     }
 
@@ -2999,8 +2884,8 @@ static int ssl_write_server_hello_done(mbedtls_ssl_context *ssl)
     }
 #endif
 
-    if ((ret = mbedtls_ssl_write_handshake_msg(ssl)) != 0) {
-        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg", ret);
+    if ((ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg_ext", ret);
         return ret;
     }
 
@@ -3324,11 +3209,12 @@ static int ssl_parse_certificate_verify(mbedtls_ssl_context *ssl)
     unsigned char hash[48];
     unsigned char *hash_start = hash;
     size_t hashlen;
-    mbedtls_pk_type_t pk_alg;
+    mbedtls_pk_sigalg_t pk_alg;
     mbedtls_md_type_t md_alg;
     const mbedtls_ssl_ciphersuite_t *ciphersuite_info =
         ssl->handshake->ciphersuite_info;
     mbedtls_pk_context *peer_pk;
+    psa_algorithm_t psa_sig_alg;
 
     MBEDTLS_SSL_DEBUG_MSG(2, ("=> parse certificate verify"));
 
@@ -3416,8 +3302,8 @@ static int ssl_parse_certificate_verify(mbedtls_ssl_context *ssl)
     /*
      * Signature
      */
-    if ((pk_alg = mbedtls_ssl_pk_alg_from_sig(ssl->in_msg[i]))
-        == MBEDTLS_PK_NONE) {
+    if ((pk_alg = mbedtls_ssl_pk_sig_alg_from_sig(ssl->in_msg[i]))
+        == MBEDTLS_PK_SIGALG_NONE) {
         MBEDTLS_SSL_DEBUG_MSG(1, ("peer not adhering to requested sig_alg"
                                   " for verify message"));
         return MBEDTLS_ERR_SSL_ILLEGAL_PARAMETER;
@@ -3426,7 +3312,8 @@ static int ssl_parse_certificate_verify(mbedtls_ssl_context *ssl)
     /*
      * Check the certificate's key type matches the signature alg
      */
-    if (!mbedtls_pk_can_do(peer_pk, pk_alg)) {
+    psa_sig_alg = mbedtls_psa_alg_from_pk_sigalg(pk_alg, mbedtls_md_psa_alg_from_type(md_alg));
+    if (!mbedtls_pk_can_do_psa(peer_pk, psa_sig_alg, PSA_KEY_USAGE_VERIFY_HASH)) {
         MBEDTLS_SSL_DEBUG_MSG(1, ("sig_alg doesn't match cert key"));
         return MBEDTLS_ERR_SSL_ILLEGAL_PARAMETER;
     }
@@ -3456,10 +3343,10 @@ static int ssl_parse_certificate_verify(mbedtls_ssl_context *ssl)
         }
     }
 
-    if ((ret = mbedtls_pk_verify(peer_pk,
-                                 md_alg, hash_start, hashlen,
-                                 ssl->in_msg + i, sig_len)) != 0) {
-        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_pk_verify", ret);
+    if ((ret = mbedtls_pk_verify_ext(pk_alg, peer_pk,
+                                     md_alg, hash_start, hashlen,
+                                     ssl->in_msg + i, sig_len)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_pk_verify_ext", ret);
         return ret;
     }
 
@@ -3521,8 +3408,8 @@ static int ssl_write_new_session_ticket(mbedtls_ssl_context *ssl)
      */
     ssl->handshake->new_session_ticket = 0;
 
-    if ((ret = mbedtls_ssl_write_handshake_msg(ssl)) != 0) {
-        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg", ret);
+    if ((ret = mbedtls_ssl_write_handshake_msg_ext(ssl, 1, 1)) != 0) {
+        MBEDTLS_SSL_DEBUG_RET(1, "mbedtls_ssl_write_handshake_msg_ext", ret);
         return ret;
     }
 

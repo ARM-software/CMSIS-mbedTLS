@@ -42,9 +42,7 @@
     defined(MBEDTLS_PSA_ACCEL_ECC_BRAINPOOL_P_R1_512) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_MONTGOMERY_255) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_MONTGOMERY_448) || \
-    defined(MBEDTLS_PSA_ACCEL_ECC_SECP_K1_192) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_SECP_K1_256) || \
-    defined(MBEDTLS_PSA_ACCEL_ECC_SECP_R1_192) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_SECP_R1_256) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_SECP_R1_384) || \
     defined(MBEDTLS_PSA_ACCEL_ECC_SECP_R1_521)
@@ -142,11 +140,6 @@
       defined(MBEDTLS_KEY_EXCHANGE_ECJPAKE_ENABLED) )
 #error "One or more versions of the TLS protocol are enabled " \
         "but no key exchange methods defined with MBEDTLS_KEY_EXCHANGE_xxxx"
-#endif
-
-#if defined(MBEDTLS_SSL_PROTO_TLS1_2) && \
-    !(defined(PSA_WANT_ALG_SHA_1) || defined(PSA_WANT_ALG_SHA_256) || defined(PSA_WANT_ALG_SHA_512))
-#error "MBEDTLS_SSL_PROTO_TLS1_2 defined, but not all prerequisites"
 #endif
 
 #if defined(MBEDTLS_SSL_EARLY_DATA) && \
@@ -363,6 +356,11 @@
     ( !defined(MBEDTLS_X509_CRL_PARSE_C) ) || \
     ( !defined(MBEDTLS_MD_C) ) )
 #error  "MBEDTLS_PKCS7_C is defined, but not all prerequisites"
+#endif
+
+#if defined(MBEDTLS_TIMING_C) && \
+    !(defined(MBEDTLS_HAVE_TIME) || defined(MBEDTLS_TIMING_ALT))
+#error "MBEDTLS_TIMING_C requires either MBEDTLS_HAVE_TIME or MBEDTLS_TIMING_ALT"
 #endif
 
 /* *INDENT-ON* */

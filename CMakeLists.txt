@@ -37,10 +37,10 @@ cmake_policy(SET CMP0011 NEW)
 # is deprecated and will be removed in future versions.
 cmake_policy(SET CMP0012 NEW)
 
-set(MBEDTLS_VERSION 4.0.0)
-set(MBEDTLS_CRYPTO_SOVERSION 17)
-set(MBEDTLS_X509_SOVERSION 8)
-set(MBEDTLS_TLS_SOVERSION 22)
+set(MBEDTLS_VERSION 4.1.0)
+set(MBEDTLS_CRYPTO_SOVERSION 18)
+set(MBEDTLS_X509_SOVERSION 9)
+set(MBEDTLS_TLS_SOVERSION 23)
 
 if(TEST_CPP)
     project("Mbed TLS"
@@ -373,6 +373,20 @@ foreach(target IN LISTS tf_psa_crypto_library_targets)
     endif()
 endforeach(target)
 
+#
+# TF-PSA-Crypto directories with internal headers that are currently still
+# consumed by Mbed TLS. When we have finished cleaning up this list should be
+# empty.
+#
+set(TF_PSA_CRYPTO_PRIVATE_INCLUDE_DIRS
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/core
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/dispatch
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/drivers/builtin/src
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/extras
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/platform
+        ${CMAKE_CURRENT_SOURCE_DIR}/tf-psa-crypto/utilities
+)
+
 add_subdirectory(library)
 
 add_subdirectory(pkgconfig)
@@ -416,15 +430,16 @@ if(ENABLE_TESTING OR ENABLE_PROGRAMS)
     endif()
     target_include_directories(mbedtls_test
         PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/tests/include
-        PRIVATE ${MBEDTLS_FRAMEWORK_DIR}/tests/include
-        PRIVATE tests/include
-        PRIVATE include
-        PRIVATE tf-psa-crypto/include
-        PRIVATE tf-psa-crypto/drivers/builtin/include
-        PRIVATE tf-psa-crypto/drivers/everest/include
-        PRIVATE library
-        PRIVATE tf-psa-crypto/core
-        PRIVATE tf-psa-crypto/drivers/builtin/src)
+                ${MBEDTLS_FRAMEWORK_DIR}/tests/include
+                tests/include
+                include
+                tf-psa-crypto/include
+                tf-psa-crypto/drivers/builtin/include
+                tf-psa-crypto/drivers/everest/include
+                tf-psa-crypto/drivers/pqcp/include
+                library
+                ${TF_PSA_CRYPTO_PRIVATE_INCLUDE_DIRS}
+    )
     # Request C11, needed for memory poisoning tests
     set_target_properties(mbedtls_test PROPERTIES C_STANDARD 11)
     set_config_files_compile_definitions(mbedtls_test)
@@ -452,15 +467,16 @@ if(ENABLE_TESTING OR ENABLE_PROGRAMS)
     endif()
     target_include_directories(mbedtls_test_helpers
         PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/tests/include
-        PRIVATE ${MBEDTLS_FRAMEWORK_DIR}/tests/include
-        PRIVATE tests/include
-        PRIVATE include
-        PRIVATE tf-psa-crypto/include
-        PRIVATE tf-psa-crypto/drivers/builtin/include
-        PRIVATE library
-        PRIVATE tf-psa-crypto/core
-        PRIVATE tf-psa-crypto/drivers/builtin/src
-        PRIVATE tf-psa-crypto/drivers/everest/include)
+                ${MBEDTLS_FRAMEWORK_DIR}/tests/include
+                tests/include
+                include
+                tf-psa-crypto/include
+                tf-psa-crypto/drivers/builtin/include
+                library
+                tf-psa-crypto/drivers/everest/include
+                tf-psa-crypto/drivers/pqcp/include
+                ${TF_PSA_CRYPTO_PRIVATE_INCLUDE_DIRS}
+    )
 
     set_config_files_compile_definitions(mbedtls_test_helpers)
 endif()
@@ -489,9 +505,9 @@ if(ENABLE_TESTING)
         # 2. Run the relevant tests for the part of the code you're interested in.
         #    For the reference coverage measurement, see
         #    tests/scripts/basic-build-test.sh
-        # 3. Run scripts/lcov.sh to generate an HTML report.
+        # 3. Run ${MBEDTLS_FRAMEWORK_DIR}/scripts/lcov.sh to generate an HTML report.
         ADD_CUSTOM_TARGET(lcov
-            COMMAND scripts/lcov.sh
+            COMMAND ${MBEDTLS_FRAMEWORK_DIR}/scripts/lcov.sh
         )
 
         ADD_CUSTOM_TARGET(memcheck
@@ -522,7 +538,7 @@ if(NOT DISABLE_PACKAGE_CONFIG_AND_INSTALL)
     write_basic_package_version_file(
         "cmake/MbedTLSConfigVersion.cmake"
             COMPATIBILITY SameMajorVersion
-            VERSION 4.0.0)
+            VERSION "${MBEDTLS_VERSION}")
 
     install(
         FILES "${CMAKE_CURRENT_BINARY_DIR}/cmake/MbedTLSConfig.cmake"

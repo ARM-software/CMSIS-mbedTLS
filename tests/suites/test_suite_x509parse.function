@@ -488,12 +488,22 @@ exit:
 void x509_crt_parse_cn_inet_pton(const char *cn, data_t *exp, int ref_ret)
 {
     uint32_t addr[4];
-    size_t addrlen = mbedtls_x509_crt_parse_cn_inet_pton(cn, addr);
+
+    char *cn_local = NULL;
+    size_t cn_local_len = strlen(cn) + 1;
+    TEST_CALLOC(cn_local, cn_local_len);
+    memcpy(cn_local, cn, cn_local_len);
+
+    size_t addrlen = mbedtls_x509_crt_parse_cn_inet_pton(cn_local, addr);
     TEST_EQUAL(addrlen, (size_t) ref_ret);
 
     if (addrlen) {
         TEST_MEMORY_COMPARE(exp->x, exp->len, addr, addrlen);
     }
+
+exit:
+    mbedtls_free(cn_local);
+
 }
 /* END_CASE */
 
@@ -1132,14 +1142,6 @@ void x509parse_crt(data_t *buf, char *result_str, int result)
      * mbedtls#10229. */
     int result_back_comp = result;
     int res;
-
-#if !defined(MBEDTLS_PK_USE_PSA_RSA_DATA)
-    /* Support for mbedtls#10213 before psa#308. Once psa#308 will be
-     * merged this dirty fix can be removed. */
-    if (result == MBEDTLS_ERR_PK_INVALID_PUBKEY) {
-        result_back_comp = MBEDTLS_ERR_ASN1_UNEXPECTED_TAG;
-    }
-#endif /* MBEDTLS_PK_USE_PSA_RSA_DATA */
 
     mbedtls_x509_crt_init(&crt);
     USE_PSA_INIT();

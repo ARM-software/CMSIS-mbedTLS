@@ -154,9 +154,9 @@ ifndef WINDOWS
 # 2. Run the relevant tests for the part of the code you're interested in.
 #    For the reference coverage measurement, see
 #    tests/scripts/basic-build-test.sh
-# 3. Run scripts/lcov.sh to generate an HTML report.
+# 3. Run framework/scripts/lcov.sh to generate an HTML report.
 lcov:
-	scripts/lcov.sh
+	framework/scripts/lcov.sh
 
 apidoc:
 	mkdir -p apidoc
@@ -180,6 +180,10 @@ C_SOURCE_FILES = $(wildcard \
 	tf-psa-crypto/drivers/*/*/*.c \
 	tf-psa-crypto/drivers/*/*/*/*.c \
 	tf-psa-crypto/drivers/*/*/*/*/*.c \
+	tf-psa-crypto/dispatch/*.[hc] \
+	tf-psa-crypto/extras/*.[hc] \
+	tf-psa-crypto/platform/*.[hc] \
+	tf-psa-crypto/utilities/*.[hc] \
 	programs/*/*.[hc] \
 	framework/tests/include/*/*.h framework/tests/include/*/*/*.h \
 	framework/tests/src/*.c framework/tests/src/*/*.c \
@@ -200,5 +204,9 @@ cscope.in.out cscope.po.out cscope.out: $(C_SOURCE_FILES)
 	cscope -bq -u -Iinclude -Ilibrary -Itf-psa-crypto/core \
         -Itf-psa-crypto/include \
 	-Itf-psa-crypto/drivers/builtin/src \
+        -Itf-psa-crypto/dispatch \
+        -Itf-psa-crypto/extras \
+        -Itf-psa-crypto/platform \
+        -Itf-psa-crypto/utilities \
 	$(patsubst %,-I%,$(wildcard tf-psa-crypto/drivers/*/include)) -Iframework/tests/include $(C_SOURCE_FILES)
 .PHONY: cscope global
