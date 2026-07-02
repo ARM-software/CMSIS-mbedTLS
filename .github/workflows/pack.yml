@@ -1,0 +1,33 @@
+name: Build documentation and pack
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  pack:
+    name: Generate pack
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Fetch tags
+        if: github.event_name == 'release'
+        run: |
+          git fetch --tags --force
+
+      - uses: Open-CMSIS-Pack/gen-pack-action@main
+        with:
+          doxygen-version: 1.8.14
+          packchk-version: 1.4.2
+          gen-pack-script: ./gen_pack.sh
+          gen-pack-output: ./output
