@@ -29,7 +29,6 @@ DEFAULT_ARGS=(-c "cmsis_mbedtls_")
 # Default: empty (all folders)
 #
 PACK_DIRS="
-  apidoc
   configs
   docs
   include
@@ -200,7 +199,7 @@ function preprocess() {
   rm mbedtls-${VERSION}.* -r mbedtls-${VERSION}
 
   # Generate documentation
-  ./gen_doc.sh
+  # ./gen_doc.sh
 
   return 0
 }

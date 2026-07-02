@@ -120,7 +120,8 @@
         #define RTE_Security_mbedTLS            /* Security mbed TLS */
       </RTE_Components_h>
       <files>
-        <file category="doc"     name="apidoc/index.html"/>
+   <!-- <file category="doc"     name="apidoc/index.html"/> -->
+        <file category="doc"     name="https://mbed-tls.readthedocs.io/projects/api/en/v4.1.0/"/>
         <file category="include" name="include/"/>
         <file category="include" name="library/"/>
         <file category="source"  name="library/debug.c"/>

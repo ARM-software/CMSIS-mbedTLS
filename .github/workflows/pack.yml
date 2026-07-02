@@ -1,4 +1,4 @@
-name: Build documentation and pack
+name: Build pack
 on:
   workflow_dispatch:
   pull_request:
@@ -28,7 +28,6 @@ jobs:
 
       - uses: Open-CMSIS-Pack/gen-pack-action@main
         with:
-          doxygen-version: 1.9.8
-          packchk-version: 1.4.2
+          packchk-version: 1.4.5
           gen-pack-script: ./gen_pack.sh
           gen-pack-output: ./output
