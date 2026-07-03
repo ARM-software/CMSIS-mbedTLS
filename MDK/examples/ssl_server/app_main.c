@@ -28,10 +28,13 @@ static const osThreadAttr_t app_main_attr = {
   .stack_size = sizeof(app_main_stk)
 };
 
+extern int32_t socket_startup (void);
 extern int ssl_server(void);
 
 __NO_RETURN static void app_main_thread (void *argument) {
   (void)argument;
+
+  socket_startup();
 
   ssl_server();
   for (;;) {}

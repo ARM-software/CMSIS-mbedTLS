@@ -1,0 +1,22 @@
+layer:
+  type: Socket
+  description: IoT Socket interface using Virtual Socket on Arm Virtual Hardware
+
+  connections:
+    - connect: VSocket Socket
+      consumes:
+        - VSocket
+        - CMSIS-RTOS2
+      provides:
+        - IoT_Socket
+
+  packs:
+    - pack: MDK-Packs::IoT_Socket@^1.4.0
+
+  components:
+    - component: IoT Utility:Socket:VSocket
+
+  groups:
+    - group: Socket
+      files: 
+        - file: ./socket_startup.c

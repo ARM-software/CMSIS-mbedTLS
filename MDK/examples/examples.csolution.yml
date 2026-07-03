@@ -1,12 +1,17 @@
 # A solution is a collection of related projects that share same base configuration.
 solution:
-  created-for: CMSIS-Toolbox@2.12.0
+  description: Mbed TLS Reference Examples
+  created-for: CMSIS-Toolbox@2.13.0
   cdefault:
 
   # List of tested compilers that can be selected
   select-compiler:
     - compiler: AC6
     - compiler: GCC
+    - compiler: IAR
+    - compiler: CLANG
+
+  compiler: AC6
 
   # List of miscellaneous tool-specific controls
   misc:
@@ -18,16 +23,36 @@ solution:
 
   # List the packs that define the device and/or board.
   packs:
-    - pack: ARM::CMSIS-RTX@^5.9.0
-    - pack: ARM::mbedTLS@^4.0.0
-    - pack: Keil::MDK-Middleware@^8.0.0
+    - pack: MDK-Packs::IoT_Socket@^1.4.0
+    - pack: ARM::V2M_MPS3_SSE_300_BSP@1.5.0
+  # Add BSP pack to use a physical board
+  #   - pack: <BSP or DFP>.pack
 
   # List different hardware targets that are used to deploy the solution.
   target-types:
-    # - type: <target_name>
-    #   board: <board_name>
+    # This target is an AVH-FVP simulation model that does not require hardware
+    - type: Simulator
+      board: ARM::V2M-MPS3-SSE-300-FVP
+      variables:
+        - Board-Layer: $SolutionDir()$/Board/Corstone-300/Board.clayer.yml
+        - Shield-Layer: ""
+        - Socket-Layer: $SolutionDir()$/Socket/VSocket/Socket.clayer.yml
+      target-set:
+        - set:
+          images:
+            - project-context: ssl_client1.Debug
+            - project-context: ssl_server.Debug
+          debugger:
+            name: Arm-FVP
+            model: FVP_Corstone_SSE-300
+            config-file: Board/Corstone-300/fvp_config.txt
+    # Add a target hardware to use the example on physical hardware 
+    # - type: MyBoard
+    #   board: <board name>
     #   variables:
-    #     - Board-Layer: <board_layer>.clayer.yml
+    #     - Board-Layer: ""
+    #     - Shield-Layer: ""
+    #     - Socket-Layer: ""
 
   # List of different build configurations.
   build-types:

@@ -31,7 +31,7 @@ int ssl_client1(void)
 #include <string.h>
 
 #define SERVER_PORT "4433"
-#define SERVER_NAME "my_host"
+#define SERVER_NAME "localhost"
 #define GET_REQUEST "GET / HTTP/1.0\r\n\r\n"
 
 #define DEBUG_LEVEL 1

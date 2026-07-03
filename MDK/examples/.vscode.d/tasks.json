@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Server (simulator)",
+            "type": "shell",
+            "command": "FVP_Corstone_SSE-300",
+            "args": [
+                "-f",
+                "Board/Corstone-300/fvp_config.txt",
+                "-a",
+                "out/ssl_server/Simulator/Debug/ssl_server.hex"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Client (simulator)",
+            "type": "shell",
+            "command": "FVP_Corstone_SSE-300",
+            "args": [
+                "-f",
+                "Board/Corstone-300/fvp_config.txt",
+                "-a",
+                "out/ssl_client1/Simulator/Debug/ssl_client1.hex"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

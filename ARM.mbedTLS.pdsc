@@ -15,6 +15,7 @@
   <releases>
     <release version="4.1.1-dev">
       Active development ...
+      Updated MDK examples (added Simulator target)
     </release>
     <release version="4.1.0" date="2026-07-02">
       Updated to mbedTLS V4.1.0
