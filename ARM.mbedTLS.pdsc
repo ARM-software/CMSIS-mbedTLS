@@ -13,6 +13,9 @@
   <url>https://www.keil.com/pack/</url>
   <repository type="git">https://github.com/ARM-software/CMSIS-mbedTLS.git</repository>
   <releases>
+    <release version="4.1.1-dev">
+      Active development ...
+    </release>
     <release version="4.1.0" date="2026-07-02">
       Updated to mbedTLS V4.1.0
     </release>

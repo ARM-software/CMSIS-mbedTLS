@@ -121,82 +121,8 @@ function preprocess() {
   # add custom steps here to be executed
   # before populating the pack build folder
 
-  find_ghcli
-
-  VERSION=$(sed -n 's/.*Cclass="Security".*Cgroup="mbed TLS".*Cversion="\([^"]*\)".*/\1/p' ARM.mbedTLS.pdsc)
-  echo "Fetching mbedtls sources from upstream '${VERSION}' ..."
-  "${UTILITY_GHCLI}" release download "mbedtls-${VERSION}" -p mbedtls-${VERSION}.tar.bz2 --repo Mbed-TLS/mbedtls
-
-  mbedtls_extract_dirs=(
-    "mbedtls-${VERSION}/library"
-    "mbedtls-${VERSION}/programs/test"
-    "mbedtls-${VERSION}/tf-psa-crypto/core"
-    "mbedtls-${VERSION}/tf-psa-crypto/programs/psa"
-    "mbedtls-${VERSION}/tests/include"
-    "mbedtls-${VERSION}/tests/src"
-  )
-
-  echo "Extracting mbedtls sources ..."
-  "${UTILITY_ZIP}" x mbedtls-${VERSION}.tar.bz2 > /dev/null
-  "${UTILITY_ZIP}" x mbedtls-${VERSION}.tar "${mbedtls_extract_dirs[@]}" > /dev/null
-
-  echo "Copy generated mbedtls source files ..."
-
-  mbed_files=$(sed -n '
-    /^GENERATED_FILES[[:space:]]*:=/{
-      :a
-      n
-      /^[[:space:]]*\$(TF_PSA_CRYPTO_LIBRARY_GENERATED_FILES)$/q
-      /\\$/{
-        s/[[:space:]]*\\$//
-        p
-        ba
-      }
-      p
-    }
-  ' mbedtls-${VERSION}/library/Makefile)
-
-  crypto_files=$(sed -n '
-    /^TF_PSA_CRYPTO_LIBRARY_GENERATED_FILES[[:space:]]*:=/{
-      :a
-      n
-      /\\$/{
-        s/[[:space:]]*\\$//
-        s|\$(TF_PSA_CRYPTO_CORE_PATH)/||
-        p
-        ba
-      }
-      s|\$(TF_PSA_CRYPTO_CORE_PATH)/||
-      p
-      q
-    }
-  ' mbedtls-${VERSION}/tf-psa-crypto/core/crypto-library.make)
-
-  mkdir -p "$1/library"
-  pushd mbedtls-${VERSION}/library > /dev/null
-  cp $mbed_files "$1/library"
-  popd > /dev/null
-
-  mkdir -p "$1/tf-psa-crypto/core"
-  pushd mbedtls-${VERSION}/tf-psa-crypto/core > /dev/null
-  cp $crypto_files "$1/tf-psa-crypto/core"
-  popd > /dev/null
-
-  mkdir -p "$1/programs/test"
-  cp mbedtls-${VERSION}/programs/test/query_config.c "$1/programs/test/"
-
-  mkdir -p "$1/tf-psa-crypto/programs/psa"
-  cp mbedtls-${VERSION}/tf-psa-crypto/programs/psa/psa_constant_names_generated.c "$1/tf-psa-crypto/programs/psa/"
-
-  mkdir -p "$1/MDK/examples/tests/include/test"
-  cp mbedtls-${VERSION}/tests/include/test/certs.h "$1/MDK/examples/tests/include/test/"
-  cp mbedtls-${VERSION}/tests/include/test/test_certs.h "$1/MDK/examples/tests/include/test/"
-
-  mkdir -p "$1/MDK/examples/tests/src"
-  cp mbedtls-${VERSION}/tests/src/certs.c "$1/MDK/examples/tests/src/"
-
-  echo "Deleting mbedtls archives and sources ..."
-  rm mbedtls-${VERSION}.* -r mbedtls-${VERSION}
+  # Get generated source files from upstream mbedtls artifacts
+  ./get_artifacts.sh
 
   # Generate documentation
   # ./gen_doc.sh
