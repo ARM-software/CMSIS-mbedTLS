@@ -22,7 +22,7 @@ Once the examples are built, they can be run on AVH-FVP simulation models.
 ### Build the examples
 
 ```bash
-cbuild examples.csolution.yml --context .Debug+Simulator --packs
+cbuild examples.csolution.yml --context .Debug+Simulator --packs --toolchain AC6
 ```
 
 ### Run the server application

@@ -12,6 +12,7 @@ jobs:
   Test-Examples:
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         compiler: [AC6, GCC]
 
@@ -29,10 +30,14 @@ jobs:
         run: |
           ./get_artifacts.sh
 
-      - name: Set up Python 3.13
-        uses: actions/setup-python@v6
+      - name: Cache packs
+        uses: actions/cache@v6
         with:
-          python-version: '3.13'
+          key: cmsis-packs-${{ github.workflow }}-${{ hashFiles('**/*.csolution.yml', '**/*.cproject.yml', '**/*.clayer.yml') }}
+          restore-keys: |
+            cmsis-packs-${{ github.workflow }}-
+            cmsis-packs-
+          path: /home/runner/.cache/arm/packs
 
       - name: Activate vcpkg env
         uses: ARM-software/cmsis-actions/vcpkg@v1
@@ -51,53 +56,71 @@ jobs:
       - name: Activate Arm tool license
         uses: ARM-software/cmsis-actions/armlm@v1
 
-      - name: Setup examples
-        working-directory: ./MDK/examples
-        run: |
-          sed -i '/^[[:space:]]*compiler: AC6$/d' examples.csolution.yml
-
       - name: Build examples
         working-directory: ./MDK/examples
         run: |
           cbuild examples.csolution.yml --packs --toolchain ${{ matrix.compiler }}
 
-      - name: Run SSL Server on FVP
+      - name: Run SSL Server/Client
         working-directory: ./MDK/examples
         run: |
-          nohup FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_server/Simulator/Release/ssl_server.hex > ssl_server.log 2>&1 &
+          echo "Starting SSL Server..."
+          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_server/Simulator/Release/ssl_server.hex > ssl_server.log 2>&1 &
           server_pid=$!
-          echo "SSL_SERVER_PID=${server_pid}" >> "$GITHUB_ENV"
 
-      - name: Run SSL Client on FVP
-        working-directory: ./MDK/examples
-        run: |
-          nohup FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_client1/Simulator/Release/ssl_client1.hex > ssl_client.log 2>&1 &
+          for i in {1..10}; do
+            if ss -ltn state listening | grep -q ":4433"; then
+              echo "Server is listening."
+              break
+            fi
+            sleep 1
+          done
+
+          echo "Starting SSL Client..."
+          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_client1/Simulator/Release/ssl_client1.hex > ssl_client.log 2>&1 &
           client_pid=$!
-          echo "SSL_CLIENT_PID=${client_pid}" >> "$GITHUB_ENV"
 
-      - name: Stop SSL Server/Client after timeout
-        if: always()
-        working-directory: ./MDK/examples
-        run: |
-          sleep 60
-          if kill -0 "${SSL_SERVER_PID}" 2>/dev/null; then
-            kill "${SSL_SERVER_PID}"
-          fi
-          if kill -0 "${SSL_CLIENT_PID}" 2>/dev/null; then
-            kill "${SSL_CLIENT_PID}"
+          for i in {1..10}; do
+            if ss -tn state established | grep -q ":4433"; then
+              echo "Client connected."
+              break
+            fi
+            sleep 1
+          done
+
+          for i in {1..60}; do
+            if ! ss -tn state established | grep -q ":4433"; then
+              echo "Client disconnected."
+              break
+            fi
+            sleep 1
+          done
+
+          echo "Stopping SSL Server..."
+          if [ -n "${server_pid:-}" ]; then
+            kill "${server_pid}" 2>/dev/null || true
+            wait "${server_pid}" 2>/dev/null || true
           fi
 
-      - name: Analyze logs
-        working-directory: ./MDK/examples
-        run: |
+          echo "Stopping SSL Client..."
+          if [ -n "${client_pid:-}" ]; then
+            kill "${client_pid}" 2>/dev/null || true
+            wait "${client_pid}" 2>/dev/null || true
+          fi
+
           echo "SSL Server Log:"
           cat ssl_server.log
           echo "SSL Client Log:"
           cat ssl_client.log
+
+      - name: Analyze logs
+        working-directory: ./MDK/examples
+        run: |
           echo "Analyzing logs for expected output..."
           grep -Fq -- "Waiting for a remote connection ... ok" ssl_server.log
           grep -Fq -- "Performing the SSL/TLS handshake... ok" ssl_server.log
           grep -Fq -- "Successful connection" ssl_server.log
           grep -Fq -- "Connecting to tcp/localhost/4433... ok" ssl_client.log
           grep -Fq -- "Performing the SSL/TLS handshake... ok" ssl_client.log
+          grep -Fq -- "Verifying peer X.509 certificate... ok" ssl_client.log
           grep -Fq -- "Successful connection" ssl_client.log

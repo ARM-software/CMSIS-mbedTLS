@@ -11,8 +11,6 @@ solution:
     - compiler: IAR
     - compiler: CLANG
 
-  compiler: AC6
-
   # List of miscellaneous tool-specific controls
   misc:
     - for-compiler: AC6 # GDB requires DWARF 5, remove when using uVision Debugger
