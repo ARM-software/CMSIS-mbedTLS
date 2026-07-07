@@ -1,0 +1,103 @@
+name: Test-Examples
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '00 20 * * 6'
+
+jobs:
+  Test-Examples:
+    strategy:
+      fail-fast: false
+      matrix:
+        compiler: [AC6, GCC]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout CMSIS-mbedTLS
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Get generated sources from artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./get_artifacts.sh
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Activate vcpkg env
+        uses: ARM-software/cmsis-actions/vcpkg@v1
+        with:
+          config: ./MDK/examples/vcpkg-configuration.json
+
+      - name: Initialize CMSIS pack root folder
+        run: |
+          cpackget init https://www.keil.com/pack/index.pidx
+          cpackget update-index
+
+      - name: Use local CMSIS-mbedTLS pack
+        run: |
+          cpackget add ARM.mbedTLS.pdsc
+
+      - name: Activate Arm tool license
+        uses: ARM-software/cmsis-actions/armlm@v1
+
+      - name: Setup examples
+        working-directory: ./MDK/examples
+        run: |
+          sed -i '/^[[:space:]]*compiler: AC6$/d' examples.csolution.yml
+
+      - name: Build examples
+        working-directory: ./MDK/examples
+        run: |
+          cbuild examples.csolution.yml --packs --toolchain ${{ matrix.compiler }}
+
+      - name: Run SSL Server on FVP
+        working-directory: ./MDK/examples
+        run: |
+          nohup FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_server/Simulator/Release/ssl_server.hex > ssl_server.log 2>&1 &
+          server_pid=$!
+          echo "SSL_SERVER_PID=${server_pid}" >> "$GITHUB_ENV"
+
+      - name: Run SSL Client on FVP
+        working-directory: ./MDK/examples
+        run: |
+          nohup FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_client1/Simulator/Release/ssl_client1.hex > ssl_client.log 2>&1 &
+          client_pid=$!
+          echo "SSL_CLIENT_PID=${client_pid}" >> "$GITHUB_ENV"
+
+      - name: Stop SSL Server/Client after timeout
+        if: always()
+        working-directory: ./MDK/examples
+        run: |
+          sleep 60
+          if kill -0 "${SSL_SERVER_PID}" 2>/dev/null; then
+            kill "${SSL_SERVER_PID}"
+          fi
+          if kill -0 "${SSL_CLIENT_PID}" 2>/dev/null; then
+            kill "${SSL_CLIENT_PID}"
+          fi
+
+      - name: Analyze logs
+        working-directory: ./MDK/examples
+        run: |
+          echo "SSL Server Log:"
+          cat ssl_server.log
+          echo "SSL Client Log:"
+          cat ssl_client.log
+          echo "Analyzing logs for expected output..."
+          grep -Fq -- "Waiting for a remote connection ... ok" ssl_server.log
+          grep -Fq -- "Performing the SSL/TLS handshake... ok" ssl_server.log
+          grep -Fq -- "Successful connection" ssl_server.log
+          grep -Fq -- "Connecting to tcp/localhost/4433... ok" ssl_client.log
+          grep -Fq -- "Performing the SSL/TLS handshake... ok" ssl_client.log
+          grep -Fq -- "Successful connection" ssl_client.log
