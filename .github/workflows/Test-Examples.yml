@@ -29,15 +29,6 @@ jobs:
         run: |
           ./get_artifacts.sh
 
-      - name: Cache packs
-        uses: actions/cache@v6
-        with:
-          key: cmsis-packs-${{ github.workflow }}-${{ hashFiles('**/*.csolution.yml', '**/*.cproject.yml', '**/*.clayer.yml') }}
-          restore-keys: |
-            cmsis-packs-${{ github.workflow }}-
-            cmsis-packs-
-          path: /home/runner/.cache/arm/packs
-
       - name: Activate vcpkg env
         uses: ARM-software/cmsis-actions/vcpkg@v1
         with:
