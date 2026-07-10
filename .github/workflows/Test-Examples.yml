@@ -12,7 +12,6 @@ jobs:
   Test-Examples:
     strategy:
       fail-fast: false
-      max-parallel: 1
       matrix:
         compiler: [AC6, GCC]
 
@@ -65,7 +64,7 @@ jobs:
         working-directory: ./MDK/examples
         run: |
           echo "Starting SSL Server..."
-          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_server/Simulator/Release/ssl_server.hex > ssl_server.log 2>&1 &
+          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_server/Simulator/Release/ssl_server.hex --timelimit 60 > ssl_server.log 2>&1 &
           server_pid=$!
 
           for i in {1..10}; do
@@ -77,7 +76,7 @@ jobs:
           done
 
           echo "Starting SSL Client..."
-          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_client1/Simulator/Release/ssl_client1.hex > ssl_client.log 2>&1 &
+          FVP_Corstone_SSE-300 -f Board/Corstone-300/fvp_config.txt out/ssl_client1/Simulator/Release/ssl_client1.hex --timelimit 60 > ssl_client.log 2>&1 &
           client_pid=$!
 
           for i in {1..10}; do
@@ -88,7 +87,7 @@ jobs:
             sleep 1
           done
 
-          for i in {1..60}; do
+          for i in {1..30}; do
             if ! ss -tn state established | grep -q ":4433"; then
               echo "Client disconnected."
               break
@@ -99,13 +98,27 @@ jobs:
           echo "Stopping SSL Server..."
           if [ -n "${server_pid:-}" ]; then
             kill "${server_pid}" 2>/dev/null || true
-            wait "${server_pid}" 2>/dev/null || true
+            timeout 10s tail --pid="${server_pid}" -f /dev/null 2>/dev/null || true
+            if kill -0 "${server_pid}" 2>/dev/null; then
+              kill -9 "${server_pid}" 2>/dev/null || true
+              timeout 5s tail --pid="${server_pid}" -f /dev/null 2>/dev/null || true
+            fi
+            if ! kill -0 "${server_pid}" 2>/dev/null; then
+              wait "${server_pid}" 2>/dev/null || true
+            fi
           fi
 
           echo "Stopping SSL Client..."
           if [ -n "${client_pid:-}" ]; then
             kill "${client_pid}" 2>/dev/null || true
-            wait "${client_pid}" 2>/dev/null || true
+            timeout 10s tail --pid="${client_pid}" -f /dev/null 2>/dev/null || true
+            if kill -0 "${client_pid}" 2>/dev/null; then
+              kill -9 "${client_pid}" 2>/dev/null || true
+              timeout 5s tail --pid="${client_pid}" -f /dev/null 2>/dev/null || true
+            fi
+            if ! kill -0 "${client_pid}" 2>/dev/null; then
+              wait "${client_pid}" 2>/dev/null || true
+            fi
           fi
 
           echo "SSL Server Log:"
