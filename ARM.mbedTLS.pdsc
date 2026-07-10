@@ -100,16 +100,14 @@
       <require Cclass="CMSIS" Cgroup="CORE"/>
       <require Cclass="CMSIS" Cgroup="RTOS2"/>
     </condition>
-    <condition id="MDK Network">
-      <description>MDK Network (identified with CORE component)</description>
-      <accept Cbundle="MDK"        Cclass="Network" Cgroup="CORE"/>
-      <accept Cbundle="MDK-Pro"    Cclass="Network" Cgroup="CORE"/>
-      <accept Cbundle="MDK-Source" Cclass="Network" Cgroup="CORE"/>
-    </condition>
     <condition id="IoT Socket">
       <description>IoT Socket without MDK Network</description>
       <require Cclass="IoT Utility" Cgroup="Socket"/>
-      <deny condition="MDK Network"/>
+    </condition>
+    <condition id="MDK Network">
+      <description>MDK Network (identified with CORE component)</description>
+      <require Cbundle="MDK*" Cclass="Network" Cgroup="CORE"/>
+      <deny condition="IoT Socket"/>
     </condition>
     <condition id="Default Network">
       <description>Default Network when not using MDK Network or IoT Socket</description>
@@ -133,9 +131,9 @@
         <file category="source"  name="library/mbedtls_config.c"/>
         <file category="source"  name="library/mps_reader.c"/>
         <file category="source"  name="library/mps_trace.c"/>
-        <file category="source"  name="library/net_sockets.c"                condition="Default Network"/>
-        <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK Network"/>
         <file category="source"  name="MDK/library/iot_socket/net_sockets.c" condition="IoT Socket"/>
+        <file category="source"  name="MDK/library/mw_network/net_sockets.c" condition="MDK Network"/>
+        <file category="source"  name="library/net_sockets.c"                condition="Default Network"/>
         <file category="source"  name="library/pkcs7.c"/>
         <file category="source"  name="library/ssl_cache.c"/>
         <file category="source"  name="library/ssl_ciphersuites.c"/>
